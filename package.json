@@ -1,0 +1,14 @@
+{
+  "name": "cognitive-biases.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static website for the Cognitive Biases educational app.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs && node scripts/check.mjs",
+    "dev": "npm run build && npx serve dist"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
