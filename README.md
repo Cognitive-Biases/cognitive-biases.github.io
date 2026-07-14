@@ -19,3 +19,7 @@ Bias content is centralized in [`data/biases.json`](data/biases.json), migrated 
 ## Migration
 
 Former MetalHatsCats URLs are redirected permanently to their equivalent pages here. See [`docs/migration-map.md`](docs/migration-map.md).
+
+## License
+
+The original Cognitive Biases website content is licensed under [CC BY-NC-SA 4.0](LICENSE): attribution and the same license are required for sharing or adaptations, and commercial use is not permitted without prior written permission from MetalHatsCats. Cognitive Biases names and logos are not licensed for reuse.
