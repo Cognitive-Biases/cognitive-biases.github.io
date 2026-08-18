@@ -10,7 +10,8 @@
     "validate:data": "npm run prepare:data && node scripts/validate-data.mjs",
     "audit:taxonomy": "npm run prepare:data && node scripts/audit-taxonomy.mjs",
     "inventory:taxonomy": "npm run prepare:data && node scripts/category-inventory.mjs",
-    "check": "npm run validate:data && npm run audit:taxonomy && npm run inventory:taxonomy && npm run build:site && node scripts/check.mjs",
+    "review:generic": "npm run prepare:data && node scripts/review-generic-buckets.mjs",
+    "check": "npm run validate:data && npm run audit:taxonomy && npm run inventory:taxonomy && npm run review:generic && npm run build:site && node scripts/check.mjs",
     "dev": "npm run build && node scripts/serve.mjs"
   }
 }
