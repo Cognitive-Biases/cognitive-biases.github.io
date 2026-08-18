@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "comparing-past-present",
+      "title": "Was the past really better?",
+      "summary": "Use these evidence-reviewed lenses when a personal memory or broad story about decline is being used to compare the present with an earlier period.",
+      "useWhen": [
+        "Someone says a profession, product, institution, city, community, or society used to be better, but the indicators and comparison years are unclear.",
+        "A remembered project, job, school period, trip, relationship, or community feels much better now than it felt while it was happening.",
+        "Current problems are vivid and detailed while the negative emotional intensity of past problems feels weaker.",
+        "A few personal memories are being used as evidence for a broad historical trend.",
+        "Nostalgia or dissatisfaction with the present is starting to replace measurable comparison."
+      ],
+      "workflow": [
+        "Define the claim before debating it. Write what exactly was better or worse, for whom, where, and between which years.",
+        "Separate personal event memory from population or system trends. A remembered experience can be useful evidence about your experience without representing an era.",
+        "Look for contemporaneous records from both periods: surveys, logs, prices, defect rates, service levels, health or safety measures, diaries, ratings, or other domain-relevant data.",
+        "For a remembered event, compare later recollection with records made during the experience when those records exist.",
+        "Separate remembered facts from current emotional intensity. Ask whether negative feelings connected with the old experience may have softened over time.",
+        "Look for indicators that improved, worsened, and stayed stable. Avoid forcing a mixed historical record into one global better-or-worse verdict.",
+        "State what cannot be determined when comparable historical evidence is weak. Memory can be meaningful without being a complete measurement system."
+      ],
+      "lenses": [
+        {"slug":"cognitive-bias-declinism","question":"Is a broad story of decline being asserted without a clearly defined indicator, population, and historical comparison?"},
+        {"slug":"memory-bias-rosy-retrospection","question":"Is a specific past experience remembered more positively now than it was experienced or recorded at the time?"},
+        {"slug":"memory-bias-fading-affect-bias","question":"Could the emotional intensity of negative past events have faded faster than positive affect, changing how the period feels in comparison with the present?"}
+      ]
+    }
+  ]
+}
