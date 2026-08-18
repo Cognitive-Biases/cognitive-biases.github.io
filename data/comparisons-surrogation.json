@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "surrogation-vs-systematic-bias",
+      "leftSlug": "cognitive-bias-surrogation",
+      "rightSlug": "cognitive-bias-systematic-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Surrogation vs Systematic Bias",
+      "summary": "Both can make a metric misleading, but the failure is different. Surrogation happens when people start treating a performance measure as though it were the goal or construct itself. Systematic bias is a consistent or predictable deviation in a measurement, estimate, sample, or process relative to a target or reference.",
+      "keyDifference": "Ask whether the problem is that people are optimizing or interpreting the proxy as the goal, or that the measurement process itself is systematically shifted away from the target.",
+      "dimensions": [
+        {"dimension":"Core problem","left":"A measure replaces the underlying strategic construct in judgment or action.","right":"A measurement or estimation process has a consistent or predictable deviation from its reference."},
+        {"dimension":"The metric can be accurate?","left":"Yes. A measure can be calculated accurately and still be an incomplete proxy that people over-treat as the objective.","right":"The issue is the deviation of the measurement or estimate itself, so accuracy relative to the reference is central."},
+        {"dimension":"Typical KPI example","left":"A support team optimizes ticket-closure time and treats that score as customer service quality, even when repeat contacts rise.","right":"A dashboard systematically undercounts a class of support contacts because the data pipeline excludes one channel."},
+        {"dimension":"Best check","left":"Define the objective, list what the proxy misses, and test whether the number can improve while the objective gets worse.","right":"Define the reference, then test calibration, sampling, collection and estimation for a directional error."}
+      ],
+      "diagnostic": [
+        "Write the underlying objective and the metric as two separate statements.",
+        "Check whether the metric can improve while the objective stays flat or becomes worse. If so, Surrogation is a relevant risk when the metric starts replacing the objective.",
+        "Independently test whether the measurement itself is shifted relative to a reference because of calibration, sampling, collection or analysis. That is a systematic-bias problem.",
+        "Do not use one label to hide the other. A team can surrogate on a metric that is also systematically biased, so the behavioral and measurement failures may need separate fixes."
+      ],
+      "examples": [
+        {"title":"Customer support","left":"Agents treat average handle time as the definition of good support and rush difficult cases to protect the score.","right":"Calls transferred through one system are missing from the dataset, so average handle time is systematically estimated from an incomplete population."},
+        {"title":"AI evaluation","left":"A team treats one benchmark score as the product's real-world usefulness and optimizes releases around that score.","right":"The evaluation sample consistently overrepresents easy cases, shifting the estimate of real-world performance upward."},
+        {"title":"Education","left":"A program treats test scores as though they fully represent learning and narrows instruction around the tested material.","right":"A test or sampling procedure consistently disadvantages a subgroup relative to the intended construct or target population."}
+      ],
+      "reviewProtocol": [
+        "Define the construct or goal in ordinary language before looking at the metric.",
+        "Document what the metric measures directly, what it only approximates, and what it leaves out.",
+        "Test the measurement process against an independent reference or validation source.",
+        "Look for actions that improve the metric without improving the construct.",
+        "Use different remedies for different failures: measurement correction for systematic error, and goal/proxy separation plus better decision processes for Surrogation."
+      ],
+      "sources": [
+        {"title":"Strategy Selection, Surrogation, and Strategic Performance Measurement Systems","year":2013,"doi":"10.1111/j.1475-679X.2012.00465.x","url":"https://doi.org/10.1111/j.1475-679X.2012.00465.x"},
+        {"title":"Decreasing Operational Distortion and Surrogation Through Narrative Reporting","year":2019,"doi":"10.2308/accr-52277","url":"https://doi.org/10.2308/accr-52277"},
+        {"title":"NIST Technical Note 1297, Appendix D1: Terminology","year":1994,"url":"https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"}
+      ]
+    }
+  ]
+}
