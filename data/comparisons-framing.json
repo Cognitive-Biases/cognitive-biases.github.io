@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "framing-effect-vs-anchoring-effect",
+      "leftSlug": "framing-effect-core",
+      "rightSlug": "cognitive-bias-anchoring-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Framing Effect vs Anchoring Effect",
+      "summary": "Both show that presentation can shape judgment, but the mechanism being tested is different. Framing changes how equivalent information or outcomes are described; anchoring tests how a starting numerical value pulls a later estimate toward it.",
+      "keyDifference": "Ask what changed: the description of the options, or the starting number used before the estimate?",
+      "dimensions": [
+        {"dimension":"Core manipulation","left":"Equivalent or closely matched information is described in different ways, often as gains versus losses.","right":"A numerical starting value or reference point is introduced before a later estimate or judgment."},
+        {"dimension":"Typical outcome","left":"Preference, evaluation, or risk choice changes across descriptions.","right":"The final numerical estimate shifts toward the anchor."},
+        {"dimension":"Does a number have to be the anchor?","left":"No. The defining feature is the description or representation, although framing tasks often contain numbers and probabilities.","right":"Classic anchoring evidence concerns numerical starting values and numerical judgments."},
+        {"dimension":"Best consistency check","left":"Restate the same outcomes in equivalent gain, loss, or neutral descriptions while holding the underlying information constant.","right":"Form an independent estimate or change the starting number while keeping the evidence and target judgment otherwise comparable."}
+      ],
+      "diagnostic": [
+        "Write the underlying outcomes, probabilities, and quantities without persuasive labels.",
+        "Create an equivalent alternative description. If the choice changes while the underlying outcomes stay the same, framing is the closer lens.",
+        "Identify any starting numerical value shown before the estimate. Replace or remove that number while keeping the decision evidence similar.",
+        "If the estimate moves toward the starting number, anchoring is the closer lens. Both effects can occur in the same interface, so test them separately."
+      ],
+      "examples": [
+        {"title":"Project risk","left":"A team prefers a plan more when it is described as having a 90% chance of acceptable delivery than when the same outcome is described as a 10% chance of failure.","right":"The same team’s delivery estimate stays close to an initial 12-week target even after reviewing comparable projects."},
+        {"title":"AI recommendation","left":"An assistant presents equivalent evidence as expected gains rather than expected losses and the user’s risk preference changes.","right":"The assistant supplies a score of 82 before the user evaluates the evidence, and the user’s final score remains close to 82."},
+        {"title":"Health information","left":"Equivalent outcome statistics lead to different treatment preferences when described using survival rather than mortality language.","right":"A numerical estimate given first influences a later probability judgment, even though the framing of the outcome remains the same."}
+      ],
+      "reviewProtocol": [
+        "Separate presentation variables before reviewing the decision: wording/frame and starting numerical values are different inputs.",
+        "Keep outcomes and probabilities complete and matched when testing a framing effect.",
+        "Use an independent estimate or varied anchors when testing anchoring.",
+        "Record the choice or estimate under each version rather than inferring an effect from how persuasive the language feels.",
+        "If both manipulations matter, document both instead of forcing the decision into one bias label."
+      ],
+      "sources": [
+        {"title":"The framing of decisions and the psychology of choice","year":1981,"doi":"10.1126/science.7455683","url":"https://pubmed.ncbi.nlm.nih.gov/7455683/"},
+        {"title":"The Influence of Framing on Risky Decisions: A Meta-analysis","year":1998,"doi":"10.1006/obhd.1998.2781","url":"https://pubmed.ncbi.nlm.nih.gov/9719656/"},
+        {"title":"All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects","year":1998,"doi":"10.1006/obhd.1998.2804","url":"https://doi.org/10.1006/obhd.1998.2804"},
+        {"title":"Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis","year":2026,"doi":"10.1287/mnsc.2023.03238","url":"https://doi.org/10.1287/mnsc.2023.03238"}
+      ]
+    }
+  ]
+}
