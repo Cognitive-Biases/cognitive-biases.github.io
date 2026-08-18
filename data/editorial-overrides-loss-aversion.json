@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 76,
+      "slug": "prospect-theory-loss-aversion",
+      "previousTitle": "Loss Aversion – when losing hurts more than winning feels good",
+      "title": "Loss Aversion – when a loss can carry more weight than an equivalent gain",
+      "description": "Loss Aversion is the idea that, relative to a reference point, a loss can receive more subjective weight than an equivalent gain. It is an important part of prospect theory, but it should not be treated as a universal rule or as a fixed claim that every loss always counts twice as much as a gain.\n\nWhere can it show up?\n- Risk choices: losing 100 can feel more important than an otherwise comparable chance to gain 100.\n- Product and policy decisions: the same change can look different depending on whether it is presented as giving up something already expected or gaining something new.\n- Project reviews: stopping can feel like accepting a loss, which can influence the decision even when future costs and benefits should be evaluated separately.\n\nA better check\n- State the reference point explicitly: what counts as a gain and what counts as a loss?\n- Compare equal-sized positive and negative changes using the same probabilities and time horizon.\n- Rewrite the decision in absolute outcomes when that is possible, not only as gains or losses from the current frame.\n- Keep sunk costs separate from future value. A painful write-off is not automatically a reason to invest more.\n- Do not apply one universal loss-aversion coefficient. Recent meta-analyses disagree substantially about the average size and robustness of the effect.",
+      "reason": "The legacy page treated Loss Aversion as a simple universal tendency and mixed it with examples better explained by sunk costs or disposition effects. Recent meta-analyses disagree substantially about the average magnitude and robustness of loss aversion, so the reviewed top copy keeps the reference point and evidence debate explicit."
+    }
+  ]
+}
