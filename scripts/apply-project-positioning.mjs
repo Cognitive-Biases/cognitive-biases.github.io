@@ -23,7 +23,14 @@ function reposition(html) {
   html = replaceAll(html, `<div class="footer-links"><a href="/explore/">Explore biases</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/support/">Support</a></div>`, `<div class="footer-links"><a href="/tools/decision-audit/">Decision Audit</a><a href="/contexts/">Decision contexts</a><a href="/evidence/">Evidence</a><a href="/compare/">Compare</a><a href="/research/">Research</a><a href="/data/">Data</a><a href="/partners/">Partnerships</a><a href="/about/">About</a></div>`);
   html = html.replace(/\{"@type":\["SoftwareApplication","MobileApplication"\],"@id":"https:\/\/cognitive-biases\.github\.io\/#app".*?"An educational mobile app for recognizing cognitive biases and reflecting on decisions\."\},/g, "");
   html = replaceAll(html, `<p class="home-app-link">Prefer lightweight practice? <a href="${PLAY}">Use the mobile app <span aria-hidden="true">↗</span></a></p>`, `<p class="home-app-link">Follow new findings in <a href="/research/">Research</a>, or use the <a href="/data/">public data</a>.</p>`);
+
   html = replaceAll(html, "Educational mobile app + public reference", "A public guide to better decisions");
+  html = replaceAll(html, "A usable psychology reference", "A public knowledge library");
+  html = replaceAll(html, "Browse clear explanations drawn from the Cognitive Biases collection. Each entry pairs a definition with everyday situations and practical prompts for slowing down.", "Browse the library by concept, then go deeper where we have reviewed the evidence. Older entries stay visible while we improve them, rather than pretending the whole collection is equally certain.");
+  html = replaceAll(html, "Inside the app", "What we are building");
+  html = replaceAll(html, "A pocket-sized companion for more considered decisions.", "A growing guide to what we know, what is debated, and what is worth checking before a decision.");
+  html = replaceAll(html, `<p class="actions"><a class="button" href="${PLAY}">Google Play <span aria-hidden="true">↗</span></a><a class="button button--dark" href="${APP_STORE}">App Store <span aria-hidden="true">↗</span></a></p>`, `<p class="actions"><a class="button" href="/research/">Read the research</a><a class="button button--dark" href="/data/">Use the public data</a></p>`);
+
   html = replaceAll(html, "An educational mobile app and public reference for recognizing cognitive biases, understanding their effects, and trying practical countermeasures.", "A public knowledge library for understanding cognitive biases, the evidence behind them, and how they can matter in real decisions.");
   html = replaceAll(html, "Educational mobile app and reference for recognizing cognitive biases.", "Public knowledge library for cognitive biases, evidence and decision making.");
   html = replaceAll(html, "How the Cognitive Biases app and reference library can support reflection on everyday decisions.", "How the Cognitive Biases library can support reflection on everyday decisions.");
@@ -40,6 +47,7 @@ function reposition(html) {
   html = replaceAll(html, "Support for the Cognitive Biases website and mobile app.", "Support for the Cognitive Biases website and knowledge library.");
   html = replaceAll(html, "Need help with the Cognitive Biases app or website? We are glad to hear from you.", "Found a problem with the website, a source or an entry? We are glad to hear from you.");
   html = replaceAll(html, "with a description of the issue, the device and app version if relevant, and any helpful screenshots.", "with a short description of the issue and any page or source links that will help us reproduce it.");
+
   html = replaceAll(html, PLAY, "/research/");
   html = replaceAll(html, APP_STORE, "/research/");
   return html;
