@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 80,
+      "slug": "self-assessment-dunning",
+      "supersedes": true,
+      "previousTitle": "Dunning–Kruger Effect – when the less you know, the more confident you are",
+      "title": "Dunning–Kruger Effect – when performance and self-assessment do not line up",
+      "description": "The Dunning–Kruger Effect describes a pattern found in some self-assessment tasks: lower performers can overestimate their performance more than higher performers do. It is about calibration between measured performance and self-assessment, not a rule that the least skilled person is always the most confident.\n\nWhere can it show up?\n- Learning: a student predicts a much stronger result than an objective test later shows.\n- Work skills: someone rates their performance higher than external measures or repeated results support.\n- Training: confidence changes more slowly than actual performance after feedback or practice.\n\nA better check\n- Make a prediction before seeing the score or feedback.\n- Compare confidence with an objective test, outcome or independent review.\n- Track calibration across several attempts instead of judging from one good or bad result.\n- Notice whether feedback changes both skill and self-assessment over time.\n- Do not use Dunning–Kruger as a label for people you think are wrong. Experts are not automatically underconfident, and confidence alone does not diagnose the effect.",
+      "reason": "The legacy page repeated the popular claim that less knowledge means more confidence and that true experts underestimate themselves. The reviewed literature supports a narrower calibration pattern and also contains substantial methodological debate about how large the effect is and how it should be measured."
+    }
+  ]
+}
