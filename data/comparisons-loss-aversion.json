@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "loss-aversion-vs-sunk-cost-effect",
+      "leftSlug": "prospect-theory-loss-aversion",
+      "rightSlug": "cognitive-bias-sunk-cost-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Loss Aversion vs Sunk Cost Effect",
+      "summary": "Both can make stopping, switching or giving something up feel difficult, but they ask different questions. Loss aversion concerns how prospective losses are valued relative to comparable gains around a reference point. Sunk cost effect concerns whether irrecoverable past investment is influencing the current choice.",
+      "keyDifference": "Ask which information is doing the work: a possible loss from the current reference point, or resources that have already been spent and cannot be recovered?",
+      "dimensions": [
+        {"dimension":"Time direction","left":"The judgment concerns prospective gains and losses relative to a reference point.","right":"The decision is influenced by investment that is already in the past and irrecoverable."},
+        {"dimension":"Core comparison","left":"Would an equal-sized loss receive more subjective weight than a comparable gain under the same conditions?","right":"Would the current choice change if the past cost had never been incurred but the future options were identical?"},
+        {"dimension":"Typical project example","left":"Stopping is experienced as accepting or realising a loss, which can make continuation feel more attractive.","right":"The team argues for another investment because too much money or time has already been spent."},
+        {"dimension":"Best check","left":"State the reference point and compare matched gain/loss descriptions or absolute outcomes.","right":"Remove irrecoverable past costs from the forward-looking comparison and evaluate only remaining costs, benefits and alternatives."}
+      ],
+      "diagnostic": [
+        "Write the decision from today forward, including realistic future outcomes and alternatives.",
+        "Mark any past cost that cannot be recovered. If removing that history changes the choice, sunk-cost reasoning is relevant.",
+        "State the reference point that makes an outcome feel like a gain or loss. Check whether an equivalent gain and loss are being valued differently.",
+        "Keep both effects separate. A project can contain a sunk cost and also make stopping feel like a prospective loss, but evidence for one does not prove the other."
+      ],
+      "examples": [
+        {"title":"Software migration","left":"Stopping the migration is framed as losing the expected future capability that the team had already started treating as theirs.","right":"The migration continues mainly because six months of work has already been spent, even though the remaining business case is weak."},
+        {"title":"Subscription","left":"Cancelling a service feels like giving up a benefit that has become the reference point, even when a cheaper alternative offers similar value.","right":"A customer renews because they already paid a setup fee that cannot be recovered, although that fee does not change next year's value."},
+        {"title":"Investment review","left":"A possible reduction from the current portfolio value receives more weight than an equal possible increase when comparing future choices.","right":"New money is committed because the investor wants to justify or recover an earlier investment that is already lost."}
+      ],
+      "reviewProtocol": [
+        "Separate past, current and future values before discussing the recommendation.",
+        "Remove sunk costs from the forward-looking calculation, while preserving any real future consequences of stopping or switching.",
+        "Name the reference point and express equivalent changes as both gains and losses when possible.",
+        "Check whether the decision survives when written in absolute outcomes rather than only relative gains or losses.",
+        "Describe only the pattern the evidence supports instead of calling any reluctance to stop both loss aversion and sunk cost."
+      ],
+      "sources": [
+        {"title":"Prospect Theory: An Analysis of Decision under Risk","year":1979,"doi":"10.2307/1914185","url":"https://doi.org/10.2307/1914185"},
+        {"title":"The psychology of sunk cost","year":1985,"doi":"10.1016/0749-5978(85)90049-4","url":"https://doi.org/10.1016/0749-5978(85)90049-4"},
+        {"title":"Meta-analysis of Empirical Estimates of Loss Aversion","year":2024,"doi":"10.1257/jel.20221698","url":"https://doi.org/10.1257/jel.20221698"},
+        {"title":"Loss aversion is not robust: A re-meta-analysis","year":2025,"doi":"10.1016/j.joep.2025.102801","url":"https://doi.org/10.1016/j.joep.2025.102801"}
+      ]
+    }
+  ]
+}
