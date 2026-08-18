@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "default-effect-vs-status-quo-bias",
+      "leftSlug": "framing-effect-default-effect",
+      "rightSlug": "prospect-theory-status-quo-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Default Effect vs Status Quo Bias",
+      "summary": "Both can make one option unusually sticky, but they are not the same. A default is the option or outcome that applies if no active choice is made. Status quo bias is the broader tendency to give extra weight to the option that is already current or in place.",
+      "keyDifference": "Ask why one option is privileged: because the choice architecture makes it happen automatically, or because it is already the person's current state?",
+      "dimensions": [
+        {"dimension":"What creates the privileged option?","left":"A form, policy, system or interface defines what happens if the person does not actively switch.","right":"The person already has, uses or occupies one option, so change must be considered relative to the current state."},
+        {"dimension":"Does a designer have to set it?","left":"Usually yes. Someone or some system defines the pre-selected or automatic outcome.","right":"No. A current bank, workflow, software system or possession can become the status quo without anyone deliberately designing it as a nudge."},
+        {"dimension":"What does staying tell us?","left":"It shows that the default influenced observed choice, but not necessarily that the person strongly preferred it.","right":"It shows persistence with the current option, but that persistence may reflect bias, real switching costs, uncertainty or a genuinely better current option."},
+        {"dimension":"Best diagnostic","left":"Compare the same choice with a different default or an active-choice condition while keeping the options otherwise comparable.","right":"Ask what would be chosen if none of the options were already current, then add genuine switching costs back into the comparison."}
+      ],
+      "diagnostic": [
+        "Identify exactly what happens if the person does nothing. If one option is automatically selected, you have a default to examine.",
+        "Identify whether the person already owns, uses or occupies an option before the choice begins. That is the status quo question.",
+        "Separate changing effort and real switching costs from familiarity, endorsement signals and simple inattention.",
+        "Do not infer strong preference only because many people stayed. Compare with active choice, another default or a no-status-quo version when the decision is important."
+      ],
+      "examples": [
+        {"title":"Privacy settings","left":"A new account starts with personalised ads enabled unless the user changes the setting. The pre-selected state is the default.","right":"A long-time user keeps an old privacy configuration after new options are introduced partly because the existing setup is already familiar and in place."},
+        {"title":"Work software","left":"A new tool opens with one workflow enabled automatically, so most users begin there unless they deliberately change it.","right":"A team keeps its existing software during a migration review even when the alternatives are presented neutrally, partly because the current system defines the starting point."},
+        {"title":"Retirement plan","left":"Employees are automatically enrolled at a contribution rate unless they opt out or change it.","right":"An employee who has used the same allocation for years keeps it during a later review because it is already the current portfolio."}
+      ],
+      "reviewProtocol": [
+        "Write the options and outcomes without marking any one as current or pre-selected.",
+        "Record what happens under inaction and whether the current state existed before the decision screen or policy.",
+        "Estimate real switching costs, effort and uncertainty separately.",
+        "Where possible, compare behaviour under active choice, alternative defaults or a neutral starting condition.",
+        "Judge welfare and preference from the full decision evidence, not from default uptake or persistence alone."
+      ],
+      "sources": [
+        {"title":"Status quo bias in decision making","year":1988,"doi":"10.1007/BF00055564","url":"https://doi.org/10.1007/BF00055564"},
+        {"title":"Recommendations Implicit in Policy Defaults","year":2006,"doi":"10.1111/j.1467-9280.2006.01721.x","url":"https://doi.org/10.1111/j.1467-9280.2006.01721.x"},
+        {"title":"Limited attention and status quo bias","year":2017,"doi":"10.1016/j.jet.2017.01.009","url":"https://doi.org/10.1016/j.jet.2017.01.009"},
+        {"title":"When and why defaults influence decisions: a meta-analysis of default effects","year":2019,"doi":"10.1017/bpp.2018.43","url":"https://doi.org/10.1017/bpp.2018.43"}
+      ]
+    }
+  ]
+}
