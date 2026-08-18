@@ -36,4 +36,12 @@ for (const path of targets) {
   }
 }
 
-console.log(`Generated Atom research feed with ${entries.length} entries.`);
+const robotsPath = join(OUT, "robots.txt");
+let robots = await readFile(robotsPath, "utf8");
+const feedSitemap = `Sitemap: ${SITE}/research/feed.xml`;
+if (!robots.includes(feedSitemap)) {
+  robots = `${robots.trimEnd()}\n${feedSitemap}\n`;
+  await writeFile(robotsPath, robots);
+}
+
+console.log(`Generated Atom research feed with ${entries.length} entries and advertised it in robots.txt.`);
