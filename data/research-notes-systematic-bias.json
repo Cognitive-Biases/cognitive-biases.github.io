@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "systematic-bias-why-more-data-is-not-enough",
+      "title": "Systematic Bias: why more data is not enough",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Systematic bias is not one mental shortcut. It is a measurement and statistical problem: a process can keep pushing results away from a target in a consistent direction, and collecting more data from the same biased process does not automatically fix it.",
+      "sections": [
+        {
+          "heading": "Systematic and random error are different problems",
+          "paragraphs": [
+            "Measurement standards distinguish systematic error from random error. Random error varies unpredictably across repeated measurements. Systematic error has a consistent or predictable component relative to a reference value.",
+            "That distinction matters because repeated observations can make an average more precise while the whole process is still centred on the wrong value. Precision and accuracy are not the same thing."
+          ]
+        },
+        {
+          "heading": "The word bias does not make it a cognitive bias",
+          "paragraphs": [
+            "Statistics, measurement science and research methods use the word bias for many systematic deviations. A sampling procedure can be biased. An estimator can be biased. An instrument can have measurement bias. None of these labels, by themselves, identify a psychological mechanism in a person.",
+            "Human judgment can also be systematically biased, but the useful scientific question is then which specific process or construct explains the pattern. Calling it only 'systematic bias' is a description of the deviation, not a mechanism."
+          ]
+        },
+        {
+          "heading": "More data can make the wrong answer look more certain",
+          "paragraphs": [
+            "If every observation comes through the same miscalibrated instrument or the same unrepresentative sampling process, collecting more observations can reduce random uncertainty around a systematically shifted estimate. The result can look stable and precise while remaining wrong relative to the target.",
+            "That is why large datasets do not remove the need for calibration, validation, representative sampling and checks against independent sources or methods."
+          ]
+        },
+        {
+          "heading": "A practical review starts with the reference",
+          "paragraphs": [
+            "First define what the measurement or estimate is supposed to represent. Then ask where the process could push the result consistently high, low, early, late or toward one group or condition.",
+            "Useful checks depend on the system: calibration against a known reference, holdout or validation data, alternative instruments, representative sampling, sensitivity analysis, process controls, or independent replication."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We keep Systematic Bias because people and agents encounter the term in measurement, data and research. But it is now explicitly classified as a Measurement concept rather than a cognitive bias or generic psychological phenomenon.",
+            "It remains excluded from the Decision Audit. The right response is to inspect the measurement or estimation process, not to diagnose a person with a mental bias called 'Systematic Bias'."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"International vocabulary of metrology — systematic measurement error and measurement bias","year":2008,"type":"international metrology vocabulary","url":"https://www.iso.org/sites/JCGM/VIM/JCGM_200e_FILES/MAIN_JCGM_200e/02_e.html"},
+        {"title":"NIST Technical Note 1297, Appendix D1: Terminology","year":1994,"type":"measurement uncertainty guidance","url":"https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"},
+        {"title":"Bias, Statistical","year":2023,"type":"NIST glossary definition","url":"https://www.nist.gov/glossary-term/19181"}
+      ],
+      "related": ["cognitive-bias-systematic-bias"]
+    }
+  ]
+}
