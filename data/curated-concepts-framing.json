@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 224,
+      "number": 224,
+      "typeOfBias": "Framing Effect",
+      "title": "Framing Effect – when equivalent descriptions lead to different choices",
+      "description": "Framing Effect is the tendency for a judgment or choice to change when the same underlying information is described in different ways. A common example is risky choice: people can respond differently when equivalent outcomes are presented as gains rather than losses.\n\nWhere can it show up?\n- Risk decisions – a sure outcome can feel different when it is described as people saved rather than people lost.\n- Product and business communication – an outcome described as 90% success may be evaluated differently from the equivalent 10% failure description.\n- AI-assisted decisions – a model or interface can present the same evidence in a positive or negative frame before a person chooses.\n\nA better check\n- Rewrite important options in a neutral form and, when useful, show both the gain and loss descriptions.\n- Keep the actual outcomes, probabilities, and missing information the same when testing whether the frame changed the choice.\n- Record a choice before and after reframing when the decision is important enough to justify the check.\n- Do not treat every wording difference as the same framing effect. Risky-choice, attribute, and goal framing are different research traditions, and their evidence is not equally strong.",
+      "slug": "framing-effect-core",
+      "related": [],
+      "status": "reviewed",
+      "updatedAt": "2026-08-18T16:30:00.000Z",
+      "published": true
+    }
+  ]
+}
