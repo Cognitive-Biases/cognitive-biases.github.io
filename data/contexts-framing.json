@@ -7,6 +7,7 @@
       "summary": "Use these evidence-reviewed lenses when a report, interface, model, or recommendation is presenting numbers and choices that other people will use to decide.",
       "useWhen": [
         "The same outcome can be described as a gain, a loss, a success rate, or a failure rate.",
+        "A reference point determines whether the same change is experienced as gaining something or losing something.",
         "One prominent number appears before people form their own estimate.",
         "A broad risk category hides several different ways the outcome could happen.",
         "A vivid example or recent incident is being used next to statistical evidence.",
@@ -14,6 +15,7 @@
       ],
       "workflow": [
         "Write the underlying outcomes, quantities, and probabilities in a neutral form before choosing presentation language.",
+        "State the reference point explicitly and compare matched positive and negative changes. When possible, also show the absolute outcomes rather than only the gain or loss from the reference point.",
         "Create matched gain and loss descriptions for important risk choices. Check whether the decision changes even though the underlying outcomes do not.",
         "Identify the first numerical reference point. When practical, collect an independent estimate before revealing it or compare against several relevant references.",
         "Unpack broad risks into mutually exclusive possibilities and compare the total with the original packed estimate.",
@@ -22,6 +24,7 @@
       ],
       "lenses": [
         {"slug":"framing-effect-core","question":"Would the choice change if the same outcomes were presented with an equivalent gain, loss, or neutral description?"},
+        {"slug":"prospect-theory-loss-aversion","question":"What is the reference point, and are equivalent losses receiving more weight than comparable gains in this decision?"},
         {"slug":"cognitive-bias-anchoring-effect","question":"Which number is shown first, and is it pulling later estimates toward itself?"},
         {"slug":"probability-bias-subadditivity-effect","question":"Does the total risk estimate change when the same outcome is unpacked into explicit possibilities?"},
         {"slug":"heuristic-bias-availability-bias","question":"Is a vivid example affecting the estimate because it is representative, or mainly because it is easy to recall?"}
