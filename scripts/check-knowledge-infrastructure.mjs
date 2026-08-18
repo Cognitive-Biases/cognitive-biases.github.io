@@ -142,11 +142,22 @@ async function inspectHtml(dir) {
       const html = await readFile(path, "utf8");
       assert(!html.includes('<img src="/assets/icon2.png" width="48"'), `oversized brand asset still rendered in header: ${path}`);
       assert(!html.includes('<img src="/assets/icon2.png" width="40"'), `oversized brand asset still rendered in footer: ${path}`);
+      if (html.includes('class="brand"')) assert(html.includes('/assets/brand.webp'), `brand WebP source missing: ${path}`);
     }
   }
 }
 await inspectHtml(OUT);
 const smallBrand = await stat(join(OUT, "assets", "biases_icon.png"));
-assert(smallBrand.size <= 50000, `header brand asset is unexpectedly large: ${smallBrand.size} bytes`);
+const brandWebp = await stat(join(OUT, "assets", "brand.webp"));
+const heroPng = await stat(join(OUT, "assets", "1152.png"));
+const heroWebp = await stat(join(OUT, "assets", "hero.webp"));
+assert(smallBrand.size <= 50000, `header brand PNG fallback is unexpectedly large: ${smallBrand.size} bytes`);
+assert(brandWebp.size < smallBrand.size, `brand WebP must be smaller than its PNG fallback: ${brandWebp.size} >= ${smallBrand.size}`);
+assert(brandWebp.size <= 30000, `brand WebP is too large for 40–48 px rendering: ${brandWebp.size} bytes`);
+assert(heroWebp.size < heroPng.size, `hero WebP must be smaller than its PNG fallback: ${heroWebp.size} >= ${heroPng.size}`);
+assert(heroWebp.size <= 650000, `hero WebP is not materially smaller than the current PNG: ${heroWebp.size} bytes`);
+const homepage = await readFile(join(OUT, "index.html"), "utf8");
+assert(homepage.includes('<source type="image/webp" srcset="/assets/hero.webp">'), "homepage hero does not prefer WebP");
+assert(homepage.includes('<img src="/assets/1152.png" width="1152" height="1152"'), "homepage hero PNG fallback or dimensions are missing");
 
 console.log(`Knowledge infrastructure check passed: release ${release.releaseVersion}, ${evidence.length} reviewed concepts, ${sources.length} sources, ${ragLines.length} RAG chunks, ${benchmark.cases.length} evals, ${guidesPayload.generatedGuides.length} guides.`);
