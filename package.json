@@ -5,7 +5,7 @@
   "description": "Static website for the Cognitive Biases educational app.",
   "scripts": {
     "prepare:data": "node scripts/repair-integrity.mjs --write",
-    "build:site": "node scripts/build.mjs && node scripts/enhance.mjs && node scripts/apply-record-family-overrides.mjs && node scripts/inject-family-nav.mjs && node scripts/apply-duplicate-canonicals.mjs && node scripts/clean-duplicate-discovery.mjs && node scripts/apply-evidence-reviews.mjs && node scripts/generate-evidence-hub.mjs",
+    "build:site": "node scripts/build.mjs && node scripts/enhance.mjs && node scripts/apply-record-family-overrides.mjs && node scripts/reconcile-family-links.mjs && node scripts/inject-family-nav.mjs && node scripts/apply-duplicate-canonicals.mjs && node scripts/clean-duplicate-discovery.mjs && node scripts/apply-evidence-reviews.mjs && node scripts/generate-evidence-hub.mjs",
     "build": "npm run prepare:data && npm run build:site",
     "validate:data": "npm run prepare:data && node scripts/validate-data.mjs",
     "audit:taxonomy": "npm run prepare:data && node scripts/audit-taxonomy.mjs",
