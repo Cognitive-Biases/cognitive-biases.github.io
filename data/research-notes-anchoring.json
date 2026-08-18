@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "anchoring-ai-assisted-decisions-first-number",
+      "title": "Anchoring in AI-assisted decisions: why the first number matters",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Anchoring is strongly supported in human numerical judgment, and newer studies show two AI-related risks: people can anchor on AI recommendations, while model outputs can also shift when prompts contain numerical anchors.",
+      "sections": [
+        {
+          "heading": "The human anchoring effect is strong, but not every anchor is equal",
+          "paragraphs": [
+            "Anchoring has been studied for decades: an initial numerical value can pull a later estimate toward it. A 2026 meta-analysis covering 2,601 effect sizes found a large overall effect even after accounting for publication bias.",
+            "The same meta-analysis also gives an important boundary condition. Incidental anchors, values from a different dimension, clearly random numbers, incentives and some debiasing conditions were associated with smaller or null effects. The useful claim is therefore not that every first number controls judgment, but that starting values can systematically influence later estimates under many common conditions."
+          ]
+        },
+        {
+          "heading": "An AI recommendation can become the anchor for a person",
+          "paragraphs": [
+            "A 2025 study used two controlled experiments with 775 managers making performance appraisal judgments. The managers’ ratings were influenced by high and low recommendations, and the source of the recommendation interacted with the anchor. In other words, the number mattered and whether it came from AI or a human could matter too.",
+            "This is useful for AI product design because a model does not need to be wrong in a dramatic way to shape a decision. Showing a precise score before a person forms an independent estimate can change the starting point of the whole review."
+          ]
+        },
+        {
+          "heading": "Models can also respond to anchors in prompts",
+          "paragraphs": [
+            "A peer-reviewed study published online in 2025 and appearing in the 2026 Journal of Computational Social Science tested anchoring in LLM responses. It found that model answers were sensitive to biased numerical hints in its experimental tasks.",
+            "The study also found that several simple mitigation prompts, including asking models to ignore the anchor or reflect, were not sufficient in the tested setup. That should not be turned into a universal rule about every model or every task. It is evidence that prompt-level anchoring deserves direct testing rather than assuming a generic reasoning instruction removes it."
+          ]
+        },
+        {
+          "heading": "A practical workflow is better than a warning",
+          "paragraphs": [
+            "For consequential numerical decisions, one useful design is to collect an independent human estimate or range before revealing the AI recommendation. Another is to show relevant base rates, completed cases or several independent estimates rather than one prominent number with false precision.",
+            "If the AI is producing the estimate itself, test the system with changed anchors and otherwise equivalent prompts. The question is observable: how much does the output move when the starting value changes, and does the mitigation improve calibration rather than merely changing the wording?"
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We added Anchoring Effect as an evidence-reviewed canonical concept and connected it to AI-assisted decisions and project estimation. We also compare it directly with Automation Bias because the two can occur together but describe different errors.",
+            "The distinction is practical. A person may be anchored by one AI-generated number without generally over-relying on automation, and a person can show automation bias without any numerical anchor at all."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Judgment under Uncertainty: Heuristics and Biases","year":1974,"type":"foundational experimental review","doi":"10.1126/science.185.4157.1124","url":"https://doi.org/10.1126/science.185.4157.1124"},
+        {"title":"Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis","year":2026,"type":"meta-analysis","doi":"10.1287/mnsc.2023.03238","url":"https://doi.org/10.1287/mnsc.2023.03238"},
+        {"title":"How was my performance? Exploring the role of anchoring bias in AI-assisted decision making","year":2025,"type":"controlled experiments with managers","doi":"10.1016/j.ijinfomgt.2025.102875","url":"https://doi.org/10.1016/j.ijinfomgt.2025.102875"},
+        {"title":"Anchoring bias in large language models: an experimental study","year":2026,"type":"peer-reviewed experimental study","doi":"10.1007/s42001-025-00435-2","url":"https://doi.org/10.1007/s42001-025-00435-2"}
+      ],
+      "related": ["cognitive-bias-anchoring-effect","false-priors-automation-bias","egocentric-bias-planning-fallacy"]
+    }
+  ]
+}
