@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "attribution-bias-moral-luck",
+      "evidenceStatus": "established moral-judgment phenomenon with multiple contributors",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Resultant moral luck describes cases where judgments of blame, punishment, or moral evaluation differ because otherwise similar actions lead to different outcomes partly outside the agent's control. Outcome information does affect moral judgment in experiments, but the effect should not be reduced to 'people ignore intent.' Mental states, causal responsibility, belief justification, negligence, and the kind of moral judgment being asked about all matter. Some studies find that false or unjustified beliefs explain more of classic moral-luck asymmetries than the bad outcome itself, while still detecting an independent outcome effect.",
+      "mechanism": "Moral judgment integrates information about an agent's intentions, beliefs, causal role, and resulting harm. Harmful outcomes can increase blame or punishment directly and can also change how observers interpret the agent's prior beliefs, recklessness, or justification. This makes moral luck related to outcome bias and hindsight bias without being identical to either: the target judgment is moral responsibility, blame, or punishment rather than generic decision quality or predictability.",
+      "practical": "When reviewing an action after a good or bad outcome, separate at least four questions: what the agent intended, what they reasonably believed at the time, what risks they controlled, and what outcome actually occurred. If the goal is to evaluate the quality or morality of the ex-ante choice, first compare cases that differ only in outcome. Then use the outcome for learning about risk and consequences without silently treating luck as evidence that the original mental state was better or worse than it was.",
+      "sources": [
+        {
+          "title": "Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment",
+          "year": 2008,
+          "type": "behavioral experiments",
+          "doi": "10.1016/j.cognition.2008.03.006",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18439575/"
+        },
+        {
+          "title": "Investigating the Neural and Cognitive Basis of Moral Luck: It's Not What You Do but What You Know",
+          "year": 2010,
+          "type": "behavioral experiment + neuroimaging",
+          "doi": "10.1007/s13164-010-0027-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22558062/"
+        },
+        {
+          "title": "Moral luck in investment contexts: We consciously find unprofitable investments less moral",
+          "year": 2023,
+          "type": "two online experiments",
+          "doi": "10.1371/journal.pone.0278677",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36649364/"
+        }
+      ]
+    }
+  ]
+}
