@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "loss-aversion-how-large-and-how-robust",
+      "title": "Loss Aversion: how large is the effect, and how robust is it?",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Loss aversion is one of the best-known ideas in behavioural economics, but recent meta-analyses disagree substantially about its average size and about which experimental designs provide clean evidence for it.",
+      "sections": [
+        {
+          "heading": "The famous idea is about a reference point",
+          "paragraphs": [
+            "Prospect theory models outcomes as gains and losses relative to a reference point rather than only as final levels of wealth. Loss aversion adds an asymmetry: a loss can receive more subjective weight than an equivalent gain around that reference point.",
+            "This is different from a general dislike of risk. It is also different from sunk cost. A sunk cost is already irrecoverable; loss aversion concerns how prospective losses and gains are valued from a reference point."
+          ]
+        },
+        {
+          "heading": "A large 2024 meta-analysis found substantial loss aversion",
+          "paragraphs": [
+            "Brown and colleagues collected 607 empirical estimates from 150 articles across economics, psychology, neuroscience and other fields. Their meta-analysis estimated a mean loss-aversion coefficient of about 1.96, close to the familiar claim that losses can receive roughly twice the weight of gains.",
+            "That is strong aggregate evidence that loss-sensitive estimates are common in the literature. It still does not mean that 1.96 is a psychological constant that should be copied into every product, policy or forecasting model."
+          ]
+        },
+        {
+          "heading": "Another 2024 meta-analysis found a much smaller effect",
+          "paragraphs": [
+            "Walasek and colleagues focused on risky-choice datasets where prospect-theory parameters could be fitted to individual choices. Across the usable datasets, their random-effects estimate of the loss-aversion parameter was about 1.31 rather than around two.",
+            "The authors also noted that surprisingly few datasets were suitable for this kind of model fitting and that much of the available data made precise parameter estimation difficult. Different inclusion and modelling choices therefore lead to materially different summaries of the literature."
+          ]
+        },
+        {
+          "heading": "The 2025 re-meta-analysis sharpened the disagreement",
+          "paragraphs": [
+            "A 2025 re-analysis of much of the Brown et al. dataset separated studies by payoff symmetry and by whether gains and losses were presented in an ordered way. It found strong loss aversion in some design categories but a parameter close to one in symmetric, unordered studies.",
+            "The authors interpret this as evidence that loss aversion is not robust across cleanly matched designs. That conclusion is itself part of an active scientific debate, but it is enough to reject a universal rule about one fixed loss-aversion coefficient."
+          ]
+        },
+        {
+          "heading": "What a practical check can still do",
+          "paragraphs": [
+            "For a real decision, start by naming the reference point. Then compare equal-sized positive and negative changes under the same probabilities and time horizon. When possible, also write the final outcomes directly so that the reference frame is visible rather than hidden inside the wording.",
+            "If a product team, analyst or model needs a numerical loss-aversion parameter, estimate or validate it for the relevant setting instead of importing a famous coefficient from another experiment."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We added Loss Aversion as a core reviewed concept, but we do not describe it as a settled 'losses hurt twice as much' law. The evidence page keeps the competing 2024 meta-analyses and the 2025 re-meta-analysis together so readers can see the disagreement.",
+            "We also compare Loss Aversion directly with Sunk Cost Effect and connect it to the guides for presenting risk and deciding whether a project should continue, change or stop."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Prospect Theory: An Analysis of Decision under Risk","year":1979,"type":"foundational theory and experiments","doi":"10.2307/1914185","url":"https://doi.org/10.2307/1914185"},
+        {"title":"Meta-analysis of Empirical Estimates of Loss Aversion","year":2024,"type":"interdisciplinary meta-analysis","doi":"10.1257/jel.20221698","url":"https://doi.org/10.1257/jel.20221698"},
+        {"title":"A meta-analysis of loss aversion in risky contexts","year":2024,"type":"meta-analysis of risky-choice datasets","doi":"10.1016/j.joep.2024.102740","url":"https://doi.org/10.1016/j.joep.2024.102740"},
+        {"title":"Loss aversion is not robust: A re-meta-analysis","year":2025,"type":"re-meta-analysis","doi":"10.1016/j.joep.2025.102801","url":"https://doi.org/10.1016/j.joep.2025.102801"}
+      ],
+      "related": ["prospect-theory-loss-aversion","cognitive-bias-sunk-cost-effect","framing-effect-core"]
+    }
+  ]
+}

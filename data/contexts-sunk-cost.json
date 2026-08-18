@@ -7,6 +7,7 @@
       "summary": "Use these evidence-reviewed lenses when a project has disappointing results and the next decision is whether to invest more, change direction, or stop.",
       "useWhen": [
         "Past spending is the strongest argument for approving the next budget or milestone.",
+        "Stopping feels like accepting or making a loss real, even before the remaining future options are compared.",
         "The person who chose the original plan is also deciding whether it should continue.",
         "A project is described as too close to completion to stop, but the remaining value and cost are unclear.",
         "A target, original business case, or early estimate is still shaping the review after the evidence changed.",
@@ -14,6 +15,7 @@
       ],
       "workflow": [
         "Separate past costs from the next decision. Write the remaining costs, expected future value, important risks, and realistic alternatives from today forward.",
+        "Name the reference point that makes stopping or changing direction feel like a loss. Distinguish that prospective loss from money or time that is already irrecoverable.",
         "Describe what useful completion actually produces. Being close to finished can matter when completion has future value, but percentage complete is not value by itself.",
         "Rebuild the current estimate from relevant evidence instead of adjusting only from the original budget, target, or deadline.",
         "Check ownership pressure. Ask someone who did not make the original decision to review the next commitment using the same evidence.",
@@ -22,6 +24,7 @@
       ],
       "lenses": [
         {"slug":"cognitive-bias-sunk-cost-effect","question":"Which past costs are irrecoverable, and would they change what we choose if we evaluated only the future options?"},
+        {"slug":"prospect-theory-loss-aversion","question":"Is stopping being evaluated as a prospective loss from the current reference point, separately from the sunk costs already paid?"},
         {"slug":"logical-fallacy-escalation-of-commitment","question":"Are setbacks leading us to commit more resources without reopening whether this course still deserves the next investment?"},
         {"slug":"cognitive-bias-anchoring-effect","question":"Which original target, budget, valuation, or deadline is still pulling the current judgment toward it?"},
         {"slug":"egocentric-bias-planning-fallacy","question":"What does comparable completed work say about the cost and time still required from today?"},

@@ -74,6 +74,7 @@
   "recordFamilyOverrides": {
     "51": "attention-information",
     "64": "time-commitment",
+    "76": "valuation-choice",
     "78": "valuation-choice",
     "81": "future-state-forecasting",
     "90": "valuation-choice",
@@ -122,6 +123,7 @@
     "51": ["human-ai-interaction"],
     "58": ["defaults-settings-choice-architecture", "comparing-plans-pricing"],
     "64": ["work-project-decisions", "project-estimation-delivery", "continue-change-stop-project"],
+    "76": ["presenting-risk-options", "continue-change-stop-project"],
     "78": ["defaults-settings-choice-architecture"],
     "81": ["forecasting-future-choices"],
     "97": ["human-robot-interaction", "human-ai-interaction"],
