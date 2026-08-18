@@ -5,32 +5,52 @@
       "slug": "projects-work",
       "title": "Projects & work decisions",
       "summary": "Estimate work, review results and decide whether a project should continue, change or stop.",
-      "contexts": ["work-project-decisions","project-estimation-delivery","continue-change-stop-project"]
+      "contexts": [
+        "work-project-decisions",
+        "project-estimation-delivery",
+        "continue-change-stop-project"
+      ]
     },
     {
       "slug": "metrics-evaluation",
       "title": "Metrics, KPIs & evaluation",
       "summary": "Check whether a score still represents the real objective, whether the evaluation is becoming the target, and what evidence could show the proxy is failing.",
-      "contexts": ["reviewing-kpis-proxy-metrics"]
+      "contexts": [
+        "reviewing-kpis-proxy-metrics"
+      ]
     },
     {
       "slug": "claims-forecasts",
       "title": "Claims, forecasts & uncertainty",
       "summary": "Check information, estimate uncertain outcomes and keep vivid or repeated examples from replacing broader evidence.",
-      "contexts": ["forecasting-future-choices","checking-claims-misinformation"]
+      "contexts": [
+        "forecasting-future-choices",
+        "checking-claims-misinformation"
+      ]
     },
     {
       "slug": "ai-decisions",
       "title": "AI-assisted decisions",
       "summary": "Use AI recommendations without confusing fluency, repetition or a suggested number with independent evidence.",
-      "contexts": ["ai-assisted-decisions"]
+      "contexts": [
+        "ai-assisted-decisions"
+      ]
     },
     {
       "slug": "choice-design",
       "title": "Interfaces, pricing & choice design",
       "summary": "Review how risk wording, defaults, starting values and option sets can change what looks attractive.",
-      "contexts": ["presenting-risk-options","defaults-settings-choice-architecture","comparing-plans-pricing"]
+      "contexts": [
+        "presenting-risk-options",
+        "defaults-settings-choice-architecture",
+        "comparing-plans-pricing"
+      ]
     }
   ],
-  "homepageFeatured": ["ai-assisted-decisions","project-estimation-delivery","checking-claims-misinformation","comparing-plans-pricing"]
+  "homepageFeatured": [
+    "ai-assisted-decisions",
+    "project-estimation-delivery",
+    "checking-claims-misinformation",
+    "comparing-plans-pricing"
+  ]
 }
