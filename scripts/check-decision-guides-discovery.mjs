@@ -3,6 +3,9 @@ import { resolve } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const json = async (path) => JSON.parse(await readFile(path, "utf8"));
+const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+})[character]);
 const contexts = await json("data/contexts.json");
 const config = await json("data/context-groups.json");
 const allSlugs = new Set((contexts.entries || []).map((entry) => entry.slug));
@@ -17,7 +20,7 @@ if (!hub.includes("<h1>Start with the decision, not the bias name.</h1>")) throw
 if (!hub.includes('class="guide-jumps"')) throw new Error("Decision Guides hub is missing topic jump links.");
 for (const group of config.groups || []) {
   if (!hub.includes(`id="${group.slug}"`)) throw new Error(`Decision Guides hub is missing group ${group.slug}.`);
-  if (!hub.includes(`>${group.title}</h2>`)) throw new Error(`Decision Guides hub is missing visible heading ${group.title}.`);
+  if (!hub.includes(`>${escapeHtml(group.title)}</h2>`)) throw new Error(`Decision Guides hub is missing visible heading ${group.title}.`);
   for (const slug of group.contexts) {
     if (!hub.includes(`href="/contexts/${slug}/"`)) throw new Error(`Decision Guides hub does not link context ${slug}.`);
   }
