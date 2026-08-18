@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "confirmation-bias-backfire-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Backfire diagnostic: did the correction actually strengthen the false belief?",
+      "summary": "Backfire is a narrow outcome, not a synonym for disagreement, defensiveness, or misinformation that remains partly influential after correction. This guide turns the concept into a testable decision pattern.",
+      "diagnostic": [
+        {
+          "label": "1. Define the target belief",
+          "text": "Write the exact factual claim and, when possible, record confidence before the correction. If the target changes during the conversation, you cannot tell whether the original belief backfired."
+        },
+        {
+          "label": "2. Correct the same claim",
+          "text": "Use a clear correction from a source the audience has a reason to treat as credible. A correction that is not understood or trusted can fail, but failure alone is not backfire."
+        },
+        {
+          "label": "3. Measure direction, not emotion",
+          "text": "Ask whether belief in the corrected false claim became stronger. Anger, argument, source distrust, or refusal to concede are different outcomes unless the factual belief itself increased."
+        },
+        {
+          "label": "4. Check again later",
+          "text": "Immediate correction effects can weaken with time. A delayed check helps separate a short-lived response from durable belief updating or continued influence."
+        }
+      ],
+      "distinctions": [
+        {
+          "term": "Continued influence effect",
+          "text": "Corrected misinformation can still shape later reasoning even when belief in it has fallen. That persistence is not automatically a backfire effect."
+        },
+        {
+          "term": "Reactance",
+          "text": "People may resist when a message feels controlling or autonomy-threatening. Reactance can affect persuasion, but it does not by itself show that the corrected factual belief became stronger."
+        },
+        {
+          "term": "Motivated reasoning",
+          "text": "Goals and prior attitudes can steer how evidence is evaluated. This is a broader processing pattern; backfire is one possible belief-change outcome, not another name for motivated reasoning."
+        },
+        {
+          "term": "Illusory truth effect",
+          "text": "Repetition can increase perceived truth through familiarity. It is a different phenomenon from a correction increasing belief in the false claim."
+        }
+      ],
+      "playbook": [
+        {
+          "label": "Correct rather than surrender",
+          "text": "The evidence does not support a rule that corrections usually make misinformation stronger. Avoiding corrections because of a generic fear of backfire throws away a tool that usually improves factual accuracy."
+        },
+        {
+          "label": "Make the correction easy to identify",
+          "text": "State what is wrong and what the more accurate account is. When misinformation supplied a causal explanation, a coherent alternative can help fill the explanatory gap left by the retraction."
+        },
+        {
+          "label": "Treat format as secondary",
+          "text": "Fact-first and myth-first formats have not shown a large, universal performance gap once the essential correction is present. Spend more effort on clarity, evidence, and whether the correction is actually received."
+        },
+        {
+          "label": "Separate belief from downstream attitudes",
+          "text": "A correction can improve factual accuracy without changing identity, policy preference, trust, or behaviour. Measure the outcome you care about instead of treating all resistance as one construct."
+        },
+        {
+          "label": "Use delayed verification",
+          "text": "For consequential claims, re-check the factual belief later. Misinformation can continue to influence reasoning after a correction even when an immediate belief measure improves."
+        }
+      ],
+      "systemChecklist": [
+        "Target claim and pre-correction confidence",
+        "Correction content, source, and timestamp",
+        "Immediate confidence in the same claim",
+        "Delayed confidence in the same claim",
+        "Separate measures for source trust, attitude, or behaviour",
+        "Outcome label: corrected, unchanged, backfire, or continued influence"
+      ],
+      "sources": [
+        {
+          "title": "Misinformation and Its Correction: Continued Influence and Successful Debiasing",
+          "year": 2012,
+          "doi": "10.1177/1529100612451018",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26173286/"
+        },
+        {
+          "title": "Correction format has a limited role when debunking misinformation",
+          "year": 2022,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34964924/"
+        },
+        {
+          "title": "Can you believe it? An investigation into the impact of retraction source credibility on the continued influence effect",
+          "year": 2021,
+          "doi": "10.3758/s13421-020-01129-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33452666/"
+        },
+        {
+          "title": "Mechanisms in continued influence: The impact of misinformation corrections on source perceptions",
+          "year": 2023,
+          "doi": "10.3758/s13421-023-01402-w",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36988856/"
+        }
+      ]
+    }
+  ]
+}
