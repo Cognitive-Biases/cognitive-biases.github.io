@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 220,
+      "slug": "framing-effect-decoy-effect",
+      "previousTitle": "Decoy Effect – when a third option pushes you toward the second",
+      "title": "Decoy Effect – when an inferior option changes the comparison between better options",
+      "description": "Decoy Effect is a context effect in which adding an inferior option can increase the choice share of another option. In the classic attraction-effect setup, the decoy is clearly worse than the target on important attributes, which can make the target easier to justify against a competitor.\n\nWhere can it show up?\n- Pricing tables: a third plan can make one of the original plans look better by comparison.\n- Product choice: an inferior model can change how price and quality trade-offs are evaluated between two stronger alternatives.\n- Recommendations: adding or removing an option can change the relative appeal of the options that remain, even when their own features do not change.\n\nA better check\n- Compare the main options before and after the extra option is added.\n- Ask whether the extra option is dominated by one alternative but not by the other.\n- Remove the suspected decoy and see whether your preference between the remaining options changes.\n- Compare the options on the attributes that matter to your goal, not only on the contrast created by the menu.\n- Do not assume that every three-tier price table creates a decoy effect. The effect is well documented, but its size and even its direction depend on the choice set and context.",
+      "reason": "The legacy page called the Decoy Effect a marketing trick designed to push buyers toward a target. The literature supports a context-dependent choice effect, not a universal manipulation rule, and distinguishes several decoy configurations and related context effects."
+    }
+  ]
+}

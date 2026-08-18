@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "comparing-plans-pricing",
+      "title": "Comparing plans & pricing",
+      "summary": "Use these evidence-reviewed lenses when comparing subscription tiers, product plans, vendor offers or recommendation menus where the way options are arranged may change what looks attractive.",
+      "useWhen": [
+        "A three-tier pricing table makes one plan suddenly look like the obvious value choice.",
+        "An extra option is clearly worse than one plan but still changes how the stronger options are compared.",
+        "One plan is already selected or renews automatically unless the user changes it.",
+        "A list price, target budget or recommended price is becoming the reference point for the comparison.",
+        "Equivalent features or outcomes are described differently across plans, making direct comparison difficult."
+      ],
+      "workflow": [
+        "List the serious options and the attributes that matter to your goal before using badges, highlights or recommended labels.",
+        "Remove any suspected decoy and compare the remaining options again. If your preference changes, inspect what contrast the extra option created.",
+        "Identify the no-action outcome separately. A default can influence choice even when no decoy is present.",
+        "Hide or replace the starting price, target or recommendation when practical and make an independent estimate of value before reconciling it with the displayed number.",
+        "Rewrite important attributes in matched units and neutral language so equivalent differences are easy to compare.",
+        "Choose on expected value and fit to the actual need. Conversion, popularity and a 'recommended' badge are not substitutes for the decision criteria."
+      ],
+      "lenses": [
+        {"slug":"framing-effect-decoy-effect","question":"Does removing the inferior or strategically positioned option change my preference between the remaining plans?"},
+        {"slug":"framing-effect-default-effect","question":"Which plan applies if I do nothing, and is that automatic outcome being mistaken for preference?"},
+        {"slug":"cognitive-bias-anchoring-effect","question":"Which displayed price, budget or recommendation became the starting point for my value judgment?"},
+        {"slug":"framing-effect-core","question":"Are equivalent features, gains, losses or rates described differently across the options?"}
+      ]
+    }
+  ]
+}

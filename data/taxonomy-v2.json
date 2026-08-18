@@ -120,7 +120,7 @@
   "recordContexts": {
     "9": ["human-ai-interaction"],
     "51": ["human-ai-interaction"],
-    "58": ["defaults-settings-choice-architecture"],
+    "58": ["defaults-settings-choice-architecture", "comparing-plans-pricing"],
     "64": ["work-project-decisions", "project-estimation-delivery", "continue-change-stop-project"],
     "78": ["defaults-settings-choice-architecture"],
     "81": ["forecasting-future-choices"],
@@ -130,8 +130,9 @@
     "111": ["work-project-decisions"],
     "118": ["forecasting-future-choices"],
     "140": ["work-project-decisions"],
-    "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture"],
+    "220": ["comparing-plans-pricing"],
+    "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"],
     "223": ["work-project-decisions", "continue-change-stop-project"],
-    "224": ["presenting-risk-options", "defaults-settings-choice-architecture"]
+    "224": ["presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"]
   }
 }
