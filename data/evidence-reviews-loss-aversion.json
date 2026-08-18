@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "prospect-theory-loss-aversion",
+      "evidenceStatus": "influential and widely estimated; magnitude and robustness debated",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Loss aversion is a central component of prospect theory and many studies estimate losses as receiving greater subjective weight than gains around a reference point. However, the effect should not be summarized with one universal coefficient. A 2024 interdisciplinary meta-analysis of 607 estimates reported a mean coefficient near 1.96, while another 2024 meta-analysis of individual risky-choice datasets estimated about 1.31. A 2025 re-analysis of the larger dataset found little evidence of loss aversion in some symmetric, unordered designs, showing that task structure and analysis can materially change the result.",
+      "mechanism": "Prospect theory represents outcomes as gains and losses relative to a reference point and allows the value function to be steeper for losses than for gains. That model is useful descriptively, but observed loss-sensitive behaviour can also be affected by probability weighting, payoff ordering, attention, reference-point construction and other features of the task. The current debate is therefore about both magnitude and what experimental patterns should count as clean evidence for loss aversion.",
+      "practical": "For a consequential choice, state the reference point and compare matched gains and losses using the same probabilities and time horizon. Re-express options as absolute outcomes when possible and check whether the preference survives. Do not import a fixed 'losses count twice' coefficient into a new setting without evidence from that setting, and keep loss aversion separate from sunk-cost reasoning about resources that are already irrecoverable.",
+      "sources": [
+        {
+          "title": "Prospect Theory: An Analysis of Decision under Risk",
+          "year": 1979,
+          "type": "foundational theory and experiments",
+          "doi": "10.2307/1914185",
+          "url": "https://doi.org/10.2307/1914185"
+        },
+        {
+          "title": "Meta-analysis of Empirical Estimates of Loss Aversion",
+          "year": 2024,
+          "type": "interdisciplinary meta-analysis",
+          "doi": "10.1257/jel.20221698",
+          "url": "https://doi.org/10.1257/jel.20221698"
+        },
+        {
+          "title": "A meta-analysis of loss aversion in risky contexts",
+          "year": 2024,
+          "type": "meta-analysis of risky-choice datasets",
+          "doi": "10.1016/j.joep.2024.102740",
+          "url": "https://doi.org/10.1016/j.joep.2024.102740"
+        },
+        {
+          "title": "Loss aversion is not robust: A re-meta-analysis",
+          "year": 2025,
+          "type": "re-meta-analysis",
+          "doi": "10.1016/j.joep.2025.102801",
+          "url": "https://doi.org/10.1016/j.joep.2025.102801"
+        }
+      ]
+    }
+  ]
+}
