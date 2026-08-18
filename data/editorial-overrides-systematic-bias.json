@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 121,
+      "slug": "cognitive-bias-systematic-bias",
+      "supersedes": true,
+      "previousTitle": "Systematic Bias – when errors in judgment follow a predictable pattern",
+      "title": "Systematic Bias – a measurement and statistical concept, not one cognitive bias",
+      "description": "Systematic bias is a general measurement and statistical concept. It describes a consistent or predictable tendency for measurements, estimates, or study results to miss a reference or target value. It is not the name of one psychological mechanism.\n\nWhere can it show up?\n- Measurement: an instrument or procedure consistently pushes values high or low.\n- Research: sampling, confounding, measurement, or analysis creates a structural deviation in the result.\n- Data pipelines: one mapping, rule, sensor, or transformation repeatedly moves output in the same direction.\n\nA better check\n- Define the target or reference value first.\n- Measure the direction and size of the deviation instead of treating it as random noise.\n- Check calibration, sampling, design, data collection, transformations, and analysis.\n- Use validation data or an independent method when possible.\n- Do not assume a psychological cause just because the error repeats. Name a specific cognitive mechanism only when evidence supports one.\n\nMore observations can reduce random uncertainty, but they do not automatically remove a systematic error built into the process.",
+      "reason": "The existing reviewed copy correctly separated systematic bias from a standalone cognitive-bias mechanism, but the public presentation still used legacy markers and the controlled taxonomy classified the entry only as a generic phenomenon. This thematic override makes the distinction explicit in plain language."
+    }
+  ]
+}

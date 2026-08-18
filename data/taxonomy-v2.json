@@ -49,6 +49,10 @@
     "retrospective-evaluation": {
       "label": "Retrospective evaluation",
       "description": "Patterns where knowing an outcome changes later judgments of predictability, decision quality, blame, or responsibility."
+    },
+    "measurement-methods": {
+      "label": "Measurement & methods",
+      "description": "Concepts about measurement, sampling, calibration, estimation, study design, and systematic error rather than one psychological tendency."
     }
   },
   "directCategoryFamily": {
@@ -106,6 +110,7 @@
     "118": "future-state-forecasting",
     "119": "perception-patterns",
     "120": "attention-information",
+    "121": "measurement-methods",
     "122": "probability-risk",
     "124": "perception-patterns",
     "125": "belief-updating",
