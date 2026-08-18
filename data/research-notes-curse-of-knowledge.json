@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "curse-of-knowledge-experts-beginners-feedback",
+      "title": "Curse of Knowledge: why expert clarity is a poor test of beginner understanding",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Once you know an answer, your own knowledge can distort estimates of what another person knows. The most useful correction is not 'explain more simply' in the abstract, but feedback from the less-informed person's actual perspective.",
+      "sections": [
+        {
+          "heading": "The original problem was not teaching style",
+          "paragraphs": [
+            "The classic 1989 experiments studied economic judgments. Better-informed participants had difficulty ignoring private information when predicting what less-informed people would do. The important structure is perspective taking: knowledge available to one person leaks into a judgment about someone who does not have it.",
+            "That structure appears naturally in teaching, documentation and handoffs, but the research claim should stay narrower than the slogan that experts are bad teachers. Expertise can improve teaching; the risk is using one's own fluent understanding as evidence about another person's understanding."
+          ]
+        },
+        {
+          "heading": "Knowing the answer is not the only route",
+          "paragraphs": [
+            "Later experiments found a similar distortion even when participants did not literally possess privileged factual knowledge. When information felt easier to process, people could infer that it was also more commonly known by their peers.",
+            "This suggests that subjective fluency can be misattributed when we estimate other people's knowledge. Something can feel obvious because it is familiar to us, not because the missing step is genuinely obvious to a newcomer."
+          ]
+        },
+        {
+          "heading": "The mechanism is not settled into one simple story",
+          "paragraphs": [
+            "Researchers have proposed several contributors: anchoring on one's own knowledge, difficulty suppressing known information, missing cues about another person's perspective and misattributing processing fluency. Different tasks may rely on different combinations of these processes.",
+            "For this library, the observed perspective distortion is more important than choosing one universal mechanism. A useful explanation can say what the evidence shows without pretending every expert communication failure has the same psychological cause."
+          ]
+        },
+        {
+          "heading": "Feedback can improve perspective taking",
+          "paragraphs": [
+            "A 2021 series of experiments tested whether feedback could reduce later egocentric projection. Feedback that explained the other person's perspective improved subsequent perspective taking more than a simple accuracy score in the studied tasks.",
+            "That gives a practical direction for documentation and onboarding. Do not ask only whether the expert thinks the explanation is complete. Ask the less-informed person to predict, paraphrase or perform the next step, then show the expert where the perspectives diverged."
+          ]
+        },
+        {
+          "heading": "Why this is not Dunning–Kruger",
+          "paragraphs": [
+            "Curse of Knowledge concerns a judgment about another person's perspective. Dunning–Kruger research concerns calibration between a person's own performance and self-assessment. An expert can accurately understand their own performance and still overestimate what a beginner knows.",
+            "Conversely, a beginner can be poorly calibrated about their own performance without making any judgment about somebody else's knowledge. The two labels should not be used interchangeably just because both conversations mention expertise."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We rewrote Curse of Knowledge as a perspective-taking bias and moved it into Social judgment. The page now asks for evidence from the other person's actual understanding instead of telling experts merely to remember what being a beginner felt like.",
+            "We also added a direct comparison with Dunning–Kruger so search and AI answers can separate other-perspective judgment from self-assessment calibration."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"The Curse of Knowledge in Economic Settings: An Experimental Analysis","year":1989,"type":"foundational experiments","doi":"10.1086/261651","url":"https://doi.org/10.1086/261651"},
+        {"title":"A 'curse of knowledge' in the absence of knowledge? People misattribute fluency when judging how common knowledge is among their peers","year":2017,"type":"mechanism experiments","doi":"10.1016/j.cognition.2017.04.015","url":"https://pubmed.ncbi.nlm.nih.gov/28641221/"},
+        {"title":"Lifting the curse of knowing: How feedback improves perspective-taking","year":2021,"type":"debiasing experiments","doi":"10.1177/1747021820987080","url":"https://pubmed.ncbi.nlm.nih.gov/33427086/"}
+      ],
+      "related": ["cognitive-bias-curse-of-knowledge","self-assessment-dunning"]
+    }
+  ]
+}

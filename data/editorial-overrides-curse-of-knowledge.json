@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 93,
+      "slug": "cognitive-bias-curse-of-knowledge",
+      "previousTitle": "Curse of Knowledge – when you forget what it’s like to be a beginner",
+      "title": "Curse of Knowledge – when what you know distorts what you expect others to know",
+      "description": "Curse of Knowledge is a perspective-taking bias: once you know important information, that knowledge can make it harder to judge what a less-informed person knows, notices, or understands. It does not mean experts cannot teach beginners. The problem is that your own knowledge can leak into your estimate of another person's perspective.\n\nWhere can it show up?\n- Teaching and onboarding: an expert skips a step because it feels obvious, while the beginner does not yet know the missing assumption.\n- Documentation: instructions make sense to the author but depend on background knowledge that is never stated.\n- Product and project handoffs: one team assumes another team understands a term, dependency, or decision history that was never shared.\n\nA better check\n- Do not judge clarity by how easy the explanation feels to you.\n- Ask the other person to paraphrase the idea or perform the next step without help.\n- Look at where their prediction or action differs from yours; that gap is evidence about what the explanation missed.\n- State prerequisites and hidden assumptions explicitly.\n- Use feedback about the other person's perspective, not only a score saying whether your explanation was right or wrong.",
+      "reason": "The legacy page reduced the construct to experts forgetting what it is like to be beginners. The reviewed evidence is broader and more precise: one's own knowledge can contaminate judgments about what another person knows across economic and interpersonal perspective-taking tasks."
+    }
+  ]
+}
