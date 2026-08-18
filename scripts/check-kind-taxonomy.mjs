@@ -2,7 +2,7 @@ import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
-const EXPECTED_KINDS = ["bias", "effect", "heuristic", "fallacy", "phenomenon", "principle"];
+const EXPECTED_KINDS = ["bias", "effect", "heuristic", "fallacy", "phenomenon", "principle", "measurement"];
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
 const kindsConfig = JSON.parse(await readFile("data/kinds-v2.json", "utf8"));
 const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
@@ -71,6 +71,9 @@ if (!sitemap.includes(`<loc>${SITE}/kinds/</loc>`)) throw new Error("Kinds overv
 if (!explore.includes('class="kind-summary"') || !explore.includes(`${resolved.length} / ${canonicalBiases.length}`)) throw new Error("Explore kind coverage summary is missing or stale.");
 for (const kind of EXPECTED_KINDS) {
   if (!hub.includes(`id="${kind}"`) || !hub.includes(kindsConfig.kinds[kind].label)) throw new Error(`${kind}: missing from kinds overview.`);
+}
+if (!hub.includes("Measurement concept") || !hub.includes("measurement, estimation, sampling, calibration")) {
+  throw new Error("Kinds overview does not explain the Measurement concept type.");
 }
 
 console.log(`Kind taxonomy check passed: ${resolved.length}/${canonicalBiases.length} canonical entries resolved, ${unresolved.length} intentionally unassigned, all ${reviewedSlugs.size} evidence-reviewed entries typed across ${EXPECTED_KINDS.length} controlled kinds.`);
