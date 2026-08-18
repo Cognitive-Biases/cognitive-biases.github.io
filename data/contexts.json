@@ -10,11 +10,12 @@
         "A team keeps investing because too much has already been spent.",
         "A KPI is becoming more important than the goal it was meant to represent.",
         "The team is searching for evidence after already preferring one solution.",
-        "A retrospective is quietly rewriting what was knowable at the time."
+        "A retrospective is quietly rewriting what was knowable, how good the decision was, or how blameworthy the decision-maker now seems."
       ],
       "workflow": [
         "Freeze the information set: what did the team actually know before the latest outcome?",
         "Separate decision-process quality from whether the result happened to be good or bad.",
+        "When blame or praise enters the review, separate intention, reasonable belief, controllable risk, causal responsibility, and the eventual outcome.",
         "Write the next increment of cost and expected value without counting already-spent resources as a future benefit.",
         "Name the strategic goal behind each important metric and one way the metric could improve while the goal gets worse.",
         "Specify what evidence would change the preferred plan before gathering another round of supporting evidence."
@@ -31,6 +32,10 @@
         {
           "slug": "cognitive-bias-hindsight-bias",
           "question": "What did our actual pre-outcome forecast or notes say before the result became obvious?"
+        },
+        {
+          "slug": "attribution-bias-moral-luck",
+          "question": "Would we assign the same blame or praise if the decision-maker had the same intent, beliefs, and controllable risk but luck produced a different outcome?"
         },
         {
           "slug": "logical-fallacy-escalation-of-commitment",

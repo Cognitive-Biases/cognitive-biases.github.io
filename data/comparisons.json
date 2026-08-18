@@ -81,6 +81,93 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/40951810/"
         }
       ]
+    },
+    {
+      "slug": "outcome-bias-vs-moral-luck",
+      "leftSlug": "cognitive-bias-outcome-bias",
+      "rightSlug": "attribution-bias-moral-luck",
+      "reviewedAt": "2026-08-18",
+      "title": "Outcome Bias vs Moral Luck",
+      "summary": "Both let a known result reshape a retrospective judgment, but the target is different. Outcome bias changes how good or bad a decision process looks; moral luck changes blame, praise, punishment, or moral responsibility while also depending on the actor's intentions, beliefs, causal role, and controllable risk.",
+      "keyDifference": "Ask what you are judging: the quality of the decision process, or the moral responsibility and blameworthiness of the person who acted?",
+      "dimensions": [
+        {
+          "dimension": "Core judgment",
+          "left": "Was this a good decision or a good decision process?",
+          "right": "How blameworthy, praiseworthy, punishable, or morally responsible is the actor?"
+        },
+        {
+          "dimension": "Role of the outcome",
+          "left": "A good result can upgrade the perceived quality of the decision; a bad result can downgrade it even when the ex-ante information is held constant.",
+          "right": "A harmful or beneficial result can change moral evaluation even when much of the actor's choice is similar, but the effect interacts with intention, belief, negligence, and causal responsibility."
+        },
+        {
+          "dimension": "Mental-state information",
+          "left": "Relevant because beliefs and information shape whether the original process was reasonable, but they are not the defining target of the bias.",
+          "right": "Central. What the actor intended and reasonably believed can substantially change blame and can explain part of an apparent moral-luck effect."
+        },
+        {
+          "dimension": "Best review record",
+          "left": "Decision rationale, information set, alternatives, expected values, assumptions, and decision rule recorded before the result.",
+          "right": "The same ex-ante record plus intention, belief justification, controllable risk, causal contribution, and the moral judgment being made."
+        }
+      ],
+      "diagnostic": [
+        "Name the judgment first: decision quality, moral wrongness, blame, praise, or punishment.",
+        "Reconstruct the actor's information, beliefs, intentions, options, and controllable risks before revealing the result.",
+        "Imagine a matched counterfactual where the same choice produces the opposite outcome because of luck. Check which judgment changes.",
+        "If process quality changes mainly with the result, outcome bias is the closer lens. If blame or responsibility changes, examine moral luck while still checking whether the bad result altered how you interpret the actor's beliefs or negligence."
+      ],
+      "examples": [
+        {
+          "title": "Safety decision",
+          "left": "Two managers approve the same defensible safety procedure; one later experiences an accident and their decision is rated much worse solely because the rare failure occurred.",
+          "right": "Two people take the same negligent risk; only one causes serious harm, and that person receives much more blame or punishment partly because the harmful outcome occurred."
+        },
+        {
+          "title": "Investment",
+          "left": "An investment process is judged brilliant after a profit and foolish after a loss even when the information and method were identical at the time of choice.",
+          "right": "A losing investment is judged less moral or its decision-maker less ethically acceptable than a matched profitable investment, despite comparable intentions and ex-ante reasoning."
+        },
+        {
+          "title": "Incident review",
+          "left": "A responder's action is scored as a bad operational decision because the incident escalated, without reconstructing the signals available then.",
+          "right": "The same outcome is used to infer that the responder was morally reckless or deserving of blame, without separating what they knew, intended, controlled, and actually caused."
+        }
+      ],
+      "reviewProtocol": [
+        "State whether the review is evaluating process quality or moral responsibility before discussing the outcome.",
+        "Freeze the ex-ante information, beliefs, intentions, available actions, and controllable risks.",
+        "Compare a matched good-outcome and bad-outcome version of the same choice.",
+        "Score process quality separately from wrongness, blame, praise, and punishment.",
+        "Use the real outcome to update risk models and future safeguards, but do not let it silently rewrite the actor's prior mental state."
+      ],
+      "sources": [
+        {
+          "title": "Outcome bias in decision evaluation",
+          "year": 1988,
+          "doi": "10.1037/0022-3514.54.4.569",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
+        },
+        {
+          "title": "Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment",
+          "year": 2008,
+          "doi": "10.1016/j.cognition.2008.03.006",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18439575/"
+        },
+        {
+          "title": "Investigating the Neural and Cognitive Basis of Moral Luck: It's Not What You Do but What You Know",
+          "year": 2010,
+          "doi": "10.1007/s13164-010-0027-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22558062/"
+        },
+        {
+          "title": "Moral luck in investment contexts: We consciously find unprofitable investments less moral",
+          "year": 2023,
+          "doi": "10.1371/journal.pone.0278677",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36649364/"
+        }
+      ]
     }
   ]
 }

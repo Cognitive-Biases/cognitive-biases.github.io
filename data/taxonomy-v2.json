@@ -45,6 +45,10 @@
     "future-state-forecasting": {
       "label": "Future state forecasting",
       "description": "Patterns involving predictions about future feelings, preferences, and behavior when current or imagined states are an imperfect guide to the future state."
+    },
+    "retrospective-evaluation": {
+      "label": "Retrospective evaluation",
+      "description": "Patterns where knowing an outcome changes later judgments of predictability, decision quality, blame, or responsibility."
     }
   },
   "directCategoryFamily": {
@@ -78,7 +82,7 @@
     "97": "social-judgment",
     "98": "social-judgment",
     "99": "memory-retrieval",
-    "100": "memory-retrieval",
+    "100": "retrospective-evaluation",
     "101": "future-state-forecasting",
     "102": "attention-information",
     "104": "valuation-choice",
@@ -88,6 +92,7 @@
     "108": "valuation-choice",
     "109": "probability-risk",
     "110": "attention-information",
+    "111": "retrospective-evaluation",
     "112": "probability-risk",
     "113": "time-commitment",
     "114": "attention-information",
@@ -104,6 +109,7 @@
     "127": "reasoning-flexibility",
     "128": "perception-patterns",
     "129": "social-judgment",
+    "140": "retrospective-evaluation",
     "166": "attention-information",
     "170": "belief-updating"
   },
@@ -112,7 +118,10 @@
     "51": ["human-ai-interaction"],
     "81": ["forecasting-future-choices"],
     "97": ["human-robot-interaction", "human-ai-interaction"],
+    "100": ["work-project-decisions", "forecasting-future-choices"],
     "101": ["forecasting-future-choices"],
-    "118": ["forecasting-future-choices"]
+    "111": ["work-project-decisions"],
+    "118": ["forecasting-future-choices"],
+    "140": ["work-project-decisions"]
   }
 }
