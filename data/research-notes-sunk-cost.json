@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "sunk-cost-escalation-why-past-spend-is-only-part",
+      "title": "Sunk cost vs escalation: why past spending is only part of the story",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Past, unrecoverable costs can influence whether people continue, but escalation of commitment is a broader process. Responsibility for the original choice, completion pressure, project structure and advice can also shape the next investment.",
+      "sections": [
+        {
+          "heading": "Sunk cost is a real effect, not a complete theory of persistence",
+          "paragraphs": [
+            "Classic sunk-cost experiments found that prior investments of money, time or effort can increase the tendency to continue. A later meta-analysis of 98 effect sizes found clear evidence for the effect overall, while also showing that its size and moderators depend on the kind of decision being made.",
+            "That supports a narrow and useful definition: sunk cost is about the influence of an irrecoverable past investment on a current choice. It does not mean every decision to continue after spending money is irrational."
+          ]
+        },
+        {
+          "heading": "Escalation is the wider process",
+          "paragraphs": [
+            "Barry Staw’s early escalation experiments studied what happens after negative consequences. Participants who were personally responsible for the original investment decision committed more resources to the same course under failure conditions. Later reviews treated escalation as a process with several possible determinants rather than as another name for sunk cost.",
+            "This distinction matters in organizations. A project can escalate because leaders want to justify the original choice, protect reputation, respond to incentives, preserve a coalition, or because the project structure makes another small commitment feel easier than a clean stop. Sunk costs can be part of that story without being the whole story."
+          ]
+        },
+        {
+          "heading": "Being almost finished changes the forward-looking question",
+          "paragraphs": [
+            "A 2001 experiment examined sunk costs and project completion together. Both influenced commitment, and they interacted. This is a useful warning against another oversimplification: the percentage already completed is not itself a reason to continue, but actual value that becomes available only at completion can be part of the future case.",
+            "A better review therefore asks what the remaining investment buys from today forward. If a small final cost unlocks large useful value, continuation may be sensible. If 'almost done' mainly describes effort already spent and completion creates little value, it should not carry the same weight."
+          ]
+        },
+        {
+          "heading": "AI advice can enter the escalation process too",
+          "paragraphs": [
+            "A 2025 Academy of Management Proceedings paper tested algorithmic and human advice in escalation decisions using three preregistered experiments with 727 participants. In the study, escalation was higher with algorithmic advice than human advice for subjective tasks, while the difference was not significant for objective tasks.",
+            "This is a newer application rather than a reason to declare that AI generally causes escalation. It does show why an AI recommendation should be treated as another input to a continue-or-stop review, not as a substitute for separating sunk costs, future value and exit criteria."
+          ]
+        },
+        {
+          "heading": "A decision procedure is more useful than the slogan 'ignore sunk costs'",
+          "paragraphs": [
+            "For a difficult project review, start with four forward-looking fields: remaining cost, expected useful value, important uncertainty, and the best realistic alternative for the same resources. Put irrecoverable past costs in a separate field so they stay visible without silently becoming a benefit of continuing.",
+            "Then check the broader escalation conditions: who owns the original decision, what completion really unlocks, which incentives reward continuation, what evidence would trigger a change, and whether an independent reviewer reaches the same conclusion. The goal is not to force stopping. It is to make continuing earn its case again."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We now keep Sunk Cost Effect and Escalation of Commitment as separate canonical concepts. The old Escalation page no longer presents them as synonyms, and a direct comparison explains where they overlap and where they do not.",
+            "We also added a Continue, change, or stop a project context so a person can begin with the decision problem instead of needing to know the bias name first."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action","year":1976,"type":"foundational experiment","doi":"10.1016/0030-5073(76)90005-2","url":"https://doi.org/10.1016/0030-5073(76)90005-2"},
+        {"title":"The Escalation of Commitment To a Course of Action","year":1981,"type":"research review","doi":"10.5465/AMR.1981.4285694","url":"https://doi.org/10.5465/AMR.1981.4285694"},
+        {"title":"The psychology of sunk cost","year":1985,"type":"field study and experiments","doi":"10.1016/0749-5978(85)90049-4","url":"https://doi.org/10.1016/0749-5978(85)90049-4"},
+        {"title":"Looking forward and looking back: integrating completion and sunk-cost effects within an escalation-of-commitment progress decision","year":2001,"type":"experimental study","doi":"10.1037/0021-9010.86.1.104","url":"https://pubmed.ncbi.nlm.nih.gov/11302222/"},
+        {"title":"On the sunk-cost effect in economic decision-making: a meta-analytic review","year":2015,"type":"meta-analysis","doi":"10.1007/s40685-014-0014-8","url":"https://doi.org/10.1007/s40685-014-0014-8"},
+        {"title":"Still Stuck in the Mud: How Advice from Algorithms Affects Escalation of Commitment","year":2025,"type":"conference proceedings; three preregistered experiments","doi":"10.5465/AMPROC.2025.119bp","url":"https://doi.org/10.5465/AMPROC.2025.119bp"}
+      ],
+      "related": ["cognitive-bias-sunk-cost-effect","logical-fallacy-escalation-of-commitment","cognitive-bias-anchoring-effect","egocentric-bias-planning-fallacy","cognitive-bias-confirmation-bias"]
+    }
+  ]
+}
