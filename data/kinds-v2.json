@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "kinds": {
+    "bias": {
+      "label": "Bias",
+      "description": "A directional tendency in judgment, attention, memory, belief, or choice. The label does not by itself establish how strong, universal, or well-replicated the tendency is."
+    },
+    "effect": {
+      "label": "Effect",
+      "description": "An observed pattern or outcome that appears under particular conditions. An effect name can describe what happens without implying one universal cognitive mechanism."
+    },
+    "heuristic": {
+      "label": "Heuristic",
+      "description": "A shortcut or rule of thumb used to make judgments efficiently. A heuristic can be useful in many environments and produce bias when the shortcut is poorly matched to the task."
+    },
+    "fallacy": {
+      "label": "Fallacy",
+      "description": "A recurring error in reasoning or argument structure. Fallacies are classified by the logic of the inference rather than by a claim about one psychological mechanism."
+    },
+    "phenomenon": {
+      "label": "Phenomenon",
+      "description": "A broader named pattern, state, or behavioral observation that does not fit cleanly into bias, effect, heuristic, fallacy, or principle."
+    },
+    "principle": {
+      "label": "Principle / law",
+      "description": "A named principle, law, or descriptive regularity. These entries may be useful for understanding cognition without being cognitive biases in the narrow sense."
+    }
+  },
+  "recordKindOverrides": {
+    "9": "phenomenon",
+    "93": "bias",
+    "97": "phenomenon",
+    "113": "phenomenon",
+    "123": "phenomenon"
+  }
+}
