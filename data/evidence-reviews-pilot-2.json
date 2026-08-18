@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "self-assessment-dunning",
+      "evidenceStatus": "supported but often overstated",
+      "reviewedAt": "2026-08-18",
+      "qualification": "The original studies found substantial overestimation among low performers in specific tasks, but the popular story that incompetent people are simply very confident while experts systematically underestimate themselves is too broad. Later work showed that common quartile plots can exaggerate the pattern through regression and better-than-average effects, while a 2023 reanalysis using more appropriate methods still found a small significant effect in intelligence data.",
+      "mechanism": "The original account proposed that limited skill can also limit the metacognitive ability needed to recognize errors. However, observed calibration curves also reflect statistical and measurement properties. The safest interpretation is about miscalibration between objective performance and self-assessment, not a universal personality rule about confidence and competence.",
+      "practical": "Do not use Dunning–Kruger as a label for people you disagree with. For your own decisions, pair confidence with objective feedback, calibration data, or tests of performance. Track whether confidence changes appropriately after feedback rather than assuming that confidence itself reveals competence.",
+      "sources": [
+        {
+          "title": "Unskilled and unaware of it: how difficulties in recognizing one's own incompetence lead to inflated self-assessments",
+          "year": 1999,
+          "type": "foundational experiments",
+          "doi": "10.1037/0022-3514.77.6.1121",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10626367/"
+        },
+        {
+          "title": "The Dunning-Kruger effect is (mostly) a statistical artefact: Valid approaches to testing the hypothesis with individual differences data",
+          "year": 2020,
+          "type": "methodological critique + empirical test",
+          "doi": "10.1016/j.intell.2020.101449",
+          "url": "https://doi.org/10.1016/j.intell.2020.101449"
+        },
+        {
+          "title": "Reevaluating the Dunning-Kruger effect: A response to and replication of Gignac and Zajenkowski (2020)",
+          "year": 2023,
+          "type": "reanalysis + replication",
+          "doi": "10.1016/j.intell.2022.101717",
+          "url": "https://doi.org/10.1016/j.intell.2022.101717"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-confirmation-bias",
+      "evidenceStatus": "well established, broad construct",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Confirmation bias is an umbrella label for several ways existing beliefs or hypotheses can influence information search and interpretation. It should not be reduced to one behaviour such as reading only agreeable news, and a preference for confirming tests is not irrational in every task or environment.",
+      "mechanism": "Classic hypothesis-testing work showed that people can seek cases that fit a current hypothesis instead of searching efficiently for cases that could disconfirm it. Broader reviews describe related tendencies in information search, evidence interpretation, memory, and hypothesis testing, with different mechanisms likely contributing across contexts.",
+      "practical": "For an important belief, write down what evidence would count against it before looking for more information. Search deliberately for diagnostic counterexamples and compare competing explanations using the same evidence standard. The goal is not to consume an arbitrary amount of opposing content, but to make falsification possible.",
+      "sources": [
+        {
+          "title": "On the Failure to Eliminate Hypotheses in a Conceptual Task",
+          "year": 1960,
+          "type": "foundational experiment",
+          "doi": "10.1080/17470216008416717",
+          "url": "https://doi.org/10.1080/17470216008416717"
+        },
+        {
+          "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+          "year": 1998,
+          "type": "review",
+          "doi": "10.1037/1089-2680.2.2.175",
+          "url": "https://doi.org/10.1037/1089-2680.2.2.175"
+        }
+      ]
+    },
+    {
+      "slug": "heuristic-bias-availability-bias",
+      "evidenceStatus": "established heuristic; bias is context-dependent",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Availability is a judgment heuristic: people can use how easily examples or scenarios come to mind when estimating frequency or probability. That shortcut is not automatically an error because memorable or accessible examples can correlate with real frequency. Bias appears when accessibility is driven by factors that are not diagnostic of the quantity being judged.",
+      "mechanism": "The original account focused on the availability of relevant instances and scenarios. Later work examined subjective ease of retrieval as an informational cue, showing that judgments can depend on how easy recall feels as well as on what is recalled. Some later replication attempts in specific contexts have not reproduced every ease-of-retrieval effect, so one narrow mechanism should not be treated as the entire heuristic.",
+      "practical": "When vivid or recent examples are driving a risk estimate, compare recall with base-rate data or a deliberately sampled reference set. Ask whether the examples are easy to remember because they are common or because they are dramatic, recent, repeated, or personally salient.",
+      "sources": [
+        {
+          "title": "Availability: A heuristic for judging frequency and probability",
+          "year": 1973,
+          "type": "foundational experiments",
+          "doi": "10.1016/0010-0285(73)90033-9",
+          "url": "https://doi.org/10.1016/0010-0285(73)90033-9"
+        },
+        {
+          "title": "Ease of retrieval as information: Another look at the availability heuristic",
+          "year": 1991,
+          "type": "experiments",
+          "doi": "10.1037/0022-3514.61.2.195",
+          "url": "https://doi.org/10.1037/0022-3514.61.2.195"
+        },
+        {
+          "title": "Investigating the ease-of-retrieval effect in an eyewitness context",
+          "year": 2021,
+          "type": "replication / boundary-condition tests",
+          "doi": "10.1080/09658211.2021.1882502",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33557719/"
+        }
+      ]
+    },
+    {
+      "slug": "logical-fallacy-escalation-of-commitment",
+      "evidenceStatus": "established, but related constructs should be separated",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Sunk-cost effects and escalation of commitment overlap but are not interchangeable. Sunk-cost research asks whether irrecoverable prior investments influence current choices. Escalation of commitment describes persistence or additional resource allocation to a failing course of action and can also be driven by personal responsibility, self-justification, project structure, and other factors.",
+      "mechanism": "Experiments and field studies show that prior investments can increase continuation or utilization, while classic escalation studies found stronger additional investment after negative outcomes when decision-makers were personally responsible for the original choice. Meta-analytic work finds a sunk-cost effect overall but also substantial moderation by decision type and context.",
+      "practical": "Separate already-spent resources from the expected future costs and benefits of the next decision. For projects, define exit criteria before bad news arrives and ask an independent reviewer to assess the next increment of investment. Do not assume that every continued project is irrational: new information about future value can justify continuation even when past costs are sunk.",
+      "sources": [
+        {
+          "title": "Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action",
+          "year": 1976,
+          "type": "foundational experiment",
+          "doi": "10.1016/0030-5073(76)90005-2",
+          "url": "https://doi.org/10.1016/0030-5073(76)90005-2"
+        },
+        {
+          "title": "The psychology of sunk cost",
+          "year": 1985,
+          "type": "field study + experiments",
+          "doi": "10.1016/0749-5978(85)90049-4",
+          "url": "https://doi.org/10.1016/0749-5978(85)90049-4"
+        },
+        {
+          "title": "On the sunk-cost effect in economic decision-making: a meta-analytic review",
+          "year": 2015,
+          "type": "meta-analysis",
+          "doi": "10.1007/s40685-014-0014-8",
+          "url": "https://doi.org/10.1007/s40685-014-0014-8"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-outcome-bias",
+      "evidenceStatus": "replicated",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Outcome bias occurs when knowledge of a result changes how people evaluate the quality of a decision even when the information available at the time of the decision is held constant. Outcomes can still be relevant for learning, so the error is not 'never look at results'; it is using luck or hindsight as if it had been available to the original decision-maker.",
+      "mechanism": "The classic experiments varied outcomes while holding the decision information constant and found more favorable evaluations after good outcomes. A large preregistered replication reproduced the direction of the effect in a medical-decision scenario, including among participants who said outcomes should not influence the evaluation.",
+      "practical": "Review the process twice: first judge the decision using only information that was available when it was made, then use the outcome to update models and future assumptions. Keeping these two questions separate helps distinguish decision quality from luck without throwing away useful feedback.",
+      "sources": [
+        {
+          "title": "Outcome bias in decision evaluation",
+          "year": 1988,
+          "type": "foundational experiments",
+          "doi": "10.1037/0022-3514.54.4.569",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
+        },
+        {
+          "title": "Outcomes Affect Evaluations of Decision Quality: Replication and Extensions of Baron and Hershey's (1988) Outcome Bias Experiment 1",
+          "year": 2023,
+          "type": "preregistered replication",
+          "doi": "10.5334/irsp.751",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40951810/"
+        }
+      ]
+    }
+  ]
+}

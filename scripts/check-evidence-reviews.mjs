@@ -1,16 +1,20 @@
-import { readFile } from "node:fs/promises";
-import { resolve } from "node:path";
+import { readFile, readdir } from "node:fs/promises";
+import { join, resolve } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
-const evidence = JSON.parse(await readFile("data/evidence-reviews.json", "utf8"));
+const evidenceFiles = (await readdir("data"))
+  .filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name))
+  .sort();
+const evidenceDocuments = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
+const reviews = evidenceDocuments.flatMap((document) => document.reviews || []);
 const bySlug = new Map(biases.map((bias) => [bias.slug, bias]));
 const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
 const duplicateIds = new Set((duplicateDispositions.groups || []).flatMap((group) => group.duplicateIds || []));
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
 const seen = new Set();
 
-for (const review of evidence.reviews || []) {
+for (const review of reviews) {
   if (seen.has(review.slug)) throw new Error(`${review.slug}: duplicate evidence review.`);
   seen.add(review.slug);
   const bias = bySlug.get(review.slug);
@@ -43,4 +47,4 @@ function escapeForCheck(value = "") {
   return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
 }
 
-console.log(`Evidence review check passed: ${seen.size} canonical pilot entries with reviewed sources and structured data.`);
+console.log(`Evidence review check passed: ${seen.size} canonical entries from ${evidenceFiles.length} curated evidence files with reviewed sources and structured data.`);

@@ -1,10 +1,15 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
-const evidence = JSON.parse(await readFile("data/evidence-reviews.json", "utf8"));
+const evidenceFiles = (await readdir("data"))
+  .filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name))
+  .sort();
+const evidenceDocuments = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
+const reviews = evidenceDocuments.flatMap((document) => document.reviews || []);
+const seenReviews = new Set();
 const bySlug = new Map(biases.map((bias) => [bias.slug, bias]));
 const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
 const duplicateIds = new Set((duplicateDispositions.groups || []).flatMap((group) => group.duplicateIds || []));
@@ -13,7 +18,9 @@ const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character)
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
 })[character]);
 
-for (const review of evidence.reviews || []) {
+for (const review of reviews) {
+  if (seenReviews.has(review.slug)) throw new Error(`${review.slug}: evidence review is defined more than once across evidence files.`);
+  seenReviews.add(review.slug);
   const bias = bySlug.get(review.slug);
   if (!bias) throw new Error(`${review.slug}: evidence review does not match a published bias.`);
   if (duplicateIds.has(bias.id)) throw new Error(`${review.slug}: evidence review must target the canonical record, not a duplicate alias.`);
@@ -59,4 +66,4 @@ if (!styles.includes(".evidence-review{")) {
   await writeFile(stylesPath, styles);
 }
 
-console.log(`Applied ${evidence.reviews.length} evidence-reviewed pilot entries.`);
+console.log(`Applied ${reviews.length} evidence-reviewed entries from ${evidenceFiles.length} evidence files.`);
