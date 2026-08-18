@@ -30,7 +30,9 @@ for (const override of overrides.entries || []) {
   const byIdRecord = byId.get(override.id);
   const bySlugRecord = bySlug.get(override.slug);
   if (!byIdRecord || byIdRecord !== bySlugRecord) {
-    throw new Error(`${override.slug}: editorial override id/slug do not identify the same source record.`);
+    const idResolution = byIdRecord ? `id ${override.id} -> ${byIdRecord.slug}` : `id ${override.id} -> missing`;
+    const slugResolution = bySlugRecord ? `slug ${override.slug} -> id ${bySlugRecord.id}` : `slug ${override.slug} -> missing`;
+    throw new Error(`${override.slug}: editorial override identity mismatch (${idResolution}; ${slugResolution}).`);
   }
   if (!byIdRecord.published) throw new Error(`${override.slug}: editorial override must target a published record.`);
   if (duplicateIds.has(byIdRecord.id)) throw new Error(`${override.slug}: editorial override must target a canonical record, not a duplicate alias.`);
