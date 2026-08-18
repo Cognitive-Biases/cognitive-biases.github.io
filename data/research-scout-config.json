@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "lookbackDays": 45,
+  "maxNewItems": 12,
+  "scoreThreshold": 5,
+  "tracks": [
+    "cognitive bias research and replication",
+    "decision making and forecasting",
+    "AI-assisted decisions",
+    "LLM and agent decision behaviour"
+  ],
+  "arxivQueries": [
+    "all:\"cognitive bias\" AND all:\"large language model\"",
+    "all:\"cognitive bias\" AND all:agent",
+    "all:\"decision bias\" AND all:\"artificial intelligence\""
+  ],
+  "pubmedQueries": [
+    "(\"cognitive bias\"[Title/Abstract] OR \"cognitive biases\"[Title/Abstract]) AND (\"artificial intelligence\"[Title/Abstract] OR \"large language model\"[Title/Abstract] OR agent[Title/Abstract])",
+    "(\"cognitive bias\"[Title/Abstract] OR \"decision bias\"[Title/Abstract]) AND (systematic review[Publication Type] OR meta-analysis[Publication Type] OR replication[Title/Abstract])"
+  ]
+}
