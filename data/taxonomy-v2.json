@@ -64,6 +64,7 @@
     "Self-Perception Bias": "self-metacognition"
   },
   "recordFamilyOverrides": {
+    "51": "attention-information",
     "90": "valuation-choice",
     "91": "reasoning-flexibility",
     "92": "reasoning-flexibility",
@@ -98,6 +99,8 @@
     "170": "belief-updating"
   },
   "recordContexts": {
-    "97": ["human-robot-interaction"]
+    "9": ["human-ai-interaction"],
+    "51": ["human-ai-interaction"],
+    "97": ["human-robot-interaction", "human-ai-interaction"]
   }
 }
