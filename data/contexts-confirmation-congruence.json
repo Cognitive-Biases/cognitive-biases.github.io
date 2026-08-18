@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "checking-claims-misinformation",
+      "title": "Checking claims & misinformation",
+      "summary": "Use these evidence-reviewed lenses when deciding whether a repeated claim is trustworthy, checking a correction, or testing an explanation against plausible alternatives.",
+      "useWhen": [
+        "A claim feels credible because you have seen it in many places, but those places may be repeating the same source.",
+        "You are searching mainly for evidence that supports a conclusion you already prefer.",
+        "A test supports the leading explanation, but plausible alternatives would predict the same result.",
+        "One vivid example is shaping your judgment more than broader evidence.",
+        "A false claim has been corrected, but the old explanation still appears in later reasoning.",
+        "Someone resists a correction and the reaction is immediately described as a backfire effect."
+      ],
+      "workflow": [
+        "Write the exact claim you are checking. Separate the claim itself from your opinion about the person or source sharing it.",
+        "Trace repeated versions back to genuinely independent sources. Ten repetitions of one source are still one source.",
+        "Write what evidence would make the preferred claim weaker or wrong before gathering another round of support.",
+        "List at least one plausible alternative explanation. For an important test, predict the result under both explanations and prefer observations where their predictions differ.",
+        "Use the same evidence-quality standard for results that support and challenge the preferred explanation.",
+        "If a correction is needed, state the corrected information clearly and provide the best supported alternative explanation when one is available.",
+        "After a correction, distinguish incomplete updating from backfire. Ask whether belief in the false claim actually became stronger or whether some influence simply remained."
+      ],
+      "lenses": [
+        {"slug":"cognitive-bias-confirmation-bias","question":"Am I using the same evidence standard for information that supports and challenges the claim?"},
+        {"slug":"confirmation-bias-congruence-bias","question":"Would this test distinguish the preferred explanation from plausible alternatives, or would they predict the same result?"},
+        {"slug":"truth-judgment-illusory-truth-effect","question":"Does this feel true because it was independently verified, or because I have encountered the same claim repeatedly?"},
+        {"slug":"heuristic-bias-availability-bias","question":"Is the example easy to recall because it is representative, or because it is vivid, recent, emotional, or repeated?"},
+        {"slug":"memory-bias-continued-influence-effect","question":"After the correction, am I still using part of the old information when explaining or judging the situation?"},
+        {"slug":"confirmation-bias-backfire-effect","question":"Did belief in the corrected false claim actually become stronger, or am I calling disagreement or incomplete updating a backfire?"}
+      ]
+    }
+  ]
+}
