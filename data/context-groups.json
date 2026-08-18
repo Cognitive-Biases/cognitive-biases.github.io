@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "slug": "projects-work",
+      "title": "Projects & work decisions",
+      "summary": "Estimate work, review results and decide whether a project should continue, change or stop.",
+      "contexts": [
+        "work-project-decisions",
+        "project-estimation-delivery",
+        "continue-change-stop-project"
+      ]
+    },
+    {
+      "slug": "claims-forecasts",
+      "title": "Claims, forecasts & uncertainty",
+      "summary": "Check information, estimate uncertain outcomes and keep vivid or repeated examples from replacing broader evidence.",
+      "contexts": [
+        "forecasting-future-choices",
+        "checking-claims-misinformation"
+      ]
+    },
+    {
+      "slug": "ai-decisions",
+      "title": "AI-assisted decisions",
+      "summary": "Use AI recommendations without confusing fluency, repetition or a suggested number with independent evidence.",
+      "contexts": [
+        "ai-assisted-decisions"
+      ]
+    },
+    {
+      "slug": "choice-design",
+      "title": "Interfaces, pricing & choice design",
+      "summary": "Review how risk wording, defaults, starting values and option sets can change what looks attractive.",
+      "contexts": [
+        "presenting-risk-options",
+        "defaults-settings-choice-architecture",
+        "comparing-plans-pricing"
+      ]
+    }
+  ],
+  "homepageFeatured": [
+    "ai-assisted-decisions",
+    "project-estimation-delivery",
+    "checking-claims-misinformation",
+    "comparing-plans-pricing"
+  ]
+}
