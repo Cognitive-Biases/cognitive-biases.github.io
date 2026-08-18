@@ -12,6 +12,14 @@
       ]
     },
     {
+      "slug": "metrics-evaluation",
+      "title": "Metrics, KPIs & evaluation",
+      "summary": "Check whether a score still represents the real objective, whether the measurement process is trustworthy, and what evidence could show the proxy is failing.",
+      "contexts": [
+        "reviewing-kpis-proxy-metrics"
+      ]
+    },
+    {
       "slug": "claims-forecasts",
       "title": "Claims, forecasts & uncertainty",
       "summary": "Check information, estimate uncertain outcomes and keep vivid or repeated examples from replacing broader evidence.",
