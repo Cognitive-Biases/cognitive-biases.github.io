@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "planning-fallacy-vs-anchoring-effect",
+      "leftSlug": "egocentric-bias-planning-fallacy",
+      "rightSlug": "cognitive-bias-anchoring-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Planning Fallacy vs Anchoring Effect",
+      "summary": "Both can distort estimates, but they are not the same problem. Planning Fallacy describes overly optimistic predictions about how long one's own task or project will take. Anchoring describes judgments being pulled toward an initial value or reference point, even when adjustment should be larger.",
+      "keyDifference": "Ask whether the estimate is too optimistic because the current plan receives more weight than outcomes from comparable completed work, or whether a particular starting number is pulling the estimate toward itself. A project estimate can contain both failures at once.",
+      "dimensions": [
+        {"dimension":"Core pattern","left":"The current task is predicted to finish sooner than relevant experience and later outcomes justify.","right":"A later estimate remains too close to an initial number, target, suggestion, or starting value."},
+        {"dimension":"Typical project trigger","left":"A detailed inside-view plan makes smooth execution easy to imagine while delays in comparable work receive too little weight.","right":"The original budget, date, vendor estimate, management target, or first model output becomes the numerical reference point."},
+        {"dimension":"Best outside check","left":"Start from a relevant distribution of completed comparable work, then adjust for defensible differences in the current case.","right":"Generate an independent estimate before revealing the anchor, or compare several relevant reference values instead of adjusting from one starting number."},
+        {"dimension":"What does not prove it?","left":"A single late project. Delays can come from scope change, dependencies, incentives, bad data, or genuinely unusual events.","right":"Any estimate that happens to be near the first number. The question is whether the initial value causally influenced judgment."}
+      ],
+      "diagnostic": [
+        "Save the first proposed date, cost, or effort number before revising it.",
+        "Build an outside-view distribution from comparable completed work when usable data exist.",
+        "Separately ask whether the original number is still pulling the current estimate after the evidence changed.",
+        "Explain adjustments from the reference class using observable differences rather than confidence in the current plan.",
+        "Keep a range and later compare the forecast with the actual outcome so both calibration and anchor dependence can be reviewed."
+      ],
+      "examples": [
+        {"title":"Software delivery","left":"A team predicts six weeks by walking through the ideal implementation plan even though similar features usually take nine to twelve weeks.","right":"After hearing a six-week target, later estimates cluster around seven weeks even when an independent decomposition suggests ten."},
+        {"title":"Renovation","left":"A homeowner imagines each planned step going normally and underweights delays seen in previous renovations.","right":"The first contractor quote becomes the reference point for judging later quotes, even when its scope was incomplete."},
+        {"title":"AI-assisted planning","left":"An assistant creates a smooth task plan and the user treats the plan's timeline as more informative than the history of similar work.","right":"The first generated duration becomes an anchor that shapes later human or AI estimates despite weak evidence behind the number."}
+      ],
+      "reviewProtocol": [
+        "Collect actual completion times or costs from a relevant set of completed tasks.",
+        "Record the first number seen by the estimator and whether it came from a target, stakeholder, model, or prior plan.",
+        "Create an outside-view baseline before detailed inside-view adjustment when practical.",
+        "Document why the current case should differ from the reference class and how large that adjustment should be.",
+        "After completion, compare the original estimate, outside-view estimate, final forecast, and actual result."
+      ],
+      "sources": [
+        {"title":"Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times","year":1994,"doi":"10.1037/0022-3514.67.3.366","url":"https://doi.org/10.1037/0022-3514.67.3.366"},
+        {"title":"The Anchoring Effect in Task-Oriented Negotiations","year":1996,"doi":"10.1006/obhd.1996.0047","url":"https://doi.org/10.1006/obhd.1996.0047"},
+        {"title":"The Planning Fallacy: Cognitive, Motivational, and Social Origins","year":2010,"doi":"10.1016/S0065-2601(10)43001-4","url":"https://doi.org/10.1016/S0065-2601(10)43001-4"}
+      ]
+    }
+  ]
+}
