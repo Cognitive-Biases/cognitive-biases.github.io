@@ -9,7 +9,7 @@ const STATUS_SLUG = "prospect-theory-status-quo-bias";
 const CONTEXT = "defaults-settings-choice-architecture";
 const COMPARISON = "default-effect-vs-status-quo-bias";
 const RESEARCH = "defaults-status-quo-preference-choice-architecture";
-const FRAMING = "cognitive-bias-framing-effect";
+const FRAMING = "framing-effect-core";
 const ANCHORING = "cognitive-bias-anchoring-effect";
 const json = async (path) => JSON.parse(await readFile(path, "utf8"));
 
