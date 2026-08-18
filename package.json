@@ -10,9 +10,6 @@
     "validate:data": "npm run prepare:data && node scripts/validate-data.mjs",
     "audit:taxonomy": "npm run prepare:data && node scripts/audit-taxonomy.mjs",
     "check": "npm run validate:data && npm run audit:taxonomy && npm run build:site && node scripts/check.mjs",
-    "dev": "npm run build && npx serve dist"
-  },
-  "devDependencies": {
-    "serve": "^14.2.4"
+    "dev": "npm run build && node scripts/serve.mjs"
   }
 }
