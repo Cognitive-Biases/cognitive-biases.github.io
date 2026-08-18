@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 103,
+      "slug": "cognitive-bias-hungry-judge-effect",
+      "previousTitle": "Hungry Judge Effect – when your body makes decisions for you",
+      "title": "Hungry Judge Effect – a famous parole-board finding with an uncertain cause",
+      "description": "Hungry Judge Effect is a popular name for a debated finding from a 2011 study of parole-board decisions. Favorable decisions were more common early in decision sessions and after food breaks, but the study did not measure hunger and could not separate eating from rest, mood, case order, or other factors.\n\nWhat did the study actually show?\n- Decision order: favorable rulings became less common later in a session and rose again after breaks.\n- Observation, not a hunger experiment: judges were not randomly assigned to be hungry or fed.\n- Alternative explanations: later critiques and simulations show that case ordering, representation, decision time, and session management could contribute to the pattern.\n\nA better check\n- Do not say that hunger caused a specific decision unless hunger was actually measured and competing explanations were tested.\n- In repeated high-stakes decisions, monitor order, workload, break timing, case difficulty, representation, and decision duration separately.\n- If a break effect appears, test whether rest, food, sequence, scheduling, or another variable explains it.\n- Treat the original result as a useful warning about possible sequence and context effects, not as a law that hungry judges become harsher.",
+      "reason": "The legacy page generalized a contested observational result into a personal rule about hunger and harsh decisions. The original study did not measure hunger, later critiques challenged the case-order assumptions, and simulation work shows that much of the striking pattern can arise without a hunger mechanism."
+    }
+  ]
+}
