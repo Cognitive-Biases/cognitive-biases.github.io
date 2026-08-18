@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "declinism-vs-rosy-retrospection",
+      "leftSlug": "cognitive-bias-declinism",
+      "rightSlug": "memory-bias-rosy-retrospection",
+      "reviewedAt": "2026-08-18",
+      "title": "Declinism vs Rosy Retrospection",
+      "summary": "Both can make the past look better than the present, but they operate at different levels. Declinism is a broad label for judging a domain, society, institution, or era as having declined. Rosy Retrospection is a narrower event-memory pattern in which a specific past experience is remembered more positively than it was experienced at the time.",
+      "keyDifference": "Ask whether the claim is about a broad trend across time or about how a personally experienced event is remembered later. A rosy memory can contribute to a decline story, but it does not by itself establish Declinism, and a real historical decline can exist even when memory is imperfect.",
+      "dimensions": [
+        {"dimension":"Unit of judgment","left":"A broad domain, group, institution, society, technology, profession, or era across time.","right":"A specific experience or set of autobiographical events remembered later."},
+        {"dimension":"Best evidence","left":"Repeated historical measures, contemporaneous records, comparable datasets, and clearly defined indicators of change.","right":"In-the-moment ratings or records that can be compared with later recollection of the same event."},
+        {"dimension":"What would not prove it?","left":"One fond memory, one bad current example, or the fact that a decline claim feels nostalgic.","right":"Simply liking the past, feeling nostalgia, or accurately remembering a genuinely good event."},
+        {"dimension":"Main caution","left":"Do not use Declinism to dismiss real deterioration without domain-specific data.","right":"Do not treat later positive meaning as a complete record of how the experience felt at the time."}
+      ],
+      "diagnostic": [
+        "Write the claim in measurable terms: what exactly was better before, where, and during which years?",
+        "If the evidence is mainly personal memory, identify whether it comes from one event or a representative set of experiences.",
+        "For broad decline claims, look for repeated historical measures that were collected at the time rather than reconstructed later.",
+        "For event-memory claims, compare later recollection with contemporaneous ratings or records when available.",
+        "Allow both possibilities: memory can shift and a real trend can also have worsened. The task is to estimate each separately."
+      ],
+      "examples": [
+        {"title":"Work","left":"Someone says the whole profession has become worse over 20 years based mainly on a general sense of decline.","right":"Someone remembers a previous project as smooth and enjoyable although messages from the period show frequent frustration and rework."},
+        {"title":"Technology","left":"A user claims software quality broadly declined across an era without defining quality or comparing historical defect, reliability, or usability measures.","right":"A user fondly remembers one older product after the everyday friction of using it has faded from memory."},
+        {"title":"Social life","left":"People today are judged as less kind than people decades ago based on retrospective impressions.","right":"A specific school, holiday, or community experience is remembered more positively years later than it was rated while happening."}
+      ],
+      "reviewProtocol": [
+        "Define the domain, indicator, comparison years, and population before evaluating decline.",
+        "Separate personal event memories from population-level evidence.",
+        "Look for contemporaneous measurements from both periods.",
+        "Check whether positive and negative indicators move in the same direction or tell a mixed story.",
+        "State uncertainty explicitly when comparable historical evidence is weak."
+      ],
+      "sources": [
+        {"title":"The illusion of moral decline","year":2023,"doi":"10.1038/s41586-023-06137-x","url":"https://www.nature.com/articles/s41586-023-06137-x"},
+        {"title":"Temporal Adjustments in the Evaluation of Events: The Rosy View","year":1997,"doi":"10.1006/jesp.1997.1333","url":"https://pubmed.ncbi.nlm.nih.gov/9247371/"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 94,
+      "slug": "cognitive-bias-declinism",
+      "supersedes": true,
+      "previousTitle": "Declinism – when the past seems golden, and the future looks bleak",
+      "title": "Declinism – when the present is judged against an idealized past",
+      "description": "Declinism is best treated as an umbrella label for broad judgments that conditions have declined relative to an idealized past. It is not one standardized cognitive bias with one mechanism, and it is not proof that a reported decline is imaginary. Research supports narrower processes that can contribute to some decline judgments, including rosy recollection of past experiences and the well-studied illusion of moral decline.\n\nWhere can it show up?\n- Social trends: a general feeling that people used to be kinder or more honest is treated as historical evidence without comparing repeated measures across time.\n- Work and technology: one real deterioration is expanded into a claim that an entire profession, product category, or era was better before.\n- Personal comparisons: a difficult earlier period is remembered mainly through its meaningful or positive parts, while current frustrations are experienced in full detail.\n\nA better check\n- Define exactly what is supposed to have declined and over which years.\n- Compare the present with contemporaneous records or repeated historical measures, not memory alone.\n- Look separately for indicators that improved, worsened, or stayed stable.\n- Distinguish a memory of a specific past experience from a claim about a population or long-term trend.\n- Do not use the label to dismiss criticism. Real decline is possible and should be tested against domain-specific evidence.",
+      "reason": "The existing reviewed meaning was sound but still used the legacy marker format. This thematic override keeps the evidence boundary while making the page plain, specific, and explicit that Declinism cannot be used to dismiss real decline."
+    },
+    {
+      "id": 178,
+      "slug": "memory-bias-fading-affect-bias",
+      "previousTitle": "Fading Affect Bias – when bad memories fade faster than good ones",
+      "title": "Fading Affect Bias – when negative emotional intensity tends to fade faster",
+      "description": "Fading Affect Bias is an average pattern in autobiographical memory: the emotional intensity linked to negative events tends to weaken faster over time than the emotional intensity linked to positive events. It does not mean that every negative memory fades, that painful experiences become positive, or that factual details are rewritten in the same way as emotional intensity.\n\nWhere can it show up?\n- Life comparisons: an earlier period can feel easier in memory partly because some of its negative emotional intensity has softened.\n- Repeated experiences: today's frustration is compared with a past event whose emotional edge has faded.\n- Stories about the past: people remember what happened and how they feel about it now, but those two things are not identical to how strongly they felt at the time.\n\nA better check\n- Separate factual memory from current emotional intensity.\n- Use diaries, messages, repeated ratings, or other contemporaneous records when the original experience matters.\n- Compare several past events instead of one emotionally important memory.\n- Treat Fading Affect Bias as an average research pattern with moderators, not a prediction about every person or memory.",
+      "reason": "The legacy page treated the effect as a simple rule that bad memories become easier. The reviewed literature supports an average asymmetry in affect change across autobiographical memories, with meaningful individual and event-level variation."
+    },
+    {
+      "id": 204,
+      "slug": "memory-bias-rosy-retrospection",
+      "previousTitle": "Rosy Retrospection – the past seems better than it really was",
+      "title": "Rosy Retrospection – when a past experience is remembered more positively",
+      "description": "Rosy Retrospection is a pattern in which a past experience can be evaluated more positively in later memory than it was evaluated while it was happening. The classic studies followed specific events and compared anticipation, in-the-moment experience, and later recollection. The idea is narrower than nostalgia and does not mean that every happy memory is inaccurate.\n\nWhere can it show up?\n- Travel and events: a trip remembered as wonderful included frustrations that were much more noticeable while it was happening.\n- Projects and jobs: an earlier role or project is remembered through its best moments while routine problems receive less weight.\n- Life periods: a specific experience becomes evidence that an entire earlier era was better, even though the study of one event does not establish a broad historical trend.\n\nA better check\n- Ask whether you are remembering one event or making a claim about a whole period.\n- Compare later memory with notes, ratings, messages, costs, incidents, or other records made during the experience.\n- Keep positive meaning and historical accuracy separate: a memory can be personally valuable without being a complete average of how the event felt at the time.\n- Do not turn Rosy Retrospection into a general claim that nostalgia is false.",
+      "reason": "The legacy page generalized the pattern into the claim that the past simply seems better than reality. The reviewed evidence is narrower and compares later recollection with experience recorded during specific events."
+    }
+  ]
+}
