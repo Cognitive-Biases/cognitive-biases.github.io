@@ -23,7 +23,7 @@
       "lenses": [
         {"slug":"framing-effect-default-effect","question":"What happens automatically if the person does nothing, and how much does that pre-selection change uptake?"},
         {"slug":"prospect-theory-status-quo-bias","question":"Is the current option getting extra weight simply because it is already in place?"},
-        {"slug":"cognitive-bias-framing-effect","question":"Would the choice change if the same outcomes were described with an equivalent gain, loss or attribute frame?"},
+        {"slug":"framing-effect-core","question":"Would the choice change if the same outcomes were described with an equivalent gain, loss or attribute frame?"},
         {"slug":"cognitive-bias-anchoring-effect","question":"Did a suggested number, threshold or starting value become the reference point for the decision?"}
       ]
     }
