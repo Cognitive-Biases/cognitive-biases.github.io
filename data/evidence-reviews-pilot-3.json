@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-curse-of-knowledge",
+      "evidenceStatus": "supported across several perspective-taking tasks",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Knowing more can make it harder to estimate what a less-informed person knows or understands, but the size and mechanism of the effect depend on the task. The useful claim is not that experts are unable to teach beginners; it is that one's own knowledge can contaminate judgments about another person's knowledge unless the perspective gap is made explicit.",
+      "mechanism": "Research has found knowledge-based distortions in economic judgments and interpersonal perspective taking. Proposed mechanisms include anchoring on one's own knowledge, difficulty suppressing known information, missing diagnostic cues about the other person's knowledge, and misattributing the fluency of familiar information. No single mechanism explains every version of the effect.",
+      "practical": "When explaining something to a novice, do not estimate clarity from how easy the idea feels to you. Ask the other person to predict, paraphrase, or perform the next step, and use their errors as feedback. Narrative feedback about the other person's perspective can reduce later egocentric projection more than a simple accuracy score.",
+      "sources": [
+        {
+          "title": "The Curse of Knowledge in Economic Settings: An Experimental Analysis",
+          "year": 1989,
+          "type": "foundational experiments",
+          "doi": "10.1086/261651",
+          "url": "https://doi.org/10.1086/261651"
+        },
+        {
+          "title": "A 'curse of knowledge' in the absence of knowledge? People misattribute fluency when judging how common knowledge is among their peers",
+          "year": 2017,
+          "type": "mechanism experiments",
+          "doi": "10.1016/j.cognition.2017.04.015",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28641221/"
+        },
+        {
+          "title": "Lifting the curse of knowing: How feedback improves perspective-taking",
+          "year": 2021,
+          "type": "debiasing experiments",
+          "doi": "10.1177/1747021820987080",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33427086/"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-impact-bias",
+      "evidenceStatus": "well supported, with important forecasting nuances",
+      "reviewedAt": "2026-08-18",
+      "qualification": "People often overestimate how intense or long their emotional reactions to future events will be, especially when the focal event crowds out everything else that will also shape daily experience. The literature is broader than a rule that people always overpredict emotion: forecasting errors vary by event, time horizon, emotion, and what exactly is being predicted.",
+      "mechanism": "Affective-forecasting research identifies several contributors. Focalism makes the target event dominate imagination while ordinary future events receive too little weight. For negative events, people can also underpredict adaptation and the psychological processes that help them make sense of what happened. Available memories can further bias forecasts when memorable examples are atypical.",
+      "practical": "For a major future event, forecast both the focal event and the rest of an ordinary week around it. Estimate intensity and duration separately, then compare later forecasts with actual experience. When possible, use experience-sampling or a reference class of people who have already lived through a similar event instead of relying only on vivid imagination.",
+      "sources": [
+        {
+          "title": "Immune neglect: a source of durability bias in affective forecasting",
+          "year": 1998,
+          "type": "experiments",
+          "doi": "10.1037/0022-3514.75.3.617",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9781405/"
+        },
+        {
+          "title": "Focalism: a source of durability bias in affective forecasting",
+          "year": 2000,
+          "type": "experiments",
+          "doi": "10.1037/0022-3514.78.5.821",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10821192/"
+        },
+        {
+          "title": "Affective Forecasting: Knowing What to Want",
+          "year": 2005,
+          "type": "review",
+          "doi": "10.1111/j.0963-7214.2005.00355.x",
+          "url": "https://doi.org/10.1111/j.0963-7214.2005.00355.x"
+        },
+        {
+          "title": "The impact bias is alive and well",
+          "year": 2013,
+          "type": "reanalysis / response to critique",
+          "doi": "10.1037/a0032662",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24219785/"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-projection-bias",
+      "evidenceStatus": "established in intertemporal preference prediction",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Projection bias describes a tendency to overproject current tastes or visceral states onto future preferences. People often understand that tastes will change but underestimate how much they will change. The construct is most directly supported in intertemporal choice and consumer settings; it should not be stretched into a generic explanation for every bad prediction about one's future self.",
+      "mechanism": "Current states provide a salient reference point for forecasting future utility. When people incompletely adjust away from today's tastes, hunger, weather, or other transient conditions, future choices can be distorted. Field and experimental evidence shows that current conditions can influence decisions whose consequences occur later even when those conditions will not persist.",
+      "practical": "For decisions that bind your future self, record the current state that may be contaminating the forecast: hunger, fatigue, mood, weather, novelty, or current preferences. Re-evaluate the decision in a meaningfully different state or use past preference changes as a reference class before making an expensive or difficult-to-reverse commitment.",
+      "sources": [
+        {
+          "title": "Projection Bias in Predicting Future Utility",
+          "year": 2003,
+          "type": "theory + evidence synthesis",
+          "doi": "10.1162/003355303322552784",
+          "url": "https://doi.org/10.1162/003355303322552784"
+        },
+        {
+          "title": "Projection Bias in Catalog Orders",
+          "year": 2007,
+          "type": "field evidence",
+          "doi": "10.1257/aer.97.4.1217",
+          "url": "https://www.aeaweb.org/articles?id=10.1257/aer.97.4.1217"
+        },
+        {
+          "title": "Assessing Projection Bias in Consumers' Food Preferences",
+          "year": 2016,
+          "type": "incentivized experiment",
+          "doi": "10.1371/journal.pone.0146308",
+          "url": "https://doi.org/10.1371/journal.pone.0146308"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-surrogation",
+      "evidenceStatus": "supported in strategic performance-measure settings",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Surrogation is a domain-specific management-accounting construct: a measure that was designed to represent a strategic objective can start to be treated as though it were the objective itself. It is closely related to metric fixation and proxy problems, but those broader labels should not be treated as exact synonyms without checking the setting and mechanism.",
+      "mechanism": "Strategic performance systems translate hard-to-measure constructs into observable measures. Experiments show that managers can lose sight of the underlying construct and act as if the measure itself were what matters. The literature also provides boundary conditions and interventions: involvement in strategy selection and opportunities to explain decisions narratively can reduce surrogation in studied settings.",
+      "practical": "For every important KPI, write the construct it is meant to represent and at least one important dimension it does not capture. During reviews, discuss the goal before the metric and require a short explanation for major metric-driven decisions. If optimizing the number can make the underlying goal worse, the proxy needs an explicit guardrail or companion measure.",
+      "sources": [
+        {
+          "title": "Strategy Selection, Surrogation, and Strategic Performance Measurement Systems",
+          "year": 2013,
+          "type": "management-accounting experiments",
+          "doi": "10.1111/j.1475-679X.2012.00465.x",
+          "url": "https://doi.org/10.1111/j.1475-679X.2012.00465.x"
+        },
+        {
+          "title": "Decreasing Operational Distortion and Surrogation Through Narrative Reporting",
+          "year": 2019,
+          "type": "experiment",
+          "doi": "10.2308/accr-52277",
+          "url": "https://doi.org/10.2308/accr-52277"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-hungry-judge-effect",
+      "evidenceStatus": "contested observational finding; hunger interpretation not established",
+      "reviewedAt": "2026-08-18",
+      "qualification": "The famous 2011 parole-board study found favorable decisions were more common early in a decision session and immediately after food breaks. It did not directly measure hunger, glucose, fatigue, or mood, and the authors explicitly could not separate eating from rest. A contemporaneous critique argued that non-random case ordering could explain the pattern; the original authors disputed that critique with additional analyses. Treating this as a general law that hungry judges become harsher goes beyond the evidence.",
+      "mechanism": "The original paper interpreted the sequence pattern as consistent with resource depletion and recovery after a break, but its design was observational. Alternative explanations include case ordering and representation differences. Because food, rest, time, sequence position, and other factors were entangled, the study cannot identify hunger itself as the causal mechanism.",
+      "practical": "Do not use this effect as evidence that a decision-maker's hunger caused a specific ruling. The safer operational lesson is broader: high-stakes repeated decisions deserve checks for order effects, fatigue, break structure, workload, and case assignment. If you want to test a hunger hypothesis, measure hunger separately rather than using meal timing as a substitute.",
+      "sources": [
+        {
+          "title": "Extraneous factors in judicial decisions",
+          "year": 2011,
+          "type": "observational study",
+          "doi": "10.1073/pnas.1018033108",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21482790/"
+        },
+        {
+          "title": "Overlooked factors in the analysis of parole decisions",
+          "year": 2011,
+          "type": "data critique / letter",
+          "doi": "10.1073/pnas.1110910108",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21987788/"
+        },
+        {
+          "title": "Reply to Weinshall-Margel and Shapard: Extraneous factors in judicial decisions persist",
+          "year": 2011,
+          "type": "author reanalysis / reply",
+          "doi": "10.1073/pnas.1112190108",
+          "url": "https://doi.org/10.1073/pnas.1112190108"
+        }
+      ]
+    }
+  ]
+}
