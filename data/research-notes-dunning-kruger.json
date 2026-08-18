@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "dunning-kruger-effect-what-research-shows",
+      "title": "Dunning–Kruger Effect: what the research does and does not show",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "The Dunning–Kruger Effect is better understood as a question about calibration between performance and self-assessment than as the internet rule that incompetent people are always extremely confident.",
+      "sections": [
+        {
+          "heading": "What the original studies found",
+          "paragraphs": [
+            "The 1999 studies compared objective performance with self-assessment on tasks including grammar, logic and humour. Participants in the lowest performance quartile substantially overestimated how well they had done. The authors proposed that limited skill can also make it harder to recognise one's own mistakes.",
+            "That result became much more famous than the details of the experiments. The popular version often turns a task-specific calibration finding into a general personality claim about who is confident and who is competent."
+          ]
+        },
+        {
+          "heading": "The viral story is too simple",
+          "paragraphs": [
+            "Dunning–Kruger does not mean that the least skilled person in a room must be the most confident person. It also does not require experts to underestimate themselves. The important measurement is the gap between an objective performance measure and a person's estimate of that performance.",
+            "This distinction matters because absolute confidence and calibration are different. Two people can report similar confidence while one estimate is much further from measured performance."
+          ]
+        },
+        {
+          "heading": "Why the familiar quartile chart is debated",
+          "paragraphs": [
+            "A major methodological criticism is that common plots based on performance quartiles can exaggerate the appearance of the effect. Regression toward the mean and broad better-than-average tendencies can produce part of the familiar pattern even without the proposed metacognitive mechanism.",
+            "A 2020 study using alternative statistical tests found no significant Dunning–Kruger pattern in its intelligence data and argued that the effect may be much smaller than commonly reported. This is a serious challenge to simple interpretations, not a reason to pretend the original research never happened."
+          ]
+        },
+        {
+          "heading": "The debate did not end with 'it is only an artefact'",
+          "paragraphs": [
+            "Later reanalysis and replication work argued that some conclusions depend on how self-assessment is transformed and tested. A 2023 paper using alternative methods reported a small significant effect in intelligence data and called for better tests of the hypothesis.",
+            "The useful conclusion is therefore narrower than either internet extreme. Self-assessment can be systematically miscalibrated, especially among lower performers in some tasks, but the size and shape of the effect depend on measurement and context."
+          ]
+        },
+        {
+          "heading": "A better way to use the idea",
+          "paragraphs": [
+            "Do not diagnose another person from a confident statement. Instead, use calibration on yourself or on a process: record a prediction of performance before feedback, compare it with an objective result, and repeat the exercise across several attempts.",
+            "Good feedback should improve more than the score. It should also help confidence move closer to actual performance. That makes calibration a measurable learning target instead of a label for people we dislike."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We removed the old headline that said 'the less you know, the more confident you are'. The canonical page now describes performance and self-assessment directly and keeps the methodological debate visible in the evidence section.",
+            "For search and AI use, this distinction matters: a short definition should not silently turn a conditional research pattern into a universal law about confidence, expertise or intelligence."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Unskilled and unaware of it: how difficulties in recognizing one's own incompetence lead to inflated self-assessments","year":1999,"type":"foundational experiments","doi":"10.1037/0022-3514.77.6.1121","url":"https://pubmed.ncbi.nlm.nih.gov/10626367/"},
+        {"title":"The Dunning-Kruger effect is (mostly) a statistical artefact: Valid approaches to testing the hypothesis with individual differences data","year":2020,"type":"methodological critique and empirical test","doi":"10.1016/j.intell.2020.101449","url":"https://doi.org/10.1016/j.intell.2020.101449"},
+        {"title":"Reevaluating the Dunning-Kruger effect: A response to and replication of Gignac and Zajenkowski (2020)","year":2023,"type":"reanalysis and replication","doi":"10.1016/j.intell.2022.101717","url":"https://doi.org/10.1016/j.intell.2022.101717"}
+      ],
+      "related": ["self-assessment-dunning"]
+    }
+  ]
+}
