@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "framing-effect-decoy-effect",
+      "evidenceStatus": "well documented, context-dependent",
+      "reviewedAt": "2026-08-18",
+      "qualification": "The decoy effect is a well-documented family of context effects in which adding an inferior or otherwise strategically positioned alternative can change choice shares among the original options. The classic attraction effect uses an asymmetrically dominated decoy that is worse than the target but not necessarily worse than the competitor. The effect is not guaranteed: its size depends on the geometry of the options, prior preferences, task design and other moderators, and preregistered replications have found both successful and weak or null results.",
+      "mechanism": "Research offers several explanations, including contrast between attribute trade-offs, changes in relative value, ease of justification and attention to particular dimensions. A 2024 integrative review concludes that there is still no clear consensus on one underlying mechanism and separates attraction, compromise and phantom-decoy effects rather than treating every extra option as the same phenomenon.",
+      "practical": "When a third option seems to make one plan suddenly look obvious, compare the original alternatives without it and score the options on the attributes that matter to the decision. Check whether the suspected decoy is actually dominated by the target and whether removing it changes the preference between the remaining options. For product or pricing design, test the full choice set rather than assuming that a three-tier menu will reliably create the effect.",
+      "sources": [
+        {
+          "title": "Choice in Context: Tradeoff Contrast and Extremeness Aversion",
+          "year": 1992,
+          "type": "foundational experiments",
+          "doi": "10.1177/002224379202900301",
+          "url": "https://doi.org/10.1177/002224379202900301"
+        },
+        {
+          "title": "The asymmetric dominance effect: Reexamination and extension in risky choice – An experimental study",
+          "year": 2019,
+          "type": "experimental replication and extension",
+          "doi": "10.1016/j.joep.2019.05.007",
+          "url": "https://doi.org/10.1016/j.joep.2019.05.007"
+        },
+        {
+          "title": "Revisiting the decoy effect: replication and extension of Ariely and Wallsten (1995) and Connolly, Reb, and Kausel (2013)",
+          "year": 2021,
+          "type": "preregistered replication",
+          "doi": "10.1080/23743603.2021.1878340",
+          "url": "https://doi.org/10.1080/23743603.2021.1878340"
+        },
+        {
+          "title": "An integrative review of the decoy effect on choice behavior",
+          "year": 2024,
+          "type": "systematic integrative review",
+          "doi": "10.1002/mar.22076",
+          "url": "https://doi.org/10.1002/mar.22076"
+        }
+      ]
+    }
+  ]
+}
