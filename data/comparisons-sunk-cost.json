@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "sunk-cost-effect-vs-escalation-of-commitment",
+      "leftSlug": "cognitive-bias-sunk-cost-effect",
+      "rightSlug": "logical-fallacy-escalation-of-commitment",
+      "reviewedAt": "2026-08-18",
+      "title": "Sunk Cost Effect vs Escalation of Commitment",
+      "summary": "The two ideas overlap, but they answer different questions. Sunk cost effect asks whether irrecoverable past investment is influencing the current choice; escalation of commitment describes a broader pattern of persisting or investing more after setbacks.",
+      "keyDifference": "Ask whether you are identifying one reason for continuing, or the wider process of increasing commitment after bad results. Sunk costs can drive escalation, but escalation can have other drivers too.",
+      "dimensions": [
+        {"dimension":"Core question","left":"Is an irrecoverable past cost changing the choice I make now?","right":"Are negative results leading to continued or increased commitment to the same course of action?"},
+        {"dimension":"What must be present?","left":"A prior investment of money, time, effort, or another cost that cannot be recovered.","right":"An existing course of action, negative feedback or setbacks, and a decision about whether to persist or commit additional resources."},
+        {"dimension":"Possible drivers","left":"The prior sunk investment itself is the defining feature of the effect.","right":"Sunk costs can matter, but responsibility for the original choice, self-justification, completion pressure, organizational structure, and other factors can also contribute."},
+        {"dimension":"Can continuation still be reasonable?","left":"Yes. Future benefits, switching costs, new information, or completion value can justify continuing even though sunk costs should not receive independent weight.","right":"Yes. Additional investment is not automatically irrational if the updated forward-looking case remains strong enough."}
+      ],
+      "diagnostic": [
+        "Write all past costs that cannot be recovered and move them out of the forward-looking calculation.",
+        "Write the next increment of cost, the expected future value, realistic alternatives, and the value created by actual completion.",
+        "Ask whether the choice changes when the irrecoverable past investment is hidden. If it does, sunk cost is a relevant lens.",
+        "Then inspect the wider process: are setbacks, personal responsibility, reputation, completion pressure, or organizational incentives leading to repeated additional commitments? If so, escalation of commitment is the broader lens."
+      ],
+      "examples": [
+        {"title":"Software project","left":"The team argues for six more months mainly because two years of development would otherwise feel wasted.","right":"After several missed milestones, the team repeatedly expands the budget and scope, with sunk costs, ownership pressure, and the belief that success is always one more milestone away all contributing."},
+        {"title":"Subscription","left":"A person keeps using a service they no longer value because the annual fee has already been paid.","right":"There may be persistence, but this is not necessarily escalation unless the person responds to poor results by making further commitments or investments."},
+        {"title":"AI program","left":"A company keeps an underused AI tool because the implementation cost has already been spent.","right":"After weak adoption metrics, leaders approve repeated new integrations and budgets partly to justify the original program and avoid admitting the strategy needs to change."}
+      ],
+      "reviewProtocol": [
+        "Separate sunk costs from costs and benefits that still lie in the future.",
+        "State what useful completion produces and what alternatives are available for the remaining resources.",
+        "Record who made the original decision and whether responsibility, reputation, or ownership could affect the next commitment.",
+        "Use pre-agreed review or exit criteria when available; otherwise write new criteria before the next outcome arrives.",
+        "Describe the evidence narrowly: sunk cost is one influence on a choice, while escalation is the broader dynamic of continued or increased commitment after setbacks."
+      ],
+      "sources": [
+        {"title":"Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action","year":1976,"doi":"10.1016/0030-5073(76)90005-2","url":"https://doi.org/10.1016/0030-5073(76)90005-2"},
+        {"title":"The Escalation of Commitment To a Course of Action","year":1981,"doi":"10.5465/AMR.1981.4285694","url":"https://doi.org/10.5465/AMR.1981.4285694"},
+        {"title":"The psychology of sunk cost","year":1985,"doi":"10.1016/0749-5978(85)90049-4","url":"https://doi.org/10.1016/0749-5978(85)90049-4"},
+        {"title":"Looking forward and looking back: integrating completion and sunk-cost effects within an escalation-of-commitment progress decision","year":2001,"doi":"10.1037/0021-9010.86.1.104","url":"https://pubmed.ncbi.nlm.nih.gov/11302222/"},
+        {"title":"On the sunk-cost effect in economic decision-making: a meta-analytic review","year":2015,"doi":"10.1007/s40685-014-0014-8","url":"https://doi.org/10.1007/s40685-014-0014-8"}
+      ]
+    }
+  ]
+}
