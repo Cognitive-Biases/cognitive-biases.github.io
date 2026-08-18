@@ -47,6 +47,15 @@
       "maxConcepts": 10
     },
     {
+      "slug": "past-present-comparison",
+      "title": "Was the past really better?",
+      "question": "How can I tell whether something really got worse or the past only looks better in memory?",
+      "description": "Reviewed lenses for broad decline claims, rosy recollection, fading emotional intensity and comparisons between past and present.",
+      "terms": ["past", "present", "better before", "decline", "declinism", "rosy", "retrospection", "nostalgia", "fading affect", "memory"],
+      "minimumReviewedConcepts": 3,
+      "maxConcepts": 10
+    },
+    {
       "slug": "social-judgment",
       "title": "Social judgment and perspective",
       "question": "How can I separate what I know, what another person knows and what I infer about their competence or responsibility?",
