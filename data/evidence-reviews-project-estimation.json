@@ -7,36 +7,13 @@
       "reviewedAt": "2026-08-18",
       "qualification": "The planning fallacy is a well-documented tendency for people to predict their own task completion times too optimistically. The effect has been observed across different kinds of tasks, but it is not a rule that every plan will run late. Project overruns can also come from changing scope, dependencies, incentives, poor data, deliberate underestimation, or genuinely unusual events, so a late project should not automatically be diagnosed as a planning fallacy.",
       "mechanism": "Classic studies found that people often build a detailed scenario for how the current task will unfold while giving too little weight to how long similar tasks actually took. Later reviews describe cognitive, motivational, and social influences rather than one single cause. Recent cross-cultural experiments also suggest that reminders about past experience and the social consequences of delay can change time predictions differently across groups, which is another reason not to treat one mechanism or correction as universal.",
-      "practical": "For an important estimate, start with outcomes from comparable completed work before refining the current plan. Give a range rather than a single precise date, name the main uncertainties, and keep the original estimate so forecast error can be measured later. Reference-class methods can be useful when comparable data exist, but their quality depends on choosing a genuinely relevant class. There is no evidence-based universal rule that every estimate should simply be multiplied by the same fixed buffer.",
+      "practical": "For an important estimate, start with outcomes from comparable completed work before refining the current plan. Give a range rather than a single precise date, name the main uncertainties, and keep the original estimate so forecast error can be measured later. Reference-class methods can be useful when comparable data exist, but their quality depends on choosing a genuinely relevant class, trustworthy historical data, and a defensible way to adjust for the current case. There is no evidence-based universal rule that every estimate should simply be multiplied by the same fixed buffer.",
       "sources": [
-        {
-          "title": "Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times",
-          "year": 1994,
-          "type": "experimental studies",
-          "doi": "10.1037/0022-3514.67.3.366",
-          "url": "https://doi.org/10.1037/0022-3514.67.3.366"
-        },
-        {
-          "title": "The Planning Fallacy: Cognitive, Motivational, and Social Origins",
-          "year": 2010,
-          "type": "research review",
-          "doi": "10.1016/S0065-2601(10)43001-4",
-          "url": "https://doi.org/10.1016/S0065-2601(10)43001-4"
-        },
-        {
-          "title": "I Can Do It in No Time! Time Predictions in the Cultural Context",
-          "year": 2026,
-          "type": "cross-cultural experiments",
-          "doi": "10.1177/00220221261418305",
-          "url": "https://doi.org/10.1177/00220221261418305"
-        },
-        {
-          "title": "Reducing risks in megaprojects: The potential of reference class forecasting",
-          "year": 2023,
-          "type": "literature review of reference class forecasting",
-          "doi": "10.1016/j.plas.2023.100103",
-          "url": "https://doi.org/10.1016/j.plas.2023.100103"
-        }
+        {"title":"Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times","year":1994,"type":"experimental studies","doi":"10.1037/0022-3514.67.3.366","url":"https://doi.org/10.1037/0022-3514.67.3.366"},
+        {"title":"The Planning Fallacy: Cognitive, Motivational, and Social Origins","year":2010,"type":"research review","doi":"10.1016/S0065-2601(10)43001-4","url":"https://doi.org/10.1016/S0065-2601(10)43001-4"},
+        {"title":"I Can Do It in No Time! Time Predictions in the Cultural Context","year":2026,"type":"cross-cultural experiments","doi":"10.1177/00220221261418305","url":"https://doi.org/10.1177/00220221261418305"},
+        {"title":"Reducing risks in megaprojects: The potential of reference class forecasting","year":2023,"type":"literature review of reference class forecasting","doi":"10.1016/j.plas.2023.100103","url":"https://doi.org/10.1016/j.plas.2023.100103"},
+        {"title":"Reference class forecasting: promises, problems, and a research agenda moving forward","year":2025,"type":"systematic literature review","doi":"10.1080/09537287.2025.2578708","url":"https://doi.org/10.1080/09537287.2025.2578708"}
       ]
     }
   ]
