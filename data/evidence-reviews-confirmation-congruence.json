@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "confirmation-bias-congruence-bias",
+      "evidenceStatus": "established in hypothesis-testing tasks; narrower than confirmation bias",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Congruence Bias is a narrower hypothesis-testing pattern than the broad umbrella of confirmation bias. In classic work, people overvalued tests that were likely to return a positive result if their leading hypothesis were true, even when other tests were more diagnostic among competing hypotheses. The useful claim is not that every positive test is irrational: a positive test strategy can be efficient in some environments, and the problem depends on whether the chosen test can actually distinguish the focal hypothesis from alternatives.",
+      "mechanism": "Baron, Beattie, and Hershey described congruence bias as overvaluing tests whose expected positive result matches the currently favored hypothesis. Klayman and Ha showed why the closely related positive test strategy should not automatically be treated as a logical error: sampling cases expected under a hypothesis can be informative depending on the structure of the environment. The practical failure occurs when a test is congruent with the focal hypothesis but has low diagnostic value because alternative hypotheses predict the same result.",
+      "practical": "Before choosing a test, list at least one plausible alternative hypothesis and predict the result under both explanations. Prefer observations whose possible outcomes separate the hypotheses rather than merely giving your preferred explanation another chance to say 'yes.' If the same result is expected under several explanations, it is weak evidence even when it matches the preferred hypothesis.",
+      "sources": [
+        {
+          "title": "Diagnosticity of evidence and congruence bias in hypothesis testing",
+          "year": 1988,
+          "type": "hypothesis-testing experiments",
+          "doi": "10.1016/0749-5978(88)90012-2",
+          "url": "https://doi.org/10.1016/0749-5978(88)90012-2"
+        },
+        {
+          "title": "Confirmation, disconfirmation, and information in hypothesis testing",
+          "year": 1987,
+          "type": "theory + experimental evidence",
+          "doi": "10.1037/0033-295X.94.2.211",
+          "url": "https://doi.org/10.1037/0033-295X.94.2.211"
+        }
+      ]
+    }
+  ]
+}

@@ -22,10 +22,10 @@
     {
       "slug": "information-verification",
       "title": "Checking claims and information",
-      "question": "How can I check a claim without confusing familiarity, repetition or disagreement with evidence?",
-      "description": "Reviewed lenses for misinformation, corrections, source checking and belief updating.",
-      "terms": ["truth", "misinformation", "correction", "backfire", "confirmation", "familiar", "source", "evidence"],
-      "minimumReviewedConcepts": 2,
+      "question": "How can I check a claim without confusing familiarity, repetition, agreement, or a weak hypothesis test with evidence?",
+      "description": "Reviewed lenses for misinformation, corrections, source checking, competing explanations and belief updating.",
+      "terms": ["truth", "misinformation", "correction", "backfire", "confirmation", "congruence", "hypothesis", "diagnostic", "alternative explanation", "familiar", "source", "evidence"],
+      "minimumReviewedConcepts": 3,
       "maxConcepts": 10
     },
     {

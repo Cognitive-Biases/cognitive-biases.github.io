@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "confirmation-bias-vs-congruence-bias",
+      "leftSlug": "cognitive-bias-confirmation-bias",
+      "rightSlug": "confirmation-bias-congruence-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Confirmation Bias vs Congruence Bias",
+      "summary": "Confirmation Bias is a broad umbrella for belief-consistent search and interpretation. Congruence Bias is narrower: it concerns choosing a hypothesis test that fits the favored explanation but does not discriminate well among competing explanations.",
+      "keyDifference": "Ask whether the problem is broad evidence processing around an existing belief, or specifically the choice of a test whose likely result is congruent with one hypothesis but insufficiently diagnostic against alternatives.",
+      "dimensions": [
+        {"dimension":"Scope","left":"Broad patterns in information search, interpretation, weighting, memory, and hypothesis testing.","right":"A narrower failure in selecting or valuing diagnostic tests among competing hypotheses."},
+        {"dimension":"Typical question","left":"What evidence would make me change this belief, and am I applying the same standard to supporting and challenging evidence?","right":"If this test is positive, would a plausible alternative hypothesis predict the same result?"},
+        {"dimension":"Positive evidence","left":"Supportive evidence can be overweighted or challenging evidence can receive less attention or stricter scrutiny.","right":"A positive result is weak when several hypotheses predict it; the problem is low diagnosticity, not positivity itself."},
+        {"dimension":"Best countermeasure","left":"Predefine disconfirming evidence and compare competing explanations using the same standard.","right":"List alternatives and choose observations where the hypotheses make meaningfully different predictions."}
+      ],
+      "diagnostic": [
+        "Write the current belief or leading hypothesis and what evidence would weaken it.",
+        "List at least one plausible alternative explanation before gathering another round of evidence.",
+        "For each proposed test, predict the likely result under the focal and alternative hypotheses.",
+        "Prefer tests where outcomes separate the explanations rather than merely allowing the favored hypothesis to receive another positive result.",
+        "Use the broader Confirmation Bias label only when the issue extends beyond test choice into search, interpretation, weighting, or memory."
+      ],
+      "examples": [
+        {"title":"Software troubleshooting","left":"An engineer gives more weight to logs that support the suspected root cause and discounts contradictory traces.","right":"An engineer runs a test that the suspected cause should pass, but a second likely cause would pass the same test."},
+        {"title":"Product research","left":"A team interprets ambiguous customer comments as support for the roadmap it already prefers.","right":"A team asks whether users like a new feature without designing a comparison that separates feature value from novelty or selection effects."},
+        {"title":"AI-assisted analysis","left":"A user repeatedly prompts a model to strengthen one explanation and judges supportive outputs as more credible.","right":"A user asks the model for evidence expected under the favored explanation but never asks what observation would distinguish it from a rival explanation."}
+      ],
+      "reviewProtocol": [
+        "State the focal belief and at least one alternative explanation.",
+        "Write what evidence would count against each explanation before reviewing more data.",
+        "Evaluate the diagnostic value of proposed tests, not only whether they can produce a result consistent with the focal hypothesis.",
+        "Apply the same evidence-quality standard to results that support and challenge the preferred explanation.",
+        "Record which evidence actually changed the conclusion and why."
+      ],
+      "sources": [
+        {"title":"Confirmation Bias: A Ubiquitous Phenomenon in Many Guises","year":1998,"doi":"10.1037/1089-2680.2.2.175","url":"https://doi.org/10.1037/1089-2680.2.2.175"},
+        {"title":"Diagnosticity of evidence and congruence bias in hypothesis testing","year":1988,"doi":"10.1016/0749-5978(88)90012-2","url":"https://doi.org/10.1016/0749-5978(88)90012-2"},
+        {"title":"Confirmation, disconfirmation, and information in hypothesis testing","year":1987,"doi":"10.1037/0033-295X.94.2.211","url":"https://doi.org/10.1037/0033-295X.94.2.211"}
+      ]
+    }
+  ]
+}

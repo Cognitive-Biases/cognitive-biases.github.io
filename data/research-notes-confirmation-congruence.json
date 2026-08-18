@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "confirmation-bias-is-more-than-seeking-agreeable-information",
+      "title": "Confirmation bias is more than seeking agreeable information",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Confirmation bias is a broad family of belief-consistent information-processing tendencies. Classic hypothesis-testing work also shows why a narrower problem matters: a test can fit the favored hypothesis while offering little information against plausible alternatives.",
+      "sections": [
+        {
+          "heading": "The popular definition is too narrow",
+          "paragraphs": [
+            "Confirmation Bias is often described as consuming only information that agrees with existing beliefs. That can be one expression, but the research literature is wider. Nickerson's review covers selective search, interpretation, weighting, memory, and hypothesis testing across many settings.",
+            "This matters because a practical check should do more than tell people to read an opposing opinion. The better question is what evidence could change the belief and whether competing explanations are being judged by the same standard."
+          ]
+        },
+        {
+          "heading": "Classic hypothesis testing shows the problem clearly",
+          "paragraphs": [
+            "Wason's conceptual-task experiments showed how people can search for cases consistent with a current rule instead of selecting observations that efficiently eliminate alternatives. The result became an important foundation for later work on confirmation and hypothesis testing.",
+            "But later theory made the story more careful. Klayman and Ha argued that a positive test strategy can be useful in many environments. Looking where a hypothesis predicts an event is not automatically irrational; the diagnostic value depends on what competing hypotheses predict and on the structure of the task."
+          ]
+        },
+        {
+          "heading": "Congruence Bias is the narrower test-design problem",
+          "paragraphs": [
+            "Baron, Beattie and Hershey studied which questions people prefer when testing hypotheses. Participants could overvalue tests likely to return a positive answer under the leading hypothesis even when another test was more diagnostic among alternatives.",
+            "The practical distinction is useful. Confirmation Bias can describe a broad pattern around an existing belief. Congruence Bias is especially relevant when the mistake is choosing a test that agrees with the focal hypothesis but cannot distinguish it from rivals."
+          ]
+        },
+        {
+          "heading": "Counterevidence is not the same as arbitrary disagreement",
+          "paragraphs": [
+            "A good correction procedure does not require balancing every claim with an opposite claim. Some alternatives are weak, unsupported, or already ruled out. The goal is diagnostic evidence, not symmetrical content consumption.",
+            "For consequential decisions, define plausible alternatives, write what each predicts, and look for observations where their predictions differ. This creates a real chance for the preferred explanation to lose rather than merely surrounding it with more material."
+          ]
+        },
+        {
+          "heading": "AI makes the distinction operational",
+          "paragraphs": [
+            "Generative systems make it very easy to request ten better arguments for a conclusion already chosen. That workflow can amplify broad confirmation problems even when the model itself is not the original source of the belief.",
+            "A stronger workflow asks the model to identify rival explanations and discriminating tests, then verifies important claims independently. The model can help generate alternatives, but repeated generated support is not independent evidence."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"On the Failure to Eliminate Hypotheses in a Conceptual Task","year":1960,"type":"foundational experiment","doi":"10.1080/17470216008416717","url":"https://doi.org/10.1080/17470216008416717"},
+        {"title":"Confirmation, disconfirmation, and information in hypothesis testing","year":1987,"type":"theory + experimental evidence","doi":"10.1037/0033-295X.94.2.211","url":"https://doi.org/10.1037/0033-295X.94.2.211"},
+        {"title":"Diagnosticity of evidence and congruence bias in hypothesis testing","year":1988,"type":"hypothesis-testing experiments","doi":"10.1016/0749-5978(88)90012-2","url":"https://doi.org/10.1016/0749-5978(88)90012-2"},
+        {"title":"Confirmation Bias: A Ubiquitous Phenomenon in Many Guises","year":1998,"type":"review","doi":"10.1037/1089-2680.2.2.175","url":"https://doi.org/10.1037/1089-2680.2.2.175"}
+      ],
+      "related": ["cognitive-bias-confirmation-bias", "confirmation-bias-congruence-bias"]
+    }
+  ]
+}

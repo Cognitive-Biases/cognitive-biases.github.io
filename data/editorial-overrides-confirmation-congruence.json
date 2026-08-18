@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 170,
+      "slug": "cognitive-bias-confirmation-bias",
+      "previousTitle": "Confirmation Bias – when you only notice what supports your beliefs",
+      "title": "Confirmation Bias – when a belief shapes how evidence is searched and judged",
+      "description": "Confirmation Bias is a broad label for ways an existing belief or hypothesis can influence how information is searched for, interpreted, remembered, or evaluated. It is wider than simply reading agreeable news, and it does not mean that every preference for confirming evidence is irrational.\n\nWhere can it show up?\n- Research and analysis: evidence that fits a favored explanation receives more attention while difficult counterexamples are explained away.\n- Work and product decisions: a team gathers more support for a preferred plan without defining what result would make it change direction.\n- AI use: prompts are written mainly to strengthen an existing conclusion instead of testing alternatives with the same evidence standard.\n\nA better check\n- Write down what evidence would make the belief weaker or wrong before gathering more information.\n- Compare competing explanations using the same evidence standard.\n- Search for diagnostic counterexamples, not an arbitrary amount of opposing opinion.\n- Separate the source from the claim: disagreeing with a person is not evidence that their evidence is false.\n- When testing a hypothesis, ask whether the chosen test can distinguish it from plausible alternatives. That narrower failure is where Congruence Bias becomes especially useful.",
+      "reason": "The legacy page reduced Confirmation Bias to noticing supportive information. The reviewed literature treats it as a broad umbrella spanning information search, hypothesis testing and evidence interpretation, with different mechanisms across contexts."
+    },
+    {
+      "id": 22,
+      "slug": "confirmation-bias-congruence-bias",
+      "previousTitle": "Congruence Bias – when you only test what you want to confirm",
+      "title": "Congruence Bias – when the test fits one hypothesis but does not separate alternatives",
+      "description": "Congruence Bias is a narrower hypothesis-testing pattern. A person can prefer a test that is likely to produce a positive result if the favored hypothesis is true, even when that result would also be expected under competing explanations. The problem is not simply looking for a positive result. It is choosing a test with weak diagnostic value between alternatives.\n\nWhere can it show up?\n- Troubleshooting: you test whether one suspected cause can produce the symptom but do not test another cause that predicts the same symptom.\n- Experiments: a study asks whether the preferred theory predicts the result without designing observations that separate it from rival theories.\n- Business: a team asks whether customers like a feature but not whether the same responses would appear because of price, novelty, selection, or another explanation.\n\nA better check\n- List at least one plausible alternative hypothesis before choosing the test.\n- Predict what each possible result would look like under both explanations.\n- Prefer tests where the hypotheses make different predictions.\n- Do not treat every positive-test strategy as an error. In some environments, testing likely cases can be informative; diagnosticity is the key question.\n- Use Confirmation Bias for the broader evidence-processing problem and Congruence Bias when the failure is specifically in the design or choice of a hypothesis test.",
+      "reason": "The legacy page described Congruence Bias as generic confirmation seeking. The classic literature is narrower: it concerns choosing tests that are congruent with a focal hypothesis but insufficiently diagnostic among competing hypotheses."
+    }
+  ]
+}
