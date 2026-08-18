@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "relationTypes": {
+    "often-confused-with": {
+      "label": "Often confused with",
+      "description": "The concepts are easy to conflate in practice, but they target meaningfully different judgments or mechanisms."
+    },
+    "overlaps-with": {
+      "label": "Overlaps with",
+      "description": "The concepts share an important mechanism, state, or judgment pattern while remaining distinct constructs."
+    }
+  },
+  "relations": [
+    {
+      "leftSlug": "cognitive-bias-hindsight-bias",
+      "rightSlug": "cognitive-bias-outcome-bias",
+      "type": "often-confused-with",
+      "note": "Both use outcome knowledge retrospectively. Hindsight bias changes how predictable the outcome now seems; outcome bias changes how good or bad the earlier decision process now seems."
+    },
+    {
+      "leftSlug": "cognitive-bias-outcome-bias",
+      "rightSlug": "attribution-bias-moral-luck",
+      "type": "often-confused-with",
+      "note": "Both let results influence retrospective judgment. Outcome bias targets decision quality; moral luck targets blame, praise, punishment, or responsibility while also depending on intentions, beliefs, causal responsibility, and controllable risk."
+    },
+    {
+      "leftSlug": "cognitive-bias-projection-bias",
+      "rightSlug": "self-assessment-hot",
+      "type": "overlaps-with",
+      "note": "Both concern forecasting across states. Projection bias emphasizes overprojecting current preferences into the future; the hot–cold empathy gap emphasizes failing to appreciate how a different visceral or affective state changes motivation and choice."
+    },
+    {
+      "leftSlug": "cognitive-bias-impact-bias",
+      "rightSlug": "cognitive-bias-projection-bias",
+      "type": "overlaps-with",
+      "note": "Both distort predictions about the future self. Impact bias concerns the intensity or duration of future emotional reactions; projection bias concerns carrying current tastes or states too strongly into forecasts of future preferences."
+    },
+    {
+      "leftSlug": "availability-heuristic-anthropomorphism",
+      "rightSlug": "human-robot-interaction-form",
+      "type": "overlaps-with",
+      "note": "Humanlike appearance and interaction cues can shape both anthropomorphic mental-state attributions and expectations about a system's capabilities. Neither impression is evidence by itself that the inferred mind or capability is present."
+    }
+  ]
+}
