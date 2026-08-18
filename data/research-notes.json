@@ -29,34 +29,10 @@
       "status": "reviewed synthesis",
       "summary": "Research supports a recurring pattern of optimistic completion-time estimates. The useful response is to compare the plan with similar completed work and keep uncertainty visible, not to multiply every estimate by one fixed number.",
       "sections": [
-        {
-          "heading": "What the evidence supports",
-          "paragraphs": [
-            "Classic experiments found that people often predicted their own tasks would finish sooner than they actually did. When making the prediction, they tended to focus on a scenario for the current task and gave too little weight to relevant past experience.",
-            "Later reviews found the same broad pattern across many time-prediction studies, while also showing that the size of the error and its causes depend on the task, motivation, perspective and social setting. A late project is therefore not proof that one cognitive bias caused the delay."
-          ]
-        },
-        {
-          "heading": "Why a detailed plan can still be optimistic",
-          "paragraphs": [
-            "A detailed plan feels concrete because it describes what should happen next. That can make it easy to overlook the distribution of outcomes from similar work: interruptions, rework, dependencies and ordinary delays that were not prominent in the current scenario.",
-            "This is the basic value of the outside view. Before refining the new plan, look at comparable completed cases and ask where the current project sits in that history. The past is not a perfect predictor, but it is evidence that a fresh plan can otherwise ignore."
-          ]
-        },
-        {
-          "heading": "The outside view is not a magic formula",
-          "paragraphs": [
-            "Reference-class forecasting is one practical way to use the outside view. Research in project settings suggests it can improve estimates when the comparison class is meaningful, but choosing that class is itself an important problem. A reference set that is too broad, too small or genuinely unlike the current work can mislead rather than correct.",
-            "That is why we removed the old advice to multiply every estimate by 1.5. We did not find evidence for one universal correction factor. A better procedure is to use comparable outcomes, show a range, make assumptions visible and measure forecast error over time."
-          ]
-        },
-        {
-          "heading": "A newer boundary condition",
-          "paragraphs": [
-            "A 2026 cross-cultural study found that reminders about past experience and warnings about the social consequences of delay changed time predictions differently across cultural groups. This does not overturn the planning-fallacy literature. It is a useful reminder that an intervention that changes one group’s estimates may not work identically everywhere.",
-            "For this library, the practical lesson is simple: keep the core pattern separate from the proposed fix, and test whether the fix actually improves calibration in the setting where it will be used."
-          ]
-        }
+        {"heading":"What the evidence supports","paragraphs":["Classic experiments found that people often predicted their own tasks would finish sooner than they actually did. When making the prediction, they tended to focus on a scenario for the current task and gave too little weight to relevant past experience.","Later reviews found the same broad pattern across many time-prediction studies, while also showing that the size of the error and its causes depend on the task, motivation, perspective and social setting. A late project is therefore not proof that one cognitive bias caused the delay."]},
+        {"heading":"Why a detailed plan can still be optimistic","paragraphs":["A detailed plan feels concrete because it describes what should happen next. That can make it easy to overlook the distribution of outcomes from similar work: interruptions, rework, dependencies and ordinary delays that were not prominent in the current scenario.","This is the basic value of the outside view. Before refining the new plan, look at comparable completed cases and ask where the current project sits in that history. The past is not a perfect predictor, but it is evidence that a fresh plan can otherwise ignore."]},
+        {"heading":"The outside view is not a magic formula","paragraphs":["Reference-class forecasting is one practical way to use the outside view. Research in project settings suggests it can improve estimates when the comparison class is meaningful, but choosing that class is itself an important problem. A reference set that is too broad, too small or genuinely unlike the current work can mislead rather than correct.","That is why we removed the old advice to multiply every estimate by 1.5. We did not find evidence for one universal correction factor. A better procedure is to use comparable outcomes, show a range, make assumptions visible and measure forecast error over time."]},
+        {"heading":"A newer boundary condition","paragraphs":["A 2026 cross-cultural study found that reminders about past experience and warnings about the social consequences of delay changed time predictions differently across cultural groups. This does not overturn the planning-fallacy literature. It is a useful reminder that an intervention that changes one group’s estimates may not work identically everywhere.","For this library, the practical lesson is simple: keep the core pattern separate from the proposed fix, and test whether the fix actually improves calibration in the setting where it will be used."]}
       ],
       "sources": [
         {"title":"Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times","year":1994,"type":"experimental studies","doi":"10.1037/0022-3514.67.3.366","url":"https://doi.org/10.1037/0022-3514.67.3.366"},
@@ -65,6 +41,59 @@
         {"title":"Reducing risks in megaprojects: The potential of reference class forecasting","year":2023,"type":"literature review of reference class forecasting","doi":"10.1016/j.plas.2023.100103","url":"https://doi.org/10.1016/j.plas.2023.100103"}
       ],
       "related": ["egocentric-bias-planning-fallacy","probability-bias-subadditivity-effect","heuristic-bias-availability-bias","cognitive-bias-hindsight-bias","logical-fallacy-escalation-of-commitment"]
+    },
+    {
+      "slug": "continued-influence-corrections-misinformation",
+      "title": "Why corrected misinformation can still affect reasoning",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Corrections usually improve factual accuracy, but old misinformation can still influence later reasoning. That continued influence is not the same as a backfire effect, and the distinction changes how corrections should be evaluated.",
+      "sections": [
+        {
+          "heading": "A correction can work without erasing the old information",
+          "paragraphs": [
+            "The continued influence effect appears when corrected misinformation still affects a later inference, explanation, or judgment. This can happen even when a person remembers or accepts the correction. The important point is partial updating: the correction can reduce reliance on the false information without reducing it all the way to zero.",
+            "That is different from saying corrections do not work. Reviews and meta-analyses show that corrective information often improves accuracy. The remaining influence is the part that needs explaining, not evidence that the correction necessarily failed."
+          ]
+        },
+        {
+          "heading": "Why old information can remain useful to the mind",
+          "paragraphs": [
+            "One explanation is that misinformation can become part of a mental model. If the false claim explained why an event happened, simply removing it leaves a gap. A correction that supplies a credible alternative explanation can therefore be more useful than a bare statement that the original claim was false.",
+            "Other accounts focus on retrieval, familiarity, source memory and source credibility. The research does not point to one universal mechanism, which is why we should avoid treating continued influence as a single simple memory defect."
+          ]
+        },
+        {
+          "heading": "What tends to make corrections more useful",
+          "paragraphs": [
+            "Recent reviews support clear, sufficiently detailed corrections and, where possible, an alternative explanation. Repeating an important correction can also help. The exact effect depends on the topic, audience and task, and a 2023 meta-analysis of science-relevant misinformation found that correction success varied substantially by domain and message conditions.",
+            "A practical correction should therefore make the corrected fact easy to find, explain what should replace the false account when the evidence allows it, and avoid assuming that one format will work equally well everywhere."
+          ]
+        },
+        {
+          "heading": "Why this is not automatically backfire",
+          "paragraphs": [
+            "Backfire is a much narrower claim. It requires the correction to make belief in the targeted false statement stronger. Recent reviews find that factual corrections generally improve belief accuracy and that true backfire is rare. Anger, distrust, argument, no change, or continued influence do not by themselves show backfire.",
+            "Research also gives little support to the idea that repeating a false claim inside a correction routinely makes people believe it more. That risk should not be used as a general reason to avoid correcting misinformation."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We now treat Continued Influence Effect and Backfire Effect as separate outcomes and compare them directly. We also added a Checking claims & misinformation context that connects continued influence with confirmation bias, illusory truth and availability bias.",
+            "The practical goal is to make information checking procedural: identify the exact claim, find independent evidence, correct it clearly when needed, and measure what actually changed rather than guessing from the reaction."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Misinformation and Its Correction: Continued Influence and Successful Debiasing","year":2012,"type":"research review","doi":"10.1177/1529100612451018","url":"https://doi.org/10.1177/1529100612451018"},
+        {"title":"Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation","year":2017,"type":"meta-analysis","doi":"10.1177/0956797617714579","url":"https://doi.org/10.1177/0956797617714579"},
+        {"title":"The psychological drivers of misinformation belief and its resistance to correction","year":2022,"type":"research review","doi":"10.1038/s44159-021-00006-y","url":"https://doi.org/10.1038/s44159-021-00006-y"},
+        {"title":"A meta-analysis of correction effects in science-relevant misinformation","year":2023,"type":"meta-analysis","doi":"10.1038/s41562-023-01623-8","url":"https://doi.org/10.1038/s41562-023-01623-8"},
+        {"title":"Effective correction of misinformation","year":2023,"type":"research review","doi":"10.1016/j.copsyc.2023.101712","url":"https://doi.org/10.1016/j.copsyc.2023.101712"},
+        {"title":"Factual corrections: Concerns and current evidence","year":2024,"type":"research review","doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
+      ],
+      "related": ["memory-bias-continued-influence-effect","confirmation-bias-backfire-effect","cognitive-bias-confirmation-bias","truth-judgment-illusory-truth-effect","heuristic-bias-availability-bias"]
     }
   ]
 }
