@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "anchoring-effect-vs-automation-bias",
+      "leftSlug": "cognitive-bias-anchoring-effect",
+      "rightSlug": "false-priors-automation-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Anchoring Effect vs Automation Bias",
+      "summary": "Both can distort AI-assisted decisions, but the error is different. Anchoring pulls a judgment toward a starting value; automation bias is inappropriate reliance on automated advice or cues.",
+      "keyDifference": "Ask what is driving the judgment: the specific starting number, or the fact that the recommendation came from an automated system?",
+      "dimensions": [
+        {"dimension":"Core pattern","left":"A starting numerical value pulls the later estimate toward it.","right":"A person follows or defers to automated advice when independent checking would justify a different response."},
+        {"dimension":"Does automation have to be involved?","left":"No. Anchors can come from people, prices, targets, previous estimates, random values, or automated systems.","right":"Yes. The defining feature is reliance on an automated cue, recommendation, alert, or decision aid."},
+        {"dimension":"Does a number have to be involved?","left":"The classic evidence is strongest for numerical judgments and reference values.","right":"No. Automation bias can involve a classification, alert, route, diagnosis, recommendation, or omission as well as a number."},
+        {"dimension":"Best diagnostic check","left":"Form an independent estimate or compare against base rates and alternative reference points, then see how much the original number still pulls the judgment.","right":"Check whether the recommendation is being accepted because the system produced it and whether contradictory source evidence is being ignored or left unexamined."}
+      ],
+      "diagnostic": [
+        "Write the automated recommendation and identify any numerical value it supplied.",
+        "Make or reconstruct an independent judgment using source evidence, base rates, or a separate estimate.",
+        "Change or remove the starting number while keeping the automation source similar. If the judgment follows the number, anchoring is the closer lens.",
+        "Change the source or expose contradictory evidence while keeping the recommendation similar. If the person still defers mainly because the system recommended it, automation bias is the closer lens."
+      ],
+      "examples": [
+        {"title":"Performance review","left":"An AI suggests a score of 8.2 and the manager’s later rating stays close to that value even after reviewing the employee’s evidence.","right":"The manager accepts the AI rating despite clear contradictory performance evidence because the automated system is assumed to have processed the data better."},
+        {"title":"Project estimate","left":"A model proposes 12 weeks and the team’s revised estimate remains near 12 even though comparable projects point to a much wider range.","right":"The team skips its normal estimate review because the model is treated as the authoritative estimator."},
+        {"title":"Risk score","left":"A generated risk score becomes the numerical reference point around which later discussion moves.","right":"Reviewers ignore a missing input or obvious data-quality issue because the automated risk system still returned a recommendation."}
+      ],
+      "reviewProtocol": [
+        "Record the human judgment or range before automated advice when the decision is important enough to justify it.",
+        "Separate the recommendation’s content from its source: what number or claim was supplied, and who or what supplied it?",
+        "Compare against independent evidence, relevant base rates, and at least one alternative estimate.",
+        "Ask whether changing the starting value changes the final number and whether changing the automated source changes the willingness to rely on it.",
+        "Name only the pattern the evidence supports. An AI number can anchor a judgment without proving automation bias, and automation bias can occur without numerical anchoring."
+      ],
+      "sources": [
+        {"title":"Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis","year":2026,"doi":"10.1287/mnsc.2023.03238","url":"https://doi.org/10.1287/mnsc.2023.03238"},
+        {"title":"Automation bias: a systematic review of frequency, effect mediators, and mitigators","year":2011,"doi":"10.1136/amiajnl-2011-000089","url":"https://pubmed.ncbi.nlm.nih.gov/21685142/"},
+        {"title":"How was my performance? Exploring the role of anchoring bias in AI-assisted decision making","year":2025,"doi":"10.1016/j.ijinfomgt.2025.102875","url":"https://doi.org/10.1016/j.ijinfomgt.2025.102875"}
+      ]
+    }
+  ]
+}
