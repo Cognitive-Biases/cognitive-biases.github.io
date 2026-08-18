@@ -10,12 +10,11 @@
       "source": "arXiv",
       "sourceType": "preprint",
       "publishedAt": "2026-08-14",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
       "score": 9,
-      "status": "new"
+      "status": "accepted",
+      "result": "Directly relevant provisional benchmark: tests several anchoring pathways across 14 LLMs and reports strong pathway dependence. Keep for the AI-assisted decisions research track without assuming the human psychological mechanism is the same."
     },
     {
       "id": "arxiv-2607.25227",
@@ -25,12 +24,11 @@
       "source": "arXiv",
       "sourceType": "preprint",
       "publishedAt": "2026-07-28",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
       "score": 8,
-      "status": "new"
+      "status": "rejected",
+      "reason": "The paper studies adversarial weight manipulation that injects a targeted stance into a model. That is a security attack, not evidence that a named cognitive bias naturally occurs in normal model decision making."
     },
     {
       "id": "arxiv-2607.19063",
@@ -40,12 +38,11 @@
       "source": "arXiv",
       "sourceType": "preprint",
       "publishedAt": "2026-07-21",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
       "score": 7,
-      "status": "new"
+      "status": "rejected",
+      "reason": "False-positive discovery match. The paper uses an LLM to verify examiner claims in clinical exams; cognitive bias is part of the motivation, not the phenomenon being studied in the AI system."
     },
     {
       "id": "pubmed-42557856",
@@ -57,12 +54,11 @@
       "publishedAt": "2026 Aug 5",
       "journal": "Veterinary pathology",
       "doi": "10.1177/03009858261472493",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.",
       "score": 5,
-      "status": "new"
+      "status": "accepted",
+      "result": "Useful structured review of cognitive biases during expert-AI diagnostic interaction. The review identifies 12 reported biases across its source corpus, while noting that direct pathology evidence remains sparse."
     },
     {
       "id": "2026-08-18-malberg-llm-bias-benchmark",
@@ -70,9 +66,7 @@
       "title": "A Comprehensive Evaluation of Cognitive Biases in LLMs",
       "url": "https://aclanthology.org/2025.nlp4dh-1.50/",
       "sourceType": "peer-reviewed conference paper",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Large-scale benchmark covering 30 cognitive biases, 20 LLMs and 30,000 tests. Useful as a baseline for the project's AI-bias research map.",
       "status": "accepted",
       "result": "Used in the first AI bias research synthesis."
@@ -83,9 +77,7 @@
       "title": "CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models",
       "url": "https://arxiv.org/abs/2604.01366",
       "sourceType": "preprint",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Reports family-dependent bias patterns and shows that prompt-level debiasing can help some bias families while worsening judgment biases in the tested models.",
       "status": "accepted",
       "result": "Included as provisional evidence in the first AI bias research synthesis."
@@ -96,10 +88,7 @@
       "title": "Conditional Cognitive Biases in LLMs: How Biased User Turns Modulate In-Context Reasoning",
       "url": "https://arxiv.org/abs/2608.05166",
       "sourceType": "preprint",
-      "relatedConcepts": [
-        "ai-assisted-decisions",
-        "cognitive-bias-confirmation-bias"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions", "cognitive-bias-confirmation-bias"],
       "whyItMatters": "Tests bias expression in multi-turn interaction and suggests that biased conversational context can change later model behaviour. Relevant to real assistant use rather than isolated prompts.",
       "status": "accepted",
       "result": "Included as provisional evidence in the first AI bias research synthesis."
@@ -110,9 +99,7 @@
       "title": "AIM-Bench: Evaluating Decision-making Biases of Agentic LLM as Inventory Manager",
       "url": "https://arxiv.org/abs/2508.11416",
       "sourceType": "preprint",
-      "relatedConcepts": [
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["ai-assisted-decisions"],
       "whyItMatters": "Moves cognitive-bias evaluation into repeated operational decisions by LLM agents in inventory management. Useful for the project's agentic decision-making direction.",
       "status": "accepted",
       "result": "Included as provisional evidence in the first AI bias research synthesis."
@@ -123,10 +110,7 @@
       "title": "What is Wrong With Automation Bias?",
       "url": "https://doi.org/10.1007/s13347-026-01090-9",
       "sourceType": "peer-reviewed conceptual analysis",
-      "relatedConcepts": [
-        "false-priors-automation-bias",
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["false-priors-automation-bias", "ai-assisted-decisions"],
       "whyItMatters": "Clarifies the role of contradictory evidence and distinguishes weaker and stronger forms of inappropriate reliance on automation.",
       "status": "accepted",
       "result": "Added as a current conceptual source to the Automation Bias evidence record; evidence status unchanged."
@@ -137,11 +121,7 @@
       "title": "Humanlikeness as design, anthropomorphism as inference: a conceptual framework for human–robot interaction",
       "url": "https://doi.org/10.3389/fcogn.2026.1786256",
       "sourceType": "peer-reviewed conceptual framework",
-      "relatedConcepts": [
-        "availability-heuristic-anthropomorphism",
-        "human-robot-interaction-form",
-        "ai-assisted-decisions"
-      ],
+      "relatedConcepts": ["availability-heuristic-anthropomorphism", "human-robot-interaction-form", "ai-assisted-decisions"],
       "whyItMatters": "Separates humanlike design features from the psychological process of anthropomorphism, which directly supports the distinction used in our AI-assisted decision pages.",
       "status": "accepted",
       "result": "Added to Anthropomorphism and Appearance-Capability evidence records; evidence status unchanged."
