@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-prevention-bias",
+      "evidenceStatus": "single-study / domain-specific",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Prevention Bias is a label introduced in experimental research on information-security investment. In that task, participants favored preventive controls over detection-and-response controls even when the experiment was designed so the two classes had the same return on investment. The evidence does not establish a broad psychological law that people generally overvalue prevention in healthcare, insurance, relationships, or every other domain.",
+      "mechanism": "The original information-security study interprets the pattern through behavioral decision-making mechanisms including reference points, loss aversion, affect, and fast intuitive processing. Those mechanisms are plausible background explanations, but the named Prevention Bias itself is a domain-specific construct from this research program rather than a broadly replicated general-purpose bias.",
+      "practical": "When allocating a security budget, compare prevention, detection, and response using the same expected-loss and marginal-value framework instead of assuming prevention is automatically the superior category. For other domains, do not import the label without evidence that the same allocation pattern and incentives actually apply.",
+      "sources": [
+        {
+          "title": "Mis-spending on information security measures: Theory and experimental evidence",
+          "year": 2021,
+          "type": "domain-specific behavioral experiment",
+          "doi": "10.1016/j.ijinfomgt.2020.102291",
+          "url": "https://doi.org/10.1016/j.ijinfomgt.2020.102291"
+        },
+        {
+          "title": "Prospect Theory: An Analysis of Decision under Risk",
+          "year": 1979,
+          "type": "mechanism background / foundational theory",
+          "doi": "10.2307/1914185",
+          "url": "https://doi.org/10.2307/1914185"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-value-selection-bias",
+      "evidenceStatus": "supported in Bayesian reasoning tasks; limited independent replication",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Value Selection Bias is a narrow reasoning pattern reported in Bayesian diagnostic problems: when participants did not derive the correct solution, incorrect answers were strongly drawn toward numerical values already present in the problem. The evidence supports this behavior across multiple problem variations in the authors' research program, but it should not be generalized to any situation where a person uses an old price, stale KPI, or convenient number.",
+      "mechanism": "The research links value selection to reference dependence and problem representation. When reasoners are uncertain about how to construct the needed calculation, salient values supplied by the problem can look like candidate answers. Numerical ability and the way the reference class is represented affect accuracy, so the pattern is more specific than a generic preference for available numbers.",
+      "practical": "In a probability or diagnostic problem, state the target quantity and reference class before looking for a number to copy into the answer. Write the required relationship or calculation explicitly, then check whether the selected values actually belong to that relationship. If no calculation is needed, be able to explain why rather than assuming that a supplied number must be the answer.",
+      "sources": [
+        {
+          "title": "Reference Dependence in Bayesian Reasoning",
+          "year": 2019,
+          "type": "doctoral dissertation / multi-experiment research program",
+          "url": "https://digitalcommons.usf.edu/etd/7964/"
+        },
+        {
+          "title": "Reference Dependence in Bayesian Reasoning: Value Selection Bias, Congruence Effects, and Response Prompt Sensitivity",
+          "year": 2022,
+          "type": "peer-reviewed experiments",
+          "doi": "10.3389/fpsyg.2022.729285",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35369253/"
+        }
+      ]
+    }
+  ]
+}
