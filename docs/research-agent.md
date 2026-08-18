@@ -108,10 +108,14 @@ The agent must not:
 - turn one model result into a statement about all AI systems;
 - silently replace a reviewed statement with a more dramatic one.
 
-## Future scheduled job
+## Scheduled scout
 
-The scheduled job should run discovery and filtering, update the research inbox and prepare candidate notes. It should avoid direct automatic publication of scientific conclusions.
+The repository includes a scheduled `Research Scout` workflow. It runs once a week and can also be started manually.
 
-A later implementation can use a web-search provider and an AI model, but the repository should keep the workflow provider-neutral. Credentials must live in GitHub secrets, never in the repository.
+The scout currently searches configured arXiv and PubMed queries, scores candidates for relevance, removes records already present in the inbox, and adds only a small number of recent candidates. The queries, lookback window, score threshold and maximum batch size live in `data/research-scout-config.json`.
 
-The first useful scheduled output is a small queue of high-signal candidates, not a large stream of generated articles.
+The scout deliberately stores metadata and our own relevance note rather than copying source abstracts into the project.
+
+When new candidates are found, the workflow pushes an isolated review branch and attempts to open a pull request. It does not change evidence status, public research notes or canonical bias pages. Those changes remain part of the editorial review loop.
+
+A later analysis stage may use an AI model to help compare a candidate with the existing corpus, but discovery remains provider-neutral and a model must not be allowed to turn an abstract into an automatic scientific conclusion.
