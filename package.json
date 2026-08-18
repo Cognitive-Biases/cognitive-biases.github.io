@@ -4,8 +4,9 @@
   "version": "1.0.0",
   "description": "Static website for the Cognitive Biases educational app.",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "check": "node scripts/build.mjs && node scripts/check.mjs",
+    "build": "node scripts/build.mjs && node scripts/enhance.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "check": "npm run validate:data && npm run build && node scripts/check.mjs",
     "dev": "npm run build && npx serve dist"
   },
   "devDependencies": {
