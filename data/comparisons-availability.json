@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "availability-heuristic-vs-illusory-truth-effect",
+      "leftSlug": "heuristic-bias-availability-bias",
+      "rightSlug": "truth-judgment-illusory-truth-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Availability Heuristic vs Illusory Truth Effect",
+      "summary": "Both can make familiar information influential, but they affect different judgments. Availability uses accessible examples as a cue for frequency or probability; illusory truth is the tendency for repeated statements to be judged as more true than comparable new statements.",
+      "keyDifference": "Ask what changed: how common or likely the event seems, or how true the statement seems?",
+      "dimensions": [
+        {"dimension":"Core judgment","left":"How frequent, likely, or representative is this event or category?","right":"How true or credible is this specific statement?"},
+        {"dimension":"Role of memory","left":"Examples or scenarios that come to mind easily can receive more weight in frequency or probability judgments.","right":"Prior exposure can make a statement more familiar or fluent, increasing its judged truth on average."},
+        {"dimension":"Does repetition have to occur?","left":"No. Accessibility can come from vividness, recency, personal experience, search, or real frequency as well as repetition.","right":"Yes. The defining manipulation compares repeated information with comparable new information."},
+        {"dimension":"Best check","left":"Compare remembered examples with a base rate or deliberately sampled reference set.","right":"Trace the statement to independent evidence and do not treat familiarity or repeated exposure as proof."}
+      ],
+      "diagnostic": [
+        "Write the exact judgment: frequency/probability or truth/credibility.",
+        "List the examples that came to mind and ask why they were accessible. Compare them with a broader reference set when possible.",
+        "Trace repeated versions of a claim back to their sources. Multiple repetitions of one source are not multiple pieces of evidence.",
+        "If accessibility changes the estimated frequency, availability is the closer lens. If repetition changes belief in the statement’s truth, illusory truth is the closer lens. Both can occur together."
+      ],
+      "examples": [
+        {"title":"AI answers","left":"Several memorable examples of a model failure make that type of failure seem very common without checking benchmark or incident rates.","right":"A factual claim appears in several generated answers and begins to feel more credible because the wording has become familiar."},
+        {"title":"News and risk","left":"A striking incident is easy to recall, so a reader gives it more weight when estimating how often the event occurs.","right":"A repeated claim about the incident is judged as more true after several exposures even when no new evidence was added."},
+        {"title":"Project review","left":"One vivid failed project becomes the main reference for estimating the failure rate of a new project.","right":"A causal explanation repeated across meetings feels increasingly credible despite coming from the same original assumption."}
+      ],
+      "reviewProtocol": [
+        "Name the target judgment before discussing bias: frequency, probability, truth, or something else.",
+        "For frequency judgments, compare accessible examples with a relevant denominator, base rate, or sampled reference set.",
+        "For truth judgments, separate the number of exposures from the number and quality of independent sources.",
+        "Do not call repeated information 'availability bias' merely because it is familiar, and do not call every memorable example an illusory-truth effect.",
+        "When both processes may be present, check frequency and truth separately."
+      ],
+      "sources": [
+        {"title":"Availability: A heuristic for judging frequency and probability","year":1973,"doi":"10.1016/0010-0285(73)90033-9","url":"https://doi.org/10.1016/0010-0285(73)90033-9"},
+        {"title":"Frequency and the conference of referential validity","year":1977,"doi":"10.1016/S0022-5371(77)80012-1","url":"https://doi.org/10.1016/S0022-5371(77)80012-1"},
+        {"title":"The illusory truth effect: A review of how repetition increases belief in misinformation","year":2024,"doi":"10.1016/j.copsyc.2023.101736","url":"https://pubmed.ncbi.nlm.nih.gov/38113667/"},
+        {"title":"The perception of dramatic risks: Biased media, but unbiased minds","year":2024,"url":"https://pubmed.ncbi.nlm.nih.gov/38368678/"}
+      ]
+    }
+  ]
+}
