@@ -62,5 +62,42 @@
     "Metacognitive Bias": "self-metacognition",
     "Probability Bias": "probability-risk",
     "Self-Perception Bias": "self-metacognition"
+  },
+  "recordFamilyOverrides": {
+    "90": "valuation-choice",
+    "91": "reasoning-flexibility",
+    "92": "reasoning-flexibility",
+    "95": "self-metacognition",
+    "96": "probability-risk",
+    "97": "social-judgment",
+    "98": "social-judgment",
+    "99": "memory-retrieval",
+    "100": "memory-retrieval",
+    "102": "attention-information",
+    "104": "valuation-choice",
+    "105": "social-judgment",
+    "106": "valuation-choice",
+    "107": "valuation-choice",
+    "108": "valuation-choice",
+    "109": "probability-risk",
+    "110": "attention-information",
+    "112": "probability-risk",
+    "113": "time-commitment",
+    "114": "attention-information",
+    "116": "probability-risk",
+    "117": "belief-updating",
+    "119": "perception-patterns",
+    "120": "attention-information",
+    "122": "probability-risk",
+    "124": "perception-patterns",
+    "125": "belief-updating",
+    "126": "valuation-choice",
+    "128": "perception-patterns",
+    "129": "social-judgment",
+    "166": "attention-information",
+    "170": "belief-updating"
+  },
+  "recordContexts": {
+    "97": ["human-robot-interaction"]
   }
 }
