@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "confirmation-bias-backfire-effect",
+      "evidenceStatus": "mixed / conditional",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Corrections usually improve factual accuracy. A true backfire effect, where a correction makes the targeted false belief stronger, appears to be uncommon and sensitive to context and measurement. It should not be treated as the default response to being corrected.",
+      "mechanism": "The label describes a change in belief after corrective information, not ordinary disagreement. Identity, prior beliefs, source trust, and how the correction is measured can affect responses, but the broad claim that facts normally make false beliefs stronger is not supported by the current evidence base.",
+      "practical": "Do not avoid corrections because you fear an automatic backfire. Give the correction clearly, connect it to reliable evidence, and separate belief accuracy from whether the correction changes a person's wider attitudes or behaviour. For important decisions, check the belief again later because correction effects can fade.",
+      "sources": [
+        {
+          "title": "Searching for the Backfire Effect: Measurement and Design Considerations",
+          "year": 2020,
+          "type": "review",
+          "doi": "10.1016/j.jarmac.2020.06.006",
+          "url": "https://doi.org/10.1016/j.jarmac.2020.06.006"
+        },
+        {
+          "title": "Why the backfire effect does not explain the durability of political misperceptions",
+          "year": 2021,
+          "type": "review / perspective",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8053951/"
+        },
+        {
+          "title": "Factual corrections: Concerns and current evidence",
+          "year": 2024,
+          "type": "review",
+          "doi": "10.1016/j.copsyc.2023.101715",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101715"
+        }
+      ]
+    },
+    {
+      "slug": "belief-perseverance-conservatism-bias",
+      "evidenceStatus": "established in belief-updating tasks",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Here, conservatism means under-updating: new evidence changes a probability judgment less than a Bayesian benchmark would predict. It should not be confused with the separate memory phenomenon in this corpus that pulls remembered extreme values toward the middle.",
+      "mechanism": "In probability-updating tasks, people can place too much weight on a prior belief relative to new diagnostic information. Different models explain this pattern in different ways, so the observed under-update is firmer than any single mechanism proposed to explain it.",
+      "practical": "When new evidence matters, write down the prior estimate, the new evidence, and the updated estimate separately. This makes it easier to notice when the answer barely moved simply because the original belief felt familiar. Treat this as a decision procedure, not a guaranteed debiasing cure.",
+      "sources": [
+        {
+          "title": "The neural basis of belief updating and rational decision making",
+          "year": 2014,
+          "type": "experiment",
+          "doi": "10.1093/scan/nss099",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22956673/"
+        },
+        {
+          "title": "Surprisingly rational: probability theory plus noise explains biases in judgment",
+          "year": 2014,
+          "type": "model + experiments",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25090427/"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-hindsight-bias",
+      "evidenceStatus": "robust",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Knowing an outcome can make the outcome look more predictable in retrospect. The effect has been studied for decades and across many settings, but it does not mean that every confident explanation after an event is biased.",
+      "mechanism": "Outcome knowledge changes how people reconstruct what was knowable before the event. Once the result is known, information that fits it can feel more relevant and the original uncertainty becomes harder to recreate.",
+      "practical": "Keep forecasts, assumptions, and confidence estimates before important outcomes are known. When reviewing a decision later, compare the result with that earlier record instead of reconstructing your prediction from memory. Simply warning yourself about hindsight bias is unlikely to be enough.",
+      "sources": [
+        {
+          "title": "Hindsight is not equal to foresight: The effect of outcome knowledge on judgment under uncertainty",
+          "year": 1975,
+          "type": "foundational experiments",
+          "doi": "10.1037/0096-1523.1.3.288",
+          "url": "https://doi.org/10.1037/0096-1523.1.3.288"
+        },
+        {
+          "title": "Fifty years of hindsight bias research—Reflection on Fischhoff (1975)",
+          "year": 2025,
+          "type": "review / reflection",
+          "doi": "10.1037/xhp0001232",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39913490/"
+        }
+      ]
+    },
+    {
+      "slug": "truth-judgment-illusory-truth-effect",
+      "evidenceStatus": "robust",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Repeated information is, on average, judged as more truthful than comparable new information. The size of the effect varies with the material and procedure, and repetition does not make every claim believable or erase all prior knowledge.",
+      "mechanism": "Repetition can make information easier or more coherent to process and retrieve. People can then use that subjective ease or familiarity as one cue when judging truth, even though repetition itself is not evidence that the statement is correct.",
+      "practical": "When a claim feels true mainly because it sounds familiar, switch from familiarity to source checking. Ask where the claim came from and what evidence would support it. Do not treat familiarity as proof, but do not treat repetition as proof of falsehood either.",
+      "sources": [
+        {
+          "title": "Frequency and the conference of referential validity",
+          "year": 1977,
+          "type": "foundational experiment",
+          "doi": "10.1016/S0022-5371(77)80012-1",
+          "url": "https://doi.org/10.1016/S0022-5371(77)80012-1"
+        },
+        {
+          "title": "The effects of repetition frequency on the illusory truth effect",
+          "year": 2021,
+          "type": "experiments",
+          "doi": "10.1186/s41235-021-00301-5",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33983553/"
+        },
+        {
+          "title": "The illusory truth effect: A review of how repetition increases belief in misinformation",
+          "year": 2024,
+          "type": "review",
+          "doi": "10.1016/j.copsyc.2023.101736",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38113667/"
+        }
+      ]
+    },
+    {
+      "slug": "probability-bias-subadditivity-effect",
+      "evidenceStatus": "established with boundary conditions",
+      "reviewedAt": "2026-08-18",
+      "qualification": "People often give a larger total probability when an event is unpacked into separate possibilities than when the same event is judged as one packed category. The effect is not universal: how the possibilities are described and how typical they are can change or even reverse an unpacking effect.",
+      "mechanism": "Support theory models probability judgments as depending partly on the support that comes to mind for the focal event and its alternatives. Unpacking can make component possibilities more available or easier to evaluate, increasing their combined judged probability.",
+      "practical": "For consequential forecasts, compare the packed event with a mutually exclusive, collectively exhaustive breakdown. If the estimates change greatly when the wording changes, investigate the representation before acting on the numbers. The goal is consistency, not forcing every judgment to match one decomposition.",
+      "sources": [
+        {
+          "title": "Support theory: A nonextensional representation of subjective probability",
+          "year": 1994,
+          "type": "theory + experiments",
+          "doi": "10.1037/0033-295X.101.4.547",
+          "url": "https://doi.org/10.1037/0033-295X.101.4.547"
+        },
+        {
+          "title": "Unpacking, repacking, and anchoring: advances in support theory",
+          "year": 1997,
+          "type": "theory + experiments",
+          "doi": "10.1037/0033-295X.104.2.406",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9127585/"
+        },
+        {
+          "title": "Typical versus atypical unpacking and superadditive probability judgment",
+          "year": 2004,
+          "type": "boundary-condition experiments",
+          "doi": "10.1037/0278-7393.30.3.573",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15099126/"
+        }
+      ]
+    }
+  ]
+}
