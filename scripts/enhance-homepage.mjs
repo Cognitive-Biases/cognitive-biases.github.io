@@ -10,12 +10,14 @@ const canonicalBiases = biases.filter((bias) => !duplicateIds.has(bias.id));
 const taxonomy = JSON.parse(await readFile("data/taxonomy-v2.json", "utf8"));
 const contexts = JSON.parse(await readFile("data/contexts.json", "utf8"));
 const comparisons = JSON.parse(await readFile("data/comparisons.json", "utf8"));
+const auditExclusions = JSON.parse(await readFile("data/audit-exclusions.json", "utf8"));
+const explicitlyExcludedAuditSlugs = new Set((auditExclusions.entries || []).map((entry) => entry.slug));
 const evidenceFiles = (await readdir("data"))
   .filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name))
   .sort();
 const evidenceDocs = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
 const reviews = evidenceDocs.flatMap((document) => document.reviews || []);
-const auditEligible = reviews.filter((review) => review.auditEligible !== false);
+const auditEligible = reviews.filter((review) => review.auditEligible !== false && !explicitlyExcludedAuditSlugs.has(review.slug));
 const familyFor = (bias) => taxonomy.recordFamilyOverrides?.[String(bias.id)] || taxonomy.directCategoryFamily?.[bias.typeOfBias] || null;
 const familyCounts = new Map();
 for (const bias of canonicalBiases) {
