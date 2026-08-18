@@ -33,6 +33,9 @@ for (const doi of ["10.1016/0749-5978(88)90012-2", "10.1037/0033-295X.94.2.211"]
 const taxonomy = await json("data/taxonomy-v2.json");
 const familyFor = (item) => taxonomy.recordFamilyOverrides?.[String(item.id)] || taxonomy.directCategoryFamily?.[item.typeOfBias] || null;
 if (familyFor(confirmation) !== "belief-updating" || familyFor(congruence) !== "belief-updating") throw new Error("Confirmation and Congruence must both resolve to Belief updating.");
+for (const expected of [CONFIRMATION, CONGRUENCE]) {
+  if (!(taxonomy.recordContexts?.[String(expected.id)] || []).includes(CONTEXT)) throw new Error(`${expected.slug}: machine-facing claim-checking context mapping is missing.`);
+}
 
 const contexts = await json("data/contexts.json");
 const context = (contexts.entries || []).find((entry) => entry.slug === CONTEXT);
@@ -86,4 +89,4 @@ for (const url of [`${SITE}/compare/${COMPARISON}/`, `${SITE}/research/${RESEARC
   if (!sitemap.includes(`<loc>${url}</loc>`)) throw new Error(`Sitemap is missing ${url}.`);
 }
 
-console.log("Confirmation/Congruence cluster check passed: broad confirmation, diagnostic hypothesis testing, claim-checking workflow, search intent, research, comparison and exports are aligned.");
+console.log("Confirmation/Congruence cluster check passed: broad confirmation, diagnostic hypothesis testing, claim-checking workflow, machine context, search intent, research, comparison and exports are aligned.");
