@@ -9,68 +9,62 @@
       "status": "reviewed synthesis",
       "summary": "Recent studies make a stronger case that LLM outputs can show repeatable decision patterns that resemble named cognitive biases. They also show why we should be careful with the label: the effects depend on the task, model, prompt and conversational context, and a debiasing prompt that helps one kind of task can hurt another.",
       "sections": [
+        {"heading":"What changed","paragraphs":["The discussion has moved beyond isolated demonstrations. A 2025 study tested 30 cognitive biases across 20 large language models using 30,000 generated tests and found evidence for every tested bias in at least some models. That does not mean every model showed every bias, or that the models share the human psychological mechanism behind the label. It does show that these patterns can be measured at a much larger scale than a few hand-picked prompts.","Newer work is also testing when the patterns appear. A 2026 preprint found that biased reasoning in an earlier user turn increased later bias expression in six of eight tested models compared with a zero-shot baseline. Another 2026 benchmark reported that prompt-level debiasing helped some families of bias but made judgment biases worse in its tested models."]},
+        {"heading":"Why agent behaviour matters","paragraphs":["The next step is moving from one-off answers to agents that make a series of operational decisions. AIM-Bench, a 2025 preprint, evaluates LLM agents acting as inventory managers under uncertainty and reports decision patterns such as framing and pull-to-centre effects. This is useful because an agent can turn a small decision tendency into repeated actions over time.","For this project, that makes AI-assisted decision making a better research focus than a simple list of biases supposedly found in chatbots. The practical question is not whether an AI can be given a human bias label. It is whether a repeatable decision pattern appears, under what conditions, and what a person should verify before relying on the output."]},
+        {"heading":"What we should not claim","paragraphs":["We should not say that LLMs think like humans because they produce behaviour that fits the same experimental label. Similar output patterns can come from very different mechanisms.","We should also avoid a single score for how biased a model is. The studies we reviewed use different tasks and definitions, and the results change with model family, task complexity and prompt context. Several of the most interesting 2026 results are still preprints, so they belong in a research watch rather than in a settled textbook claim."]},
+        {"heading":"What this changes in our library","paragraphs":["We will keep a separate AI-assisted decisions context and connect research to concrete lenses such as automation bias, confirmation bias, anthropomorphism and repeated-information effects. We will also track LLM-specific benchmark results without pretending that every benchmark maps cleanly onto the human construct with the same name.","When a new study arrives, the useful update may be a narrower qualification, a new decision context or no change at all. Recency alone is not evidence."]}
+      ],
+      "sources": [
+        {"title":"A Comprehensive Evaluation of Cognitive Biases in LLMs","year":2025,"type":"peer-reviewed conference paper","doi":"10.18653/v1/2025.nlp4dh-1.50","url":"https://aclanthology.org/2025.nlp4dh-1.50/"},
+        {"title":"CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models","year":2026,"type":"preprint","url":"https://arxiv.org/abs/2604.01366"},
+        {"title":"Conditional Cognitive Biases in LLMs: How Biased User Turns Modulate In-Context Reasoning","year":2026,"type":"preprint","url":"https://arxiv.org/abs/2608.05166"},
+        {"title":"AIM-Bench: Evaluating Decision-making Biases of Agentic LLM as Inventory Manager","year":2025,"type":"preprint","url":"https://arxiv.org/abs/2508.11416"}
+      ],
+      "related": ["false-priors-automation-bias","cognitive-bias-confirmation-bias","availability-heuristic-anthropomorphism","truth-judgment-illusory-truth-effect"]
+    },
+    {
+      "slug": "planning-fallacy-project-estimates-outside-view",
+      "title": "Planning fallacy in project estimates: why one buffer is not the answer",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Research supports a recurring pattern of optimistic completion-time estimates. The useful response is to compare the plan with similar completed work and keep uncertainty visible, not to multiply every estimate by one fixed number.",
+      "sections": [
         {
-          "heading": "What changed",
+          "heading": "What the evidence supports",
           "paragraphs": [
-            "The discussion has moved beyond isolated demonstrations. A 2025 study tested 30 cognitive biases across 20 large language models using 30,000 generated tests and found evidence for every tested bias in at least some models. That does not mean every model showed every bias, or that the models share the human psychological mechanism behind the label. It does show that these patterns can be measured at a much larger scale than a few hand-picked prompts.",
-            "Newer work is also testing when the patterns appear. A 2026 preprint found that biased reasoning in an earlier user turn increased later bias expression in six of eight tested models compared with a zero-shot baseline. Another 2026 benchmark reported that prompt-level debiasing helped some families of bias but made judgment biases worse in its tested models."
+            "Classic experiments found that people often predicted their own tasks would finish sooner than they actually did. When making the prediction, they tended to focus on a scenario for the current task and gave too little weight to relevant past experience.",
+            "Later reviews found the same broad pattern across many time-prediction studies, while also showing that the size of the error and its causes depend on the task, motivation, perspective and social setting. A late project is therefore not proof that one cognitive bias caused the delay."
           ]
         },
         {
-          "heading": "Why agent behaviour matters",
+          "heading": "Why a detailed plan can still be optimistic",
           "paragraphs": [
-            "The next step is moving from one-off answers to agents that make a series of operational decisions. AIM-Bench, a 2025 preprint, evaluates LLM agents acting as inventory managers under uncertainty and reports decision patterns such as framing and pull-to-centre effects. This is useful because an agent can turn a small decision tendency into repeated actions over time.",
-            "For this project, that makes AI-assisted decision making a better research focus than a simple list of biases supposedly found in chatbots. The practical question is not whether an AI can be given a human bias label. It is whether a repeatable decision pattern appears, under what conditions, and what a person should verify before relying on the output."
+            "A detailed plan feels concrete because it describes what should happen next. That can make it easy to overlook the distribution of outcomes from similar work: interruptions, rework, dependencies and ordinary delays that were not prominent in the current scenario.",
+            "This is the basic value of the outside view. Before refining the new plan, look at comparable completed cases and ask where the current project sits in that history. The past is not a perfect predictor, but it is evidence that a fresh plan can otherwise ignore."
           ]
         },
         {
-          "heading": "What we should not claim",
+          "heading": "The outside view is not a magic formula",
           "paragraphs": [
-            "We should not say that LLMs think like humans because they produce behaviour that fits the same experimental label. Similar output patterns can come from very different mechanisms.",
-            "We should also avoid a single score for how biased a model is. The studies we reviewed use different tasks and definitions, and the results change with model family, task complexity and prompt context. Several of the most interesting 2026 results are still preprints, so they belong in a research watch rather than in a settled textbook claim."
+            "Reference-class forecasting is one practical way to use the outside view. Research in project settings suggests it can improve estimates when the comparison class is meaningful, but choosing that class is itself an important problem. A reference set that is too broad, too small or genuinely unlike the current work can mislead rather than correct.",
+            "That is why we removed the old advice to multiply every estimate by 1.5. We did not find evidence for one universal correction factor. A better procedure is to use comparable outcomes, show a range, make assumptions visible and measure forecast error over time."
           ]
         },
         {
-          "heading": "What this changes in our library",
+          "heading": "A newer boundary condition",
           "paragraphs": [
-            "We will keep a separate AI-assisted decisions context and connect research to concrete lenses such as automation bias, confirmation bias, anthropomorphism and repeated-information effects. We will also track LLM-specific benchmark results without pretending that every benchmark maps cleanly onto the human construct with the same name.",
-            "When a new study arrives, the useful update may be a narrower qualification, a new decision context or no change at all. Recency alone is not evidence."
+            "A 2026 cross-cultural study found that reminders about past experience and warnings about the social consequences of delay changed time predictions differently across cultural groups. This does not overturn the planning-fallacy literature. It is a useful reminder that an intervention that changes one group’s estimates may not work identically everywhere.",
+            "For this library, the practical lesson is simple: keep the core pattern separate from the proposed fix, and test whether the fix actually improves calibration in the setting where it will be used."
           ]
         }
       ],
       "sources": [
-        {
-          "title": "A Comprehensive Evaluation of Cognitive Biases in LLMs",
-          "year": 2025,
-          "type": "peer-reviewed conference paper",
-          "doi": "10.18653/v1/2025.nlp4dh-1.50",
-          "url": "https://aclanthology.org/2025.nlp4dh-1.50/"
-        },
-        {
-          "title": "CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models",
-          "year": 2026,
-          "type": "preprint",
-          "url": "https://arxiv.org/abs/2604.01366"
-        },
-        {
-          "title": "Conditional Cognitive Biases in LLMs: How Biased User Turns Modulate In-Context Reasoning",
-          "year": 2026,
-          "type": "preprint",
-          "url": "https://arxiv.org/abs/2608.05166"
-        },
-        {
-          "title": "AIM-Bench: Evaluating Decision-making Biases of Agentic LLM as Inventory Manager",
-          "year": 2025,
-          "type": "preprint",
-          "url": "https://arxiv.org/abs/2508.11416"
-        }
+        {"title":"Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times","year":1994,"type":"experimental studies","doi":"10.1037/0022-3514.67.3.366","url":"https://doi.org/10.1037/0022-3514.67.3.366"},
+        {"title":"The Planning Fallacy: Cognitive, Motivational, and Social Origins","year":2010,"type":"research review","doi":"10.1016/S0065-2601(10)43001-4","url":"https://doi.org/10.1016/S0065-2601(10)43001-4"},
+        {"title":"I Can Do It in No Time! Time Predictions in the Cultural Context","year":2026,"type":"cross-cultural experiments","doi":"10.1177/00220221261418305","url":"https://doi.org/10.1177/00220221261418305"},
+        {"title":"Reducing risks in megaprojects: The potential of reference class forecasting","year":2023,"type":"literature review of reference class forecasting","doi":"10.1016/j.plas.2023.100103","url":"https://doi.org/10.1016/j.plas.2023.100103"}
       ],
-      "related": [
-        "false-priors-automation-bias",
-        "cognitive-bias-confirmation-bias",
-        "availability-heuristic-anthropomorphism",
-        "truth-judgment-illusory-truth-effect"
-      ]
+      "related": ["egocentric-bias-planning-fallacy","probability-bias-subadditivity-effect","heuristic-bias-availability-bias","cognitive-bias-hindsight-bias","logical-fallacy-escalation-of-commitment"]
     }
   ]
 }
