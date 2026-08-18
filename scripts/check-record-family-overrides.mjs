@@ -3,6 +3,9 @@ import { resolve } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
+const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
+const duplicateIds = new Set((duplicateDispositions.groups || []).flatMap((group) => group.duplicateIds || []));
+const canonicalBiases = biases.filter((bias) => !duplicateIds.has(bias.id));
 const taxonomy = JSON.parse(await readFile("data/taxonomy-v2.json", "utf8"));
 const overrides = taxonomy.recordFamilyOverrides || {};
 const byId = new Map(biases.map((bias) => [String(bias.id), bias]));
@@ -18,7 +21,7 @@ for (const [id, contexts] of Object.entries(taxonomy.recordContexts || {})) {
 }
 
 const groups = new Map();
-for (const bias of biases) {
+for (const bias of canonicalBiases) {
   const family = familyFor(bias);
   if (!family) continue;
   if (!groups.has(family)) groups.set(family, []);
@@ -28,10 +31,10 @@ const families = [...groups.entries()].filter(([, records]) => records.length >=
 const publishedFamilySlugs = new Set(families.map(([slug]) => slug));
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
 const explore = await readFile("dist/explore/index.html", "utf8");
-const mappedCount = biases.filter((bias) => familyFor(bias)).length;
+const mappedCount = canonicalBiases.filter((bias) => familyFor(bias)).length;
 
-if (!explore.includes(`${mappedCount} of ${biases.length} published entries now have a reviewed v2 family mapping.`)) {
-  throw new Error("Explore page does not expose the current reviewed family count.");
+if (!explore.includes(`${mappedCount} of ${canonicalBiases.length} canonical entries now have a reviewed v2 family mapping.`)) {
+  throw new Error("Explore page does not expose the current canonical family-mapping count.");
 }
 
 for (const [slug, records] of families) {
@@ -41,6 +44,10 @@ for (const [slug, records] of families) {
   if (!sitemap.includes(`<loc>${SITE}/families/${slug}/</loc>`)) throw new Error(`${slug}: full family hub is missing from sitemap.`);
   for (const bias of records) {
     if (!html.includes(`/biases/${bias.slug}/`)) throw new Error(`${slug}: family hub is missing ${bias.slug}.`);
+  }
+  for (const duplicateId of duplicateIds) {
+    const duplicate = biases.find((bias) => bias.id === duplicateId);
+    if (duplicate && html.includes(`/biases/${duplicate.slug}/`)) throw new Error(`${slug}: family hub still exposes duplicate alias ${duplicate.slug}.`);
   }
 }
 
@@ -53,4 +60,4 @@ for (const id of Object.keys(overrides)) {
   }
 }
 
-console.log(`Record-family override check passed: ${Object.keys(overrides).length} overrides, ${mappedCount} total mapped entries, ${families.length} family hubs.`);
+console.log(`Record-family override check passed: ${Object.keys(overrides).length} overrides, ${mappedCount}/${canonicalBiases.length} canonical entries mapped, ${families.length} family hubs with no alias cards.`);

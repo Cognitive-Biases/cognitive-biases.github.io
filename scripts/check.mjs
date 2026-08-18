@@ -6,6 +6,7 @@ for (const file of required) await access(resolve("dist", file));
 
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
 const taxonomy = JSON.parse(await readFile("data/taxonomy-v2.json", "utf8"));
+const overrides = taxonomy.recordFamilyOverrides || {};
 const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
 const duplicateIds = new Set((duplicateDispositions.groups || []).flatMap((group) => group.duplicateIds || []));
 const canonicalBiases = biases.filter((bias) => !duplicateIds.has(bias.id));
@@ -16,13 +17,13 @@ const categorySlug = (value = "") => String(value)
   .toLowerCase()
   .replace(/[^a-z0-9]+/g, "-")
   .replace(/^-+|-+$/g, "") || "other";
-const familyFor = (bias) => taxonomy.directCategoryFamily[bias.typeOfBias] || null;
+const familyFor = (bias) => overrides[String(bias.id)] || taxonomy.directCategoryFamily[bias.typeOfBias] || null;
 
 const familyGroups = new Map();
-for (const bias of biases) {
+for (const bias of canonicalBiases) {
   const family = familyFor(bias);
   if (!family) continue;
-  if (!taxonomy.families[family]) throw new Error(`${bias.slug}: direct family mapping ${family} has no family definition.`);
+  if (!taxonomy.families[family]) throw new Error(`${bias.slug}: family mapping ${family} has no family definition.`);
   if (!familyGroups.has(family)) familyGroups.set(family, []);
   familyGroups.get(family).push(bias);
 }
@@ -61,7 +62,7 @@ for (const family of publishedFamilies) {
     throw new Error(`${family.slug}: family hub is missing DefinedTermSet structured data.`);
   }
   for (const bias of family.records) {
-    if (!html.includes(`/biases/${bias.slug}/`)) throw new Error(`${family.slug}: family hub is missing ${bias.slug}.`);
+    if (!html.includes(`/biases/${bias.slug}/`)) throw new Error(`${family.slug}: family hub is missing canonical member ${bias.slug}.`);
   }
 }
 
@@ -79,5 +80,5 @@ for (const bias of biases) {
   }
 }
 
-const reviewedFamilyCount = biases.filter((bias) => familyFor(bias)).length;
-console.log(`Static site check passed: ${biases.length} bias pages (${canonicalBiases.length} canonical), ${categories.length} category anchors, ${publishedFamilies.length} family hubs, ${reviewedFamilyCount} direct family mappings, structured data, and sitemap metadata verified.`);
+const reviewedFamilyCount = canonicalBiases.filter((bias) => familyFor(bias)).length;
+console.log(`Static site check passed: ${biases.length} bias pages (${canonicalBiases.length} canonical), ${categories.length} category anchors, ${publishedFamilies.length} canonical family hubs, ${reviewedFamilyCount} canonical family mappings, structured data, and sitemap metadata verified.`);
