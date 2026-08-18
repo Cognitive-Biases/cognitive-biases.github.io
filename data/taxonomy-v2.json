@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "hubMinimumRecords": 3,
+  "families": {
+    "memory-retrieval": {
+      "label": "Memory & retrieval",
+      "description": "Patterns involving encoding, recall, reconstruction, source memory, and forgetting."
+    },
+    "belief-updating": {
+      "label": "Belief updating",
+      "description": "Patterns that shape how evidence, priors, repetition, and existing beliefs change what feels true."
+    },
+    "probability-risk": {
+      "label": "Probability & risk",
+      "description": "Patterns involving uncertainty, probability estimates, base rates, and perceived risk."
+    },
+    "attention-information": {
+      "label": "Attention & information",
+      "description": "Patterns that affect what gets noticed, sampled, searched for, or omitted from consideration."
+    },
+    "perception-patterns": {
+      "label": "Perception & patterns",
+      "description": "Patterns involving perceptual interpretation, agency detection, and seeing structure in ambiguous input."
+    },
+    "valuation-choice": {
+      "label": "Valuation & choice",
+      "description": "Patterns involving framing, reference points, gains and losses, option comparison, and preference construction."
+    },
+    "reasoning-flexibility": {
+      "label": "Reasoning & flexibility",
+      "description": "Patterns involving logical errors, problem representation, rigidity, and fixation on familiar tools or solutions."
+    },
+    "self-metacognition": {
+      "label": "Self & metacognition",
+      "description": "Patterns involving confidence, self-assessment, introspection, and beliefs about one's own thinking."
+    },
+    "social-judgment": {
+      "label": "Social judgment",
+      "description": "Patterns involving attribution, conformity, social inference, and judgments about other people."
+    },
+    "time-commitment": {
+      "label": "Time & commitment",
+      "description": "Patterns involving temporal preference, persistence, escalation, and commitment dynamics."
+    }
+  },
+  "directCategoryFamily": {
+    "Memory Bias": "memory-retrieval",
+    "Conformity Bias": "social-judgment",
+    "Attribution Bias": "social-judgment",
+    "Availability Heuristic": "attention-information",
+    "Logical Fallacy": "reasoning-flexibility",
+    "Confirmation Bias": "belief-updating",
+    "Framing Effect": "valuation-choice",
+    "Self-Assessment": "self-metacognition",
+    "Truth Judgment": "belief-updating",
+    "Apophenia": "perception-patterns",
+    "Cognitive Rigidity": "reasoning-flexibility",
+    "Perception Bias": "perception-patterns",
+    "Self-Assessment Bias": "self-metacognition",
+    "Social Bias": "social-judgment",
+    "Belief Perseverance": "belief-updating",
+    "Metacognitive Bias": "self-metacognition",
+    "Probability Bias": "probability-risk",
+    "Self-Perception Bias": "self-metacognition"
+  }
+}
