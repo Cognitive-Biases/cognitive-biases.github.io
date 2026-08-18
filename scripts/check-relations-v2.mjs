@@ -12,6 +12,9 @@ const evidenceDocs = await Promise.all(evidenceFiles.map(async (name) => JSON.pa
 const reviewedSlugs = new Set(evidenceDocs.flatMap((document) => document.reviews || []).map((review) => review.slug));
 const seen = new Set();
 const endpoints = new Set();
+const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+})[character]);
 
 const actualTypes = Object.keys(config.relationTypes || {}).sort();
 if (JSON.stringify(actualTypes) !== JSON.stringify([...ALLOWED_TYPES].sort())) {
@@ -43,9 +46,7 @@ for (const relation of config.relations || []) {
     if (!html.includes('class="evidence-relations"')) throw new Error(`${source.slug}: evidence-linked concepts section missing.`);
     if (!html.includes(`data-relation-type="${relation.type}"`)) throw new Error(`${source.slug}: relation type ${relation.type} not rendered.`);
     if (!html.includes(`/biases/${target.slug}/#evidence`)) throw new Error(`${source.slug}: reciprocal relation to ${target.slug} missing.`);
-    if (!html.includes(relation.note.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;"))) {
-      throw new Error(`${source.slug}: relation note for ${target.slug} missing from rendered page.`);
-    }
+    if (!html.includes(escapeHtml(relation.note))) throw new Error(`${source.slug}: relation note for ${target.slug} missing from rendered page.`);
   }
 }
 
