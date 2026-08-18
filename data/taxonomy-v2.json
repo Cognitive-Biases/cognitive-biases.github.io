@@ -2,46 +2,152 @@
   "version": 2,
   "hubMinimumRecords": 3,
   "families": {
-    "memory-retrieval": {"label":"Memory & retrieval","description":"Patterns involving encoding, recall, reconstruction, source memory, and forgetting."},
-    "belief-updating": {"label":"Belief updating","description":"Patterns that shape how evidence, priors, repetition, and existing beliefs change what feels true."},
-    "probability-risk": {"label":"Probability & risk","description":"Patterns involving uncertainty, probability estimates, base rates, and perceived risk."},
-    "attention-information": {"label":"Attention & information","description":"Patterns that affect what gets noticed, sampled, searched for, or omitted from consideration."},
-    "perception-patterns": {"label":"Perception & patterns","description":"Patterns involving perceptual interpretation, agency detection, and seeing structure in ambiguous input."},
-    "valuation-choice": {"label":"Valuation & choice","description":"Patterns involving framing, reference points, gains and losses, option comparison, and preference construction."},
-    "reasoning-flexibility": {"label":"Reasoning & flexibility","description":"Patterns involving logical errors, problem representation, rigidity, and fixation on familiar tools or solutions."},
-    "self-metacognition": {"label":"Self & metacognition","description":"Patterns involving confidence, self-assessment, introspection, and beliefs about one's own thinking."},
-    "social-judgment": {"label":"Social judgment","description":"Patterns involving attribution, conformity, social inference, and judgments about other people."},
-    "time-commitment": {"label":"Time & commitment","description":"Patterns involving temporal preference, persistence, escalation, and commitment dynamics."},
-    "future-state-forecasting": {"label":"Future state forecasting","description":"Patterns involving predictions about future feelings, preferences, and behavior when current or imagined states are an imperfect guide to the future state."},
-    "retrospective-evaluation": {"label":"Retrospective evaluation","description":"Patterns where knowing an outcome changes later judgments of predictability, decision quality, blame, or responsibility."},
-    "measurement-methods": {"label":"Measurement & methods","description":"Concepts about measurement, sampling, calibration, estimation, study design, and systematic error rather than one psychological tendency."},
-    "goals-proxies-incentives": {"label":"Goals, proxies & incentives","description":"Patterns where measures, targets, incentives, or proxies can start shaping behavior differently from the underlying objective they were meant to represent."}
+    "memory-retrieval": {
+      "label": "Memory & retrieval",
+      "description": "Patterns involving encoding, recall, reconstruction, source memory, and forgetting."
+    },
+    "belief-updating": {
+      "label": "Belief updating",
+      "description": "Patterns that shape how evidence, priors, repetition, and existing beliefs change what feels true."
+    },
+    "probability-risk": {
+      "label": "Probability & risk",
+      "description": "Patterns involving uncertainty, probability estimates, base rates, and perceived risk."
+    },
+    "attention-information": {
+      "label": "Attention & information",
+      "description": "Patterns that affect what gets noticed, sampled, searched for, or omitted from consideration."
+    },
+    "perception-patterns": {
+      "label": "Perception & patterns",
+      "description": "Patterns involving perceptual interpretation, agency detection, and seeing structure in ambiguous input."
+    },
+    "valuation-choice": {
+      "label": "Valuation & choice",
+      "description": "Patterns involving framing, reference points, gains and losses, option comparison, and preference construction."
+    },
+    "reasoning-flexibility": {
+      "label": "Reasoning & flexibility",
+      "description": "Patterns involving logical errors, problem representation, rigidity, and fixation on familiar tools or solutions."
+    },
+    "self-metacognition": {
+      "label": "Self & metacognition",
+      "description": "Patterns involving confidence, self-assessment, introspection, and beliefs about one's own thinking."
+    },
+    "social-judgment": {
+      "label": "Social judgment",
+      "description": "Patterns involving attribution, conformity, social inference, and judgments about other people."
+    },
+    "time-commitment": {
+      "label": "Time & commitment",
+      "description": "Patterns involving temporal preference, persistence, escalation, and commitment dynamics."
+    },
+    "future-state-forecasting": {
+      "label": "Future state forecasting",
+      "description": "Patterns involving predictions about future feelings, preferences, and behavior when current or imagined states are an imperfect guide to the future state."
+    },
+    "retrospective-evaluation": {
+      "label": "Retrospective evaluation",
+      "description": "Patterns where knowing an outcome changes later judgments of predictability, decision quality, blame, or responsibility."
+    },
+    "measurement-methods": {
+      "label": "Measurement & methods",
+      "description": "Concepts about measurement, sampling, calibration, estimation, study design, and systematic error rather than one psychological tendency."
+    },
+    "goals-proxies-incentives": {
+      "label": "Goals, proxies & incentives",
+      "description": "Patterns where measures, targets, incentives, or proxies can start shaping behavior differently from the underlying objective they were meant to represent."
+    }
   },
   "directCategoryFamily": {
-    "Memory Bias":"memory-retrieval","Conformity Bias":"social-judgment","Attribution Bias":"social-judgment","Availability Heuristic":"attention-information","Logical Fallacy":"reasoning-flexibility","Confirmation Bias":"belief-updating","Framing Effect":"valuation-choice","Self-Assessment":"self-metacognition","Truth Judgment":"belief-updating","Apophenia":"perception-patterns","Cognitive Rigidity":"reasoning-flexibility","Perception Bias":"perception-patterns","Self-Assessment Bias":"self-metacognition","Social Bias":"social-judgment","Belief Perseverance":"belief-updating","Metacognitive Bias":"self-metacognition","Probability Bias":"probability-risk","Self-Perception Bias":"self-metacognition"
+    "Memory Bias": "memory-retrieval",
+    "Conformity Bias": "social-judgment",
+    "Attribution Bias": "social-judgment",
+    "Availability Heuristic": "attention-information",
+    "Logical Fallacy": "reasoning-flexibility",
+    "Confirmation Bias": "belief-updating",
+    "Framing Effect": "valuation-choice",
+    "Self-Assessment": "self-metacognition",
+    "Truth Judgment": "belief-updating",
+    "Apophenia": "perception-patterns",
+    "Cognitive Rigidity": "reasoning-flexibility",
+    "Perception Bias": "perception-patterns",
+    "Self-Assessment Bias": "self-metacognition",
+    "Social Bias": "social-judgment",
+    "Belief Perseverance": "belief-updating",
+    "Metacognitive Bias": "self-metacognition",
+    "Probability Bias": "probability-risk",
+    "Self-Perception Bias": "self-metacognition"
   },
   "recordFamilyOverrides": {
-    "51":"attention-information","64":"time-commitment","76":"valuation-choice","78":"valuation-choice","81":"future-state-forecasting","90":"valuation-choice","91":"reasoning-flexibility","92":"reasoning-flexibility","93":"social-judgment","95":"self-metacognition","96":"probability-risk","97":"social-judgment","98":"social-judgment","99":"memory-retrieval","100":"retrospective-evaluation","101":"future-state-forecasting","102":"attention-information","104":"valuation-choice","105":"social-judgment","106":"valuation-choice","107":"valuation-choice","108":"valuation-choice","109":"probability-risk","110":"attention-information","111":"retrospective-evaluation","112":"probability-risk","113":"time-commitment","114":"attention-information","115":"valuation-choice","116":"probability-risk","117":"belief-updating","118":"future-state-forecasting","119":"perception-patterns","120":"attention-information","121":"measurement-methods","122":"probability-risk","123":"goals-proxies-incentives","124":"perception-patterns","125":"belief-updating","126":"valuation-choice","127":"reasoning-flexibility","128":"perception-patterns","129":"social-judgment","140":"retrospective-evaluation","166":"attention-information","170":"belief-updating","222":"valuation-choice","223":"time-commitment"
+    "51": "attention-information",
+    "64": "time-commitment",
+    "76": "valuation-choice",
+    "78": "valuation-choice",
+    "81": "future-state-forecasting",
+    "90": "valuation-choice",
+    "91": "reasoning-flexibility",
+    "92": "reasoning-flexibility",
+    "93": "social-judgment",
+    "95": "self-metacognition",
+    "96": "probability-risk",
+    "97": "social-judgment",
+    "98": "social-judgment",
+    "99": "memory-retrieval",
+    "100": "retrospective-evaluation",
+    "101": "future-state-forecasting",
+    "102": "attention-information",
+    "104": "valuation-choice",
+    "105": "social-judgment",
+    "106": "valuation-choice",
+    "107": "valuation-choice",
+    "108": "valuation-choice",
+    "109": "probability-risk",
+    "110": "attention-information",
+    "111": "retrospective-evaluation",
+    "112": "probability-risk",
+    "113": "time-commitment",
+    "114": "attention-information",
+    "115": "valuation-choice",
+    "116": "probability-risk",
+    "117": "belief-updating",
+    "118": "future-state-forecasting",
+    "119": "perception-patterns",
+    "120": "attention-information",
+    "121": "measurement-methods",
+    "122": "probability-risk",
+    "123": "goals-proxies-incentives",
+    "124": "perception-patterns",
+    "125": "belief-updating",
+    "126": "valuation-choice",
+    "127": "reasoning-flexibility",
+    "128": "perception-patterns",
+    "129": "social-judgment",
+    "140": "retrospective-evaluation",
+    "166": "attention-information",
+    "170": "belief-updating",
+    "222": "valuation-choice",
+    "223": "time-commitment"
   },
   "recordContexts": {
-    "9":["human-ai-interaction"],
-    "51":["human-ai-interaction"],
-    "58":["defaults-settings-choice-architecture","comparing-plans-pricing"],
-    "64":["work-project-decisions","project-estimation-delivery","continue-change-stop-project"],
-    "76":["presenting-risk-options","continue-change-stop-project"],
-    "78":["defaults-settings-choice-architecture"],
-    "81":["forecasting-future-choices"],
-    "97":["human-robot-interaction","human-ai-interaction"],
-    "100":["work-project-decisions","forecasting-future-choices"],
-    "101":["forecasting-future-choices"],
-    "111":["work-project-decisions","reviewing-kpis-proxy-metrics"],
-    "118":["forecasting-future-choices"],
-    "123":["reviewing-kpis-proxy-metrics"],
-    "140":["work-project-decisions"],
-    "170":["reviewing-kpis-proxy-metrics"],
-    "220":["comparing-plans-pricing"],
-    "222":["human-ai-interaction","project-estimation-delivery","presenting-risk-options","defaults-settings-choice-architecture","comparing-plans-pricing","reviewing-kpis-proxy-metrics"],
-    "223":["work-project-decisions","continue-change-stop-project"],
-    "224":["presenting-risk-options","defaults-settings-choice-architecture","comparing-plans-pricing"]
+    "9": ["human-ai-interaction"],
+    "51": ["human-ai-interaction"],
+    "58": ["defaults-settings-choice-architecture", "comparing-plans-pricing"],
+    "64": ["work-project-decisions", "project-estimation-delivery", "continue-change-stop-project"],
+    "76": ["presenting-risk-options", "continue-change-stop-project"],
+    "78": ["defaults-settings-choice-architecture"],
+    "81": ["forecasting-future-choices"],
+    "97": ["human-robot-interaction", "human-ai-interaction"],
+    "100": ["work-project-decisions", "forecasting-future-choices"],
+    "101": ["forecasting-future-choices"],
+    "111": ["work-project-decisions", "reviewing-kpis-proxy-metrics"],
+    "118": ["forecasting-future-choices"],
+    "123": ["reviewing-kpis-proxy-metrics"],
+    "140": ["work-project-decisions"],
+    "170": ["reviewing-kpis-proxy-metrics"],
+    "220": ["comparing-plans-pricing"],
+    "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing", "reviewing-kpis-proxy-metrics"],
+    "223": ["work-project-decisions", "continue-change-stop-project"],
+    "224": ["presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"]
   }
 }
