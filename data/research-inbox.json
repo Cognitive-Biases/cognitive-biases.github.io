@@ -45,6 +45,28 @@
       "whyItMatters": "Moves cognitive-bias evaluation into repeated operational decisions by LLM agents in inventory management. Useful for the project's agentic decision-making direction.",
       "status": "accepted",
       "result": "Included as provisional evidence in the first AI bias research synthesis."
+    },
+    {
+      "id": "2026-08-18-automation-bias-conceptual-update",
+      "discoveredAt": "2026-08-18",
+      "title": "What is Wrong With Automation Bias?",
+      "url": "https://doi.org/10.1007/s13347-026-01090-9",
+      "sourceType": "peer-reviewed conceptual analysis",
+      "relatedConcepts": ["false-priors-automation-bias", "ai-assisted-decisions"],
+      "whyItMatters": "Clarifies the role of contradictory evidence and distinguishes weaker and stronger forms of inappropriate reliance on automation.",
+      "status": "accepted",
+      "result": "Added as a current conceptual source to the Automation Bias evidence record; evidence status unchanged."
+    },
+    {
+      "id": "2026-08-18-humanlikeness-anthropomorphism-framework",
+      "discoveredAt": "2026-08-18",
+      "title": "Humanlikeness as design, anthropomorphism as inference: a conceptual framework for human–robot interaction",
+      "url": "https://doi.org/10.3389/fcogn.2026.1786256",
+      "sourceType": "peer-reviewed conceptual framework",
+      "relatedConcepts": ["availability-heuristic-anthropomorphism", "human-robot-interaction-form", "ai-assisted-decisions"],
+      "whyItMatters": "Separates humanlike design features from the psychological process of anthropomorphism, which directly supports the distinction used in our AI-assisted decision pages.",
+      "status": "accepted",
+      "result": "Added to Anthropomorphism and Appearance–Capability evidence records; evidence status unchanged."
     }
   ]
 }
