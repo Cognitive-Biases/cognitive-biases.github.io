@@ -13,6 +13,7 @@ const duplicateDisposition = await readJson("data/duplicate-dispositions.json");
 const duplicateIds = new Set((duplicateDisposition.groups || []).flatMap((group) => group.duplicateIds || []));
 const canonicalBiases = biases.filter((item) => !duplicateIds.has(item.id));
 const notes = await readJson("data/research-notes.json");
+const contexts = await readJson("data/contexts.json");
 const evidence = await readJson("dist/data/evidence.json");
 const evidenceBySlug = new Map((evidence.reviews || []).map((review) => [review.slug, review]));
 const noteBySlug = new Map((notes.entries || []).map((note) => [note.slug, note]));
@@ -136,7 +137,7 @@ const dataPath = "/data/";
 const dataFile = join(OUT, "data", "index.html");
 let dataHtml = await readFile(dataFile, "utf8");
 const distributions = [
-  ["Bias library", "biases.json"],
+  ["Concept library", "biases.json"],
   ["Evidence reviews", "evidence.json"],
   ["Decision contexts", "contexts.json"],
   ["Reviewed comparisons", "comparisons.json"],
@@ -179,7 +180,7 @@ const dataGraph = {
       "@type": "WebPage",
       "@id": `${SITE}/data/#webpage`,
       url: `${SITE}/data/`,
-      name: "Data | Cognitive Biases",
+      name: "Cognitive Biases Knowledge Dataset",
       description: datasetDescription,
       isPartOf: { "@id": `${SITE}/#website` },
       mainEntity: { "@id": `${SITE}/data/#dataset` },
@@ -267,6 +268,69 @@ const researchGraph = {
 researchHtml = addSchema(researchHtml, researchGraph, "research-collection");
 await writeFile(researchIndex, researchHtml);
 
+let contextSchemas = 0;
+for (const context of contexts.entries || []) {
+  const path = `/contexts/${context.slug}/`;
+  const file = join(OUT, "contexts", context.slug, "index.html");
+  let html = await readFile(file, "utf8");
+  const about = (context.lenses || [])
+    .filter((lens) => biasBySlug.has(lens.slug))
+    .map((lens) => ({ "@id": `${SITE}/biases/${lens.slug}/#term` }));
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      organisation,
+      website,
+      breadcrumb(path, context.title, "/contexts/", "Decision contexts"),
+      {
+        "@type": "WebPage",
+        "@id": `${SITE}${path}#webpage`,
+        url: `${SITE}${path}`,
+        name: context.title,
+        description: context.summary,
+        isPartOf: { "@id": `${SITE}/#website` },
+        breadcrumb: { "@id": `${SITE}${path}#breadcrumb` },
+        ...(about.length ? { about } : {}),
+        publisher: { "@id": `${SITE}/#organization` },
+        isAccessibleForFree: true
+      }
+    ]
+  };
+  html = addSchema(html, graph, "decision-context");
+  await writeFile(file, html);
+  contextSchemas += 1;
+}
+
+const contextsIndex = join(OUT, "contexts", "index.html");
+let contextsHtml = await readFile(contextsIndex, "utf8");
+const contextsGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    organisation,
+    website,
+    breadcrumb("/contexts/", "Decision contexts", null),
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE}/contexts/#collection`,
+      name: "Decision contexts",
+      url: `${SITE}/contexts/`,
+      description: "Evidence-reviewed starting points for real decisions at work, in forecasting, in project delivery and when using AI.",
+      isPartOf: { "@id": `${SITE}/#website` },
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: (contexts.entries || []).map((context, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: context.title,
+          url: `${SITE}/contexts/${context.slug}/`
+        }))
+      }
+    }
+  ]
+};
+contextsHtml = addSchema(contextsHtml, contextsGraph, "contexts-collection");
+await writeFile(contextsIndex, contextsHtml);
+
 await writeFile(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`SEO structured data applied: ${biasSchemas} canonical DefinedTerm pages, ${researchSchemas} research articles, Dataset metadata, crawl directives and preview controls.`);
+console.log(`SEO structured data applied: ${biasSchemas} canonical DefinedTerm pages, ${researchSchemas} research articles, ${contextSchemas} decision contexts, Dataset metadata, crawl directives and preview controls.`);

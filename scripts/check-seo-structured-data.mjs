@@ -53,6 +53,7 @@ const dataHtml = await readFile(join(OUT, "data", "index.html"), "utf8");
 for (const required of ['data-seo-schema="dataset"','"@type":"Dataset"','"@type":"DataDownload"','"contentUrl":"https://cognitive-biases.github.io/data/biases.json"','"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/"']) {
   if (!dataHtml.includes(required)) throw new Error(`Data page structured metadata is missing: ${required}`);
 }
+if (!dataHtml.includes("Cognitive Biases Knowledge Dataset")) throw new Error("Data page must visibly use the same dataset name as its structured metadata.");
 const downloadCount = (dataHtml.match(/"@type":"DataDownload"/g) || []).length;
 if (downloadCount < 5) throw new Error(`Data page exposes only ${downloadCount} structured distributions.`);
 
@@ -63,10 +64,25 @@ for (const note of notes.entries || []) {
   for (const required of ['data-seo-schema="research-article"','"@type":"Article"','"@type":"BreadcrumbList"','"author":{"@id":"https://cognitive-biases.github.io/#organization"}','"publisher":{"@id":"https://cognitive-biases.github.io/#organization"}']) {
     if (!html.includes(required)) throw new Error(`${note.slug}: missing research Article metadata: ${required}`);
   }
+  const articleCount = (html.match(/"@type":"Article"/g) || []).length;
+  if (articleCount !== 1) throw new Error(`${note.slug}: expected one canonical Article schema, found ${articleCount}.`);
   for (const source of note.sources || []) if (!html.includes(source.url)) throw new Error(`${note.slug}: structured citation missing ${source.url}`);
 }
 
 const researchHtml = await readFile(join(OUT, "research", "index.html"), "utf8");
 if (!researchHtml.includes('data-seo-schema="research-collection"') || !researchHtml.includes('"@type":"CollectionPage"')) throw new Error("Research index needs CollectionPage structured data.");
 
-console.log(`SEO structured-data checks passed: ${canonicalBiases.length} DefinedTerm pages, ${(notes.entries || []).length} research Articles, ${downloadCount} Dataset distributions, ${previewControlled}/${htmlFiles.length} preview-enabled HTML pages.`);
+const contexts = await readJson("data/contexts.json");
+for (const context of contexts.entries || []) {
+  const file = join(OUT, "contexts", context.slug, "index.html");
+  const html = await readFile(file, "utf8");
+  if (!html.includes('data-seo-schema="decision-context"')) throw new Error(`${context.slug}: missing decision-context SEO graph.`);
+  if (!html.includes('"@type":"BreadcrumbList"')) throw new Error(`${context.slug}: context breadcrumb structured data is missing.`);
+  for (const lens of context.lenses || []) {
+    if (!html.includes(`${SITE}/biases/${lens.slug}/#term`)) throw new Error(`${context.slug}: structured about link missing ${lens.slug}.`);
+  }
+}
+const contextsHtml = await readFile(join(OUT, "contexts", "index.html"), "utf8");
+if (!contextsHtml.includes('data-seo-schema="contexts-collection"') || !contextsHtml.includes('"@type":"CollectionPage"')) throw new Error("Contexts index needs CollectionPage structured data.");
+
+console.log(`SEO structured-data checks passed: ${canonicalBiases.length} DefinedTerm pages, ${(notes.entries || []).length} research Articles, ${(contexts.entries || []).length} decision contexts, ${downloadCount} Dataset distributions, ${previewControlled}/${htmlFiles.length} preview-enabled HTML pages.`);
