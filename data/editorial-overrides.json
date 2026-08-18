@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 21,
+      "slug": "confirmation-bias-backfire-effect",
+      "title": "Backfire Effect – when a correction can strengthen a false belief",
+      "description": "The Backfire Effect is a specific outcome in which a correction increases belief in the false claim it was meant to correct. Research suggests this is uncommon: factual corrections usually improve belief accuracy, so disagreement, anger, or refusing to concede is not enough to call something a backfire effect.\n\n🔍 Where’s the trap?\n- Fact-checking – a person argues with a correction, and the disagreement is labelled as backfire without measuring whether belief in the false claim actually increased.\n- Communication – teams avoid correcting misinformation because they assume any correction will make the problem worse.\n- Evaluation – changes in factual belief, source trust, attitude, and behaviour are mixed together even though they are different outcomes.\n\n💡 How to avoid it?\n- Measure the same belief before and after the correction when the distinction matters.\n- Give a clear correction and, when useful, a credible alternative explanation.\n- Separate factual accuracy from emotion, trust, attitude, or behaviour.\n- Check again later because correction effects can weaken over time.",
+      "reason": "The previous quick definition presented backfire as a common tendency. Current correction research finds true backfire to be rare and measurement-sensitive."
+    },
+    {
+      "id": 80,
+      "slug": "self-assessment-dunning",
+      "title": "Dunning–Kruger Effect – when performance and self-assessment can be miscalibrated",
+      "description": "The Dunning–Kruger Effect describes a calibration pattern in which lower performers can overestimate their performance or ability. The popular version – that incompetent people are always very confident while experts underestimate themselves – is too broad. The size and shape of the effect depend on the task, measurement, and statistical method.\n\n🔍 Where’s the trap?\n- Learning – a beginner may feel ready after limited practice because they have not yet seen the full difficulty of the task.\n- Work – confidence is treated as evidence of competence instead of being compared with objective performance.\n- Debate – the Dunning–Kruger label is used as an insult for people we disagree with rather than as a question about calibration.\n\n💡 How to avoid it?\n- Compare confidence with objective feedback or repeated performance data.\n- Track calibration: when you say 70% confident, are you right about 70% of the time?\n- Update self-assessment after specific feedback instead of relying on confidence alone.\n- Do not diagnose another person from one confident statement.",
+      "reason": "The previous copy repeated the internet shorthand that low competence implies high confidence and experts systematically underestimate themselves. The evidence supports a narrower calibration claim with methodological caveats."
+    },
+    {
+      "id": 103,
+      "slug": "cognitive-bias-hungry-judge-effect",
+      "title": "Hungry Judge Effect – a debated link between decision order, breaks, and rulings",
+      "description": "The Hungry Judge Effect is the popular name for a debated finding from an observational study of parole decisions. Favorable rulings were more common early in decision sessions and immediately after food breaks, but the study did not measure hunger and could not separate eating from rest or other time-and-order effects. The causal claim that hunger makes judges harsher is therefore not established.\n\n🔍 Where’s the trap?\n- Headlines – a sequence effect around breaks is retold as proof that hungry judges deny parole.\n- Causality – food, rest, fatigue, case order, workload, and time are treated as if they were the same variable.\n- Generalization – one observational result is stretched into a rule that hunger or tiredness explains harsh decisions in any setting.\n\n💡 How to avoid it?\n- Separate the observed pattern from the proposed mechanism.\n- Measure hunger, fatigue, workload, and case order directly if you want to test those explanations.\n- In repeated high-stakes decisions, audit order effects and break structure without assuming one cause in advance.\n- Prefer replicated causal evidence before turning a memorable study into a general rule.",
+      "reason": "The previous quick definition claimed a general physical-state bias and a direct hunger explanation. The original study was observational and the hunger interpretation remains contested."
+    }
+  ]
+}
