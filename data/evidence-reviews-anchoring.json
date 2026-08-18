@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-anchoring-effect",
+      "evidenceStatus": "well-supported for numerical judgments; strength depends on anchor type and context",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Anchoring is a well-supported effect in which an initial numerical value can pull a later estimate toward it. A 2026 meta-analysis covering 2,601 effect sizes found a large overall effect, but also substantial variation across studies. The effect should not be treated as a rule that every number changes every judgment: incidental anchors, anchors from a different dimension, clearly random values, incentives, and some debiasing conditions were associated with smaller or null effects.",
+      "mechanism": "The original account described people as starting from an anchor and adjusting too little. Later work shows that anchoring is not one simple process. Experiments support insufficient adjustment especially for some self-generated anchors, while externally provided anchors can operate through other judgment processes. The safest summary is therefore behavioral: the starting value can systematically shift the final estimate, while the exact mechanism depends on how the anchor was produced and used.",
+      "practical": "For an important numerical judgment, make an independent estimate before seeing a suggested value when possible. If an anchor is already present, compare against base rates, completed cases, ranges, or several independent estimates rather than adjusting only from that one number. Ask what evidence would justify moving far away from the starting point. Awareness alone is not a guaranteed fix, and a mitigation should be judged by whether it actually improves calibration in the task being used.",
+      "sources": [
+        {
+          "title": "Judgment under Uncertainty: Heuristics and Biases",
+          "year": 1974,
+          "type": "foundational experimental review",
+          "doi": "10.1126/science.185.4157.1124",
+          "url": "https://doi.org/10.1126/science.185.4157.1124"
+        },
+        {
+          "title": "The anchoring-and-adjustment heuristic: why the adjustments are insufficient",
+          "year": 2006,
+          "type": "experimental studies",
+          "doi": "10.1111/j.1467-9280.2006.01704.x",
+          "url": "https://doi.org/10.1111/j.1467-9280.2006.01704.x"
+        },
+        {
+          "title": "Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis",
+          "year": 2026,
+          "type": "meta-analysis",
+          "doi": "10.1287/mnsc.2023.03238",
+          "url": "https://doi.org/10.1287/mnsc.2023.03238"
+        },
+        {
+          "title": "How was my performance? Exploring the role of anchoring bias in AI-assisted decision making",
+          "year": 2025,
+          "type": "controlled experiments with managers",
+          "doi": "10.1016/j.ijinfomgt.2025.102875",
+          "url": "https://doi.org/10.1016/j.ijinfomgt.2025.102875"
+        }
+      ]
+    }
+  ]
+}
