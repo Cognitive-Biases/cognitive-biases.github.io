@@ -4,7 +4,13 @@ import { join } from "node:path";
 const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
 const TODAY = new Date().toISOString().slice(0, 10);
-const paths = ["/research/", "/data/", "/partners/"];
+const researchNotes = JSON.parse(await readFile("data/research-notes.json", "utf8"));
+const paths = [
+  "/research/",
+  "/data/",
+  "/partners/",
+  ...(researchNotes.entries || []).map((note) => `/research/${note.slug}/`)
+];
 
 const sitemapPath = join(OUT, "sitemap.xml");
 let sitemap = await readFile(sitemapPath, "utf8");
@@ -19,4 +25,4 @@ for (const path of paths) {
 }
 
 await writeFile(sitemapPath, sitemap);
-console.log("Added public resource pages to sitemap.");
+console.log(`Added ${paths.length} public resource URLs to sitemap.`);
