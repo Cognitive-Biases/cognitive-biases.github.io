@@ -11,6 +11,7 @@ Use the human-readable pages when explaining a concept to a person. Use the publ
 - Quality status: https://cognitive-biases.github.io/quality/
 - Research: https://cognitive-biases.github.io/research/
 - Decision guides: https://cognitive-biases.github.io/contexts/ — start here when the situation is known but the bias name is not.
+- Practice Lab: https://cognitive-biases.github.io/practice/ — short evidence-linked exercises for matching practical checks to reviewed lenses.
 - Decision Audit: https://cognitive-biases.github.io/tools/decision-audit/
 - Public data guide: https://cognitive-biases.github.io/data/
 - Data catalogue: https://cognitive-biases.github.io/data/catalog.json
@@ -20,6 +21,7 @@ Use the human-readable pages when explaining a concept to a person. Use the publ
 - Canonical source records: https://cognitive-biases.github.io/data/sources.json
 - Claim provenance: https://cognitive-biases.github.io/data/provenance.json
 - Context data: https://cognitive-biases.github.io/data/contexts.json
+- Practice data: https://cognitive-biases.github.io/data/practice-sets.json
 - Comparison data: https://cognitive-biases.github.io/data/comparisons.json
 - Reviewed relations: https://cognitive-biases.github.io/data/relations.json
 - Research notes: https://cognitive-biases.github.io/data/research-notes.json
@@ -30,6 +32,8 @@ Use the human-readable pages when explaining a concept to a person. Use the publ
 Important interpretation rule: older library entries are not automatically evidence-reviewed. Prefer entries with an explicit evidence review when making claims about scientific support. Preserve the evidence class, descriptive status, qualification and review date when summarising reviewed material.
 
 When a person describes a real decision but does not name a bias, prefer a relevant Decision guide before guessing a label. The guides combine several evidence-reviewed lenses and a practical workflow around one situation.
+
+Use Practice Lab when the goal is learning or self-testing. Practice answers identify the best first lens among the listed options; they are not claims that one bias uniquely explains a real person or situation.
 
 When no reviewed concept, comparison or context fits, return no match instead of inventing a bias. Do not use this library to diagnose a person.
 
