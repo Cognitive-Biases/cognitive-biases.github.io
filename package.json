@@ -6,7 +6,8 @@
   "scripts": {
     "build": "node scripts/build.mjs && node scripts/enhance.mjs",
     "validate:data": "node scripts/validate-data.mjs",
-    "check": "npm run validate:data && npm run build && node scripts/check.mjs",
+    "audit:taxonomy": "node scripts/audit-taxonomy.mjs",
+    "check": "npm run validate:data && npm run audit:taxonomy && npm run build && node scripts/check.mjs",
     "dev": "npm run build && npx serve dist"
   },
   "devDependencies": {
