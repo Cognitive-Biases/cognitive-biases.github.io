@@ -9,8 +9,21 @@ const duplicateIds = new Set((duplicates.groups || []).flatMap((group) => group.
 const evidenceFiles = (await readdir("data")).filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name));
 const evidenceDocs = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
 const reviews = evidenceDocs.flatMap((document) => document.reviews || []);
-const eligibleReviews = reviews.filter((review) => review.auditEligible !== false);
-const excludedReviews = reviews.filter((review) => review.auditEligible === false);
+const explicitExclusions = JSON.parse(await readFile("data/audit-exclusions.json", "utf8")).entries || [];
+const reviewedSlugs = new Set(reviews.map((review) => review.slug));
+const explicitSlugs = new Set();
+for (const entry of explicitExclusions) {
+  if (!entry.slug || !entry.reason) throw new Error("Decision Audit exclusion entries require slug and reason.");
+  if (!reviewedSlugs.has(entry.slug)) throw new Error(`${entry.slug}: explicit audit exclusion is not evidence-reviewed.`);
+  if (explicitSlugs.has(entry.slug)) throw new Error(`${entry.slug}: duplicate explicit audit exclusion.`);
+  explicitSlugs.add(entry.slug);
+}
+const excludedSlugs = new Set([
+  ...reviews.filter((review) => review.auditEligible === false).map((review) => review.slug),
+  ...explicitSlugs,
+]);
+const eligibleReviews = reviews.filter((review) => !excludedSlugs.has(review.slug));
+const excludedReviews = reviews.filter((review) => excludedSlugs.has(review.slug));
 const audit = await readFile(resolve("dist", "tools", "decision-audit", "index.html"), "utf8");
 const script = await readFile(resolve("dist", "assets", "decision-audit.js"), "utf8");
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
@@ -51,6 +64,10 @@ for (const review of excludedReviews) {
   if (!biasHtml.includes('class="evidence-review"')) throw new Error(`${review.slug}: audit exclusion must not remove the evidence review itself.`);
 }
 
+for (const entry of explicitExclusions) {
+  if (!excludedSlugs.has(entry.slug)) throw new Error(`${entry.slug}: explicit audit exclusion was not applied.`);
+}
+
 for (const path of ["index.html", "explore/index.html", "evidence/index.html", "compare/index.html", "tools/decision-audit/index.html"]) {
   const html = await readFile(resolve("dist", path), "utf8");
   if (!html.includes('href="/tools/decision-audit/"')) throw new Error(`${path}: primary navigation is missing Audit.`);
@@ -59,4 +76,4 @@ for (const path of ["index.html", "explore/index.html", "evidence/index.html", "
 if (!script.includes("navigator.clipboard.writeText") || !script.includes("localStorage.removeItem")) throw new Error("Decision Audit copy/reset behavior is incomplete.");
 if (!script.includes('new URLSearchParams(location.search).get("bias")')) throw new Error("Decision Audit bias preselection is missing.");
 
-console.log(`Decision Audit check passed: local-only state, ${eligibleReviews.length}/${reviews.length} evidence-reviewed entries eligible as lenses, ${excludedReviews.length} reviewed concepts excluded, reciprocal CTAs, sitemap, schema, navigation, copy/reset, and no network transport verified.`);
+console.log(`Decision Audit check passed: local-only state, ${eligibleReviews.length}/${reviews.length} evidence-reviewed entries eligible as lenses, ${excludedReviews.length} reviewed concepts excluded (${explicitSlugs.size} explicit product exclusions), reciprocal CTAs, sitemap, schema, navigation, copy/reset, and no network transport verified.`);

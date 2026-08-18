@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "hungry-judge-effect-what-study-actually-shows",
+      "title": "Hungry Judge Effect: what the famous study actually shows",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "The famous parole-board study found a strong sequence pattern around food breaks, but it did not measure hunger or randomly manipulate meals. Later critiques and simulations provide plausible alternative explanations for part of the striking result.",
+      "sections": [
+        {
+          "heading": "The original result was a sequence pattern",
+          "paragraphs": [
+            "A 2011 observational study examined repeated parole decisions across daily decision sessions. Favorable rulings were much more common near the start of sessions and became less common later, then rose again after food breaks.",
+            "The pattern was striking and became widely retold as evidence that hungry judges make harsher decisions. That retelling is stronger than the study itself. Hunger, glucose, fatigue and mood were not directly measured, and the breaks combined eating with rest."
+          ]
+        },
+        {
+          "heading": "The authors themselves could not isolate hunger",
+          "paragraphs": [
+            "The original discussion treated mental depletion as one possible interpretation, but explicitly noted that eating and resting happened together and that mood and mental resources were not measured. This means the design could not identify hunger as the causal mechanism.",
+            "The safer claim is that decision outcomes were associated with position within sessions and break structure in this dataset. Moving from that association to a general law about hunger requires evidence the study did not provide."
+          ]
+        },
+        {
+          "heading": "Case ordering became an immediate point of dispute",
+          "paragraphs": [
+            "A 2011 critique argued that cases were not randomly ordered around breaks. Using additional data and interviews, the critics reported that represented and unrepresented prisoners, prison grouping and attorney scheduling could contribute to the within-session pattern.",
+            "The original authors replied with analyses intended to show that representation did not remove the result. The exchange is important because it shows that the causal interpretation was disputed from the beginning rather than being a settled experiment later challenged only by replication concerns."
+          ]
+        },
+        {
+          "heading": "Simulation work provides another alternative",
+          "paragraphs": [
+            "A later simulation analysis showed that some of the dramatic decline can arise when favorable cases tend to take longer and sessions end before cases expected to require more time. Under such conditions, a large order pattern can appear even for a hypothetical rational decision-maker without invoking depletion or hunger.",
+            "The simulation does not prove that every part of the original pattern was an artifact. It does show why the size of the famous graph should not be read directly as the size of a physiological hunger effect."
+          ]
+        },
+        {
+          "heading": "What a useful operational lesson looks like",
+          "paragraphs": [
+            "Repeated high-stakes decisions can still deserve checks for sequence and context effects. A good review records case order, workload, decision duration, break timing, case difficulty, representation and other scheduling variables rather than assigning one cause from the shape of a graph.",
+            "If hunger is the hypothesis, measure hunger or manipulate food independently from rest. If fatigue is the hypothesis, measure fatigue. This sounds less exciting than 'justice depends on lunch', but it is how causal questions stop being slogans."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We keep Hungry Judge Effect because the study and the debate are useful examples of how an observational finding can become a stronger popular story. The canonical page now describes the sequence result first and keeps the uncertain mechanism visible.",
+            "We also exclude this entry from the Decision Audit. It is not a good self-diagnostic lens for a person's current choice; its useful role is as a research case about sequence effects, confounding and causal overreach."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Extraneous factors in judicial decisions","year":2011,"type":"observational study","doi":"10.1073/pnas.1018033108","url":"https://pubmed.ncbi.nlm.nih.gov/21482790/"},
+        {"title":"Overlooked factors in the analysis of parole decisions","year":2011,"type":"data critique and letter","doi":"10.1073/pnas.1110910108","url":"https://pubmed.ncbi.nlm.nih.gov/21987788/"},
+        {"title":"Reply to Weinshall-Margel and Shapard: Extraneous factors in judicial decisions persist","year":2011,"type":"author reply and reanalysis","doi":"10.1073/pnas.1112190108","url":"https://doi.org/10.1073/pnas.1112190108"},
+        {"title":"The irrational hungry judge effect revisited: Simulations reveal that the magnitude of the effect is overestimated","year":2023,"type":"simulation and methodological analysis","url":"https://www.cambridge.org/core/journals/judgment-and-decision-making/article/irrational-hungry-judge-effect-revisited-simulations-reveal-that-the-magnitude-of-the-effect-is-overestimated/61CE825D4DC137675BB9CAD04571AE58"}
+      ],
+      "related": ["cognitive-bias-hungry-judge-effect"]
+    }
+  ]
+}
