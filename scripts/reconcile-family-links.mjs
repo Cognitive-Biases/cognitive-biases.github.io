@@ -32,9 +32,18 @@ for (const bias of biases) {
   const path = join(OUT, "biases", bias.slug, "index.html");
   let html = await readFile(path, "utf8");
   if (html.includes(`href="/families/${familySlug}/"`)) continue;
-  const marker = `<p class="eyebrow">${escapeHtml(bias.typeOfBias)} · Entry`;
-  if (!html.includes(marker)) throw new Error(`${bias.slug}: cannot reconcile family link because the eyebrow marker was not found.`);
-  html = html.replace(marker, `<p class="eyebrow"><a class="taxonomy-link" href="/families/${familySlug}/">${escapeHtml(family.label)}</a> · ${escapeHtml(bias.typeOfBias)} · Entry`);
+
+  const linkedPrefix = `<p class="eyebrow"><a class="taxonomy-link" href="/families/${familySlug}/">${escapeHtml(family.label)}</a> · ${escapeHtml(bias.typeOfBias)} · Entry`;
+  const plainFamilyPrefix = `<p class="eyebrow">${escapeHtml(family.label)} · ${escapeHtml(bias.typeOfBias)} · Entry`;
+  const rawPrefix = `<p class="eyebrow">${escapeHtml(bias.typeOfBias)} · Entry`;
+
+  if (html.includes(plainFamilyPrefix)) {
+    html = html.replace(plainFamilyPrefix, linkedPrefix);
+  } else if (html.includes(rawPrefix)) {
+    html = html.replace(rawPrefix, linkedPrefix);
+  } else {
+    throw new Error(`${bias.slug}: cannot reconcile family link because neither the plain-family nor raw eyebrow marker was found.`);
+  }
   await writeFile(path, html);
   added += 1;
 }
