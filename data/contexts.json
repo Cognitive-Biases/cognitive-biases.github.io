@@ -5,21 +5,8 @@
       "slug": "work-project-decisions",
       "title": "Work & project decisions",
       "summary": "Use these evidence-reviewed lenses when a team is choosing a direction, interpreting results, deciding whether to continue, or turning metrics into action.",
-      "useWhen": [
-        "A project review is being driven by the latest success or failure.",
-        "A team keeps investing because too much has already been spent.",
-        "A KPI is becoming more important than the goal it was meant to represent.",
-        "The team is searching for evidence after already preferring one solution.",
-        "A retrospective is quietly rewriting what was knowable, how good the decision was, or how blameworthy the decision-maker now seems."
-      ],
-      "workflow": [
-        "Freeze the information set: what did the team actually know before the latest outcome?",
-        "Separate decision-process quality from whether the result happened to be good or bad.",
-        "When blame or praise enters the review, separate intention, reasonable belief, controllable risk, causal responsibility, and the eventual outcome.",
-        "Write the next increment of cost and expected value without counting already-spent resources as a future benefit.",
-        "Name the strategic goal behind each important metric and one way the metric could improve while the goal gets worse.",
-        "Specify what evidence would change the preferred plan before gathering another round of supporting evidence."
-      ],
+      "useWhen": ["A project review is being driven by the latest success or failure.","A team keeps investing because too much has already been spent.","A KPI is becoming more important than the goal it was meant to represent.","The team is searching for evidence after already preferring one solution.","A retrospective is quietly rewriting what was knowable, how good the decision was, or how blameworthy the decision-maker now seems."],
+      "workflow": ["Freeze the information set: what did the team actually know before the latest outcome?","Separate decision-process quality from whether the result happened to be good or bad.","When blame or praise enters the review, separate intention, reasonable belief, controllable risk, causal responsibility, and the eventual outcome.","Write the next increment of cost and expected value without counting already-spent resources as a future benefit.","Name the strategic goal behind each important metric and one way the metric could improve while the goal gets worse.","Specify what evidence would change the preferred plan before gathering another round of supporting evidence."],
       "lenses": [
         {"slug":"cognitive-bias-confirmation-bias","question":"What evidence would make us abandon or materially change the preferred explanation?"},
         {"slug":"cognitive-bias-outcome-bias","question":"Would we rate this decision process the same way if the outcome had gone the other direction?"},
@@ -33,20 +20,8 @@
       "slug": "forecasting-future-choices",
       "title": "Forecasting & future choices",
       "summary": "Use these evidence-reviewed lenses when estimating uncertainty, imagining future feelings or preferences, or reviewing forecasts after the outcome is known.",
-      "useWhen": [
-        "A vivid recent example is dominating a probability estimate.",
-        "A broad event looks less likely than the sum of its possible forms.",
-        "A current mood, appetite, pain level, craving, or preference is shaping a long-term commitment.",
-        "A future event is expected to make life dramatically better or worse for a long time.",
-        "The finished outcome now feels much more predictable than it did beforehand."
-      ],
-      "workflow": [
-        "Write the packed event first, then unpack it into mutually exclusive possibilities and compare the totals.",
-        "Check a base rate or reference class before using vivid examples as the probability estimate.",
-        "Record the current state and the future state you are trying to predict; note where motives, cravings, pain, fear, or arousal may differ.",
-        "Forecast emotional intensity and duration separately, including what an ordinary week around the event will contain.",
-        "Store the forecast before the outcome so retrospective learning does not depend on reconstructed memory."
-      ],
+      "useWhen": ["A vivid recent example is dominating a probability estimate.","A broad event looks less likely than the sum of its possible forms.","A current mood, appetite, pain level, craving, or preference is shaping a long-term commitment.","A future event is expected to make life dramatically better or worse for a long time.","The finished outcome now feels much more predictable than it did beforehand."],
+      "workflow": ["Write the packed event first, then unpack it into mutually exclusive possibilities and compare the totals.","Check a base rate or reference class before using vivid examples as the probability estimate.","Record the current state and the future state you are trying to predict; note where motives, cravings, pain, fear, or arousal may differ.","Forecast emotional intensity and duration separately, including what an ordinary week around the event will contain.","Store the forecast before the outcome so retrospective learning does not depend on reconstructed memory."],
       "lenses": [
         {"slug":"probability-bias-subadditivity-effect","question":"Does the total probability change when the same event is unpacked into explicit possibilities?"},
         {"slug":"heuristic-bias-availability-bias","question":"Are the examples easy to recall because they are common, or because they are vivid, recent, or repeated?"},
@@ -60,20 +35,8 @@
       "slug": "ai-assisted-decisions",
       "title": "AI-assisted decisions",
       "summary": "Use these evidence-reviewed lenses when a chatbot, model, recommendation system, or automated decision aid is influencing what you believe or do.",
-      "useWhen": [
-        "You are tempted to accept an AI recommendation without checking the underlying evidence.",
-        "A fluent, warm, or humanlike interface feels more capable or trustworthy than its tested performance justifies.",
-        "The system’s appearance, voice, avatar, or conversational style is shaping what you think it can understand or do.",
-        "You are prompting an AI mainly to strengthen a conclusion you already prefer.",
-        "A claim has appeared in several AI outputs and is starting to feel true because it is familiar."
-      ],
-      "workflow": [
-        "Write a provisional judgment, success criterion, or uncertainty range before looking at AI advice when the decision is consequential.",
-        "Separate the interface from the capability: list what the system actually needs to know, access, or verify to support the recommendation.",
-        "Ask for the strongest counterevidence or alternative explanation, then verify important claims against an independent source rather than another generated paraphrase.",
-        "Treat repeated wording as repetition, not independent evidence; trace important claims back to primary or genuinely independent sources.",
-        "Record what changed after using AI, what was independently checked, and what trigger would make you reopen the decision."
-      ],
+      "useWhen": ["You are tempted to accept an AI recommendation without checking the underlying evidence.","A fluent, warm, or humanlike interface feels more capable or trustworthy than its tested performance justifies.","The system’s appearance, voice, avatar, or conversational style is shaping what you think it can understand or do.","You are prompting an AI mainly to strengthen a conclusion you already prefer.","A claim has appeared in several AI outputs and is starting to feel true because it is familiar."],
+      "workflow": ["Write a provisional judgment, success criterion, or uncertainty range before looking at AI advice when the decision is consequential.","Separate the interface from the capability: list what the system actually needs to know, access, or verify to support the recommendation.","Ask for the strongest counterevidence or alternative explanation, then verify important claims against an independent source rather than another generated paraphrase.","Treat repeated wording as repetition, not independent evidence; trace important claims back to primary or genuinely independent sources.","Record what changed after using AI, what was independently checked, and what trigger would make you reopen the decision."],
       "lenses": [
         {"slug":"false-priors-automation-bias","question":"Am I using the automated recommendation as a substitute for checking the evidence I could realistically verify?"},
         {"slug":"availability-heuristic-anthropomorphism","question":"Which humanlike cues are making me infer understanding, intention, empathy, or competence that I have not actually tested?"},
@@ -86,26 +49,40 @@
       "slug": "project-estimation-delivery",
       "title": "Project estimation & delivery",
       "summary": "Use these evidence-reviewed lenses when setting a deadline, estimating effort, discussing delivery risk, or learning from a project that finished later than expected.",
-      "useWhen": [
-        "A deadline is being built from a detailed plan without checking how long similar work actually took.",
-        "A team is debating one precise date even though important dependencies and unknowns remain.",
-        "A project is already late and the new estimate is again starting from the ideal plan.",
-        "Delivery risk is discussed as one broad feeling instead of explicit ways the plan could slip.",
-        "After delivery, the final outcome is changing what people remember about the original estimate."
-      ],
-      "workflow": [
-        "Start with comparable completed work. Write down what similar tasks actually took before refining the current plan.",
-        "Give a useful range and explain what would push delivery toward the earlier or later end.",
-        "Unpack the main ways the plan can slip instead of hiding all uncertainty inside one confidence number.",
-        "Record the estimate, assumptions and important unknowns before work starts so the later review has a real baseline.",
-        "When the plan changes, judge the next step on future cost and value rather than on how much has already been spent."
-      ],
+      "useWhen": ["A deadline is being built from a detailed plan without checking how long similar work actually took.","A team is debating one precise date even though important dependencies and unknowns remain.","A project is already late and the new estimate is again starting from the ideal plan.","Delivery risk is discussed as one broad feeling instead of explicit ways the plan could slip.","After delivery, the final outcome is changing what people remember about the original estimate."],
+      "workflow": ["Start with comparable completed work. Write down what similar tasks actually took before refining the current plan.","Give a useful range and explain what would push delivery toward the earlier or later end.","Unpack the main ways the plan can slip instead of hiding all uncertainty inside one confidence number.","Record the estimate, assumptions and important unknowns before work starts so the later review has a real baseline.","When the plan changes, judge the next step on future cost and value rather than on how much has already been spent."],
       "lenses": [
         {"slug":"egocentric-bias-planning-fallacy","question":"What happened on the most comparable completed work, and why should this case be faster or slower?"},
         {"slug":"probability-bias-subadditivity-effect","question":"Does the risk estimate change when we unpack the main ways the project could be delayed?"},
         {"slug":"heuristic-bias-availability-bias","question":"Are we using a vivid recent project as the baseline because it is representative, or simply because it is easy to remember?"},
         {"slug":"cognitive-bias-hindsight-bias","question":"What did the original estimate and assumptions actually say before we knew the delivery result?"},
         {"slug":"logical-fallacy-escalation-of-commitment","question":"If we were deciding only about the remaining work today, would we still choose the same next step?"}
+      ]
+    },
+    {
+      "slug": "checking-claims-misinformation",
+      "title": "Checking claims & misinformation",
+      "summary": "Use these evidence-reviewed lenses when deciding whether a repeated claim is trustworthy, checking a correction, or updating a decision after information turns out to be wrong.",
+      "useWhen": [
+        "A claim feels credible because you have seen it in many places, but those places may be repeating the same source.",
+        "You are searching mainly for evidence that supports a conclusion you already prefer.",
+        "One vivid example is shaping your judgment more than broader evidence.",
+        "A false claim has been corrected, but the old explanation still appears in later reasoning.",
+        "Someone resists a correction and the reaction is immediately described as a backfire effect."
+      ],
+      "workflow": [
+        "Write the exact claim you are checking. Separate the claim itself from your opinion about the person or source sharing it.",
+        "Trace repeated versions back to genuinely independent sources. Ten repetitions of one source are still one source.",
+        "Look deliberately for the strongest evidence that could make the claim weaker or wrong, not only for material that supports it.",
+        "If a correction is needed, state the corrected information clearly and provide the best supported alternative explanation when one is available.",
+        "After a correction, distinguish incomplete updating from backfire. Ask whether belief in the false claim actually became stronger or whether some influence simply remained."
+      ],
+      "lenses": [
+        {"slug":"cognitive-bias-confirmation-bias","question":"Am I using the same evidence standard for information that supports and challenges the claim?"},
+        {"slug":"truth-judgment-illusory-truth-effect","question":"Does this feel true because it was independently verified, or because I have encountered the same claim repeatedly?"},
+        {"slug":"heuristic-bias-availability-bias","question":"Is the example easy to recall because it is representative, or because it is vivid, recent, emotional, or repeated?"},
+        {"slug":"memory-bias-continued-influence-effect","question":"After the correction, am I still using part of the old information when explaining or judging the situation?"},
+        {"slug":"confirmation-bias-backfire-effect","question":"Did belief in the corrected false claim actually become stronger, or am I calling disagreement or incomplete updating a backfire?"}
       ]
     }
   ]

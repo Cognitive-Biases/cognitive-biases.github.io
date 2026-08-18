@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "memory-bias-continued-influence-effect",
+      "evidenceStatus": "well-established persistence after correction; corrections usually still help",
+      "reviewedAt": "2026-08-18",
+      "qualification": "The continued influence effect describes a specific pattern: false or outdated information can keep affecting later reasoning even after a clear correction. It does not mean the correction had no effect, that the person rejected the correction, or that belief in the false claim became stronger. Corrections often reduce misinformation reliance without removing it completely. That distinction matters because continued influence is much broader than the rarer backfire outcome.",
+      "mechanism": "Research does not support one single explanation for every continued-influence result. Accounts include difficulty updating a mental model once misinformation has filled an explanatory role, retrieval competition between the original information and the correction, familiarity, source memory, and changes in how the original source is judged. Recent reviews therefore treat continued influence as a family of updating and retrieval problems rather than one simple memory failure.",
+      "practical": "Correct important misinformation clearly rather than leaving it unchallenged. When the false claim explained an event, provide a credible alternative explanation when one is available. Detailed corrections and repetition can help in many settings, and current evidence gives little reason to avoid a correction simply because it repeats the false claim. Keep the corrected information easy to find and measure the same belief or inference again when the distinction matters. Do not label disagreement, distrust, or incomplete updating as a backfire effect unless the targeted false belief actually becomes stronger.",
+      "sources": [
+        {
+          "title": "Misinformation and Its Correction: Continued Influence and Successful Debiasing",
+          "year": 2012,
+          "type": "research review",
+          "doi": "10.1177/1529100612451018",
+          "url": "https://doi.org/10.1177/1529100612451018"
+        },
+        {
+          "title": "Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation",
+          "year": 2017,
+          "type": "meta-analysis",
+          "doi": "10.1177/0956797617714579",
+          "url": "https://doi.org/10.1177/0956797617714579"
+        },
+        {
+          "title": "The psychological drivers of misinformation belief and its resistance to correction",
+          "year": 2022,
+          "type": "research review",
+          "doi": "10.1038/s44159-021-00006-y",
+          "url": "https://doi.org/10.1038/s44159-021-00006-y"
+        },
+        {
+          "title": "Effective correction of misinformation",
+          "year": 2023,
+          "type": "research review",
+          "doi": "10.1016/j.copsyc.2023.101712",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101712"
+        },
+        {
+          "title": "Factual corrections: Concerns and current evidence",
+          "year": 2024,
+          "type": "research review",
+          "doi": "10.1016/j.copsyc.2023.101715",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101715"
+        }
+      ]
+    }
+  ]
+}
