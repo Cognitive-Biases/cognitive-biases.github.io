@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "why-the-past-can-look-better-than-it-was",
+      "title": "Why the past can look better than it was",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Several different processes can make past periods look better from the present, but they should not be collapsed into one universal bias. Event recollection, changing emotional intensity, exposure to current negative information, and real historical trends need separate evidence.",
+      "sections": [
+        {
+          "heading": "There is no single 'past was better' mechanism",
+          "paragraphs": [
+            "Declinism is useful here as an umbrella label, not as one standardized psychological mechanism. A claim that a city, profession, institution, technology, or society has declined can be true, false, or mixed depending on the indicator and time window.",
+            "The safer approach is to identify the narrower process that might be affecting the comparison and then test the historical claim with evidence collected as close as possible to the periods being compared."
+          ]
+        },
+        {
+          "heading": "Specific experiences can become rosier in memory",
+          "paragraphs": [
+            "Mitchell and colleagues followed three meaningful events and compared anticipation, experience, and later recollection. In all three, later recollection was more positive than the experience recorded during the event.",
+            "That finding supports Rosy Retrospection for event memory. It does not establish that every remembered decade, workplace, relationship, or cultural period was worse than people remember. Moving from an event-memory result to a historical trend claim requires different evidence."
+          ]
+        },
+        {
+          "heading": "Negative emotional intensity can fade faster",
+          "paragraphs": [
+            "Fading Affect Bias research finds an average asymmetry in autobiographical memory: negative affect tends to weaken faster than positive affect. A 2014 research review describes a long history of this pattern, and a 2025 study found it again in a large set of autobiographical memories using both calculated and subjectively reported affect change.",
+            "This concerns emotional intensity associated with memories. It should not be rewritten as a rule that factual details become positive or that every painful event stops feeling painful."
+          ]
+        },
+        {
+          "heading": "Moral decline is a narrower and unusually well-tested case",
+          "paragraphs": [
+            "Mastroianni and Gilbert combined archival and original data and found a widespread perception that morality has declined, while repeated reports of the current morality of contemporaries were broadly stable. Their proposed account combines disproportionate exposure to negative information about current people with memory processes that reduce the force of negative information about the past.",
+            "An independent 2024 replication of Study 5b reported the same key pattern: perceived moral decline during participants' lifetimes but not across periods before they were born. This strengthens that specific finding, not every possible claim about social decline."
+          ]
+        },
+        {
+          "heading": "The practical test is historical, not rhetorical",
+          "paragraphs": [
+            "Before deciding that something really declined, define the variable, population, place, and comparison years. Then look for measures collected during both periods. If the evidence is only autobiographical memory, label it as memory evidence rather than a population trend.",
+            "The goal is not to defend the present. It is to make criticism testable. Some indicators may genuinely worsen while others improve, and a mixed result is often more informative than forcing the whole period into 'better' or 'worse'."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Temporal Adjustments in the Evaluation of Events: The Rosy View","year":1997,"type":"three event-evaluation studies","doi":"10.1006/jesp.1997.1333","url":"https://pubmed.ncbi.nlm.nih.gov/9247371/"},
+        {"title":"The Fading Affect Bias: Its History, Its Implications, and Its Future","year":2014,"type":"research review","doi":"10.1016/B978-0-12-800052-6.00003-2","url":"https://doi.org/10.1016/B978-0-12-800052-6.00003-2"},
+        {"title":"Evidence for a fading affect bias in subjectively assessed affect changes in autobiographical memory","year":2025,"type":"large-sample autobiographical-memory study","doi":"10.3389/fpsyg.2025.1608751","url":"https://pubmed.ncbi.nlm.nih.gov/40792093/"},
+        {"title":"The illusion of moral decline","year":2023,"type":"archival analysis + multi-study experiments","doi":"10.1038/s41586-023-06137-x","url":"https://www.nature.com/articles/s41586-023-06137-x"},
+        {"title":"Replication of a study from The illusion of moral decline","year":2024,"type":"independent replication report / preprint","doi":"10.31234/osf.io/32xvw","url":"https://replications.clearerthinking.org/replication-2023nature618/"}
+      ],
+      "related": ["cognitive-bias-declinism", "memory-bias-rosy-retrospection", "memory-bias-fading-affect-bias"]
+    }
+  ]
+}
