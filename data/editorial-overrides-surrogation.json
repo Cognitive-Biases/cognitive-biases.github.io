@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 123,
+      "slug": "cognitive-bias-surrogation",
+      "previousTitle": "Surrogation – when the metric becomes more important than the goal",
+      "title": "Surrogation – when a performance measure starts replacing the goal",
+      "description": "Surrogation is a management-accounting construct in which a performance measure starts to be treated as though it were the strategic objective it was meant to represent. A KPI can be useful and still capture only part of the underlying goal. The problem begins when improving the number becomes evidence, by itself, that the real objective improved.\n\nWhere can it show up?\n- KPI reviews: a team celebrates a stronger score without checking whether customer value, quality, safety, learning, or another underlying objective improved.\n- Incentives: people change operational decisions to improve a rewarded measure even when important unmeasured dimensions get worse.\n- AI and analytics: a benchmark, model score, dashboard metric, or automated rating becomes the thing being optimized instead of a proxy that still needs validation against the real objective.\n\nA better check\n- Write the underlying objective before discussing the metric.\n- State what the measure captures and at least one important dimension it misses.\n- Ask what action could improve the number while making the real objective worse.\n- Use companion measures, validation evidence, or a short narrative explanation when one score cannot represent the whole construct.\n- Do not treat Surrogation as a synonym for every metric problem. The research is specifically about replacing a construct with its performance measure in strategic performance systems.",
+      "reason": "The legacy page generalized Surrogation into a broad slogan about chasing numbers. The research supports a narrower management-accounting construct: treating a performance measure as though it were the strategic construct it was designed to represent."
+    }
+  ]
+}
