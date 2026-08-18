@@ -57,6 +57,10 @@
     "goals-proxies-incentives": {
       "label": "Goals, proxies & incentives",
       "description": "Patterns where measures, targets, incentives, or proxies can start shaping behavior differently from the underlying objective they were meant to represent."
+    },
+    "past-present-comparison": {
+      "label": "Past & present comparison",
+      "description": "Patterns that can shape comparisons between remembered past experiences, current experience, and broad judgments of change over time."
     }
   },
   "directCategoryFamily": {
@@ -89,6 +93,7 @@
     "91": "reasoning-flexibility",
     "92": "reasoning-flexibility",
     "93": "social-judgment",
+    "94": "past-present-comparison",
     "95": "self-metacognition",
     "96": "probability-risk",
     "97": "social-judgment",
@@ -126,6 +131,8 @@
     "140": "retrospective-evaluation",
     "166": "attention-information",
     "170": "belief-updating",
+    "178": "past-present-comparison",
+    "204": "past-present-comparison",
     "222": "valuation-choice",
     "223": "time-commitment"
   },
@@ -137,6 +144,7 @@
     "76": ["presenting-risk-options", "continue-change-stop-project"],
     "78": ["defaults-settings-choice-architecture"],
     "81": ["forecasting-future-choices"],
+    "94": ["comparing-past-present"],
     "97": ["human-robot-interaction", "human-ai-interaction"],
     "100": ["work-project-decisions", "forecasting-future-choices"],
     "101": ["forecasting-future-choices"],
@@ -145,6 +153,8 @@
     "123": ["reviewing-kpis-proxy-metrics"],
     "140": ["work-project-decisions"],
     "170": ["reviewing-kpis-proxy-metrics"],
+    "178": ["comparing-past-present"],
+    "204": ["comparing-past-present"],
     "220": ["comparing-plans-pricing"],
     "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing", "reviewing-kpis-proxy-metrics"],
     "223": ["work-project-decisions", "continue-change-stop-project"],
