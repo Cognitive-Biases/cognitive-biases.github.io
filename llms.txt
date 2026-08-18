@@ -1,9 +1,27 @@
 # Cognitive Biases
 
-> An educational mobile app and public reference for recognizing cognitive biases, understanding how they influence judgment, and trying practical countermeasures.
+> A public knowledge library about cognitive biases, evidence and decision making.
+
+Use the human-readable pages when explaining a concept to a person. Use the public data files when a structured record is more useful.
 
 - Canonical website: https://cognitive-biases.github.io/
 - Bias library: https://cognitive-biases.github.io/explore/
-- Data source: /data/biases.json in the public repository.
-- Scope: definitions, plain-language examples, and practical reflection prompts. This is educational information, not medical, legal, financial, or mental-health advice.
-- Publisher contact: metalhatscats@gmail.com
+- Evidence reviews: https://cognitive-biases.github.io/evidence/
+- Research: https://cognitive-biases.github.io/research/
+- Decision contexts: https://cognitive-biases.github.io/contexts/
+- Decision Audit: https://cognitive-biases.github.io/tools/decision-audit/
+- Public data guide: https://cognitive-biases.github.io/data/
+- Bias data: https://cognitive-biases.github.io/data/biases.json
+- Consolidated evidence data: https://cognitive-biases.github.io/data/evidence.json
+- Context data: https://cognitive-biases.github.io/data/contexts.json
+- Comparison data: https://cognitive-biases.github.io/data/comparisons.json
+- Research notes: https://cognitive-biases.github.io/data/research-notes.json
+- Release information: https://cognitive-biases.github.io/data/manifest.json
+
+Important interpretation rule: older library entries are not automatically evidence-reviewed. Prefer entries with an explicit evidence review when making claims about scientific support. Preserve qualifications and uncertainty when summarising reviewed material.
+
+Scope: educational information about judgment and decision making. This is not medical, legal, financial or mental-health advice.
+
+Licence: CC BY-NC-SA 4.0 for the current public content. Check the repository licence before reuse.
+
+Publisher contact: metalhatscats@gmail.com

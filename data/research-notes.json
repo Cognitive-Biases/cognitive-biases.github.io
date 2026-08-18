@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "llm-cognitive-biases-what-recent-research-shows",
+      "title": "Cognitive bias in LLMs: what recent research actually shows",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Recent studies make a stronger case that LLM outputs can show repeatable decision patterns that resemble named cognitive biases. They also show why we should be careful with the label: the effects depend on the task, model, prompt and conversational context, and a debiasing prompt that helps one kind of task can hurt another.",
+      "sections": [
+        {
+          "heading": "What changed",
+          "paragraphs": [
+            "The discussion has moved beyond isolated demonstrations. A 2025 study tested 30 cognitive biases across 20 large language models using 30,000 generated tests and found evidence for every tested bias in at least some models. That does not mean every model showed every bias, or that the models share the human psychological mechanism behind the label. It does show that these patterns can be measured at a much larger scale than a few hand-picked prompts.",
+            "Newer work is also testing when the patterns appear. A 2026 preprint found that biased reasoning in an earlier user turn increased later bias expression in six of eight tested models compared with a zero-shot baseline. Another 2026 benchmark reported that prompt-level debiasing helped some families of bias but made judgment biases worse in its tested models."
+          ]
+        },
+        {
+          "heading": "Why agent behaviour matters",
+          "paragraphs": [
+            "The next step is moving from one-off answers to agents that make a series of operational decisions. AIM-Bench, a 2025 preprint, evaluates LLM agents acting as inventory managers under uncertainty and reports decision patterns such as framing and pull-to-centre effects. This is useful because an agent can turn a small decision tendency into repeated actions over time.",
+            "For this project, that makes AI-assisted decision making a better research focus than a simple list of biases supposedly found in chatbots. The practical question is not whether an AI can be given a human bias label. It is whether a repeatable decision pattern appears, under what conditions, and what a person should verify before relying on the output."
+          ]
+        },
+        {
+          "heading": "What we should not claim",
+          "paragraphs": [
+            "We should not say that LLMs think like humans because they produce behaviour that fits the same experimental label. Similar output patterns can come from very different mechanisms.",
+            "We should also avoid a single score for how biased a model is. The studies we reviewed use different tasks and definitions, and the results change with model family, task complexity and prompt context. Several of the most interesting 2026 results are still preprints, so they belong in a research watch rather than in a settled textbook claim."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We will keep a separate AI-assisted decisions context and connect research to concrete lenses such as automation bias, confirmation bias, anthropomorphism and repeated-information effects. We will also track LLM-specific benchmark results without pretending that every benchmark maps cleanly onto the human construct with the same name.",
+            "When a new study arrives, the useful update may be a narrower qualification, a new decision context or no change at all. Recency alone is not evidence."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "A Comprehensive Evaluation of Cognitive Biases in LLMs",
+          "year": 2025,
+          "type": "peer-reviewed conference paper",
+          "doi": "10.18653/v1/2025.nlp4dh-1.50",
+          "url": "https://aclanthology.org/2025.nlp4dh-1.50/"
+        },
+        {
+          "title": "CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models",
+          "year": 2026,
+          "type": "preprint",
+          "url": "https://arxiv.org/abs/2604.01366"
+        },
+        {
+          "title": "Conditional Cognitive Biases in LLMs: How Biased User Turns Modulate In-Context Reasoning",
+          "year": 2026,
+          "type": "preprint",
+          "url": "https://arxiv.org/abs/2608.05166"
+        },
+        {
+          "title": "AIM-Bench: Evaluating Decision-making Biases of Agentic LLM as Inventory Manager",
+          "year": 2025,
+          "type": "preprint",
+          "url": "https://arxiv.org/abs/2508.11416"
+        }
+      ],
+      "related": [
+        "false-priors-automation-bias",
+        "cognitive-bias-confirmation-bias",
+        "availability-heuristic-anthropomorphism",
+        "truth-judgment-illusory-truth-effect"
+      ]
+    }
+  ]
+}
