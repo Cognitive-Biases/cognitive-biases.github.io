@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "curse-of-knowledge-vs-dunning-kruger-effect",
+      "leftSlug": "cognitive-bias-curse-of-knowledge",
+      "rightSlug": "self-assessment-dunning",
+      "reviewedAt": "2026-08-18",
+      "title": "Curse of Knowledge vs Dunning–Kruger Effect",
+      "summary": "Both are often discussed around expertise, but they concern different judgments. Curse of Knowledge is about estimating another person's knowledge after you already know something. Dunning–Kruger research is about calibration between a person's own performance and their self-assessment.",
+      "keyDifference": "Ask whose knowledge is being judged: another person's perspective, or your own performance relative to your self-assessment?",
+      "dimensions": [
+        {"dimension":"Target of judgment","left":"What does another person know, understand, notice, or predict?","right":"How well did I perform, compared with how well I think I performed?"},
+        {"dimension":"Role of expertise","left":"Your own knowledge can contaminate estimates of a less-informed person's perspective.","right":"Lower performers can be more miscalibrated in some tasks, but expertise level alone does not diagnose the effect."},
+        {"dimension":"Typical mistake","left":"An expert assumes a missing step or fact is obvious because it is already accessible to the expert.","right":"A person predicts or reports performance that does not line up with an objective measure."},
+        {"dimension":"Best check","left":"Ask the other person to paraphrase, predict, or perform the task and use their errors as perspective feedback.","right":"Record confidence or predicted performance before feedback and compare it with an objective result across repeated attempts."}
+      ],
+      "diagnostic": [
+        "Name the judgment first: are you estimating somebody else's understanding, or evaluating your own performance?",
+        "For another person's understanding, remove hidden prerequisites and ask them to explain or act without hints. Mismatches point toward a perspective-taking problem.",
+        "For self-assessment, record the predicted score or performance before feedback and compare it with an objective measure.",
+        "Do not use either label as a personality diagnosis. Both effects depend on tasks, information and measurement."
+      ],
+      "examples": [
+        {"title":"Technical onboarding","left":"A senior engineer omits a deployment prerequisite because everyone on the old team already knows it, then overestimates how clear the guide will be to a new hire.","right":"A new engineer predicts near-perfect performance on a deployment exercise but repeatedly misses important steps on an objective test."},
+        {"title":"Training","left":"An instructor uses unexplained terminology and believes the lesson is straightforward because the concepts are fluent to the instructor.","right":"A learner rates their mastery much higher than the results of a practical assessment support."},
+        {"title":"Project handoff","left":"The outgoing team assumes the incoming team knows why a workaround exists because the history feels obvious to the people who lived through it.","right":"A team estimates its own readiness to operate the system much higher than a realistic incident drill later shows."}
+      ],
+      "reviewProtocol": [
+        "Separate other-perspective judgments from self-performance judgments before choosing a label.",
+        "For Curse of Knowledge, collect evidence from the less-informed person's actual explanation, prediction or action.",
+        "For Dunning–Kruger questions, use objective performance and a pre-feedback self-assessment rather than confidence alone.",
+        "Repeat the measurement across tasks or attempts before treating one mismatch as a stable tendency.",
+        "Use the result to improve communication or calibration, not to attach a flattering or insulting identity label."
+      ],
+      "sources": [
+        {"title":"The Curse of Knowledge in Economic Settings: An Experimental Analysis","year":1989,"doi":"10.1086/261651","url":"https://doi.org/10.1086/261651"},
+        {"title":"Unskilled and unaware of it: how difficulties in recognizing one's own incompetence lead to inflated self-assessments","year":1999,"doi":"10.1037/0022-3514.77.6.1121","url":"https://pubmed.ncbi.nlm.nih.gov/10626367/"},
+        {"title":"A 'curse of knowledge' in the absence of knowledge? People misattribute fluency when judging how common knowledge is among their peers","year":2017,"doi":"10.1016/j.cognition.2017.04.015","url":"https://pubmed.ncbi.nlm.nih.gov/28641221/"},
+        {"title":"Lifting the curse of knowing: How feedback improves perspective-taking","year":2021,"doi":"10.1177/1747021820987080","url":"https://pubmed.ncbi.nlm.nih.gov/33427086/"},
+        {"title":"Reevaluating the Dunning-Kruger effect: A response to and replication of Gignac and Zajenkowski (2020)","year":2023,"doi":"10.1016/j.intell.2022.101717","url":"https://doi.org/10.1016/j.intell.2022.101717"}
+      ]
+    }
+  ]
+}
