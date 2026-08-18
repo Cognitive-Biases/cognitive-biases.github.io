@@ -64,11 +64,24 @@ for (const bias of biases.filter((item) => overrides[String(item.id)])) {
   let html = await readFile(path, "utf8");
   const familySlug = familyFor(bias);
   const family = taxonomy.families[familySlug];
-  const oldEyebrow = `<p class="eyebrow">${escapeHtml(bias.typeOfBias)} · Entry`;
   const familyLabel = publishedFamilySlugs.has(familySlug)
     ? `<a class="taxonomy-link" href="/families/${familySlug}/">${escapeHtml(family.label)}</a>`
     : escapeHtml(family.label);
-  if (html.includes(oldEyebrow)) html = html.replace(oldEyebrow, `<p class="eyebrow">${familyLabel} · ${escapeHtml(bias.typeOfBias)} · Entry`);
+  const targetPrefix = `<p class="eyebrow">${familyLabel} · ${escapeHtml(bias.typeOfBias)} · Entry`;
+  if (!html.includes(`href="/families/${familySlug}/"`) && !html.includes(targetPrefix)) {
+    const directFamilySlug = taxonomy.directCategoryFamily[bias.typeOfBias] || null;
+    const directFamily = directFamilySlug ? taxonomy.families[directFamilySlug] : null;
+    const candidates = [
+      `<p class="eyebrow">${escapeHtml(bias.typeOfBias)} · Entry`,
+      directFamily ? `<p class="eyebrow">${escapeHtml(directFamily.label)} · ${escapeHtml(bias.typeOfBias)} · Entry` : null,
+      directFamily ? `<p class="eyebrow"><a class="taxonomy-link" href="/families/${directFamilySlug}/">${escapeHtml(directFamily.label)}</a> · ${escapeHtml(bias.typeOfBias)} · Entry` : null,
+    ].filter(Boolean);
+    const matched = candidates.find((candidate) => html.includes(candidate));
+    if (!matched) {
+      throw new Error(`${bias.slug}: cannot apply reviewed family override ${familySlug}; no raw or inherited-family eyebrow state matched.`);
+    }
+    html = html.replace(matched, targetPrefix);
+  }
   await writeFile(path, html);
 }
 
