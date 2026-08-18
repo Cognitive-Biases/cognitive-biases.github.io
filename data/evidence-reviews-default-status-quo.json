@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "framing-effect-default-effect",
+      "evidenceStatus": "well supported, highly context-dependent",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Pre-selecting an option often increases the chance that people choose it, but the size of the default effect varies greatly across domains and designs. A 2019 meta-analysis of 58 studies found a substantial average effect together with strong heterogeneity, including some studies with little or even reversed effects. Staying with a default should therefore not be treated as a direct measure of strong preference or as proof that the default improved welfare.",
+      "mechanism": "There is no single mechanism behind every default effect. Research points to several routes: changing the option can require effort or attention; a default can signal what the choice architect recommends; and a pre-selected option can feel like the existing or endowed state. These routes can overlap, and their importance changes with the decision and the interface.",
+      "practical": "Make consequential defaults visible, easy to change and easy to understand. Compare default designs with active choice when practical, and measure whether the resulting choice still serves the user's goals rather than inferring preference from uptake alone. Treat a default as a design decision that needs testing, not as a universal behavioural lever.",
+      "sources": [
+        {
+          "title": "Recommendations Implicit in Policy Defaults",
+          "year": 2006,
+          "type": "experiments",
+          "doi": "10.1111/j.1467-9280.2006.01721.x",
+          "url": "https://doi.org/10.1111/j.1467-9280.2006.01721.x"
+        },
+        {
+          "title": "When and why defaults influence decisions: a meta-analysis of default effects",
+          "year": 2019,
+          "type": "meta-analysis",
+          "doi": "10.1017/bpp.2018.43",
+          "url": "https://doi.org/10.1017/bpp.2018.43"
+        },
+        {
+          "title": "Generalizability of choice architecture interventions",
+          "year": 2025,
+          "type": "research review",
+          "doi": "10.1038/s44159-025-00471-9",
+          "url": "https://doi.org/10.1038/s44159-025-00471-9"
+        },
+        {
+          "title": "How default choice architecture impacts downstream behavior: A taxonomy, theoretical framework, and research agenda",
+          "year": 2026,
+          "type": "research review",
+          "doi": "10.1002/arcp.70007",
+          "url": "https://doi.org/10.1002/arcp.70007"
+        }
+      ]
+    },
+    {
+      "slug": "prospect-theory-status-quo-bias",
+      "evidenceStatus": "well established, broader than interface defaults",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Status quo bias describes extra preference for an option because it is the current or existing state. Classic experiments and field observations found disproportionate persistence with status quo options, but keeping the current option is not automatically a bias. Switching can have real financial, practical, learning or uncertainty costs that make staying reasonable.",
+      "mechanism": "Several explanations can contribute to status quo persistence, including reference dependence and loss aversion, attention, uncertainty, cognitive effort and psychological commitment to what is already in place. Experimental work also shows that a status quo can shape which alternatives receive attention. This is broader than a designed default: a current provider, workflow or possession can be the status quo even when no interface pre-selects it.",
+      "practical": "For an important review, compare the current option and realistic alternatives as if the choice were being made today. List genuine switching costs separately from familiarity or decision effort. If staying still has the best expected value after that comparison, keeping the status quo may be rational rather than biased.",
+      "sources": [
+        {
+          "title": "Status quo bias in decision making",
+          "year": 1988,
+          "type": "foundational experiments and field evidence",
+          "doi": "10.1007/BF00055564",
+          "url": "https://doi.org/10.1007/BF00055564"
+        },
+        {
+          "title": "Limited attention and status quo bias",
+          "year": 2017,
+          "type": "model and laboratory experiments",
+          "doi": "10.1016/j.jet.2017.01.009",
+          "url": "https://doi.org/10.1016/j.jet.2017.01.009"
+        },
+        {
+          "title": "When and why defaults influence decisions: a meta-analysis of default effects",
+          "year": 2019,
+          "type": "meta-analysis with status-quo channel analysis",
+          "doi": "10.1017/bpp.2018.43",
+          "url": "https://doi.org/10.1017/bpp.2018.43"
+        }
+      ]
+    }
+  ]
+}
