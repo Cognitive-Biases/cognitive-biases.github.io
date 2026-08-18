@@ -19,11 +19,15 @@
     },
     "phenomenon": {
       "label": "Phenomenon",
-      "description": "A broader named pattern, state, or behavioral observation that does not fit cleanly into bias, effect, heuristic, fallacy, or principle."
+      "description": "A broader named pattern, state, or behavioral observation that does not fit cleanly into bias, effect, heuristic, fallacy, principle, or measurement concept."
     },
     "principle": {
       "label": "Principle / law",
       "description": "A named principle, law, or descriptive regularity. These entries may be useful for understanding cognition without being cognitive biases in the narrow sense."
+    },
+    "measurement": {
+      "label": "Measurement concept",
+      "description": "A concept about measurement, estimation, sampling, calibration, or systematic error rather than one psychological tendency in a person."
     }
   },
   "recordKindOverrides": {
@@ -34,7 +38,7 @@
     "93": "bias",
     "94": "phenomenon",
     "97": "phenomenon",
-    "121": "phenomenon",
+    "121": "measurement",
     "123": "phenomenon",
     "140": "phenomenon"
   }
