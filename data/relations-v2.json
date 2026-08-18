@@ -40,6 +40,12 @@
       "rightSlug": "human-robot-interaction-form",
       "type": "overlaps-with",
       "note": "Humanlike appearance and interaction cues can shape both anthropomorphic mental-state attributions and expectations about a system's capabilities. Neither impression is evidence by itself that the inferred mind or capability is present."
+    },
+    {
+      "leftSlug": "cognitive-bias-confirmation-bias",
+      "rightSlug": "confirmation-bias-backfire-effect",
+      "type": "often-confused-with",
+      "note": "Confirmation bias describes selective search, testing, interpretation, or memory shaped by existing beliefs. Backfire is the narrower measured outcome in which a correction increases belief in the targeted false claim; resistance or disagreement alone is not backfire."
     }
   ]
 }
