@@ -2,7 +2,7 @@
   "version": 1,
   "reviews": [
     {
-      "slug": "human-ai-interaction-automation-bias",
+      "slug": "false-priors-automation-bias",
       "evidenceStatus": "established, context-dependent",
       "reviewedAt": "2026-08-18",
       "qualification": "Automation bias is a documented pattern of inappropriate reliance on automated cues or recommendations. It can produce commission errors when a user follows incorrect advice and omission errors when a user fails to act because automation did not signal a problem. This does not mean automation is generally harmful: decision support can improve overall performance, and the relevant question is whether reliance remains calibrated when the system is wrong, incomplete, or difficult to verify.",
