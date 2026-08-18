@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 const SITE = "https://cognitive-biases.github.io";
 const FAMILY = "future-state-forecasting";
 const MEMBERS = [
-  { id: 81, slug: "self-assessment-hot-cold-empathy-gap" },
+  { id: 81, slug: "self-assessment-hot" },
   { id: 101, slug: "cognitive-bias-impact-bias" },
   { id: 118, slug: "cognitive-bias-projection-bias" },
 ];
