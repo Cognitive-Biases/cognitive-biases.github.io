@@ -2,16 +2,16 @@
   "name": "cognitive-biases.github.io",
   "private": true,
   "version": "1.0.0",
-  "description": "Static website for the Cognitive Biases educational app.",
+  "description": "Static public knowledge library for cognitive biases, evidence and decision making.",
   "scripts": {
     "prepare:data": "node scripts/repair-integrity.mjs --write && node scripts/apply-editorial-overrides.mjs",
-    "build:site": "node scripts/build.mjs && node scripts/enhance.mjs && node scripts/apply-record-family-overrides.mjs && node scripts/reconcile-family-links.mjs && node scripts/inject-family-nav.mjs && node scripts/apply-duplicate-canonicals.mjs && node scripts/clean-duplicate-discovery.mjs && node scripts/apply-kind-taxonomy.mjs && node scripts/apply-evidence-reviews.mjs && node scripts/apply-deep-dives.mjs && node scripts/generate-evidence-hub.mjs && node scripts/generate-comparisons.mjs && node scripts/generate-decision-audit.mjs && node scripts/generate-contexts.mjs",
+    "build:site": "node scripts/build.mjs && node scripts/enhance.mjs && node scripts/apply-record-family-overrides.mjs && node scripts/reconcile-family-links.mjs && node scripts/inject-family-nav.mjs && node scripts/apply-duplicate-canonicals.mjs && node scripts/clean-duplicate-discovery.mjs && node scripts/apply-kind-taxonomy.mjs && node scripts/apply-evidence-reviews.mjs && node scripts/apply-deep-dives.mjs && node scripts/generate-evidence-hub.mjs && node scripts/generate-comparisons.mjs && node scripts/generate-decision-audit.mjs && node scripts/generate-contexts.mjs && node scripts/generate-resource-pages.mjs && node scripts/apply-project-positioning.mjs",
     "build": "npm run prepare:data && npm run build:site",
     "validate:data": "npm run prepare:data && node scripts/validate-data.mjs",
     "audit:taxonomy": "npm run prepare:data && node scripts/audit-taxonomy.mjs",
     "inventory:taxonomy": "npm run prepare:data && node scripts/category-inventory.mjs",
     "review:generic": "npm run prepare:data && node scripts/review-generic-buckets.mjs",
-    "check": "npm run validate:data && npm run audit:taxonomy && npm run inventory:taxonomy && npm run review:generic && npm run build:site && node scripts/check.mjs && node scripts/check-record-family-overrides.mjs && node scripts/check-duplicate-canonicals.mjs && node scripts/check-duplicate-discovery.mjs && node scripts/check-kind-taxonomy.mjs && node scripts/check-evidence-reviews.mjs && node scripts/check-deep-dives.mjs && node scripts/check-evidence-hub.mjs && node scripts/check-comparisons.mjs && node scripts/check-decision-audit.mjs && node scripts/check-contexts.mjs && node scripts/check-editorial-overrides.mjs && node scripts/check-ai-context.mjs && node scripts/check-future-state-family.mjs && node scripts/check-retrospective-family.mjs",
+    "check": "npm run validate:data && npm run audit:taxonomy && npm run inventory:taxonomy && npm run review:generic && npm run build:site && node scripts/check.mjs && node scripts/check-record-family-overrides.mjs && node scripts/check-duplicate-canonicals.mjs && node scripts/check-duplicate-discovery.mjs && node scripts/check-kind-taxonomy.mjs && node scripts/check-evidence-reviews.mjs && node scripts/check-deep-dives.mjs && node scripts/check-evidence-hub.mjs && node scripts/check-comparisons.mjs && node scripts/check-decision-audit.mjs && node scripts/check-contexts.mjs && node scripts/check-editorial-overrides.mjs && node scripts/check-ai-context.mjs && node scripts/check-future-state-family.mjs && node scripts/check-retrospective-family.mjs && node scripts/check-resource-direction.mjs",
     "dev": "npm run build && node scripts/serve.mjs"
   }
 }
