@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
-const ID = 225;
+const ID = 76;
 const SLUG = "prospect-theory-loss-aversion";
 const SUNK = "cognitive-bias-sunk-cost-effect";
 const FRAMING = "framing-effect-core";
@@ -13,7 +13,7 @@ const json = async (path) => JSON.parse(await readFile(path, "utf8"));
 
 const biases = await json("data/biases.json");
 const loss = biases.find((entry) => entry.id === ID);
-if (!loss || loss.slug !== SLUG) throw new Error("Loss Aversion #225 canonical record is missing.");
+if (!loss || loss.slug !== SLUG) throw new Error("Historical Loss Aversion #76 canonical record is missing.");
 if (!/^Loss Aversion\b/.test(loss.title || "")) throw new Error("Loss Aversion reviewed title is missing.");
 if (/🔍|💡/u.test(loss.description || "")) throw new Error("Loss Aversion top copy must stay plain and marker-free.");
 if (!/should not be treated as a universal rule/i.test(loss.description || "")) throw new Error("Loss Aversion top copy lost its robustness qualification.");
@@ -27,7 +27,7 @@ for (const doi of ["10.2307/1914185", "10.1257/jel.20221698", "10.1016/j.joep.20
 }
 
 const taxonomy = await json("data/taxonomy-v2.json");
-if (taxonomy.recordFamilyOverrides?.[String(ID)] !== "valuation-choice") throw new Error("Loss Aversion #225 must map to Valuation & choice.");
+if (taxonomy.recordFamilyOverrides?.[String(ID)] !== "valuation-choice") throw new Error("Loss Aversion #76 must map to Valuation & choice.");
 for (const context of CONTEXTS) {
   if (!(taxonomy.recordContexts?.[String(ID)] || []).includes(context)) throw new Error(`Loss Aversion taxonomy is missing context ${context}.`);
 }
@@ -65,7 +65,7 @@ if (!researchHtml.includes('data-seo-schema="research-article"') || !researchHtm
 const publicBiases = await json("dist/data/biases.json");
 const publicComparisons = await json("dist/data/comparisons.json");
 const publicResearch = await json("dist/data/research-notes.json");
-if (!publicBiases.some((entry) => entry.id === ID && entry.slug === SLUG)) throw new Error("Public dataset is missing Loss Aversion #225.");
+if (!publicBiases.some((entry) => entry.id === ID && entry.slug === SLUG)) throw new Error("Public dataset is missing historical Loss Aversion #76.");
 if (!(publicComparisons.entries || []).some((entry) => entry.slug === COMPARISON)) throw new Error("Public dataset is missing Loss Aversion/Sunk Cost comparison.");
 if (!(publicResearch.entries || []).some((entry) => entry.slug === RESEARCH)) throw new Error("Public dataset is missing Loss Aversion research note.");
 
@@ -74,4 +74,4 @@ for (const url of [`${SITE}/biases/${SLUG}/`, `${SITE}/compare/${COMPARISON}/`, 
   if (!sitemap.includes(`<loc>${url}</loc>`)) throw new Error(`Sitemap is missing ${url}.`);
 }
 
-console.log("Loss Aversion cluster check passed: core #225, competing meta-analyses, risk/project contexts, Sunk Cost comparison, reciprocal research discovery, exports and sitemap are aligned.");
+console.log("Loss Aversion cluster check passed: historical core #76, competing meta-analyses, risk/project contexts, Sunk Cost comparison, reciprocal research discovery, exports and sitemap are aligned.");
