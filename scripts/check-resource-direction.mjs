@@ -8,6 +8,7 @@ const required = [
   "dist/data/evidence.json",
   "dist/data/contexts.json",
   "dist/data/comparisons.json",
+  "dist/data/research-notes.json",
   "dist/data/manifest.json"
 ];
 
@@ -61,4 +62,21 @@ for (const review of evidence.reviews || []) {
 const inbox = JSON.parse(await readFile("data/research-inbox.json", "utf8"));
 if (!Array.isArray(inbox.items)) throw new Error("Research inbox must contain an items array.");
 
-console.log(`Resource direction checks passed. ${evidence.reviews?.length || 0} reviewed records checked for exact repeated prose.`);
+const notes = JSON.parse(await readFile("data/research-notes.json", "utf8"));
+const noteSlugs = new Set();
+for (const note of notes.entries || []) {
+  if (!note.slug || !note.title || !note.summary || !note.publishedAt) throw new Error("Research note is missing required public fields.");
+  if (noteSlugs.has(note.slug)) throw new Error(`Duplicate research note slug: ${note.slug}`);
+  noteSlugs.add(note.slug);
+  await access(`dist/research/${note.slug}/index.html`);
+  if (!sitemap.includes(`https://cognitive-biases.github.io/research/${note.slug}/`)) throw new Error(`Sitemap is missing research note ${note.slug}.`);
+  if (!Array.isArray(note.sources) || note.sources.length === 0) throw new Error(`${note.slug}: research note needs sources.`);
+  for (const source of note.sources) {
+    if (!/^https:\/\//.test(source.url || "")) throw new Error(`${note.slug}: source URL must use HTTPS.`);
+  }
+}
+
+const manifest = JSON.parse(await readFile("dist/data/manifest.json", "utf8"));
+if (manifest.counts?.researchNotes !== (notes.entries || []).length) throw new Error("Research note count is missing or incorrect in manifest.");
+
+console.log(`Resource direction checks passed. ${evidence.reviews?.length || 0} reviewed records and ${(notes.entries || []).length} research notes validated.`);
