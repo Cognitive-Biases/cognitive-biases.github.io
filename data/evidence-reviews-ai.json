@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "human-ai-interaction-automation-bias",
+      "evidenceStatus": "established, context-dependent",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Automation bias is a documented pattern of inappropriate reliance on automated cues or recommendations. It can produce commission errors when a user follows incorrect advice and omission errors when a user fails to act because automation did not signal a problem. This does not mean automation is generally harmful: decision support can improve overall performance, and the relevant question is whether reliance remains calibrated when the system is wrong, incomplete, or difficult to verify.",
+      "mechanism": "Research describes automation as a potential heuristic substitute for vigilant information search and processing. Reliance is shaped by trust calibration, attention allocation, workload, task complexity, time pressure, experience, and how difficult it is to verify the automated recommendation. Automation bias overlaps with automation-related complacency but the constructs are not identical.",
+      "practical": "For high-stakes decisions, make a provisional assessment or explicit decision criteria before viewing automated advice when practical. Verify consequential recommendations against independent cues or source data, especially when the system is outside its strongest domain. Design the workflow to reduce verification effort with source links, decomposed checks, calibrated uncertainty, and explicit review responsibility rather than relying on generic warnings to 'be careful'.",
+      "sources": [
+        {
+          "title": "Automation bias: decision making and performance in high-tech cockpits",
+          "year": 1997,
+          "type": "controlled simulation study",
+          "doi": "10.1207/s15327108ijap0801_3",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11540946/"
+        },
+        {
+          "title": "Automation bias: a systematic review of frequency, effect mediators, and mitigators",
+          "year": 2011,
+          "type": "systematic review",
+          "doi": "10.1136/amiajnl-2011-000089",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21685142/"
+        },
+        {
+          "title": "Automation bias and verification complexity: a systematic review",
+          "year": 2017,
+          "type": "systematic review",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7651899/"
+        }
+      ]
+    },
+    {
+      "slug": "availability-heuristic-anthropomorphism",
+      "evidenceStatus": "established attribution tendency; not inherently an error",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Anthropomorphism is the attribution of humanlike properties, intentions, emotions, or mental states to nonhuman agents. It is a well-established psychological phenomenon, but it is not automatically a cognitive error: humanlike models can sometimes be useful. The risk appears when humanlike cues are treated as evidence for capabilities, understanding, accuracy, consciousness, or motives that have not actually been demonstrated.",
+      "mechanism": "Classic theory links anthropomorphism to accessible human knowledge, motivation to understand and predict an agent, and sociality motives. Experiments show that unpredictability and effectance motivation can increase anthropomorphism. In LLM interfaces, humanlike cues such as voice or first-person framing can also change perceived anthropomorphism and judgments of information accuracy in some contexts, so interface style can become entangled with epistemic trust.",
+      "practical": "Translate a humanlike impression into a capability claim you can test. Fluent language, warmth, first-person phrasing, memory-like behavior, or a voice do not by themselves establish understanding, reliability, intention, or consciousness. When accuracy matters, evaluate outputs against task-specific evidence and documented system capabilities rather than against how human the interaction feels.",
+      "sources": [
+        {
+          "title": "On seeing human: a three-factor theory of anthropomorphism",
+          "year": 2007,
+          "type": "theory and evidence review",
+          "doi": "10.1037/0033-295X.114.4.864",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17907867/"
+        },
+        {
+          "title": "Making sense by making sentient: effectance motivation increases anthropomorphism",
+          "year": 2010,
+          "type": "experiments",
+          "doi": "10.1037/a0020240",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20649365/"
+        },
+        {
+          "title": "Believing Anthropomorphism: Examining the Role of Anthropomorphic Cues on Trust in Large Language Models",
+          "year": 2024,
+          "type": "large online experiment / preprint",
+          "url": "https://arxiv.org/abs/2405.06079"
+        }
+      ]
+    },
+    {
+      "slug": "human-robot-interaction-form",
+      "evidenceStatus": "supported HRI pattern; project label is nonstandard",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Research supports the broader pattern that a robot's appearance, morphology, framing, and human-likeness shape expectations about its competence, social qualities, and likely behavior. However, 'Form-Function Attribution Bias' is not an established standardized name in the literature. On this site it should be treated as a project label for appearance-driven capability expectations, not as a universally recognized cognitive-bias construct.",
+      "mechanism": "Visual and social design cues help users build a mental model before they have much direct performance evidence. Humanlike or technically styled forms can set different expectations, and expectation-setting can change later competence or trust judgments. The direction is not universal: a more anthropomorphic appearance does not always increase perceived competence, empathy, or trust, and effects depend on task and context.",
+      "practical": "Separate what the system looks or sounds like from what it has demonstrated it can do. For an AI or robot, write down the capabilities implied by the interface and then check each against observed performance, documentation, or controlled tests. Designers should communicate limitations and intended functions directly instead of letting appearance carry the whole capability message.",
+      "sources": [
+        {
+          "title": "Judging a bot by its cover: an experiment on expectation setting for personal robots",
+          "year": 2010,
+          "type": "experiment",
+          "doi": "10.1145/1734454.1734472",
+          "url": "https://doi.org/10.1145/1734454.1734472"
+        },
+        {
+          "title": "What Does A Robot Look Like?: A Multi-Site Examination of User Expectations About Robot Appearance",
+          "year": 2017,
+          "type": "multi-study exploratory research",
+          "doi": "10.1177/1541931213601786",
+          "url": "https://doi.org/10.1177/1541931213601786"
+        },
+        {
+          "title": "Feeling with a robot—the role of anthropomorphism by design and the tendency to anthropomorphize in human-robot interaction",
+          "year": 2023,
+          "type": "experiment",
+          "doi": "10.3389/frobt.2023.1149601",
+          "url": "https://doi.org/10.3389/frobt.2023.1149601"
+        }
+      ]
+    }
+  ]
+}
