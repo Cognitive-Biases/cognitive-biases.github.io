@@ -35,7 +35,7 @@ npm run dev
 
 The original corpus lives in [`data/biases.json`](data/biases.json). Reviewed evidence, comparisons, contexts and taxonomy data live beside it in `data/`.
 
-The target knowledge model is documented in [`docs/content-model-v2.md`](docs/content-model-v2.md).
+The target knowledge model is documented in [`docs/content-model-v2.md`](docs/content-model-v2.md). The multilingual model is documented in [`docs/multilingual-content.md`](docs/multilingual-content.md).
 
 Older records marked as generated are useful legacy material, but they are not automatically treated as independently reviewed. Evidence-sensitive entries are improved in batches and keep an explicit review status.
 
@@ -46,7 +46,8 @@ Older records marked as generated are useful legacy material, but they are not a
 Repository skills for recurring work live in `skills/`:
 
 - `research-editor` for evaluating a new source;
-- `content-review` for checking public copy before publication.
+- `content-review` for checking public copy before publication;
+- `translation-review` for keeping non-English pages natural without changing the reviewed meaning.
 
 ## Public data
 
