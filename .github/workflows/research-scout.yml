@@ -1,0 +1,72 @@
+name: Research Scout
+
+on:
+  schedule:
+    - cron: "17 5 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: research-scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate scout
+        run: node scripts/research-scout.mjs --self-test
+      - name: Discover research candidates
+        run: node scripts/research-scout.mjs
+      - name: Prepare review branch
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/research-inbox.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          branch="research-scout/${GITHUB_RUN_ID}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+
+          git config user.name "cognitive-biases-research-scout[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/research-inbox.json
+          git commit -m "Scout recent cognitive-bias research"
+          git push --set-upstream origin "$branch"
+      - name: Open research review PR
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ steps.changes.outputs.branch }}
+        shell: bash
+        run: |
+          body=$(cat <<'EOF'
+          ## Research Scout
+
+          This automated PR contains newly discovered research candidates only.
+
+          Nothing in this PR changes a public evidence status or scientific claim. Each candidate still needs the repository `research-editor` review before it can affect the public knowledge base.
+
+          Review the source, remove weak or duplicate candidates, then either accept, reject or archive each item in `data/research-inbox.json`.
+          EOF
+          )
+
+          if ! gh pr create --base main --head "$BRANCH" --title "Research Scout: review new candidates" --body "$body"; then
+            echo "Could not create a pull request automatically. The review branch was pushed successfully: $BRANCH"
+          fi
