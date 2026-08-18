@@ -95,9 +95,12 @@
     "128": "perception-patterns",
     "129": "social-judgment",
     "166": "attention-information",
-    "170": "belief-updating"
+    "170": "belief-updating",
+    "221": "attention-information"
   },
   "recordContexts": {
-    "97": ["human-robot-interaction"]
+    "9": ["human-ai-interaction"],
+    "97": ["human-robot-interaction", "human-ai-interaction"],
+    "221": ["human-ai-interaction"]
   }
 }
