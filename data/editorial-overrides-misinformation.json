@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 173,
+      "slug": "memory-bias-continued-influence-effect",
+      "previousTitle": "Continued Influence Effect – when misinformation sticks, even after being debunked",
+      "title": "Continued Influence Effect – when corrected information still shapes reasoning",
+      "description": "The Continued Influence Effect happens when false or outdated information still affects later reasoning after a person has been told that it is wrong. A correction can help and the old information can still leave a trace at the same time.\n\nWhere can it show up?\n- Breaking news: an early explanation is corrected, but people still use it when explaining what happened.\n- Work and incident reviews: an initial root cause is ruled out, yet later discussion keeps returning to it.\n- Everyday claims: you remember that a statement was corrected but still use part of the original story when judging a related question.\n\nA better check\n- State the correction clearly instead of only saying that the old claim is wrong.\n- If the old claim filled an explanatory gap, give the best supported alternative explanation when one is available.\n- Keep important corrections easy to find and repeat them when needed.\n- Do not call incomplete updating a backfire effect. Backfire requires the false belief itself to become stronger after the correction.",
+      "reason": "The legacy page treated persistence after correction as if the false claim simply remained believed. The reviewed literature supports a narrower distinction: corrections often improve accuracy while misinformation can still influence later inference, and that is not the same as backfire."
+    }
+  ]
+}
