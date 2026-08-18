@@ -6,6 +6,9 @@ for (const file of required) await access(resolve("dist", file));
 
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
 const taxonomy = JSON.parse(await readFile("data/taxonomy-v2.json", "utf8"));
+const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
+const duplicateIds = new Set((duplicateDispositions.groups || []).flatMap((group) => group.duplicateIds || []));
+const canonicalBiases = biases.filter((bias) => !duplicateIds.has(bias.id));
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
 const explore = await readFile("dist/explore/index.html", "utf8");
 const categorySlug = (value = "") => String(value)
@@ -28,14 +31,14 @@ const publishedFamilies = [...familyGroups.entries()]
   .map(([slug, records]) => ({ slug, records, ...taxonomy.families[slug] }));
 const publishedFamilySlugs = new Set(publishedFamilies.map((family) => family.slug));
 
-const missingUrls = biases.filter((bias) => !sitemap.includes(`/biases/${bias.slug}/`));
-if (missingUrls.length) throw new Error(`Sitemap is missing ${missingUrls.length} published bias URLs.`);
+const missingUrls = canonicalBiases.filter((bias) => !sitemap.includes(`/biases/${bias.slug}/`));
+if (missingUrls.length) throw new Error(`Sitemap is missing ${missingUrls.length} canonical published bias URLs.`);
 
-const missingDates = biases.filter((bias) => {
+const missingDates = canonicalBiases.filter((bias) => {
   if (!/^\d{4}-\d{2}-\d{2}/.test(bias.updatedAt || "")) return false;
   return !sitemap.includes(`<loc>https://cognitive-biases.github.io/biases/${bias.slug}/</loc><lastmod>${bias.updatedAt.slice(0, 10)}</lastmod>`);
 });
-if (missingDates.length) throw new Error(`Sitemap has incorrect lastmod metadata for ${missingDates.length} bias URLs.`);
+if (missingDates.length) throw new Error(`Sitemap has incorrect lastmod metadata for ${missingDates.length} canonical bias URLs.`);
 
 if (!explore.includes('"@type":"DefinedTermSet"') || !explore.includes("/explore/#bias-library")) {
   throw new Error("Explore page is missing the DefinedTermSet structured-data node.");
@@ -77,4 +80,4 @@ for (const bias of biases) {
 }
 
 const reviewedFamilyCount = biases.filter((bias) => familyFor(bias)).length;
-console.log(`Static site check passed: ${biases.length} bias pages, ${categories.length} category anchors, ${publishedFamilies.length} family hubs, ${reviewedFamilyCount} direct family mappings, structured data, and sitemap metadata verified.`);
+console.log(`Static site check passed: ${biases.length} bias pages (${canonicalBiases.length} canonical), ${categories.length} category anchors, ${publishedFamilies.length} family hubs, ${reviewedFamilyCount} direct family mappings, structured data, and sitemap metadata verified.`);
