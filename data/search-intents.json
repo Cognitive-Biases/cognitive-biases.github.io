@@ -4,10 +4,10 @@
     {
       "slug": "forecasting-estimation",
       "title": "Forecasting and estimation",
-      "question": "How can I make forecasts and estimates without letting one vivid case or target number dominate?",
-      "description": "Reviewed lenses for forecasts, estimates, probability judgments and future choices.",
-      "terms": ["forecast", "estimate", "estimation", "probability", "planning", "anchor", "subadditivity", "future"],
-      "minimumReviewedConcepts": 2,
+      "question": "How can I make forecasts and estimates without letting one vivid case, detailed plan, or target number dominate?",
+      "description": "Reviewed lenses for forecasts, estimates, reference classes, probability judgments and future choices.",
+      "terms": ["forecast", "estimate", "estimation", "probability", "planning", "planning fallacy", "reference class", "outside view", "base rate", "anchor", "subadditivity", "future"],
+      "minimumReviewedConcepts": 3,
       "maxConcepts": 10
     },
     {
