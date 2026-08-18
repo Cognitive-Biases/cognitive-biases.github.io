@@ -16,17 +16,20 @@ if (!catalogue.distributions.some((item) => item.id === "practice")) {
 
 const dataPagePath = join("dist", "data", "index.html");
 let html = await readFile(dataPagePath, "utf8");
-html = html.replace(/<script type="application\/ld\+json">([^<]+)<\/script>/g, (full, raw) => {
+html = html.replace(/<script([^>]*\btype=["']application\/ld\+json["'][^>]*)>([\s\S]*?)<\/script>/gi, (full, attributes, raw) => {
   try {
     const schema = JSON.parse(raw);
-    const graph = schema?.["@graph"] || [];
-    const dataset = graph.find((item) => item?.["@type"] === "Dataset");
+    const graph = Array.isArray(schema?.["@graph"]) ? schema["@graph"] : [];
+    const dataset = graph.find((item) => {
+      const type = item?.["@type"];
+      return type === "Dataset" || (Array.isArray(type) && type.includes("Dataset"));
+    });
     if (!dataset) return full;
     dataset.distribution ||= [];
     if (!dataset.distribution.some((item) => item.contentUrl === `${SITE}/data/practice-sets.json`)) {
-      dataset.distribution.push({ "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE}/data/practice-sets.json` });
+      dataset.distribution.push({ "@type": "DataDownload", name: "Practice Lab exercises", encodingFormat: "application/json", contentUrl: `${SITE}/data/practice-sets.json` });
     }
-    return `<script type="application/ld+json">${JSON.stringify(schema)}</script>`;
+    return `<script${attributes}>${JSON.stringify(schema)}</script>`;
   } catch {
     return full;
   }
