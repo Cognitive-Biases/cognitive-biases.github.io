@@ -8,7 +8,7 @@
       "useWhen": [
         "A KPI is improving, but people disagree about whether the underlying service, product, learning, safety, or business outcome is actually better.",
         "A target is tied to incentives and teams have found ways to improve the number that do not clearly improve the goal.",
-        "A dashboard metric may be incomplete because of sampling, collection, calibration, or data-pipeline choices.",
+        "A dashboard or benchmark is becoming the main language of the review while the underlying objective is harder to discuss.",
         "A benchmark or model score is being treated as the main evidence that an AI system is useful in real work.",
         "A successful result is being used to justify the metric or target even though the quality of the measurement and decision process was never tested.",
         "Teams mainly look for examples that support the current KPI and rarely ask what evidence would show that the measure is a poor proxy."
@@ -17,14 +17,14 @@
         "Write the underlying objective in ordinary language before opening the dashboard. Describe what success means without using the KPI name.",
         "For each important measure, list what it captures directly, what it only approximates, and at least one important dimension it misses.",
         "Ask how someone could improve the number while making the real objective worse. If that path is realistic, add a guardrail, companion measure, validation check, or narrative review.",
-        "Test the measurement process separately. Check sampling, data coverage, calibration, exclusions, labels, time windows, and any transformation that could shift the estimate away from the intended reference.",
+        "Identify the first target, benchmark, baseline, or score shown in the review. Rebuild important estimates from independent evidence before letting that number become the reference point.",
         "Write what evidence would make you change or retire the metric before the next review. Search for that evidence, not only for examples that defend the current scorecard.",
         "Judge the metric design and the eventual outcome separately. A good outcome does not prove the proxy was well chosen, and a bad outcome does not prove every part of the measurement system was wrong.",
-        "For AI benchmarks and automated ratings, validate against representative real tasks and human outcomes instead of assuming one convenient score is the product objective."
+        "For AI benchmarks and automated ratings, validate against representative real tasks and human outcomes instead of assuming one convenient score is the product objective. Check the measurement process separately when data coverage, sampling, calibration, labels, or exclusions may be systematically distorted."
       ],
       "lenses": [
         {"slug":"cognitive-bias-surrogation","question":"Are we treating the measure as evidence about the objective, or have we started treating the measure as the objective itself?"},
-        {"slug":"cognitive-bias-systematic-bias","question":"Could the measurement or estimation process be consistently shifted because of sampling, calibration, data collection, exclusions, or analysis?"},
+        {"slug":"cognitive-bias-anchoring-effect","question":"Which target, benchmark, baseline, or first score is shaping later judgments before we build an independent estimate?"},
         {"slug":"cognitive-bias-confirmation-bias","question":"What evidence would show that this KPI is a poor proxy, and have we actively looked for it?"},
         {"slug":"cognitive-bias-outcome-bias","question":"Are we judging the quality of the metric and decision process mainly from whether the final result happened to be good or bad?"}
       ]
