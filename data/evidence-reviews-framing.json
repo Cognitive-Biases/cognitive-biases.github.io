@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "framing-effect-core",
+      "evidenceStatus": "risky-choice framing is robust; broader framing types have different evidence",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Framing research covers several distinct paradigms. Risky-choice framing, where equivalent outcomes are presented as gains or losses, is a well-established effect with substantial evidence across many studies. A classic meta-analysis found a reliable small-to-moderate average effect with strong variation across designs, and later reviews and metastudies support broad generalizability. Attribute framing also has supporting evidence, while goal or message framing is less consistently established. These should not be treated as one identical effect caused by any change in wording.",
+      "mechanism": "No single mechanism explains every framing paradigm. In risky choice, reference points, the valence or gist of descriptions, and how outcomes are represented can all affect preference. The 1998 framing typology explicitly separated risky-choice, attribute, and goal framing because they use different tasks and may rely on different processes. The most defensible behavioral claim is that descriptions that preserve much of the underlying decision information can still change judgments or preferences, while the size and direction depend on the task and representation.",
+      "practical": "For an important choice, restate the options using neutral quantities and test equivalent gain and loss descriptions while holding outcomes and probabilities constant. Show complete information when practical, and separate the effect of the frame from missing or mismatched information. If the decision changes, investigate why before assuming one description is the objective truth. Treat this as a consistency check, not a rule that positive or negative wording is always manipulative.",
+      "sources": [
+        {
+          "title": "The framing of decisions and the psychology of choice",
+          "year": 1981,
+          "type": "foundational experiments",
+          "doi": "10.1126/science.7455683",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7455683/"
+        },
+        {
+          "title": "The Influence of Framing on Risky Decisions: A Meta-analysis",
+          "year": 1998,
+          "type": "meta-analysis",
+          "doi": "10.1006/obhd.1998.2781",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9719656/"
+        },
+        {
+          "title": "All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects",
+          "year": 1998,
+          "type": "critical review and typology",
+          "doi": "10.1006/obhd.1998.2804",
+          "url": "https://doi.org/10.1006/obhd.1998.2804"
+        },
+        {
+          "title": "A systematic review of risky-choice framing effects",
+          "year": 2023,
+          "type": "systematic review",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37927347/"
+        },
+        {
+          "title": "Risky-choice framing effects persist when option descriptions are matched and complete: A replication and extension of DeKay and Dou (2024)",
+          "year": 2026,
+          "type": "large replication and extension",
+          "doi": "10.3758/s13423-025-02771-w",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41979840/"
+        }
+      ]
+    }
+  ]
+}
