@@ -15,24 +15,13 @@
         {"dimension":"Best pre-outcome record","left":"Forecast, probability estimate, scenario range, or written prediction.","right":"Decision rationale, information set, alternatives considered, expected values, and decision rule."},
         {"dimension":"What the outcome should be used for","left":"Update future forecasting models without pretending the past was obvious.","right":"Update models and assumptions without rewriting the quality of the original process solely from luck."}
       ],
-      "diagnostic": [
-        "Hide the outcome and reconstruct what was knowable at the decision time.",
-        "Write the probability you would have assigned before the outcome. Compare it with any actual forecast that exists.",
-        "Score the decision process using only the information, alternatives, and constraints available at the time.",
-        "Reveal the outcome and update your model separately. If the outcome changes the forecast-memory judgment, suspect hindsight bias; if it changes the process-quality score, suspect outcome bias."
-      ],
+      "diagnostic": ["Hide the outcome and reconstruct what was knowable at the decision time.","Write the probability you would have assigned before the outcome. Compare it with any actual forecast that exists.","Score the decision process using only the information, alternatives, and constraints available at the time.","Reveal the outcome and update your model separately. If the outcome changes the forecast-memory judgment, suspect hindsight bias; if it changes the process-quality score, suspect outcome bias."],
       "examples": [
         {"title":"Product launch","left":"After a failed launch, the team says the failure was obvious from the warning signs, even though the pre-launch forecast gave failure a modest probability.","right":"The same team concludes that launching was a bad decision solely because the launch failed, even if the expected-value case and evidence available at the time were reasonable."},
         {"title":"Incident review","left":"Once the failure path is known, weak signals in the logs suddenly look like an unmistakable chain that anyone should have predicted.","right":"A responder's earlier choice is rated as incompetent because the incident worsened, even though the same choice might have been judged sound under the information available then."},
         {"title":"Hiring decision","left":"After a hire performs badly, interview concerns are remembered as clearer and more predictive than they appeared during selection.","right":"The hiring process is judged poor because this person failed, without asking whether the process was calibrated across many hires or whether this outcome was partly noise."}
       ],
-      "reviewProtocol": [
-        "Freeze the outcome temporarily.",
-        "Reconstruct the original information set and realistic alternatives.",
-        "Score forecast quality and decision-process quality separately.",
-        "Only then reveal the outcome and record what it teaches about the model, assumptions, or environment.",
-        "Compare the retrospective story with contemporaneous notes. If there are no notes, mark the reconstruction as uncertain rather than treating memory as a recording."
-      ],
+      "reviewProtocol": ["Freeze the outcome temporarily.","Reconstruct the original information set and realistic alternatives.","Score forecast quality and decision-process quality separately.","Only then reveal the outcome and record what it teaches about the model, assumptions, or environment.","Compare the retrospective story with contemporaneous notes. If there are no notes, mark the reconstruction as uncertain rather than treating memory as a recording."],
       "sources": [
         {"title":"Fifty years of hindsight bias research—Reflection on Fischhoff (1975)","year":2025,"doi":"10.1037/xhp0001232","url":"https://pubmed.ncbi.nlm.nih.gov/39913490/"},
         {"title":"Outcome bias in decision evaluation","year":1988,"doi":"10.1037/0022-3514.54.4.569","url":"https://pubmed.ncbi.nlm.nih.gov/3367280/"},
@@ -53,24 +42,13 @@
         {"dimension":"Mental-state information","left":"Relevant because beliefs and information shape whether the original process was reasonable, but they are not the defining target of the bias.","right":"Central. What the actor intended and reasonably believed can substantially change blame and can explain part of an apparent moral-luck effect."},
         {"dimension":"Best review record","left":"Decision rationale, information set, alternatives, expected values, assumptions, and decision rule recorded before the result.","right":"The same ex-ante record plus intention, belief justification, controllable risk, causal contribution, and the moral judgment being made."}
       ],
-      "diagnostic": [
-        "Name the judgment first: decision quality, moral wrongness, blame, praise, or punishment.",
-        "Reconstruct the actor's information, beliefs, intentions, options, and controllable risks before revealing the result.",
-        "Imagine a matched counterfactual where the same choice produces the opposite outcome because of luck. Check which judgment changes.",
-        "If process quality changes mainly with the result, outcome bias is the closer lens. If blame or responsibility changes, examine moral luck while still checking whether the bad result altered how you interpret the actor's beliefs or negligence."
-      ],
+      "diagnostic": ["Name the judgment first: decision quality, moral wrongness, blame, praise, or punishment.","Reconstruct the actor's information, beliefs, intentions, options, and controllable risks before revealing the result.","Imagine a matched counterfactual where the same choice produces the opposite outcome because of luck. Check which judgment changes.","If process quality changes mainly with the result, outcome bias is the closer lens. If blame or responsibility changes, examine moral luck while still checking whether the bad result altered how you interpret the actor's beliefs or negligence."],
       "examples": [
         {"title":"Safety decision","left":"Two managers approve the same defensible safety procedure; one later experiences an accident and their decision is rated much worse solely because the rare failure occurred.","right":"Two people take the same negligent risk; only one causes serious harm, and that person receives much more blame or punishment partly because the harmful outcome occurred."},
         {"title":"Investment","left":"An investment process is judged brilliant after a profit and foolish after a loss even when the information and method were identical at the time of choice.","right":"A losing investment is judged less moral or its decision-maker less ethically acceptable than a matched profitable investment, despite comparable intentions and ex-ante reasoning."},
         {"title":"Incident review","left":"A responder's action is scored as a bad operational decision because the incident escalated, without reconstructing the signals available then.","right":"The same outcome is used to infer that the responder was morally reckless or deserving of blame, without separating what they knew, intended, controlled, and actually caused."}
       ],
-      "reviewProtocol": [
-        "State whether the review is evaluating process quality or moral responsibility before discussing the outcome.",
-        "Freeze the ex-ante information, beliefs, intentions, available actions, and controllable risks.",
-        "Compare a matched good-outcome and bad-outcome version of the same choice.",
-        "Score process quality separately from wrongness, blame, praise, and punishment.",
-        "Use the real outcome to update risk models and future safeguards, but do not let it silently rewrite the actor's prior mental state."
-      ],
+      "reviewProtocol": ["State whether the review is evaluating process quality or moral responsibility before discussing the outcome.","Freeze the ex-ante information, beliefs, intentions, available actions, and controllable risks.","Compare a matched good-outcome and bad-outcome version of the same choice.","Score process quality separately from wrongness, blame, praise, and punishment.","Use the real outcome to update risk models and future safeguards, but do not let it silently rewrite the actor's prior mental state."],
       "sources": [
         {"title":"Outcome bias in decision evaluation","year":1988,"doi":"10.1037/0022-3514.54.4.569","url":"https://pubmed.ncbi.nlm.nih.gov/3367280/"},
         {"title":"Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment","year":2008,"doi":"10.1016/j.cognition.2008.03.006","url":"https://pubmed.ncbi.nlm.nih.gov/18439575/"},
@@ -92,28 +70,56 @@
         {"dimension":"Does the original belief have to get stronger?","left":"No. A person can selectively seek or interpret confirming evidence while the strength of the belief stays similar.","right":"Yes. Mere disagreement, anger, distrust, or failure to change is not enough; belief in the corrected false claim must increase relative to an appropriate baseline."},
         {"dimension":"Evidence status","left":"A broad, well-established research area with multiple forms and mechanisms across hypothesis testing and information processing.","right":"A real but uncommon and context-sensitive correction outcome that should not be assumed whenever someone resists factual correction."}
       ],
-      "diagnostic": [
-        "Write the exact belief or hypothesis under review and, when possible, the starting confidence in it.",
-        "Check the information process: were supporting cases searched for, disconfirming cases avoided, or evidence judged by different standards? Those are confirmation-bias questions.",
-        "If a correction occurs, measure belief in the same targeted claim afterwards rather than inferring belief change from tone, argument, or source distrust.",
-        "Call it backfire only if the correction is followed by stronger belief in the targeted false claim. Otherwise describe the observed process more narrowly: selective search, selective interpretation, no correction effect, reactance, distrust, or continued influence."
-      ],
+      "diagnostic": ["Write the exact belief or hypothesis under review and, when possible, the starting confidence in it.","Check the information process: were supporting cases searched for, disconfirming cases avoided, or evidence judged by different standards? Those are confirmation-bias questions.","If a correction occurs, measure belief in the same targeted claim afterwards rather than inferring belief change from tone, argument, or source distrust.","Call it backfire only if the correction is followed by stronger belief in the targeted false claim. Otherwise describe the observed process more narrowly: selective search, selective interpretation, no correction effect, reactance, distrust, or continued influence."],
       "examples": [
         {"title":"AI-assisted research","left":"A user repeatedly asks an AI for arguments supporting a preferred architecture and does not request failure cases or competing explanations.","right":"After receiving a clear correction that a cited benchmark result was false, the user's measured confidence in that same false benchmark claim rises."},
         {"title":"Fact-checking","left":"A reader treats weak evidence from an agreeable source as persuasive while demanding much stronger evidence from an opposing source.","right":"A fact-check causes the reader to endorse the corrected factual falsehood more strongly than before the fact-check."},
         {"title":"Project review","left":"A team searches logs for clues supporting its favored root cause and stops once it finds a plausible match.","right":"A corrective analysis directly addressing that root-cause claim is followed by stronger confidence in the disproven cause, not merely frustration with the review."}
       ],
-      "reviewProtocol": [
-        "Separate the information-processing question from the belief-change question.",
-        "Record the target belief and pre-correction confidence when testing for backfire.",
-        "Use the same claim and comparable measurement after correction; do not substitute attitude, trust, or emotional reaction for factual belief.",
-        "When evaluating confirmation bias, inspect search strategy, falsification opportunities, evidence standards, and interpretation across competing hypotheses.",
-        "Name only the pattern the evidence supports. Resistance to correction is not automatically backfire, and confirmation bias is not proof that a correction made beliefs worse."
-      ],
+      "reviewProtocol": ["Separate the information-processing question from the belief-change question.","Record the target belief and pre-correction confidence when testing for backfire.","Use the same claim and comparable measurement after correction; do not substitute attitude, trust, or emotional reaction for factual belief.","When evaluating confirmation bias, inspect search strategy, falsification opportunities, evidence standards, and interpretation across competing hypotheses.","Name only the pattern the evidence supports. Resistance to correction is not automatically backfire, and confirmation bias is not proof that a correction made beliefs worse."],
       "sources": [
         {"title":"On the Failure to Eliminate Hypotheses in a Conceptual Task","year":1960,"doi":"10.1080/17470216008416717","url":"https://doi.org/10.1080/17470216008416717"},
         {"title":"Confirmation Bias: A Ubiquitous Phenomenon in Many Guises","year":1998,"doi":"10.1037/1089-2680.2.2.175","url":"https://doi.org/10.1037/1089-2680.2.2.175"},
         {"title":"Searching for the Backfire Effect: Measurement and Design Considerations","year":2020,"doi":"10.1016/j.jarmac.2020.06.006","url":"https://doi.org/10.1016/j.jarmac.2020.06.006"},
+        {"title":"Factual corrections: Concerns and current evidence","year":2024,"doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
+      ]
+    },
+    {
+      "slug": "continued-influence-effect-vs-backfire-effect",
+      "leftSlug": "memory-bias-continued-influence-effect",
+      "rightSlug": "confirmation-bias-backfire-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Continued Influence Effect vs Backfire Effect",
+      "summary": "Both happen in the context of correcting misinformation, but they describe different outcomes. Continued influence means the correction helps yet some influence of the old information remains. Backfire is the narrower case where the correction makes belief in the targeted false claim stronger.",
+      "keyDifference": "Ask what happened to the false claim after correction: did its influence decrease but remain above zero, or did belief in the claim actually increase? The first can be continued influence; only the second is backfire.",
+      "dimensions": [
+        {"dimension":"What happens after correction?","left":"Reliance on the false information is reduced but not eliminated, so it can still affect later inference or judgment.","right":"Belief in the targeted false claim becomes stronger after the correction relative to the relevant baseline."},
+        {"dimension":"Does the correction help?","left":"Often yes. Partial improvement and continued influence can occur at the same time.","right":"Not on the targeted belief. By definition, the measured belief moves in the wrong direction."},
+        {"dimension":"What is not enough?","left":"Simply remembering the original claim is not enough; the corrected misinformation must still affect belief, inference, or judgment.","right":"Disagreement, anger, distrust, no change, or incomplete updating are not enough. The false belief must actually strengthen."},
+        {"dimension":"How common is it?","left":"A robust finding across misinformation-correction research, although its size varies with the task and correction.","right":"A documented but uncommon and context-sensitive outcome. Recent reviews find factual corrections generally improve belief accuracy and true backfire is rare."}
+      ],
+      "diagnostic": [
+        "Write the exact false claim and measure the relevant belief or inference before the correction when possible.",
+        "Deliver the correction clearly and keep the corrected fact separate from reactions to the messenger.",
+        "Measure the same belief or inference afterwards. If reliance fell but remained above the corrected baseline, continued influence is the closer description.",
+        "Use the term backfire only if belief in the targeted false claim increased after correction. Do not infer it from argument, frustration, distrust, or continued influence."
+      ],
+      "examples": [
+        {"title":"Breaking news","left":"A news report first blames a fire on faulty wiring. The report is corrected, and readers accept the correction, but some still use the wiring explanation when reasoning about later details.","right":"After the wiring claim is clearly corrected, readers become more confident that faulty wiring caused the fire than they were before the correction."},
+        {"title":"Incident review","left":"A team removes an early root-cause claim from the record, yet parts of the later discussion still assume that cause when explaining the timeline.","right":"After a corrective analysis rules the cause out, measured confidence in that same disproven cause rises."},
+        {"title":"AI-generated claim","left":"A user learns that a generated statistic was false but later still uses it as part of an explanation or estimate.","right":"After the statistic is corrected, the user reports stronger belief in that exact false statistic than before the correction."}
+      ],
+      "reviewProtocol": [
+        "Use the same target claim before and after correction where measurement is possible.",
+        "Separate factual belief from trust in the source, emotion, attitude, and downstream behavior.",
+        "Check whether the correction reduced reliance, eliminated it, had no detectable effect, or increased belief. These are different outcomes.",
+        "When influence remains, describe continued influence without implying the correction was useless.",
+        "Reserve backfire for measured strengthening of the targeted false belief."
+      ],
+      "sources": [
+        {"title":"Misinformation and Its Correction: Continued Influence and Successful Debiasing","year":2012,"doi":"10.1177/1529100612451018","url":"https://doi.org/10.1177/1529100612451018"},
+        {"title":"Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation","year":2017,"doi":"10.1177/0956797617714579","url":"https://doi.org/10.1177/0956797617714579"},
+        {"title":"The psychological drivers of misinformation belief and its resistance to correction","year":2022,"doi":"10.1038/s44159-021-00006-y","url":"https://doi.org/10.1038/s44159-021-00006-y"},
         {"title":"Factual corrections: Concerns and current evidence","year":2024,"doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
       ]
     }
