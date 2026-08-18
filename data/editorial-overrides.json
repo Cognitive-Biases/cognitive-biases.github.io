@@ -3,6 +3,14 @@
   "reviewedAt": "2026-08-18",
   "entries": [
     {
+      "id": 9,
+      "slug": "availability-heuristic-anthropomorphism",
+      "previousTitle": "Anthropomorphism – when objects and animals get human traits",
+      "title": "Anthropomorphism – when nonhuman systems are read as humanlike",
+      "description": "Anthropomorphism is the attribution of humanlike characteristics, intentions, emotions, or mental states to nonhuman agents. It is a common psychological process, not automatically an error. The problem appears when humanlike cues are treated as evidence that an animal, robot, or AI has capabilities, understanding, motives, or consciousness that have not actually been demonstrated.\n\n🔍 Where’s the trap?\n- AI assistants – fluent first-person language or a warm voice feels like proof that the system understands or cares.\n- Robots – a face, gaze, or social gesture changes what people expect the machine to know or feel.\n- Everyday objects – unpredictable behavior is described with human motives, which can hide the mechanical or statistical explanation.\n\n💡 How to avoid it?\n- Separate observable behavior from the humanlike mental state you are inferring.\n- Translate impressions such as 'it understands me' into specific capabilities that can be tested.\n- Use performance evidence, documentation, and independent verification when accuracy matters.\n- Remember that anthropomorphic language can be useful shorthand without being literal evidence about a system’s mind.",
+      "reason": "The previous copy treated anthropomorphism as inherently mistaken and used oversimplified claims about animal emotion. The reviewed literature supports anthropomorphism as an attribution process whose consequences depend on context."
+    },
+    {
       "id": 21,
       "slug": "confirmation-bias-backfire-effect",
       "previousTitle": "Backfire Effect – when evidence makes false beliefs stronger",
@@ -17,6 +25,14 @@
       "title": "Dunning–Kruger Effect – when performance and self-assessment can be miscalibrated",
       "description": "The Dunning–Kruger Effect describes a calibration pattern in which lower performers can overestimate their performance or ability. The popular version – that incompetent people are always very confident while experts underestimate themselves – is too broad. The size and shape of the effect depend on the task, measurement, and statistical method.\n\n🔍 Where’s the trap?\n- Learning – a beginner may feel ready after limited practice because they have not yet seen the full difficulty of the task.\n- Work – confidence is treated as evidence of competence instead of being compared with objective performance.\n- Debate – the Dunning–Kruger label is used as an insult for people we disagree with rather than as a question about calibration.\n\n💡 How to avoid it?\n- Compare confidence with objective feedback or repeated performance data.\n- Track calibration: when you say 70% confident, are you right about 70% of the time?\n- Update self-assessment after specific feedback instead of relying on confidence alone.\n- Do not diagnose another person from one confident statement.",
       "reason": "The previous copy repeated the internet shorthand that low competence implies high confidence and experts systematically underestimate themselves. The evidence supports a narrower calibration claim with methodological caveats."
+    },
+    {
+      "id": 97,
+      "slug": "human-robot-interaction-form",
+      "previousTitle": "Form-Function Attribution Bias – when you judge a robot by its looks, not its abilities",
+      "title": "Appearance–Capability Expectation – when a robot’s design changes what you expect it can do",
+      "description": "Appearance–Capability Expectation is this project’s plain-language label for a human–robot interaction pattern, not a standardized bias name. Research shows that robot appearance, morphology, framing, and human-likeness can shape expectations about competence, social behavior, and likely capabilities before users have much direct performance evidence. The direction is not universal: a more humanlike design does not always increase trust or perceived competence.\n\n🔍 Where’s the trap?\n- Humanoid design – a face, hands, or human proportions imply abilities the robot has never demonstrated.\n- Minimal design – a machine that looks simple is assumed to be less capable even when its tested performance is strong.\n- Conversational interfaces – natural speech, a name, or social gestures are mistaken for evidence of general understanding.\n\n💡 How to avoid it?\n- Write down the capabilities the design makes you expect, then check them against observed performance.\n- Separate social presentation from task competence and reliability.\n- Prefer capability matrices, documented limits, and representative tests over visual impressions.\n- For designers, make intended functions and important limitations explicit instead of letting appearance carry the whole message.",
+      "reason": "The previous page presented Form-Function Attribution Bias as an established named cognitive bias. HRI research supports appearance-driven expectations, but this exact label is not standardized in the literature."
     },
     {
       "id": 103,
