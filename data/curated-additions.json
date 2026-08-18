@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": 221,
+      "number": 221,
+      "typeOfBias": "Human-AI Interaction",
+      "title": "Automation Bias – when automated advice replaces independent checking",
+      "description": "Automation Bias is the tendency to let automated cues or recommendations replace vigilant information seeking and verification. It can create commission errors, where a person follows incorrect automated advice, and omission errors, where a person fails to act because the system did not flag a problem. Automation itself can improve overall performance; the bias is inappropriate reliance when the system is wrong, incomplete, or outside its competence.\n\n🔍 Where’s the trap?\n- AI assistants – a fluent recommendation is accepted even though important source data points in another direction.\n- Monitoring – no alert appears, so a real problem is missed because nobody checks the underlying signals.\n- Human oversight – a reviewer is technically 'in the loop' but mostly confirms the automated output instead of independently verifying critical cases.\n\n💡 How to avoid it?\n- Make a provisional judgment or write the decision criteria before seeing automated advice when stakes are high.\n- Verify important recommendations against independent evidence or raw signals, especially when the result is surprising or costly.\n- Learn the system’s known failure modes and use confidence/error information when it is actually calibrated.\n- Reduce verification complexity with checklists, source links, or decomposed workflows rather than telling users to 'be more careful'.",
+      "slug": "human-ai-interaction-automation-bias",
+      "status": "curated",
+      "related": [
+        9,
+        97,
+        170,
+        87
+      ],
+      "updatedAt": "2026-08-18T00:00:00.000Z",
+      "published": true
+    }
+  ]
+}
