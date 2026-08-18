@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "memory-bias-rosy-retrospection",
+      "evidenceStatus": "supported in event-recollection studies; narrower than general nostalgia",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Rosy Retrospection describes a pattern in which later evaluations of a past experience can become more positive than evaluations recorded during the experience itself. The classic work studied specific meaningful events and found more positive anticipation and later recollection than in-the-moment experience. This does not mean that every fond memory is false, that all past periods were worse than remembered, or that nostalgia is itself a bias.",
+      "mechanism": "In the foundational studies, negative thoughts increased during the event because of distractions, disappointment, and less positive self-evaluation, but these influences were short-lived. Later positive recollection can also interact with memory accessibility and interpretation. The evidence is firmer for the observed shift in evaluations than for one universal mechanism that explains every positive memory of the past.",
+      "practical": "When a remembered event is being used as evidence for a current decision, compare the later memory with records made during the event when those records exist: notes, ratings, messages, photos with context, costs, incidents, or repeated measurements. Treat a positive memory as meaningful experience, but do not automatically treat it as an accurate historical average of how the event felt at the time.",
+      "sources": [
+        {
+          "title": "Temporal Adjustments in the Evaluation of Events: The Rosy View",
+          "year": 1997,
+          "type": "three event-evaluation studies",
+          "doi": "10.1006/jesp.1997.1333",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9247371/"
+        },
+        {
+          "title": "On misattributing good remembering to a happy past: An investigation into the cognitive roots of nostalgia",
+          "year": 2006,
+          "type": "memory experiments",
+          "doi": "10.1037/1528-3542.6.4.596",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17144751/"
+        }
+      ]
+    },
+    {
+      "slug": "memory-bias-fading-affect-bias",
+      "evidenceStatus": "supported across autobiographical-memory research, with moderators",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Fading Affect Bias describes an average asymmetry in autobiographical memory: affect linked to negative events tends to weaken faster over time than affect linked to positive events. It is a group-level pattern with important moderators, not a rule that every painful memory becomes mild or positive. Recent large-sample work also finds the pattern when people directly report how the affect of their memories changed, rather than relying only on calculated differences between retrospective ratings.",
+      "mechanism": "The literature describes the pattern rather than one single settled mechanism. Social rehearsal, emotion regulation, meaning making, memory reconstruction, event characteristics, and individual differences can all matter. The useful distinction is that Fading Affect Bias concerns change in emotional intensity associated with autobiographical memories, not a general claim that factual details of the past become more positive.",
+      "practical": "When comparing how a past event felt with how a similar event feels now, separate remembered facts from remembered emotional intensity. If the comparison matters, use contemporaneous records or repeated ratings instead of assuming today's emotional reaction is an unchanged copy of the original experience. Do not use Fading Affect Bias to dismiss persistent negative memories or individual experiences that do not follow the average pattern.",
+      "sources": [
+        {
+          "title": "The Fading Affect Bias: Its History, Its Implications, and Its Future",
+          "year": 2014,
+          "type": "research review",
+          "doi": "10.1016/B978-0-12-800052-6.00003-2",
+          "url": "https://doi.org/10.1016/B978-0-12-800052-6.00003-2"
+        },
+        {
+          "title": "Evidence for a fading affect bias in subjectively assessed affect changes in autobiographical memory",
+          "year": 2025,
+          "type": "large-sample autobiographical-memory study",
+          "doi": "10.3389/fpsyg.2025.1608751",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40792093/"
+        }
+      ]
+    }
+  ]
+}
