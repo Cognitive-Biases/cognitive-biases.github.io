@@ -1,0 +1,27 @@
+name: Research collaboration
+description: Propose evidence review, evaluation, replication-focused synthesis or another research collaboration.
+title: "[Research collaboration] "
+labels: []
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: What can you contribute?
+      description: Methods, data, subject expertise, review capacity or another concrete contribution.
+    validations:
+      required: true
+  - type: textarea
+    id: public_output
+    attributes:
+      label: Proposed public output
+      description: What could be published without exposing confidential or participant data?
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Relevant conflicts, commercial interests or constraints

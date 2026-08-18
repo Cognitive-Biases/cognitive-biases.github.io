@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Cognitive Biases in research, teaching or an integration, please cite the project and record the data release version when relevant."
+title: "Cognitive Biases: a public knowledge library about cognitive biases, evidence and decision making"
+type: dataset
+authors:
+  - family-names: "Kharlanau"
+    given-names: "Dzmitryi"
+url: "https://cognitive-biases.github.io/"
+repository-code: "https://github.com/Cognitive-Biases/cognitive-biases.github.io"
+license: "CC-BY-NC-SA-4.0"
+version: "2026.08.18"
+date-released: 2026-08-18
+keywords:
+  - cognitive biases
+  - decision making
+  - behavioral science
+  - evidence
+  - dataset

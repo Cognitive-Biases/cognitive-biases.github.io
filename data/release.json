@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "releaseVersion": "2026.08.18",
+  "releaseDate": "2026-08-18",
+  "licence": "CC BY-NC-SA 4.0",
+  "compatibility": {
+    "latestAliases": true,
+    "breakingChangesRequireMajorSchemaVersion": true,
+    "stableCanonicalIds": true
+  },
+  "freshness": {
+    "defaultDays": 730,
+    "mixedOrContestedDays": 365,
+    "dueFraction": 0.8
+  },
+  "changes": [
+    "Introduced versioned public release snapshots and checksums.",
+    "Added public schemas, data catalogue, source identity and claim provenance.",
+    "Added evidence freshness, quality metrics, RAG distribution and AI retrieval evaluation.",
+    "Added an MCP reference adapter, search-intent guides, translation review state and contribution workflow."
+  ]
+}
