@@ -19,7 +19,7 @@ The main semantic types are:
 - `BreadcrumbList` for hierarchy;
 - `Article` for reviewed research notes;
 - `Dataset` and `DataDownload` for the public knowledge release;
-- `CollectionPage` and `ItemList` for genuine collections such as Research.
+- `CollectionPage` and `ItemList` for genuine collections such as Research and Decision contexts.
 
 Do not add a schema type simply because it might create a richer search result. The type must match the visible page.
 
@@ -37,9 +37,19 @@ A citation in structured data does not make a claim true. It only makes provenan
 
 ## Crawlability
 
-The public site must remain crawlable, canonical URLs must be stable, and the sitemap must contain the pages we want indexed. `robots.txt` should advertise the sitemap and allow search crawlers used by the project, including OAI-SearchBot for ChatGPT search discovery.
+The public site must remain crawlable, canonical URLs must be stable, and the XML sitemap must contain the pages we want indexed. `robots.txt` should advertise the XML sitemap and allow search crawlers used by the project, including OAI-SearchBot for ChatGPT search discovery.
+
+Research also publishes an Atom feed. It contains the maintained research notes and is advertised as an additional sitemap so crawlers can notice recent research updates without replacing the full XML sitemap.
 
 Alias and retired duplicate pages should continue to point to the canonical record rather than competing with it.
+
+## Honest freshness signals
+
+Use sitemap `lastmod` only when the repository has a reliable date for the last significant content change. A build date is not a content date.
+
+Research notes use their maintained publication or update dates. A resource page without a reliable content date should omit `lastmod` rather than pretend it changed on every deployment.
+
+The same rule applies to feeds: an entry's `updated` value must come from the maintained content record, not from the time the static site happened to rebuild.
 
 ## Multilingual pages
 
@@ -53,6 +63,6 @@ Research notes are valuable search pages only when they add a real synthesis: wh
 
 ## Quality checks
 
-CI should fail when important structured data disappears, source provenance is lost, the dataset no longer exposes downloadable distributions, or old app-first metadata returns.
+CI should fail when important structured data disappears, source provenance is lost, the dataset no longer exposes downloadable distributions, old app-first metadata returns, feed discovery breaks, or sitemap freshness starts using deployment dates as fake content dates.
 
 Search Console and referral data should guide future work, but ranking changes alone are not a reason to weaken scientific wording.
