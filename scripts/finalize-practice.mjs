@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { DATA_OUT, SITE, readJson, writeJson } from "./lib/knowledge.mjs";
 
@@ -43,4 +43,24 @@ if (!quality.includes("Practice Lab coverage")) {
   quality = quality.replace("<h2>Why publish these numbers?</h2>", `<h2>Practice Lab coverage</h2><p>${metrics.practiceSets} practice sets · ${metrics.practiceScenarios} evidence-linked exercises.</p><h2>Why publish these numbers?</h2>`);
   await writeFile(qualityPath, quality);
 }
-console.log("Practice distribution added to the public data catalogue and quality page.");
+
+let navUpdates = 0;
+async function addPracticeNavigation(dir) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) await addPracticeNavigation(path);
+    else if (entry.isFile() && entry.name.endsWith(".html")) {
+      let page = await readFile(path, "utf8");
+      if (!page.includes('<nav aria-label="Primary">') || page.includes('href="/practice/"')) continue;
+      const contextsLink = /(<a href="\/contexts\/"[^>]*>[^<]+<\/a>)/;
+      const exploreLink = /(<a href="\/explore\/"[^>]*>[^<]+<\/a>)/;
+      if (contextsLink.test(page)) page = page.replace(contextsLink, '$1<a href="/practice/">Practice</a>');
+      else if (exploreLink.test(page)) page = page.replace(exploreLink, '$1<a href="/practice/">Practice</a>');
+      else continue;
+      await writeFile(path, page);
+      navUpdates += 1;
+    }
+  }
+}
+await addPracticeNavigation("dist");
+console.log(`Practice distribution finalized; Practice added to ${navUpdates} primary navigation blocks.`);
