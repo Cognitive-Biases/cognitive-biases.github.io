@@ -3,9 +3,10 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const CONFIG_PATH = "data/research-scout-config.json";
 const INBOX_PATH = "data/research-inbox.json";
-const USER_AGENT = "CognitiveBiasesResearchScout/1.0 (https://cognitive-biases.github.io/)";
+const USER_AGENT = "CognitiveBiasesResearchScout/1.1 (https://cognitive-biases.github.io/)";
 
 const compact = (value = "") => String(value).replace(/\s+/g, " ").trim();
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const decodeXml = (value = "") => compact(String(value)
   .replaceAll("&amp;", "&")
   .replaceAll("&lt;", "<")
@@ -19,31 +20,42 @@ const slugPart = (value = "") => value.toLowerCase().replace(/^https?:\/\//, "")
 function relatedConcepts(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
   const related = new Set();
-  if (/large language model|\bllm\b|artificial intelligence|\bai\b|agentic|ai agent/.test(text)) related.add("ai-assisted-decisions");
-  if (/automation bias|automation reliance|decision aid/.test(text)) related.add("false-priors-automation-bias");
+  if (/large language model|\bllm\b|artificial intelligence|\bai\b|agentic|ai agent|ai-assisted/.test(text)) related.add("ai-assisted-decisions");
+  if (/automation bias|automation reliance|decision aid|appropriate reliance/.test(text)) related.add("false-priors-automation-bias");
   if (/anthropomorph|humanlike|human-like|human robot|human-robot/.test(text)) related.add("availability-heuristic-anthropomorphism");
   if (/confirmation bias/.test(text)) related.add("cognitive-bias-confirmation-bias");
+  if (/anchor|anchoring/.test(text)) related.add("cognitive-bias-anchoring-bias");
   if (/forecast|prediction|prospection/.test(text)) related.add("forecasting-future-choices");
   return [...related];
+}
+
+function isCoreRelevant(candidate) {
+  const title = String(candidate.title || "").toLowerCase();
+  if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(title)) return false;
+  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|automation bias|confirmation bias|anchoring|anchor effect|framing effect|hindsight bias|outcome bias|sunk cost|anthropomorph/.test(title)) return true;
+  const ai = /large language model|\bllm\b|artificial intelligence|\bai[- ]assisted\b|agentic/.test(title);
+  const decision = /decision|judgment|judgement|reasoning|reliance|trust|heuristic|bias/.test(title);
+  return ai && decision;
 }
 
 function scoreCandidate(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
   let score = 0;
-  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias/.test(text)) score += 3;
-  if (/systematic review|meta-analysis|meta analysis|replication|registered report/.test(text)) score += 4;
-  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent/.test(text)) score += 3;
-  if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph/.test(text)) score += 2;
+  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|anchoring effect/.test(text)) score += 3;
+  if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) score += 4;
+  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) score += 3;
+  if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph|anchoring/.test(text)) score += 2;
   if (/benchmark|dataset|evaluation/.test(text)) score += 1;
   if (/editorial|opinion|commentary/.test(text)) score -= 2;
+  if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(text)) score -= 5;
   return score;
 }
 
 function whyItMatters(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
-  if (/systematic review|meta-analysis|meta analysis/.test(text)) return "Potentially high-signal review that may confirm, narrow, or challenge claims already in the library.";
+  if (/systematic review|structured review|scoping review|meta-analysis|meta analysis/.test(text)) return "Potentially high-signal review that may confirm, narrow, or challenge claims already in the library.";
   if (/replication|registered report/.test(text)) return "Potential replication evidence worth comparing with the current evidence status and qualifications.";
-  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent/.test(text)) return "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.";
+  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) return "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.";
   if (/forecast|decision making|decision-making|judgment|judgement/.test(text)) return "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.";
   return "Potential research update that passed the scout relevance threshold and needs editorial review.";
 }
@@ -64,10 +76,16 @@ function parseArxiv(xml) {
   }).filter((item) => item.title && item.url);
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
-  return response.json();
+async function fetchJson(url, retries = 2) {
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    const response = await fetch(url, { headers: { "User-Agent": USER_AGENT, Accept: "application/json" } });
+    if (response.ok) return response.json();
+    const retryable = response.status === 429 || response.status >= 500;
+    if (!retryable || attempt === retries) throw new Error(`${response.status} ${response.statusText} for ${url}`);
+    const retryAfter = Number(response.headers.get("retry-after"));
+    await sleep(Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 700 * (attempt + 1));
+  }
+  throw new Error(`Could not fetch ${url}`);
 }
 
 async function collectArxiv(query) {
@@ -90,6 +108,7 @@ async function collectPubMed(query) {
   const ids = searchJson.esearchresult?.idlist || [];
   if (!ids.length) return [];
 
+  await sleep(450);
   const summary = new URL("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi");
   summary.searchParams.set("db", "pubmed");
   summary.searchParams.set("retmode", "json");
@@ -103,7 +122,7 @@ async function collectPubMed(query) {
     return {
       id: `pubmed-${uid}`,
       source: "PubMed",
-      sourceType: record.pubtype?.some((type) => /meta-analysis|systematic review/i.test(type)) ? "review" : "journal article",
+      sourceType: record.pubtype?.some((type) => /meta-analysis|systematic review|review/i.test(type)) ? "review" : "journal article",
       title: compact(record.title || ""),
       summary: "",
       publishedAt: compact(record.pubdate || ""),
@@ -142,8 +161,20 @@ function normalizeCandidate(candidate) {
 function selfTest() {
   const sample = { title: "A systematic review of cognitive bias in large language models", summary: "A benchmark of decision making and automation bias." };
   assert.ok(scoreCandidate(sample) >= 10);
+  assert.equal(isCoreRelevant(sample), true);
   assert.ok(relatedConcepts(sample).includes("ai-assisted-decisions"));
   assert.ok(relatedConcepts(sample).includes("false-priors-automation-bias"));
+
+  const anchor = { title: "AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs", summary: "Controlled anchoring tests." };
+  assert.equal(isCoreRelevant(anchor), true);
+  assert.ok(relatedConcepts(anchor).includes("cognitive-bias-anchoring-bias"));
+
+  const vrFalsePositive = { title: "Quality Action Assurance: Multimodal Verification of Examiner Claims in VR OSCEs", summary: "Examiner subjectivity, cognitive bias and an LLM verifier." };
+  assert.equal(isCoreRelevant(vrFalsePositive), false);
+
+  const attack = { title: "Decision-Level Hijacking: Injecting Cognitive Bias into Large Language Models via Bit-Flip Attacks", summary: "Adversarial weight manipulation." };
+  assert.equal(isCoreRelevant(attack), false);
+
   const parsed = parseArxiv(`<feed><entry><id>http://arxiv.org/abs/2608.12345v2</id><published>2026-08-17T00:00:00Z</published><title> Cognitive bias in agents </title><summary> Test summary. </summary></entry></feed>`);
   assert.equal(parsed[0].id, "arxiv-2608.12345");
   assert.equal(parsed[0].url, "https://arxiv.org/abs/2608.12345");
@@ -175,6 +206,7 @@ for (const query of config.pubmedQueries || []) {
   } catch (error) {
     console.warn(`PubMed scout warning: ${error.message}`);
   }
+  await sleep(500);
 }
 if (!successfulSources) throw new Error("Research scout could not reach any configured source.");
 
@@ -182,6 +214,7 @@ const existingKeys = new Set((inbox.items || []).flatMap((item) => [item.id, ite
 const candidateMap = new Map();
 for (const raw of collected) {
   if (!withinLookback(raw, config.lookbackDays || 45)) continue;
+  if (!isCoreRelevant(raw)) continue;
   const candidate = normalizeCandidate(raw);
   if (candidate.score < (config.scoreThreshold || 5)) continue;
   const keys = [candidate.id, candidate.url, candidate.doi].filter(Boolean).map((value) => String(value).toLowerCase());

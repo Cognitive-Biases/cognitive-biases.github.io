@@ -76,6 +76,8 @@ Each candidate should contain:
 
 This allows the project to remember what it has already seen and avoids repeatedly researching the same headline.
 
+The inbox is an internal editorial queue. It is not part of the public data release, so adding a candidate does not publish a scientific claim.
+
 ## Writing rules
 
 Do not produce generic summaries such as "Researchers discovered an interesting cognitive bias".
@@ -112,10 +114,10 @@ The agent must not:
 
 The repository includes a scheduled `Research Scout` workflow. It runs once a week and can also be started manually.
 
-The scout currently searches configured arXiv and PubMed queries, scores candidates for relevance, removes records already present in the inbox, and adds only a small number of recent candidates. The queries, lookback window, score threshold and maximum batch size live in `data/research-scout-config.json`.
+The scout searches configured arXiv and PubMed queries, scores candidates for relevance, removes records already present in the inbox, and adds only a small number of recent candidates. The queries, lookback window, score threshold and maximum batch size live in `data/research-scout-config.json`.
 
-The scout deliberately stores metadata and our own relevance note rather than copying source abstracts into the project.
+The scout deliberately stores metadata and our own relevance note rather than copying source abstracts into the project. Title-level scope checks keep papers out when cognitive bias is only incidental to the work, and obvious adversarial-security papers are outside the current editorial scope.
 
-When new candidates are found, the workflow pushes an isolated review branch and attempts to open a pull request. It does not change evidence status, public research notes or canonical bias pages. Those changes remain part of the editorial review loop.
+When new candidates are found, the workflow commits only `data/research-inbox.json`. It first tries to persist that internal queue directly on `main`. If branch protection rejects the update, it pushes a fallback `research-scout/<run-id>` branch instead. It never changes evidence status, public research notes or canonical bias pages automatically.
 
 A later analysis stage may use an AI model to help compare a candidate with the existing corpus, but discovery remains provider-neutral and a model must not be allowed to turn an abstract into an automatic scientific conclusion.
