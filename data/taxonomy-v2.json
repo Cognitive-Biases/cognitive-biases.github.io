@@ -142,12 +142,11 @@
     "101": ["forecasting-future-choices"],
     "111": ["work-project-decisions", "reviewing-kpis-proxy-metrics"],
     "118": ["forecasting-future-choices"],
-    "121": ["reviewing-kpis-proxy-metrics"],
     "123": ["reviewing-kpis-proxy-metrics"],
     "140": ["work-project-decisions"],
     "170": ["reviewing-kpis-proxy-metrics"],
     "220": ["comparing-plans-pricing"],
-    "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"],
+    "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing", "reviewing-kpis-proxy-metrics"],
     "223": ["work-project-decisions", "continue-change-stop-project"],
     "224": ["presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"]
   }
