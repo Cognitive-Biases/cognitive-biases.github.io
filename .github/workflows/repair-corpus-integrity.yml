@@ -2,7 +2,7 @@ name: Repair corpus integrity
 
 on:
   push:
-    branches: [agent/taxonomy-audit]
+    branches: [main, agent/taxonomy-audit]
 
 permissions:
   contents: write
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: agent/taxonomy-audit
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
@@ -32,4 +32,4 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/biases.json
           git commit -m "Repair corpus data integrity"
-          git push origin HEAD:agent/taxonomy-audit
+          git push origin HEAD:${{ github.ref_name }}
