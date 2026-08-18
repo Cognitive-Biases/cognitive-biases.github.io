@@ -23,29 +23,12 @@ const familyHubCount = [...familyCounts.values()].filter((count) => count >= tax
 const html = await readFile(resolve("dist", "index.html"), "utf8");
 
 if (html.includes("Educational mobile app + public reference")) throw new Error("Homepage regressed to the legacy app-first positioning.");
-if (!html.includes("Decision tools + evidence-reviewed reference") || !html.includes("Notice the pattern.<br>Test the decision.")) {
-  throw new Error("Homepage decision-system hero is missing.");
-}
-for (const route of ["/tools/decision-audit/", "/contexts/", "/evidence/", "/compare/", "/explore/", "/kinds/"]) {
-  if (!html.includes(`href="${route}"`)) throw new Error(`Homepage is missing product route ${route}.`);
-}
-if (!html.includes("play.google.com/store/apps/details?id=cognitivebiases.thinking.psychology")) {
-  throw new Error("Homepage no longer exposes the mobile app as a secondary companion.");
-}
+if (!html.includes("Decision tools + evidence-reviewed reference") || !html.includes("Notice the pattern.<br>Test the decision.")) throw new Error("Homepage decision-system hero is missing.");
+for (const route of ["/tools/decision-audit/","/contexts/","/evidence/","/compare/","/explore/","/kinds/","/research/","/data/"]) if (!html.includes(`href="${route}"`)) throw new Error(`Homepage is missing product route ${route}.`);
+if (html.includes("play.google.com/store/apps/details?id=cognitivebiases.thinking.psychology")) throw new Error("Homepage still promotes the legacy mobile app.");
 
-const expectedStrings = [
-  `${auditEligible.length} reviewed lenses`,
-  `${contexts.entries.length} curated starting points`,
-  `${reviews.length} source-grounded reviews`,
-  `${comparisons.entries.length} reviewed comparisons`,
-  `<strong>${canonicalBiases.length}</strong><span>canonical entries</span>`,
-  `<strong>${reviews.length}</strong><span>evidence-reviewed</span>`,
-  `<strong>${familyHubCount}</strong><span>mechanism families</span>`,
-];
-for (const expected of expectedStrings) {
-  if (!html.includes(expected)) throw new Error(`Homepage live metric/content is stale: ${expected}`);
-}
-
+const expectedStrings = [`${auditEligible.length} reviewed lenses`,`${contexts.entries.length} curated starting points`,`${reviews.length} source-grounded reviews`,`${comparisons.entries.length} reviewed comparisons`,`<strong>${canonicalBiases.length}</strong><span>canonical entries</span>`,`<strong>${reviews.length}</strong><span>evidence-reviewed</span>`,`<strong>${familyHubCount}</strong><span>mechanism families</span>`];
+for (const expected of expectedStrings) if (!html.includes(expected)) throw new Error(`Homepage live metric/content is stale: ${expected}`);
 if (!html.includes("Recognize → Test → Counter → Decide.")) throw new Error("Homepage is missing the product decision loop.");
 if (!html.includes("Drafts stay in your browser")) throw new Error("Homepage is missing the local-first Audit disclosure.");
 if (!html.includes("<title>Cognitive Biases | Decision tools, evidence & bias reference</title>")) throw new Error("Homepage title is not aligned to the decision-system positioning.");
