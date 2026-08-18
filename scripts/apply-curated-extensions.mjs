@@ -33,6 +33,10 @@ async function mergeEntries({ targetPath, filePattern, updatedAt = false }) {
   return { files: files.length, added, updated };
 }
 
+const contexts = await mergeEntries({
+  targetPath: "data/contexts.json",
+  filePattern: /^contexts-[a-z0-9-]+\.json$/i
+});
 const comparisons = await mergeEntries({
   targetPath: "data/comparisons.json",
   filePattern: /^comparisons-[a-z0-9-]+\.json$/i
@@ -43,4 +47,4 @@ const research = await mergeEntries({
   updatedAt: true
 });
 
-console.log(`Curated extensions applied: comparisons ${comparisons.added} added/${comparisons.updated} updated from ${comparisons.files} file(s); research ${research.added} added/${research.updated} updated from ${research.files} file(s).`);
+console.log(`Curated extensions applied: contexts ${contexts.added} added/${contexts.updated} updated from ${contexts.files} file(s); comparisons ${comparisons.added} added/${comparisons.updated} updated from ${comparisons.files} file(s); research ${research.added} added/${research.updated} updated from ${research.files} file(s).`);
