@@ -49,14 +49,14 @@
       "useWhen": [
         "A vivid recent example is dominating a probability estimate.",
         "A broad event looks less likely than the sum of its possible forms.",
-        "A current mood, appetite, or preference is shaping a long-term commitment.",
+        "A current mood, appetite, pain level, craving, or preference is shaping a long-term commitment.",
         "A future event is expected to make life dramatically better or worse for a long time.",
         "The finished outcome now feels much more predictable than it did beforehand."
       ],
       "workflow": [
         "Write the packed event first, then unpack it into mutually exclusive possibilities and compare the totals.",
         "Check a base rate or reference class before using vivid examples as the probability estimate.",
-        "Record the current state that may be contaminating a forecast of future preferences.",
+        "Record the current state and the future state you are trying to predict; note where motives, cravings, pain, fear, or arousal may differ.",
         "Forecast emotional intensity and duration separately, including what an ordinary week around the event will contain.",
         "Store the forecast before the outcome so retrospective learning does not depend on reconstructed memory."
       ],
@@ -76,6 +76,10 @@
         {
           "slug": "cognitive-bias-impact-bias",
           "question": "Am I forecasting the focal event while forgetting the rest of ordinary future life?"
+        },
+        {
+          "slug": "self-assessment-hot",
+          "question": "Am I predicting choices in a future hot or cold state from a state with different motives, cravings, pain, fear, or arousal?"
         },
         {
           "slug": "cognitive-bias-hindsight-bias",

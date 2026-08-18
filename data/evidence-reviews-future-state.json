@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "self-assessment-hot",
+      "evidenceStatus": "well established across state-dependent judgment research",
+      "reviewedAt": "2026-08-18",
+      "qualification": "The hot–cold empathy gap describes difficulty predicting preferences, behavior, or experience across different visceral or affective states. In a relatively cold state, people can underappreciate how pain, hunger, sexual arousal, craving, fear, anger, and other hot states will change motivation and choice; in a hot state, they can also overproject the current state into the future. The pattern can be intrapersonal or interpersonal and should not be reduced to a generic claim that emotion always causes bad decisions.",
+      "mechanism": "Visceral and affective states change the relative desirability and salience of actions. Forecasts made outside the target state rely on an incomplete simulation of those motivational changes. The empathy-gap framework overlaps with projection bias and affective forecasting, but focuses specifically on failures to appreciate state-dependent changes rather than on every error in predicting future feelings or preferences.",
+      "practical": "For a consequential decision that will be made or lived through in a different state, identify the relevant state explicitly and gather evidence from people or past episodes in that state. Use precommitments for predictable hot-state choices, but keep an escape route when the future state contains information the cold-state planner could not know. In interpersonal decisions, ask what the other person's current pain, craving, fear, or arousal changes rather than assuming your present state is a neutral reference point.",
+      "sources": [
+        {
+          "title": "Out of Control: Visceral Influences on Behavior",
+          "year": 1996,
+          "type": "foundational theory / evidence synthesis",
+          "doi": "10.1006/obhd.1996.0028",
+          "url": "https://doi.org/10.1006/obhd.1996.0028"
+        },
+        {
+          "title": "Hot-cold empathy gaps and medical decision making",
+          "year": 2005,
+          "type": "review",
+          "doi": "10.1037/0278-6133.24.4.S49",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16045419/"
+        },
+        {
+          "title": "fMRI evidence of a hot-cold empathy gap in hypothetical and real aversive choices",
+          "year": 2013,
+          "type": "behavioral experiment + neuroimaging",
+          "doi": "10.3389/fnins.2013.00104",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3677130/"
+        }
+      ]
+    }
+  ]
+}

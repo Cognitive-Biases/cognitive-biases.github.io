@@ -41,6 +41,10 @@
     "time-commitment": {
       "label": "Time & commitment",
       "description": "Patterns involving temporal preference, persistence, escalation, and commitment dynamics."
+    },
+    "future-state-forecasting": {
+      "label": "Future state forecasting",
+      "description": "Patterns involving predictions about future feelings, preferences, and behavior when current or imagined states are an imperfect guide to the future state."
     }
   },
   "directCategoryFamily": {
@@ -65,6 +69,7 @@
   },
   "recordFamilyOverrides": {
     "51": "attention-information",
+    "81": "future-state-forecasting",
     "90": "valuation-choice",
     "91": "reasoning-flexibility",
     "92": "reasoning-flexibility",
@@ -74,6 +79,7 @@
     "98": "social-judgment",
     "99": "memory-retrieval",
     "100": "memory-retrieval",
+    "101": "future-state-forecasting",
     "102": "attention-information",
     "104": "valuation-choice",
     "105": "social-judgment",
@@ -88,6 +94,7 @@
     "115": "valuation-choice",
     "116": "probability-risk",
     "117": "belief-updating",
+    "118": "future-state-forecasting",
     "119": "perception-patterns",
     "120": "attention-information",
     "122": "probability-risk",
@@ -103,6 +110,9 @@
   "recordContexts": {
     "9": ["human-ai-interaction"],
     "51": ["human-ai-interaction"],
-    "97": ["human-robot-interaction", "human-ai-interaction"]
+    "81": ["forecasting-future-choices"],
+    "97": ["human-robot-interaction", "human-ai-interaction"],
+    "101": ["forecasting-future-choices"],
+    "118": ["forecasting-future-choices"]
   }
 }
