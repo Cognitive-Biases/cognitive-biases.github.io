@@ -2,8 +2,8 @@ import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const EXPECTED = [
-  { id: 94, slug: "cognitive-bias-declinism", kind: "phenomenon", auditEligible: true },
-  { id: 121, slug: "cognitive-bias-systematic-bias", kind: "phenomenon", auditEligible: false },
+  { id: 94, slug: "cognitive-bias-declinism", kind: "phenomenon", auditEligible: true, family: null },
+  { id: 121, slug: "cognitive-bias-systematic-bias", kind: "measurement", auditEligible: false, family: "measurement-methods" },
 ];
 
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
@@ -24,6 +24,8 @@ for (const expected of EXPECTED) {
   const review = reviewBySlug.get(expected.slug);
   if (!review) throw new Error(`${expected.slug}: evidence review is missing.`);
   if (kinds.recordKindOverrides?.[String(expected.id)] !== expected.kind) throw new Error(`${expected.slug}: expected kind ${expected.kind}.`);
+  const actualFamily = taxonomy.recordFamilyOverrides?.[String(expected.id)] || null;
+  if (actualFamily !== expected.family) throw new Error(`${expected.slug}: expected family ${expected.family || "unresolved"}, found ${actualFamily || "unresolved"}.`);
   const actualEligibility = review.auditEligible !== false;
   if (actualEligibility !== expected.auditEligible) throw new Error(`${expected.slug}: unexpected Decision Audit eligibility.`);
 
@@ -45,5 +47,6 @@ const unresolvedWithoutReview = unresolved.filter((bias) => !reviewBySlug.has(bi
 if (unresolvedWithoutReview.length) {
   throw new Error(`Generic family queue still contains unreviewed records: ${unresolvedWithoutReview.map((bias) => `#${bias.id} ${bias.slug}`).join(", ")}`);
 }
+if (unresolved.some((bias) => bias.id === 121)) throw new Error("Systematic Bias #121 must no longer remain in the generic family queue.");
 
-console.log(`Generic concept check passed: ${unresolved.length} family-unresolved generic records are now all evidence-reviewed; Declinism remains audit-eligible and Systematic Bias remains evidence-only.`);
+console.log(`Generic concept check passed: ${unresolved.length} family-unresolved generic records are all evidence-reviewed; Declinism remains audit-eligible and Systematic Bias is explicitly classified as a measurement concept outside Decision Audit.`);
