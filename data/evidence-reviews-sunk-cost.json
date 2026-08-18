@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-sunk-cost-effect",
+      "evidenceStatus": "well-supported overall; strength varies by decision type and context",
+      "reviewedAt": "2026-08-18",
+      "qualification": "The sunk cost effect is a documented tendency for irrecoverable prior investments of money, time, or effort to influence later choices. A meta-analytic review found clear evidence for the effect overall, while also showing that its size and moderators differ between utilization decisions and progress decisions. The effect should not be used to label every choice to continue: future value, switching costs, uncertainty, and how close a project is to useful completion can all be relevant to a forward-looking decision.",
+      "mechanism": "Classic experiments linked sunk-cost behavior to reluctance to appear wasteful, while later work has connected it to several decision processes rather than one universal mechanism. In project settings, sunk costs can interact with the perceived need to complete the work. That interaction helps explain why sunk costs are one possible antecedent of escalation of commitment rather than a complete explanation for every escalation case.",
+      "practical": "For a current choice, put irrecoverable past costs in a separate line and evaluate the remaining options using costs and benefits from today forward. Compare continuing with the best realistic alternative use of the remaining money, time, and attention. If completion itself creates future value, include that value explicitly instead of treating 'we are already close' as either automatically rational or automatically biased.",
+      "sources": [
+        {
+          "title": "The psychology of sunk cost",
+          "year": 1985,
+          "type": "field study and experiments",
+          "doi": "10.1016/0749-5978(85)90049-4",
+          "url": "https://doi.org/10.1016/0749-5978(85)90049-4"
+        },
+        {
+          "title": "Looking forward and looking back: integrating completion and sunk-cost effects within an escalation-of-commitment progress decision",
+          "year": 2001,
+          "type": "experimental study",
+          "doi": "10.1037/0021-9010.86.1.104",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11302222/"
+        },
+        {
+          "title": "On the sunk-cost effect in economic decision-making: a meta-analytic review",
+          "year": 2015,
+          "type": "meta-analysis",
+          "doi": "10.1007/s40685-014-0014-8",
+          "url": "https://doi.org/10.1007/s40685-014-0014-8"
+        }
+      ]
+    }
+  ]
+}
