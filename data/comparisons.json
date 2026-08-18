@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "hindsight-bias-vs-outcome-bias",
+      "leftSlug": "cognitive-bias-hindsight-bias",
+      "rightSlug": "cognitive-bias-outcome-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Hindsight Bias vs Outcome Bias",
+      "summary": "Both distort retrospective judgment after the result is known, but they target different questions. Hindsight bias makes the result look more predictable in retrospect; outcome bias makes the decision itself look better or worse because the result was good or bad.",
+      "keyDifference": "Ask what changed after the outcome became known: your estimate of how predictable the result was, or your evaluation of the decision process?",
+      "dimensions": [
+        {
+          "dimension": "Core judgment",
+          "left": "How likely or predictable did this outcome seem before it happened?",
+          "right": "How good was the decision, reasoning, or decision-maker?"
+        },
+        {
+          "dimension": "Typical retrospective error",
+          "left": "The observed outcome now feels more foreseeable or inevitable than it was in foresight.",
+          "right": "A lucky result upgrades the decision; an unlucky result downgrades it, even when the original information is unchanged."
+        },
+        {
+          "dimension": "Best pre-outcome record",
+          "left": "Forecast, probability estimate, scenario range, or written prediction.",
+          "right": "Decision rationale, information set, alternatives considered, expected values, and decision rule."
+        },
+        {
+          "dimension": "What the outcome should be used for",
+          "left": "Update future forecasting models without pretending the past was obvious.",
+          "right": "Update models and assumptions without rewriting the quality of the original process solely from luck."
+        }
+      ],
+      "diagnostic": [
+        "Hide the outcome and reconstruct what was knowable at the decision time.",
+        "Write the probability you would have assigned before the outcome. Compare it with any actual forecast that exists.",
+        "Score the decision process using only the information, alternatives, and constraints available at the time.",
+        "Reveal the outcome and update your model separately. If the outcome changes the forecast-memory judgment, suspect hindsight bias; if it changes the process-quality score, suspect outcome bias."
+      ],
+      "examples": [
+        {
+          "title": "Product launch",
+          "left": "After a failed launch, the team says the failure was obvious from the warning signs, even though the pre-launch forecast gave failure a modest probability.",
+          "right": "The same team concludes that launching was a bad decision solely because the launch failed, even if the expected-value case and evidence available at the time were reasonable."
+        },
+        {
+          "title": "Incident review",
+          "left": "Once the failure path is known, weak signals in the logs suddenly look like an unmistakable chain that anyone should have predicted.",
+          "right": "A responder's earlier choice is rated as incompetent because the incident worsened, even though the same choice might have been judged sound under the information available then."
+        },
+        {
+          "title": "Hiring decision",
+          "left": "After a hire performs badly, interview concerns are remembered as clearer and more predictive than they appeared during selection.",
+          "right": "The hiring process is judged poor because this person failed, without asking whether the process was calibrated across many hires or whether this outcome was partly noise."
+        }
+      ],
+      "reviewProtocol": [
+        "Freeze the outcome temporarily.",
+        "Reconstruct the original information set and realistic alternatives.",
+        "Score forecast quality and decision-process quality separately.",
+        "Only then reveal the outcome and record what it teaches about the model, assumptions, or environment.",
+        "Compare the retrospective story with contemporaneous notes. If there are no notes, mark the reconstruction as uncertain rather than treating memory as a recording."
+      ],
+      "sources": [
+        {
+          "title": "Fifty years of hindsight bias research—Reflection on Fischhoff (1975)",
+          "year": 2025,
+          "doi": "10.1037/xhp0001232",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39913490/"
+        },
+        {
+          "title": "Outcome bias in decision evaluation",
+          "year": 1988,
+          "doi": "10.1037/0022-3514.54.4.569",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
+        },
+        {
+          "title": "Outcomes Affect Evaluations of Decision Quality: Replication and Extensions of Baron and Hershey's (1988) Outcome Bias Experiment 1",
+          "year": 2023,
+          "doi": "10.5334/irsp.751",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40951810/"
+        }
+      ]
+    }
+  ]
+}
