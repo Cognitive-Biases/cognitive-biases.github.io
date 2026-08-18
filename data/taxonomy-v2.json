@@ -115,7 +115,8 @@
     "166": "attention-information",
     "170": "belief-updating",
     "222": "valuation-choice",
-    "223": "time-commitment"
+    "223": "time-commitment",
+    "225": "valuation-choice"
   },
   "recordContexts": {
     "9": ["human-ai-interaction"],
@@ -133,6 +134,7 @@
     "220": ["comparing-plans-pricing"],
     "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"],
     "223": ["work-project-decisions", "continue-change-stop-project"],
-    "224": ["presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"]
+    "224": ["presenting-risk-options", "defaults-settings-choice-architecture", "comparing-plans-pricing"],
+    "225": ["presenting-risk-options", "continue-change-stop-project"]
   }
 }
