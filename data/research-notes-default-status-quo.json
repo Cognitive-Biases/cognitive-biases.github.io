@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "defaults-status-quo-preference-choice-architecture",
+      "title": "Defaults and status quo: why staying does not prove preference",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Defaults often change what people choose, but staying with a pre-selected or existing option does not by itself show strong preference. The useful question is what made the option sticky and whether the result still serves the person's goals.",
+      "sections": [
+        {
+          "heading": "Defaults have a real effect, but not one fixed effect",
+          "paragraphs": [
+            "A default is the option that applies when a person does not actively choose something else. Across many studies, making an option the default increases its uptake. A 2019 meta-analysis of 58 studies found a substantial average effect, but also large variation between studies. Some defaults were very influential, some had small effects, and a few moved behaviour in the opposite direction.",
+            "This variation matters for product and policy work. A team should not copy a famous opt-in or opt-out example and assume the same effect will appear in a different decision. The setting, population, friction, trust and meaning of the default all matter."
+          ]
+        },
+        {
+          "heading": "Why a default can be sticky",
+          "paragraphs": [
+            "Research suggests several routes rather than one universal mechanism. Changing the default can require effort or attention. People can also read a pre-selected option as a recommendation from the person or organisation that designed the choice. And when the default feels like the current state, moving away from it can be evaluated as a change from what is already owned or expected.",
+            "These explanations can overlap. That is why a high uptake rate does not tell us, by itself, whether people stayed because they preferred the option, trusted the designer, avoided effort, missed the choice, or treated the starting state as a reference point."
+          ]
+        },
+        {
+          "heading": "Default effect and status quo bias overlap, but they are not synonyms",
+          "paragraphs": [
+            "Status quo bias is broader. It describes extra preference for the option that is already current. A current software system, bank or work process can be a status quo even when no new screen or policy deliberately pre-selects it.",
+            "A default can create or reinforce a status quo, but it can also operate through other channels such as recommendation or effort. For diagnosis, first ask what happens under inaction. Then ask whether the person already had a current option before the choice was presented."
+          ]
+        },
+        {
+          "heading": "Why uptake is not the same as welfare",
+          "paragraphs": [
+            "Defaults are useful because every system needs some starting behaviour. That also gives the designer responsibility. If changing the default is obscure or costly, observed persistence can partly measure friction rather than informed preference.",
+            "Recent reviews of choice architecture emphasise that effects can vary or even become counterproductive across settings. Research on downstream default effects also shows that we know less about what happens after the immediate choice than the popularity of defaults may suggest. A good design should therefore measure more than the first click."
+          ]
+        },
+        {
+          "heading": "A practical review for products and policies",
+          "paragraphs": [
+            "Start by writing the no-action outcome in plain language. Make important alternatives visible, keep switching reasonably easy, and separate a user's genuine switching costs from interface friction. If the decision is consequential, compare the default with an active-choice condition or another defensible default when testing is possible.",
+            "Then ask whether other choice effects are mixed into the design. A suggested number can anchor judgment, and equivalent gain or loss wording can frame the same outcome differently. Calling every change a default effect hides what the interface is actually doing."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We now treat Default Effect and Status Quo Bias as separate reviewed concepts and compare them directly. We also added a Defaults, settings & choice architecture context that connects them with Framing and Anchoring.",
+            "The main rule is deliberately simple: do not read preference directly from persistence. First identify the starting state, the cost of changing it, the information people saw and the alternatives they could realistically choose."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Status quo bias in decision making","year":1988,"type":"foundational experiments and field evidence","doi":"10.1007/BF00055564","url":"https://doi.org/10.1007/BF00055564"},
+        {"title":"Recommendations Implicit in Policy Defaults","year":2006,"type":"experiments","doi":"10.1111/j.1467-9280.2006.01721.x","url":"https://doi.org/10.1111/j.1467-9280.2006.01721.x"},
+        {"title":"Limited attention and status quo bias","year":2017,"type":"model and laboratory experiments","doi":"10.1016/j.jet.2017.01.009","url":"https://doi.org/10.1016/j.jet.2017.01.009"},
+        {"title":"When and why defaults influence decisions: a meta-analysis of default effects","year":2019,"type":"meta-analysis","doi":"10.1017/bpp.2018.43","url":"https://doi.org/10.1017/bpp.2018.43"},
+        {"title":"Generalizability of choice architecture interventions","year":2025,"type":"research review","doi":"10.1038/s44159-025-00471-9","url":"https://doi.org/10.1038/s44159-025-00471-9"},
+        {"title":"How default choice architecture impacts downstream behavior: A taxonomy, theoretical framework, and research agenda","year":2026,"type":"research review","doi":"10.1002/arcp.70007","url":"https://doi.org/10.1002/arcp.70007"}
+      ],
+      "related": ["framing-effect-default-effect","prospect-theory-status-quo-bias","framing-effect-core","cognitive-bias-anchoring-effect"]
+    }
+  ]
+}
