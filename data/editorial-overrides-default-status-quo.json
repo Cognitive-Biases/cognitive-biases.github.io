@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 58,
+      "slug": "framing-effect-default-effect",
+      "previousTitle": "Default Effect – when you stick with the pre-set option",
+      "title": "Default Effect – when a pre-selected option changes what people choose",
+      "description": "Default Effect is the tendency for people to choose an option more often when it is already selected or happens automatically if they do nothing.\n\nWhere can it show up?\n- Forms and settings: one option is already checked, so leaving the page unchanged selects it.\n- Subscriptions and saving plans: enrolment, renewal, contribution levels or permissions can depend on whether the person must opt in or opt out.\n- Digital products: a privacy, notification or AI setting may become widely used simply because it was the starting configuration.\n\nA better check\n- Make the default visible and make changing it easy.\n- Compare the result with an active-choice version when the decision matters.\n- Do not treat staying with the default as proof that people strongly prefer it.\n- Ask whether the default fits the user's likely interests, not only the choice architect's goals.\n- Test the design in the real context. Default effects are well documented, but their size varies substantially.",
+      "reason": "The legacy page treated defaults mainly as a trap and implied that a pre-selected option probably benefits the designer. The evidence supports a strong but highly variable default effect with several possible mechanisms, so the new copy separates the observed effect from assumptions about motive or welfare."
+    },
+    {
+      "id": 78,
+      "slug": "prospect-theory-status-quo-bias",
+      "previousTitle": "Status Quo Bias – when you resist change, even if it’s better",
+      "title": "Status Quo Bias – when the current option gets extra weight because it is already in place",
+      "description": "Status Quo Bias is a tendency to favour the current option more than we would if the same options were presented without one already being in place.\n\nWhere can it show up?\n- Services and software: a team keeps the current provider or system even after alternatives become competitive.\n- Personal finance: an old allocation, bank or plan remains unchanged because switching requires attention and a fresh decision.\n- Work processes: a familiar workflow survives because it is the starting point, not because it was recently compared with the alternatives.\n\nA better check\n- Ask what you would choose today if none of the options were already yours.\n- Separate real switching costs, risk and setup work from simple familiarity.\n- Compare the current option with realistic alternatives using the same criteria.\n- Do not assume that staying is irrational. Keeping the current option can be sensible when switching costs or uncertainty are genuinely important.",
+      "reason": "The legacy page defined status quo bias as resisting change even when change is better, which assumes the conclusion before the alternatives are properly compared. The revised copy defines the extra weight given to the current option while preserving legitimate reasons for staying."
+    }
+  ]
+}
