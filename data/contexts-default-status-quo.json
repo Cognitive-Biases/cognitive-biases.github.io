@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "defaults-settings-choice-architecture",
+      "title": "Defaults, settings & choice architecture",
+      "summary": "Use these evidence-reviewed lenses when a form, product, policy or system decides what happens if a person does nothing, or when an existing setting is difficult to reconsider.",
+      "useWhen": [
+        "A checkbox, permission, subscription or contribution is already selected before the user makes a choice.",
+        "A product team is deciding what the starting settings should be for a new user.",
+        "People rarely change a setting and the team is treating that as proof that the setting is preferred.",
+        "An old workflow or service remains in place even though alternatives now exist.",
+        "A recommendation, suggested number or wording may be influencing the choice alongside the default."
+      ],
+      "workflow": [
+        "Write down what happens if the person takes no action. Make the default explicit before discussing conversion or uptake.",
+        "Separate the designed default from the existing status quo. They can be the same option, but they do not have to be.",
+        "Make important alternatives visible and keep switching reasonably easy. Friction can create persistence without strong preference.",
+        "When possible, compare the design with active choice or another default while keeping the underlying options the same.",
+        "Check whether wording, recommended values or starting numbers are also changing the decision. Do not attribute every difference to the default.",
+        "Evaluate whether the resulting choice serves the user's goals. Uptake alone is not enough to establish welfare or informed preference."
+      ],
+      "lenses": [
+        {"slug":"framing-effect-default-effect","question":"What happens automatically if the person does nothing, and how much does that pre-selection change uptake?"},
+        {"slug":"prospect-theory-status-quo-bias","question":"Is the current option getting extra weight simply because it is already in place?"},
+        {"slug":"cognitive-bias-framing-effect","question":"Would the choice change if the same outcomes were described with an equivalent gain, loss or attribute frame?"},
+        {"slug":"cognitive-bias-anchoring-effect","question":"Did a suggested number, threshold or starting value become the reference point for the decision?"}
+      ]
+    }
+  ]
+}
