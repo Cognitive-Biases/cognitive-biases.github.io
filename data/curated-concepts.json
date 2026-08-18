@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 222,
+      "number": 222,
+      "typeOfBias": "Cognitive Bias",
+      "title": "Anchoring Effect – when a starting number pulls later estimates toward it",
+      "description": "Anchoring Effect is the tendency for an initial number or reference value to pull a later numerical judgment toward it, even when the starting point is weak or not very useful.\n\nWhere can it show up?\n- Negotiation – the first price can influence the range of later offers.\n- Forecasts and estimates – an early target, budget, deadline, or rough guess can shape later numbers before the evidence is fully reviewed.\n- AI-assisted decisions – a suggested score or recommendation can become the starting point for a person’s later judgment.\n\nA better check\n- Make an independent estimate before seeing a suggested number when that is practical.\n- Ask what evidence would justify moving far away from the starting value.\n- Compare the estimate with base rates, completed cases, ranges, or independent estimates instead of adjusting only from the anchor.\n- Do not assume every number creates the same effect. Random, incidental, or clearly irrelevant anchors can be weaker than meaningful starting points.",
+      "slug": "cognitive-bias-anchoring-effect",
+      "related": [],
+      "status": "reviewed",
+      "updatedAt": "2026-08-18T15:58:00.000Z",
+      "published": true
+    }
+  ]
+}
