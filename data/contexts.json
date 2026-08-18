@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "work-project-decisions",
+      "title": "Work & project decisions",
+      "summary": "Use these evidence-reviewed lenses when a team is choosing a direction, interpreting results, deciding whether to continue, or turning metrics into action.",
+      "useWhen": [
+        "A project review is being driven by the latest success or failure.",
+        "A team keeps investing because too much has already been spent.",
+        "A KPI is becoming more important than the goal it was meant to represent.",
+        "The team is searching for evidence after already preferring one solution.",
+        "A retrospective is quietly rewriting what was knowable at the time."
+      ],
+      "workflow": [
+        "Freeze the information set: what did the team actually know before the latest outcome?",
+        "Separate decision-process quality from whether the result happened to be good or bad.",
+        "Write the next increment of cost and expected value without counting already-spent resources as a future benefit.",
+        "Name the strategic goal behind each important metric and one way the metric could improve while the goal gets worse.",
+        "Specify what evidence would change the preferred plan before gathering another round of supporting evidence."
+      ],
+      "lenses": [
+        {
+          "slug": "cognitive-bias-confirmation-bias",
+          "question": "What evidence would make us abandon or materially change the preferred explanation?"
+        },
+        {
+          "slug": "cognitive-bias-outcome-bias",
+          "question": "Would we rate this decision process the same way if the outcome had gone the other direction?"
+        },
+        {
+          "slug": "cognitive-bias-hindsight-bias",
+          "question": "What did our actual pre-outcome forecast or notes say before the result became obvious?"
+        },
+        {
+          "slug": "logical-fallacy-escalation-of-commitment",
+          "question": "If we had not already invested anything, would we still fund the next step on its future merits?"
+        },
+        {
+          "slug": "cognitive-bias-surrogation",
+          "question": "What underlying goal is this metric supposed to represent, and where can the proxy diverge from it?"
+        }
+      ]
+    },
+    {
+      "slug": "forecasting-future-choices",
+      "title": "Forecasting & future choices",
+      "summary": "Use these evidence-reviewed lenses when estimating uncertainty, imagining future feelings or preferences, or reviewing forecasts after the outcome is known.",
+      "useWhen": [
+        "A vivid recent example is dominating a probability estimate.",
+        "A broad event looks less likely than the sum of its possible forms.",
+        "A current mood, appetite, or preference is shaping a long-term commitment.",
+        "A future event is expected to make life dramatically better or worse for a long time.",
+        "The finished outcome now feels much more predictable than it did beforehand."
+      ],
+      "workflow": [
+        "Write the packed event first, then unpack it into mutually exclusive possibilities and compare the totals.",
+        "Check a base rate or reference class before using vivid examples as the probability estimate.",
+        "Record the current state that may be contaminating a forecast of future preferences.",
+        "Forecast emotional intensity and duration separately, including what an ordinary week around the event will contain.",
+        "Store the forecast before the outcome so retrospective learning does not depend on reconstructed memory."
+      ],
+      "lenses": [
+        {
+          "slug": "probability-bias-subadditivity-effect",
+          "question": "Does the total probability change when the same event is unpacked into explicit possibilities?"
+        },
+        {
+          "slug": "heuristic-bias-availability-bias",
+          "question": "Are the examples easy to recall because they are common, or because they are vivid, recent, or repeated?"
+        },
+        {
+          "slug": "cognitive-bias-projection-bias",
+          "question": "Which part of today's state am I assuming will still describe my future self?"
+        },
+        {
+          "slug": "cognitive-bias-impact-bias",
+          "question": "Am I forecasting the focal event while forgetting the rest of ordinary future life?"
+        },
+        {
+          "slug": "cognitive-bias-hindsight-bias",
+          "question": "What probability did I actually assign before I learned the outcome?"
+        }
+      ]
+    }
+  ]
+}
