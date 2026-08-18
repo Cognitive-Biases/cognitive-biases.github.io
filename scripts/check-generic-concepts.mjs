@@ -2,7 +2,7 @@ import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const EXPECTED = [
-  { id: 94, slug: "cognitive-bias-declinism", kind: "phenomenon", auditEligible: true, family: null },
+  { id: 94, slug: "cognitive-bias-declinism", kind: "phenomenon", auditEligible: true, family: "past-present-comparison" },
   { id: 121, slug: "cognitive-bias-systematic-bias", kind: "measurement", auditEligible: false, family: "measurement-methods" },
 ];
 
@@ -47,6 +47,7 @@ const unresolvedWithoutReview = unresolved.filter((bias) => !reviewBySlug.has(bi
 if (unresolvedWithoutReview.length) {
   throw new Error(`Generic family queue still contains unreviewed records: ${unresolvedWithoutReview.map((bias) => `#${bias.id} ${bias.slug}`).join(", ")}`);
 }
+if (unresolved.some((bias) => bias.id === 94)) throw new Error("Declinism #94 must no longer remain in the generic family queue.");
 if (unresolved.some((bias) => bias.id === 121)) throw new Error("Systematic Bias #121 must no longer remain in the generic family queue.");
 
-console.log(`Generic concept check passed: ${unresolved.length} family-unresolved generic records are all evidence-reviewed; Declinism remains audit-eligible and Systematic Bias is explicitly classified as a measurement concept outside Decision Audit.`);
+console.log(`Generic concept check passed: ${unresolved.length} family-unresolved generic records are all evidence-reviewed; Declinism now belongs to Past & present comparison and Systematic Bias remains a measurement concept outside Decision Audit.`);
