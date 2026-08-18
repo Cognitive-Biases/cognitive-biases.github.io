@@ -111,7 +111,8 @@
     "129": "social-judgment",
     "140": "retrospective-evaluation",
     "166": "attention-information",
-    "170": "belief-updating"
+    "170": "belief-updating",
+    "222": "valuation-choice"
   },
   "recordContexts": {
     "9": ["human-ai-interaction"],
@@ -122,6 +123,7 @@
     "101": ["forecasting-future-choices"],
     "111": ["work-project-decisions"],
     "118": ["forecasting-future-choices"],
-    "140": ["work-project-decisions"]
+    "140": ["work-project-decisions"],
+    "222": ["human-ai-interaction", "project-estimation-delivery"]
   }
 }
