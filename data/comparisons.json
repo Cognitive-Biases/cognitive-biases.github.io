@@ -10,26 +10,10 @@
       "summary": "Both distort retrospective judgment after the result is known, but they target different questions. Hindsight bias makes the result look more predictable in retrospect; outcome bias makes the decision itself look better or worse because the result was good or bad.",
       "keyDifference": "Ask what changed after the outcome became known: your estimate of how predictable the result was, or your evaluation of the decision process?",
       "dimensions": [
-        {
-          "dimension": "Core judgment",
-          "left": "How likely or predictable did this outcome seem before it happened?",
-          "right": "How good was the decision, reasoning, or decision-maker?"
-        },
-        {
-          "dimension": "Typical retrospective error",
-          "left": "The observed outcome now feels more foreseeable or inevitable than it was in foresight.",
-          "right": "A lucky result upgrades the decision; an unlucky result downgrades it, even when the original information is unchanged."
-        },
-        {
-          "dimension": "Best pre-outcome record",
-          "left": "Forecast, probability estimate, scenario range, or written prediction.",
-          "right": "Decision rationale, information set, alternatives considered, expected values, and decision rule."
-        },
-        {
-          "dimension": "What the outcome should be used for",
-          "left": "Update future forecasting models without pretending the past was obvious.",
-          "right": "Update models and assumptions without rewriting the quality of the original process solely from luck."
-        }
+        {"dimension":"Core judgment","left":"How likely or predictable did this outcome seem before it happened?","right":"How good was the decision, reasoning, or decision-maker?"},
+        {"dimension":"Typical retrospective error","left":"The observed outcome now feels more foreseeable or inevitable than it was in foresight.","right":"A lucky result upgrades the decision; an unlucky result downgrades it, even when the original information is unchanged."},
+        {"dimension":"Best pre-outcome record","left":"Forecast, probability estimate, scenario range, or written prediction.","right":"Decision rationale, information set, alternatives considered, expected values, and decision rule."},
+        {"dimension":"What the outcome should be used for","left":"Update future forecasting models without pretending the past was obvious.","right":"Update models and assumptions without rewriting the quality of the original process solely from luck."}
       ],
       "diagnostic": [
         "Hide the outcome and reconstruct what was knowable at the decision time.",
@@ -38,21 +22,9 @@
         "Reveal the outcome and update your model separately. If the outcome changes the forecast-memory judgment, suspect hindsight bias; if it changes the process-quality score, suspect outcome bias."
       ],
       "examples": [
-        {
-          "title": "Product launch",
-          "left": "After a failed launch, the team says the failure was obvious from the warning signs, even though the pre-launch forecast gave failure a modest probability.",
-          "right": "The same team concludes that launching was a bad decision solely because the launch failed, even if the expected-value case and evidence available at the time were reasonable."
-        },
-        {
-          "title": "Incident review",
-          "left": "Once the failure path is known, weak signals in the logs suddenly look like an unmistakable chain that anyone should have predicted.",
-          "right": "A responder's earlier choice is rated as incompetent because the incident worsened, even though the same choice might have been judged sound under the information available then."
-        },
-        {
-          "title": "Hiring decision",
-          "left": "After a hire performs badly, interview concerns are remembered as clearer and more predictive than they appeared during selection.",
-          "right": "The hiring process is judged poor because this person failed, without asking whether the process was calibrated across many hires or whether this outcome was partly noise."
-        }
+        {"title":"Product launch","left":"After a failed launch, the team says the failure was obvious from the warning signs, even though the pre-launch forecast gave failure a modest probability.","right":"The same team concludes that launching was a bad decision solely because the launch failed, even if the expected-value case and evidence available at the time were reasonable."},
+        {"title":"Incident review","left":"Once the failure path is known, weak signals in the logs suddenly look like an unmistakable chain that anyone should have predicted.","right":"A responder's earlier choice is rated as incompetent because the incident worsened, even though the same choice might have been judged sound under the information available then."},
+        {"title":"Hiring decision","left":"After a hire performs badly, interview concerns are remembered as clearer and more predictive than they appeared during selection.","right":"The hiring process is judged poor because this person failed, without asking whether the process was calibrated across many hires or whether this outcome was partly noise."}
       ],
       "reviewProtocol": [
         "Freeze the outcome temporarily.",
@@ -62,24 +34,9 @@
         "Compare the retrospective story with contemporaneous notes. If there are no notes, mark the reconstruction as uncertain rather than treating memory as a recording."
       ],
       "sources": [
-        {
-          "title": "Fifty years of hindsight bias research—Reflection on Fischhoff (1975)",
-          "year": 2025,
-          "doi": "10.1037/xhp0001232",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/39913490/"
-        },
-        {
-          "title": "Outcome bias in decision evaluation",
-          "year": 1988,
-          "doi": "10.1037/0022-3514.54.4.569",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
-        },
-        {
-          "title": "Outcomes Affect Evaluations of Decision Quality: Replication and Extensions of Baron and Hershey's (1988) Outcome Bias Experiment 1",
-          "year": 2023,
-          "doi": "10.5334/irsp.751",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/40951810/"
-        }
+        {"title":"Fifty years of hindsight bias research—Reflection on Fischhoff (1975)","year":2025,"doi":"10.1037/xhp0001232","url":"https://pubmed.ncbi.nlm.nih.gov/39913490/"},
+        {"title":"Outcome bias in decision evaluation","year":1988,"doi":"10.1037/0022-3514.54.4.569","url":"https://pubmed.ncbi.nlm.nih.gov/3367280/"},
+        {"title":"Outcomes Affect Evaluations of Decision Quality: Replication and Extensions of Baron and Hershey's (1988) Outcome Bias Experiment 1","year":2023,"doi":"10.5334/irsp.751","url":"https://pubmed.ncbi.nlm.nih.gov/40951810/"}
       ]
     },
     {
@@ -91,26 +48,10 @@
       "summary": "Both let a known result reshape a retrospective judgment, but the target is different. Outcome bias changes how good or bad a decision process looks; moral luck changes blame, praise, punishment, or moral responsibility while also depending on the actor's intentions, beliefs, causal role, and controllable risk.",
       "keyDifference": "Ask what you are judging: the quality of the decision process, or the moral responsibility and blameworthiness of the person who acted?",
       "dimensions": [
-        {
-          "dimension": "Core judgment",
-          "left": "Was this a good decision or a good decision process?",
-          "right": "How blameworthy, praiseworthy, punishable, or morally responsible is the actor?"
-        },
-        {
-          "dimension": "Role of the outcome",
-          "left": "A good result can upgrade the perceived quality of the decision; a bad result can downgrade it even when the ex-ante information is held constant.",
-          "right": "A harmful or beneficial result can change moral evaluation even when much of the actor's choice is similar, but the effect interacts with intention, belief, negligence, and causal responsibility."
-        },
-        {
-          "dimension": "Mental-state information",
-          "left": "Relevant because beliefs and information shape whether the original process was reasonable, but they are not the defining target of the bias.",
-          "right": "Central. What the actor intended and reasonably believed can substantially change blame and can explain part of an apparent moral-luck effect."
-        },
-        {
-          "dimension": "Best review record",
-          "left": "Decision rationale, information set, alternatives, expected values, assumptions, and decision rule recorded before the result.",
-          "right": "The same ex-ante record plus intention, belief justification, controllable risk, causal contribution, and the moral judgment being made."
-        }
+        {"dimension":"Core judgment","left":"Was this a good decision or a good decision process?","right":"How blameworthy, praiseworthy, punishable, or morally responsible is the actor?"},
+        {"dimension":"Role of the outcome","left":"A good result can upgrade the perceived quality of the decision; a bad result can downgrade it even when the ex-ante information is held constant.","right":"A harmful or beneficial result can change moral evaluation even when much of the actor's choice is similar, but the effect interacts with intention, belief, negligence, and causal responsibility."},
+        {"dimension":"Mental-state information","left":"Relevant because beliefs and information shape whether the original process was reasonable, but they are not the defining target of the bias.","right":"Central. What the actor intended and reasonably believed can substantially change blame and can explain part of an apparent moral-luck effect."},
+        {"dimension":"Best review record","left":"Decision rationale, information set, alternatives, expected values, assumptions, and decision rule recorded before the result.","right":"The same ex-ante record plus intention, belief justification, controllable risk, causal contribution, and the moral judgment being made."}
       ],
       "diagnostic": [
         "Name the judgment first: decision quality, moral wrongness, blame, praise, or punishment.",
@@ -119,21 +60,9 @@
         "If process quality changes mainly with the result, outcome bias is the closer lens. If blame or responsibility changes, examine moral luck while still checking whether the bad result altered how you interpret the actor's beliefs or negligence."
       ],
       "examples": [
-        {
-          "title": "Safety decision",
-          "left": "Two managers approve the same defensible safety procedure; one later experiences an accident and their decision is rated much worse solely because the rare failure occurred.",
-          "right": "Two people take the same negligent risk; only one causes serious harm, and that person receives much more blame or punishment partly because the harmful outcome occurred."
-        },
-        {
-          "title": "Investment",
-          "left": "An investment process is judged brilliant after a profit and foolish after a loss even when the information and method were identical at the time of choice.",
-          "right": "A losing investment is judged less moral or its decision-maker less ethically acceptable than a matched profitable investment, despite comparable intentions and ex-ante reasoning."
-        },
-        {
-          "title": "Incident review",
-          "left": "A responder's action is scored as a bad operational decision because the incident escalated, without reconstructing the signals available then.",
-          "right": "The same outcome is used to infer that the responder was morally reckless or deserving of blame, without separating what they knew, intended, controlled, and actually caused."
-        }
+        {"title":"Safety decision","left":"Two managers approve the same defensible safety procedure; one later experiences an accident and their decision is rated much worse solely because the rare failure occurred.","right":"Two people take the same negligent risk; only one causes serious harm, and that person receives much more blame or punishment partly because the harmful outcome occurred."},
+        {"title":"Investment","left":"An investment process is judged brilliant after a profit and foolish after a loss even when the information and method were identical at the time of choice.","right":"A losing investment is judged less moral or its decision-maker less ethically acceptable than a matched profitable investment, despite comparable intentions and ex-ante reasoning."},
+        {"title":"Incident review","left":"A responder's action is scored as a bad operational decision because the incident escalated, without reconstructing the signals available then.","right":"The same outcome is used to infer that the responder was morally reckless or deserving of blame, without separating what they knew, intended, controlled, and actually caused."}
       ],
       "reviewProtocol": [
         "State whether the review is evaluating process quality or moral responsibility before discussing the outcome.",
@@ -143,30 +72,49 @@
         "Use the real outcome to update risk models and future safeguards, but do not let it silently rewrite the actor's prior mental state."
       ],
       "sources": [
-        {
-          "title": "Outcome bias in decision evaluation",
-          "year": 1988,
-          "doi": "10.1037/0022-3514.54.4.569",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
-        },
-        {
-          "title": "Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment",
-          "year": 2008,
-          "doi": "10.1016/j.cognition.2008.03.006",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/18439575/"
-        },
-        {
-          "title": "Investigating the Neural and Cognitive Basis of Moral Luck: It's Not What You Do but What You Know",
-          "year": 2010,
-          "doi": "10.1007/s13164-010-0027-y",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/22558062/"
-        },
-        {
-          "title": "Moral luck in investment contexts: We consciously find unprofitable investments less moral",
-          "year": 2023,
-          "doi": "10.1371/journal.pone.0278677",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/36649364/"
-        }
+        {"title":"Outcome bias in decision evaluation","year":1988,"doi":"10.1037/0022-3514.54.4.569","url":"https://pubmed.ncbi.nlm.nih.gov/3367280/"},
+        {"title":"Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment","year":2008,"doi":"10.1016/j.cognition.2008.03.006","url":"https://pubmed.ncbi.nlm.nih.gov/18439575/"},
+        {"title":"Investigating the Neural and Cognitive Basis of Moral Luck: It's Not What You Do but What You Know","year":2010,"doi":"10.1007/s13164-010-0027-y","url":"https://pubmed.ncbi.nlm.nih.gov/22558062/"},
+        {"title":"Moral luck in investment contexts: We consciously find unprofitable investments less moral","year":2023,"doi":"10.1371/journal.pone.0278677","url":"https://pubmed.ncbi.nlm.nih.gov/36649364/"}
+      ]
+    },
+    {
+      "slug": "confirmation-bias-vs-backfire-effect",
+      "leftSlug": "cognitive-bias-confirmation-bias",
+      "rightSlug": "confirmation-bias-backfire-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Confirmation Bias vs Backfire Effect",
+      "summary": "Both can involve resistance to evidence, but they are not the same construct. Confirmation bias is a broad family of search, testing, interpretation, and memory tendencies shaped by existing beliefs; the backfire effect is the narrower outcome in which a correction makes belief in the targeted false claim stronger.",
+      "keyDifference": "Ask whether you are observing selective information processing, or a measured increase in the false belief after a correction. Without the latter, you have not shown a backfire effect.",
+      "dimensions": [
+        {"dimension":"Core pattern","left":"Existing beliefs or hypotheses influence which information is sought, tested, interpreted, remembered, or given weight.","right":"A correction increases belief in the specific false claim it was intended to reduce."},
+        {"dimension":"Does a correction have to occur?","left":"No. Confirmation bias can shape information processing before any explicit correction or challenge appears.","right":"Yes. Backfire is defined relative to a corrective intervention and the direction of subsequent belief change."},
+        {"dimension":"Does the original belief have to get stronger?","left":"No. A person can selectively seek or interpret confirming evidence while the strength of the belief stays similar.","right":"Yes. Mere disagreement, anger, distrust, or failure to change is not enough; belief in the corrected false claim must increase relative to an appropriate baseline."},
+        {"dimension":"Evidence status","left":"A broad, well-established research area with multiple forms and mechanisms across hypothesis testing and information processing.","right":"A real but uncommon and context-sensitive correction outcome that should not be assumed whenever someone resists factual correction."}
+      ],
+      "diagnostic": [
+        "Write the exact belief or hypothesis under review and, when possible, the starting confidence in it.",
+        "Check the information process: were supporting cases searched for, disconfirming cases avoided, or evidence judged by different standards? Those are confirmation-bias questions.",
+        "If a correction occurs, measure belief in the same targeted claim afterwards rather than inferring belief change from tone, argument, or source distrust.",
+        "Call it backfire only if the correction is followed by stronger belief in the targeted false claim. Otherwise describe the observed process more narrowly: selective search, selective interpretation, no correction effect, reactance, distrust, or continued influence."
+      ],
+      "examples": [
+        {"title":"AI-assisted research","left":"A user repeatedly asks an AI for arguments supporting a preferred architecture and does not request failure cases or competing explanations.","right":"After receiving a clear correction that a cited benchmark result was false, the user's measured confidence in that same false benchmark claim rises."},
+        {"title":"Fact-checking","left":"A reader treats weak evidence from an agreeable source as persuasive while demanding much stronger evidence from an opposing source.","right":"A fact-check causes the reader to endorse the corrected factual falsehood more strongly than before the fact-check."},
+        {"title":"Project review","left":"A team searches logs for clues supporting its favored root cause and stops once it finds a plausible match.","right":"A corrective analysis directly addressing that root-cause claim is followed by stronger confidence in the disproven cause, not merely frustration with the review."}
+      ],
+      "reviewProtocol": [
+        "Separate the information-processing question from the belief-change question.",
+        "Record the target belief and pre-correction confidence when testing for backfire.",
+        "Use the same claim and comparable measurement after correction; do not substitute attitude, trust, or emotional reaction for factual belief.",
+        "When evaluating confirmation bias, inspect search strategy, falsification opportunities, evidence standards, and interpretation across competing hypotheses.",
+        "Name only the pattern the evidence supports. Resistance to correction is not automatically backfire, and confirmation bias is not proof that a correction made beliefs worse."
+      ],
+      "sources": [
+        {"title":"On the Failure to Eliminate Hypotheses in a Conceptual Task","year":1960,"doi":"10.1080/17470216008416717","url":"https://doi.org/10.1080/17470216008416717"},
+        {"title":"Confirmation Bias: A Ubiquitous Phenomenon in Many Guises","year":1998,"doi":"10.1037/1089-2680.2.2.175","url":"https://doi.org/10.1037/1089-2680.2.2.175"},
+        {"title":"Searching for the Backfire Effect: Measurement and Design Considerations","year":2020,"doi":"10.1016/j.jarmac.2020.06.006","url":"https://doi.org/10.1016/j.jarmac.2020.06.006"},
+        {"title":"Factual corrections: Concerns and current evidence","year":2024,"doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
       ]
     }
   ]
