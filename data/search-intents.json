@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "intents": [
+    {
+      "slug": "forecasting-estimation",
+      "title": "Forecasting and estimation",
+      "question": "How can I make forecasts and estimates without letting one vivid case or target number dominate?",
+      "description": "Reviewed lenses for forecasts, estimates, probability judgments and future choices.",
+      "terms": ["forecast", "estimate", "estimation", "probability", "planning", "anchor", "subadditivity", "future"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    },
+    {
+      "slug": "ai-assisted-decisions",
+      "title": "AI-assisted decisions",
+      "question": "How should I check a decision when an AI system is influencing the answer?",
+      "description": "Evidence-aware checks for automation, anchoring, humanlike interfaces and repeated AI claims.",
+      "terms": ["ai", "automation", "automated", "anthropomorphism", "humanlike", "capability", "assistant", "model"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    },
+    {
+      "slug": "information-verification",
+      "title": "Checking claims and information",
+      "question": "How can I check a claim without confusing familiarity, repetition or disagreement with evidence?",
+      "description": "Reviewed lenses for misinformation, corrections, source checking and belief updating.",
+      "terms": ["truth", "misinformation", "correction", "backfire", "confirmation", "familiar", "source", "evidence"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    },
+    {
+      "slug": "project-product-decisions",
+      "title": "Project and product decisions",
+      "question": "How can a team review a project or product choice without letting outcomes or past investment rewrite the decision?",
+      "description": "Reviewed lenses for delivery, metrics, escalation, sunk cost and retrospective project judgment.",
+      "terms": ["project", "product", "delivery", "sunk cost", "escalation", "status quo", "metric", "decision"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    },
+    {
+      "slug": "social-judgment",
+      "title": "Social judgment and perspective",
+      "question": "How can I separate what I know, what another person knows and what I infer about their competence or responsibility?",
+      "description": "Reviewed lenses for perspective taking, self-assessment, attribution and social judgment.",
+      "terms": ["social", "knowledge", "dunning", "attribution", "moral", "projection", "other person", "judgment"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    },
+    {
+      "slug": "sunk-cost-decisions",
+      "title": "Sunk cost and continuation decisions",
+      "question": "Should I continue because the next step is worthwhile, or because too much has already been invested?",
+      "description": "Reviewed lenses for sunk costs, escalation, loss aversion and status-quo pressure.",
+      "terms": ["sunk cost", "escalation", "loss aversion", "status quo", "investment", "already spent"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    }
+  ]
+}

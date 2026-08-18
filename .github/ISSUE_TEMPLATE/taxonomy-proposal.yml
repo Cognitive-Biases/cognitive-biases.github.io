@@ -1,0 +1,28 @@
+name: Concept or taxonomy proposal
+description: Propose a merge, distinction, alias, family change or new concept.
+title: "[Taxonomy] "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is confusing or missing?
+    validations:
+      required: true
+  - type: textarea
+    id: existing
+    attributes:
+      label: Existing canonical IDs involved
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or terminology sources
+      description: Explain why these should be merged, separated or renamed.

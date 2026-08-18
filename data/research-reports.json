@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "reports": [
+    {
+      "slug": "state-of-evidence-2026",
+      "title": "State of Cognitive Bias Evidence 2026",
+      "summary": "A data-backed review of where common cognitive-bias claims look strong, mixed, easy to confuse, or still under-reviewed.",
+      "updatedAt": "2026-08-18",
+      "sections": [
+        {
+          "heading": "Corrections usually help more than the backfire story suggests",
+          "conceptSlugs": ["confirmation-bias-backfire-effect"],
+          "interpretation": "Backfire is a memorable claim, but the reviewed evidence does not support treating it as the normal result of correction. The useful distinction is between disagreement, incomplete updating and a measured increase in the false belief."
+        },
+        {
+          "heading": "Retrospective judgment needs two different checks",
+          "conceptSlugs": ["cognitive-bias-hindsight-bias", "cognitive-bias-outcome-bias"],
+          "interpretation": "Knowing the outcome can distort both perceived predictability and evaluation of the earlier decision. Keeping forecasts and decision rationales before the outcome gives reviewers something better than reconstructed memory."
+        },
+        {
+          "heading": "Repetition is not independent evidence",
+          "conceptSlugs": ["truth-judgment-illusory-truth-effect"],
+          "interpretation": "Repeated claims can feel more true even when repetition adds no new evidence. This matters especially when several pages or AI outputs are recycling the same source."
+        },
+        {
+          "heading": "Uncertainty is a result, not a publishing failure",
+          "conceptSlugs": [],
+          "interpretation": "Mixed, contested and unreviewed states are useful outputs. They show where a confident internet summary would be stronger than the reviewed evidence."
+        }
+      ],
+      "uncertainty": "This report summarizes the reviewed subset of the Cognitive Biases corpus. It is not a systematic review of every cognitive-bias study, and coverage is uneven across concepts."
+    }
+  ]
+}

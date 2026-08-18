@@ -1,0 +1,37 @@
+name: Factual correction
+description: Report a claim that may be wrong, too strong, unclear or out of date.
+title: "[Correction] "
+labels: []
+body:
+  - type: input
+    id: resource
+    attributes:
+      label: Canonical page or concept ID
+      placeholder: https://cognitive-biases.github.io/biases/.../
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim to review
+      description: Quote only the short part needed to identify the claim.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and stable identifiers
+      description: Prefer DOI, PMID, publisher page or another stable source.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Important limits or uncertainty
+      description: What does the source not establish?
