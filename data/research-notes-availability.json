@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "availability-heuristic-vivid-does-not-mean-common",
+      "title": "Availability heuristic: vivid does not automatically mean common",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Availability is a useful shortcut when accessible examples track real frequency. It becomes misleading when accessibility comes from non-diagnostic causes, and some popular claims about dramatic media risks and ease of retrieval are less universal than textbook examples suggest.",
+      "sections": [
+        {
+          "heading": "Availability was proposed as a heuristic, not a permanent error",
+          "paragraphs": [
+            "Tversky and Kahneman’s 1973 paper described a heuristic in which people use the ease with which examples or scenarios come to mind when judging frequency or probability. The paper also noted an important point that simplified explanations often lose: availability is generally correlated with real frequency.",
+            "That means easy recall can sometimes be informative. Bias appears when other forces such as vividness, repetition, recency, search, or personal experience change accessibility without tracking the quantity being estimated."
+          ]
+        },
+        {
+          "heading": "Ease of retrieval is one proposed cue, not the whole heuristic",
+          "paragraphs": [
+            "A well-known 1991 line of work suggested that people can use the subjective ease or difficulty of retrieving examples as information. This became a common mechanism in explanations of availability.",
+            "Later tests show why it should not be treated as universal. A 2021 series of eyewitness experiments found no predicted ease-of-retrieval effect on confidence and also failed to reproduce the original effect in an additional test. The broader availability heuristic does not disappear because one mechanism fails in one setting, but the mechanism needs direct evidence rather than automatic reuse."
+          ]
+        },
+        {
+          "heading": "The dramatic-news story is more complicated than the textbook version",
+          "paragraphs": [
+            "A common example says that dramatic risks are overestimated because media coverage makes vivid incidents easier to recall. A 2024 study revisited this idea across several datasets and found that the classic differential distortion of dramatic versus non-dramatic causes of death did not generalize across the datasets it examined.",
+            "Its analyses suggested that people’s available samples can come from personal social networks rather than simply mirroring media coverage. This does not prove that media never changes risk perception. It shows that one intuitive explanation should not be promoted to a universal mechanism without testing the source of the examples people are actually using."
+          ]
+        },
+        {
+          "heading": "Repetition can affect availability and truth in different ways",
+          "paragraphs": [
+            "Repeated information can become easier to retrieve, which may affect frequency or probability judgments. Repetition can also increase judged truth for a statement compared with comparable new information, which is studied as the illusory truth effect.",
+            "Those outcomes should be measured separately. A claim can feel common because examples are easy to recall without becoming more believable, and a repeated statement can feel more true without changing a person’s estimate of how often the underlying event occurs."
+          ]
+        },
+        {
+          "heading": "A practical check starts with the denominator",
+          "paragraphs": [
+            "When a memorable example is shaping a decision, write the question in measurable form: how often, among what set of cases, over what period? Then compare the recalled examples with a relevant base rate or deliberately sampled reference set.",
+            "Also ask why these examples were available. If the answer is 'because they happened often', availability may be doing useful work. If the answer is 'because this one was shocking, recent, repeated, or personal', the estimate needs stronger independent support."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We renamed the legacy Availability Bias page to Availability Heuristic and rewrote the top explanation so the shortcut is not automatically treated as an error. The evidence review already made this distinction; the public page now matches it.",
+            "We also added a direct Availability versus Illusory Truth comparison so repeated and memorable information can be checked against the type of judgment it is actually changing."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Availability: A heuristic for judging frequency and probability","year":1973,"type":"foundational experiments","doi":"10.1016/0010-0285(73)90033-9","url":"https://doi.org/10.1016/0010-0285(73)90033-9"},
+        {"title":"Ease of retrieval as information: Another look at the availability heuristic","year":1991,"type":"experiments","doi":"10.1037/0022-3514.61.2.195","url":"https://doi.org/10.1037/0022-3514.61.2.195"},
+        {"title":"Investigating the ease-of-retrieval effect in an eyewitness context","year":2021,"type":"replication and boundary-condition tests","doi":"10.1080/09658211.2021.1882502","url":"https://pubmed.ncbi.nlm.nih.gov/33557719/"},
+        {"title":"The perception of dramatic risks: Biased media, but unbiased minds","year":2024,"type":"multi-dataset reanalysis and replication tests","url":"https://pubmed.ncbi.nlm.nih.gov/38368678/"},
+        {"title":"The illusory truth effect: A review of how repetition increases belief in misinformation","year":2024,"type":"review","doi":"10.1016/j.copsyc.2023.101736","url":"https://pubmed.ncbi.nlm.nih.gov/38113667/"}
+      ],
+      "related": ["heuristic-bias-availability-bias","truth-judgment-illusory-truth-effect","cognitive-bias-confirmation-bias"]
+    }
+  ]
+}
