@@ -11,7 +11,7 @@
     "audit:taxonomy": "npm run prepare:data && node scripts/audit-taxonomy.mjs",
     "inventory:taxonomy": "npm run prepare:data && node scripts/category-inventory.mjs",
     "review:generic": "npm run prepare:data && node scripts/review-generic-buckets.mjs",
-    "check": "npm run validate:data && npm run audit:taxonomy && npm run inventory:taxonomy && npm run review:generic && npm run build:site && node scripts/check.mjs && node scripts/check-record-family-overrides.mjs && node scripts/check-duplicate-canonicals.mjs && node scripts/check-duplicate-discovery.mjs && node scripts/check-kind-taxonomy.mjs && node scripts/check-evidence-reviews.mjs && node scripts/check-deep-dives.mjs && node scripts/check-evidence-hub.mjs && node scripts/check-comparisons.mjs && node scripts/check-decision-audit.mjs && node scripts/check-contexts.mjs && node scripts/check-editorial-overrides.mjs && node scripts/check-ai-context.mjs",
+    "check": "npm run validate:data && npm run audit:taxonomy && npm run inventory:taxonomy && npm run review:generic && npm run build:site && node scripts/check.mjs && node scripts/check-record-family-overrides.mjs && node scripts/check-duplicate-canonicals.mjs && node scripts/check-duplicate-discovery.mjs && node scripts/check-kind-taxonomy.mjs && node scripts/check-evidence-reviews.mjs && node scripts/check-deep-dives.mjs && node scripts/check-evidence-hub.mjs && node scripts/check-comparisons.mjs && node scripts/check-decision-audit.mjs && node scripts/check-contexts.mjs && node scripts/check-editorial-overrides.mjs && node scripts/check-ai-context.mjs && node scripts/check-future-state-family.mjs",
     "dev": "npm run build && node scripts/serve.mjs"
   }
 }
