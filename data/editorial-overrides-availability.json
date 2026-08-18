@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 166,
+      "slug": "heuristic-bias-availability-bias",
+      "previousTitle": "Availability Bias – when recent or vivid examples seem more important",
+      "title": "Availability Heuristic – when easy-to-recall examples shape frequency judgments",
+      "description": "Availability Heuristic is the use of how easily examples or scenarios come to mind as one cue for judging how common or likely something is. This shortcut can be useful when accessible examples really track frequency, and misleading when vividness, repetition, recency, or personal experience makes some examples easier to recall than their frequency justifies.\n\nWhere can it show up?\n- Risk estimates – a vivid recent incident comes to mind quickly and receives more weight than a broader reference set.\n- Project decisions – one memorable success or failure becomes the example everyone uses when estimating a new case.\n- Information checks – repeated or emotionally striking examples are easier to retrieve and can feel more representative than they are.\n\nA better check\n- Ask why these examples are easy to recall: because they are common, or because they are recent, vivid, repeated, or personally important?\n- Compare the available examples with a base rate, a deliberately sampled reference set, or other relevant data when the decision matters.\n- Separate frequency from memorability. A useful story can explain a risk without showing how often it happens.\n- Do not assume that every vivid risk is systematically overestimated. Specific availability-based explanations need to be tested in the setting where they are used.",
+      "reason": "The legacy page described availability mainly as a bias caused by dramatic examples. The reviewed evidence treats availability as a heuristic that can be informative or misleading depending on why examples are accessible, and later work shows that some popular dramatic-risk and ease-of-retrieval accounts do not generalize automatically."
+    }
+  ]
+}
