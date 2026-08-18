@@ -26,15 +26,22 @@ for (const note of notes.entries || []) {
 
 let linkedConcepts = 0;
 let links = 0;
+let fallbackInsertions = 0;
 for (const [slug, relatedNotes] of notesByConcept) {
   const file = join(OUT, "biases", slug, "index.html");
   let html = await readFile(file, "utf8");
   if (html.includes('class="research-teaser"')) throw new Error(`${slug}: research teaser already exists before research-link pass.`);
   const noteLinks = relatedNotes.map((note) => `<a href="/research/${note.slug}/">${escapeHtml(note.title)}</a>`).join("");
   const teaser = `<aside class="research-teaser"><span>Research notes</span><div>${noteLinks}</div></aside>`;
-  const marker = '<section class="related">';
-  if (!html.includes(marker)) throw new Error(`${slug}: related-section marker missing for research discovery.`);
-  html = html.replace(marker, `${teaser}${marker}`);
+  const relatedMarker = '<section class="related">';
+  if (html.includes(relatedMarker)) {
+    html = html.replace(relatedMarker, `${teaser}${relatedMarker}`);
+  } else if (html.includes("</main>")) {
+    html = html.replace("</main>", `${teaser}</main>`);
+    fallbackInsertions += 1;
+  } else {
+    throw new Error(`${slug}: neither related section nor main closing tag is available for visible research discovery.`);
+  }
 
   let schemaUpdated = false;
   html = html.replace(/<script type="application\/ld\+json" data-seo-schema="defined-term">([\s\S]*?)<\/script>/, (match, payload) => {
@@ -60,4 +67,4 @@ if (!styles.includes(".research-teaser{")) {
   await writeFile(stylesPath, styles);
 }
 
-console.log(`Research discovery linked ${links} note-to-concept relationships across ${linkedConcepts} evidence-reviewed concepts.`);
+console.log(`Research discovery linked ${links} note-to-concept relationships across ${linkedConcepts} evidence-reviewed concepts; ${fallbackInsertions} page(s) used the no-related fallback.`);
