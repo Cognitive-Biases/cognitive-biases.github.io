@@ -18,6 +18,8 @@ const exists = async (path) => {
 const biases = (await readJson("data/biases.json")).filter((item) => item.published);
 const contexts = await readJson("data/contexts.json");
 const comparisons = await readJson("data/comparisons.json");
+const contextCount = Array.isArray(contexts) ? contexts.length : contexts.entries?.length || 0;
+const comparisonCount = Array.isArray(comparisons) ? comparisons.length : comparisons.entries?.length || 0;
 
 const evidenceFiles = [
   "data/evidence-reviews.json",
@@ -82,7 +84,7 @@ await emit("/data/", page({
   eyebrow: "The library beyond the website",
   heading: "Use the knowledge, not just the pages.",
   intro: "The same material that powers this website is available as public data so other projects can search it, connect it and build on it under the project licence.",
-  body: `<h2>What is available</h2><p>The public release includes ${biases.length} published concepts, ${evidence.length} evidence reviews, ${contexts.length || contexts.contexts?.length || 0} decision contexts and the project comparisons. The files use the same names and links as the website so a tool can move from a record to the page a person can read.</p><h2>For assistants and agents</h2><p>An assistant can use the data to find a relevant bias, compare related ideas, show the reviewed evidence and point a person back to the source page. The project does not require an assistant to treat every older entry as verified. Review status stays part of the record.</p><h2>For researchers and builders</h2><p>You can use the release for search, educational tools, experiments and integrations that fit the licence. If you build something useful with it, we would like to know. Real reuse helps us decide which parts of the library deserve more attention.</p><h2>Download</h2><p><a href="/data/biases.json">Bias library</a><br><a href="/data/evidence.json">Evidence reviews</a><br><a href="/data/contexts.json">Decision contexts</a><br><a href="/data/comparisons.json">Comparisons</a><br><a href="/data/manifest.json">Release information</a></p><h2>Licence</h2><p>The current public content follows the licence in the repository. Attribution and non-commercial reuse conditions still apply. Please check the licence before redistributing or adapting the material.</p><p><a class="button" href="/partners/">Tell us what you are building</a></p>`
+  body: `<h2>What is available</h2><p>The public release includes ${biases.length} published concepts, ${evidence.length} evidence reviews, ${contextCount} decision contexts and ${comparisonCount} reviewed comparisons. The files use the same names and links as the website so a tool can move from a record to the page a person can read.</p><h2>For assistants and agents</h2><p>An assistant can use the data to find a relevant bias, compare related ideas, show the reviewed evidence and point a person back to the source page. The project does not require an assistant to treat every older entry as verified. Review status stays part of the record.</p><h2>For researchers and builders</h2><p>You can use the release for search, educational tools, experiments and integrations that fit the licence. If you build something useful with it, we would like to know. Real reuse helps us decide which parts of the library deserve more attention.</p><h2>Download</h2><p><a href="/data/biases.json">Bias library</a><br><a href="/data/evidence.json">Evidence reviews</a><br><a href="/data/contexts.json">Decision contexts</a><br><a href="/data/comparisons.json">Comparisons</a><br><a href="/data/manifest.json">Release information</a></p><h2>Licence</h2><p>The current public content follows the licence in the repository. Attribution and non-commercial reuse conditions still apply. Please check the licence before redistributing or adapting the material.</p><p><a class="button" href="/partners/">Tell us what you are building</a></p>`
 }));
 
 await emit("/partners/", page({
@@ -109,8 +111,8 @@ await writeFile(join(OUT, "data", "manifest.json"), `${JSON.stringify({
   counts: {
     concepts: biases.length,
     evidenceReviews: evidence.length,
-    comparisons: Array.isArray(comparisons) ? comparisons.length : comparisons.comparisons?.length || 0,
-    contexts: Array.isArray(contexts) ? contexts.length : contexts.contexts?.length || 0
+    comparisons: comparisonCount,
+    contexts: contextCount
   },
   files: {
     concepts: `${SITE}/data/biases.json`,
@@ -120,4 +122,4 @@ await writeFile(join(OUT, "data", "manifest.json"), `${JSON.stringify({
   }
 }, null, 2)}\n`);
 
-console.log(`Generated Research, Data and Partnerships pages with ${biases.length} concepts and ${evidence.length} evidence reviews.`);
+console.log(`Generated Research, Data and Partnerships pages with ${biases.length} concepts, ${evidence.length} evidence reviews, ${contextCount} contexts and ${comparisonCount} comparisons.`);
