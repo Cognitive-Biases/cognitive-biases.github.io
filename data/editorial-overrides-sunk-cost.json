@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 64,
+      "slug": "logical-fallacy-escalation-of-commitment",
+      "previousTitle": "Escalation of Commitment – when you keep investing despite clear failure",
+      "title": "Escalation of Commitment – when setbacks lead to more investment in the same course",
+      "description": "Escalation of Commitment is the pattern of continuing or increasing investment in a course of action after negative results make stopping or changing direction worth serious consideration.\n\nWhere can it show up?\n- Projects – a team responds to delays or poor results by committing another budget, milestone, or deadline without reopening the basic case for the project.\n- Leadership – a decision-maker who chose the original plan feels pressure to defend it and becomes more committed after bad news.\n- Product and technology work – additional resources are approved because the initiative is nearly finished, politically important, or difficult to abandon.\n\nA better check\n- Treat the next investment as a new decision: what future value can it still create and what will it cost from today onward?\n- Separate irrecoverable sunk costs from other reasons to continue, such as genuine completion value, switching costs, new evidence, or strategic dependencies.\n- Use exit and review criteria that were written before the latest setback when possible.\n- Ask someone who did not own the original decision to review the next commitment. Sunk costs can contribute to escalation, but escalation is the broader process and can have several drivers.",
+      "reason": "The legacy page treated Escalation of Commitment and the Sunk Cost Fallacy as the same construct. The reviewed literature treats sunk costs as one possible driver of a broader escalation process that can also involve responsibility, self-justification, completion pressure, project structure and other factors."
+    }
+  ]
+}
