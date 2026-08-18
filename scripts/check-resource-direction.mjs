@@ -27,13 +27,22 @@ const forbidden = [
   "Get the app",
   "Inside the app",
   "website and mobile app",
-  "app and reference library"
+  "app and reference library",
+  "MobileApplication",
+  "An educational mobile app for recognizing cognitive biases"
 ];
 
 for (const path of pagesToCheck) {
   const html = await readFile(path, "utf8");
   for (const text of forbidden) {
     if (html.includes(text)) throw new Error(`${path} still contains old app positioning: ${text}`);
+  }
+}
+
+const sitemap = await readFile("dist/sitemap.xml", "utf8");
+for (const path of ["/research/", "/data/", "/partners/"]) {
+  if (!sitemap.includes(`https://cognitive-biases.github.io${path}`)) {
+    throw new Error(`Sitemap is missing ${path}`);
   }
 }
 
