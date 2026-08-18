@@ -38,6 +38,15 @@
       "maxConcepts": 10
     },
     {
+      "slug": "kpis-proxy-metrics",
+      "title": "KPIs, proxy metrics and benchmarks",
+      "question": "How can I tell whether a KPI or benchmark is still measuring the goal instead of becoming the goal?",
+      "description": "Reviewed lenses for proxy metrics, targets, benchmark scores, measurement quality and goal substitution.",
+      "terms": ["kpi", "metric", "proxy", "benchmark", "surrogation", "measurement", "systematic", "score", "target", "dashboard"],
+      "minimumReviewedConcepts": 2,
+      "maxConcepts": 10
+    },
+    {
       "slug": "social-judgment",
       "title": "Social judgment and perspective",
       "question": "How can I separate what I know, what another person knows and what I infer about their competence or responsibility?",

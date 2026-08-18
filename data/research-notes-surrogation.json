@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "surrogation-when-a-kpi-starts-replacing-the-goal",
+      "title": "Surrogation: when a KPI starts replacing the goal",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Surrogation is more specific than the slogan 'what gets measured gets managed.' Research in strategic performance systems shows how a measure can start to stand in for the construct it was designed to represent, and how decision processes can reduce that substitution.",
+      "sections": [
+        {
+          "heading": "A proxy is not automatically a problem",
+          "paragraphs": [
+            "Organizations need measures because goals such as service quality, strategic fit or long-term value are difficult to observe directly. A KPI can be a useful proxy without fully representing the construct behind it.",
+            "Surrogation begins when the distinction is lost: the measure is treated as though it were the construct itself. A higher number then starts to count as success even when important unmeasured dimensions move in the wrong direction."
+          ]
+        },
+        {
+          "heading": "The evidence comes from strategic performance-measure settings",
+          "paragraphs": [
+            "Choi, Hecht and Tayler studied managers working with strategic performance measurement systems. Their experiments found that involvement in selecting the strategy reduced surrogation, while deliberation without actual strategy choice did not produce the same result.",
+            "That matters for interpretation. Surrogation is a domain-specific management-accounting construct with experimental support, not a universal label for every case where people care too much about a number."
+          ]
+        },
+        {
+          "heading": "Narrative explanation can restore missing dimensions",
+          "paragraphs": [
+            "Bentley's experiment used experienced chess players and an imperfect performance measure. Participants who could provide narrative explanations to a principal distorted their decisions less and later showed less surrogation.",
+            "One practical interpretation is that a short explanation can force attention back onto parts of the underlying construct that a single score does not capture. The result does not imply that narrative reporting fixes every incentive or measurement problem."
+          ]
+        },
+        {
+          "heading": "Surrogation and measurement bias are different failures",
+          "paragraphs": [
+            "A metric can be calculated accurately and still be an incomplete proxy. Surrogation concerns how people interpret and optimize that proxy. Systematic bias concerns whether the measurement or estimation process itself is consistently shifted relative to a reference.",
+            "The two can occur together. A team may over-treat a benchmark as the goal while the benchmark sample also overrepresents easy cases. Those problems need different checks."
+          ]
+        },
+        {
+          "heading": "A useful KPI review starts before the dashboard",
+          "paragraphs": [
+            "Write the objective in ordinary language first. Then list what each measure captures, what it misses, and how someone could improve the number without improving the objective.",
+            "For important decisions, add validation evidence, companion measures or a short narrative explanation. The purpose is not to reject metrics. It is to keep the metric in its proper role as evidence about the goal rather than a replacement for it."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Strategy Selection, Surrogation, and Strategic Performance Measurement Systems","year":2013,"type":"management-accounting experiments","doi":"10.1111/j.1475-679X.2012.00465.x","url":"https://doi.org/10.1111/j.1475-679X.2012.00465.x"},
+        {"title":"Decreasing Operational Distortion and Surrogation Through Narrative Reporting","year":2019,"type":"experiment","doi":"10.2308/accr-52277","url":"https://doi.org/10.2308/accr-52277"}
+      ],
+      "related": ["cognitive-bias-surrogation", "cognitive-bias-systematic-bias"]
+    }
+  ]
+}
