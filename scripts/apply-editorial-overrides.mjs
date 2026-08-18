@@ -1,0 +1,51 @@
+import { readFile, readdir, writeFile } from "node:fs/promises";
+import { join } from "node:path";
+
+const dataPath = "data/biases.json";
+const biases = JSON.parse(await readFile(dataPath, "utf8"));
+const overrides = JSON.parse(await readFile("data/editorial-overrides.json", "utf8"));
+const byId = new Map(biases.map((bias) => [bias.id, bias]));
+const bySlug = new Map(biases.map((bias) => [bias.slug, bias]));
+const evidenceFiles = (await readdir("data"))
+  .filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name))
+  .sort();
+const evidenceDocs = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
+const reviewedSlugs = new Set(evidenceDocs.flatMap((document) => document.reviews || []).map((review) => review.slug));
+const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
+const duplicateIds = new Set((duplicateDispositions.groups || []).flatMap((group) => group.duplicateIds || []));
+const seenIds = new Set();
+const seenSlugs = new Set();
+let changed = 0;
+
+if (!/^\d{4}-\d{2}-\d{2}$/.test(overrides.reviewedAt || "")) {
+  throw new Error("Editorial overrides require a valid reviewedAt date.");
+}
+
+for (const override of overrides.entries || []) {
+  if (seenIds.has(override.id)) throw new Error(`Duplicate editorial override id ${override.id}.`);
+  if (seenSlugs.has(override.slug)) throw new Error(`Duplicate editorial override slug ${override.slug}.`);
+  seenIds.add(override.id);
+  seenSlugs.add(override.slug);
+
+  const byIdRecord = byId.get(override.id);
+  const bySlugRecord = bySlug.get(override.slug);
+  if (!byIdRecord || byIdRecord !== bySlugRecord) {
+    throw new Error(`${override.slug}: editorial override id/slug do not identify the same source record.`);
+  }
+  if (!byIdRecord.published) throw new Error(`${override.slug}: editorial override must target a published record.`);
+  if (duplicateIds.has(byIdRecord.id)) throw new Error(`${override.slug}: editorial override must target a canonical record, not a duplicate alias.`);
+  if (!reviewedSlugs.has(override.slug)) throw new Error(`${override.slug}: top-copy correction requires an evidence-reviewed canonical page first.`);
+  if (!override.title || !override.description || !override.reason) throw new Error(`${override.slug}: editorial override is missing title, description, or rationale.`);
+  if (override.description.length < 300) throw new Error(`${override.slug}: editorial override description is unexpectedly thin.`);
+
+  const nextUpdatedAt = `${overrides.reviewedAt}T00:00:00.000Z`;
+  if (byIdRecord.title !== override.title || byIdRecord.description !== override.description || byIdRecord.updatedAt !== nextUpdatedAt) {
+    byIdRecord.title = override.title;
+    byIdRecord.description = override.description;
+    byIdRecord.updatedAt = nextUpdatedAt;
+    changed += 1;
+  }
+}
+
+if (changed) await writeFile(dataPath, `${JSON.stringify(biases, null, 2)}\n`);
+console.log(`Editorial overrides applied: ${overrides.entries.length} reviewed entries, ${changed} working-copy records updated.`);
