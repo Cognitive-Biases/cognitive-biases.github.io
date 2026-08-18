@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "decoy-effect-pricing-choice-sets",
+      "title": "Decoy Effect in pricing: when a third option changes the comparison",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Adding an inferior option can change the choice between stronger alternatives, but not every three-tier pricing table creates a reliable decoy effect. The position of the options, prior preferences and the decision context all matter.",
+      "sections": [
+        {
+          "heading": "The important change is the choice set",
+          "paragraphs": [
+            "The decoy effect is interesting because the main options do not need to change. Instead, adding another alternative changes the context in which they are evaluated. In the classic attraction-effect setup, the new option is asymmetrically dominated: it is clearly worse than the target on relevant attributes while the competitor is not similarly dominant over it.",
+            "That can increase the target's choice share even when the decoy itself is rarely selected. The result challenges the simple idea that a person's preference between two options should stay unchanged when an inferior third option appears."
+          ]
+        },
+        {
+          "heading": "Decoy is not one universal three-option formula",
+          "paragraphs": [
+            "The literature uses several related context effects. Attraction, compromise and phantom-decoy effects are not identical. A 2024 integrative review separates multiple decoy configurations and documents many moderators rather than treating every additional option as the same intervention.",
+            "This matters for pricing advice. A middle plan is not automatically a decoy, and an expensive plan is not automatically there only to sell the plan beside it. The relative attributes and dominance relationship need to be examined before applying the label."
+          ]
+        },
+        {
+          "heading": "The effect is documented, but its size is conditional",
+          "paragraphs": [
+            "Experiments have repeatedly found context-dependent preference shifts. A 2019 risky-choice study replicated asymmetric dominance and found that the effect depended on which option people already preferred and became weaker as preference strength increased.",
+            "Preregistered work also gives a useful warning against treating famous demonstrations as fixed effect sizes. A 2021 replication project failed to reproduce one original result and reproduced another with a much smaller effect. The reasonable conclusion is not that the decoy effect disappeared, but that the conditions and magnitude deserve attention."
+          ]
+        },
+        {
+          "heading": "There is no single agreed mechanism",
+          "paragraphs": [
+            "Different accounts focus on contrast between attribute trade-offs, relative-value computation, attention, or the ease of justifying one option over another. The 2024 review finds no clear consensus on one mechanism that explains all decoy effects.",
+            "For this library, the observed choice pattern is therefore firmer than a claim about one mental process. We describe what changed in the choice set first and keep mechanism claims qualified."
+          ]
+        },
+        {
+          "heading": "A useful check for pricing tables",
+          "paragraphs": [
+            "Write the attributes that matter before looking at which plan is highlighted. Compare the serious options without the suspected decoy, then add it back. If the preference changes, inspect the contrast rather than treating the new preference as automatically more informed.",
+            "Also separate other choice architecture. A pre-selected plan is a default, a displayed list price can become an anchor, and gain or loss wording can frame the same feature differently. One screen can contain several effects at once."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We rewrote Decoy Effect as a reviewed context effect rather than a guaranteed marketing trick. We also compare it directly with Default Effect and added a Comparing plans & pricing context that connects Decoy with Default, Anchoring and Framing.",
+            "The practical rule is simple: remove the extra option and see whether the comparison between the remaining options changes. Then return to the attributes and goals that actually matter."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Choice in Context: Tradeoff Contrast and Extremeness Aversion","year":1992,"type":"foundational experiments","doi":"10.1177/002224379202900301","url":"https://doi.org/10.1177/002224379202900301"},
+        {"title":"The asymmetric dominance effect: Reexamination and extension in risky choice – An experimental study","year":2019,"type":"experimental replication and extension","doi":"10.1016/j.joep.2019.05.007","url":"https://doi.org/10.1016/j.joep.2019.05.007"},
+        {"title":"Revisiting the decoy effect: replication and extension of Ariely and Wallsten (1995) and Connolly, Reb, and Kausel (2013)","year":2021,"type":"preregistered replication","doi":"10.1080/23743603.2021.1878340","url":"https://doi.org/10.1080/23743603.2021.1878340"},
+        {"title":"An integrative review of the decoy effect on choice behavior","year":2024,"type":"systematic integrative review","doi":"10.1002/mar.22076","url":"https://doi.org/10.1002/mar.22076"}
+      ],
+      "related": ["framing-effect-decoy-effect","framing-effect-default-effect","cognitive-bias-anchoring-effect","framing-effect-core"]
+    }
+  ]
+}
