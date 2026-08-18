@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-declinism",
+      "evidenceStatus": "umbrella label; direct evidence supports specific decline illusions",
+      "reviewedAt": "2026-08-18",
+      "qualification": "Declinism is best treated here as an umbrella label for judging the present as worse than an idealized past, not as one standardized cognitive-bias construct with a single mechanism. Research directly supports several narrower ingredients: people can remember past experiences more positively than they experienced them, negative affect associated with autobiographical memories often fades faster than positive affect, and large multi-study work finds a pervasive illusion of moral decline. None of this means that every claim of social, technological, institutional, or personal decline is false; real decline must be tested against domain-specific evidence.",
+      "mechanism": "Different decline judgments can arise from different processes. Rosy retrospection can make remembered experiences more positive than they were in the moment. Fading affect can reduce the emotional weight of negative memories faster than positive ones. In perceptions of moral decline, biased exposure to negative information about the present combined with biased memory for the past can create an apparent downward trend. Because these mechanisms differ by domain, 'declinism' should not be used as a universal explanation whenever someone thinks conditions have worsened.",
+      "practical": "Specify the domain and time window before judging decline. Compare the present with contemporaneous records or repeated measurements from the past rather than memory alone. Separate a real trend in the target variable from nostalgia for a broader period, and look for indicators that could show improvement as well as deterioration. If the claim is about morality or social behavior, distinguish perceptions of 'people in general' from direct observations of people you actually know.",
+      "sources": [
+        {
+          "title": "Temporal Adjustments in the Evaluation of Events: The Rosy View",
+          "year": 1997,
+          "type": "three longitudinal/retrospective studies",
+          "doi": "10.1006/jesp.1997.1333",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9247371/"
+        },
+        {
+          "title": "On misattributing good remembering to a happy past: An investigation into the cognitive roots of nostalgia",
+          "year": 2006,
+          "type": "memory experiments",
+          "doi": "10.1037/1528-3542.6.4.596",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17144751/"
+        },
+        {
+          "title": "The illusion of moral decline",
+          "year": 2023,
+          "type": "archival analysis + multi-study experiments",
+          "doi": "10.1038/s41586-023-06137-x",
+          "url": "https://www.nature.com/articles/s41586-023-06137-x"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-systematic-bias",
+      "evidenceStatus": "measurement/statistical concept; not a standalone cognitive-bias construct",
+      "reviewedAt": "2026-08-18",
+      "auditEligible": false,
+      "qualification": "Systematic bias is a general statistical and measurement concept: a non-random tendency for measurements, estimates, or study results to deviate from a reference or target value in a consistent or predictable way. Standards in metrology define systematic measurement error separately from random error and define measurement bias as an estimate of that systematic error. This is not one specific psychological bias with one mechanism, so the page should not present it as a personal cognitive tendency alongside constructs such as confirmation bias or hindsight bias.",
+      "mechanism": "Systematic error can arise from instruments, calibration, sampling, study design, confounding, data collection, analysis, or other structural features of a process. Unlike random variation, it does not reliably disappear just by collecting more observations. In some domains the word 'bias' also describes systematic tendencies in human judgment, but that broader usage does not turn systematic bias itself into a distinct cognitive-bias mechanism.",
+      "practical": "Define the target or reference value, then identify where a process could consistently push estimates in one direction. Use calibration, validation data, representative sampling, design controls, sensitivity analysis, or process changes to estimate and reduce the systematic component. Do not treat repeated error as proof of a psychological cause until measurement, sampling, and procedural explanations have been examined.",
+      "sources": [
+        {
+          "title": "International vocabulary of metrology — systematic measurement error and measurement bias",
+          "year": 2008,
+          "type": "international metrology vocabulary",
+          "url": "https://www.iso.org/sites/JCGM/VIM/JCGM_200e_FILES/MAIN_JCGM_200e/02_e.html"
+        },
+        {
+          "title": "NIST Technical Note 1297, Appendix D1: Terminology",
+          "year": 1994,
+          "type": "measurement uncertainty guidance",
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"
+        },
+        {
+          "title": "Bias, Statistical",
+          "year": 2023,
+          "type": "NIST glossary definition",
+          "url": "https://www.nist.gov/glossary-term/19181"
+        }
+      ]
+    }
+  ]
+}

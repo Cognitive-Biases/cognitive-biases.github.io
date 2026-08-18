@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-08-18",
+  "entries": [
+    {
+      "id": 94,
+      "slug": "cognitive-bias-declinism",
+      "previousTitle": "Declinism – when the past seems golden, and the future looks bleak",
+      "title": "Declinism – when the present is judged against an idealized past",
+      "description": "Declinism is best treated as an umbrella label for seeing broad decline relative to an idealized past, not as one standardized cognitive bias with a single mechanism. Research directly supports narrower ingredients: past experiences can be remembered more positively than they were lived, negative affect can fade faster than positive affect, and people can perceive moral decline even when repeated measures do not show the decline they remember. None of this means that every claim that society, technology, institutions, or personal circumstances have worsened is false.\n\n🔍 Where’s the trap?\n- Social judgment – a vague sense that 'people used to be better' is treated as historical evidence without comparing repeated measures across time.\n- Personal memory – a difficult past period is remembered mainly through its meaningful or positive parts while everyday frustrations fade.\n- Trend claims – real deterioration in one measurable domain is expanded into a story that an entire era was better.\n\n💡 How to avoid it?\n- Define the domain and time window before claiming decline.\n- Compare the present with contemporaneous records or repeated historical measures, not memory alone.\n- Look separately for indicators of improvement and deterioration.\n- Treat nostalgia or a rosy memory as a clue about experience, not as a measurement of the past.",
+      "reason": "The previous page presented declinism as one general bias spanning society, technology, and personal life. The reviewed evidence supports narrower phenomena such as rosy retrospection and the illusion of moral decline, not a universal rule that all perceived decline is mistaken."
+    },
+    {
+      "id": 121,
+      "slug": "cognitive-bias-systematic-bias",
+      "previousTitle": "Systematic Bias – when errors in judgment follow a predictable pattern",
+      "title": "Systematic Bias – a non-random deviation, not one cognitive bias",
+      "description": "Systematic bias is a general measurement and statistical concept rather than one specific cognitive-bias mechanism. It describes a consistent or predictable departure of measurements, estimates, or study results from a reference or target value. International metrology standards distinguish systematic error from random error and define measurement bias as an estimate of systematic measurement error. Human judgment can contain systematic biases, but 'systematic bias' itself does not identify which psychological mechanism produced the deviation.\n\n🔍 Where’s the trap?\n- Measurement – an instrument or procedure consistently pushes values high or low, but the error is mistaken for random noise.\n- Research – sampling, confounding, measurement, or analysis creates a structural deviation that does not disappear just by collecting more observations.\n- Psychology – any repeated judgment error is labelled 'Systematic Bias' as though that were the name of a distinct mental mechanism.\n\n💡 How to avoid it?\n- Define the target or reference value and estimate the direction and size of the deviation.\n- Check calibration, sampling, measurement, design, and analysis before assuming a psychological cause.\n- Use validation data, sensitivity analysis, or process controls to estimate and reduce systematic error.\n- Name the specific cognitive mechanism separately when evidence supports one.",
+      "reason": "The previous page mixed measurement error, forecasting error, and personal cognitive biases as if Systematic Bias were a standalone psychological construct. Standards treat systematic bias/error as a general non-random deviation concept."
+    }
+  ]
+}

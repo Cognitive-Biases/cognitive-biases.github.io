@@ -9,6 +9,8 @@ const duplicateIds = new Set((duplicates.groups || []).flatMap((group) => group.
 const evidenceFiles = (await readdir("data")).filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name));
 const evidenceDocs = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
 const reviews = evidenceDocs.flatMap((document) => document.reviews || []);
+const eligibleReviews = reviews.filter((review) => review.auditEligible !== false);
+const excludedReviews = reviews.filter((review) => review.auditEligible === false);
 const audit = await readFile(resolve("dist", "tools", "decision-audit", "index.html"), "utf8");
 const script = await readFile(resolve("dist", "assets", "decision-audit.js"), "utf8");
 const sitemap = await readFile("dist/sitemap.xml", "utf8");
@@ -27,15 +29,26 @@ for (const id of requiredFields) {
   if (!audit.includes(`id="${id}"`)) throw new Error(`Decision Audit is missing field #${id}.`);
 }
 
-for (const review of reviews) {
+for (const review of eligibleReviews) {
   const bias = bySlug.get(review.slug);
   if (!bias) throw new Error(`${review.slug}: evidence review has no published bias for Decision Audit.`);
   if (duplicateIds.has(bias.id)) throw new Error(`${review.slug}: Decision Audit lens targets duplicate alias.`);
-  if (!audit.includes(`value="${review.slug}"`)) throw new Error(`${review.slug}: reviewed pattern is missing from Decision Audit selector.`);
+  if (!audit.includes(`value="${review.slug}"`)) throw new Error(`${review.slug}: audit-eligible reviewed pattern is missing from Decision Audit selector.`);
   const biasHtml = await readFile(resolve("dist", "biases", review.slug, "index.html"), "utf8");
   if (!biasHtml.includes(`/tools/decision-audit/?bias=${review.slug}`) || !biasHtml.includes('class="audit-cta"')) {
-    throw new Error(`${review.slug}: reviewed page is missing reciprocal Decision Audit CTA.`);
+    throw new Error(`${review.slug}: audit-eligible reviewed page is missing reciprocal Decision Audit CTA.`);
   }
+}
+
+for (const review of excludedReviews) {
+  const bias = bySlug.get(review.slug);
+  if (!bias) throw new Error(`${review.slug}: excluded evidence review has no published canonical page.`);
+  if (audit.includes(`value="${review.slug}"`)) throw new Error(`${review.slug}: audit-ineligible reviewed concept still appears in Decision Audit selector.`);
+  const biasHtml = await readFile(resolve("dist", "biases", review.slug, "index.html"), "utf8");
+  if (biasHtml.includes(`/tools/decision-audit/?bias=${review.slug}`) || biasHtml.includes('class="audit-cta"')) {
+    throw new Error(`${review.slug}: audit-ineligible reviewed concept still renders a Decision Audit CTA.`);
+  }
+  if (!biasHtml.includes('class="evidence-review"')) throw new Error(`${review.slug}: audit exclusion must not remove the evidence review itself.`);
 }
 
 for (const path of ["index.html", "explore/index.html", "evidence/index.html", "compare/index.html", "tools/decision-audit/index.html"]) {
@@ -46,4 +59,4 @@ for (const path of ["index.html", "explore/index.html", "evidence/index.html", "
 if (!script.includes("navigator.clipboard.writeText") || !script.includes("localStorage.removeItem")) throw new Error("Decision Audit copy/reset behavior is incomplete.");
 if (!script.includes('new URLSearchParams(location.search).get("bias")')) throw new Error("Decision Audit bias preselection is missing.");
 
-console.log(`Decision Audit check passed: local-only state, ${reviews.length} evidence-reviewed lenses, reciprocal CTAs, sitemap, schema, navigation, copy/reset, and no network transport verified.`);
+console.log(`Decision Audit check passed: local-only state, ${eligibleReviews.length}/${reviews.length} evidence-reviewed entries eligible as lenses, ${excludedReviews.length} reviewed concepts excluded, reciprocal CTAs, sitemap, schema, navigation, copy/reset, and no network transport verified.`);
