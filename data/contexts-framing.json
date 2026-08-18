@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "presenting-risk-options",
+      "title": "Presenting risk & options",
+      "summary": "Use these evidence-reviewed lenses when a report, interface, model, or recommendation is presenting numbers and choices that other people will use to decide.",
+      "useWhen": [
+        "The same outcome can be described as a gain, a loss, a success rate, or a failure rate.",
+        "One prominent number appears before people form their own estimate.",
+        "A broad risk category hides several different ways the outcome could happen.",
+        "A vivid example or recent incident is being used next to statistical evidence.",
+        "An AI interface chooses the wording, score, ordering, or examples that a person sees before deciding."
+      ],
+      "workflow": [
+        "Write the underlying outcomes, quantities, and probabilities in a neutral form before choosing presentation language.",
+        "Create matched gain and loss descriptions for important risk choices. Check whether the decision changes even though the underlying outcomes do not.",
+        "Identify the first numerical reference point. When practical, collect an independent estimate before revealing it or compare against several relevant references.",
+        "Unpack broad risks into mutually exclusive possibilities and compare the total with the original packed estimate.",
+        "Separate illustrative examples from frequency evidence. A memorable case can help explain a risk without representing how common it is.",
+        "For consequential interfaces or reports, test alternative presentations and measure the resulting choices instead of assuming one wording is neutral."
+      ],
+      "lenses": [
+        {"slug":"framing-effect-core","question":"Would the choice change if the same outcomes were presented with an equivalent gain, loss, or neutral description?"},
+        {"slug":"cognitive-bias-anchoring-effect","question":"Which number is shown first, and is it pulling later estimates toward itself?"},
+        {"slug":"probability-bias-subadditivity-effect","question":"Does the total risk estimate change when the same outcome is unpacked into explicit possibilities?"},
+        {"slug":"heuristic-bias-availability-bias","question":"Is a vivid example affecting the estimate because it is representative, or mainly because it is easy to recall?"}
+      ]
+    }
+  ]
+}

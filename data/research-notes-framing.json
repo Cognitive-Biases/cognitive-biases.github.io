@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "framing-effect-not-all-frames-are-the-same",
+      "title": "Framing effect: why not all frames are the same",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Risky-choice framing is a robust finding, but the word 'framing' covers several different research paradigms. Treating every positive-versus-negative message as the same effect hides important differences in evidence and mechanism.",
+      "sections": [
+        {
+          "heading": "The classic result is about equivalent risky choices",
+          "paragraphs": [
+            "Tversky and Kahneman’s 1981 experiments showed that preferences can change when the same underlying outcomes are described in different ways. The best-known cases compare gain and loss descriptions of risky choices while preserving the essential outcomes and probabilities.",
+            "A 1998 meta-analysis covering 230 effect sizes from nearly 30,000 participants found a reliable overall risky-choice framing effect, but also substantial variation across research designs. This is a robust phenomenon with moderators, not a law that any positive wording creates risk aversion and any negative wording creates risk seeking."
+          ]
+        },
+        {
+          "heading": "Framing is not one experimental paradigm",
+          "paragraphs": [
+            "A major 1998 review separated valence framing into risky-choice framing, attribute framing, and goal framing. Risky-choice framing changes how options under risk are described. Attribute framing changes how a characteristic is described, such as success versus failure percentage. Goal framing changes whether a message emphasizes the benefit of doing something or the cost of not doing it.",
+            "Those tasks should not be collapsed into one effect simply because each uses positive and negative language. They ask different questions and may involve different psychological processes."
+          ]
+        },
+        {
+          "heading": "The evidence is not equally strong across types",
+          "paragraphs": [
+            "A 2023 systematic review concluded that risky-choice framing has strong and consistent evidence. It described the evidence for attribute framing as more limited but generally positive, while goal or message framing was much less consistent.",
+            "That changes how this library should write about framing. We can confidently teach the risky-choice pattern while keeping broader claims about persuasion and message framing narrower."
+          ]
+        },
+        {
+          "heading": "Complete information reduces one problem but does not erase framing",
+          "paragraphs": [
+            "Some framing tasks have been criticized because gain and loss versions can make different parts of an outcome more salient or omit complementary information. A large 2026 replication tested matched and complete descriptions and still found a residual risky-choice framing effect.",
+            "That result strengthens the case that framing is not only an artifact of obviously incomplete wording. At the same time, it reinforces the need to inspect exactly how the options were represented before generalizing from one task to another."
+          ]
+        },
+        {
+          "heading": "A practical check is to vary the presentation, not guess at neutrality",
+          "paragraphs": [
+            "For consequential decisions, write the underlying outcomes and probabilities first. Then compare equivalent gain, loss, and neutral descriptions while keeping the information complete. If preferences move, the presentation is part of the decision environment and should be documented.",
+            "This matters for AI interfaces too. A model can choose whether to describe the same forecast as success, failure, lives saved, losses avoided, or risk incurred. The useful governance question is observable: do reasonable presentation variants change the person’s decision?"
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We added Framing Effect as a canonical evidence-reviewed concept instead of leaving it only as a category label. The page explicitly separates risky-choice, attribute, and goal framing rather than presenting every wording effect as one construct.",
+            "We also added a Framing versus Anchoring comparison and a Presenting risk & options context, so people can start either from the concept or from a real communication and interface problem."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"The framing of decisions and the psychology of choice","year":1981,"type":"foundational experiments","doi":"10.1126/science.7455683","url":"https://pubmed.ncbi.nlm.nih.gov/7455683/"},
+        {"title":"The Influence of Framing on Risky Decisions: A Meta-analysis","year":1998,"type":"meta-analysis","doi":"10.1006/obhd.1998.2781","url":"https://pubmed.ncbi.nlm.nih.gov/9719656/"},
+        {"title":"All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects","year":1998,"type":"critical review and typology","doi":"10.1006/obhd.1998.2804","url":"https://doi.org/10.1006/obhd.1998.2804"},
+        {"title":"A systematic review of risky-choice framing effects","year":2023,"type":"systematic review","url":"https://pubmed.ncbi.nlm.nih.gov/37927347/"},
+        {"title":"Accelerating Psychological Science With Metastudies: A Demonstration Using the Risky-Choice Framing Effect","year":2022,"type":"three metastudies","doi":"10.1177/17456916221079611","url":"https://pubmed.ncbi.nlm.nih.gov/35834353/"},
+        {"title":"Risky-choice framing effects persist when option descriptions are matched and complete: A replication and extension of DeKay and Dou (2024)","year":2026,"type":"large replication and extension","doi":"10.3758/s13423-025-02771-w","url":"https://pubmed.ncbi.nlm.nih.gov/41979840/"}
+      ],
+      "related": ["framing-effect-core","cognitive-bias-anchoring-effect","probability-bias-subadditivity-effect","heuristic-bias-availability-bias"]
+    }
+  ]
+}

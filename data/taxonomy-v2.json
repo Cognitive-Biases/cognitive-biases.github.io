@@ -127,7 +127,8 @@
     "111": ["work-project-decisions"],
     "118": ["forecasting-future-choices"],
     "140": ["work-project-decisions"],
-    "222": ["human-ai-interaction", "project-estimation-delivery"],
-    "223": ["work-project-decisions", "continue-change-stop-project"]
+    "222": ["human-ai-interaction", "project-estimation-delivery", "presenting-risk-options"],
+    "223": ["work-project-decisions", "continue-change-stop-project"],
+    "224": ["presenting-risk-options"]
   }
 }
