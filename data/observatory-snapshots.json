@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "snapshots": [
+    {
+      "id": "ai-and-work-pilot-2026-08-19",
+      "topicSlug": "ai-and-work",
+      "title": "AI and work: framing pilot",
+      "collectedAt": "2026-08-19T10:45:00Z",
+      "provider": "curated-public-metadata-pilot",
+      "samplingMode": "curated-demonstration",
+      "window": {
+        "start": "2026-06-01",
+        "end": "2026-08-19"
+      },
+      "query": "AI and work / jobs / labor-market framing pilot",
+      "language": "English",
+      "limitations": "This six-item pilot was deliberately selected to demonstrate contrasting headline frames. It is not a representative sample and must not be used to estimate media prevalence.",
+      "records": [
+        {
+          "url": "https://www.ft.com/content/0dc14b44-96f6-4b1f-921a-8cba8030eafc",
+          "title": "Is AI really responsible for recent job cuts?",
+          "domain": "ft.com",
+          "sourceName": "Financial Times",
+          "sourceCountry": "United Kingdom",
+          "language": "English",
+          "publishedAt": "2026-08-19"
+        },
+        {
+          "url": "https://www.reuters.com/commentary/reuters-open-interest/ai-creeps-onto-fed-radar-footprint-is-small-so-far-2026-08-13/",
+          "title": "AI creeps onto Fed radar, but footprint is small so far",
+          "domain": "reuters.com",
+          "sourceName": "Reuters",
+          "sourceCountry": "United Kingdom",
+          "language": "English",
+          "publishedAt": "2026-08-13"
+        },
+        {
+          "url": "https://www.reuters.com/business/world-at-work/ai-will-lead-labour-shortages-jeff-bezos-says-vivatech-2026-06-17/",
+          "title": "AI will lead to labour shortages, Bezos says in optimistic talk",
+          "domain": "reuters.com",
+          "sourceName": "Reuters",
+          "sourceCountry": "United Kingdom",
+          "language": "English",
+          "publishedAt": "2026-06-17"
+        },
+        {
+          "url": "https://apnews.com/article/c5988294ce6a2828e83ef7fe42706c48",
+          "title": "A grim job outlook meets a scrappy workforce as administrative assistants harness AI",
+          "domain": "apnews.com",
+          "sourceName": "Associated Press",
+          "sourceCountry": "United States",
+          "language": "English",
+          "publishedAt": null
+        },
+        {
+          "url": "https://www.wsj.com/cio-journal/the-bright-side-of-ais-impact-on-the-labor-market-190287fc",
+          "title": "The Bright Side of AI's Impact on the Labor Market",
+          "domain": "wsj.com",
+          "sourceName": "The Wall Street Journal",
+          "sourceCountry": "United States",
+          "language": "English",
+          "publishedAt": "2026-08-19"
+        },
+        {
+          "url": "https://openai.com/index/mapping-ai-jobs-transition-eu/",
+          "title": "Mapping Europe’s AI Workforce Opportunity",
+          "domain": "openai.com",
+          "sourceName": "OpenAI",
+          "sourceCountry": "United States",
+          "language": "English",
+          "publishedAt": "2026-06-29"
+        }
+      ]
+    }
+  ]
+}
