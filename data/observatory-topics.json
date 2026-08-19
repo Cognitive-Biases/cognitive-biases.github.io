@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updatedAt": "2026-08-19",
   "topics": [
     {
@@ -12,6 +12,39 @@
       "maxRecords": 100,
       "gdeltQuery": "\"artificial intelligence\" (jobs OR workforce OR employment OR layoffs OR hiring) sourcelang:english",
       "limitations": "The automated GDELT snapshot is a discovery sample returned by the provider, not a complete or statistically representative census of media coverage."
+    },
+    {
+      "slug": "ai-and-education",
+      "title": "AI and education",
+      "description": "How public coverage frames AI in schools, universities, teaching, learning and student work.",
+      "active": true,
+      "language": "English",
+      "windowDays": 7,
+      "maxRecords": 100,
+      "gdeltQuery": "\"artificial intelligence\" (education OR schools OR universities OR students OR teachers) sourcelang:english",
+      "limitations": "The automated GDELT snapshot is a discovery sample returned by the provider, not a complete or statistically representative census of education coverage."
+    },
+    {
+      "slug": "misinformation-and-verification",
+      "title": "Misinformation and verification",
+      "description": "How public coverage frames misinformation, verification, fact-checking, corrections and uncertain claims.",
+      "active": true,
+      "language": "English",
+      "windowDays": 7,
+      "maxRecords": 100,
+      "gdeltQuery": "(misinformation OR disinformation OR \"fact check\" OR \"fact-checking\" OR verification) sourcelang:english",
+      "limitations": "The automated GDELT snapshot is a discovery sample returned by the provider. It does not measure the truth of claims or the quality of a source."
+    },
+    {
+      "slug": "risk-and-extreme-events",
+      "title": "Risk and extreme events",
+      "description": "How public coverage of high-impact events uses danger, uncertainty, salience and numerical emphasis.",
+      "active": true,
+      "language": "English",
+      "windowDays": 7,
+      "maxRecords": 100,
+      "gdeltQuery": "(wildfire OR earthquake OR flood OR \"aviation accident\" OR blackout OR outage) sourcelang:english",
+      "limitations": "The automated GDELT snapshot is a discovery sample returned by the provider. Event frequency in this sample must not be treated as a real-world probability estimate."
     }
   ]
 }
