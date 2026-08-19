@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "description": "Practical cognitive-bias lens packs organised by real decisions rather than by bias name.",
+  "canonicalUrl": "https://cognitive-biases.github.io/lenses/",
+  "packs": [
+    {
+      "slug": "career-decisions",
+      "title": "Career Decision Lens Pack",
+      "summary": "A practical review for job changes, promotions, offers and long-term career choices.",
+      "useWhen": ["comparing job offers", "deciding whether to leave a role", "negotiating compensation", "choosing a new skill or career direction"],
+      "lenses": [
+        {"name": "Anchoring effect", "url": "/biases/cognitive-bias-anchoring-effect/", "question": "What would I think this offer was worth if I had not seen the first number?"},
+        {"name": "Sunk cost / escalation of commitment", "url": "/biases/logical-fallacy-escalation-of-commitment/", "question": "If I had not already invested years here, would I still choose the next year?"},
+        {"name": "Projection bias", "url": "/biases/cognitive-bias-projection-bias/", "question": "Am I treating my current mood as a forecast of my future preferences?"},
+        {"name": "Planning fallacy", "url": "/biases/egocentric-bias-planning-fallacy/", "question": "What happened to people who made a similar transition, not just in my ideal plan?"},
+        {"name": "Outcome bias", "url": "/biases/cognitive-bias-outcome-bias/", "question": "Am I copying someone's career because it worked, without checking the process and luck?"}
+      ],
+      "workflow": ["Write the decision and the date by which you need to decide.", "Set three criteria before comparing options.", "Create your own estimate before asking a recruiter, manager or AI for one.", "Write one strong reason against your preferred option.", "Review the choice from the perspective of your future self six months later."]
+    },
+    {
+      "slug": "ai-assisted-work",
+      "title": "AI-Assisted Work Lens Pack",
+      "summary": "A review for using AI without quietly outsourcing judgment, evidence checks or memory.",
+      "useWhen": ["asking AI for estimates", "using AI to review work", "summarising research", "drafting a recommendation", "using an agent to make repeated decisions"],
+      "lenses": [
+        {"name": "Automation bias", "url": "/biases/false-priors-automation-bias/", "question": "Would I accept this answer if it came from an unknown junior colleague?"},
+        {"name": "Anchoring effect", "url": "/biases/cognitive-bias-anchoring-effect/", "question": "Did the model's first answer become the centre of my later reasoning?"},
+        {"name": "Anthropomorphism", "url": "/biases/availability-heuristic-anthropomorphism/", "question": "Am I reacting to fluent humanlike language instead of tested capability?"},
+        {"name": "Source confusion", "url": "/biases/memory-bias-source-confusion/", "question": "Can I still tell which claims came from me, the source material and the model?"},
+        {"name": "Confirmation bias", "url": "/biases/cognitive-bias-confirmation-bias/", "question": "Did I ask AI to test my view or mainly to make it sound stronger?"}
+      ],
+      "workflow": ["Form a first view before asking AI when the decision is important.", "Ask for assumptions, missing evidence and the strongest alternative explanation.", "Keep source links next to important claims.", "Separate generated text from verified facts.", "Record the final human decision and why it differs from the model, if it does."]
+    },
+    {
+      "slug": "team-decisions",
+      "title": "Team Decision Lens Pack",
+      "summary": "A practical meeting and review workflow for reducing agreement pressure and hidden assumptions.",
+      "useWhen": ["running a steering meeting", "reviewing a proposal", "choosing between vendors", "approving a risky change", "making a group forecast"],
+      "lenses": [
+        {"name": "Bandwagon effect", "url": "/biases/conformity-bias-bandwagon-effect/", "question": "Would people make the same choice if they voted before hearing the room?"},
+        {"name": "Authority bias", "url": "/explore/", "question": "Are we evaluating the argument or the seniority of the person saying it?"},
+        {"name": "Confirmation bias", "url": "/biases/cognitive-bias-confirmation-bias/", "question": "Which evidence would make the team stop or change direction?"},
+        {"name": "Outcome bias", "url": "/biases/cognitive-bias-outcome-bias/", "question": "Are we reviewing the quality of the decision process, not only the result?"},
+        {"name": "Hindsight bias", "url": "/biases/cognitive-bias-hindsight-bias/", "question": "What did we actually predict before the outcome was known?"}
+      ],
+      "workflow": ["Collect independent views before open discussion.", "Write the decision criteria where everyone can see them.", "Assign one person to present the strongest case against the current favourite.", "Record uncertainty and what would change the decision.", "Review the original reasoning after the outcome, not a reconstructed memory of it."]
+    },
+    {
+      "slug": "product-project-decisions",
+      "title": "Product & Project Decision Lens Pack",
+      "summary": "A compact review for estimates, pivots, roadmaps, launches and stopping rules.",
+      "useWhen": ["estimating delivery", "deciding whether to pivot", "prioritising a roadmap", "continuing a weak project", "reviewing a launch"],
+      "lenses": [
+        {"name": "Planning fallacy", "url": "/biases/egocentric-bias-planning-fallacy/", "question": "What is the outside-view duration from comparable completed work?"},
+        {"name": "Escalation of commitment", "url": "/biases/logical-fallacy-escalation-of-commitment/", "question": "Would we fund the next step if the project arrived today with no history?"},
+        {"name": "Pro-innovation bias", "url": "/biases/cognitive-bias-pro-innovation-bias/", "question": "Which costs, failure modes or adoption barriers are missing from the exciting story?"},
+        {"name": "Survivorship bias", "url": "/biases/availability-heuristic-survivorship-bias/", "question": "Which failed projects are absent from the examples we are copying?"},
+        {"name": "Outcome bias", "url": "/biases/cognitive-bias-outcome-bias/", "question": "Did this work because the process was good, or because uncertainty happened to favour us?"}
+      ],
+      "workflow": ["Start with a reference class before detailed estimation.", "Define a measurable success condition and a stopping condition.", "List one adoption risk, one operational risk and one evidence gap.", "Run a small reversible test before a large commitment where possible.", "After the result, review the original assumptions before changing the playbook."]
+    },
+    {
+      "slug": "news-information",
+      "title": "News & Information Lens Pack",
+      "summary": "A practical check for claims, feeds, repeated stories and AI-generated summaries.",
+      "useWhen": ["checking a viral claim", "reading breaking news", "using AI summaries", "comparing conflicting sources", "researching an unfamiliar topic"],
+      "lenses": [
+        {"name": "Availability bias", "url": "/biases/heuristic-bias-availability-bias/", "question": "Is this common, or simply vivid and easy to remember?"},
+        {"name": "Illusory truth effect", "url": "/biases/truth-judgment-illusory-truth-effect/", "question": "Have I verified this claim, or just seen it many times?"},
+        {"name": "Common source bias", "url": "/biases/information-bias-common-source-bias/", "question": "How many independent sources are there behind these repeated versions?"},
+        {"name": "Confirmation bias", "url": "/biases/cognitive-bias-confirmation-bias/", "question": "What is the strongest evidence against the explanation I prefer?"},
+        {"name": "Source confusion", "url": "/biases/memory-bias-source-confusion/", "question": "Can I trace the important claim back to where it actually came from?"}
+      ],
+      "workflow": ["Separate the claim from the headline or commentary around it.", "Find the earliest available primary or direct source.", "Count independent evidence, not repeated mentions.", "Check the denominator, base rate or comparison class when numbers are involved.", "Save the source with the claim if you expect to reuse it later."]
+    }
+  ]
+}

@@ -7,6 +7,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Canonical website: https://cognitive-biases.github.io/
 - Bias library: https://cognitive-biases.github.io/explore/
 - Everyday life: https://cognitive-biases.github.io/everyday/ — short, practical guides that start with familiar situations and connect them to reviewed decision lenses.
+- Decision Lens Packs: https://cognitive-biases.github.io/lenses/ — task-based workflows for career decisions, AI-assisted work, teams, product/project decisions and information checking.
+- AI-era Bias Lab: https://cognitive-biases.github.io/ai-era/ — research tracks for human–AI interaction patterns, with explicit status, related established concepts and falsifiable predictions.
 - Experiments Lab: https://cognitive-biases.github.io/experiments/ — interactive, local-only demonstrations that change one variable and connect the manipulation to an evidence-reviewed concept.
 - AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/ — provider-neutral paired-prompt specification for measuring AI model sensitivity to controlled decision conditions.
 - Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/ — public snapshots of headline-level framing, certainty, salience, authority, social-proof, numerical and repetition signals with explicit sampling limits.
@@ -33,6 +35,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Decision skills data: https://cognitive-biases.github.io/data/skills.json
 - Practice data: https://cognitive-biases.github.io/data/practice-sets.json
 - Everyday guide data: https://cognitive-biases.github.io/data/everyday-guides.json
+- Decision lens pack data: https://cognitive-biases.github.io/data/lens-packs.json
+- AI-era research-track data: https://cognitive-biases.github.io/data/ai-era-patterns.json
 - Experiment specifications: https://cognitive-biases.github.io/data/experiments.json
 - AI benchmark specification: https://cognitive-biases.github.io/data/ai-benchmark.json
 - AI benchmark prompt pack: https://cognitive-biases.github.io/data/ai-benchmark-prompts.ndjson
@@ -55,6 +59,10 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 Important interpretation rule: older library entries are not automatically evidence-reviewed. Prefer entries with an explicit evidence review when making claims about scientific support. Preserve the evidence class, descriptive status, qualification and review date when summarising reviewed material.
 
 When a person starts with a familiar question such as why a bad project is hard to stop, why repeated claims feel true, or why an AI estimate changes their own estimate, prefer the Everyday life guides. They are written as practical entry points and link back to the reviewed concept and wider decision context.
+
+Use Decision Lens Packs when the user has a real task rather than a bias name. The packs are compact workflows for repeated decisions. Treat each bias as a lens or checking question, not as a diagnosis or proof that a particular person is biased.
+
+Use the AI-era Bias Lab when exploring human–AI decision effects. Preserve each track's status exactly. “Emerging interaction pattern” and “testable hypothesis” are research labels, not validated cognitive-bias names. Prefer an existing established concept when it already explains the observation, and do not promote a working label to a scientific finding without direct evidence and replication.
 
 Use Experiments Lab when the goal is to inspect a manipulation directly. Each page randomly presents one of two paired conditions, keeps the response local to the page, and then reveals the alternative condition. These are educational demonstrations, not collected study results and not evidence that a particular user is biased.
 

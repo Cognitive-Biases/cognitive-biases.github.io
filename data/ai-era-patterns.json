@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "description": "Research tracks for human-AI decision patterns. These labels are working hypotheses, not established cognitive biases unless explicitly stated.",
+  "canonicalUrl": "https://cognitive-biases.github.io/ai-era/",
+  "interpretationRule": "Do not present a research-track label as a validated cognitive bias. Preserve the status, related established concepts, testable prediction and source links.",
+  "tracks": [
+    {
+      "slug": "ai-anchoring-loop",
+      "name": "AI Anchoring Loop",
+      "status": "emerging interaction pattern",
+      "relatedConcepts": ["anchoring effect", "automation bias"],
+      "idea": "A model gives a first estimate or recommendation, and the human's later reasoning stays too close to that starting point.",
+      "testablePrediction": "Participants who form an independent estimate before seeing AI advice should show a smaller shift toward an arbitrary AI anchor than participants who see AI advice first.",
+      "sources": [
+        {"title": "Anchoring bias in large language models: an experimental study", "year": 2025, "url": "https://doi.org/10.1007/s42001-025-00435-2"}
+      ]
+    },
+    {
+      "slug": "sycophancy-reinforcement-loop",
+      "name": "Sycophancy Reinforcement Loop",
+      "status": "emerging interaction pattern",
+      "relatedConcepts": ["confirmation bias", "conformity", "motivated reasoning"],
+      "idea": "A user signals a preferred conclusion, the model adapts toward it, and the agreeable answer then feels like independent support for the user's original belief.",
+      "testablePrediction": "Agreement-seeking prompts should increase both model agreement and user confidence more than neutral prompts, especially when the user is not shown an independent counterargument.",
+      "sources": [
+        {"title": "Good Arguments Against the People Pleasers: How Reasoning Mitigates (Yet Masks) LLM Sycophancy", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1126"}
+      ]
+    },
+    {
+      "slug": "cognitive-offloading-debt",
+      "name": "Cognitive Offloading Debt",
+      "status": "testable hypothesis",
+      "relatedConcepts": ["cognitive offloading", "testing effect", "illusion of explanatory depth"],
+      "idea": "AI can improve immediate task completion while reducing the effort that builds durable memory, retrieval skill or an internal model of the problem.",
+      "testablePrediction": "AI-assisted participants may complete a learning task faster but perform worse on delayed unaided recall or transfer unless the workflow includes retrieval and explanation steps.",
+      "sources": [
+        {"title": "ChatGPT as a cognitive crutch: Evidence from a randomized controlled trial on knowledge retention", "year": 2025, "url": "https://doi.org/10.1016/j.ssaho.2025.102287"}
+      ]
+    },
+    {
+      "slug": "source-memory-blur",
+      "name": "Source-Memory Blur",
+      "status": "emerging interaction pattern",
+      "relatedConcepts": ["source confusion", "cryptomnesia"],
+      "idea": "In mixed human-AI work, people may remember an idea or sentence but become less certain whether it came from themselves, a source document or the model.",
+      "testablePrediction": "Mixed workflows where AI and human contributions alternate should produce more source-attribution errors after a delay than clearly separated human-only and AI-only phases.",
+      "sources": [
+        {"title": "The AI Memory Gap: Users Misremember What They Created With AI or Without", "year": 2025, "url": "https://arxiv.org/abs/2509.11851"}
+      ]
+    },
+    {
+      "slug": "synthetic-consensus-illusion",
+      "name": "Synthetic Consensus Illusion",
+      "status": "testable hypothesis",
+      "relatedConcepts": ["illusory truth effect", "common source bias", "availability cascade"],
+      "idea": "Many generated answers can look like independent agreement even when they inherit the same sources, training patterns or retrieval result.",
+      "testablePrediction": "People should rate a claim as better supported when it appears in several differently worded AI answers, even when all answers are explicitly derived from one original source; source-lineage disclosure should reduce the effect.",
+      "sources": []
+    },
+    {
+      "slug": "confidence-transfer",
+      "name": "Confidence Transfer",
+      "status": "testable hypothesis",
+      "relatedConcepts": ["automation bias", "overconfidence", "authority bias"],
+      "idea": "Confident model language may transfer confidence to a human decision even when the underlying evidence is weak.",
+      "testablePrediction": "For the same answer quality, high-certainty AI wording should increase user confidence and reliance more than calibrated wording; showing objective model accuracy should moderate the effect.",
+      "sources": [
+        {"title": "Large Language Models are overconfident and amplify human bias", "year": 2025, "url": "https://arxiv.org/abs/2505.02151"}
+      ]
+    }
+  ]
+}
