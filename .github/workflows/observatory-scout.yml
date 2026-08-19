@@ -1,0 +1,49 @@
+name: Observatory Scout
+
+on:
+  schedule:
+    - cron: "23 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: observatory-scout
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install WebP encoder
+        run: timeout 90s sudo apt-get -o Acquire::Retries=3 install -y --no-install-recommends webp
+      - run: npm ci
+      - name: Collect public headline metadata
+        run: npm run observatory:collect -- --soft-fail
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- data/observatory-snapshots.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Validate complete site before publishing snapshot
+        if: steps.diff.outputs.changed == 'true'
+        run: npm run check
+      - name: Commit validated Observatory snapshot
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "cognitive-bias-observatory[bot]"
+          git config user.email "cognitive-bias-observatory[bot]@users.noreply.github.com"
+          git add data/observatory-snapshots.json
+          git commit -m "Update Cognitive Bias Observatory snapshot"
+          git push origin HEAD:main
