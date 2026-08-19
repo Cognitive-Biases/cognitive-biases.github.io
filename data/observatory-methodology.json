@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "title": "Cognitive Bias Observatory methodology",
+  "scope": "A transparent headline-level measurement layer for cognitive-pressure signals in public information environments. It does not diagnose authors, audiences or outlets with cognitive biases.",
+  "unitOfAnalysis": "One headline plus source metadata. Article bodies are not copied or analyzed in v0.1.",
+  "interpretationRule": "Report observable lexical and structural signals. Do not infer a cognitive bias, intent, truthfulness, political position or causal effect from one signal.",
+  "samplingRule": "Every snapshot must state its provider, query, date window, language, sample size and sampling limitations. Curated pilot snapshots must never be presented as representative media samples.",
+  "signals": [
+    {
+      "id": "gain-frame",
+      "label": "Gain framing cue",
+      "description": "Counts words that foreground opportunity, growth, improvement or creation.",
+      "terms": ["opportunity", "opportunities", "gain", "gains", "growth", "grow", "create", "creates", "creating", "hiring", "boost", "benefit", "benefits", "bright", "improve", "improves", "success"]
+    },
+    {
+      "id": "loss-frame",
+      "label": "Loss framing cue",
+      "description": "Counts words that foreground losses, cuts, decline, threat or damage.",
+      "terms": ["loss", "losses", "cut", "cuts", "layoff", "layoffs", "decline", "declines", "threat", "threatens", "risk", "risks", "grim", "shortage", "shortages", "displace", "displacement", "redundancy", "jobless", "backlash"]
+    },
+    {
+      "id": "uncertainty",
+      "label": "Uncertainty cue",
+      "description": "Counts modal or questioning language that keeps a claim open rather than presenting it as settled.",
+      "terms": ["may", "might", "could", "can", "unclear", "uncertain", "whether", "really", "possible", "possibly", "appears", "suggests", "so far", "outlook"]
+    },
+    {
+      "id": "certainty",
+      "label": "Certainty cue",
+      "description": "Counts language that presents an outcome or relationship with stronger certainty.",
+      "terms": ["will", "must", "proves", "proven", "definitely", "certainly", "inevitable", "always", "never", "leads", "causes"]
+    },
+    {
+      "id": "salience",
+      "label": "Salience cue",
+      "description": "Counts vivid or high-intensity words that can make a headline more attention-grabbing.",
+      "terms": ["grim", "bright", "frantic", "surge", "crisis", "massive", "dramatic", "race", "fear", "fears", "shock", "historic", "record", "backlash", "scrappy"]
+    },
+    {
+      "id": "authority",
+      "label": "Authority cue",
+      "description": "Counts references that foreground institutions, experts, studies, reports or named authority statements.",
+      "terms": ["says", "said", "study", "studies", "report", "reports", "research", "researchers", "expert", "experts", "poll", "fed", "government", "minister", "scientists"]
+    },
+    {
+      "id": "social-proof",
+      "label": "Social proof cue",
+      "description": "Counts language emphasizing popularity, majorities, widespread behavior or crowd adoption.",
+      "terms": ["majority", "most", "many", "millions", "popular", "viral", "widespread", "everyone", "surge", "racing", "rush"]
+    },
+    {
+      "id": "numerical-emphasis",
+      "label": "Numerical emphasis",
+      "description": "Counts explicit numerals, percentages, currencies and number-like tokens in the headline.",
+      "rule": "Regex-based count; no claim is made about whether the number is accurate or misleading."
+    },
+    {
+      "id": "question-form",
+      "label": "Question headline",
+      "description": "Marks headlines ending in a question mark. A question can signal uncertainty, curiosity or rhetorical framing, but the observable fact is only the form.",
+      "rule": "Boolean: trimmed headline ends with '?'."
+    },
+    {
+      "id": "repetition",
+      "label": "Near-duplicate repetition",
+      "description": "Groups headlines that share a high proportion of content words after stop-word removal.",
+      "rule": "Pairwise Jaccard similarity >= 0.62. This detects similar wording, not shared truth or independent confirmation."
+    }
+  ],
+  "derivedViews": {
+    "frameDirection": "gain-leaning when gain cues exceed loss cues; loss-leaning when loss cues exceed gain cues; mixed-or-neutral when tied.",
+    "certaintyDirection": "certainty-leaning when certainty cues exceed uncertainty cues; uncertainty-leaning when uncertainty cues exceed certainty cues; mixed-or-neutral when tied.",
+    "sourceDiversity": "unique domains divided by record count. This is a sample property, not a quality score.",
+    "countryDiversity": "unique non-empty source countries divided by record count."
+  },
+  "provenanceSources": [
+    {
+      "name": "GDELT Project",
+      "url": "https://www.gdeltproject.org/",
+      "role": "Optional open news-discovery provider for scheduled snapshots."
+    },
+    {
+      "name": "GDELT DOC 2.0 API documentation",
+      "url": "https://blog.gdeltproject.org/gdelt-doc-2-0-api-debuts/",
+      "role": "Documents article-list search and JSON output used by the collector adapter."
+    },
+    {
+      "name": "Media Cloud",
+      "url": "https://www.mediacloud.org/documentation",
+      "role": "Alternative archive/search provider for future adapters and replication."
+    }
+  ]
+}
