@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "topics": [
+    {
+      "slug": "ai-and-work",
+      "title": "AI and work",
+      "description": "How public coverage frames AI-related jobs, hiring, layoffs, workforce change and labor-market uncertainty.",
+      "active": true,
+      "language": "English",
+      "windowDays": 7,
+      "maxRecords": 100,
+      "gdeltQuery": "\"artificial intelligence\" (jobs OR workforce OR employment OR layoffs OR hiring) sourcelang:english",
+      "limitations": "The automated GDELT snapshot is a discovery sample returned by the provider, not a complete or statistically representative census of media coverage."
+    }
+  ]
+}
