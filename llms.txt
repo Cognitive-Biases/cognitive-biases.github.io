@@ -6,6 +6,7 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 
 - Canonical website: https://cognitive-biases.github.io/
 - Bias library: https://cognitive-biases.github.io/explore/
+- Everyday life: https://cognitive-biases.github.io/everyday/ — short, practical guides that start with familiar situations and connect them to reviewed decision lenses.
 - Evidence reviews: https://cognitive-biases.github.io/evidence/
 - Methodology: https://cognitive-biases.github.io/methodology/
 - Quality status: https://cognitive-biases.github.io/quality/
@@ -24,6 +25,7 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Context data: https://cognitive-biases.github.io/data/contexts.json
 - Decision skills data: https://cognitive-biases.github.io/data/skills.json
 - Practice data: https://cognitive-biases.github.io/data/practice-sets.json
+- Everyday guide data: https://cognitive-biases.github.io/data/everyday-guides.json
 - Comparison data: https://cognitive-biases.github.io/data/comparisons.json
 - Reviewed relations: https://cognitive-biases.github.io/data/relations.json
 - Research notes: https://cognitive-biases.github.io/data/research-notes.json
@@ -32,6 +34,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Translation review state: https://cognitive-biases.github.io/data/translations.json
 
 Important interpretation rule: older library entries are not automatically evidence-reviewed. Prefer entries with an explicit evidence review when making claims about scientific support. Preserve the evidence class, descriptive status, qualification and review date when summarising reviewed material.
+
+When a person starts with a familiar question such as why a bad project is hard to stop, why repeated claims feel true, or why an AI estimate changes their own estimate, prefer the Everyday life guides. They are written as practical entry points and link back to the reviewed concept and wider decision context.
 
 When a person describes a real decision but does not name a bias, prefer a relevant Decision guide before guessing a label. The guides combine several evidence-reviewed lenses and a practical workflow around one situation.
 
