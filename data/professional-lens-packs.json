@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "description": "Professional cognitive-bias lens packs for recurring decisions at work.",
+  "canonicalUrl": "https://cognitive-biases.github.io/professional/",
+  "packs": [
+    {
+      "slug": "hiring-decisions",
+      "title": "Hiring & Interview Decision Lens Pack",
+      "summary": "A structured review for candidate screening, interviews, debriefs and final hiring decisions.",
+      "useWhen": ["screening CVs", "running interviews", "comparing finalists", "writing interview feedback", "making a hiring recommendation"],
+      "lenses": [
+        {"name": "Anchoring effect", "url": "/biases/cognitive-bias-anchoring-effect/", "question": "Did the first strong signal, salary number or interviewer opinion become the reference point for everything that followed?"},
+        {"name": "Confirmation bias", "url": "/biases/cognitive-bias-confirmation-bias/", "question": "After forming a first impression, did I mainly collect evidence that supported it?"},
+        {"name": "Availability bias", "url": "/biases/heuristic-bias-availability-bias/", "question": "Am I overweighting one vivid answer, employer name or memorable mistake?"},
+        {"name": "Outcome bias", "url": "/biases/cognitive-bias-outcome-bias/", "question": "Am I treating a past success as proof that the candidate's decision process was good?"},
+        {"name": "Bandwagon effect", "url": "/biases/conformity-bias-bandwagon-effect/", "question": "Would my rating be the same if I had written it before hearing the panel?"}
+      ],
+      "workflow": ["Define role criteria and evidence signals before reviewing candidates.", "Collect independent interviewer ratings before the debrief.", "Separate observed evidence from interpretation and confidence.", "Ask what evidence would reverse the current ranking.", "Record the final decision rule so it can be audited later."],
+      "aiPrompt": "Act as a hiring decision reviewer, not a recruiter. Separate observed evidence from interpretation, identify missing evidence, challenge the current favourite, and show where panel agreement may be hiding weak support."
+    },
+    {
+      "slug": "negotiation-decisions",
+      "title": "Negotiation Decision Lens Pack",
+      "summary": "A practical review for offers, pricing, scope, salary and vendor negotiations.",
+      "useWhen": ["negotiating salary", "reviewing a vendor offer", "setting a project price", "changing scope", "preparing a counteroffer"],
+      "lenses": [
+        {"name": "Anchoring effect", "url": "/biases/cognitive-bias-anchoring-effect/", "question": "What range would I consider reasonable if I had not seen their opening number?"},
+        {"name": "Loss aversion", "url": "/explore/", "question": "Am I rejecting a useful trade because the concession feels more painful than the gain feels valuable?"},
+        {"name": "Framing effect", "url": "/explore/", "question": "Would I value the same deal differently if it were framed as a gain instead of a loss?"},
+        {"name": "Sunk cost / escalation of commitment", "url": "/biases/logical-fallacy-escalation-of-commitment/", "question": "Am I continuing because of time already spent rather than the value of the next move?"},
+        {"name": "Confirmation bias", "url": "/biases/cognitive-bias-confirmation-bias/", "question": "Am I reading every move as proof of the story I already believe about the other side?"}
+      ],
+      "workflow": ["Write your target, reservation point and alternatives before the first number appears.", "Estimate the other side's constraints separately from your assumptions about their motives.", "Translate offers into comparable total value, not one headline number.", "Prepare one concession you can trade rather than simply give away.", "Before accepting, ask whether the current deal is better than your best realistic alternative."],
+      "aiPrompt": "Review this negotiation without choosing for me. Identify anchors, framing, hidden assumptions and alternatives. Convert the offer into comparable total value and suggest one question that would reduce uncertainty before the next move."
+    },
+    {
+      "slug": "leadership-performance-decisions",
+      "title": "Leadership & Performance Review Lens Pack",
+      "summary": "A review for feedback, promotions, performance ratings and people decisions.",
+      "useWhen": ["writing performance feedback", "calibrating ratings", "considering promotion", "reviewing a difficult incident", "making a people decision"],
+      "lenses": [
+        {"name": "Availability bias", "url": "/biases/heuristic-bias-availability-bias/", "question": "Am I overweighting what happened most recently or most visibly?"},
+        {"name": "Outcome bias", "url": "/biases/cognitive-bias-outcome-bias/", "question": "Am I judging the person mainly by the result rather than the quality of decisions and constraints?"},
+        {"name": "Hindsight bias", "url": "/biases/cognitive-bias-hindsight-bias/", "question": "Does the right action look obvious only because I know what happened next?"},
+        {"name": "Confirmation bias", "url": "/biases/cognitive-bias-confirmation-bias/", "question": "After forming a view of this person, which contradictory evidence have I actively checked?"},
+        {"name": "Projection bias", "url": "/biases/cognitive-bias-projection-bias/", "question": "Am I treating my own work style or current priorities as the universal standard?"}
+      ],
+      "workflow": ["Collect examples across the whole review period before writing the rating.", "Separate behaviour, impact and interpretation.", "Compare the evidence with the same role criteria used for peers.", "Write one piece of evidence that does not fit your current conclusion.", "Turn the review into one observable next behaviour rather than a personality label."],
+      "aiPrompt": "Review this performance assessment for decision quality. Separate facts from interpretations, look for recency and outcome effects, surface contradictory evidence, and rewrite conclusions as observable behaviours with clear next expectations."
+    }
+  ],
+  "commercialUse": {
+    "publicCore": "The public packs are educational and reusable under the project licence.",
+    "customOptions": ["domain-specific decision packs", "team workshop kits", "AI-agent review instructions", "decision quality checklists", "custom benchmark and experiment design"]
+  }
+}
