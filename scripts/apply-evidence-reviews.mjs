@@ -9,6 +9,7 @@ const evidenceFiles = (await readdir("data"))
   .sort();
 const evidenceDocuments = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
 const reviews = evidenceDocuments.flatMap((document) => document.reviews || []);
+const classesConfig = JSON.parse(await readFile("data/evidence-classes.json", "utf8"));
 const seenReviews = new Set();
 const bySlug = new Map(biases.map((bias) => [bias.slug, bias]));
 const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
@@ -30,11 +31,14 @@ for (const review of reviews) {
   if (!Array.isArray(review.sources) || review.sources.length < 2) {
     throw new Error(`${review.slug}: evidence review requires at least two reviewed sources.`);
   }
+  const classSlug = classesConfig.bySlug?.[review.slug];
+  const evidenceClass = classesConfig.classes?.[classSlug];
+  if (!classSlug || !evidenceClass) throw new Error(`${review.slug}: controlled evidence class is missing.`);
 
   const pagePath = join(OUT, "biases", review.slug, "index.html");
   let html = await readFile(pagePath, "utf8");
   const sources = review.sources.map((source) => `<li><a href="${escapeHtml(source.url)}" rel="external noreferrer">${escapeHtml(source.title)}</a> <span>${escapeHtml(source.type)} · ${source.year}${source.doi ? ` · DOI ${escapeHtml(source.doi)}` : ""}</span></li>`).join("");
-  const section = `<section class="evidence-review" id="evidence"><div class="evidence-review__head"><p class="kicker">Evidence review</p><span class="evidence-status">${escapeHtml(review.evidenceStatus)}</span></div><h2>What the evidence supports</h2><p class="evidence-qualification">${escapeHtml(review.qualification)}</p><h3>How researchers describe the pattern</h3><p>${escapeHtml(review.mechanism)}</p><h3>Practical interpretation</h3><p>${escapeHtml(review.practical)}</p><h3>Reviewed sources</h3><ol class="evidence-sources">${sources}</ol><p class="evidence-reviewed">Editorial review: ${escapeHtml(review.reviewedAt)}. Evidence status describes this entry, not every study ever published on the topic.</p></section>`;
+  const section = `<section class="evidence-review" id="evidence"><div class="evidence-review__head"><p class="kicker">Evidence review</p><div class="evidence-badges"><a class="evidence-class" data-evidence-class="${classSlug}" href="/methodology/#${classSlug}" title="${escapeHtml(evidenceClass.description)}">${escapeHtml(evidenceClass.label)}</a><span class="evidence-status">${escapeHtml(review.evidenceStatus)}</span></div></div><h2>What the evidence supports</h2><p class="evidence-qualification">${escapeHtml(review.qualification)}</p><h3>How researchers describe the pattern</h3><p>${escapeHtml(review.mechanism)}</p><h3>Practical interpretation</h3><p>${escapeHtml(review.practical)}</p><h3>Reviewed sources</h3><ol class="evidence-sources">${sources}</ol><p class="evidence-reviewed">Editorial review: ${escapeHtml(review.reviewedAt)}. The controlled evidence class is an editorial reading aid, not a numeric truth score; the descriptive status above carries the entry-specific qualification.</p></section>`;
   if (!html.includes('class="evidence-review"')) {
     const marker = '<section class="related">';
     if (!html.includes(marker)) throw new Error(`${review.slug}: related-section insertion point was not found.`);
@@ -63,7 +67,10 @@ const stylesPath = join(OUT, "styles.css");
 let styles = await readFile(stylesPath, "utf8");
 if (!styles.includes(".evidence-review{")) {
   styles += `\n.evidence-review{margin-top:3.5rem;padding:1.5rem;border:var(--line);background:#fff;box-shadow:8px 8px 0 var(--cyan)}.evidence-review__head{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}.evidence-review .kicker{margin:0}.evidence-review h2{margin-top:1rem}.evidence-review h3{font:1.05rem Archivo Black,sans-serif;letter-spacing:-.035em;margin:1.8rem 0 .5rem}.evidence-status{display:inline-block;border:2px solid var(--ink);background:var(--yellow);padding:.28rem .55rem;font-size:.78rem;font-weight:900;text-transform:uppercase}.evidence-qualification{font-size:1.08rem;font-weight:800}.evidence-sources{display:grid;gap:.7rem;padding-left:1.3rem}.evidence-sources li{padding-left:.25rem}.evidence-sources a{font-weight:900}.evidence-sources span{display:block;font-size:.82rem;color:#5a6475}.evidence-reviewed{margin-top:1.5rem;padding-top:1rem;border-top:2px solid var(--ink);font-size:.82rem;color:#5a6475}\n`;
-  await writeFile(stylesPath, styles);
 }
+if (!styles.includes(".evidence-badges{")) {
+  styles += `\n.evidence-badges{display:flex;align-items:center;gap:.45rem;flex-wrap:wrap}.evidence-class{display:inline-block;border:2px solid var(--ink);background:var(--cyan);color:var(--ink);padding:.28rem .55rem;font-size:.78rem;font-weight:900;text-transform:uppercase;text-decoration:none}.evidence-class:hover{text-decoration:underline}\n`;
+}
+await writeFile(stylesPath, styles);
 
-console.log(`Applied ${reviews.length} evidence-reviewed entries from ${evidenceFiles.length} evidence files.`);
+console.log(`Applied ${reviews.length} evidence-reviewed entries from ${evidenceFiles.length} evidence files with controlled evidence classes.`);

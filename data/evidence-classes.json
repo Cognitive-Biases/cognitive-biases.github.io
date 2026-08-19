@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "classes": {
+    "established": {
+      "label": "Established",
+      "description": "Replicated or broad evidence supports the core pattern, while ordinary boundary conditions and mechanism debates may still remain."
+    },
+    "supported": {
+      "label": "Supported",
+      "description": "Credible evidence supports the pattern, but the scope is narrower, the literature is smaller, or important boundary conditions deserve emphasis."
+    },
+    "mixed": {
+      "label": "Mixed",
+      "description": "Evidence supports some versions of the claim while important measurement, magnitude, mechanism, or interpretation disputes remain."
+    },
+    "contested": {
+      "label": "Contested",
+      "description": "The named claim or its popular causal interpretation faces substantial unresolved challenge, alternative explanations, or conflicting evidence."
+    },
+    "domain-specific": {
+      "label": "Domain-specific",
+      "description": "Evidence is concentrated in a narrow task, research program, or application domain and should not be generalized as a universal cognitive law."
+    },
+    "concept": {
+      "label": "Reviewed concept",
+      "description": "A useful reviewed term, measurement concept, or broader construct that is not one standalone cognitive-bias mechanism."
+    }
+  },
+  "bySlug": {
+    "confirmation-bias-backfire-effect": "mixed",
+    "belief-perseverance-conservatism-bias": "established",
+    "cognitive-bias-hindsight-bias": "established",
+    "truth-judgment-illusory-truth-effect": "established",
+    "probability-bias-subadditivity-effect": "supported",
+    "self-assessment-dunning": "mixed",
+    "cognitive-bias-confirmation-bias": "established",
+    "heuristic-bias-availability-bias": "established",
+    "logical-fallacy-escalation-of-commitment": "established",
+    "cognitive-bias-outcome-bias": "established",
+    "cognitive-bias-curse-of-knowledge": "supported",
+    "cognitive-bias-impact-bias": "established",
+    "cognitive-bias-projection-bias": "established",
+    "cognitive-bias-surrogation": "domain-specific",
+    "cognitive-bias-hungry-judge-effect": "contested",
+    "false-priors-automation-bias": "established",
+    "availability-heuristic-anthropomorphism": "established",
+    "human-robot-interaction-form": "supported",
+    "cognitive-bias-prevention-bias": "domain-specific",
+    "cognitive-bias-value-selection-bias": "domain-specific",
+    "self-assessment-hot": "established",
+    "attribution-bias-moral-luck": "established",
+    "cognitive-bias-declinism": "supported",
+    "cognitive-bias-systematic-bias": "concept"
+  }
+}
