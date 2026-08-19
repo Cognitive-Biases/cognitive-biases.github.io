@@ -41,6 +41,7 @@ for (const skill of skills) {
 
 await access("dist/skills/index.html");
 await access("dist/data/skills.json");
+await access("dist/schemas/skill.schema.json");
 const hub = await readFile("dist/skills/index.html", "utf8");
 if (!hub.includes("Decision Skills")) throw new Error("Skills hub is missing its title.");
 
@@ -56,4 +57,28 @@ for (const skill of skills) {
 const publicData = JSON.parse(await readFile("dist/data/skills.json", "utf8"));
 if (!Array.isArray(publicData.skills) || publicData.skills.length !== skills.length) throw new Error("Public skills data does not match canonical skills data.");
 
-console.log(`Decision skills check passed: ${skills.length} skills.`);
+const catalogue = JSON.parse(await readFile("dist/data/catalog.json", "utf8"));
+const skillDistribution = (catalogue.distributions || []).find((item) => item.id === "skills");
+if (!skillDistribution || !skillDistribution.url.endsWith("/data/skills.json")) throw new Error("Data catalogue is missing decision skills.");
+
+const metrics = JSON.parse(await readFile("dist/data/metrics.json", "utf8"));
+if (metrics.skills !== skills.length) throw new Error("Corpus metrics do not include the correct decision skill count.");
+
+const rag = await readFile("dist/data/rag.ndjson", "utf8");
+for (const skill of skills) {
+  if (!rag.includes(`\"resourceType\":\"skill\"`) || !rag.includes(`\"canonicalId\":\"${skill.slug}\"`)) throw new Error(`${skill.slug}: RAG distribution is missing the skill chunk.`);
+}
+
+const manifest = JSON.parse(await readFile("dist/data/manifest.json", "utf8"));
+if (!(manifest.files || []).some((item) => item.path === "skills.json")) throw new Error("Release manifest is missing skills.json.");
+
+const sitemap = await readFile("dist/sitemap.xml", "utf8");
+if (!sitemap.includes("https://cognitive-biases.github.io/skills/")) throw new Error("Sitemap is missing the skills hub.");
+for (const skill of skills) {
+  if (!sitemap.includes(`https://cognitive-biases.github.io/skills/${skill.slug}/`)) throw new Error(`${skill.slug}: sitemap entry is missing.`);
+}
+
+const llms = await readFile("llms.txt", "utf8");
+if (!llms.includes("https://cognitive-biases.github.io/skills/") || !llms.includes("https://cognitive-biases.github.io/data/skills.json")) throw new Error("llms.txt does not expose the decision skills surfaces.");
+
+console.log(`Decision skills check passed: ${skills.length} skills with human and machine discovery.`);
