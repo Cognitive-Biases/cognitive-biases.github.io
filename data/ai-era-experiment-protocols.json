@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "description": "Reusable research protocols for testing human-AI decision patterns without treating working labels as established cognitive biases.",
+  "canonicalUrl": "https://cognitive-biases.github.io/ai-era/protocol/",
+  "rules": [
+    "Start from an observable behaviour, not a catchy label.",
+    "State the competing explanation before collecting results.",
+    "Change one important variable at a time where possible.",
+    "Keep model, version, prompt, settings and date.",
+    "Separate model behaviour from human response.",
+    "Report null or mixed results as clearly as positive results."
+  ],
+  "protocols": [
+    {
+      "slug": "ai-advice-order",
+      "title": "AI Advice Order Test",
+      "track": "ai-anchoring-loop",
+      "question": "Does seeing an AI estimate before making your own estimate pull the final judgment toward the model?",
+      "conditions": ["Independent estimate first, then AI advice", "AI advice first, then human estimate"],
+      "primaryMeasure": "Absolute shift toward the AI estimate",
+      "secondaryMeasures": ["confidence change", "decision time", "distance from a reference-class estimate"],
+      "minimumReport": "Report the model/version, task, anchor value, sample size, mean shift by condition and uncertainty."
+    },
+    {
+      "slug": "agreement-pressure",
+      "title": "AI Agreement Pressure Test",
+      "track": "sycophancy-reinforcement-loop",
+      "question": "Does signalling a preferred answer change model agreement and then increase human confidence in that preferred answer?",
+      "conditions": ["Neutral question", "Question containing a preferred conclusion", "Preferred conclusion plus explicit request for counterevidence"],
+      "primaryMeasure": "Change in model agreement rate and user confidence",
+      "secondaryMeasures": ["factual accuracy", "counterargument quality", "answer revision rate"],
+      "minimumReport": "Keep the underlying task identical across conditions and report both model behaviour and human confidence separately."
+    },
+    {
+      "slug": "source-memory",
+      "title": "Human-AI Source Memory Test",
+      "track": "source-memory-blur",
+      "question": "Do mixed human-AI workflows make it harder to remember who produced an idea or sentence?",
+      "conditions": ["Human-only creation", "AI-only suggestion", "Mixed human-AI creation"],
+      "primaryMeasure": "Correct source-attribution rate after a delay",
+      "secondaryMeasures": ["confidence in attribution", "verbatim recognition", "idea ownership judgment"],
+      "minimumReport": "Predefine the delay, keep contribution labels hidden during the test, and distinguish idea-source from wording-source errors."
+    },
+    {
+      "slug": "offloading-retention",
+      "title": "AI Offloading & Retention Test",
+      "track": "cognitive-offloading-debt",
+      "question": "Can AI improve immediate completion while weakening unaided retention or transfer?",
+      "conditions": ["Unaided work", "AI-assisted work", "AI-assisted work plus retrieval/explanation step"],
+      "primaryMeasure": "Delayed unaided retention or transfer performance",
+      "secondaryMeasures": ["immediate task quality", "time on task", "self-rated effort", "confidence"],
+      "minimumReport": "Do not infer long-term learning from immediate task quality. Include a delayed or transfer measure."
+    }
+  ],
+  "startingEvidence": [
+    {"title": "Good Arguments Against the People Pleasers: How Reasoning Mitigates (Yet Masks) LLM Sycophancy", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1126"},
+    {"title": "Too Nice to Tell the Truth: Quantifying Agreeableness-Driven Sycophancy in Role-Playing Language Models", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1421"},
+    {"title": "Large Language Models are overconfident and amplify human bias", "year": 2025, "url": "https://arxiv.org/abs/2505.02151"},
+    {"title": "The AI Memory Gap: Users Misremember What They Created With AI or Without", "year": 2025, "url": "https://arxiv.org/abs/2509.11851"},
+    {"title": "ChatGPT as a cognitive crutch: Evidence from a randomized controlled trial on knowledge retention", "year": 2025, "url": "https://doi.org/10.1016/j.ssaho.2025.102287"}
+  ]
+}
