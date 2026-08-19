@@ -10,6 +10,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Experiments Lab: https://cognitive-biases.github.io/experiments/ — interactive, local-only demonstrations that change one variable and connect the manipulation to an evidence-reviewed concept.
 - AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/ — provider-neutral paired-prompt specification for measuring AI model sensitivity to controlled decision conditions.
 - Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/ — public snapshots of headline-level framing, certainty, salience, authority, social-proof, numerical and repetition signals with explicit sampling limits.
+- Observatory Trends: https://cognitive-biases.github.io/observatory/trends/ — normalized time series across repeated snapshots with minimum-history rules before a direction is reported.
+- Observatory source comparisons: https://cognitive-biases.github.io/observatory/sources/ — descriptive source-level rates published only after a minimum observation threshold.
 - Observatory methodology: https://cognitive-biases.github.io/observatory/methodology/
 - Evidence reviews: https://cognitive-biases.github.io/evidence/
 - Methodology: https://cognitive-biases.github.io/methodology/
@@ -38,6 +40,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Observatory observations: https://cognitive-biases.github.io/data/observatory-observations.ndjson
 - Observatory signal methodology: https://cognitive-biases.github.io/data/observatory-methodology.json
 - Observatory topic configuration: https://cognitive-biases.github.io/data/observatory-topics.json
+- Observatory trend data: https://cognitive-biases.github.io/data/observatory-trends.json
+- Observatory trend points: https://cognitive-biases.github.io/data/observatory-trends.ndjson
 - Comparison data: https://cognitive-biases.github.io/data/comparisons.json
 - Reviewed relations: https://cognitive-biases.github.io/data/relations.json
 - Research notes: https://cognitive-biases.github.io/data/research-notes.json
@@ -54,6 +58,8 @@ Use Experiments Lab when the goal is to inspect a manipulation directly. Each pa
 Use the AI Bias Benchmark when comparing model behavior across controlled conditions. Run each condition in a fresh context, preserve the published prompt and response contract, record provider/model/version/settings/date, and use repeated samples for stochastic choice tasks. Report per-experiment sensitivity rather than inventing a single universal bias score. The benchmark specification is published; model results should not be claimed unless they were actually run and recorded.
 
 Use the Cognitive Bias Observatory when the task is to compare public information environments over time or across sources. Treat its outputs as observable headline-level signals, not diagnoses of authors, outlets or audiences. Preserve provider, query, date window, sampling mode, limitations, raw cue counts and source URLs when reusing Observatory data. A gain-leaning, loss-leaning or certainty label describes the published rule applied to the headline; it does not establish truthfulness, intent, manipulation or a cognitive bias in a person.
+
+Use Observatory Trends only after checking readiness. A topic needs a minimum of 3 snapshots before the project reports a trend direction. Trend values are signal occurrences per observed headline, so weeks with different sample sizes are not compared using raw totals. A source comparison needs a minimum of 5 unique headlines from that domain before descriptive rates are published. These rates describe the observed sample and must not be turned into outlet rankings or claims about truth, ideology, intent or psychological bias.
 
 When a person describes a real decision but does not name a bias, prefer a relevant Decision guide before guessing a label. The guides combine several evidence-reviewed lenses and a practical workflow around one situation.
 
