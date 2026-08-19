@@ -11,7 +11,6 @@ const methodology = JSON.parse(await readFile("data/observatory-methodology.json
 const topicsData = JSON.parse(await readFile("data/observatory-topics.json", "utf8"));
 const snapshotsData = JSON.parse(await readFile("data/observatory-snapshots.json", "utf8"));
 const topics = topicsData.topics || [];
-const topicBySlug = new Map(topics.map((topic) => [topic.slug, topic]));
 const signalById = new Map((methodology.signals || []).map((signal) => [signal.id, signal]));
 const lexicalSignalIds = ["gain-frame", "loss-frame", "uncertainty", "certainty", "salience", "authority", "social-proof"];
 const rateKeys = ["gainFrame", "lossFrame", "uncertainty", "certainty", "salience", "authority", "socialProof", "numericalEmphasis", "questionForm"];
@@ -21,6 +20,7 @@ const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character)
 })[character]);
 const round = (value, digits = 3) => Number(Number(value || 0).toFixed(digits));
 const perHeadline = (value, count) => count ? round(value / count) : 0;
+const comparisonKeyFor = (snapshot) => `${snapshot.provider || "unknown"}::${snapshot.samplingMode || "unknown"}`;
 
 function brand(size, alt) {
   return `<picture class="brand-picture"><source type="image/webp" srcset="/assets/brand.webp"><img src="/assets/biases_icon.png" width="${size}" height="${size}" alt="${escapeHtml(alt)}"></picture>`;
@@ -74,7 +74,6 @@ function summarizeSnapshot(snapshot) {
     if (record.domain) domains.add(record.domain);
     for (const key of rateKeys) totals[key] += Number(record.signals[key] || 0);
   }
-  const rates = Object.fromEntries(rateKeys.map((key) => [key, perHeadline(totals[key], records.length)]));
   return {
     snapshotId: snapshot.id,
     topicSlug: snapshot.topicSlug,
@@ -82,10 +81,11 @@ function summarizeSnapshot(snapshot) {
     date: String(snapshot.collectedAt || "").slice(0, 10),
     samplingMode: snapshot.samplingMode,
     provider: snapshot.provider,
+    comparisonKey: comparisonKeyFor(snapshot),
     recordCount: records.length,
     uniqueDomains: domains.size,
     sourceDiversity: records.length ? round(domains.size / records.length) : 0,
-    rates,
+    rates: Object.fromEntries(rateKeys.map((key) => [key, perHeadline(totals[key], records.length)])),
     records
   };
 }
@@ -109,27 +109,52 @@ function trendLabel(value) {
   if (value < -0.03) return "decreasing";
   return "roughly-stable";
 }
+function pickComparableSeries(allSeries) {
+  const groups = new Map();
+  for (const point of allSeries) {
+    if (!groups.has(point.comparisonKey)) groups.set(point.comparisonKey, []);
+    groups.get(point.comparisonKey).push(point);
+  }
+  const ranked = [...groups.entries()].map(([key, series]) => ({
+    key,
+    series: [...series].sort((a, b) => String(a.collectedAt).localeCompare(String(b.collectedAt))),
+    latestAt: [...series].sort((a, b) => String(b.collectedAt).localeCompare(String(a.collectedAt)))[0]?.collectedAt || ""
+  })).sort((a, b) => b.series.length - a.series.length || String(b.latestAt).localeCompare(String(a.latestAt)) || a.key.localeCompare(b.key));
+  return { primary: ranked[0] || { key: null, series: [], latestAt: "" }, groups: ranked };
+}
 
 const analyzedSnapshots = (snapshotsData.snapshots || []).map(summarizeSnapshot);
 const topicSeries = topics.map((topic) => {
-  const series = analyzedSnapshots.filter((snapshot) => snapshot.topicSlug === topic.slug)
+  const allSeries = analyzedSnapshots.filter((snapshot) => snapshot.topicSlug === topic.slug)
     .sort((a, b) => String(a.collectedAt).localeCompare(String(b.collectedAt)));
+  const { primary, groups } = pickComparableSeries(allSeries);
+  const series = primary.series;
   const observationCount = series.reduce((sum, point) => sum + point.recordCount, 0);
+  const totalObservationCount = allSeries.reduce((sum, point) => sum + point.recordCount, 0);
   const trendReady = series.length >= MIN_TREND_SNAPSHOTS;
   const slopes = Object.fromEntries(rateKeys.map((key) => [key, slope(series, key)]));
+  const [provider = null, samplingMode = null] = String(primary.key || "::").split("::");
   return {
     slug: topic.slug,
     title: topic.title,
     description: topic.description,
     active: topic.active,
+    comparisonKey: primary.key,
+    comparableProvider: provider || null,
+    comparableSamplingMode: samplingMode || null,
     snapshotCount: series.length,
+    totalSnapshotCount: allSeries.length,
+    excludedSnapshotCount: Math.max(0, allSeries.length - series.length),
     observationCount,
+    totalObservationCount,
     trendReady,
     readiness: trendReady ? "ready" : "insufficient-history",
     minimumSnapshotsRequired: MIN_TREND_SNAPSHOTS,
     snapshotsNeeded: Math.max(0, MIN_TREND_SNAPSHOTS - series.length),
-    latest: series.at(-1) || null,
+    latest: series.at(-1) ? (({ records, ...point }) => point)(series.at(-1)) : null,
     series: series.map(({ records, ...point }) => point),
+    excludedSnapshots: allSeries.filter((point) => point.comparisonKey !== primary.key).map(({ records, ...point }) => ({ ...point, reason: "different-provider-or-sampling-mode" })),
+    availableSeries: groups.map((group) => ({ comparisonKey: group.key, snapshotCount: group.series.length, latestAt: group.latestAt })),
     trends: Object.fromEntries(rateKeys.map((key) => [key, { slope: slopes[key], direction: trendLabel(slopes[key]) }]))
   };
 });
@@ -165,12 +190,14 @@ const sourceProfiles = [...sourceMap.values()].map((bucket) => {
 
 const generatedAt = snapshotsData.updatedAt || topicsData.updatedAt;
 const publicPayload = {
-  version: 1,
+  version: 2,
   updatedAt: generatedAt,
   canonicalUrl: `${SITE}/observatory/trends/`,
   methodology: {
     unit: "signal occurrences per observed headline",
-    trendMethod: "ordinary least squares slope across chronological snapshot-level rates",
+    comparabilityRule: "Trend calculations use only one comparable series at a time: the same provider and sampling mode. Other snapshots remain visible but are excluded from the trend calculation.",
+    seriesSelectionRule: "Choose the provider-and-sampling-mode series with the most snapshots; break ties by the most recent observation.",
+    trendMethod: "ordinary least squares slope across chronological snapshot-level rates within the selected comparable series",
     trendThreshold: 0.03,
     minimumSnapshots: MIN_TREND_SNAPSHOTS,
     sourceComparisonUnit: "signal occurrences per unique headline URL",
@@ -187,6 +214,7 @@ const ndjson = topicSeries.flatMap((topic) => topic.series.map((point) => JSON.s
   type: "observatory-trend-point",
   topicSlug: topic.slug,
   topicTitle: topic.title,
+  comparisonKey: topic.comparisonKey,
   trendReady: topic.trendReady,
   ...point
 }))).join("\n");
@@ -210,7 +238,7 @@ const trendSchema = {
   "@context": "https://schema.org",
   "@type": "Dataset",
   name: "Cognitive Bias Observatory Trends",
-  description: "Time-series measurements of visible framing and cognitive-pressure signals in headline samples.",
+  description: "Time-series measurements of visible framing and cognitive-pressure signals in comparable headline samples.",
   url: trendsCanonical,
   dateModified: generatedAt,
   creator: { "@type": "Organization", name: "Cognitive Biases", url: SITE },
@@ -220,16 +248,17 @@ const trendSchema = {
     { "@type": "DataDownload", encodingFormat: "application/x-ndjson", contentUrl: `${SITE}/data/observatory-trends.ndjson` }
   ]
 };
-const topicCards = topicSeries.map((topic) => `<article class="obs-card"><p class="kicker">${topic.trendReady ? "Trend ready" : "Building history"}</p><h2><a href="/observatory/topics/${topic.slug}/">${escapeHtml(topic.title)}</a></h2><p>${escapeHtml(topic.description)}</p><p><strong>${topic.snapshotCount}</strong> snapshot(s) · <strong>${topic.observationCount}</strong> headline observations</p><p>${topic.trendReady ? "Trend slopes are published." : `${topic.snapshotsNeeded} more snapshot(s) required before a direction is reported.`}</p></article>`).join("");
-const trendsHtml = `<!doctype html><html lang="en"><head>${baseHead("Cognitive Bias Trends | Observatory", "Track framing, certainty, salience and related headline signals over repeated Observatory snapshots, with minimum-history rules.", trendsCanonical, trendSchema)}</head><body><a class="skip" href="#main">Skip to content</a>${header()}<main id="main"><section class="page-hero obs-hero"><p class="eyebrow">Observatory Trends</p><h1>Wait for history before calling something a trend.</h1><p class="lede">Each point is normalized per headline. A topic needs at least ${MIN_TREND_SNAPSHOTS} snapshots before we publish a direction. Until then, the honest result is insufficient history.</p><p class="obs-warning"><strong>Interpretation boundary:</strong> A rising cue rate means the measured wording became more common in these provider samples. It does not show that an outlet, audience or society became more biased.</p></section><section class="section"><p class="kicker">Tracked topics</p><div class="obs-grid">${topicCards}</div></section><section class="section section--ink"><p class="kicker">Compare sources carefully</p><h2>Source profiles have an even higher minimum.</h2><p class="lede">A domain needs at least ${MIN_SOURCE_HEADLINES} unique observed headlines before we publish its descriptive signal rates.</p><p><a class="button" href="/observatory/sources/">Open source comparisons</a> <a class="button" href="/data/observatory-trends.json">Open trend data</a></p></section></main>${footer()}</body></html>`;
+const topicCards = topicSeries.map((topic) => `<article class="obs-card"><p class="kicker">${topic.trendReady ? "Trend ready" : "Building comparable history"}</p><h2><a href="/observatory/topics/${topic.slug}/">${escapeHtml(topic.title)}</a></h2><p>${escapeHtml(topic.description)}</p><p><strong>${topic.snapshotCount}</strong> comparable snapshot(s) · <strong>${topic.observationCount}</strong> headline observations</p><p>${topic.excludedSnapshotCount ? `${topic.excludedSnapshotCount} snapshot(s) kept outside the trend because the provider or sampling mode differs. ` : ""}${topic.trendReady ? "Trend slopes are published." : `${topic.snapshotsNeeded} more comparable snapshot(s) required before a direction is reported.`}</p></article>`).join("");
+const trendsHtml = `<!doctype html><html lang="en"><head>${baseHead("Cognitive Bias Trends | Observatory", "Track framing, certainty, salience and related headline signals over repeated comparable Observatory snapshots, with minimum-history rules.", trendsCanonical, trendSchema)}</head><body><a class="skip" href="#main">Skip to content</a>${header()}<main id="main"><section class="page-hero obs-hero"><p class="eyebrow">Observatory Trends</p><h1>Compare like with like before calling something a trend.</h1><p class="lede">Each point is normalized per headline. A topic needs at least ${MIN_TREND_SNAPSHOTS} snapshots from the same provider and sampling mode before we publish a direction.</p><p class="obs-warning"><strong>Comparability rule:</strong> Curated demonstrations, provider search samples and other collection modes are not merged into one trend line. A rising cue rate still describes only the selected provider sample, not a change in society or psychological bias.</p></section><section class="section"><p class="kicker">Tracked topics</p><div class="obs-grid">${topicCards}</div></section><section class="section section--ink"><p class="kicker">Compare sources carefully</p><h2>Source profiles have an even higher minimum.</h2><p class="lede">A domain needs at least ${MIN_SOURCE_HEADLINES} unique observed headlines before we publish its descriptive signal rates.</p><p><a class="button" href="/observatory/sources/">Open source comparisons</a> <a class="button" href="/data/observatory-trends.json">Open trend data</a></p></section></main>${footer()}</body></html>`;
 await emit("/observatory/trends/", trendsHtml);
 
 for (const topic of topicSeries) {
   const canonical = `${SITE}/observatory/topics/${topic.slug}/`;
   const schema = { "@context": "https://schema.org", "@type": "Dataset", name: `${topic.title} Observatory trend series`, description: topic.description, url: canonical, dateModified: generatedAt, creator: { "@type": "Organization", name: "Cognitive Biases", url: SITE } };
-  const rows = topic.series.length ? topic.series.map((point) => `<tr><td><a href="/observatory/${point.snapshotId}/">${escapeHtml(point.date)}</a></td><td>${point.recordCount}</td><td>${rate(point.rates.gainFrame)}</td><td>${rate(point.rates.lossFrame)}</td><td>${rate(point.rates.uncertainty)}</td><td>${rate(point.rates.certainty)}</td><td>${rate(point.rates.salience)}</td><td>${rate(point.sourceDiversity)}</td></tr>`).join("") : `<tr><td colspan="8">No snapshots collected yet.</td></tr>`;
-  const trendBlock = topic.trendReady ? `<div class="obs-metrics">${metric("Gain cues", topic.trends.gainFrame.direction, `slope ${topic.trends.gainFrame.slope}`)}${metric("Loss cues", topic.trends.lossFrame.direction, `slope ${topic.trends.lossFrame.slope}`)}${metric("Uncertainty", topic.trends.uncertainty.direction, `slope ${topic.trends.uncertainty.slope}`)}${metric("Salience", topic.trends.salience.direction, `slope ${topic.trends.salience.slope}`)}</div>` : `<p class="obs-warning"><strong>Trend status: insufficient history.</strong> ${topic.snapshotCount} of ${MIN_TREND_SNAPSHOTS} required snapshots are available. No direction is reported yet.</p>`;
-  const html = `<!doctype html><html lang="en"><head>${baseHead(`${topic.title} Trends | Cognitive Bias Observatory`, `Follow headline-level framing and cognitive-pressure signals over time for ${topic.title}, with transparent minimum-history rules.`, canonical, schema)}</head><body><a class="skip" href="#main">Skip to content</a>${header()}<main id="main"><section class="page-hero obs-hero"><p class="eyebrow"><a href="/observatory/trends/">Observatory Trends</a></p><h1>${escapeHtml(topic.title)}</h1><p class="lede">${escapeHtml(topic.description)}</p>${trendBlock}</section><section class="section"><p class="kicker">Time series</p><h2>Rates per observed headline</h2><p>Raw counts are not compared across weeks because snapshot sizes can differ. Rates below are cue occurrences divided by the number of headlines in that snapshot.</p><div class="obs-table-wrap"><table class="obs-table"><thead><tr><th>Date</th><th>Headlines</th><th>Gain</th><th>Loss</th><th>Uncertainty</th><th>Certainty</th><th>Salience</th><th>Source diversity</th></tr></thead><tbody>${rows}</tbody></table></div></section><section class="section section--ink"><p class="kicker">Method</p><h2>Trend direction uses the whole available series.</h2><p class="lede">Once ${MIN_TREND_SNAPSHOTS} snapshots exist, direction is based on the ordinary least squares slope across chronological snapshot rates, not just the first and last week.</p><p><a class="button" href="/observatory/methodology/">Measurement methodology</a></p></section></main>${footer()}</body></html>`;
+  const rows = topic.series.length ? topic.series.map((point) => `<tr><td><a href="/observatory/${point.snapshotId}/">${escapeHtml(point.date)}</a></td><td>${point.recordCount}</td><td>${rate(point.rates.gainFrame)}</td><td>${rate(point.rates.lossFrame)}</td><td>${rate(point.rates.uncertainty)}</td><td>${rate(point.rates.certainty)}</td><td>${rate(point.rates.salience)}</td><td>${rate(point.sourceDiversity)}</td></tr>`).join("") : `<tr><td colspan="8">No comparable snapshots collected yet.</td></tr>`;
+  const trendBlock = topic.trendReady ? `<div class="obs-metrics">${metric("Gain cues", topic.trends.gainFrame.direction, `slope ${topic.trends.gainFrame.slope}`)}${metric("Loss cues", topic.trends.lossFrame.direction, `slope ${topic.trends.lossFrame.slope}`)}${metric("Uncertainty", topic.trends.uncertainty.direction, `slope ${topic.trends.uncertainty.slope}`)}${metric("Salience", topic.trends.salience.direction, `slope ${topic.trends.salience.slope}`)}</div>` : `<p class="obs-warning"><strong>Trend status: insufficient comparable history.</strong> ${topic.snapshotCount} of ${MIN_TREND_SNAPSHOTS} required snapshots are available in the selected provider + sampling-mode series. No direction is reported yet.</p>`;
+  const excludedNote = topic.excludedSnapshotCount ? `<p class="obs-warning"><strong>${topic.excludedSnapshotCount} snapshot(s) excluded from this trend.</strong> They remain in the Observatory dataset, but use a different provider or sampling mode and are not mathematically merged into this series.</p>` : "";
+  const html = `<!doctype html><html lang="en"><head>${baseHead(`${topic.title} Trends | Cognitive Bias Observatory`, `Follow headline-level framing and cognitive-pressure signals over time for ${topic.title}, using comparable provider samples and transparent minimum-history rules.`, canonical, schema)}</head><body><a class="skip" href="#main">Skip to content</a>${header()}<main id="main"><section class="page-hero obs-hero"><p class="eyebrow"><a href="/observatory/trends/">Observatory Trends</a></p><h1>${escapeHtml(topic.title)}</h1><p class="lede">${escapeHtml(topic.description)}</p>${trendBlock}${excludedNote}</section><section class="section"><p class="kicker">Comparable time series</p><h2>Rates per observed headline</h2><p>Raw counts are not compared across weeks because snapshot sizes can differ. This table uses only <strong>${escapeHtml(topic.comparableProvider || "no provider yet")}</strong> with sampling mode <strong>${escapeHtml(topic.comparableSamplingMode || "not available")}</strong>.</p><div class="obs-table-wrap"><table class="obs-table"><thead><tr><th>Date</th><th>Headlines</th><th>Gain</th><th>Loss</th><th>Uncertainty</th><th>Certainty</th><th>Salience</th><th>Source diversity</th></tr></thead><tbody>${rows}</tbody></table></div></section><section class="section section--ink"><p class="kicker">Method</p><h2>Trend direction uses the whole comparable series.</h2><p class="lede">Once ${MIN_TREND_SNAPSHOTS} comparable snapshots exist, direction is based on the ordinary least squares slope across chronological snapshot rates, not just the first and last week.</p><p><a class="button" href="/observatory/methodology/">Measurement methodology</a></p></section></main>${footer()}</body></html>`;
   await emit(`/observatory/topics/${topic.slug}/`, html);
 }
 
@@ -243,7 +272,7 @@ await emit("/observatory/sources/", sourceHtml);
 const observatoryHubPath = join(OUT, "observatory", "index.html");
 let observatoryHub = await readFile(observatoryHubPath, "utf8");
 if (!observatoryHub.includes("observatory-trends-entry")) {
-  const block = `<section class="section observatory-trends-entry"><p class="kicker">Longitudinal layer</p><h2>From snapshots to trends.</h2><p class="lede">Follow the same measurement rules over repeated weekly samples. The Trends layer normalizes signals per headline and refuses to publish a direction before enough history exists.</p><div class="obs-grid"><article class="obs-card"><h3><a href="/observatory/trends/">Trend dashboard</a></h3><p>${topics.length} tracked topics with minimum-history rules.</p></article><article class="obs-card"><h3><a href="/observatory/sources/">Source comparisons</a></h3><p>Descriptive source profiles appear only after ${MIN_SOURCE_HEADLINES} unique headlines.</p></article></div></section>`;
+  const block = `<section class="section observatory-trends-entry"><p class="kicker">Longitudinal layer</p><h2>From snapshots to comparable trends.</h2><p class="lede">Follow the same measurement rules over repeated samples from the same provider and sampling mode. The Trends layer normalizes signals per headline and refuses to publish a direction before enough comparable history exists.</p><div class="obs-grid"><article class="obs-card"><h3><a href="/observatory/trends/">Trend dashboard</a></h3><p>${topics.length} tracked topics with minimum-history and comparability rules.</p></article><article class="obs-card"><h3><a href="/observatory/sources/">Source comparisons</a></h3><p>Descriptive source profiles appear only after ${MIN_SOURCE_HEADLINES} unique headlines.</p></article></div></section>`;
   observatoryHub = observatoryHub.replace("</main>", `${block}</main>`);
   await writeFile(observatoryHubPath, observatoryHub);
 }
@@ -257,11 +286,7 @@ if (!styles.includes(".obs-table-wrap{")) {
 
 const sitemapPath = join(OUT, "sitemap.xml");
 let sitemap = await readFile(sitemapPath, "utf8");
-const urls = [
-  `${SITE}/observatory/trends/`,
-  `${SITE}/observatory/sources/`,
-  ...topics.map((topic) => `${SITE}/observatory/topics/${topic.slug}/`)
-];
+const urls = [`${SITE}/observatory/trends/`, `${SITE}/observatory/sources/`, ...topics.map((topic) => `${SITE}/observatory/topics/${topic.slug}/`)];
 for (const url of urls) {
   if (sitemap.includes(`<loc>${url}</loc>`)) continue;
   const entry = `<url><loc>${url}</loc>${generatedAt ? `<lastmod>${String(generatedAt).slice(0, 10)}</lastmod>` : ""}</url>`;
@@ -269,4 +294,4 @@ for (const url of urls) {
 }
 await writeFile(sitemapPath, sitemap);
 
-console.log(`Observatory Trends generated: ${topics.length} topic series, ${topicSeries.filter((topic) => topic.trendReady).length} trend-ready, ${readySources.length} source profiles ready.`);
+console.log(`Observatory Trends generated: ${topics.length} topic series, ${topicSeries.filter((topic) => topic.trendReady).length} trend-ready, ${readySources.length} source profiles ready; provider/sampling comparability enforced.`);
