@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "evidence-evaluation",
+      "title": "Evidence evaluation",
+      "summary": "Judge whether a claim deserves confidence before repetition, fluency or preference turns into evidence.",
+      "outcome": "You can separate a persuasive claim from the evidence that should change your mind.",
+      "whenToUse": [
+        "A team already prefers one explanation and is gathering support for it.",
+        "A claim appears in many places but may trace back to one source.",
+        "A vivid example is dominating broader evidence.",
+        "An AI answer sounds convincing but important claims are still unverified."
+      ],
+      "actions": [
+        "Write what evidence would weaken the preferred conclusion before searching for more support.",
+        "Trace repeated claims back to genuinely independent sources.",
+        "Compare vivid examples with a base rate, reference class or broader sample.",
+        "Keep verified facts, plausible inferences and open questions separate."
+      ],
+      "contexts": ["checking-claims-misinformation", "ai-assisted-decisions", "work-project-decisions"],
+      "biases": [
+        "cognitive-bias-confirmation-bias",
+        "truth-judgment-illusory-truth-effect",
+        "heuristic-bias-availability-bias",
+        "memory-bias-continued-influence-effect"
+      ]
+    },
+    {
+      "slug": "decision-making-under-uncertainty",
+      "title": "Decision making under uncertainty",
+      "summary": "Make useful choices when outcomes are not known and one number, story or recent event can pull judgment too strongly.",
+      "outcome": "You can make a decision without pretending uncertainty has disappeared.",
+      "whenToUse": [
+        "A deadline, probability or budget is being discussed as one precise number.",
+        "An early estimate is shaping every later estimate.",
+        "The latest success or failure is dominating the next decision.",
+        "The team is continuing mainly because it has already invested a lot."
+      ],
+      "actions": [
+        "Start with a range or reference class before negotiating a precise number.",
+        "Create an independent estimate before looking at a strong anchor when possible.",
+        "Separate already-spent resources from the future cost and value of the next step.",
+        "Record assumptions that would make you reopen the decision."
+      ],
+      "contexts": ["forecasting-future-choices", "project-estimation-delivery", "work-project-decisions"],
+      "biases": [
+        "cognitive-bias-anchoring-effect",
+        "probability-bias-subadditivity-effect",
+        "heuristic-bias-availability-bias",
+        "logical-fallacy-escalation-of-commitment"
+      ]
+    },
+    {
+      "slug": "forecasting",
+      "title": "Forecasting",
+      "summary": "Estimate what may happen next by using comparable evidence, explicit uncertainty and records made before the outcome is known.",
+      "outcome": "You can produce forecasts that are easier to challenge, compare and learn from later.",
+      "whenToUse": [
+        "A project deadline is being built only from an inside plan.",
+        "A current feeling or preference is being projected far into the future.",
+        "A vivid recent example is being used as the main probability estimate.",
+        "A finished outcome now feels as if it had always been obvious."
+      ],
+      "actions": [
+        "Check comparable completed cases before refining the current plan.",
+        "State a range and the factors that would push the result toward either end.",
+        "Store the forecast and assumptions before the outcome.",
+        "Review forecast quality against the original record, not reconstructed memory."
+      ],
+      "contexts": ["forecasting-future-choices", "project-estimation-delivery"],
+      "biases": [
+        "egocentric-bias-planning-fallacy",
+        "cognitive-bias-anchoring-effect",
+        "heuristic-bias-availability-bias",
+        "cognitive-bias-hindsight-bias"
+      ]
+    },
+    {
+      "slug": "metacognition",
+      "title": "Metacognition",
+      "summary": "Inspect how a judgment was formed, what influenced it and what would make you change it.",
+      "outcome": "You can review your reasoning process without confusing confidence, outcome and hindsight with decision quality.",
+      "whenToUse": [
+        "A good result is being treated as proof that the original decision process was good.",
+        "A bad result makes the warning signs seem obvious in retrospect.",
+        "You are mainly testing arguments that support a preferred answer.",
+        "You need to learn from a past decision without rewriting what was knowable at the time."
+      ],
+      "actions": [
+        "Freeze what was actually known before the outcome.",
+        "Judge decision-process quality separately from the eventual result.",
+        "Write what would change your mind before collecting more evidence.",
+        "Compare the review with the original forecast, notes or assumptions."
+      ],
+      "contexts": ["work-project-decisions", "forecasting-future-choices", "ai-assisted-decisions"],
+      "biases": [
+        "cognitive-bias-outcome-bias",
+        "cognitive-bias-hindsight-bias",
+        "cognitive-bias-confirmation-bias",
+        "attribution-bias-moral-luck"
+      ]
+    },
+    {
+      "slug": "information-verification",
+      "title": "Information verification",
+      "summary": "Check where information came from, whether sources are independent and whether a correction has really replaced the old explanation.",
+      "outcome": "You can verify important claims without treating repetition as independent confirmation.",
+      "whenToUse": [
+        "A claim feels familiar because it has appeared repeatedly.",
+        "Several summaries may all depend on the same original source.",
+        "A correction was issued but the old story still shapes later reasoning.",
+        "Generated answers repeat a claim without showing where it came from."
+      ],
+      "actions": [
+        "Trace the claim to the earliest reliable or primary source you can inspect.",
+        "Count independent sources, not repetitions.",
+        "After a correction, restate the supported replacement explanation explicitly.",
+        "Mark claims as verified, unverified or disputed instead of flattening them into one confidence level."
+      ],
+      "contexts": ["checking-claims-misinformation", "ai-assisted-decisions"],
+      "biases": [
+        "truth-judgment-illusory-truth-effect",
+        "memory-bias-continued-influence-effect",
+        "cognitive-bias-confirmation-bias",
+        "heuristic-bias-availability-bias"
+      ]
+    },
+    {
+      "slug": "ai-assisted-reasoning",
+      "title": "AI-assisted reasoning",
+      "summary": "Use AI as a decision aid without confusing fluent output, humanlike presentation or repeated generated claims with verified capability and evidence.",
+      "outcome": "You can use an AI system to expand reasoning while keeping important judgments independently checkable.",
+      "whenToUse": [
+        "A chatbot recommendation is influencing an important decision.",
+        "The model gives the first number, score or estimate in the discussion.",
+        "A polished conversational style makes the system feel more capable than you have tested.",
+        "You are using AI mainly to strengthen a conclusion you already prefer."
+      ],
+      "actions": [
+        "Write a provisional judgment or success criterion before asking AI for advice when the decision matters.",
+        "Separate interface quality from the capability needed for the task.",
+        "Verify consequential claims against an independent source rather than another generated answer.",
+        "Ask for counterevidence and alternative explanations before finalizing the decision."
+      ],
+      "contexts": ["ai-assisted-decisions", "checking-claims-misinformation", "work-project-decisions"],
+      "biases": [
+        "false-priors-automation-bias",
+        "cognitive-bias-anchoring-effect",
+        "availability-heuristic-anthropomorphism",
+        "human-robot-interaction-form",
+        "cognitive-bias-confirmation-bias",
+        "truth-judgment-illusory-truth-effect"
+      ]
+    }
+  ]
+}

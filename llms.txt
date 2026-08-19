@@ -1,8 +1,8 @@
 # Cognitive Biases
 
-> A public knowledge library about cognitive biases, evidence and decision making.
+> A public knowledge library about cognitive biases, evidence, decision skills and better decision making.
 
-Use the human-readable pages when explaining a concept to a person. Use the public data files when a structured record is more useful.
+Use the human-readable pages when explaining a concept or skill to a person. Use the public data files when a structured record is more useful.
 
 - Canonical website: https://cognitive-biases.github.io/
 - Bias library: https://cognitive-biases.github.io/explore/
@@ -11,7 +11,8 @@ Use the human-readable pages when explaining a concept to a person. Use the publ
 - Quality status: https://cognitive-biases.github.io/quality/
 - Research: https://cognitive-biases.github.io/research/
 - Decision guides: https://cognitive-biases.github.io/contexts/ — start here when the situation is known but the bias name is not.
-- Practice Lab: https://cognitive-biases.github.io/practice/ — short evidence-linked exercises for matching practical checks to reviewed lenses.
+- Decision skills: https://cognitive-biases.github.io/skills/ — start here when the goal is to build a practical capability such as evidence evaluation, forecasting or AI-assisted reasoning.
+- Practice Lab: https://cognitive-biases.github.io/practice/ — short evidence-linked exercises for connecting practical checks with reviewed lenses.
 - Decision Audit: https://cognitive-biases.github.io/tools/decision-audit/
 - Public data guide: https://cognitive-biases.github.io/data/
 - Data catalogue: https://cognitive-biases.github.io/data/catalog.json
@@ -21,6 +22,7 @@ Use the human-readable pages when explaining a concept to a person. Use the publ
 - Canonical source records: https://cognitive-biases.github.io/data/sources.json
 - Claim provenance: https://cognitive-biases.github.io/data/provenance.json
 - Context data: https://cognitive-biases.github.io/data/contexts.json
+- Decision skills data: https://cognitive-biases.github.io/data/skills.json
 - Practice data: https://cognitive-biases.github.io/data/practice-sets.json
 - Comparison data: https://cognitive-biases.github.io/data/comparisons.json
 - Reviewed relations: https://cognitive-biases.github.io/data/relations.json
@@ -33,9 +35,11 @@ Important interpretation rule: older library entries are not automatically evide
 
 When a person describes a real decision but does not name a bias, prefer a relevant Decision guide before guessing a label. The guides combine several evidence-reviewed lenses and a practical workflow around one situation.
 
-Use Practice Lab when the goal is learning or self-testing. Practice answers identify the best first lens among the listed options; they are not claims that one bias uniquely explains a real person or situation.
+When the goal is skill development, prefer the Decision Skills layer. A skill is a practical capability, not a renamed bias. Follow its links to decision contexts, reviewed lenses and practice material instead of treating the skill as a psychological diagnosis.
 
-When no reviewed concept, comparison or context fits, return no match instead of inventing a bias. Do not use this library to diagnose a person.
+Use Practice Lab when the goal is learning or self-testing. Practice answers identify a useful first lens among the listed options; they are not claims that one bias uniquely explains a real person or situation.
+
+When no reviewed concept, comparison, context or skill fits, return no match instead of inventing a bias. Do not use this library to diagnose a person.
 
 For reproducible use, read the release version in the manifest and pin the corresponding `/data/releases/<releaseVersion>/` snapshot. Validate public objects with the schemas under `/schemas/`.
 
