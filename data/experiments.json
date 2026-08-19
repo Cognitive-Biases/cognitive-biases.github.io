@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "description": "Interactive, privacy-preserving demonstrations of evidence-reviewed cognitive bias effects. These demos do not collect responses and are not scientific measurements.",
+  "entries": [
+    {
+      "slug": "anchoring-first-number",
+      "title": "Does the First Number Pull Your Estimate?",
+      "category": "Numbers & Estimates",
+      "summary": "Try two versions of the same pricing question and see why a starting number can pull later estimates toward it.",
+      "researchQuestion": "Can an arbitrary starting price shift a later estimate even when the product information stays the same?",
+      "biasSlug": "cognitive-bias-anchoring-effect",
+      "contextSlug": null,
+      "everydaySlug": "why-the-first-price-changes-what-you-will-pay",
+      "responseType": "number",
+      "responseLabel": "Your fair price estimate (€)",
+      "conditions": [
+        {
+          "label": "Higher anchor",
+          "prompt": "A used laptop is in good condition, three years old, with 16 GB RAM and 512 GB storage. The seller asks €1,500. What price would you consider fair?"
+        },
+        {
+          "label": "Lower anchor",
+          "prompt": "A used laptop is in good condition, three years old, with 16 GB RAM and 512 GB storage. The seller asks €700. What price would you consider fair?"
+        }
+      ],
+      "prediction": "Across groups, estimates often move toward the starting number. One person's answer cannot establish an anchoring effect.",
+      "interpretation": "The useful comparison is not whether €700 or €1,500 is a good price. It is whether changing only the starting number changes the later estimate.",
+      "debias": "Build an independent estimate from comparable products, budget and requirements before looking at the seller's target."
+    },
+    {
+      "slug": "framing-survival-mortality",
+      "title": "Does Survival vs Mortality Wording Change the Feeling?",
+      "category": "Framing",
+      "summary": "The numbers stay identical while the wording changes from survival to mortality. Notice whether your evaluation moves with the frame.",
+      "researchQuestion": "Can equivalent outcome statistics feel different when they are described as survival rather than mortality?",
+      "biasSlug": "framing-effect-core",
+      "contextSlug": null,
+      "everydaySlug": null,
+      "responseType": "rating",
+      "responseLabel": "How reassuring does this result feel? 1 = not reassuring, 7 = very reassuring",
+      "conditions": [
+        {
+          "label": "Survival frame",
+          "prompt": "After one year, 90 out of 100 patients who receive Treatment A are alive."
+        },
+        {
+          "label": "Mortality frame",
+          "prompt": "Within one year, 10 out of 100 patients who receive Treatment A die."
+        }
+      ],
+      "prediction": "Equivalent outcomes can receive different evaluations when one version highlights survival and the other highlights mortality.",
+      "interpretation": "The underlying numbers are the same. The demonstration asks whether a change in presentation changes your evaluation.",
+      "debias": "Restate important outcomes in both gain and loss terms before comparing options."
+    },
+    {
+      "slug": "decoy-subscription-choice",
+      "title": "Can a Third Option Change Which Plan You Prefer?",
+      "category": "Choice Architecture",
+      "summary": "Choose between two plans, then compare the same choice after a clearly weaker third option appears.",
+      "researchQuestion": "Can an inferior comparison option change preference between two original alternatives?",
+      "biasSlug": "framing-effect-decoy-effect",
+      "contextSlug": null,
+      "everydaySlug": null,
+      "responseType": "choice",
+      "conditions": [
+        {
+          "label": "Two-option menu",
+          "prompt": "You need cloud storage for one year. Which plan would you choose?",
+          "options": [
+            "Basic — €8/month, 40 GB",
+            "Pro — €14/month, 100 GB"
+          ]
+        },
+        {
+          "label": "Menu with a decoy",
+          "prompt": "You need cloud storage for one year. Which plan would you choose?",
+          "options": [
+            "Basic — €8/month, 40 GB",
+            "Plus — €14/month, 60 GB",
+            "Pro — €14/month, 100 GB"
+          ]
+        }
+      ],
+      "prediction": "Adding an option that is clearly worse than Pro at the same price can make Pro easier to justify, even though Basic and Pro did not change.",
+      "interpretation": "The interesting variable is the choice set. If preference changes after adding the weak Plus option, the comparison structure is doing work.",
+      "debias": "Remove any option you would never choose and compare the remaining alternatives on your actual needs."
+    },
+    {
+      "slug": "escalation-past-investment",
+      "title": "Would You Continue If the Past Investment Disappeared?",
+      "category": "Projects & Money",
+      "summary": "The future economics stay the same. Only one version reminds you how much has already been spent.",
+      "researchQuestion": "Does visible past investment make continued funding feel more attractive even when future costs and benefits are unchanged?",
+      "biasSlug": "logical-fallacy-escalation-of-commitment",
+      "contextSlug": "work-project-decisions",
+      "everydaySlug": "why-bad-projects-are-so-hard-to-stop",
+      "responseType": "choice",
+      "conditions": [
+        {
+          "label": "Past investment visible",
+          "prompt": "A project has already used €400,000 and eight months of work. From today, it needs another €100,000. There is a 30% chance it will produce €250,000 of future business value. Continue or stop?",
+          "options": [
+            "Continue",
+            "Stop"
+          ]
+        },
+        {
+          "label": "Future-only version",
+          "prompt": "A project starts today. It needs €100,000. There is a 30% chance it will produce €250,000 of future business value. Continue or stop?",
+          "options": [
+            "Continue",
+            "Stop"
+          ]
+        }
+      ],
+      "prediction": "Past investment can increase willingness to continue even though those costs cannot improve the future payoff.",
+      "interpretation": "The future decision is identical in both versions. The €400,000 has already gone and should not become a future benefit.",
+      "debias": "Ask whether you would fund the next step if the project arrived today with no history."
+    },
+    {
+      "slug": "outcome-bias-supplier-decision",
+      "title": "Does the Outcome Change How Good the Decision Looks?",
+      "category": "Learning & Review",
+      "summary": "Rate the same decision process after either a lucky or unlucky result.",
+      "researchQuestion": "Can knowing the outcome change how people judge the quality of the earlier decision process?",
+      "biasSlug": "cognitive-bias-outcome-bias",
+      "contextSlug": "work-project-decisions",
+      "everydaySlug": "why-a-good-result-does-not-always-mean-a-good-decision",
+      "responseType": "rating",
+      "responseLabel": "How good was the original decision? 1 = very poor, 7 = very good",
+      "conditions": [
+        {
+          "label": "Good outcome",
+          "prompt": "A manager compared three suppliers, checked financial stability, references and delivery performance, then chose the strongest option. A rare disruption did not occur and delivery succeeded."
+        },
+        {
+          "label": "Bad outcome",
+          "prompt": "A manager compared three suppliers, checked financial stability, references and delivery performance, then chose the strongest option. A rare disruption occurred and delivery failed."
+        }
+      ],
+      "prediction": "The same process may be judged more harshly after a bad outcome and more positively after a good one.",
+      "interpretation": "A good process can have a bad result under uncertainty, and a weak process can sometimes get lucky. Review both separately.",
+      "debias": "Score the decision using only information available before the outcome, then review the result as a separate learning signal."
+    },
+    {
+      "slug": "planning-fallacy-reference-class",
+      "title": "What Happens When You See the Reference Class?",
+      "category": "Forecasting",
+      "summary": "Estimate a project from the inside view, then compare it with a version that includes how long similar work actually took.",
+      "researchQuestion": "Does adding a reference class change a delivery estimate built from an ideal step-by-step plan?",
+      "biasSlug": "egocentric-bias-planning-fallacy",
+      "contextSlug": "project-estimation-delivery",
+      "everydaySlug": "why-we-underestimate-how-long-work-will-take",
+      "responseType": "number",
+      "responseLabel": "Your estimate (working days)",
+      "conditions": [
+        {
+          "label": "Inside view",
+          "prompt": "A team must migrate 30 reports. The plan is: export, transform, load, test, review. Assuming normal availability, how many working days will it take?"
+        },
+        {
+          "label": "Outside view added",
+          "prompt": "A team must migrate 30 reports. The plan is: export, transform, load, test, review. The last eight comparable migrations took a median of 18 working days, with a range of 14–27 days. How many working days will this one take?"
+        }
+      ],
+      "prediction": "A reference class often shifts estimates away from the clean internal plan and toward outcomes seen in comparable completed work.",
+      "interpretation": "This is also an intervention demo: the outside view does not prove your first estimate was biased, but it adds evidence the inside view can miss.",
+      "debias": "Start with comparable completed work, then explain why the current case should be faster or slower."
+    }
+  ]
+}
