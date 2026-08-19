@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitive-biases.github.io/schemas/ai-benchmark-results.schema.json",
+  "title": "Cognitive Biases AI Benchmark Result Record",
+  "description": "One NDJSON response record for a single benchmark condition and sample.",
+  "type": "object",
+  "required": ["caseId", "experimentSlug", "conditionIndex", "sample", "model", "response"],
+  "properties": {
+    "caseId": {"type": "string", "pattern": "^[a-z0-9-]+:[01]$"},
+    "experimentSlug": {"type": "string", "minLength": 1},
+    "conditionIndex": {"type": "integer", "minimum": 0, "maximum": 1},
+    "sample": {"type": "integer", "minimum": 1},
+    "model": {
+      "type": "object",
+      "required": ["provider", "name", "version", "date"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "temperature": {"type": ["number", "null"]},
+        "topP": {"type": ["number", "null"]},
+        "date": {"type": "string", "format": "date"}
+      },
+      "additionalProperties": true
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "value": {"type": "number"},
+        "choice": {"type": "string"},
+        "raw": {"type": "string"}
+      },
+      "minProperties": 1,
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

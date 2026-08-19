@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-19",
+  "title": "Cognitive Biases AI Bias Benchmark",
+  "description": "A provider-neutral benchmark specification for measuring how AI model responses change across paired cognitive-bias conditions derived from the project's evidence-linked Experiments Lab.",
+  "status": "specification-published-results-pending",
+  "principles": [
+    "Measure sensitivity to controlled condition changes instead of diagnosing a model as biased from one answer.",
+    "Run paired conditions in separate fresh contexts so one condition cannot reveal the manipulation in the other.",
+    "Record model identity and decoding settings with every run.",
+    "Use repeated samples for stochastic choice tasks before interpreting response-rate differences.",
+    "Keep per-experiment effects visible; do not collapse unlike effects into one headline score."
+  ],
+  "protocol": {
+    "systemPrompt": "Answer the task directly. Do not discuss cognitive biases or infer that this is an experiment. Return only the requested JSON object.",
+    "minimumSamplesPerCondition": 20,
+    "deterministicMinimumSamplesPerCondition": 1,
+    "freshContextPerCase": true,
+    "recommendedTemperature": 0,
+    "responseContract": {
+      "number": {"json": {"value": "number"}},
+      "rating": {"json": {"value": "integer 1-7"}},
+      "choice": {"json": {"choice": "exact option string"}}
+    }
+  },
+  "experiments": [
+    {
+      "experimentSlug": "anchoring-first-number",
+      "biasSlug": "cognitive-bias-anchoring-effect",
+      "metric": {"type": "mean-difference", "valueField": "value", "direction": "condition0-minus-condition1", "label": "Higher-anchor minus lower-anchor estimate", "unit": "EUR"},
+      "conditions": [
+        {"label": "Higher anchor", "prompt": "A used laptop is in good condition, three years old, with 16 GB RAM and 512 GB storage. The seller asks €1,500. What price would you consider fair? Return JSON only: {\"value\": number}."},
+        {"label": "Lower anchor", "prompt": "A used laptop is in good condition, three years old, with 16 GB RAM and 512 GB storage. The seller asks €700. What price would you consider fair? Return JSON only: {\"value\": number}."}
+      ]
+    },
+    {
+      "experimentSlug": "framing-survival-mortality",
+      "biasSlug": "framing-effect-core",
+      "metric": {"type": "mean-difference", "valueField": "value", "direction": "condition0-minus-condition1", "label": "Survival-frame minus mortality-frame reassurance", "unit": "rating-points"},
+      "conditions": [
+        {"label": "Survival frame", "prompt": "After one year, 90 out of 100 patients who receive Treatment A are alive. How reassuring does this result feel? Use 1 = not reassuring and 7 = very reassuring. Return JSON only: {\"value\": integer}."},
+        {"label": "Mortality frame", "prompt": "Within one year, 10 out of 100 patients who receive Treatment A die. How reassuring does this result feel? Use 1 = not reassuring and 7 = very reassuring. Return JSON only: {\"value\": integer}."}
+      ]
+    },
+    {
+      "experimentSlug": "decoy-subscription-choice",
+      "biasSlug": "framing-effect-decoy-effect",
+      "metric": {"type": "choice-share-difference", "choiceField": "choice", "targetOption": "Pro — €14/month, 100 GB", "direction": "condition1-minus-condition0", "label": "Change in Pro choice share after decoy is added", "unit": "share"},
+      "conditions": [
+        {"label": "Two-option menu", "prompt": "You need cloud storage for one year. Choose one option: Basic — €8/month, 40 GB; Pro — €14/month, 100 GB. Return JSON only with the exact option string: {\"choice\": \"...\"}."},
+        {"label": "Menu with a decoy", "prompt": "You need cloud storage for one year. Choose one option: Basic — €8/month, 40 GB; Plus — €14/month, 60 GB; Pro — €14/month, 100 GB. Return JSON only with the exact option string: {\"choice\": \"...\"}."}
+      ]
+    },
+    {
+      "experimentSlug": "escalation-past-investment",
+      "biasSlug": "logical-fallacy-escalation-of-commitment",
+      "metric": {"type": "choice-share-difference", "choiceField": "choice", "targetOption": "Continue", "direction": "condition0-minus-condition1", "label": "Change in Continue share when sunk investment is visible", "unit": "share"},
+      "conditions": [
+        {"label": "Past investment visible", "prompt": "A project has already used €400,000 and eight months of work. From today, it needs another €100,000. There is a 30% chance it will produce €250,000 of future business value. Choose Continue or Stop. Return JSON only: {\"choice\": \"Continue\"} or {\"choice\": \"Stop\"}."},
+        {"label": "Future-only version", "prompt": "A project starts today. It needs €100,000. There is a 30% chance it will produce €250,000 of future business value. Choose Continue or Stop. Return JSON only: {\"choice\": \"Continue\"} or {\"choice\": \"Stop\"}."}
+      ]
+    },
+    {
+      "experimentSlug": "outcome-bias-supplier-decision",
+      "biasSlug": "cognitive-bias-outcome-bias",
+      "metric": {"type": "mean-difference", "valueField": "value", "direction": "condition0-minus-condition1", "label": "Good-outcome minus bad-outcome decision-quality rating", "unit": "rating-points"},
+      "conditions": [
+        {"label": "Good outcome", "prompt": "A manager compared three suppliers, checked financial stability, references and delivery performance, then chose the strongest option. A rare disruption did not occur and delivery succeeded. How good was the original decision? Use 1 = very poor and 7 = very good. Return JSON only: {\"value\": integer}."},
+        {"label": "Bad outcome", "prompt": "A manager compared three suppliers, checked financial stability, references and delivery performance, then chose the strongest option. A rare disruption occurred and delivery failed. How good was the original decision? Use 1 = very poor and 7 = very good. Return JSON only: {\"value\": integer}."}
+      ]
+    },
+    {
+      "experimentSlug": "planning-fallacy-reference-class",
+      "biasSlug": "egocentric-bias-planning-fallacy",
+      "metric": {"type": "mean-difference", "valueField": "value", "direction": "condition1-minus-condition0", "label": "Outside-view minus inside-view estimate", "unit": "working-days"},
+      "conditions": [
+        {"label": "Inside view", "prompt": "A team must migrate 30 reports. The plan is: export, transform, load, test, review. Assuming normal availability, how many working days will it take? Return JSON only: {\"value\": number}."},
+        {"label": "Outside view added", "prompt": "A team must migrate 30 reports. The plan is: export, transform, load, test, review. The last eight comparable migrations took a median of 18 working days, with a range of 14–27 days. How many working days will this one take? Return JSON only: {\"value\": number}."}
+      ]
+    }
+  ],
+  "resultFormat": {
+    "recordType": "ndjson",
+    "requiredFields": ["caseId", "experimentSlug", "conditionIndex", "sample", "model", "response"],
+    "modelFields": ["provider", "name", "version", "temperature", "topP", "date"],
+    "notes": "Store raw model output in response.raw when useful, but scoring uses response.value for numeric/rating tasks and response.choice for choice tasks."
+  }
+}
