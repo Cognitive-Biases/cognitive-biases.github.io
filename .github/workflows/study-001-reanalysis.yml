@@ -8,7 +8,7 @@ on:
     paths:
       - ".github/workflows/study-001-reanalysis.yml"
       - "scripts/reanalyse-study-001.py"
-      - "research/studies/study-001/**"
+      - "research/studies/study-001/README.md"
   pull_request:
     paths:
       - ".github/workflows/study-001-reanalysis.yml"
@@ -16,7 +16,7 @@ on:
       - "research/studies/study-001/**"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   reanalyse:
@@ -36,3 +36,21 @@ jobs:
           path: research-output/study-001/
           if-no-files-found: error
           retention-days: 30
+      - name: Persist verified result on study branch
+        if: github.event_name == 'push'
+        shell: bash
+        run: |
+          mkdir -p research/studies/study-001/result
+          cp research-output/study-001/summary.json research/studies/study-001/result/summary.json
+          cp research-output/study-001/question-level.csv research/studies/study-001/result/question-level.csv
+          cp research-output/study-001/report.md research/studies/study-001/result/report.md
+
+          git config user.name "cognitive-biases-research[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/studies/study-001/result/summary.json research/studies/study-001/result/question-level.csv research/studies/study-001/result/report.md
+          if git diff --cached --quiet; then
+            echo "Study result is already current."
+            exit 0
+          fi
+          git commit -m "Publish Study 001 re-analysis result"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
