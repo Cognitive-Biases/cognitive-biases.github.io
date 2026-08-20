@@ -1,0 +1,172 @@
+{
+  "study_id": "study-001",
+  "title": "Anchoring direction in released Claude and Gemini outputs: an independent re-analysis",
+  "study_type": "independent re-analysis of public model outputs",
+  "status": "result",
+  "generated_at": "2026-08-20T09:19:39.512504+00:00",
+  "source": {
+    "paper_doi": "10.1007/s42001-025-00435-2",
+    "repository": "https://github.com/JiaxuLou/LLM_Bias",
+    "source_commit": "0083e9ec780469d91d52c5411e59d0efbd82fe9e",
+    "files": [
+      {
+        "name": "results_openrouter_claud1.csv",
+        "url": "https://raw.githubusercontent.com/JiaxuLou/LLM_Bias/0083e9ec780469d91d52c5411e59d0efbd82fe9e/results_openrouter_claud1.csv",
+        "rows": 3738,
+        "parsed_responses": 3738,
+        "parse_rate": 1.0,
+        "models": [
+          "anthropic/claude-3-haiku"
+        ],
+        "question_model_pairs": 62
+      },
+      {
+        "name": "results_openrouter_haiku35.csv",
+        "url": "https://raw.githubusercontent.com/JiaxuLou/LLM_Bias/0083e9ec780469d91d52c5411e59d0efbd82fe9e/results_openrouter_haiku35.csv",
+        "rows": 3718,
+        "parsed_responses": 3718,
+        "parse_rate": 1.0,
+        "models": [
+          "anthropic/claude-3.5-haiku"
+        ],
+        "question_model_pairs": 62
+      },
+      {
+        "name": "results_openrouter_gemini1.csv",
+        "url": "https://raw.githubusercontent.com/JiaxuLou/LLM_Bias/0083e9ec780469d91d52c5411e59d0efbd82fe9e/results_openrouter_gemini1.csv",
+        "rows": 3720,
+        "parsed_responses": 3708,
+        "parse_rate": 0.9967741935483871,
+        "models": [
+          "google/gemini-2.5-flash-lite-preview-06-17"
+        ],
+        "question_model_pairs": 62
+      },
+      {
+        "name": "results_openrouter_gemini2.csv",
+        "url": "https://raw.githubusercontent.com/JiaxuLou/LLM_Bias/0083e9ec780469d91d52c5411e59d0efbd82fe9e/results_openrouter_gemini2.csv",
+        "rows": 3736,
+        "parsed_responses": 3735,
+        "parse_rate": 0.9997323340471093,
+        "models": [
+          "google/gemini-2.5-flash"
+        ],
+        "question_model_pairs": 62
+      }
+    ]
+  },
+  "preregistered_primary_outcome": "Question-level direction alignment between anchor delta (B-A) and trimmed mean model-response delta (B-A).",
+  "method": {
+    "unit_of_analysis": "question-model pair",
+    "response_parsing": "Numeric value extracted from the released response field; time-like values are converted to minutes. One minimum and one maximum response are removed per group when more than two parsed responses are available, matching the source repository's analysis approach.",
+    "anchor_parsing": "The final numeric token in each released hint_2 string is used as the anchor value; time-like anchors are converted to minutes.",
+    "uncertainty": "Wilson 95% interval for the descriptive direction-alignment proportion."
+  },
+  "overall": {
+    "question_model_pairs": 248,
+    "direction_aligned": 185,
+    "direction_alignment_rate": 0.7459677419354839,
+    "direction_alignment_wilson_95": [
+      0.6883214523776142,
+      0.796110303105749
+    ],
+    "median_relative_response_shift": 0.10506150901923132
+  },
+  "sensitivity_unambiguous_anchors": {
+    "question_model_pairs": 144,
+    "direction_aligned": 116,
+    "direction_alignment_rate": 0.8055555555555556,
+    "direction_alignment_wilson_95": [
+      0.7333276777233315,
+      0.8619045440225905
+    ],
+    "median_relative_response_shift": 0.07132030417810441
+  },
+  "anchor_parse_audit": {
+    "pairs_with_one_numeric_token_per_anchor": 144,
+    "pairs_with_multiple_numeric_tokens_in_at_least_one_anchor": 104
+  },
+  "models": [
+    {
+      "model": "anthropic/claude-3-haiku",
+      "questions_analysed": 62,
+      "direction_aligned": 51,
+      "direction_alignment_rate": 0.8225806451612904,
+      "direction_alignment_wilson_95": [
+        0.7095843311430364,
+        0.8979356223399492
+      ],
+      "median_abs_response_delta": 5.232142857142854,
+      "median_relative_response_shift": 0.14546439938208663
+    },
+    {
+      "model": "anthropic/claude-3.5-haiku",
+      "questions_analysed": 62,
+      "direction_aligned": 48,
+      "direction_alignment_rate": 0.7741935483870968,
+      "direction_alignment_wilson_95": [
+        0.6559437908464204,
+        0.8604481696141172
+      ],
+      "median_abs_response_delta": 7.357142857142856,
+      "median_relative_response_shift": 0.09685190478134822
+    },
+    {
+      "model": "google/gemini-2.5-flash",
+      "questions_analysed": 62,
+      "direction_aligned": 44,
+      "direction_alignment_rate": 0.7096774193548387,
+      "direction_alignment_wilson_95": [
+        0.587123542650136,
+        0.8077644271138047
+      ],
+      "median_abs_response_delta": 3.0,
+      "median_relative_response_shift": 0.044121758172184534
+    },
+    {
+      "model": "google/gemini-2.5-flash-lite-preview-06-17",
+      "questions_analysed": 62,
+      "direction_aligned": 42,
+      "direction_alignment_rate": 0.6774193548387096,
+      "direction_alignment_wilson_95": [
+        0.553680880928481,
+        0.780455093487161
+      ],
+      "median_abs_response_delta": 5.6785714285714235,
+      "median_relative_response_shift": 0.07132030417810441
+    }
+  ],
+  "paired_family_comparisons": [
+    {
+      "label": "Claude Haiku 3.5 vs 3",
+      "baseline_model": "anthropic/claude-3-haiku",
+      "comparison_model": "anthropic/claude-3.5-haiku",
+      "common_questions": 62,
+      "baseline_alignment_rate": 0.8225806451612904,
+      "comparison_alignment_rate": 0.7741935483870968,
+      "difference_percentage_points": -4.838709677419361,
+      "discordant_baseline_only": 7,
+      "discordant_comparison_only": 4,
+      "mcnemar_exact_p": 0.548828125
+    },
+    {
+      "label": "Gemini Flash vs Flash Lite",
+      "baseline_model": "google/gemini-2.5-flash-lite-preview-06-17",
+      "comparison_model": "google/gemini-2.5-flash",
+      "common_questions": 62,
+      "baseline_alignment_rate": 0.6774193548387096,
+      "comparison_alignment_rate": 0.7096774193548387,
+      "difference_percentage_points": 3.2258064516129115,
+      "discordant_baseline_only": 7,
+      "discordant_comparison_only": 9,
+      "mcnemar_exact_p": 0.803619384765625
+    }
+  ],
+  "limitations": [
+    "This is a re-analysis of outputs collected by the source authors, not a fresh model run.",
+    "Anchor extraction is rule-based. A conservative sensitivity analysis excludes pairs whose hint contains more than one numeric token.",
+    "Repeated model outputs within a question are not treated as independent question-level replications.",
+    "Direction alignment is descriptive and does not identify a psychological mechanism.",
+    "The result says nothing directly about how humans respond to AI advice."
+  ]
+}
