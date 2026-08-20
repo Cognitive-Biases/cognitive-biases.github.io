@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-20",
+  "description": "Public maturity tracker for AI-era human–AI decision research. Stage reflects project artifacts, not scientific certainty.",
+  "canonicalUrl": "https://cognitive-biases.github.io/ai-era/tracker/",
+  "stageOrder": ["idea", "protocol", "experiment", "result", "replication"],
+  "stageDefinitions": {
+    "idea": "A falsifiable research question with related established concepts, but no project protocol yet.",
+    "protocol": "A reproducible comparison protocol is published. No project result is implied.",
+    "experiment": "A preregistered or otherwise documented run exists with model/task/sample metadata, but results are not yet promoted to a finding.",
+    "result": "A project result is published with methods, raw or summary data, uncertainty and limitations.",
+    "replication": "The result has been repeated across a meaningfully different sample, task, model or independent group."
+  },
+  "interpretationRule": "Never infer a later stage from external papers alone. External evidence can motivate a track, but project stages advance only when the corresponding project artifact exists.",
+  "entries": [
+    {
+      "track": "ai-anchoring-loop",
+      "name": "AI Anchoring Loop",
+      "stage": "protocol",
+      "protocolSlugs": ["ai-advice-order"],
+      "nextMilestone": "Run the protocol with a predefined task set and publish model/version, anchor values, sample size and uncertainty.",
+      "whyItMatters": "AI can become the first numerical reference before a person has formed an independent estimate."
+    },
+    {
+      "track": "sycophancy-reinforcement-loop",
+      "name": "Sycophancy Reinforcement Loop",
+      "stage": "protocol",
+      "protocolSlugs": ["agreement-pressure"],
+      "nextMilestone": "Separate model agreement from human confidence and test neutral, preference-signalling and counterevidence conditions.",
+      "whyItMatters": "An agreeable answer can be mistaken for independent support for a view the user already signalled."
+    },
+    {
+      "track": "cognitive-offloading-debt",
+      "name": "Cognitive Offloading Debt",
+      "stage": "protocol",
+      "protocolSlugs": ["offloading-retention"],
+      "nextMilestone": "Run an immediate-quality plus delayed-retention comparison rather than measuring task completion alone.",
+      "whyItMatters": "Faster completion and durable understanding are different outcomes."
+    },
+    {
+      "track": "source-memory-blur",
+      "name": "Source-Memory Blur",
+      "stage": "protocol",
+      "protocolSlugs": ["source-memory"],
+      "nextMilestone": "Measure delayed source attribution for human-only, AI-only and mixed creation conditions.",
+      "whyItMatters": "Mixed workflows may make it harder to remember whether an idea came from the person, a source or the model."
+    },
+    {
+      "track": "synthetic-consensus-illusion",
+      "name": "Synthetic Consensus Illusion",
+      "stage": "idea",
+      "protocolSlugs": [],
+      "nextMilestone": "Publish a protocol comparing several apparently independent AI answers with the same answers plus source-lineage disclosure.",
+      "whyItMatters": "Several generated answers may feel like independent confirmation even when their information lineage overlaps."
+    },
+    {
+      "track": "confidence-transfer",
+      "name": "Confidence Transfer",
+      "stage": "idea",
+      "protocolSlugs": [],
+      "nextMilestone": "Publish a protocol holding answer quality constant while varying certainty language and objective calibration information.",
+      "whyItMatters": "Confident wording may change human reliance even when the underlying evidence does not improve."
+    }
+  ]
+}
