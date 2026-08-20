@@ -53,6 +53,13 @@ def extract_anchor_number(text):
         return None
     return float(nums[-1].replace(",", ""))
 
+def anchor_token_count(text):
+    if not text:
+        return 0
+    times = list(TIME_RE.finditer(text))
+    without_times = TIME_RE.sub(" TIME ", text)
+    return len(times) + len(NUMBER_RE.findall(without_times))
+
 def trimmed(values):
     vals = sorted(v for v in values if v is not None and math.isfinite(v))
     return vals[1:-1] if len(vals) > 2 else vals
@@ -77,7 +84,7 @@ def fetch_csv(name):
     return list(csv.DictReader(io.StringIO(body))), url
 
 def analyze_rows(rows, source_file):
-    buckets = defaultdict(lambda: {"A": [], "B": [], "anchor_A": None, "anchor_B": None})
+    buckets = defaultdict(lambda: {"A": [], "B": [], "anchor_A": None, "anchor_B": None, "tokens_A": None, "tokens_B": None})
     total = parsed = 0
     models = set()
     for row in rows:
@@ -92,9 +99,11 @@ def analyze_rows(rows, source_file):
         if val is not None and math.isfinite(val):
             parsed += 1
             buckets[(model,qid)][group].append(val)
-        a = extract_anchor_number(row.get("hint_2",""))
+        hint = row.get("hint_2","")
+        a = extract_anchor_number(hint)
         if a is not None:
             buckets[(model,qid)][f"anchor_{group}"] = a
+            buckets[(model,qid)][f"tokens_{group}"] = anchor_token_count(hint)
 
     perq = []
     for (model,qid), b in sorted(buckets.items()):
@@ -117,6 +126,9 @@ def analyze_rows(rows, source_file):
             "anchor_A": b["anchor_A"],
             "anchor_B": b["anchor_B"],
             "anchor_delta": anchor_delta,
+            "anchor_token_count_A": b["tokens_A"],
+            "anchor_token_count_B": b["tokens_B"],
+            "anchor_parse_unambiguous": b["tokens_A"] == 1 and b["tokens_B"] == 1,
             "trimmed_mean_A": mean_a,
             "trimmed_mean_B": mean_b,
             "response_delta": response_delta,
@@ -125,27 +137,75 @@ def analyze_rows(rows, source_file):
         })
     return perq, {"rows": total, "parsed_responses": parsed, "parse_rate": parsed/total if total else None, "models": sorted(models)}
 
+def mcnemar_exact(a_only, b_only):
+    n = a_only + b_only
+    if n == 0:
+        return 1.0
+    k = min(a_only, b_only)
+    tail = sum(math.comb(n, i) for i in range(k + 1)) / (2 ** n)
+    return min(1.0, 2 * tail)
+
+def alignment_block(items):
+    aligned = sum(1 for x in items if x["direction_aligned"])
+    n = len(items)
+    lo, hi = wilson(aligned, n)
+    return {
+        "question_model_pairs": n,
+        "direction_aligned": aligned,
+        "direction_alignment_rate": aligned/n if n else None,
+        "direction_alignment_wilson_95": [lo,hi],
+        "median_relative_response_shift": median_or_none([x["relative_response_shift"] for x in items]),
+    }
+
 def summarize(perq, file_meta):
     by_model = defaultdict(list)
     for x in perq:
         by_model[x["model"]].append(x)
     models = []
     for model, items in sorted(by_model.items()):
-        aligned = sum(1 for x in items if x["direction_aligned"])
-        n = len(items)
-        lo, hi = wilson(aligned,n)
+        block = alignment_block(items)
         models.append({
             "model": model,
-            "questions_analysed": n,
-            "direction_aligned": aligned,
-            "direction_alignment_rate": aligned/n if n else None,
-            "direction_alignment_wilson_95": [lo,hi],
+            "questions_analysed": block["question_model_pairs"],
+            "direction_aligned": block["direction_aligned"],
+            "direction_alignment_rate": block["direction_alignment_rate"],
+            "direction_alignment_wilson_95": block["direction_alignment_wilson_95"],
             "median_abs_response_delta": median_or_none([abs(x["response_delta"]) for x in items]),
-            "median_relative_response_shift": median_or_none([x["relative_response_shift"] for x in items]),
+            "median_relative_response_shift": block["median_relative_response_shift"],
         })
-    all_aligned = sum(1 for x in perq if x["direction_aligned"])
-    n = len(perq)
-    lo, hi = wilson(all_aligned,n)
+
+    unambiguous = [x for x in perq if x["anchor_parse_unambiguous"]]
+    by_model_q = {(x["model"], str(x["question_id"])): x for x in perq}
+    comparisons = []
+    pairs = [
+        ("Claude Haiku 3.5 vs 3", "anthropic/claude-3-haiku", "anthropic/claude-3.5-haiku"),
+        ("Gemini Flash vs Flash Lite", "google/gemini-2.5-flash-lite-preview-06-17", "google/gemini-2.5-flash"),
+    ]
+    for label, baseline, comparison in pairs:
+        qids = sorted({q for (m,q) in by_model_q if m == baseline} & {q for (m,q) in by_model_q if m == comparison})
+        base_only = comp_only = both = neither = 0
+        for q in qids:
+            a = by_model_q[(baseline,q)]["direction_aligned"]
+            b = by_model_q[(comparison,q)]["direction_aligned"]
+            if a and b: both += 1
+            elif a: base_only += 1
+            elif b: comp_only += 1
+            else: neither += 1
+        base_rate = (both + base_only)/len(qids) if qids else None
+        comp_rate = (both + comp_only)/len(qids) if qids else None
+        comparisons.append({
+            "label": label,
+            "baseline_model": baseline,
+            "comparison_model": comparison,
+            "common_questions": len(qids),
+            "baseline_alignment_rate": base_rate,
+            "comparison_alignment_rate": comp_rate,
+            "difference_percentage_points": (comp_rate-base_rate)*100 if qids else None,
+            "discordant_baseline_only": base_only,
+            "discordant_comparison_only": comp_only,
+            "mcnemar_exact_p": mcnemar_exact(base_only, comp_only),
+        })
+
     return {
         "study_id": "study-001",
         "title": "Anchoring direction in released Claude and Gemini outputs: an independent re-analysis",
@@ -165,17 +225,17 @@ def summarize(perq, file_meta):
             "anchor_parsing": "The final numeric token in each released hint_2 string is used as the anchor value; time-like anchors are converted to minutes.",
             "uncertainty": "Wilson 95% interval for the descriptive direction-alignment proportion."
         },
-        "overall": {
-            "question_model_pairs": n,
-            "direction_aligned": all_aligned,
-            "direction_alignment_rate": all_aligned/n if n else None,
-            "direction_alignment_wilson_95": [lo,hi],
-            "median_relative_response_shift": median_or_none([x["relative_response_shift"] for x in perq])
+        "overall": alignment_block(perq),
+        "sensitivity_unambiguous_anchors": alignment_block(unambiguous),
+        "anchor_parse_audit": {
+            "pairs_with_one_numeric_token_per_anchor": len(unambiguous),
+            "pairs_with_multiple_numeric_tokens_in_at_least_one_anchor": len(perq) - len(unambiguous)
         },
         "models": models,
+        "paired_family_comparisons": comparisons,
         "limitations": [
             "This is a re-analysis of outputs collected by the source authors, not a fresh model run.",
-            "Anchor extraction is rule-based and should be audited for questions whose hint contains multiple numbers.",
+            "Anchor extraction is rule-based. A conservative sensitivity analysis excludes pairs whose hint contains more than one numeric token.",
             "Repeated model outputs within a question are not treated as independent question-level replications.",
             "Direction alignment is descriptive and does not identify a psychological mechanism.",
             "The result says nothing directly about how humans respond to AI advice."
@@ -198,7 +258,20 @@ def write_outputs(summary, perq):
     ]
     for m in summary["models"]:
         lines.append(f"| {m['model']} | {m['questions_analysed']} | {m['direction_aligned']} | {m['direction_alignment_rate']:.1%} | {m['direction_alignment_wilson_95'][0]:.1%}–{m['direction_alignment_wilson_95'][1]:.1%} | {m['median_relative_response_shift']:.3f} |")
-    lines += ["", "## Reproducibility", "", f"Source data are pinned to `{SOURCE_REPO}@{SOURCE_COMMIT}`. The source paper is DOI [{SOURCE_DOI}](https://doi.org/{SOURCE_DOI}).", "", "The full question-level output is published beside this summary.", "", "## Limitations", ""]
+    sens = summary["sensitivity_unambiguous_anchors"]
+    lines += [
+        "", "## Sensitivity: unambiguous anchor strings", "",
+        f"When restricted to **{sens['question_model_pairs']}** pairs where each anchor hint contains one numeric token, alignment is **{sens['direction_alignment_rate']:.1%}** (Wilson 95% interval {sens['direction_alignment_wilson_95'][0]:.1%}–{sens['direction_alignment_wilson_95'][1]:.1%}).",
+        "", "## Paired model-family check", "",
+        "| Comparison | Common questions | Baseline rate | Comparison rate | Difference | McNemar exact p |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for c in summary["paired_family_comparisons"]:
+        lines.append(f"| {c['label']} | {c['common_questions']} | {c['baseline_alignment_rate']:.1%} | {c['comparison_alignment_rate']:.1%} | {c['difference_percentage_points']:+.1f} pp | {c['mcnemar_exact_p']:.3f} |")
+    lines += [
+        "", "The paired checks are secondary and descriptive. They do not support a simple claim that a newer or larger model is automatically more or less anchor-sensitive.",
+        "", "## Reproducibility", "", f"Source data are pinned to `{SOURCE_REPO}@{SOURCE_COMMIT}`. The source paper is DOI [{SOURCE_DOI}](https://doi.org/{SOURCE_DOI}).", "", "The full question-level output is published beside this summary.", "", "## Limitations", ""
+    ]
     lines += [f"- {x}" for x in summary["limitations"]]
     (OUT/"report.md").write_text("\n".join(lines)+"\n", encoding="utf-8")
 
@@ -207,6 +280,8 @@ def self_test():
     assert extract_response_number('{"number":"2:00","unit":"HH:MM"}') == 120
     assert extract_anchor_number("Apple iPhone 8: 699 USD") == 699
     assert extract_anchor_number("Prediction at 2:30") == 150
+    assert anchor_token_count("Apple iPhone 8: 699 USD") == 2
+    assert anchor_token_count("Prediction at 2:30") == 1
     lo, hi = wilson(9,10)
     assert 0 < lo < .9 < hi <= 1
     print("Study 001 self-test passed.")
