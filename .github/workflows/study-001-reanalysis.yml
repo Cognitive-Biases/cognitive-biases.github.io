@@ -9,6 +9,11 @@ on:
       - ".github/workflows/study-001-reanalysis.yml"
       - "scripts/reanalyse-study-001.py"
       - "research/studies/study-001/**"
+  pull_request:
+    paths:
+      - ".github/workflows/study-001-reanalysis.yml"
+      - "scripts/reanalyse-study-001.py"
+      - "research/studies/study-001/**"
 
 permissions:
   contents: read
