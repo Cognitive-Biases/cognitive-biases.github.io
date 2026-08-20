@@ -1,0 +1,33 @@
+name: Study 001 Anchoring Re-analysis
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/study-001-anchoring-reanalysis
+    paths:
+      - ".github/workflows/study-001-reanalysis.yml"
+      - "scripts/reanalyse-study-001.py"
+      - "research/studies/study-001/**"
+
+permissions:
+  contents: read
+
+jobs:
+  reanalyse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Self-test analysis code
+        run: python scripts/reanalyse-study-001.py --self-test
+      - name: Re-analyse pinned public outputs
+        run: python scripts/reanalyse-study-001.py
+      - name: Show result summary
+        run: cat research-output/study-001/report.md
+      - name: Upload reproducible result artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-001-result
+          path: research-output/study-001/
+          if-no-files-found: error
+          retention-days: 30
