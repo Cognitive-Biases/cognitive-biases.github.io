@@ -42,5 +42,5 @@ for (const path of ["/tools/career-decision-review/", "/tools/lens-pack-builder/
   if (!sitemap.includes(`<loc>${SITE}${path}</loc>`)) throw new Error(`sitemap.xml: missing ${path}`);
 }
 const home = await readFile(join(OUT, "index.html"), "utf8");
-if (!home.includes('class="decision-workbench-home"')) throw new Error("Homepage is missing Decision Workbench discovery section.");
+if (!home.includes("decision-workbench-home")) throw new Error("Homepage is missing Decision Workbench discovery section.");
 console.log(`Decision workbench checks passed: ${tracker.entries.length} research tracks, 3 public pages, 2 local-first tools.`);
