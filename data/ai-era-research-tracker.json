@@ -18,6 +18,17 @@
       "name": "AI Anchoring Loop",
       "stage": "protocol",
       "protocolSlugs": ["ai-advice-order"],
+      "supportingArtifacts": [
+        {
+          "id": "study-001",
+          "kind": "independent re-analysis",
+          "status": "result",
+          "url": "/research/studies/study-001/",
+          "dataUrl": "/data/studies/study-001/summary.json",
+          "summary": "Across 248 released Claude and Gemini question-model pairs, 74.6% of trimmed mean responses moved in the same direction as the numerical anchor; a stricter 144-pair sensitivity subset showed 80.6% alignment.",
+          "boundary": "This is supporting model-side evidence from an external public dataset. It does not run the project's human-AI advice-order protocol and therefore does not advance this track beyond protocol."
+        }
+      ],
       "nextMilestone": "Run the protocol with a predefined task set and publish model/version, anchor values, sample size and uncertainty.",
       "whyItMatters": "AI can become the first numerical reference before a person has formed an independent estimate."
     },
