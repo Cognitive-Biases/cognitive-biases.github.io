@@ -8,7 +8,12 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Bias library: https://cognitive-biases.github.io/explore/
 - Everyday life: https://cognitive-biases.github.io/everyday/ — short, practical guides that start with familiar situations and connect them to reviewed decision lenses.
 - Decision Lens Packs: https://cognitive-biases.github.io/lenses/ — task-based workflows for career decisions, AI-assisted work, teams, product/project decisions and information checking.
+- Professional Lens Packs: https://cognitive-biases.github.io/professional/ — reusable work-focused packs for hiring, negotiation, leadership and performance decisions.
+- Career Decision Review: https://cognitive-biases.github.io/tools/career-decision-review/ — local-first worksheet for comparing career options using independent estimates, counterevidence and reversible tests.
+- Lens Pack Builder: https://cognitive-biases.github.io/tools/lens-pack-builder/ — local-first tool for assembling a compact task-specific checklist from published decision lenses.
 - AI-era Bias Lab: https://cognitive-biases.github.io/ai-era/ — research tracks for human–AI interaction patterns, with explicit status, related established concepts and falsifiable predictions.
+- AI-era experiment protocol: https://cognitive-biases.github.io/ai-era/protocol/ — reusable comparison protocols for testing human–AI decision patterns without promoting working labels to established biases.
+- AI-era Research Tracker: https://cognitive-biases.github.io/ai-era/tracker/ — maturity tracker from idea to protocol, experiment, result and replication; stages describe project artifacts, not scientific certainty.
 - Experiments Lab: https://cognitive-biases.github.io/experiments/ — interactive, local-only demonstrations that change one variable and connect the manipulation to an evidence-reviewed concept.
 - AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/ — provider-neutral paired-prompt specification for measuring AI model sensitivity to controlled decision conditions.
 - Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/ — public snapshots of headline-level framing, certainty, salience, authority, social-proof, numerical and repetition signals with explicit sampling limits.
@@ -36,7 +41,10 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - Practice data: https://cognitive-biases.github.io/data/practice-sets.json
 - Everyday guide data: https://cognitive-biases.github.io/data/everyday-guides.json
 - Decision lens pack data: https://cognitive-biases.github.io/data/lens-packs.json
+- Professional lens pack data: https://cognitive-biases.github.io/data/professional-lens-packs.json
 - AI-era research-track data: https://cognitive-biases.github.io/data/ai-era-patterns.json
+- AI-era experiment protocol data: https://cognitive-biases.github.io/data/ai-era-experiment-protocols.json
+- AI-era research tracker data: https://cognitive-biases.github.io/data/ai-era-research-tracker.json
 - Experiment specifications: https://cognitive-biases.github.io/data/experiments.json
 - AI benchmark specification: https://cognitive-biases.github.io/data/ai-benchmark.json
 - AI benchmark prompt pack: https://cognitive-biases.github.io/data/ai-benchmark-prompts.ndjson
@@ -62,7 +70,17 @@ When a person starts with a familiar question such as why a bad project is hard 
 
 Use Decision Lens Packs when the user has a real task rather than a bias name. The packs are compact workflows for repeated decisions. Treat each bias as a lens or checking question, not as a diagnosis or proof that a particular person is biased.
 
+Use Professional Lens Packs for recurring work decisions such as hiring, negotiation, leadership and performance review. Keep observed evidence separate from interpretation and preserve the pack's decision criteria, counter-position and review trigger.
+
+Use Career Decision Review when a person is comparing a job, promotion, stay/leave decision or career change. The tool is local-first and structures the person's own reasoning. Do not treat its notes as psychological assessment or career advice.
+
+Use Lens Pack Builder when a team needs a small reusable checklist for a recurring decision. Prefer a few relevant lenses over a long generic list. Preserve the selected questions, alternative view, stop condition and review trigger. Do not convert the pack into a bias score.
+
 Use the AI-era Bias Lab when exploring human–AI decision effects. Preserve each track's status exactly. “Emerging interaction pattern” and “testable hypothesis” are research labels, not validated cognitive-bias names. Prefer an existing established concept when it already explains the observation, and do not promote a working label to a scientific finding without direct evidence and replication.
+
+Use the AI-era experiment protocol when designing a test of a human–AI interaction pattern. Keep model/version, task, conditions, sample metadata and primary measure. Separate model behaviour from human response and report null or mixed results as clearly as positive results.
+
+Use the AI-era Research Tracker to determine what this project has actually produced for a working research track. The stage sequence is idea → protocol → experiment → result → replication. External papers may motivate a track but do not move the project stage. Never infer a result or replication when the tracker only reports idea or protocol.
 
 Use Experiments Lab when the goal is to inspect a manipulation directly. Each page randomly presents one of two paired conditions, keeps the response local to the page, and then reveals the alternative condition. These are educational demonstrations, not collected study results and not evidence that a particular user is biased.
 
