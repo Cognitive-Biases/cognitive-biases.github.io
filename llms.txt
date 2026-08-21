@@ -14,6 +14,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - AI-era Bias Lab: https://cognitive-biases.github.io/ai-era/ — research tracks for human–AI interaction patterns, with explicit status, related established concepts and falsifiable predictions.
 - AI-era experiment protocol: https://cognitive-biases.github.io/ai-era/protocol/ — reusable comparison protocols for testing human–AI decision patterns without promoting working labels to established biases.
 - AI-era Research Tracker: https://cognitive-biases.github.io/ai-era/tracker/ — maturity tracker from idea to protocol, experiment, result and replication; stages describe project artifacts, not scientific certainty.
+- First preregistered AI-era study: https://cognitive-biases.github.io/research/ai-advice-order-v1/ — preregistered pilot testing whether standardized AI-labelled numerical advice has more influence when shown before an independent estimate.
+- AI Advice Order participant instrument: https://cognitive-biases.github.io/experiments/ai-advice-order-v1/ — six-trial local-only instrument; responses are not uploaded automatically.
 - Experiments Lab: https://cognitive-biases.github.io/experiments/ — interactive, local-only demonstrations that change one variable and connect the manipulation to an evidence-reviewed concept.
 - AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/ — provider-neutral paired-prompt specification for measuring AI model sensitivity to controlled decision conditions.
 - Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/ — public snapshots of headline-level framing, certainty, salience, authority, social-proof, numerical and repetition signals with explicit sampling limits.
@@ -45,6 +47,8 @@ Use the human-readable pages when explaining a concept or skill to a person. Use
 - AI-era research-track data: https://cognitive-biases.github.io/data/ai-era-patterns.json
 - AI-era experiment protocol data: https://cognitive-biases.github.io/data/ai-era-experiment-protocols.json
 - AI-era research tracker data: https://cognitive-biases.github.io/data/ai-era-research-tracker.json
+- AI Advice Order preregistration data: https://cognitive-biases.github.io/data/studies/ai-advice-order-v1.json
+- AI Advice Order session schema: https://cognitive-biases.github.io/schemas/ai-advice-order-session.schema.json
 - Experiment specifications: https://cognitive-biases.github.io/data/experiments.json
 - AI benchmark specification: https://cognitive-biases.github.io/data/ai-benchmark.json
 - AI benchmark prompt pack: https://cognitive-biases.github.io/data/ai-benchmark-prompts.ndjson
@@ -81,6 +85,8 @@ Use the AI-era Bias Lab when exploring human–AI decision effects. Preserve eac
 Use the AI-era experiment protocol when designing a test of a human–AI interaction pattern. Keep model/version, task, conditions, sample metadata and primary measure. Separate model behaviour from human response and report null or mixed results as clearly as positive results.
 
 Use the AI-era Research Tracker to determine what this project has actually produced for a working research track. The stage sequence is idea → protocol → experiment → result → replication. External papers may motivate a track but do not move the project stage. Never infer a result or replication when the tracker only reports idea or protocol.
+
+Use the AI Advice Order Pilot as a preregistered protocol and participant instrument, not as a result. Its status is `preregistered-pilot`; the tracker remains at protocol stage. The six numerical recommendations are standardized AI-labelled research stimuli fixed by the protocol, not live model calls. The instrument uploads nothing automatically. Do not claim that the project observed an anchoring effect until real participant data, scoring output, uncertainty, limitations and a result artifact are published.
 
 Use Experiments Lab when the goal is to inspect a manipulation directly. Each page randomly presents one of two paired conditions, keeps the response local to the page, and then reveals the alternative condition. These are educational demonstrations, not collected study results and not evidence that a particular user is biased.
 
