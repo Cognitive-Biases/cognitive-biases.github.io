@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-08-21",
   "description": "Reusable research protocols for testing human-AI decision patterns without treating working labels as established cognitive biases.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/protocol/",
   "rules": [
@@ -20,7 +20,11 @@
       "conditions": ["Independent estimate first, then AI advice", "AI advice first, then human estimate"],
       "primaryMeasure": "Absolute shift toward the AI estimate",
       "secondaryMeasures": ["confidence change", "decision time", "distance from a reference-class estimate"],
-      "minimumReport": "Report the model/version, task, anchor value, sample size, mean shift by condition and uncertainty."
+      "minimumReport": "Report the model/version, task, anchor value, sample size, mean shift by condition and uncertainty.",
+      "preregisteredStudyId": "ai-advice-order-v1",
+      "studyUrl": "/research/ai-advice-order-v1/",
+      "instrumentUrl": "/experiments/ai-advice-order-v1/",
+      "stimulusNote": "The v1 pilot isolates advice-order effects with standardized AI-labelled numerical recommendations fixed by protocol rather than live model calls."
     },
     {
       "slug": "agreement-pressure",
@@ -54,6 +58,8 @@
     }
   ],
   "startingEvidence": [
+    {"title": "How was my performance? Exploring the role of anchoring bias in AI-assisted decision making", "year": 2025, "url": "https://doi.org/10.1016/j.ijinfomgt.2025.102875"},
+    {"title": "Anchoring bias in large language models: an experimental study", "year": 2025, "url": "https://doi.org/10.1007/s42001-025-00435-2"},
     {"title": "Good Arguments Against the People Pleasers: How Reasoning Mitigates (Yet Masks) LLM Sycophancy", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1126"},
     {"title": "Too Nice to Tell the Truth: Quantifying Agreeableness-Driven Sycophancy in Role-Playing Language Models", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1421"},
     {"title": "Large Language Models are overconfident and amplify human bias", "year": 2025, "url": "https://arxiv.org/abs/2505.02151"},

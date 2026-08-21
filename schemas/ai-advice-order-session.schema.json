@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitive-biases.github.io/schemas/ai-advice-order-session.schema.json",
+  "title": "AI Advice Order Pilot Session",
+  "type": "object",
+  "required": ["studyId", "specVersion", "participantId", "consentVersion", "startedAt", "completedAt", "responses"],
+  "properties": {
+    "studyId": {"const": "ai-advice-order-v1"},
+    "specVersion": {"type": "integer", "minimum": 1},
+    "participantId": {"type": "string", "minLength": 8, "maxLength": 128},
+    "consentVersion": {"type": "string", "minLength": 1},
+    "startedAt": {"type": "string", "format": "date-time"},
+    "completedAt": {"type": "string", "format": "date-time"},
+    "responses": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["taskId", "orderCondition", "anchorDirection", "anchor", "referenceValue", "finalEstimate", "finalConfidence", "knownAnswer", "elapsedMs"],
+        "properties": {
+          "taskId": {"type": "string", "minLength": 1},
+          "orderCondition": {"enum": ["independent-first", "advice-first"]},
+          "anchorDirection": {"enum": ["low", "high"]},
+          "anchor": {"type": "number"},
+          "referenceValue": {"type": "number"},
+          "initialEstimate": {"type": ["number", "null"]},
+          "initialConfidence": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
+          "finalEstimate": {"type": "number"},
+          "finalConfidence": {"type": "number", "minimum": 0, "maximum": 100},
+          "knownAnswer": {"type": "boolean"},
+          "elapsedMs": {"type": "integer", "minimum": 0}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "description": "Public maturity tracker for AI-era human–AI decision research. Stage reflects project artifacts, not scientific certainty.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/tracker/",
   "stageOrder": ["idea", "protocol", "experiment", "result", "replication"],
@@ -18,7 +18,8 @@
       "name": "AI Anchoring Loop",
       "stage": "protocol",
       "protocolSlugs": ["ai-advice-order"],
-      "nextMilestone": "Run the protocol with a predefined task set and publish model/version, anchor values, sample size and uncertainty.",
+      "studyArtifacts": ["/research/ai-advice-order-v1/", "/experiments/ai-advice-order-v1/", "/data/studies/ai-advice-order-v1.json"],
+      "nextMilestone": "Collect 40 complete adult pilot sessions under the preregistered AI Advice Order v1 protocol, then publish anonymized data, scoring output, limitations and any deviations before considering result stage.",
       "whyItMatters": "AI can become the first numerical reference before a person has formed an independent estimate."
     },
     {

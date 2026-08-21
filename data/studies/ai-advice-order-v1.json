@@ -1,0 +1,158 @@
+{
+  "studyId": "ai-advice-order-v1",
+  "version": 1,
+  "status": "preregistered-pilot",
+  "preregisteredAt": "2026-08-21",
+  "title": "Does AI Advice Order Change Numerical Judgment?",
+  "shortTitle": "AI Advice Order Pilot",
+  "canonicalUrl": "https://cognitive-biases.github.io/research/ai-advice-order-v1/",
+  "instrumentUrl": "https://cognitive-biases.github.io/experiments/ai-advice-order-v1/",
+  "track": "ai-anchoring-loop",
+  "protocol": "ai-advice-order",
+  "researchQuestion": "When the same standardized AI-labelled numerical advice is shown before rather than after an independent estimate, does the final human estimate align more strongly with that advice?",
+  "hypothesis": "Within participants, final estimates will show greater normalized alignment with the standardized AI advice in advice-first trials than in independent-estimate-first trials.",
+  "design": {
+    "type": "within-participant randomized pilot",
+    "trialsPerParticipant": 6,
+    "orderConditions": ["independent-first", "advice-first"],
+    "orderBalance": "3 trials per condition for every completed participant, randomized across tasks.",
+    "anchorDirections": ["low", "high"],
+    "anchorBalance": "3 low and 3 high standardized anchors per completed participant, randomized independently of advice order.",
+    "stimulusDisclosure": "The displayed recommendation is a standardized AI-labelled research stimulus fixed by the protocol, not a live model call.",
+    "taskOrder": "Randomized once per local participant session."
+  },
+  "samplePlan": {
+    "targetCompletedParticipants": 40,
+    "population": "Convenience sample of adults aged 18 or older.",
+    "unitOfAnalysis": "Participant-level difference between mean advice-first and independent-first trial scores.",
+    "stoppingRule": "Stop the pilot after 40 complete, consented participant records have been collected. Incomplete sessions are not included in the primary analysis.",
+    "duplicateRule": "One completed session per participant should be contributed. The public instrument does not fingerprint users, so duplicate control must occur during collection."
+  },
+  "primaryOutcome": {
+    "name": "normalized anchor alignment",
+    "formula": "(finalEstimate - referenceValue) / (shownAnchor - referenceValue)",
+    "interpretation": "0 is exactly the reference value; 1 is exactly the shown anchor. Values can be below 0 or above 1 and are not clipped.",
+    "participantContrast": "mean(advice-first normalized anchor alignment) - mean(independent-first normalized anchor alignment)",
+    "direction": "A positive contrast supports greater alignment with the AI-labelled anchor when advice is shown first."
+  },
+  "secondaryOutcomes": [
+    "Absolute relative error of the final estimate against the reference value by advice-order condition.",
+    "For independent-first trials only: movement from the initial estimate toward the shown advice.",
+    "Final confidence by advice-order condition.",
+    "Sensitivity analysis excluding trials where the participant reports already knowing the exact answer.",
+    "Trial completion time as a descriptive process measure."
+  ],
+  "analysisPlan": {
+    "primary": "Compute the participant-level contrast first, then report the sample mean, median and a deterministic bootstrap 95% confidence interval across participants.",
+    "bootstrapResamples": 5000,
+    "bootstrapSeed": 20260821,
+    "missingData": "Primary analysis uses completed sessions with all six final estimates. Do not impute missing trial responses.",
+    "outliers": "Do not remove finite numerical responses merely for being extreme. Report a sensitivity summary using medians alongside means.",
+    "knownAnswerSensitivity": "Repeat the participant contrast after excluding self-reported known-answer trials where both order conditions still have at least one usable trial.",
+    "claimRule": "Treat this as an exploratory pilot. Do not promote the AI Anchoring Loop tracker to result stage unless anonymized data, the scoring output, limitations and an explicit result artifact are published."
+  },
+  "participantData": {
+    "automaticUpload": false,
+    "directIdentifiersCollected": false,
+    "deviceFingerprinting": false,
+    "fields": ["random local participant id", "consent version", "trial assignment", "numerical estimates", "confidence", "known-answer self-report", "trial timing", "completion timestamp"],
+    "sharing": "The browser downloads a JSON record. Sharing that record with the project is a separate voluntary action."
+  },
+  "ethicsAndBoundary": [
+    "Adults only (18+).",
+    "No sensitive personal questions are asked.",
+    "No response is uploaded automatically by the website.",
+    "Participants can stop by closing or resetting the page before sharing a record.",
+    "This public pilot is not presented as an IRB-reviewed academic human-subjects study.",
+    "The task measures response patterns in this instrument; it does not diagnose a participant as biased or irrational."
+  ],
+  "tasks": [
+    {
+      "id": "burj-khalifa-height",
+      "question": "What is the final height of Burj Khalifa?",
+      "unit": "metres",
+      "referenceValue": 828,
+      "lowAnchor": 620,
+      "highAnchor": 1040,
+      "sourceTitle": "Burj Khalifa Fact Sheet",
+      "sourceUrl": "https://www.burjkhalifa.ae/img/fact-sheet.pdf"
+    },
+    {
+      "id": "tokyo-skytree-height",
+      "question": "What is the height of Tokyo Skytree?",
+      "unit": "metres",
+      "referenceValue": 634,
+      "lowAnchor": 475,
+      "highAnchor": 795,
+      "sourceTitle": "Tokyo Skytree official specifications",
+      "sourceUrl": "https://www.tokyo-skytree.jp/about/spec/"
+    },
+    {
+      "id": "golden-gate-main-span",
+      "question": "What is the length of the Golden Gate Bridge main span between the towers?",
+      "unit": "metres",
+      "referenceValue": 1280,
+      "lowAnchor": 960,
+      "highAnchor": 1600,
+      "sourceTitle": "Golden Gate Bridge Design & Construction Stats",
+      "sourceUrl": "https://www.goldengate.org/bridge/history-research/statistics-data/design-construction-stats/"
+    },
+    {
+      "id": "eiffel-tower-height",
+      "question": "What is the current height of the Eiffel Tower, including its current antenna?",
+      "unit": "metres",
+      "referenceValue": 330,
+      "lowAnchor": 250,
+      "highAnchor": 415,
+      "sourceTitle": "Eiffel Tower official key figures",
+      "sourceUrl": "https://www.toureiffel.paris/en/the-monument/key-figures"
+    },
+    {
+      "id": "lhc-circumference",
+      "question": "Approximately how long is the Large Hadron Collider ring?",
+      "unit": "kilometres",
+      "referenceValue": 27,
+      "lowAnchor": 20,
+      "highAnchor": 34,
+      "sourceTitle": "CERN Large Hadron Collider",
+      "sourceUrl": "https://home.cern/resources/faqs/large-hadron-collider-dangerous"
+    },
+    {
+      "id": "hoover-dam-height",
+      "question": "What is the structural height of Hoover Dam from foundation rock to the roadway on the crest?",
+      "unit": "feet",
+      "referenceValue": 726.4,
+      "lowAnchor": 545,
+      "highAnchor": 910,
+      "sourceTitle": "U.S. Bureau of Reclamation Hoover Dam FAQs",
+      "sourceUrl": "https://usbr.gov/lc/hooverdam/faqs/damfaqs.html"
+    }
+  ],
+  "researchBackground": [
+    {
+      "title": "How was my performance? Exploring the role of anchoring bias in AI-assisted decision making",
+      "year": 2025,
+      "url": "https://doi.org/10.1016/j.ijinfomgt.2025.102875",
+      "note": "Two controlled experiments with managers found that AI recommendation source and anchor magnitude interacted in performance ratings."
+    },
+    {
+      "title": "Anchoring bias in large language models: an experimental study",
+      "year": 2025,
+      "url": "https://doi.org/10.1007/s42001-025-00435-2",
+      "note": "A multi-model study found numerical LLM outputs were sensitive to anchor hints and several simple prompting mitigations were insufficient."
+    },
+    {
+      "title": "The inclusion of anchors when seeking advice: Causes and consequences",
+      "year": 2024,
+      "url": "https://doi.org/10.1016/j.obhdp.2024.104391",
+      "note": "Preregistered advice-seeking studies show that including anchors can introduce shared error into later judgments."
+    }
+  ],
+  "limitationsPlanned": [
+    "The advice is a standardized AI-labelled stimulus, not live advice generated by a model during the session.",
+    "The pilot uses factual estimation tasks rather than high-stakes real-world decisions.",
+    "A convenience sample limits population inference.",
+    "Participants may know some reference values already; this is measured only by self-report.",
+    "The pilot is designed to estimate an order effect and test the research workflow, not to establish a new cognitive-bias category."
+  ]
+}
