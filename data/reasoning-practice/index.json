@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-08-22",
+  "title": "Reasoning Practice Scenarios",
+  "description": "Realistic decision scenarios that teach the next reasoning move, not memory for cognitive-bias labels.",
+  "difficultyLevels": {
+    "starter": "One clear reasoning risk and one practical first move.",
+    "intermediate": "Several plausible options and missing evidence to separate.",
+    "advanced": "Competing lenses, structural causes or trade-offs that must remain visible."
+  },
+  "boundary": "A scenario suggests a useful first lens and technique. It does not diagnose a person, prove a bias caused the decision or guarantee that the technique will improve the outcome.",
+  "packs": [
+    "hiring-interviews",
+    "project-estimation",
+    "production-incident",
+    "product-prioritization",
+    "vendor-tool-selection",
+    "forecasting",
+    "performance-review",
+    "negotiation",
+    "ai-assisted-research",
+    "checking-repeated-claims",
+    "career-change",
+    "kpi-review"
+  ]
+}

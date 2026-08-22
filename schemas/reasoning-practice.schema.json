@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitive-biases.github.io/schemas/reasoning-practice.schema.json",
+  "title": "Cognitive Biases Reasoning Practice Dataset",
+  "description": "Schema for realistic reasoning-practice scenarios linked to canonical situations, skills, evidence-reviewed lenses and techniques.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "schemaVersion",
+    "updatedAt",
+    "title",
+    "description",
+    "difficultyLevels",
+    "boundary",
+    "scenarios"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "difficultyLevels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "starter",
+        "intermediate",
+        "advanced"
+      ],
+      "properties": {
+        "starter": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intermediate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "advanced": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "boundary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenarios": {
+      "type": "array",
+      "minItems": 25,
+      "items": {
+        "$ref": "#/$defs/scenario"
+      }
+    },
+    "releaseVersion": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "text"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "scenario": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slug",
+        "title",
+        "difficulty",
+        "situation",
+        "skill",
+        "primaryLens",
+        "alternativeLenses",
+        "technique",
+        "prompt",
+        "question",
+        "options",
+        "bestOption",
+        "explanation",
+        "missingEvidence",
+        "evidenceNote",
+        "nextAction"
+      ],
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "starter",
+            "intermediate",
+            "advanced"
+          ]
+        },
+        "situation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primaryLens": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternativeLenses": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "technique": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 20
+        },
+        "question": {
+          "type": "string",
+          "minLength": 10
+        },
+        "options": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "$ref": "#/$defs/option"
+          }
+        },
+        "bestOption": {
+          "type": "string",
+          "enum": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 20
+        },
+        "missingEvidence": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "evidenceNote": {
+          "type": "string",
+          "minLength": 20
+        },
+        "nextAction": {
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    }
+  }
+}

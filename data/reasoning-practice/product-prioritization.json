@@ -1,0 +1,79 @@
+{
+  "situation": "product-prioritization",
+  "scenarios": [
+    {
+      "slug": "roadmap-loud-customer",
+      "title": "The loudest customer becomes the market",
+      "difficulty": "starter",
+      "situation": "product-prioritization",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "heuristic-bias-availability-bias",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "base-rate-check",
+      "prompt": "One large customer describes a painful workflow problem. The roadmap discussion treats that story as proof that most users need the same feature.",
+      "question": "What evidence should be checked before reprioritizing the roadmap?",
+      "options": [
+        {
+          "id": "a",
+          "text": "How common the workflow and pain are across the relevant customer population."
+        },
+        {
+          "id": "b",
+          "text": "How strongly the customer repeats the request in the next meeting."
+        },
+        {
+          "id": "c",
+          "text": "Whether the story is memorable enough to explain to executives."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "A vivid case can be important without being representative. A base-rate check asks how often the problem occurs and for whom.",
+      "missingEvidence": [
+        "Number of affected customers and users.",
+        "Severity and frequency of the problem.",
+        "Evidence from customers who do not request the feature."
+      ],
+      "evidenceNote": "Availability bias may increase the story’s weight, but a single strategic customer can still justify action for commercial reasons. Those reasons should be explicit.",
+      "nextAction": "Estimate prevalence and value before comparing the feature with other roadmap options."
+    },
+    {
+      "slug": "roadmap-already-built",
+      "title": "Too much code to stop now",
+      "difficulty": "intermediate",
+      "situation": "product-prioritization",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "logical-fallacy-escalation-of-commitment",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "incremental-value-check",
+      "prompt": "A feature has consumed eight months of work. New research shows limited demand, but the team argues that stopping would waste the investment.",
+      "question": "Which question should drive the next decision?",
+      "options": [
+        {
+          "id": "a",
+          "text": "How much effort has already been spent compared with the original budget?"
+        },
+        {
+          "id": "b",
+          "text": "Would we fund the remaining work today, based on future cost, value and uncertainty?"
+        },
+        {
+          "id": "c",
+          "text": "How embarrassing would cancellation look to the steering committee?"
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Past work cannot be recovered. The incremental-value check evaluates only the future consequences of continuing, stopping or changing direction.",
+      "missingEvidence": [
+        "Remaining cost and delivery risk.",
+        "Current evidence of future value.",
+        "Switching and cancellation consequences that still lie in the future."
+      ],
+      "evidenceNote": "Escalation of commitment is a plausible lens because past investment is used as a reason for further investment. Relevant future switching costs should not be ignored.",
+      "nextAction": "Write a future-only business case for the next release step."
+    }
+  ]
+}

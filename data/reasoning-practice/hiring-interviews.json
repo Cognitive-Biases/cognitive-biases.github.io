@@ -1,0 +1,114 @@
+{
+  "situation": "hiring-interviews",
+  "scenarios": [
+    {
+      "slug": "hiring-first-impression",
+      "title": "The confident first ten minutes",
+      "difficulty": "starter",
+      "situation": "hiring-interviews",
+      "skill": "evidence-evaluation",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "predefined-criteria",
+      "prompt": "A candidate gives a confident opening answer. The panel spends the rest of the interview interpreting mixed evidence as proof that the candidate is strong.",
+      "question": "What is the best first move before the panel gives a rating?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ask the most senior interviewer for an immediate overall score."
+        },
+        {
+          "id": "b",
+          "text": "Return to criteria fixed before the interview and score the same evidence against each criterion."
+        },
+        {
+          "id": "c",
+          "text": "Add more informal conversation to see whether the first impression feels consistent."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "The opening answer may act as an anchor. Predefined criteria reduce the freedom to reinterpret later evidence around that first impression.",
+      "missingEvidence": [
+        "The interview criteria and scoring rules agreed before the meeting.",
+        "Independent notes from each interviewer.",
+        "Evidence from comparable candidates assessed with the same questions."
+      ],
+      "evidenceNote": "Anchoring is a plausible first lens because an early judgment shaped later interpretation. The scenario does not prove that anchoring caused the final rating.",
+      "nextAction": "Collect independent criterion-level scores before discussing an overall recommendation."
+    },
+    {
+      "slug": "hiring-evidence-shopping",
+      "title": "The favourite candidate gets easier questions",
+      "difficulty": "intermediate",
+      "situation": "hiring-interviews",
+      "skill": "evidence-evaluation",
+      "primaryLens": "cognitive-bias-confirmation-bias",
+      "alternativeLenses": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "technique": "consider-the-opposite",
+      "prompt": "The team already prefers one candidate. Interviewers ask that candidate to explain strengths, while competing candidates are pressed mainly on weaknesses.",
+      "question": "Which action would make the comparison more informative?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ask what evidence would make the preferred candidate a poor choice, then collect the same evidence for every candidate."
+        },
+        {
+          "id": "b",
+          "text": "Let each interviewer follow their intuition because structured questions can feel artificial."
+        },
+        {
+          "id": "c",
+          "text": "Invite the preferred candidate to one more informal meeting and decide from team chemistry."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The evidence search is asymmetric. Considering the opposite creates a real test of the preferred conclusion instead of collecting only supportive material.",
+      "missingEvidence": [
+        "A shared question set.",
+        "Evidence that would lower the preferred candidate’s rating.",
+        "Comparable work samples or structured references."
+      ],
+      "evidenceNote": "Confirmation bias is a reasonable lens for the search pattern, but other explanations such as poor interview design may also matter.",
+      "nextAction": "Write one disconfirming question and apply it to all serious candidates."
+    },
+    {
+      "slug": "hiring-past-success-story",
+      "title": "The last star hire becomes the template",
+      "difficulty": "advanced",
+      "situation": "hiring-interviews",
+      "skill": "evidence-evaluation",
+      "primaryLens": "cognitive-bias-outcome-bias",
+      "alternativeLenses": [],
+      "technique": "predefined-criteria",
+      "prompt": "A previous hire performed very well. The team now treats every feature of that hiring decision as a proven success formula, although several factors were uncertain at the time.",
+      "question": "What should the team review before copying the old decision?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The original evidence, alternatives and uncertainty recorded before the successful outcome was known."
+        },
+        {
+          "id": "b",
+          "text": "Only the qualities of the successful employee that are easiest to remember today."
+        },
+        {
+          "id": "c",
+          "text": "Whether the old hiring manager still feels confident about the choice."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "A good outcome does not show that every part of the original process was good. Reapplying criteria fixed before the new hiring decision helps separate useful process evidence from the success story.",
+      "missingEvidence": [
+        "The original scorecard and candidate pool.",
+        "What risks were accepted at the time.",
+        "Which later conditions helped the employee succeed."
+      ],
+      "evidenceNote": "Outcome bias is a useful review lens here, but one successful case is also too small to establish a reliable hiring rule.",
+      "nextAction": "Reconstruct the old decision from records, then test each process element against criteria fixed for the new role."
+    }
+  ]
+}

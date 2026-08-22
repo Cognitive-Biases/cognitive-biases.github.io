@@ -1,0 +1,116 @@
+{
+  "situation": "career-change",
+  "scenarios": [
+    {
+      "slug": "career-salary-anchor",
+      "title": "One salary number defines the career choice",
+      "difficulty": "starter",
+      "situation": "career-change",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": [
+        "logical-fallacy-escalation-of-commitment"
+      ],
+      "technique": "predefined-criteria",
+      "prompt": "A recruiter names a salary 20% above the current role. The career discussion now revolves around that number, while learning, stability, workload and future options remain vague.",
+      "question": "What should happen before comparing the offers?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Define the small set of career criteria and evidence for each criterion before weighting the salary difference."
+        },
+        {
+          "id": "b",
+          "text": "Convert every non-salary factor into a guess based on the new salary."
+        },
+        {
+          "id": "c",
+          "text": "Accept that compensation is the only objective criterion."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The first salient number can dominate the frame. Predefined criteria protect the decision from collapsing into one dimension.",
+      "missingEvidence": [
+        "Evidence about role scope, manager, workload and learning.",
+        "The relative importance of criteria before the offer.",
+        "Total compensation and downside conditions, not only headline salary."
+      ],
+      "evidenceNote": "Anchoring is a plausible risk because one number organizes the decision. Salary can still be the most important criterion when that priority is explicit.",
+      "nextAction": "Create and weight the criteria before scoring either role."
+    },
+    {
+      "slug": "career-years-invested",
+      "title": "Twelve years means another year",
+      "difficulty": "intermediate",
+      "situation": "career-change",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "logical-fallacy-escalation-of-commitment",
+      "alternativeLenses": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "technique": "incremental-value-check",
+      "prompt": "A specialist dislikes the current path but says changing direction would waste twelve years of experience. The next year is evaluated mainly through the past investment.",
+      "question": "Which comparison is most useful?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Compare the future value, cost and options of staying versus changing from today onward."
+        },
+        {
+          "id": "b",
+          "text": "Count the years already invested and continue whenever the number is large."
+        },
+        {
+          "id": "c",
+          "text": "Choose the path that makes the past story look most consistent."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "Past experience may create transferable value, but it is not itself a reason to invest another year. The decision should compare future consequences.",
+      "missingEvidence": [
+        "Transferable skills from the existing path.",
+        "Future learning and income under each option.",
+        "Real switching costs that still occur in the future."
+      ],
+      "evidenceNote": "Escalation of commitment is a plausible lens because past time drives the next investment. Past experience can remain relevant through future benefits and switching costs.",
+      "nextAction": "Write a future-only comparison for the next twelve months."
+    },
+    {
+      "slug": "career-all-or-nothing",
+      "title": "The career change is treated as irreversible",
+      "difficulty": "advanced",
+      "situation": "career-change",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "cognitive-bias-projection-bias",
+      "alternativeLenses": [
+        "logical-fallacy-escalation-of-commitment"
+      ],
+      "technique": "reversible-test",
+      "prompt": "A person feels exhausted today and considers leaving the field completely. The choice is framed as staying forever or resigning immediately, although smaller tests are possible.",
+      "question": "What is the best way to reduce uncertainty?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Make the full change now because current feelings reveal future preferences."
+        },
+        {
+          "id": "b",
+          "text": "Design a small reversible test, such as a short project, course or internal rotation, with a result that would update the larger choice."
+        },
+        {
+          "id": "c",
+          "text": "Delay every action until certainty appears."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Current feelings can be projected too far into the future. A reversible test creates evidence about the alternative without requiring an immediate permanent move.",
+      "missingEvidence": [
+        "Whether exhaustion is role-specific or field-wide.",
+        "Experience of the alternative under realistic conditions.",
+        "Recovery, workload and family constraints over time."
+      ],
+      "evidenceNote": "Projection bias is a possible lens because today’s state is used to predict long-term preference. The current state may still signal a real and urgent problem.",
+      "nextAction": "Choose one reversible test and define what result would change the larger decision."
+    }
+  ]
+}

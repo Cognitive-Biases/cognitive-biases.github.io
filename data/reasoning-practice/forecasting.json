@@ -1,0 +1,116 @@
+{
+  "situation": "forecasting",
+  "scenarios": [
+    {
+      "slug": "forecast-last-quarter",
+      "title": "One quarter becomes the trend",
+      "difficulty": "starter",
+      "situation": "forecasting",
+      "skill": "forecasting",
+      "primaryLens": "heuristic-bias-availability-bias",
+      "alternativeLenses": [
+        "probability-bias-subadditivity-effect"
+      ],
+      "technique": "base-rate-check",
+      "prompt": "Sales rose sharply last quarter. The new annual forecast assumes the same growth will continue, although the wider history is more variable.",
+      "question": "What should the forecast use as its starting point?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The most exciting recent quarter because it contains the newest information."
+        },
+        {
+          "id": "b",
+          "text": "A broader distribution of comparable periods, then an explicit adjustment for current conditions."
+        },
+        {
+          "id": "c",
+          "text": "The target required by the annual plan."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Recent evidence matters, but it should be compared with a broader base rate. The adjustment should explain why this quarter is more informative than the rest.",
+      "missingEvidence": [
+        "Historical distribution of comparable periods.",
+        "Specific drivers of the recent change.",
+        "Evidence that those drivers will continue."
+      ],
+      "evidenceNote": "Availability may give the latest quarter extra weight. A genuine structural change can justify a large adjustment when supported by independent evidence.",
+      "nextAction": "Set the historical baseline and document each reason for moving away from it."
+    },
+    {
+      "slug": "forecast-risk-parts",
+      "title": "The risks do not add up",
+      "difficulty": "intermediate",
+      "situation": "forecasting",
+      "skill": "forecasting",
+      "primaryLens": "probability-bias-subadditivity-effect",
+      "alternativeLenses": [
+        "heuristic-bias-availability-bias"
+      ],
+      "technique": "base-rate-check",
+      "prompt": "A team estimates a 25% chance that the project will be late. When asked separately, it gives 20% to supplier delay, 20% to testing delay and 15% to staffing delay, with overlap left undefined.",
+      "question": "What should the team do next?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Keep every number because separate estimates are always more accurate."
+        },
+        {
+          "id": "b",
+          "text": "Define overlap and reconcile the component risks with the total probability using comparable project data."
+        },
+        {
+          "id": "c",
+          "text": "Choose the highest component probability as the total risk."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Decomposed risks can receive more probability than the undivided event. Reconciliation and a reference distribution make the forecast internally checkable.",
+      "missingEvidence": [
+        "How risk categories overlap.",
+        "The frequency of each cause in comparable projects.",
+        "A rule for combining component estimates."
+      ],
+      "evidenceNote": "Subadditivity is a useful lens for inconsistent whole-versus-part estimates. The numbers may also reflect unclear definitions rather than a stable cognitive effect.",
+      "nextAction": "Create mutually clear risk definitions and reconcile the total before publishing the forecast."
+    },
+    {
+      "slug": "forecast-memory-rewrite",
+      "title": "The forecast was “basically right”",
+      "difficulty": "advanced",
+      "situation": "forecasting",
+      "skill": "forecasting",
+      "primaryLens": "cognitive-bias-hindsight-bias",
+      "alternativeLenses": [
+        "heuristic-bias-availability-bias"
+      ],
+      "technique": "predefined-update-criteria",
+      "prompt": "A forecast missed badly. After the outcome, the owner says the result was always possible and that the original forecast should be read more generously.",
+      "question": "What would make the review useful?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Compare the outcome with the frozen forecast, range and update rules written before the result."
+        },
+        {
+          "id": "b",
+          "text": "Allow the owner to restate what they meant now that the result is known."
+        },
+        {
+          "id": "c",
+          "text": "Judge only whether the final narrative sounds reasonable."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "A frozen record prevents the forecast from changing in memory. Predefined update criteria also show whether new evidence should have triggered a revision before the outcome.",
+      "missingEvidence": [
+        "The original point estimate or range.",
+        "Assumptions and update triggers.",
+        "Evidence available before each review date."
+      ],
+      "evidenceNote": "Hindsight is a plausible review risk because the original forecast is being reinterpreted after the result. Ambiguous documentation can be a separate process problem.",
+      "nextAction": "Score the forecast against the original record, then improve the future recording standard."
+    }
+  ]
+}
