@@ -1,5 +1,5 @@
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
+import { dirname, join, relative, sep } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
@@ -15,13 +15,14 @@ const esc = (value = "") => String(value).replace(/[&<>"']/g, (c) => ({
 const biasBySlug = new Map(biases.map((bias) => [bias.slug, bias]));
 const techniqueBySlug = new Map(techniquesData.techniques.map((technique) => [technique.slug, technique]));
 const skillBySlug = new Map(skillsData.entries.map((skill) => [skill.slug, skill]));
+const situationBySlug = new Map(situationsData.situations.map((situation) => [situation.slug, situation]));
 
 function biasTitle(slug) {
   const record = biasBySlug.get(slug);
   return record ? String(record.title).split(" – ")[0] : slug;
 }
 function nav() {
-  return `<header class="site-header"><a class="brand" href="/"><img src="/assets/icon2.png" width="48" height="48" alt="Cognitive Biases icon"><span>Cognitive<br>Biases</span></a><nav aria-label="Primary"><a href="/decide/">Decide</a><a href="/skills/">Learn</a><a href="/research/">Research</a><a class="nav-cta" href="/data/">Data</a></nav></header>`;
+  return `<header class="site-header"><a class="brand" href="/"><img src="/assets/icon2.png" width="48" height="48" alt="Cognitive Biases icon"><span>Cognitive<br>Biases</span></a><nav aria-label="Primary"><a href="/decide/">Decide</a><a href="/explore/">Explore</a><a href="/compare/">Compare</a><a href="/contexts/">Contexts</a><a href="/skills/">Skills</a><a href="/practice/">Practice</a><a href="/research/">Research</a><a class="nav-cta" href="/data/">Data</a></nav></header>`;
 }
 const footer = `<footer class="site-footer"><div><a class="brand brand--footer" href="/"><img src="/assets/icon2.png" width="40" height="40" alt=""><span>Cognitive Biases</span></a><p>Evidence-backed decision tools for people and AI.</p></div><div class="footer-links"><a href="/decide/">Decide</a><a href="/situations/">Situations</a><a href="/techniques/">Techniques</a><a href="/skills/">Skills</a><a href="/research/">Research</a><a href="/data/">Data</a></div><p class="fine-print">Educational information, not medical, legal, financial or mental-health advice.</p></footer>`;
 
@@ -46,6 +47,8 @@ const card = (label, title, text, href) => `<article class="application-card"><s
 const list = (items) => `<ul>${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
 
 const featuredSituations = situationsData.situations.slice(0, 6).map((s) => card("Situation", s.title, s.summary, `/situations/${s.slug}/`)).join("");
+const featuredTechniques = techniquesData.techniques.slice(0, 6).map((t) => card("Technique", t.title, t.purpose, `/techniques/${t.slug}/`)).join("");
+
 const decideBody = `<section class="page-hero"><p class="eyebrow">Decision-first</p><h1>Start with the decision, not the bias name.</h1><p class="lede">Choose a real situation, check what evidence is missing, use a few relevant cognitive-bias lenses, then select a practical technique and write the next action.</p><p><a class="button" href="/situations/">Choose a situation</a> <a class="button button--dark" href="/tools/decision-audit/">Open Decision Audit</a></p></section><section class="section"><p class="kicker">A simple path</p><h2>Situation → evidence → lens → technique → action.</h2><div class="feature-list"><article><strong>1. Situation</strong><p>Describe the decision in ordinary language.</p></article><article><strong>2. Missing evidence</strong><p>Separate what is known from what still needs checking.</p></article><article><strong>3. Lenses</strong><p>Use a small number of reviewed concepts as questions, not diagnoses.</p></article><article><strong>4. Technique</strong><p>Choose a concrete reasoning move such as an independent estimate or reference class.</p></article><article><strong>5. Action</strong><p>Record the next step and what would make you update the decision.</p></article></div></section><section class="section"><p class="kicker">Common situations</p><h2>Where a structured review can help.</h2><div class="application-grid">${featuredSituations}</div><p><a class="button button--dark" href="/situations/">All situations</a></p></section><section class="section section--ink"><p class="kicker">Practical layer</p><h2>Awareness is not the intervention.</h2><p class="lede">Knowing a bias name rarely changes a decision by itself. Techniques turn the library into repeatable checks that can be used in a meeting, an AI prompt, a project review or a personal decision.</p><p><a class="button" href="/techniques/">Browse techniques</a></p></section>`;
 await emit("/decide/", page("Decision Review | Cognitive Biases", "Evidence-backed decision tools that start from a real situation and connect missing evidence, cognitive-bias lenses, practical techniques and next actions.", "/decide/", decideBody));
 
@@ -53,7 +56,7 @@ const situationHubBody = `<section class="page-hero"><p class="eyebrow">Situatio
 await emit("/situations/", page("Decision Situations | Cognitive Biases", "Situation-first guides for hiring, estimation, incidents, product decisions, vendor selection, forecasting, negotiation, AI research and more.", "/situations/", situationHubBody));
 
 for (const s of situationsData.situations) {
-  const lensCards = s.biases.map((slug) => card("Evidence-linked lens", biasTitle(slug), "Use this concept as a question to test the decision, not as a label for a person.", `/biases/${slug}/`)).join("");
+  const lensCards = s.biases.map((slug) => card("Evidence-linked lens", biasTitle(slug), `Use this concept as a question to test the decision, not as a label for a person.`, `/biases/${slug}/`)).join("");
   const techniqueCards = s.techniques.map((slug) => {
     const technique = techniqueBySlug.get(slug);
     return card("Technique", technique.title, technique.purpose, `/techniques/${slug}/`);
@@ -87,11 +90,12 @@ async function walk(dir) {
   }
   return files;
 }
-const primaryNav = `<nav aria-label="Primary"><a href="/decide/">Decide</a><a href="/skills/">Learn</a><a href="/research/">Research</a><a class="nav-cta" href="/data/">Data</a></nav>`;
 for (const path of await walk(OUT)) {
   let html = await readFile(path, "utf8");
   const before = html;
-  html = html.replace(/<nav aria-label="Primary">[\s\S]*?<\/nav>/, primaryNav);
+  if (!html.includes('href="/decide/"')) {
+    html = html.replace('<nav aria-label="Primary">', '<nav aria-label="Primary"><a href="/decide/">Decide</a>');
+  }
   if (html !== before) await writeFile(path, html);
 }
 
@@ -116,5 +120,12 @@ for (const route of routes) {
   }
 }
 await writeFile(sitemapPath, sitemap);
+
+const robotsPath = join(OUT, "robots.txt");
+let robots = await readFile(robotsPath, "utf8");
+if (!robots.includes("# Decision-first resources")) {
+  robots = `${robots.trimEnd()}\n# Decision-first resources are public and indexable.\n`;
+  await writeFile(robotsPath, robots);
+}
 
 console.log(`Generated decision-first layer: ${situationsData.situations.length} situations and ${techniquesData.techniques.length} techniques.`);
