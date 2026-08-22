@@ -16,13 +16,13 @@
           {"lensId": "cognitive-bias-confirmation-bias", "rationale": "Competitor adoption may be used mainly as support for an option that is already preferred.", "confidence": "low"},
           {"lensId": "cognitive-bias-anchoring-effect", "rationale": "The competitor choice may become an early reference point before our own criteria are fixed.", "confidence": "low"}
         ],
-        "missingEvidence": ["Our required capabilities and constraints.", "Evidence that competitor conditions are comparable to ours.", "Cost, switching risk and measurable alternatives."],
-        "questions": ["Which criteria were fixed before looking at competitors?", "What evidence would make us reject technology X?", "Which alternatives meet the same goal?"],
+        "missingEvidence": ["Our required capabilities and constraints.", "Evidence that competitor conditions are comparable to ours."],
+        "questions": ["Which criteria were fixed before looking at competitors?", "What evidence would make us reject technology X?"],
         "techniques": [
-          {"id": "predefined-criteria", "why": "Compare options against the same requirements before a favourite changes the criteria."},
+          {"id": "predefined-criteria", "why": "Compare options against the same requirements."},
           {"id": "red-team-review", "why": "Build the strongest evidence-based case against the preferred migration."}
         ],
-        "nextAction": "Define the decision criteria and run the same evidence check on technology X and at least one serious alternative.",
+        "nextAction": "Define the criteria and run the same evidence check on technology X and one serious alternative.",
         "uncertainty": "Competitor adoption alone does not show whether technology X fits this organisation.",
         "canonicalReferences": [
           {"type": "situation", "id": "vendor-tool-selection", "url": "https://cognitive-biases.github.io/situations/vendor-tool-selection/"},
@@ -42,13 +42,13 @@
         "inferredRisks": [
           {"lensId": "logical-fallacy-escalation-of-commitment", "rationale": "Past investment is explicitly being used as a reason for future investment.", "confidence": "medium"}
         ],
-        "missingEvidence": ["Future cost from today.", "Expected future value and probability of achieving it.", "Value of stopping or switching."],
-        "questions": ["Would we fund the next stage if the project arrived today with no history?", "What future evidence would justify continuing?"],
+        "missingEvidence": ["Future cost from today.", "Expected future value and probability of achieving it."],
+        "questions": ["Would we fund the next stage if the project arrived today with no history?", "Which criteria should the next stage meet?"],
         "techniques": [
           {"id": "incremental-value-check", "why": "Separate unrecoverable past spending from future cost and value."},
-          {"id": "predefined-update-criteria", "why": "Set a clear rule for the next continuation review."}
+          {"id": "predefined-criteria", "why": "Judge the next stage against criteria fixed before the continuation decision."}
         ],
-        "nextAction": "Recalculate the project decision using only future costs, future value and switching consequences.",
+        "nextAction": "Recalculate the decision using future costs, future value and explicit continuation criteria.",
         "uncertainty": "Past investment can contain information about future capability, but unrecoverable cost is not itself future value.",
         "canonicalReferences": [
           {"type": "situation", "id": "product-prioritization", "url": "https://cognitive-biases.github.io/situations/product-prioritization/"},
@@ -69,14 +69,14 @@
           {"lensId": "cognitive-bias-anchoring-effect", "rationale": "The first number may pull later estimates even when its basis is unclear.", "confidence": "medium"},
           {"lensId": "false-priors-automation-bias", "rationale": "The generated recommendation may receive more weight than its evidence supports.", "confidence": "low"}
         ],
-        "missingEvidence": ["Comparable completed migrations.", "The assumptions behind the 40-day estimate.", "Scope, dependencies and resource availability."],
-        "questions": ["What estimate would we make before seeing 40 days?", "What did comparable migrations actually take?"],
+        "missingEvidence": ["The assumptions behind the 40-day estimate.", "Inspectable sources or comparable work supporting the estimate."],
+        "questions": ["What estimate would we make before seeing 40 days?", "What evidence produced the AI number?"],
         "techniques": [
           {"id": "independent-estimate", "why": "Create an estimate before using the generated number as evidence."},
-          {"id": "reference-class-forecasting", "why": "Use completed comparable work to establish a baseline range."}
+          {"id": "source-trace", "why": "Trace important claims and numbers to inspectable evidence."}
         ],
-        "nextAction": "Create an independent range from comparable migrations, then compare it with the AI estimate and document any justified update.",
-        "uncertainty": "The AI estimate may be useful, but its reliability is unknown until its assumptions and reference class are checked.",
+        "nextAction": "Create an independent estimate, then trace the AI estimate to evidence before updating the range.",
+        "uncertainty": "The AI estimate may be useful, but its reliability is unknown until its assumptions and evidence are checked.",
         "canonicalReferences": [
           {"type": "situation", "id": "ai-assisted-research", "url": "https://cognitive-biases.github.io/situations/ai-assisted-research/"},
           {"type": "bias", "id": "cognitive-bias-anchoring-effect", "url": "https://cognitive-biases.github.io/biases/cognitive-bias-anchoring-effect/"},
@@ -94,12 +94,12 @@
         "observedFacts": ["An outage occurred.", "A dependency failed."],
         "inferredRisks": [
           {"lensId": "cognitive-bias-hindsight-bias", "rationale": "Knowledge of the outcome can make the failure path feel more predictable than it was beforehand.", "confidence": "medium"},
-          {"lensId": "cognitive-bias-outcome-bias", "rationale": "The bad outcome may be replacing a review of the information and process available at the decision point.", "confidence": "low"}
+          {"lensId": "cognitive-bias-outcome-bias", "rationale": "The bad outcome may replace a review of the information and process available at the decision point.", "confidence": "low"}
         ],
-        "missingEvidence": ["What signals were available before the outage.", "Which alternative failure modes were plausible at the time.", "The documented decision process and monitoring coverage."],
-        "questions": ["What was actually known before the dependency failed?", "Would the original decision still look poor if the outage had not happened?"],
+        "missingEvidence": ["Signals available before the outage.", "Alternative failure modes that were plausible at the time."],
+        "questions": ["What was actually known before the dependency failed?", "Would the original process look poor if the outage had not happened?"],
         "techniques": [
-          {"id": "decision-journal", "why": "Compare the incident review with records created before the outcome."},
+          {"id": "decision-journal", "why": "Compare the review with records created before the outcome."},
           {"id": "red-team-review", "why": "Test the preferred causal story against credible alternatives."}
         ],
         "nextAction": "Reconstruct the timeline using only information available at each decision point before changing the process.",
@@ -122,7 +122,7 @@
         "inferredRisks": [
           {"lensId": "truth-judgment-illusory-truth-effect", "rationale": "Repeated exposure can increase familiarity without adding independent evidence.", "confidence": "medium"}
         ],
-        "missingEvidence": ["Whether the six sites rely on independent sources.", "The earliest inspectable source.", "Evidence quality and any corrections or disputes."],
+        "missingEvidence": ["Whether the six sites rely on independent sources.", "The earliest inspectable source."],
         "questions": ["How many independent sources are there?", "Do the sites trace back to one original claim?"],
         "techniques": [
           {"id": "source-trace", "why": "Separate independent evidence from repeated copies."},
@@ -148,14 +148,14 @@
         "inferredRisks": [
           {"lensId": "logical-fallacy-escalation-of-commitment", "rationale": "Past investment is being treated as a reason to continue regardless of the next step's value.", "confidence": "medium"}
         ],
-        "missingEvidence": ["Future value of staying.", "Future value and cost of alternatives.", "Transferable value from the existing experience."],
-        "questions": ["If the twelve years could not be changed, which next year would still be best?", "What small reversible test can reduce uncertainty about the alternative?"],
+        "missingEvidence": ["Future value of staying.", "Future value and cost of alternatives."],
+        "questions": ["Which next year would be best if the past could not be changed?", "What small test can reduce uncertainty about the alternative?"],
         "techniques": [
           {"id": "incremental-value-check", "why": "Judge the next period by future value rather than unrecoverable time."},
           {"id": "reversible-test", "why": "Gather evidence about another path before making a large commitment."}
         ],
         "nextAction": "Compare the next twelve months of each option and design one small test of the strongest alternative.",
-        "uncertainty": "Past experience can create skills and switching costs, so it should be treated as current evidence where relevant, not simply discarded.",
+        "uncertainty": "Past experience can create skills and switching costs, so it can still matter as current evidence.",
         "canonicalReferences": [
           {"type": "situation", "id": "career-change", "url": "https://cognitive-biases.github.io/situations/career-change/"},
           {"type": "bias", "id": "logical-fallacy-escalation-of-commitment", "url": "https://cognitive-biases.github.io/biases/logical-fallacy-escalation-of-commitment/"},
@@ -173,15 +173,15 @@
         "observedFacts": ["The employee missed the most recent delivery."],
         "inferredRisks": [
           {"lensId": "heuristic-bias-availability-bias", "rationale": "The most recent and vivid event may receive more weight than the full review period.", "confidence": "medium"},
-          {"lensId": "cognitive-bias-outcome-bias", "rationale": "The delivery outcome may be standing in for a review of the underlying work and decision process.", "confidence": "low"}
+          {"lensId": "cognitive-bias-outcome-bias", "rationale": "The delivery outcome may stand in for a review of the underlying work and process.", "confidence": "low"}
         ],
-        "missingEvidence": ["Performance evidence across the full period.", "Predefined role criteria.", "Context and process quality around the missed delivery."],
-        "questions": ["What evidence represents the full review period?", "Would the process be judged differently if the delivery outcome had been better?"],
+        "missingEvidence": ["Performance evidence across the full period.", "Predefined role criteria."],
+        "questions": ["What evidence represents the full review period?", "What evidence supports a materially different rating?"],
         "techniques": [
           {"id": "predefined-criteria", "why": "Use the same role criteria across the full period."},
-          {"id": "consider-the-opposite", "why": "Look for evidence that supports a materially different rating."}
+          {"id": "consider-the-opposite", "why": "Look for evidence that supports a different conclusion."}
         ],
-        "nextAction": "Review evidence across the full period against predefined criteria before assigning the rating.",
+        "nextAction": "Review the full period against predefined criteria before assigning the rating.",
         "uncertainty": "The missed delivery may be important; the review should test its weight rather than automatically discount it.",
         "canonicalReferences": [
           {"type": "situation", "id": "performance-review", "url": "https://cognitive-biases.github.io/situations/performance-review/"},
@@ -199,17 +199,17 @@
         "situation": "forecasting",
         "observedFacts": ["The plan currently requests one exact launch date."],
         "inferredRisks": [
-          {"lensId": "probability-bias-subadditivity-effect", "rationale": "Breaking uncertainty into parts may reveal uncertainty hidden by one confident headline estimate.", "confidence": "low"},
+          {"lensId": "probability-bias-subadditivity-effect", "rationale": "Breaking uncertainty into parts may reveal uncertainty hidden by one headline estimate.", "confidence": "low"},
           {"lensId": "heuristic-bias-availability-bias", "rationale": "A recent delivery may dominate the estimate if a broader reference class is not used.", "confidence": "low"}
         ],
-        "missingEvidence": ["Comparable delivery history.", "A range for major dependencies.", "Conditions that should trigger a forecast update."],
-        "questions": ["What range is supported by comparable launches?", "Which dependencies push the date toward the early or late end?"],
+        "missingEvidence": ["Comparable delivery history.", "A range for major dependencies."],
+        "questions": ["What range is supported by comparable launches?", "Which dependencies push the date toward either end?"],
         "techniques": [
           {"id": "reference-class-forecasting", "why": "Ground the forecast in completed comparable cases."},
           {"id": "predefined-update-criteria", "why": "Make later changes traceable to new evidence."}
         ],
-        "nextAction": "Publish a defensible forecast range with assumptions and an explicit update trigger before choosing a planning date inside it.",
-        "uncertainty": "Operational planning may still require one date, but that date should not erase the underlying forecast uncertainty.",
+        "nextAction": "Publish a forecast range with assumptions and an update trigger before choosing a planning date inside it.",
+        "uncertainty": "Planning may still require one date, but that date should not erase the underlying forecast uncertainty.",
         "canonicalReferences": [
           {"type": "situation", "id": "forecasting", "url": "https://cognitive-biases.github.io/situations/forecasting/"},
           {"type": "skill", "id": "forecasting", "url": "https://cognitive-biases.github.io/skills/forecasting/"},
