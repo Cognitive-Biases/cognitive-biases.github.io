@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-22",
+  "description": "Situation-first decision reviews that connect a real decision to reviewed cognitive-bias lenses, decision skills and practical techniques.",
+  "situations": [
+    {
+      "slug": "hiring-interviews",
+      "title": "Hiring and interviews",
+      "summary": "Review candidate judgments before confidence, first impressions or outcome stories become stronger than the evidence.",
+      "signals": [
+        "One early impression is shaping the rest of the interview.",
+        "The team is using different criteria for different candidates.",
+        "A previous hire's success or failure is dominating the next decision."
+      ],
+      "questions": [
+        "What criteria were fixed before meeting the candidate?",
+        "Which evidence would change the current ranking?",
+        "Would the same evidence be judged the same way for another candidate?"
+      ],
+      "skill": "evidence-evaluation",
+      "biases": [
+        "cognitive-bias-confirmation-bias",
+        "cognitive-bias-anchoring-effect",
+        "cognitive-bias-outcome-bias"
+      ],
+      "techniques": [
+        "predefined-criteria",
+        "independent-estimate",
+        "consider-the-opposite"
+      ]
+    },
+    {
+      "slug": "project-estimation",
+      "title": "Project estimation",
+      "summary": "Estimate time and effort with an outside view instead of relying only on the current plan.",
+      "signals": [
+        "The estimate starts from one target date.",
+        "Comparable completed work is not being used.",
+        "The plan assumes dependencies will behave normally."
+      ],
+      "questions": [
+        "What happened in comparable completed work?",
+        "What range is supported by the reference class?",
+        "Which assumptions would move the estimate toward either end?"
+      ],
+      "skill": "forecasting",
+      "biases": [
+        "egocentric-bias-planning-fallacy",
+        "cognitive-bias-anchoring-effect",
+        "heuristic-bias-availability-bias"
+      ],
+      "techniques": [
+        "reference-class-forecasting",
+        "independent-estimate",
+        "decision-journal"
+      ]
+    },
+    {
+      "slug": "production-incident",
+      "title": "Production incident review",
+      "summary": "Separate what was knowable during an incident from what became obvious only after the outcome.",
+      "signals": [
+        "The cause now feels obvious.",
+        "A single recent incident is driving a broad process change.",
+        "People are judging the decision mainly by the outcome."
+      ],
+      "questions": [
+        "What was actually known at each decision point?",
+        "Which alternative explanations were plausible then?",
+        "What process change is supported by repeated evidence rather than one vivid event?"
+      ],
+      "skill": "metacognition",
+      "biases": [
+        "cognitive-bias-hindsight-bias",
+        "cognitive-bias-outcome-bias",
+        "heuristic-bias-availability-bias"
+      ],
+      "techniques": [
+        "decision-journal",
+        "red-team-review",
+        "predefined-update-criteria"
+      ]
+    },
+    {
+      "slug": "product-prioritization",
+      "title": "Product prioritization",
+      "summary": "Review roadmap choices without letting the loudest request, recent event or prior investment define value.",
+      "signals": [
+        "One customer story dominates the discussion.",
+        "A feature stays high priority because much work is already invested.",
+        "Success criteria are being added after the preferred option is chosen."
+      ],
+      "questions": [
+        "What outcome are we optimizing before comparing features?",
+        "Would we fund the next step if no work had already been spent?",
+        "What broader evidence competes with the vivid request?"
+      ],
+      "skill": "decision-making-under-uncertainty",
+      "biases": [
+        "logical-fallacy-escalation-of-commitment",
+        "heuristic-bias-availability-bias",
+        "cognitive-bias-confirmation-bias"
+      ],
+      "techniques": [
+        "incremental-value-check",
+        "base-rate-check",
+        "predefined-criteria"
+      ]
+    },
+    {
+      "slug": "vendor-tool-selection",
+      "title": "Vendor or tool selection",
+      "summary": "Compare tools using precommitted criteria rather than demos, authority or the first price shown.",
+      "signals": [
+        "A polished demo is being treated as proof of fit.",
+        "The first commercial number frames later negotiation.",
+        "The preferred vendor is receiving easier questions than alternatives."
+      ],
+      "questions": [
+        "Which capabilities must be demonstrated in our environment?",
+        "What would we value before seeing the vendor's first number?",
+        "What evidence would make us reject the current favourite?"
+      ],
+      "skill": "evidence-evaluation",
+      "biases": [
+        "cognitive-bias-anchoring-effect",
+        "cognitive-bias-confirmation-bias",
+        "availability-heuristic-anthropomorphism"
+      ],
+      "techniques": [
+        "predefined-criteria",
+        "independent-estimate",
+        "red-team-review"
+      ]
+    },
+    {
+      "slug": "forecasting",
+      "title": "Forecasting under uncertainty",
+      "summary": "Make a forecast that can later be checked, updated and learned from.",
+      "signals": [
+        "A forecast is expressed as one precise number.",
+        "The latest event dominates the probability estimate.",
+        "Assumptions are not recorded before the outcome."
+      ],
+      "questions": [
+        "What reference class is available?",
+        "What range is more defensible than one point estimate?",
+        "What new evidence should trigger an update?"
+      ],
+      "skill": "forecasting",
+      "biases": [
+        "heuristic-bias-availability-bias",
+        "probability-bias-subadditivity-effect",
+        "cognitive-bias-hindsight-bias"
+      ],
+      "techniques": [
+        "reference-class-forecasting",
+        "base-rate-check",
+        "predefined-update-criteria"
+      ]
+    },
+    {
+      "slug": "performance-review",
+      "title": "Performance review",
+      "summary": "Judge performance without letting one recent result or known outcome rewrite the quality of the underlying work.",
+      "signals": [
+        "The latest success or failure dominates the review.",
+        "A good outcome is being used as proof that the process was good.",
+        "Examples are chosen after the overall rating is already preferred."
+      ],
+      "questions": [
+        "What evidence covers the full review period?",
+        "How good was the process before the outcome was known?",
+        "What evidence would support a different rating?"
+      ],
+      "skill": "metacognition",
+      "biases": [
+        "cognitive-bias-outcome-bias",
+        "heuristic-bias-availability-bias",
+        "cognitive-bias-confirmation-bias"
+      ],
+      "techniques": [
+        "decision-journal",
+        "consider-the-opposite",
+        "predefined-criteria"
+      ]
+    },
+    {
+      "slug": "negotiation",
+      "title": "Negotiation",
+      "summary": "Protect a negotiation from the first number and from pressure to justify a position already taken.",
+      "signals": [
+        "The first offer is setting the range.",
+        "The team cannot explain its independent reservation point.",
+        "New evidence is being used only to defend the public position."
+      ],
+      "questions": [
+        "What is our independent estimate before the anchor?",
+        "What evidence changes our reservation point?",
+        "Which alternative package would meet the same underlying interests?"
+      ],
+      "skill": "decision-making-under-uncertainty",
+      "biases": [
+        "cognitive-bias-anchoring-effect",
+        "cognitive-bias-confirmation-bias",
+        "logical-fallacy-escalation-of-commitment"
+      ],
+      "techniques": [
+        "independent-estimate",
+        "predefined-update-criteria",
+        "consider-the-opposite"
+      ]
+    },
+    {
+      "slug": "ai-assisted-research",
+      "title": "AI-assisted research",
+      "summary": "Use AI to expand research without treating fluent text, repeated output or model confidence as verification.",
+      "signals": [
+        "The model's first answer becomes the research frame.",
+        "Important claims have no inspectable source.",
+        "Several generated summaries are counted as independent confirmation."
+      ],
+      "questions": [
+        "What did we believe before asking the model?",
+        "Which claims are verified outside the model?",
+        "How many genuinely independent sources support the conclusion?"
+      ],
+      "skill": "ai-assisted-reasoning",
+      "biases": [
+        "false-priors-automation-bias",
+        "cognitive-bias-anchoring-effect",
+        "truth-judgment-illusory-truth-effect"
+      ],
+      "techniques": [
+        "independent-estimate",
+        "source-trace",
+        "consider-the-opposite"
+      ]
+    },
+    {
+      "slug": "checking-repeated-claims",
+      "title": "Checking a repeated claim",
+      "summary": "Test whether repetition represents independent evidence or only makes a claim feel familiar.",
+      "signals": [
+        "The same claim appears across many summaries.",
+        "Sources point back to one origin.",
+        "A correction exists but the old explanation still drives reasoning."
+      ],
+      "questions": [
+        "What is the earliest reliable source?",
+        "How many independent sources actually exist?",
+        "What supported explanation should replace the corrected claim?"
+      ],
+      "skill": "information-verification",
+      "biases": [
+        "truth-judgment-illusory-truth-effect",
+        "memory-bias-continued-influence-effect",
+        "cognitive-bias-confirmation-bias"
+      ],
+      "techniques": [
+        "source-trace",
+        "base-rate-check",
+        "predefined-update-criteria"
+      ]
+    },
+    {
+      "slug": "career-change",
+      "title": "Career change",
+      "summary": "Compare staying, moving or reskilling without letting salary anchors, sunk time or today's mood decide the future.",
+      "signals": [
+        "The first salary number dominates the comparison.",
+        "Years already invested are treated as a reason to keep investing.",
+        "Current frustration is being projected far into the future."
+      ],
+      "questions": [
+        "What criteria matter before comparing offers?",
+        "Would the next year still be attractive if the past investment disappeared?",
+        "What small reversible test could reduce uncertainty?"
+      ],
+      "skill": "decision-making-under-uncertainty",
+      "biases": [
+        "cognitive-bias-anchoring-effect",
+        "logical-fallacy-escalation-of-commitment",
+        "cognitive-bias-projection-bias"
+      ],
+      "techniques": [
+        "predefined-criteria",
+        "incremental-value-check",
+        "reversible-test"
+      ]
+    },
+    {
+      "slug": "kpi-review",
+      "title": "KPI and benchmark review",
+      "summary": "Check whether a score is still a useful proxy for the real goal and whether the comparison is being interpreted consistently.",
+      "signals": [
+        "Improving the metric is discussed as if it automatically improves the goal.",
+        "A single benchmark number hides different operating conditions.",
+        "A good score is being used to defend the process without checking consequences."
+      ],
+      "questions": [
+        "What real outcome is this metric supposed to represent?",
+        "What important behaviour can improve the score without improving the goal?",
+        "Would we make the same decision if the score were hidden and only underlying evidence remained?"
+      ],
+      "skill": "evidence-evaluation",
+      "biases": [
+        "cognitive-bias-outcome-bias",
+        "cognitive-bias-confirmation-bias",
+        "heuristic-bias-availability-bias"
+      ],
+      "techniques": [
+        "predefined-criteria",
+        "red-team-review",
+        "decision-journal"
+      ]
+    }
+  ]
+}
