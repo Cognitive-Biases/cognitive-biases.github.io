@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-22",
+  "maintainer": {
+    "name": "Dzmitryi Kharlanau",
+    "role": "Project maintainer and editor"
+  },
+  "reviewMeaning": {
+    "evidenceReviewed": "The project has checked the public explanation against cited sources and recorded evidence limits and a review date. It does not mean the page is a peer-reviewed paper or a formal systematic review unless stated.",
+    "legacy": "Older generated educational material can remain in the library while it waits for evidence review. Generated does not mean independently reviewed.",
+    "researchNote": "Research notes explain what the project found in a source or evidence update and distinguish project interpretation from established findings."
+  },
+  "workflow": [
+    "Collect a source, correction or research question.",
+    "Check source identity, relevance and what the source actually supports.",
+    "Compare the source with the current canonical record and conflicting evidence.",
+    "Write or revise the explanation in original language with visible limits.",
+    "Run editorial, data-integrity and site-quality checks before publication.",
+    "Keep review dates and corrections visible so conclusions can change when evidence changes."
+  ],
+  "automation": {
+    "allowed": [
+      "Discover candidate sources and research questions.",
+      "Prepare drafts, structured data and consistency checks.",
+      "Run deterministic validation, duplicate checks and build tests."
+    ],
+    "notAllowed": [
+      "Automatically promote an unreviewed claim to reviewed evidence.",
+      "Invent sources, findings or certainty to complete a page.",
+      "Diagnose a person or team with a cognitive bias from limited information."
+    ]
+  },
+  "corrections": {
+    "repository": "https://github.com/Cognitive-Biases/cognitive-biases.github.io",
+    "contributing": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/CONTRIBUTING.md"
+  }
+}
