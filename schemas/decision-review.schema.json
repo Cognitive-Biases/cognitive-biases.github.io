@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitive-biases.github.io/data/schemas/decision-review.schema.json",
+  "title": "Cognitive Biases Decision Review",
+  "description": "A non-diagnostic contract for reviewing a decision with observed facts, possible reasoning risks, missing evidence, practical techniques and canonical references.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "decision",
+    "situation",
+    "observedFacts",
+    "inferredRisks",
+    "missingEvidence",
+    "questions",
+    "techniques",
+    "nextAction",
+    "uncertainty",
+    "canonicalReferences"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0" },
+    "decision": { "type": "string", "minLength": 1 },
+    "situation": { "type": "string", "minLength": 1 },
+    "observedFacts": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "inferredRisks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lensId", "rationale", "confidence"],
+        "properties": {
+          "lensId": { "type": "string", "minLength": 1 },
+          "rationale": { "type": "string", "minLength": 1 },
+          "confidence": { "enum": ["low", "medium"] }
+        }
+      },
+      "uniqueItems": true
+    },
+    "missingEvidence": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "questions": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "techniques": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "why"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "why": { "type": "string", "minLength": 1 }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "nextAction": { "type": "string", "minLength": 1 },
+    "uncertainty": { "type": "string", "minLength": 1 },
+    "canonicalReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "id", "url"],
+        "properties": {
+          "type": { "enum": ["situation", "bias", "skill", "technique"] },
+          "id": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri", "pattern": "^https://cognitive-biases\\.github\\.io/" }
+        }
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  }
+}
