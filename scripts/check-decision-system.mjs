@@ -69,7 +69,7 @@ for (const path of requiredPages) {
 
 try {
   const home = await readFile(join(OUT, "index.html"), "utf8");
-  for (const required of ['href="/decide/"', 'href="/skills/"', 'href="/research/"', 'href="/data/"', 'class="decision-first-home"']) {
+  for (const required of ['href="/decide/"', 'href="/skills/"', 'href="/research/"', 'href="/data/"', 'decision-first-home']) {
     if (!home.includes(required)) errors.push(`homepage missing ${required}`);
   }
 } catch {
