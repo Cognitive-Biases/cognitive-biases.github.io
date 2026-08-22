@@ -1,0 +1,79 @@
+{
+  "situation": "negotiation",
+  "scenarios": [
+    {
+      "slug": "negotiation-first-offer",
+      "title": "The opening offer owns the range",
+      "difficulty": "starter",
+      "situation": "negotiation",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "independent-estimate",
+      "prompt": "A supplier opens at €120 per unit. The buying team immediately discusses whether €105 would be a good deal, although no independent range was prepared.",
+      "question": "What should the team establish before responding?",
+      "options": [
+        {
+          "id": "a",
+          "text": "An evidence-based range, reservation point and alternatives independent of the opening offer."
+        },
+        {
+          "id": "b",
+          "text": "A percentage discount that looks substantial against €120."
+        },
+        {
+          "id": "c",
+          "text": "How confident the supplier sounded when naming the price."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The opening number frames the discussion. An independent estimate moves the negotiation back to value, alternatives and evidence.",
+      "missingEvidence": [
+        "Comparable prices or cost drivers.",
+        "Value of alternatives and switching costs.",
+        "A reservation point agreed before the counteroffer."
+      ],
+      "evidenceNote": "Anchoring is a plausible risk because the counteroffer is derived from the opening number. The opening number may still contain useful market information.",
+      "nextAction": "Freeze the independent range before reviewing the supplier’s justification."
+    },
+    {
+      "slug": "negotiation-public-position",
+      "title": "The team defends what it already announced",
+      "difficulty": "advanced",
+      "situation": "negotiation",
+      "skill": "decision-making-under-uncertainty",
+      "primaryLens": "cognitive-bias-confirmation-bias",
+      "alternativeLenses": [
+        "logical-fallacy-escalation-of-commitment"
+      ],
+      "technique": "predefined-update-criteria",
+      "prompt": "A team publicly announced that it would never accept a contract longer than one year. New evidence shows a longer term could reduce total risk, but every analysis is now used to defend the public position.",
+      "question": "What would make an update legitimate rather than convenient?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Apply evidence thresholds and review conditions defined before the new offer arrived."
+        },
+        {
+          "id": "b",
+          "text": "Keep the position because changing it would always show weakness."
+        },
+        {
+          "id": "c",
+          "text": "Change the position privately without recording why."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "A public commitment can shape later evidence use. Predefined update criteria allow change when relevant evidence arrives without silently rewriting the logic.",
+      "missingEvidence": [
+        "Original reasons for the one-year limit.",
+        "Evidence that changes those reasons.",
+        "Future risks and benefits of each contract term."
+      ],
+      "evidenceNote": "Confirmation bias may influence the analysis, while reputation and bargaining strategy are also real considerations that should be stated separately.",
+      "nextAction": "Record the evidence threshold for changing the position and test the new offer against it."
+    }
+  ]
+}

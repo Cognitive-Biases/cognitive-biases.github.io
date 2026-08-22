@@ -1,0 +1,79 @@
+{
+  "situation": "checking-repeated-claims",
+  "scenarios": [
+    {
+      "slug": "claim-ten-articles-one-source",
+      "title": "Ten articles repeat one report",
+      "difficulty": "starter",
+      "situation": "checking-repeated-claims",
+      "skill": "information-verification",
+      "primaryLens": "truth-judgment-illusory-truth-effect",
+      "alternativeLenses": [
+        "memory-bias-continued-influence-effect"
+      ],
+      "technique": "source-trace",
+      "prompt": "A claim appears in ten articles. Following the links shows that nine articles cite the tenth, which cites one small report.",
+      "question": "What should determine confidence?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The number of pages containing the sentence."
+        },
+        {
+          "id": "b",
+          "text": "The quality of the original report and any genuinely independent evidence."
+        },
+        {
+          "id": "c",
+          "text": "How high the articles rank in search results."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Ten repetitions do not equal ten independent observations. Source tracing reveals the evidence structure behind the apparent agreement.",
+      "missingEvidence": [
+        "Method and sample of the original report.",
+        "Independent replications or datasets.",
+        "Whether later articles add new evidence or only repeat the claim."
+      ],
+      "evidenceNote": "Illusory truth may make the repeated claim feel more credible. The main operational problem is source dependence, which can be checked directly.",
+      "nextAction": "Draw a simple source tree and assess each independent root."
+    },
+    {
+      "slug": "claim-correction-without-replacement",
+      "title": "The correction removes the story but leaves a gap",
+      "difficulty": "intermediate",
+      "situation": "checking-repeated-claims",
+      "skill": "information-verification",
+      "primaryLens": "memory-bias-continued-influence-effect",
+      "alternativeLenses": [
+        "truth-judgment-illusory-truth-effect"
+      ],
+      "technique": "source-trace",
+      "prompt": "A report corrects a false explanation for an event but gives no supported alternative. Later discussions still use the old explanation because it is the only coherent story people remember.",
+      "question": "What would make the correction more usable?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Repeat only that the old claim was false."
+        },
+        {
+          "id": "b",
+          "text": "State the supported replacement explanation, its evidence and what remains unknown."
+        },
+        {
+          "id": "c",
+          "text": "Avoid discussing the event again so the old story fades naturally."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Corrections are easier to use when they replace the old causal story with a supported account. Source tracing also shows what evidence supports the replacement.",
+      "missingEvidence": [
+        "Evidence against the old explanation.",
+        "Evidence for the replacement explanation.",
+        "Uncertainty that remains after correction."
+      ],
+      "evidenceNote": "Continued influence is a relevant lens because the rejected explanation still guides reasoning. The effect can also reflect an unresolved information gap.",
+      "nextAction": "Write a replacement account with source links and explicit unknowns."
+    }
+  ]
+}

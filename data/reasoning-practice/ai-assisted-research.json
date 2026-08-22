@@ -1,0 +1,116 @@
+{
+  "situation": "ai-assisted-research",
+  "scenarios": [
+    {
+      "slug": "ai-first-answer-frame",
+      "title": "The model supplies the first hypothesis",
+      "difficulty": "starter",
+      "situation": "ai-assisted-research",
+      "skill": "ai-assisted-reasoning",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": [
+        "false-priors-automation-bias"
+      ],
+      "technique": "independent-estimate",
+      "prompt": "Before reviewing the source material, a researcher asks an AI assistant for the likely explanation. The rest of the search follows the categories in that first answer.",
+      "question": "What should be done before relying on the model’s frame?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Write an independent provisional question, alternatives and evidence needs before reading the generated explanation."
+        },
+        {
+          "id": "b",
+          "text": "Ask the same model to make the original explanation more detailed."
+        },
+        {
+          "id": "c",
+          "text": "Use the first answer as the literature-review structure because it is efficient."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The first generated frame can become an anchor for search and interpretation. An independent provisional view preserves alternatives before the model shapes them.",
+      "missingEvidence": [
+        "The researcher’s pre-AI question and candidate explanations.",
+        "Primary sources that support or challenge each explanation.",
+        "Evidence not represented in the model’s first frame."
+      ],
+      "evidenceNote": "Anchoring is a plausible interaction risk. The model’s first hypothesis can still be useful, but it should compete with independently stated alternatives.",
+      "nextAction": "Write the research question and at least two plausible alternatives before reading the generated answer."
+    },
+    {
+      "slug": "ai-polished-unsupported",
+      "title": "Fluent text without inspectable support",
+      "difficulty": "intermediate",
+      "situation": "ai-assisted-research",
+      "skill": "ai-assisted-reasoning",
+      "primaryLens": "false-priors-automation-bias",
+      "alternativeLenses": [
+        "truth-judgment-illusory-truth-effect"
+      ],
+      "technique": "source-trace",
+      "prompt": "An AI assistant gives a clear recommendation and names several studies, but the citations cannot be located. The team wants to use the recommendation because it sounds complete.",
+      "question": "What is the best next move?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Trace every consequential claim to an inspectable independent source and mark unsupported claims as unverified."
+        },
+        {
+          "id": "b",
+          "text": "Ask another AI assistant whether the first answer sounds correct."
+        },
+        {
+          "id": "c",
+          "text": "Keep the recommendation but remove the citations from the final document."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "Automation bias concerns inappropriate reliance on automated output. Source tracing makes the recommendation depend on evidence that can be inspected outside the model.",
+      "missingEvidence": [
+        "Existence and content of the cited studies.",
+        "Whether sources support the exact claim.",
+        "Alternative evidence or expert review for consequential decisions."
+      ],
+      "evidenceNote": "Automation bias is a possible lens because fluency is substituting for verification. The recommendation may still be correct, but correctness must be checked independently.",
+      "nextAction": "Create a claim table with verified, disputed and unsupported status."
+    },
+    {
+      "slug": "ai-many-summaries-one-source",
+      "title": "Five AI summaries, one origin",
+      "difficulty": "advanced",
+      "situation": "ai-assisted-research",
+      "skill": "ai-assisted-reasoning",
+      "primaryLens": "truth-judgment-illusory-truth-effect",
+      "alternativeLenses": [
+        "false-priors-automation-bias"
+      ],
+      "technique": "source-trace",
+      "prompt": "Five generated summaries repeat the same market statistic. The team treats the repetition as strong agreement, but every answer appears to depend on the same unverified report.",
+      "question": "How should confidence be assessed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Count each generated answer as an independent source because the wording differs."
+        },
+        {
+          "id": "b",
+          "text": "Trace the statistic to its origin and count genuinely independent evidence, not repeated outputs."
+        },
+        {
+          "id": "c",
+          "text": "Accept the statistic if it appears in at least three model responses."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "Repetition increases familiarity without creating independent evidence. Source tracing collapses dependent summaries back to their shared origin.",
+      "missingEvidence": [
+        "The earliest inspectable source.",
+        "Independent datasets or analyses.",
+        "Definitions, sample and date behind the statistic."
+      ],
+      "evidenceNote": "Illusory truth is a relevant lens because repeated wording can increase acceptance. Dependence between model outputs is also a data-provenance problem.",
+      "nextAction": "Replace the answer count with an independent-source count."
+    }
+  ]
+}

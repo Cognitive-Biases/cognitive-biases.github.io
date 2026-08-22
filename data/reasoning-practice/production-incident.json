@@ -1,0 +1,79 @@
+{
+  "situation": "production-incident",
+  "scenarios": [
+    {
+      "slug": "incident-obvious-afterward",
+      "title": "The root cause now looks obvious",
+      "difficulty": "starter",
+      "situation": "production-incident",
+      "skill": "metacognition",
+      "primaryLens": "cognitive-bias-hindsight-bias",
+      "alternativeLenses": [
+        "cognitive-bias-outcome-bias"
+      ],
+      "technique": "decision-journal",
+      "prompt": "After an outage, the failed component is easy to identify. Reviewers say the on-call engineer should have known immediately, although several alerts looked equally plausible during the incident.",
+      "question": "What should the review reconstruct first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The timeline of information available at each decision point, before the root cause was known."
+        },
+        {
+          "id": "b",
+          "text": "The final root-cause diagram, because it contains the complete truth."
+        },
+        {
+          "id": "c",
+          "text": "Which engineer now gives the most confident explanation."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "Hindsight compresses uncertainty after the outcome. A contemporaneous decision record restores what was knowable and which alternatives were reasonable at the time.",
+      "missingEvidence": [
+        "The alerts visible at each time.",
+        "Competing hypotheses considered during response.",
+        "Actions available under the actual time pressure."
+      ],
+      "evidenceNote": "Hindsight bias is a useful lens for the review language, but the reconstruction may still reveal preventable process failures.",
+      "nextAction": "Build an evidence timeline before judging the quality of incident decisions."
+    },
+    {
+      "slug": "incident-one-outage-policy",
+      "title": "One outage creates a permanent rule",
+      "difficulty": "intermediate",
+      "situation": "production-incident",
+      "skill": "metacognition",
+      "primaryLens": "heuristic-bias-availability-bias",
+      "alternativeLenses": [
+        "cognitive-bias-outcome-bias"
+      ],
+      "technique": "predefined-update-criteria",
+      "prompt": "A rare database failure causes a severe outage. The team proposes an expensive control for every system without checking how often the failure occurs or whether the control addresses other risks.",
+      "question": "What should happen before the control becomes policy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Define the evidence and recurrence threshold that would justify the control across systems."
+        },
+        {
+          "id": "b",
+          "text": "Approve it quickly because severe incidents should always produce broad rules."
+        },
+        {
+          "id": "c",
+          "text": "Wait until the incident feels less memorable, then use intuition again."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The vivid outage can dominate risk judgment. Predefined criteria make the policy depend on recurrence, exposure and control effectiveness rather than memory alone.",
+      "missingEvidence": [
+        "Base rate of the failure mode.",
+        "Systems with the same exposure.",
+        "Expected risk reduction and operating cost of the control."
+      ],
+      "evidenceNote": "Availability is a plausible risk because one severe event dominates the proposal. A rare event can still justify a broad control when expected harm is high.",
+      "nextAction": "Set a measurable adoption rule and test it against the system portfolio."
+    }
+  ]
+}

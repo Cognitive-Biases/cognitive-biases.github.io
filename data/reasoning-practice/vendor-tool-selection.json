@@ -1,0 +1,79 @@
+{
+  "situation": "vendor-tool-selection",
+  "scenarios": [
+    {
+      "slug": "vendor-demo-glow",
+      "title": "The polished demo proves too much",
+      "difficulty": "starter",
+      "situation": "vendor-tool-selection",
+      "skill": "evidence-evaluation",
+      "primaryLens": "availability-heuristic-anthropomorphism",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "predefined-criteria",
+      "prompt": "A vendor presents a fluent AI assistant in a polished demo. The team begins describing the product as reliable and intelligent, although the critical workflow was not tested with company data.",
+      "question": "What should the team require next?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A scripted test against predefined capabilities, failure cases and company data."
+        },
+        {
+          "id": "b",
+          "text": "A longer presentation so the team can judge the product’s personality."
+        },
+        {
+          "id": "c",
+          "text": "A list of well-known customers as a substitute for task testing."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "Humanlike presentation can inflate perceived capability. Predefined criteria force the product to demonstrate the task that matters in the real environment.",
+      "missingEvidence": [
+        "Performance on the critical workflow.",
+        "Failure behaviour and escalation paths.",
+        "Evidence under the organisation’s data and controls."
+      ],
+      "evidenceNote": "Anthropomorphism is a relevant lens for capability inference from presentation. The demo may still represent real capability, which must be tested directly.",
+      "nextAction": "Run the same evidence-based acceptance test for every serious vendor."
+    },
+    {
+      "slug": "vendor-first-price",
+      "title": "The first price defines the negotiation",
+      "difficulty": "intermediate",
+      "situation": "vendor-tool-selection",
+      "skill": "evidence-evaluation",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "independent-estimate",
+      "prompt": "A vendor opens with a three-year price of €900,000. Internal discussions now focus on whether a 15% discount is enough, although the team never estimated value or alternatives independently.",
+      "question": "What should be created before the next commercial round?",
+      "options": [
+        {
+          "id": "a",
+          "text": "An independent value range, reservation point and comparison with alternatives."
+        },
+        {
+          "id": "b",
+          "text": "A more detailed explanation of why €900,000 is the vendor’s normal price."
+        },
+        {
+          "id": "c",
+          "text": "A discount target expressed only as a percentage of the opening price."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The opening number defines the frame. An independent estimate gives the team a separate basis for price and scope decisions.",
+      "missingEvidence": [
+        "Expected value and total cost of ownership.",
+        "Comparable offers or internal alternatives.",
+        "A reservation point defined before the next offer."
+      ],
+      "evidenceNote": "Anchoring is plausible because all later numbers are expressed around the opening price. The opening price can still be reasonable if independent evidence supports it.",
+      "nextAction": "Write an independent commercial range and the assumptions behind it."
+    }
+  ]
+}

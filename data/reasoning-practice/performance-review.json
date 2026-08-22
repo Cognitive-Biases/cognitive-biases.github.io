@@ -1,0 +1,79 @@
+{
+  "situation": "performance-review",
+  "scenarios": [
+    {
+      "slug": "review-latest-quarter",
+      "title": "The last quarter becomes the whole year",
+      "difficulty": "starter",
+      "situation": "performance-review",
+      "skill": "metacognition",
+      "primaryLens": "heuristic-bias-availability-bias",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "predefined-criteria",
+      "prompt": "An employee had one difficult final quarter. The annual review now focuses almost entirely on that period and gives little weight to earlier results.",
+      "question": "What is the best first correction?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Use the same predefined criteria across the full review period and inspect evidence by period."
+        },
+        {
+          "id": "b",
+          "text": "Trust the manager’s memory because recent work is usually the most relevant."
+        },
+        {
+          "id": "c",
+          "text": "Ask the employee to provide only their three strongest examples."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "Recent events are easier to recall. Predefined criteria and period coverage reduce the chance that one vivid interval becomes the entire evaluation.",
+      "missingEvidence": [
+        "Evidence across the full review period.",
+        "Criteria and expectations set before the review.",
+        "Comparable treatment of positive and negative examples."
+      ],
+      "evidenceNote": "Availability may explain the heavy focus on recent events. The latest quarter can still deserve more weight when the role or expectations changed.",
+      "nextAction": "Build a criterion-by-period evidence table before setting the rating."
+    },
+    {
+      "slug": "review-lucky-result",
+      "title": "A good result proves a good process",
+      "difficulty": "intermediate",
+      "situation": "performance-review",
+      "skill": "metacognition",
+      "primaryLens": "cognitive-bias-outcome-bias",
+      "alternativeLenses": [
+        "heuristic-bias-availability-bias"
+      ],
+      "technique": "decision-journal",
+      "prompt": "A manager skipped required checks but the project succeeded. The review treats the success as proof that the manager’s approach was excellent.",
+      "question": "What should be evaluated separately?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The quality of the decision process using what was known before the outcome."
+        },
+        {
+          "id": "b",
+          "text": "Only the final business result because process is secondary."
+        },
+        {
+          "id": "c",
+          "text": "Whether the manager can tell a convincing success story."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "Good outcomes can follow weak processes. A decision record helps judge whether the risk was understood and managed before luck was known.",
+      "missingEvidence": [
+        "Required checks and why they existed.",
+        "Risks known before execution.",
+        "Whether similar choices would perform reliably across repeated cases."
+      ],
+      "evidenceNote": "Outcome bias is a relevant lens, but process rules may also need review if they add cost without reducing meaningful risk.",
+      "nextAction": "Rate process quality and outcome quality in separate fields."
+    }
+  ]
+}

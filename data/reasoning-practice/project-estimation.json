@@ -1,0 +1,116 @@
+{
+  "situation": "project-estimation",
+  "scenarios": [
+    {
+      "slug": "estimate-target-date-anchor",
+      "title": "The date arrives before the estimate",
+      "difficulty": "starter",
+      "situation": "project-estimation",
+      "skill": "forecasting",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": [
+        "egocentric-bias-planning-fallacy"
+      ],
+      "technique": "independent-estimate",
+      "prompt": "A sponsor says the migration should finish in twelve weeks. The delivery team then estimates each work package while that date remains visible.",
+      "question": "What should the team do before negotiating the final schedule?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Build an independent range from work packages and assumptions before comparing it with the twelve-week target."
+        },
+        {
+          "id": "b",
+          "text": "Split twelve weeks across the work packages so every activity fits the target."
+        },
+        {
+          "id": "c",
+          "text": "Ask the sponsor to repeat why twelve weeks is important and use that as the baseline."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The target can become the reference point for every later estimate. An independent estimate preserves a separate baseline and makes any movement toward the target inspectable.",
+      "missingEvidence": [
+        "Independent estimates from the delivery team.",
+        "Dependency and availability assumptions.",
+        "Comparable completed migrations."
+      ],
+      "evidenceNote": "The visible target creates an anchoring risk, but the final schedule may still converge on twelve weeks if independent evidence supports it.",
+      "nextAction": "Produce a range without the target in view and record why it changes after comparison."
+    },
+    {
+      "slug": "estimate-inside-plan-only",
+      "title": "A detailed plan with no outside view",
+      "difficulty": "intermediate",
+      "situation": "project-estimation",
+      "skill": "forecasting",
+      "primaryLens": "egocentric-bias-planning-fallacy",
+      "alternativeLenses": [
+        "heuristic-bias-availability-bias"
+      ],
+      "technique": "reference-class-forecasting",
+      "prompt": "A team has a detailed task plan for a data migration. It predicts 40 days, but nobody has checked how long similar migrations actually took.",
+      "question": "Which evidence should be added first?",
+      "options": [
+        {
+          "id": "a",
+          "text": "More detail inside the current plan until every day is allocated."
+        },
+        {
+          "id": "b",
+          "text": "A reference class of comparable completed migrations and their actual duration range."
+        },
+        {
+          "id": "c",
+          "text": "A vote on whether 40 days feels optimistic or pessimistic."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "More inside detail can improve execution planning without correcting the baseline. Reference-class forecasting tests the plan against completed cases.",
+      "missingEvidence": [
+        "Durations of comparable completed migrations.",
+        "Reasons this project differs from the reference class.",
+        "The distribution, not only the best or worst example."
+      ],
+      "evidenceNote": "Planning fallacy is a plausible lens when the estimate relies mainly on the inside plan. A poor reference class can also mislead, so comparability must be explained.",
+      "nextAction": "Set an outside-view range first, then document any evidence-based adjustment."
+    },
+    {
+      "slug": "estimate-recent-disaster",
+      "title": "One failed project resets every estimate",
+      "difficulty": "advanced",
+      "situation": "project-estimation",
+      "skill": "forecasting",
+      "primaryLens": "heuristic-bias-availability-bias",
+      "alternativeLenses": [
+        "egocentric-bias-planning-fallacy"
+      ],
+      "technique": "reference-class-forecasting",
+      "prompt": "The previous project missed its date by six months. Managers now double every estimate, even though most comparable projects had much smaller delays.",
+      "question": "What is the best way to use the recent failure?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ignore it because unusual failures contain no useful information."
+        },
+        {
+          "id": "b",
+          "text": "Treat it as one observation inside a broader reference class and identify whether the same failure conditions apply."
+        },
+        {
+          "id": "c",
+          "text": "Use it as the default scenario because recent events are the safest guide."
+        }
+      ],
+      "bestOption": "b",
+      "explanation": "The vivid failure deserves inspection, but not automatic dominance. A reference class shows how common that outcome is and whether the same conditions are present.",
+      "missingEvidence": [
+        "Frequency of similar delays in comparable work.",
+        "Specific causes of the previous failure.",
+        "Whether those causes exist in the new project."
+      ],
+      "evidenceNote": "Availability bias may explain why the recent failure receives extra weight. The failure can still justify a larger estimate when relevant conditions repeat.",
+      "nextAction": "Add the failed project to the reference class and state the conditions that warrant moving toward its outcome."
+    }
+  ]
+}

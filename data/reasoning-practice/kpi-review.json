@@ -1,0 +1,79 @@
+{
+  "situation": "kpi-review",
+  "scenarios": [
+    {
+      "slug": "kpi-score-becomes-proof",
+      "title": "The benchmark score ends the discussion",
+      "difficulty": "intermediate",
+      "situation": "kpi-review",
+      "skill": "evidence-evaluation",
+      "primaryLens": "cognitive-bias-confirmation-bias",
+      "alternativeLenses": [
+        "heuristic-bias-availability-bias"
+      ],
+      "technique": "red-team-review",
+      "prompt": "A team prefers a new platform and highlights its strong benchmark score. It dismisses workload, data quality and operating constraints that are not measured by the benchmark.",
+      "question": "What should a red-team review ask?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Which important failure modes and decision criteria are not represented by the score?"
+        },
+        {
+          "id": "b",
+          "text": "How can the score be presented more prominently to the steering committee?"
+        },
+        {
+          "id": "c",
+          "text": "Which competing platform has the weakest marketing material?"
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "The preferred conclusion is selecting supportive evidence. A red-team review tests what the benchmark omits and whether the score transfers to the real operating context.",
+      "missingEvidence": [
+        "Definition and construction of the benchmark.",
+        "Performance under the organisation’s workload and data.",
+        "Important outcomes not represented by the score."
+      ],
+      "evidenceNote": "Confirmation bias is a plausible lens because evidence outside the preferred score is discounted. The benchmark may still be highly informative when it matches the decision goal.",
+      "nextAction": "List the benchmark’s blind spots and test the two most consequential ones."
+    },
+    {
+      "slug": "kpi-good-score-bad-process",
+      "title": "A good KPI excuses a weak process",
+      "difficulty": "advanced",
+      "situation": "kpi-review",
+      "skill": "evidence-evaluation",
+      "primaryLens": "cognitive-bias-outcome-bias",
+      "alternativeLenses": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "technique": "decision-journal",
+      "prompt": "A support team meets its response-time KPI by closing tickets early and reopening them later. Leaders call the process successful because the dashboard is green.",
+      "question": "What should be reviewed separately?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The measured score, the underlying customer outcome and the process used to produce the score."
+        },
+        {
+          "id": "b",
+          "text": "Only the dashboard because formal KPIs define success."
+        },
+        {
+          "id": "c",
+          "text": "Whether the team feels proud of the result."
+        }
+      ],
+      "bestOption": "a",
+      "explanation": "A favourable measured outcome can hide a poor decision process and a weak real-world outcome. A decision record preserves why the KPI was chosen and what it was meant to represent.",
+      "missingEvidence": [
+        "Customer resolution and repeat-contact outcomes.",
+        "How ticket handling affects the metric.",
+        "The original purpose and known limits of the KPI."
+      ],
+      "evidenceNote": "Outcome bias is a useful lens for treating a green result as proof of process quality. Metric design and incentives are also structural causes that require direct analysis.",
+      "nextAction": "Review the KPI, underlying outcome and process as three separate evidence columns."
+    }
+  ]
+}
