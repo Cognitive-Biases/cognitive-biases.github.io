@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-22",
+  "description": "Practical decision techniques linked to reviewed cognitive-bias lenses. They are structured checks, not guaranteed cures.",
+  "techniques": [
+    {
+      "slug": "consider-the-opposite",
+      "title": "Consider the opposite",
+      "purpose": "Force a preferred explanation to compete with a credible alternative.",
+      "whenToUse": "When evidence collection is drifting toward support for one preferred conclusion.",
+      "steps": [
+        "Write the current conclusion in one sentence.",
+        "Write the strongest plausible alternative.",
+        "List evidence that would be more likely if the alternative were true.",
+        "Search for or request that evidence before finalizing the decision."
+      ],
+      "limitations": "A weak straw-man alternative adds little value. The alternative must be genuinely plausible.",
+      "biases": [
+        "cognitive-bias-confirmation-bias"
+      ]
+    },
+    {
+      "slug": "independent-estimate",
+      "title": "Independent estimate before the anchor",
+      "purpose": "Create a reference point before seeing a strong external number or recommendation.",
+      "whenToUse": "Before estimates, negotiations, AI recommendations or expert forecasts where the first number may become an anchor.",
+      "steps": [
+        "Hide or postpone the external estimate when practical.",
+        "Write your own estimate or range and assumptions.",
+        "Then inspect the external number.",
+        "Record why your estimate changed, if it changed."
+      ],
+      "limitations": "Independent estimates can still be poor; use reference classes and evidence when available.",
+      "biases": [
+        "cognitive-bias-anchoring-effect"
+      ]
+    },
+    {
+      "slug": "reference-class-forecasting",
+      "title": "Reference-class forecasting",
+      "purpose": "Use outcomes from comparable completed cases before refining an inside-view plan.",
+      "whenToUse": "For schedules, budgets, adoption forecasts and other repeatable predictions.",
+      "steps": [
+        "Define the decision or quantity to forecast.",
+        "Find a meaningful set of comparable completed cases.",
+        "Use their distribution to set a baseline range.",
+        "Adjust only for specific differences that can be defended with evidence."
+      ],
+      "limitations": "A bad comparison class can mislead. Similarity must be argued, not assumed.",
+      "biases": [
+        "egocentric-bias-planning-fallacy",
+        "heuristic-bias-availability-bias"
+      ]
+    },
+    {
+      "slug": "base-rate-check",
+      "title": "Base-rate check",
+      "purpose": "Compare a vivid case with the broader frequency or distribution that should inform the judgment.",
+      "whenToUse": "When one story, recent event or exceptional example is carrying too much weight.",
+      "steps": [
+        "State the event or outcome you are judging.",
+        "Find the relevant denominator or broader comparison set.",
+        "Estimate the base rate before focusing on case-specific details.",
+        "Explain what case evidence is strong enough to move away from that baseline."
+      ],
+      "limitations": "Base rates can be irrelevant if the comparison population is badly chosen.",
+      "biases": [
+        "heuristic-bias-availability-bias"
+      ]
+    },
+    {
+      "slug": "decision-journal",
+      "title": "Decision journal",
+      "purpose": "Preserve what was known, expected and uncertain before the outcome changes memory.",
+      "whenToUse": "For important forecasts, project decisions, incident reviews and repeated professional judgments.",
+      "steps": [
+        "Record the decision and date.",
+        "Record evidence, assumptions and uncertainty.",
+        "Write what would change the decision.",
+        "Review the original record after the outcome before drawing lessons."
+      ],
+      "limitations": "A journal improves learning only if it is written before the result and revisited later.",
+      "biases": [
+        "cognitive-bias-hindsight-bias",
+        "cognitive-bias-outcome-bias"
+      ]
+    },
+    {
+      "slug": "red-team-review",
+      "title": "Red-team review",
+      "purpose": "Give a strong alternative case enough space to challenge the preferred option.",
+      "whenToUse": "Before approvals, vendor selection, roadmap commitments and consequential group decisions.",
+      "steps": [
+        "State the current preferred option and its strongest argument.",
+        "Assign a reviewer to build the best case against it.",
+        "Require concrete failure modes and missing evidence, not generic criticism.",
+        "Resolve or explicitly accept the strongest remaining uncertainty before approval."
+      ],
+      "limitations": "A ritual adversarial review can become theatre. The red team needs access to evidence and permission to change the decision.",
+      "biases": [
+        "cognitive-bias-confirmation-bias"
+      ]
+    },
+    {
+      "slug": "predefined-update-criteria",
+      "title": "Predefined update criteria",
+      "purpose": "Decide in advance what evidence should cause a forecast or decision to change.",
+      "whenToUse": "When teams may later reinterpret evidence to preserve a public commitment.",
+      "steps": [
+        "Write the current decision or forecast.",
+        "List observable evidence that would strengthen it.",
+        "List observable evidence that would weaken or stop it.",
+        "Set a review point before the evidence arrives."
+      ],
+      "limitations": "Criteria should be revisable when the environment changes, but revisions should be recorded rather than silently rewritten.",
+      "biases": [
+        "cognitive-bias-confirmation-bias",
+        "logical-fallacy-escalation-of-commitment"
+      ]
+    },
+    {
+      "slug": "incremental-value-check",
+      "title": "Incremental-value check",
+      "purpose": "Evaluate the next step using future cost and value rather than resources already spent.",
+      "whenToUse": "When a project, product or career path continues mainly because of past investment.",
+      "steps": [
+        "Write what has already been spent and mark it as unrecoverable.",
+        "Estimate the future cost of the next step.",
+        "Estimate the future value and uncertainty of the next step.",
+        "Ask whether you would fund that next step if the project arrived today with no history."
+      ],
+      "limitations": "Past investment can contain useful information about capability or switching cost; ignore sunk cost, not relevant future consequences.",
+      "biases": [
+        "logical-fallacy-escalation-of-commitment"
+      ]
+    },
+    {
+      "slug": "predefined-criteria",
+      "title": "Predefined decision criteria",
+      "purpose": "Fix the comparison dimensions before a preferred option makes the criteria move.",
+      "whenToUse": "Hiring, vendor selection, product prioritization, career choices and evaluations.",
+      "steps": [
+        "Write the decision goal.",
+        "Choose a small set of criteria before reviewing options.",
+        "Define how evidence maps to each criterion.",
+        "Score or discuss all serious options using the same criteria before adding exceptions."
+      ],
+      "limitations": "Criteria can omit important information. Allow explicit revisions, but record why the criteria changed.",
+      "biases": [
+        "cognitive-bias-confirmation-bias",
+        "cognitive-bias-anchoring-effect"
+      ]
+    },
+    {
+      "slug": "source-trace",
+      "title": "Source trace",
+      "purpose": "Separate independent evidence from repetition and generated summaries.",
+      "whenToUse": "When a claim appears in many articles, AI answers or internal documents.",
+      "steps": [
+        "Write the exact claim.",
+        "Trace each important mention back to its earliest inspectable source.",
+        "Group copies that depend on the same origin.",
+        "Judge confidence from independent evidence, not the number of repetitions."
+      ],
+      "limitations": "The earliest source is not automatically the best source; quality and methodology still matter.",
+      "biases": [
+        "truth-judgment-illusory-truth-effect",
+        "memory-bias-continued-influence-effect"
+      ]
+    },
+    {
+      "slug": "reversible-test",
+      "title": "Small reversible test",
+      "purpose": "Reduce uncertainty before making a large commitment that is expensive to reverse.",
+      "whenToUse": "When a career, product or operating decision can be partially tested before full commitment.",
+      "steps": [
+        "Name the uncertainty that matters most.",
+        "Design the smallest action that produces relevant evidence.",
+        "Define the result that would change the larger decision.",
+        "Run the test and update the decision using the predefined rule."
+      ],
+      "limitations": "A small test may not represent full-scale conditions. Treat it as evidence, not proof.",
+      "biases": [
+        "logical-fallacy-escalation-of-commitment",
+        "cognitive-bias-confirmation-bias"
+      ]
+    }
+  ]
+}
