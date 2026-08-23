@@ -39,8 +39,6 @@
     "description": "Do you see an object and think it can only be used for its intended purpose? That’s Functional Fixedness – the tendency to perceive an object only in its traditional role, ignoring other possible uses.\n\n🔍 Where’s the trap?\n- Everyday life – scissors are just for paper, even though they can open packages.\n- Work – a familiar tool doesn’t solve a new task, but you don’t look for alternatives.\n- Problem-solving – solutions are searched for in obvious places, even when a creative approach might work better.\n\n💡 How to avoid it?\n- Think broader – every object can have multiple uses.\n- Experiment – try unconventional approaches.\n- Train creativity – the more variations you see, the fewer mental limits you have.",
     "slug": "cognitive-rigidity-functional-fixedness",
     "related": [
-      4,
-      56,
       57
     ],
     "status": "generated",
@@ -56,7 +54,8 @@
     "slug": "apophenia-clustering-illusion",
     "status": "generated",
     "updatedAt": "2025-09-01T10:38:02.309Z",
-    "published": true
+    "published": true,
+    "related": []
   },
   {
     "id": 6,
@@ -110,8 +109,8 @@
     "id": 9,
     "number": 9,
     "typeOfBias": "Availability Heuristic",
-    "title": "Anthropomorphism – when objects and animals get human traits",
-    "description": "Do you think your cat feels offended or that a robot has emotions? That’s Anthropomorphism – the tendency to attribute human traits, emotions, or intentions to animals, objects, or abstract concepts.\n\n🔍 Where’s the trap?\n- Pets – “My cat is angry because I didn’t feed him” (he’s just reacting to hunger).\n- Technology – “My car is in a bad mood today” (no, it’s just a mechanical issue).\n- Nature – “The Moon looks sad” – but it has no emotions, that’s just our perception.\n\n💡 How to avoid it?\n- Separate reality from perception – objects and animals don’t think like humans.\n- Look for scientific explanations – animal behavior is often driven by instincts, not emotions.\n- Be mindful – humans naturally see human traits everywhere, but that doesn’t mean they exist.",
+    "title": "Anthropomorphism – when nonhuman systems are read as humanlike",
+    "description": "Anthropomorphism is the attribution of humanlike characteristics, intentions, emotions, or mental states to nonhuman agents. It is a common psychological process, not automatically an error. The problem appears when humanlike cues are treated as evidence that an animal, robot, or AI has capabilities, understanding, motives, or consciousness that have not actually been demonstrated.\n\n🔍 Where’s the trap?\n- AI assistants – fluent first-person language or a warm voice feels like proof that the system understands or cares.\n- Robots – a face, gaze, or social gesture changes what people expect the machine to know or feel.\n- Everyday objects – unpredictable behavior is described with human motives, which can hide the mechanical or statistical explanation.\n\n💡 How to avoid it?\n- Separate observable behavior from the humanlike mental state you are inferring.\n- Translate impressions such as 'it understands me' into specific capabilities that can be tested.\n- Use performance evidence, documentation, and independent verification when accuracy matters.\n- Remember that anthropomorphic language can be useful shorthand without being literal evidence about a system’s mind.",
     "slug": "availability-heuristic-anthropomorphism",
     "related": [
       8,
@@ -119,7 +118,7 @@
       6
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T11:31:09.987Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -302,8 +301,8 @@
     "id": 21,
     "number": 21,
     "typeOfBias": "Confirmation Bias",
-    "title": "Backfire Effect – when evidence makes false beliefs stronger",
-    "description": "Do you double down on your beliefs when confronted with contradicting evidence? That’s Backfire Effect – the tendency to not just reject inconvenient facts, but to become even more convinced of your original belief.\n\n🔍 Where’s the trap?\n- Politics – you show someone undeniable proof that their candidate is lying, but they support them even more.\n- Science – anti-vaxxers see scientific evidence but instead of reconsidering, their belief in a conspiracy deepens.\n- Personal life – you prove to a friend that their partner is cheating, and they start defending them even harder.\n\n💡 How to avoid it?\n- Be open to changing your mind – resisting facts is a sign of cognitive dissonance.\n- Avoid aggressive persuasion – softer arguments work better than direct confrontation.\n- Notice when facts annoy you – sometimes, the information that frustrates you the most is exactly what you need to hear.",
+    "title": "Backfire Effect – when a correction can strengthen a false belief",
+    "description": "The Backfire Effect is a specific outcome in which a correction increases belief in the false claim it was meant to correct. Research suggests this is uncommon: factual corrections usually improve belief accuracy, so disagreement, anger, or refusing to concede is not enough to call something a backfire effect.\n\n🔍 Where’s the trap?\n- Fact-checking – a person argues with a correction, and the disagreement is labelled as backfire without measuring whether belief in the false claim actually increased.\n- Communication – teams avoid correcting misinformation because they assume any correction will make the problem worse.\n- Evaluation – changes in factual belief, source trust, attitude, and behaviour are mixed together even though they are different outcomes.\n\n💡 How to avoid it?\n- Measure the same belief before and after the correction when the distinction matters.\n- Give a clear correction and, when useful, a credible alternative explanation.\n- Separate factual accuracy from emotion, trust, attitude, or behaviour.\n- Check again later because correction effects can weaken over time.",
     "slug": "confirmation-bias-backfire-effect",
     "related": [
       55,
@@ -311,15 +310,15 @@
       25
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T11:36:05.817Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
     "id": 22,
     "number": 22,
     "typeOfBias": "Confirmation Bias",
-    "title": "Congruence Bias – when you only test what you want to confirm",
-    "description": "Do you test a hypothesis only in ways that confirm it, rather than trying to disprove it? That’s Congruence Bias – the tendency to seek evidence that supports an idea while ignoring alternative explanations.\n\n🔍 Where’s the trap?\n- Science – a researcher runs tests that confirm their theory but doesn’t check for other possible causes.\n- Business – a company tests if an ad campaign works but doesn’t analyze what else might be driving sales.\n- Personal life – convinced a friend is upset with you, you look for signs but don’t consider other explanations for their behavior.\n\n💡 How to avoid it?\n- Look for counterexamples – test not just confirming but also disproving evidence.\n- Be open to alternatives – your explanation may not be the only one.\n- Ask questions, don’t make assumptions – a good test challenges rather than just confirms.",
+    "title": "Congruence Bias – when the test fits one hypothesis but does not separate alternatives",
+    "description": "Congruence Bias is a narrower hypothesis-testing pattern. A person can prefer a test that is likely to produce a positive result if the favored hypothesis is true, even when that result would also be expected under competing explanations. The problem is not simply looking for a positive result. It is choosing a test with weak diagnostic value between alternatives.\n\nWhere can it show up?\n- Troubleshooting: you test whether one suspected cause can produce the symptom but do not test another cause that predicts the same symptom.\n- Experiments: a study asks whether the preferred theory predicts the result without designing observations that separate it from rival theories.\n- Business: a team asks whether customers like a feature but not whether the same responses would appear because of price, novelty, selection, or another explanation.\n\nA better check\n- List at least one plausible alternative hypothesis before choosing the test.\n- Predict what each possible result would look like under both explanations.\n- Prefer tests where the hypotheses make different predictions.\n- Do not treat every positive-test strategy as an error. In some environments, testing likely cases can be informative; diagnosticity is the key question.\n- Use Confirmation Bias for the broader evidence-processing problem and Congruence Bias when the failure is specifically in the design or choice of a hypothesis test.",
     "slug": "confirmation-bias-congruence-bias",
     "related": [
       23,
@@ -327,7 +326,7 @@
       21
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T11:02:16.575Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -558,8 +557,8 @@
     "id": 38,
     "number": 38,
     "typeOfBias": "Egocentric Bias",
-    "title": "Planning Fallacy – when you think things will take less time than they do",
-    "description": "Did you promise to finish on time, but missed the deadline again? That’s Planning Fallacy – the tendency to underestimate how long a task will take, even when you’ve made the same mistake before.\n\n🔍 Where’s the trap?\n- Work – a project that ‘should take two weeks’ ends up lasting months.\n- Studying – you think you’ll prepare for an exam in two days, then find yourself cramming at 3 AM.\n- Home renovations – you plan to finish by the weekend, but a month later, it’s still a mess.\n\n💡 How to avoid it?\n- Look at past experiences – if it took longer last time, why would this be different?\n- Add a time buffer – multiply your optimistic estimate by at least 1.5.\n- Expect the unexpected – delays and unforeseen issues always happen.",
+    "title": "Planning Fallacy – when plans make completion times look too optimistic",
+    "description": "Planning Fallacy is the tendency to predict that your own task or project will finish sooner than it actually does, even when similar work has taken longer before.\n\nWhere can it show up?\n- Project estimates: a team builds a detailed plan for smooth execution but gives too little weight to delays in comparable past projects.\n- Personal tasks: you picture how writing, studying, moving, or renovating will go if the main steps work as planned, while interruptions and rework receive less attention.\n- Delivery reviews: a late project is explained as an unusual case, so the next estimate starts from another fresh plan instead of learning from the history.\n\nA better check\n- Start with comparable past work: how long did similar tasks actually take?\n- Give a range and name the main sources of uncertainty instead of promising one precise date.\n- Keep the original estimate and assumptions so you can compare them with the eventual result.\n- Do not use a universal buffer such as ‘multiply by 1.5’. The useful adjustment depends on the task, the data and the reference class.",
     "slug": "egocentric-bias-planning-fallacy",
     "related": [
       45,
@@ -567,7 +566,7 @@
       39
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T11:43:29.192Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -766,8 +765,8 @@
     "id": 51,
     "number": 51,
     "typeOfBias": "False Priors",
-    "title": "Automation Bias – when you blindly trust automated systems",
-    "description": "Do you follow your GPS even when it leads you into a dead end? That’s Automation Bias – the tendency to over-rely on technology, even when it’s wrong.\n\n🔍 Where’s the trap?\n- Medicine – a doctor follows a flawed diagnostic system without double-checking the results.\n- Aviation – a pilot trusts autopilot too much and ignores critical warning signs.\n- Everyday life – people blindly follow GPS directions, even when the road is blocked.\n\n💡 How to avoid it?\n- Don’t lose critical thinking – automated systems are helpful, but they’re not flawless.\n- Trust, but verify – if something seems off, double-check it manually.\n- Remember that algorithms make mistakes too – automation is useful, but it doesn’t replace common sense.",
+    "title": "Automation Bias – when automated advice replaces independent checking",
+    "description": "Automation Bias is the tendency to let automated cues or recommendations replace vigilant information seeking and verification. It can create commission errors, where a person follows incorrect automated advice, and omission errors, where a person fails to act because the system did not flag a problem. Automation itself can improve overall performance; the bias is inappropriate reliance when the system is wrong, incomplete, or outside its competence.\n\n🔍 Where’s the trap?\n- AI assistants – a fluent recommendation is accepted even though important source data points in another direction.\n- Monitoring – no alert appears, so a real problem is missed because nobody checks the underlying signals.\n- Human oversight – a reviewer is technically 'in the loop' but mostly confirms the automated output instead of independently verifying critical cases.\n\n💡 How to avoid it?\n- Make a provisional judgment or write the decision criteria before seeing automated advice when stakes are high.\n- Verify important recommendations against independent evidence or raw signals, especially when the result is surprising or costly.\n- Learn the system’s known failure modes and use confidence or error information when it is actually calibrated.\n- Reduce verification complexity with checklists, source links, or decomposed workflows rather than telling users to 'be more careful'.",
     "slug": "false-priors-automation-bias",
     "related": [
       62,
@@ -775,7 +774,7 @@
       31
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T11:53:57.741Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -848,13 +847,12 @@
     "typeOfBias": "Cognitive Rigidity",
     "title": "Functional Fixedness – when objects can do more than you think",
     "description": "Do you hold a screwdriver and not realize you can use it to open a bottle? That’s Functional Fixedness – the tendency to see objects only in their usual roles, even when they have other possible uses.\n\n🔍 Where’s the trap?\n- Daily life – you search for a bottle opener when a spoon or key would work just as well.\n- Work – you assume a tool is only for one task when it could be adapted for others.\n- Creativity – you miss new solutions because you think only within traditional uses.\n\n💡 How to avoid it?\n- Look for unconventional uses – if you’re stuck, think about repurposing what’s around you.\n- Train creative thinking – challenge yourself to use familiar objects in new ways.\n- Focus on function, not labels – a tool isn’t just what it was designed for.",
-    "slug": "cognitive-rigidity-functional-fixedness",
-    "related": [
-      57,
-      3,
-      4
-    ],
-    "published": true
+    "slug": "legacy-duplicate-functional-fixedness-56",
+    "related": [],
+    "published": false,
+    "status": "merged-duplicate",
+    "mergedInto": 3,
+    "updatedAt": "2026-08-18T00:00:00.000Z"
   },
   {
     "id": 57,
@@ -869,11 +867,11 @@
     "published": true
   },
   {
-    "id": 57,
-    "number": 57,
+    "id": 220,
+    "number": 220,
     "typeOfBias": "Framing Effect",
-    "title": "Decoy Effect – when a third option pushes you toward the second",
-    "description": "Do you choose between two options, but then a third one appears, making the second option look better? That’s Decoy Effect – a marketing trick designed to push you toward a specific choice.\n\n🔍 Where’s the trap?\n- Shopping – you’re deciding between a $800 phone and a $1,200 premium model. Suddenly, a $1,150 version appears with almost the same specs as the $1,200 one, making the premium model seem like the best deal.\n- Restaurants – small coffee for $3, large for $7. Then they add a medium for $6.50, making the large size look like a bargain.\n- Subscriptions – “Basic” for $10 and “Premium” for $30. Then they add a “Standard” for $28, making $30 for Premium seem totally reasonable.\n\n💡 How to avoid it?\n- Spot the decoy – if one option is clearly worse but similar to another, it’s manipulation.\n- Compare only the main options – ignore the extra choice designed to influence you.\n- Make conscious decisions – if you’re being pushed toward something, ask yourself if it’s really the best choice.",
+    "title": "Decoy Effect – when an inferior option changes the comparison between better options",
+    "description": "Decoy Effect is a context effect in which adding an inferior option can increase the choice share of another option. In the classic attraction-effect setup, the decoy is clearly worse than the target on important attributes, which can make the target easier to justify against a competitor.\n\nWhere can it show up?\n- Pricing tables: a third plan can make one of the original plans look better by comparison.\n- Product choice: an inferior model can change how price and quality trade-offs are evaluated between two stronger alternatives.\n- Recommendations: adding or removing an option can change the relative appeal of the options that remain, even when their own features do not change.\n\nA better check\n- Compare the main options before and after the extra option is added.\n- Ask whether the extra option is dominated by one alternative but not by the other.\n- Remove the suspected decoy and see whether your preference between the remaining options changes.\n- Compare the options on the attributes that matter to your goal, not only on the contrast created by the menu.\n- Do not assume that every three-tier price table creates a decoy effect. The effect is well documented, but its size and even its direction depend on the choice set and context.",
     "slug": "framing-effect-decoy-effect",
     "related": [
       58,
@@ -881,23 +879,23 @@
       60
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T11:59:36.674Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
     "id": 58,
     "number": 58,
     "typeOfBias": "Framing Effect",
-    "title": "Default Effect – when you stick with the pre-set option",
-    "description": "Do you leave checkboxes as they are when filling out a form? That’s Default Effect – the tendency to go with pre-set options, even if an alternative might be better.\n\n🔍 Where’s the trap?\n- Subscriptions – free trials automatically turn into paid plans unless you cancel.\n- Retirement savings – in countries where people are auto-enrolled, participation rates are much higher.\n- Privacy settings – websites pre-select “I agree to share my data,” and you don’t bother changing it.\n\n💡 How to avoid it?\n- Always check the settings – especially when something is already selected for you.\n- Make intentional choices – convenience doesn’t always mean the best option.\n- Ask ‘Who benefits from this?’ – if someone pre-selected an option, chances are it benefits them more than you.",
+    "title": "Default Effect – when a pre-selected option changes what people choose",
+    "description": "Default Effect is the tendency for people to choose an option more often when it is already selected or happens automatically if they do nothing.\n\nWhere can it show up?\n- Forms and settings: one option is already checked, so leaving the page unchanged selects it.\n- Subscriptions and saving plans: enrolment, renewal, contribution levels or permissions can depend on whether the person must opt in or opt out.\n- Digital products: a privacy, notification or AI setting may become widely used simply because it was the starting configuration.\n\nA better check\n- Make the default visible and make changing it easy.\n- Compare the result with an active-choice version when the decision matters.\n- Do not treat staying with the default as proof that people strongly prefer it.\n- Ask whether the default fits the user's likely interests, not only the choice architect's goals.\n- Test the design in the real context. Default effects are well documented, but their size varies substantially.",
     "slug": "framing-effect-default-effect",
     "related": [
-      57,
+      220,
       59,
       60
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:00:54.422Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -984,8 +982,8 @@
     "id": 64,
     "number": 64,
     "typeOfBias": "Logical Fallacy",
-    "title": "Escalation of Commitment – when you keep investing despite clear failure",
-    "description": "Do you keep watching a boring movie just because you’ve already spent an hour on it? That’s Escalation of Commitment (Sunk Cost Fallacy) – the tendency to keep investing in a failing decision just because too much has already been put in.\n\n🔍 Where’s the trap?\n- Business – a company keeps pouring money into a failing project because “we’ve already invested too much to stop.”\n- Relationships – people stay in unhappy relationships because “so many years have been spent.”\n- Gambling & Entertainment – you keep playing, hoping to recover losses, but end up losing even more.\n\n💡 How to avoid it?\n- Re-evaluate the situation – past investments don’t matter, only future decisions do.\n- Separate emotions from logic – sunk costs can’t be recovered, so they shouldn’t influence choices.\n- Ask the right question – if you were starting fresh, would you still invest in this?",
+    "title": "Escalation of Commitment – when setbacks lead to more investment in the same course",
+    "description": "Escalation of Commitment is the pattern of continuing or increasing investment in a course of action after negative results make stopping or changing direction worth serious consideration.\n\nWhere can it show up?\n- Projects – a team responds to delays or poor results by committing another budget, milestone, or deadline without reopening the basic case for the project.\n- Leadership – a decision-maker who chose the original plan feels pressure to defend it and becomes more committed after bad news.\n- Product and technology work – additional resources are approved because the initiative is nearly finished, politically important, or difficult to abandon.\n\nA better check\n- Treat the next investment as a new decision: what future value can it still create and what will it cost from today onward?\n- Separate irrecoverable sunk costs from other reasons to continue, such as genuine completion value, switching costs, new evidence, or strategic dependencies.\n- Use exit and review criteria that were written before the latest setback when possible.\n- Ask someone who did not own the original decision to review the next commitment. Sunk costs can contribute to escalation, but escalation is the broader process and can have several drivers.",
     "slug": "logical-fallacy-escalation-of-commitment",
     "related": [
       45,
@@ -993,7 +991,7 @@
       19
     ],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:07:26.080Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1164,12 +1162,12 @@
     "id": 76,
     "number": 76,
     "typeOfBias": "Prospect Theory",
-    "title": "Loss Aversion – when losing hurts more than winning feels good",
-    "description": "Does losing $100 feel much worse than finding $100 feels good? That’s Loss Aversion – the tendency to feel losses more intensely than equivalent gains.\n\n🔍 Where’s the trap?\n- Investments – investors hold onto losing stocks to avoid ‘locking in’ losses, even when selling is the better move.\n- Work & negotiations – people cling to bad deals just to ‘avoid losing,’ even if better options exist.\n- Personal life – fear of ending relationships or quitting a job, even when they no longer bring happiness.\n\n💡 How to avoid it?\n- Look at the bigger picture – loss aversion can cloud rational decisions.\n- Let go of what no longer benefits you – whether it’s a job, an investment, or a relationship.\n- Remember that new opportunities outweigh old losses – closing one door often opens another.",
+    "title": "Loss Aversion – when a loss can carry more weight than an equivalent gain",
+    "description": "Loss Aversion is the idea that, relative to a reference point, a loss can receive more subjective weight than an equivalent gain. It is an important part of prospect theory, but it should not be treated as a universal rule or as a fixed claim that every loss always counts twice as much as a gain.\n\nWhere can it show up?\n- Risk choices: losing 100 can feel more important than an otherwise comparable chance to gain 100.\n- Product and policy decisions: the same change can look different depending on whether it is presented as giving up something already expected or gaining something new.\n- Project reviews: stopping can feel like accepting a loss, which can influence the decision even when future costs and benefits should be evaluated separately.\n\nA better check\n- State the reference point explicitly: what counts as a gain and what counts as a loss?\n- Compare equal-sized positive and negative changes using the same probabilities and time horizon.\n- Rewrite the decision in absolute outcomes when that is possible, not only as gains or losses from the current frame.\n- Keep sunk costs separate from future value. A painful write-off is not automatically a reason to invest more.\n- Do not apply one universal loss-aversion coefficient. Recent meta-analyses disagree substantially about the average size and robustness of the effect.",
     "slug": "prospect-theory-loss-aversion",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:20:37.680Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1188,12 +1186,12 @@
     "id": 78,
     "number": 78,
     "typeOfBias": "Prospect Theory",
-    "title": "Status Quo Bias – when you resist change, even if it’s better",
-    "description": "Do you stick with your old phone even though a new one would be better? That’s Status Quo Bias – the tendency to resist change and keep things as they are, even when change would be beneficial.\n\n🔍 Where’s the trap?\n- Finances – you don’t switch banks or plans because “it’s fine,” even if you’d save money.\n- Career – you stay in a boring job just because it’s familiar, even though better options exist.\n- Relationships – you stay in an unfulfilling relationship just because it’s been going on for years.\n\n💡 How to avoid it?\n- Consider the benefits of change – the new option might be better, even if switching is uncomfortable.\n- Don’t mistake familiarity for the best choice – just because it’s known doesn’t mean it’s optimal.\n- Give yourself a chance to upgrade – try new things before automatically rejecting them.",
+    "title": "Status Quo Bias – when the current option gets extra weight because it is already in place",
+    "description": "Status Quo Bias is a tendency to favour the current option more than we would if the same options were presented without one already being in place.\n\nWhere can it show up?\n- Services and software: a team keeps the current provider or system even after alternatives become competitive.\n- Personal finance: an old allocation, bank or plan remains unchanged because switching requires attention and a fresh decision.\n- Work processes: a familiar workflow survives because it is the starting point, not because it was recently compared with the alternatives.\n\nA better check\n- Ask what you would choose today if none of the options were already yours.\n- Separate real switching costs, risk and setup work from simple familiarity.\n- Compare the current option with realistic alternatives using the same criteria.\n- Do not assume that staying is irrational. Keeping the current option can be sensible when switching costs or uncertainty are genuinely important.",
     "slug": "prospect-theory-status-quo-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:23:49.120Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1212,24 +1210,24 @@
     "id": 80,
     "number": 80,
     "typeOfBias": "Self-Assessment",
-    "title": "Dunning–Kruger Effect – when the less you know, the more confident you are",
-    "description": "Does a beginner confidently explain a complex topic while an expert hesitates? That’s Dunning–Kruger Effect – the tendency for incompetent people to overestimate themselves, while true experts underestimate their knowledge.\n\n🔍 Where’s the trap?\n- Work – a rookie thinks a task will take a day, while an experienced professional knows the real challenges and sets realistic deadlines.\n- Politics & social media – someone with no expertise easily gives opinions on economics, medicine, and science, while real experts are cautious in their statements.\n- Learning – a beginner believes they understand a topic after one lecture, while a scientist knows that the more you learn, the more questions arise.\n\n💡 How to avoid it?\n- Be wary of oversimplified conclusions – if something seems too easy, you might be missing the full picture.\n- Don’t be afraid to admit knowledge gaps – true professionals understand how complex things really are.\n- Listen to experts, not just the loudest voices – confidence doesn’t equal competence.",
+    "title": "Dunning–Kruger Effect – when performance and self-assessment do not line up",
+    "description": "The Dunning–Kruger Effect describes a pattern found in some self-assessment tasks: lower performers can overestimate their performance more than higher performers do. It is about calibration between measured performance and self-assessment, not a rule that the least skilled person is always the most confident.\n\nWhere can it show up?\n- Learning: a student predicts a much stronger result than an objective test later shows.\n- Work skills: someone rates their performance higher than external measures or repeated results support.\n- Training: confidence changes more slowly than actual performance after feedback or practice.\n\nA better check\n- Make a prediction before seeing the score or feedback.\n- Compare confidence with an objective test, outcome or independent review.\n- Track calibration across several attempts instead of judging from one good or bad result.\n- Notice whether feedback changes both skill and self-assessment over time.\n- Do not use Dunning–Kruger as a label for people you think are wrong. Experts are not automatically underconfident, and confidence alone does not diagnose the effect.",
     "slug": "self-assessment-dunning",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:25:00.364Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
     "id": 81,
     "number": 81,
     "typeOfBias": "Self-Assessment",
-    "title": "Hot-Cold Empathy Gap – when you underestimate how emotions will change your choices",
-    "description": "Do you believe you'll always eat healthy, but then grab fast food when hungry? That’s Hot-Cold Empathy Gap – the tendency to underestimate how emotions, fatigue, or cravings will influence your behavior.\n\n🔍 Where’s the trap?\n- Dieting – you think you’ll avoid sweets, but when stressed, you reach for chocolate.\n- Finances – you plan to save money, but in the store, emotions take over and you make impulse purchases.\n- Conflicts – you promise to stay calm, but in the moment, anger takes control, and you say things you regret.\n\n💡 How to avoid it?\n- Acknowledge emotional influence – expect hunger, stress, or exhaustion to change your decisions.\n- Create barriers – don’t carry your card if you want to avoid impulse spending, or keep junk food out of the house.\n- Be honest with yourself – ask: will I really resist in the moment, or am I just hoping I will?",
+    "title": "Hot–Cold Empathy Gap – when one state is a poor guide to choices in another",
+    "description": "The Hot–Cold Empathy Gap is the difficulty of predicting preferences, behavior, or experience across different visceral or affective states. In a relatively cold state, people can underappreciate how hunger, pain, craving, fear, anger, sexual arousal, or other hot states will change motivation; in a hot state, they can also overproject the current state into the future. The point is state dependence, not a rule that emotion makes decisions irrational.\n\n🔍 Where’s the trap?\n- Planning – a calm, comfortable person assumes a future stressed or hungry self will value the same options in the same way.\n- Health – someone who is not currently in pain underestimates how pain may change willingness to accept treatment or risk.\n- Interpersonal judgment – a person in one state expects someone in a very different state to respond according to the same motives and priorities.\n\n💡 How to avoid it?\n- Name the current state and the future or other person's state explicitly.\n- Use evidence from past episodes or people actually in the target state instead of imagination alone.\n- Precommit when a predictable hot state repeatedly defeats a cold-state goal, while leaving room for genuinely new information.\n- Separate a change in preferences caused by state from a claim that one state is automatically more rational than the other.",
     "slug": "self-assessment-hot",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:26:14.516Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1368,24 +1366,24 @@
     "id": 93,
     "number": 93,
     "typeOfBias": "Cognitive Bias",
-    "title": "Curse of Knowledge – when you forget what it’s like to be a beginner",
-    "description": "Do you struggle to explain something in simple terms because it’s obvious to you? That’s Curse of Knowledge – a cognitive bias where knowledgeable people find it hard to see things from the perspective of those who don’t know.\n\n🔍 Where’s the trap?\n- Teaching & mentoring – experts explain complex topics assuming everyone already knows the basics.\n- Work & management – leaders give vague instructions, forgetting that employees have less context.\n- Communication – technical experts speak in jargon, leaving others confused.\n\n💡 How to avoid it?\n- Remember that others don’t see the world as you do – simplify explanations.\n- Test your explanations – if a beginner doesn’t understand, the problem is in your delivery.\n- Use examples and analogies – they make complex ideas easier to grasp.",
+    "title": "Curse of Knowledge – when what you know distorts what you expect others to know",
+    "description": "Curse of Knowledge is a perspective-taking bias: once you know important information, that knowledge can make it harder to judge what a less-informed person knows, notices, or understands. It does not mean experts cannot teach beginners. The problem is that your own knowledge can leak into your estimate of another person's perspective.\n\nWhere can it show up?\n- Teaching and onboarding: an expert skips a step because it feels obvious, while the beginner does not yet know the missing assumption.\n- Documentation: instructions make sense to the author but depend on background knowledge that is never stated.\n- Product and project handoffs: one team assumes another team understands a term, dependency, or decision history that was never shared.\n\nA better check\n- Do not judge clarity by how easy the explanation feels to you.\n- Ask the other person to paraphrase the idea or perform the next step without help.\n- Look at where their prediction or action differs from yours; that gap is evidence about what the explanation missed.\n- State prerequisites and hidden assumptions explicitly.\n- Use feedback about the other person's perspective, not only a score saying whether your explanation was right or wrong.",
     "slug": "cognitive-bias-curse-of-knowledge",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:40:40.674Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
     "id": 94,
     "number": 94,
     "typeOfBias": "Cognitive Bias",
-    "title": "Declinism – when the past seems golden, and the future looks bleak",
-    "description": "Do you think the past was better, people were kinder, and life was simpler? That’s Declinism – the tendency to romanticize the past and believe the future will only get worse.\n\n🔍 Where’s the trap?\n- Society & politics – ‘People used to be honest, but now the world is falling apart.’\n- Technology – ‘Things were built to last, now everything is disposable.’\n- Personal life – ‘The best years are behind me, the future looks grim.’\n\n💡 How to avoid it?\n- Remember that memory distorts reality – we recall the good from the past and exaggerate future problems.\n- Compare using facts, not nostalgia – real progress often proves otherwise.\n- Focus on opportunities, not fears – the future can be bright if viewed without bias.",
+    "title": "Declinism – when the present is judged against an idealized past",
+    "description": "Declinism is best treated as an umbrella label for broad judgments that conditions have declined relative to an idealized past. It is not one standardized cognitive bias with one mechanism, and it is not proof that a reported decline is imaginary. Research supports narrower processes that can contribute to some decline judgments, including rosy recollection of past experiences and the well-studied illusion of moral decline.\n\nWhere can it show up?\n- Social trends: a general feeling that people used to be kinder or more honest is treated as historical evidence without comparing repeated measures across time.\n- Work and technology: one real deterioration is expanded into a claim that an entire profession, product category, or era was better before.\n- Personal comparisons: a difficult earlier period is remembered mainly through its meaningful or positive parts, while current frustrations are experienced in full detail.\n\nA better check\n- Define exactly what is supposed to have declined and over which years.\n- Compare the present with contemporaneous records or repeated historical measures, not memory alone.\n- Look separately for indicators that improved, worsened, or stayed stable.\n- Distinguish a memory of a specific past experience from a claim about a population or long-term trend.\n- Do not use the label to dismiss criticism. Real decline is possible and should be tested against domain-specific evidence.",
     "slug": "cognitive-bias-declinism",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T15:06:09.232Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1416,12 +1414,12 @@
     "id": 97,
     "number": 97,
     "typeOfBias": "Human-Robot Interaction",
-    "title": "Form-Function Attribution Bias – when you judge a robot by its looks, not its abilities",
-    "description": "Do you see a cute robot and assume it’s smart and friendly? Or if it looks mechanical, do you think it’s incapable? That’s Form-Function Attribution Bias – the tendency to judge a robot’s abilities based on appearance rather than actual functionality.\n\n🔍 Where’s the trap?\n- Humanoid robots – if a robot has a face, people expect it to understand emotions, even if it’s just a toy.\n- Minimalist design – if a robot looks basic and technical, people underestimate its capabilities, even if it’s highly advanced.\n- Voice assistants – if a system speaks naturally, people assume it ‘understands’ them, even though it’s just a well-tuned algorithm.\n\n💡 How to avoid it?\n- Focus on real functions – a robot’s appearance doesn’t determine its intelligence.\n- Don’t expect human emotions from machines – a friendly face doesn’t mean a robot is self-aware.\n- Learn about technology – understanding AI limitations helps prevent false expectations.",
+    "title": "Appearance–Capability Expectation – when a robot’s design changes what you expect it can do",
+    "description": "Appearance–Capability Expectation is this project’s plain-language label for a human–robot interaction pattern, not a standardized bias name. Research shows that robot appearance, morphology, framing, and human-likeness can shape expectations about competence, social behavior, and likely capabilities before users have much direct performance evidence. The direction is not universal: a more humanlike design does not always increase trust or perceived competence.\n\n🔍 Where’s the trap?\n- Humanoid design – a face, hands, or human proportions imply abilities the robot has never demonstrated.\n- Minimal design – a machine that looks simple is assumed to be less capable even when its tested performance is strong.\n- Conversational interfaces – natural speech, a name, or social gestures are mistaken for evidence of general understanding.\n\n💡 How to avoid it?\n- Write down the capabilities the design makes you expect, then check them against observed performance.\n- Separate social presentation from task competence and reliability.\n- Prefer capability matrices, documented limits, and representative tests over visual impressions.\n- For designers, make intended functions and important limitations explicit instead of letting appearance carry the whole message.",
     "slug": "human-robot-interaction-form",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:44:20.078Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1488,12 +1486,12 @@
     "id": 103,
     "number": 103,
     "typeOfBias": "Cognitive Bias",
-    "title": "Hungry Judge Effect – when your body makes decisions for you",
-    "description": "Do you feel the world is more frustrating when you're hungry or tired? That’s Hungry Judge Effect – the tendency to judge situations more harshly or leniently depending on your physical state.\n\n🔍 Where’s the trap?\n- Legal decisions – studies show that judges give harsher sentences before lunch and more lenient ones after eating.\n- Work & negotiations – a tired manager is more likely to reject an offer they would accept when well-rested.\n- Personal life – small conflicts with a partner seem worse when you’re hungry or sleep-deprived.\n\n💡 How to avoid it?\n- Check your state before big decisions – hunger, fatigue, and stress distort judgment.\n- Don’t decide on impulse – if you’re irritated, delay the decision and revisit it later.\n- Ask yourself if the problem is real – maybe it’s not the situation, but your physical state affecting perception.",
+    "title": "Hungry Judge Effect – a famous parole-board finding with an uncertain cause",
+    "description": "Hungry Judge Effect is a popular name for a debated finding from a 2011 study of parole-board decisions. Favorable decisions were more common early in decision sessions and after food breaks, but the study did not measure hunger and could not separate eating from rest, mood, case order, or other factors.\n\nWhat did the study actually show?\n- Decision order: favorable rulings became less common later in a session and rose again after breaks.\n- Observation, not a hunger experiment: judges were not randomly assigned to be hungry or fed.\n- Alternative explanations: later critiques and simulations show that case ordering, representation, decision time, and session management could contribute to the pattern.\n\nA better check\n- Do not say that hunger caused a specific decision unless hunger was actually measured and competing explanations were tested.\n- In repeated high-stakes decisions, monitor order, workload, break timing, case difficulty, representation, and decision duration separately.\n- If a break effect appears, test whether rest, food, sequence, scheduling, or another variable explains it.\n- Treat the original result as a useful warning about possible sequence and context effects, not as a law that hungry judges become harsher.",
     "slug": "cognitive-bias-hungry-judge-effect",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T15:08:56.399Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1632,12 +1630,12 @@
     "id": 115,
     "number": 115,
     "typeOfBias": "Cognitive Bias",
-    "title": "Prevention Bias – when prevention feels more valuable than response",
-    "description": "Do you believe it’s better to invest in preventing problems than detecting and responding to them? That’s Prevention Bias – the tendency to overvalue prevention, even when detection and response are equally effective.\n\n🔍 Where’s the trap?\n- Healthcare – society heavily funds vaccination but underestimates the importance of early disease detection.\n- Business & cybersecurity – companies spend millions on preventing cyberattacks but neglect rapid incident response.\n- Personal life – people try to eliminate all risks (e.g., over-insuring everything) but fail to plan how to handle problems when they arise.\n\n💡 How to avoid it?\n- Balance your approach – don’t just prevent; be ready to respond.\n- Evaluate real risks – sometimes, detection and fast reaction matter more than trying to eliminate every possible risk.\n- Think rationally about investments – if a dollar spent on response provides as much security as a dollar spent on prevention, don’t ignore response.",
+    "title": "Prevention Bias – favoring preventive security controls over detection and response",
+    "description": "Prevention Bias is a domain-specific label from experimental research on information-security investment. In the studied allocation task, participants favored preventive controls over detection-and-response controls even when both categories were designed to offer the same return on investment. This evidence does not establish a general rule that people overvalue prevention in healthcare, insurance, relationships, or every other domain.\n\n🔍 Where’s the trap?\n- Security budgeting – prevention receives more funding simply because stopping an incident feels more compelling than detecting and responding to one.\n- Portfolio design – teams compare control categories by intuition or cultural preference instead of by marginal risk reduction and expected loss.\n- Generalization – a result from information-security investment is retold as a universal preference for prevention.\n\n💡 How to avoid it?\n- Compare prevention, detection, and response using the same expected-loss and marginal-value framework.\n- Make trade-offs explicit when the same budget cannot maximize every control category.\n- Separate the observed security-investment finding from claims about other domains unless those claims have their own evidence.\n- Revisit the allocation when threat probabilities, control effectiveness, or response capability changes.",
     "slug": "cognitive-bias-prevention-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T13:04:13.387Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1704,12 +1702,12 @@
     "id": 121,
     "number": 121,
     "typeOfBias": "Cognitive Bias",
-    "title": "Systematic Bias – when errors in judgment follow a predictable pattern",
-    "description": "Do you think your decisions are objective, but they follow a recurring pattern of errors? That’s Systematic Bias – when deviations in judgment or data are not random but follow a predictable trend.\n\n🔍 Where’s the trap?\n- Science & research – if a measurement method consistently overestimates or underestimates results, the data becomes systematically biased.\n- Business & forecasting – companies may repeatedly overestimate sales or underestimate expenses due to the same calculation errors.\n- Personal life – people may systematically overrate their own abilities or underestimate others’ achievements.\n\n💡 How to avoid it?\n- Look for recurring errors – if deviations aren’t random, they might be a sign of systematic bias.\n- Check your evaluation methods – often, the issue isn’t the data but how it’s collected or interpreted.\n- Compare with independent sources – if different methods give different results, your evaluation system might be biased.",
+    "title": "Systematic Bias – a measurement and statistical concept, not one cognitive bias",
+    "description": "Systematic bias is a general measurement and statistical concept. It describes a consistent or predictable tendency for measurements, estimates, or study results to miss a reference or target value. It is not the name of one psychological mechanism.\n\nWhere can it show up?\n- Measurement: an instrument or procedure consistently pushes values high or low.\n- Research: sampling, confounding, measurement, or analysis creates a structural deviation in the result.\n- Data pipelines: one mapping, rule, sensor, or transformation repeatedly moves output in the same direction.\n\nA better check\n- Define the target or reference value first.\n- Measure the direction and size of the deviation instead of treating it as random noise.\n- Check calibration, sampling, design, data collection, transformations, and analysis.\n- Use validation data or an independent method when possible.\n- Do not assume a psychological cause just because the error repeats. Name a specific cognitive mechanism only when evidence supports one.\n\nMore observations can reduce random uncertainty, but they do not automatically remove a systematic error built into the process.",
     "slug": "cognitive-bias-systematic-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T13:11:02.777Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1728,12 +1726,12 @@
     "id": 123,
     "number": 123,
     "typeOfBias": "Cognitive Bias",
-    "title": "Surrogation – when the metric becomes more important than the goal",
-    "description": "Do you focus so much on numbers that you forget what they represent? That’s Surrogation – the tendency to mistake a metric for the actual goal, leading people to optimize the measure rather than achieving real success.\n\n🔍 Where’s the trap?\n- Business & sales – companies chase KPIs instead of genuinely improving service, leading to great numbers but unhappy customers.\n- Education – students aim for high grades rather than true learning.\n- Fitness & health – people focus on the number on the scale rather than their actual well-being.\n\n💡 How to avoid it?\n- Remember that metrics are just tools – what matters is the real outcome, not just the number.\n- Ask yourself: what’s behind this? – are you achieving real progress or just ‘gaming’ the metric?\n- Reality-check your progress – if the metric improves but nothing changes, you’ve fallen into the trap.",
+    "title": "Surrogation – when a performance measure starts replacing the goal",
+    "description": "Surrogation is a management-accounting construct in which a performance measure starts to be treated as though it were the strategic objective it was meant to represent. A KPI can be useful and still capture only part of the underlying goal. The problem begins when improving the number becomes evidence, by itself, that the real objective improved.\n\nWhere can it show up?\n- KPI reviews: a team celebrates a stronger score without checking whether customer value, quality, safety, learning, or another underlying objective improved.\n- Incentives: people change operational decisions to improve a rewarded measure even when important unmeasured dimensions get worse.\n- AI and analytics: a benchmark, model score, dashboard metric, or automated rating becomes the thing being optimized instead of a proxy that still needs validation against the real objective.\n\nA better check\n- Write the underlying objective before discussing the metric.\n- State what the measure captures and at least one important dimension it misses.\n- Ask what action could improve the number while making the real objective worse.\n- Use companion measures, validation evidence, or a short narrative explanation when one score cannot represent the whole construct.\n- Do not treat Surrogation as a synonym for every metric problem. The research is specifically about replacing a construct with its performance measure in strategic performance systems.",
     "slug": "cognitive-bias-surrogation",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T15:16:02.189Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1776,12 +1774,12 @@
     "id": 127,
     "number": 127,
     "typeOfBias": "Cognitive Bias",
-    "title": "Value Selection Bias – when you cling to numbers even when they don’t apply",
-    "description": "Do you use numbers in a new context just because they exist? That’s Value Selection Bias – the tendency to rely on available numerical data even when logical reasoning or recalculation is needed.\n\n🔍 Where’s the trap?\n- Finance – investors assess opportunities based on outdated prices instead of current market conditions.\n- Business analytics – managers rely on last year’s performance metrics, ignoring recent market shifts.\n- Personal life – travelers plan trips based on old cost estimates and outdated weather reports.\n\n💡 How to avoid it?\n- Ask if the data is still relevant – past numbers might not apply to the present situation.\n- Don’t trust numbers blindly – check if they actually fit the context.\n- Remember that calculations change – new conditions require fresh evaluations, not old assumptions.",
+    "title": "Value Selection Bias – choosing supplied numbers instead of constructing the Bayesian answer",
+    "description": "Value Selection Bias is a narrow reasoning pattern studied in Bayesian diagnostic problems. When participants did not derive the correct solution, their incorrect answers were strongly drawn toward numerical values already supplied in the problem. The effect concerns problem representation, reference classes, and solution construction; it is not evidence that people generally rely on old prices, stale KPIs, or outdated travel estimates.\n\n🔍 Where’s the trap?\n- Diagnostic probabilities – a number printed in the problem is selected because it looks answer-like even though the requested quantity requires a different reference class.\n- Bayesian reasoning – the solver recognizes relevant values but does not organize them into the relationship needed for the target probability.\n- Explanation – a calculation error is blamed even when the actual mistake was selecting the wrong supplied values before calculation began.\n\n💡 How to avoid it?\n- State the target quantity and reference class before selecting numbers.\n- Write the required relationship or calculation explicitly.\n- Check that every selected value belongs to the same reference frame as the question.\n- If you use a supplied number directly, explain why no transformation or calculation is required.",
     "slug": "cognitive-bias-value-selection-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T13:16:20.822Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -1920,12 +1918,12 @@
     "id": 140,
     "number": 140,
     "typeOfBias": "Attribution Bias",
-    "title": "Moral Luck – when you judge morality based on the outcome, not the intent",
-    "description": "If someone accidentally hits a pedestrian, they’re a terrible person, but if they just ran a red light and nothing happened – it’s ‘no big deal’? That’s Moral Luck – the tendency to judge actions based on their outcome rather than the intent behind them.\n\n🔍 Where’s the trap?\n- Law & punishment – a drunk driver who doesn’t hit anyone is seen as ‘lucky,’ while one who causes harm is judged far more harshly, even if they took the same risk.\n- Work & business – two people make the same risky decision, but the one who succeeds is a ‘genius,’ while the one who fails is ‘reckless.’\n- Politics & leadership – if a policy works, its creator is a hero; if it fails, they’re incompetent, even if their decisions were identical.\n\n💡 How to avoid it?\n- Look at intent, not just the result – sometimes people do everything right but still fail due to bad luck.\n- Compare similar situations – if two people make the same choice but only one faces consequences, it doesn’t make them morally different.\n- Recognize the role of randomness – circumstances have a huge impact, and outcomes aren’t always in a person’s control.",
+    "title": "Moral Luck – when outcomes change blame for otherwise similar choices",
+    "description": "Resultant Moral Luck describes cases where people judge blame, punishment, or moral responsibility differently because similar actions lead to different outcomes partly outside the actor’s control. Outcomes matter, but the phenomenon is not simply 'outcome instead of intent': experiments show that intentions, beliefs, causal responsibility, negligence, and whether a belief was justified also shape moral judgment.\n\n🔍 Where’s the trap?\n- Safety – two people take the same negligent risk, but only the person whose action causes harm is treated as revealing far worse character.\n- Work – two equally defensible decisions are moralized differently after one happens to end in a loss.\n- Review – a bad outcome makes the actor’s earlier belief look less justified even when the information available at the time was the same.\n\n💡 How to avoid it?\n- Separate intention, belief, controllable risk, causal responsibility, and outcome before assigning blame.\n- Compare matched cases that differ only in the result when testing whether luck is changing the judgment.\n- Use the outcome to learn about consequences without silently rewriting what the actor reasonably knew beforehand.\n- Distinguish moral wrongness, blame, and punishment: research shows that outcome information can affect these judgments differently.",
     "slug": "attribution-bias-moral-luck",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T13:28:46.166Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -2255,12 +2253,12 @@
     "id": 166,
     "number": 166,
     "typeOfBias": "Heuristic Bias",
-    "title": "Availability Bias – when recent or vivid examples seem more important",
-    "description": "Did you hear about a plane crash and now fear flying, even though car accidents are far more common? That’s Availability Bias – the tendency to give greater importance to examples that are easy to recall, rather than those that are statistically relevant.\n\n🔍 Where’s the trap?\n- News & fears – dramatic events (disasters, crimes) create the illusion that they happen more often than they actually do.\n- Financial decisions – if someone recently got rich from crypto, it seems like an easy way to make money.\n- Health & medicine – a celebrity’s illness is perceived as more common than it really is.\n\n💡 How to avoid it?\n- Look at statistics, not headlines – vivid stories don’t always reflect reality.\n- Check the proportions – frequent events are less memorable but often more relevant.\n- Remember: rarity makes things noticeable – just because something is widely discussed doesn’t mean it happens often.",
+    "title": "Availability Heuristic – when easy-to-recall examples shape frequency judgments",
+    "description": "Availability Heuristic is the use of how easily examples or scenarios come to mind as one cue for judging how common or likely something is. This shortcut can be useful when accessible examples really track frequency, and misleading when vividness, repetition, recency, or personal experience makes some examples easier to recall than their frequency justifies.\n\nWhere can it show up?\n- Risk estimates – a vivid recent incident comes to mind quickly and receives more weight than a broader reference set.\n- Project decisions – one memorable success or failure becomes the example everyone uses when estimating a new case.\n- Information checks – repeated or emotionally striking examples are easier to retrieve and can feel more representative than they are.\n\nA better check\n- Ask why these examples are easy to recall: because they are common, or because they are recent, vivid, repeated, or personally important?\n- Compare the available examples with a base rate, a deliberately sampled reference set, or other relevant data when the decision matters.\n- Separate frequency from memorability. A useful story can explain a risk without showing how often it happens.\n- Do not assume that every vivid risk is systematically overestimated. Specific availability-based explanations need to be tested in the setting where they are used.",
     "slug": "heuristic-bias-availability-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T14:00:03.533Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -2303,12 +2301,12 @@
     "id": 170,
     "number": 170,
     "typeOfBias": "Cognitive Bias",
-    "title": "Confirmation Bias – when you only notice what supports your beliefs",
-    "description": "Do you read news that only confirms what you already believe? That’s Confirmation Bias – the tendency to seek, remember, and interpret information in ways that align with existing beliefs.\n\n🔍 Where’s the trap?\n- Politics & media – people choose sources that reinforce their views while ignoring alternative perspectives.\n- Investing & business – investors focus only on data that confirms their decisions, missing warning signs.\n- Personal life – if you think someone is unreliable, you’ll notice only their mistakes, ignoring their good actions.\n\n💡 How to avoid it?\n- Read opposing viewpoints – challenge yourself by considering different arguments.\n- Question your own beliefs – ask yourself: ‘What if I’m wrong?’\n- Follow facts, not emotions – truth isn’t defined by how comfortable it makes you feel.",
+    "title": "Confirmation Bias – when a belief shapes how evidence is searched and judged",
+    "description": "Confirmation Bias is a broad label for ways an existing belief or hypothesis can influence how information is searched for, interpreted, remembered, or evaluated. It is wider than simply reading agreeable news, and it does not mean that every preference for confirming evidence is irrational.\n\nWhere can it show up?\n- Research and analysis: evidence that fits a favored explanation receives more attention while difficult counterexamples are explained away.\n- Work and product decisions: a team gathers more support for a preferred plan without defining what result would make it change direction.\n- AI use: prompts are written mainly to strengthen an existing conclusion instead of testing alternatives with the same evidence standard.\n\nA better check\n- Write down what evidence would make the belief weaker or wrong before gathering more information.\n- Compare competing explanations using the same evidence standard.\n- Search for diagnostic counterexamples, not an arbitrary amount of opposing opinion.\n- Separate the source from the claim: disagreeing with a person is not evidence that their evidence is false.\n- When testing a hypothesis, ask whether the chosen test can distinguish it from plausible alternatives. That narrower failure is where Congruence Bias becomes especially useful.",
     "slug": "cognitive-bias-confirmation-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T14:04:00.483Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -2339,12 +2337,12 @@
     "id": 173,
     "number": 173,
     "typeOfBias": "Memory Bias",
-    "title": "Continued Influence Effect – when misinformation sticks, even after being debunked",
-    "description": "Did you hear a false story, then see it debunked, but still feel like it might be true? That’s Continued Influence Effect – the tendency to retain and use misinformation in reasoning, even after it’s been corrected.\n\n🔍 Where’s the trap?\n- Fake news – rumors and false information stick in memory, even after official corrections.\n- Court cases – jurors still consider dismissed evidence, even when instructed to ignore it.\n- Personal beliefs – if you were once told someone was unreliable, you may keep believing it, even after proven wrong.\n\n💡 How to avoid it?\n- Don’t trust the first version of a story – verify with credible sources.\n- Know that corrections don’t erase misinformation – your brain may still rely on debunked claims.\n- Actively replace falsehoods with facts – remind yourself of the truth to push out misinformation.",
+    "title": "Continued Influence Effect – when corrected information still shapes reasoning",
+    "description": "The Continued Influence Effect happens when false or outdated information still affects later reasoning after a person has been told that it is wrong. A correction can help and the old information can still leave a trace at the same time.\n\nWhere can it show up?\n- Breaking news: an early explanation is corrected, but people still use it when explaining what happened.\n- Work and incident reviews: an initial root cause is ruled out, yet later discussion keeps returning to it.\n- Everyday claims: you remember that a statement was corrected but still use part of the original story when judging a related question.\n\nA better check\n- State the correction clearly instead of only saying that the old claim is wrong.\n- If the old claim filled an explanatory gap, give the best supported alternative explanation when one is available.\n- Keep important corrections easy to find and repeat them when needed.\n- Do not call incomplete updating a backfire effect. Backfire requires the false belief itself to become stronger after the correction.",
     "slug": "memory-bias-continued-influence-effect",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T14:06:26.585Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -2399,12 +2397,12 @@
     "id": 178,
     "number": 178,
     "typeOfBias": "Memory Bias",
-    "title": "Fading Affect Bias – when bad memories fade faster than good ones",
-    "description": "Do you remember your vacation five years ago as perfect, even though it rained and your luggage got lost? That’s Fading Affect Bias – the tendency for negative emotions to fade faster than positive ones.\n\n🔍 Where’s the trap?\n- Past mistakes – tough moments at work or in relationships seem less bad over time.\n- Decisions & choices – the stress before a big life change fades, making it seem easier in hindsight.\n- Childhood memories – you recall the warmth but forget the fears and disappointments.\n\n💡 How to use it?\n- Know that time smooths out the rough edges – bad things won’t seem as painful forever.\n- Use it to your advantage – if things feel hard now, they’ll seem easier in the future.\n- Don’t idealize the past – remember that it had both highs and lows.",
+    "title": "Fading Affect Bias – when negative emotional intensity tends to fade faster",
+    "description": "Fading Affect Bias is an average pattern in autobiographical memory: the emotional intensity linked to negative events tends to weaken faster over time than the emotional intensity linked to positive events. It does not mean that every negative memory fades, that painful experiences become positive, or that factual details are rewritten in the same way as emotional intensity.\n\nWhere can it show up?\n- Life comparisons: an earlier period can feel easier in memory partly because some of its negative emotional intensity has softened.\n- Repeated experiences: today's frustration is compared with a past event whose emotional edge has faded.\n- Stories about the past: people remember what happened and how they feel about it now, but those two things are not identical to how strongly they felt at the time.\n\nA better check\n- Separate factual memory from current emotional intensity.\n- Use diaries, messages, repeated ratings, or other contemporaneous records when the original experience matters.\n- Compare several past events instead of one emotionally important memory.\n- Treat Fading Affect Bias as an average research pattern with moderators, not a prediction about every person or memory.",
     "slug": "memory-bias-fading-affect-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T14:12:12.942Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -2711,12 +2709,12 @@
     "id": 204,
     "number": 204,
     "typeOfBias": "Memory Bias",
-    "title": "Rosy Retrospection – the past seems better than it really was",
-    "description": "Do you remember school as fun and carefree, even though you used to complain about homework? Or think that ‘the good old days’ were better, ignoring their struggles? That’s Rosy Retrospection – the tendency to recall the past as happier and easier than it really was.\n\n🔍 Where’s the trap?\n- Nostalgia for childhood – life seemed simple, but stress, fears, and boredom are forgotten.\n- Past relationships – you recall the good times but overlook the conflicts.\n- The ‘good old days’ myth – people say “things were better back then,” ignoring the hardships of that era.\n\n💡 How to use it?\n- Compare objectively – the past seems better because negative details fade over time.\n- Don’t get stuck in idealized memories – life moves forward, and good things happen now too.\n- Use nostalgia positively – let it inspire you, but don’t live in the past.",
+    "title": "Rosy Retrospection – when a past experience is remembered more positively",
+    "description": "Rosy Retrospection is a pattern in which a past experience can be evaluated more positively in later memory than it was evaluated while it was happening. The classic studies followed specific events and compared anticipation, in-the-moment experience, and later recollection. The idea is narrower than nostalgia and does not mean that every happy memory is inaccurate.\n\nWhere can it show up?\n- Travel and events: a trip remembered as wonderful included frustrations that were much more noticeable while it was happening.\n- Projects and jobs: an earlier role or project is remembered through its best moments while routine problems receive less weight.\n- Life periods: a specific experience becomes evidence that an entire earlier era was better, even though the study of one event does not establish a broad historical trend.\n\nA better check\n- Ask whether you are remembering one event or making a claim about a whole period.\n- Compare later memory with notes, ratings, messages, costs, incidents, or other records made during the experience.\n- Keep positive meaning and historical accuracy separate: a memory can be personally valuable without being a complete average of how the event felt at the time.\n- Do not turn Rosy Retrospection into a general claim that nostalgia is false.",
     "slug": "memory-bias-rosy-retrospection",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T18:49:04.021Z",
+    "updatedAt": "2026-08-18T00:00:00.000Z",
     "published": true
   },
   {
@@ -2827,7 +2825,6 @@
     "description": "Have you ever felt like time slowed down in a moment of danger? Or that it flew by when you were deeply focused? That’s Tachypsychia – a shift in time perception under stress, fear, or intense concentration.\n\n🔍 Where’s the trap?\n- Dangerous situations – when facing a threat, your brain processes information faster, making time feel slower.\n- Deep work & focus – when fully engaged, time can ‘shrink,’ and hours pass unnoticed.\n- Sports & competition – athletes often experience time slowing down when concentrating on a crucial play or movement.\n\n💡 How to use it?\n- Train focus – mindfulness helps regulate your perception of time.\n- Leverage stress – in critical moments, your brain speeds up, use that for fast decision-making.\n- Slow down joyful moments – if you want to make good times last longer, pay attention to small details around you.",
     "slug": "perception-bias-tachypsychia",
     "related": [
-      212,
       213,
       174
     ],
@@ -2890,7 +2887,8 @@
     "title": "Travis Syndrome – when the present seems more significant than any other time",
     "description": "Do you feel like we’re living through the most important time in history? That’s Travis Syndrome – the tendency to overestimate the significance of the present while underestimating the past.\n\n🔍 Where’s the trap?\n- Technology & progress – it seems like the world has never changed this fast, but past generations thought the same.\n- Politics & society – today’s events feel unprecedented, but similar things have happened before.\n- Personal life – current problems feel massive, yet they often fade with time.\n\n💡 How to avoid it?\n- Study history – many ‘new’ trends have happened before in different forms.\n- Don’t fall for hysteria – times change, but not necessarily for better or worse.\n- Compare objectively – every era has its revolutions, and ours is no exception.",
     "slug": "perception-bias-travis-syndrome",
-    "published": true
+    "published": true,
+    "related": []
   },
   {
     "id": 217,
@@ -2911,7 +2909,8 @@
     "title": "Von Restorff Effect – the odd one out is easiest to remember",
     "description": "Can you forget a long list but remember the one strange word in it? That’s Von Restorff Effect – our brain remembers what stands out the most.\n\n🔍 Where’s the trap?\n- Studying & lists – if one item is unusual, you’ll recall it, but forget the rest.\n- Presentations & advertising – bold colors, shapes, or words grab attention and stick in memory.\n- Conversations & speeches – striking phrases and unexpected examples are remembered better than dry facts.\n\n💡 How to use it?\n- Make key points stand out – if you want something remembered, make it bold or unusual.\n- Use contrasts – highlight key ideas with color, font, or unexpected examples.\n- Avoid overloading – if everything stands out, nothing does.",
     "slug": "memory-bias-von-restorff-effect",
-    "published": true
+    "published": true,
+    "related": []
   },
   {
     "id": 219,
@@ -2923,6 +2922,42 @@
     "related": [],
     "status": "generated",
     "updatedAt": "2025-09-02T06:01:43.816Z",
+    "published": true
+  },
+  {
+    "id": 224,
+    "number": 224,
+    "typeOfBias": "Framing Effect",
+    "title": "Framing Effect – when equivalent descriptions lead to different choices",
+    "description": "Framing Effect is the tendency for a judgment or choice to change when the same underlying information is described in different ways. A common example is risky choice: people can respond differently when equivalent outcomes are presented as gains rather than losses.\n\nWhere can it show up?\n- Risk decisions – a sure outcome can feel different when it is described as people saved rather than people lost.\n- Product and business communication – an outcome described as 90% success may be evaluated differently from the equivalent 10% failure description.\n- AI-assisted decisions – a model or interface can present the same evidence in a positive or negative frame before a person chooses.\n\nA better check\n- Rewrite important options in a neutral form and, when useful, show both the gain and loss descriptions.\n- Keep the actual outcomes, probabilities, and missing information the same when testing whether the frame changed the choice.\n- Record a choice before and after reframing when the decision is important enough to justify the check.\n- Do not treat every wording difference as the same framing effect. Risky-choice, attribute, and goal framing are different research traditions, and their evidence is not equally strong.",
+    "slug": "framing-effect-core",
+    "related": [],
+    "status": "reviewed",
+    "updatedAt": "2026-08-18T16:30:00.000Z",
+    "published": true
+  },
+  {
+    "id": 223,
+    "number": 223,
+    "typeOfBias": "Cognitive Bias",
+    "title": "Sunk Cost Effect – when past costs influence the next choice",
+    "description": "Sunk Cost Effect is the tendency for money, time, or effort that cannot be recovered to influence what you choose next, even when the future costs and benefits should be enough to make the decision.\n\nWhere can it show up?\n- Projects – a team wants to continue mainly because it has already spent a large budget or many months on the work.\n- Purchases and subscriptions – you keep using something you no longer value because you already paid for it.\n- Personal plans – you stay with a course of action because stopping would make earlier effort feel wasted.\n\nA better check\n- Separate what is already gone from what you still have to spend.\n- Ask what you would choose today if the past investment belonged to someone else and could not be recovered either way.\n- Compare the future value of continuing with realistic alternatives for the remaining time, money, and attention.\n- Do not assume that every decision to continue is a sunk-cost error. New information, future value, switching costs, or being close to useful completion can make continuation reasonable.",
+    "slug": "cognitive-bias-sunk-cost-effect",
+    "related": [],
+    "status": "reviewed",
+    "updatedAt": "2026-08-18T16:15:00.000Z",
+    "published": true
+  },
+  {
+    "id": 222,
+    "number": 222,
+    "typeOfBias": "Cognitive Bias",
+    "title": "Anchoring Effect – when a starting number pulls later estimates toward it",
+    "description": "Anchoring Effect is the tendency for an initial number or reference value to pull a later numerical judgment toward it, even when the starting point is weak or not very useful.\n\nWhere can it show up?\n- Negotiation – the first price can influence the range of later offers.\n- Forecasts and estimates – an early target, budget, deadline, or rough guess can shape later numbers before the evidence is fully reviewed.\n- AI-assisted decisions – a suggested score or recommendation can become the starting point for a person’s later judgment.\n\nA better check\n- Make an independent estimate before seeing a suggested number when that is practical.\n- Ask what evidence would justify moving far away from the starting value.\n- Compare the estimate with base rates, completed cases, ranges, or independent estimates instead of adjusting only from the anchor.\n- Do not assume every number creates the same effect. Random, incidental, or clearly irrelevant anchors can be weaker than meaningful starting points.",
+    "slug": "cognitive-bias-anchoring-effect",
+    "related": [],
+    "status": "reviewed",
+    "updatedAt": "2026-08-18T15:58:00.000Z",
     "published": true
   }
 ]

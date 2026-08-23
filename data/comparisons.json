@@ -10,22 +10,76 @@
       "summary": "Both distort retrospective judgment after the result is known, but they target different questions. Hindsight bias makes the result look more predictable in retrospect; outcome bias makes the decision itself look better or worse because the result was good or bad.",
       "keyDifference": "Ask what changed after the outcome became known: your estimate of how predictable the result was, or your evaluation of the decision process?",
       "dimensions": [
-        {"dimension":"Core judgment","left":"How likely or predictable did this outcome seem before it happened?","right":"How good was the decision, reasoning, or decision-maker?"},
-        {"dimension":"Typical retrospective error","left":"The observed outcome now feels more foreseeable or inevitable than it was in foresight.","right":"A lucky result upgrades the decision; an unlucky result downgrades it, even when the original information is unchanged."},
-        {"dimension":"Best pre-outcome record","left":"Forecast, probability estimate, scenario range, or written prediction.","right":"Decision rationale, information set, alternatives considered, expected values, and decision rule."},
-        {"dimension":"What the outcome should be used for","left":"Update future forecasting models without pretending the past was obvious.","right":"Update models and assumptions without rewriting the quality of the original process solely from luck."}
+        {
+          "dimension": "Core judgment",
+          "left": "How likely or predictable did this outcome seem before it happened?",
+          "right": "How good was the decision, reasoning, or decision-maker?"
+        },
+        {
+          "dimension": "Typical retrospective error",
+          "left": "The observed outcome now feels more foreseeable or inevitable than it was in foresight.",
+          "right": "A lucky result upgrades the decision; an unlucky result downgrades it, even when the original information is unchanged."
+        },
+        {
+          "dimension": "Best pre-outcome record",
+          "left": "Forecast, probability estimate, scenario range, or written prediction.",
+          "right": "Decision rationale, information set, alternatives considered, expected values, and decision rule."
+        },
+        {
+          "dimension": "What the outcome should be used for",
+          "left": "Update future forecasting models without pretending the past was obvious.",
+          "right": "Update models and assumptions without rewriting the quality of the original process solely from luck."
+        }
       ],
-      "diagnostic": ["Hide the outcome and reconstruct what was knowable at the decision time.","Write the probability you would have assigned before the outcome. Compare it with any actual forecast that exists.","Score the decision process using only the information, alternatives, and constraints available at the time.","Reveal the outcome and update your model separately. If the outcome changes the forecast-memory judgment, suspect hindsight bias; if it changes the process-quality score, suspect outcome bias."],
+      "diagnostic": [
+        "Hide the outcome and reconstruct what was knowable at the decision time.",
+        "Write the probability you would have assigned before the outcome. Compare it with any actual forecast that exists.",
+        "Score the decision process using only the information, alternatives, and constraints available at the time.",
+        "Reveal the outcome and update your model separately. If the outcome changes the forecast-memory judgment, suspect hindsight bias; if it changes the process-quality score, suspect outcome bias."
+      ],
       "examples": [
-        {"title":"Product launch","left":"After a failed launch, the team says the failure was obvious from the warning signs, even though the pre-launch forecast gave failure a modest probability.","right":"The same team concludes that launching was a bad decision solely because the launch failed, even if the expected-value case and evidence available at the time were reasonable."},
-        {"title":"Incident review","left":"Once the failure path is known, weak signals in the logs suddenly look like an unmistakable chain that anyone should have predicted.","right":"A responder's earlier choice is rated as incompetent because the incident worsened, even though the same choice might have been judged sound under the information available then."},
-        {"title":"Hiring decision","left":"After a hire performs badly, interview concerns are remembered as clearer and more predictive than they appeared during selection.","right":"The hiring process is judged poor because this person failed, without asking whether the process was calibrated across many hires or whether this outcome was partly noise."}
+        {
+          "title": "Product launch",
+          "left": "After a failed launch, the team says the failure was obvious from the warning signs, even though the pre-launch forecast gave failure a modest probability.",
+          "right": "The same team concludes that launching was a bad decision solely because the launch failed, even if the expected-value case and evidence available at the time were reasonable."
+        },
+        {
+          "title": "Incident review",
+          "left": "Once the failure path is known, weak signals in the logs suddenly look like an unmistakable chain that anyone should have predicted.",
+          "right": "A responder's earlier choice is rated as incompetent because the incident worsened, even though the same choice might have been judged sound under the information available then."
+        },
+        {
+          "title": "Hiring decision",
+          "left": "After a hire performs badly, interview concerns are remembered as clearer and more predictive than they appeared during selection.",
+          "right": "The hiring process is judged poor because this person failed, without asking whether the process was calibrated across many hires or whether this outcome was partly noise."
+        }
       ],
-      "reviewProtocol": ["Freeze the outcome temporarily.","Reconstruct the original information set and realistic alternatives.","Score forecast quality and decision-process quality separately.","Only then reveal the outcome and record what it teaches about the model, assumptions, or environment.","Compare the retrospective story with contemporaneous notes. If there are no notes, mark the reconstruction as uncertain rather than treating memory as a recording."],
+      "reviewProtocol": [
+        "Freeze the outcome temporarily.",
+        "Reconstruct the original information set and realistic alternatives.",
+        "Score forecast quality and decision-process quality separately.",
+        "Only then reveal the outcome and record what it teaches about the model, assumptions, or environment.",
+        "Compare the retrospective story with contemporaneous notes. If there are no notes, mark the reconstruction as uncertain rather than treating memory as a recording."
+      ],
       "sources": [
-        {"title":"Fifty years of hindsight bias research—Reflection on Fischhoff (1975)","year":2025,"doi":"10.1037/xhp0001232","url":"https://pubmed.ncbi.nlm.nih.gov/39913490/"},
-        {"title":"Outcome bias in decision evaluation","year":1988,"doi":"10.1037/0022-3514.54.4.569","url":"https://pubmed.ncbi.nlm.nih.gov/3367280/"},
-        {"title":"Outcomes Affect Evaluations of Decision Quality: Replication and Extensions of Baron and Hershey's (1988) Outcome Bias Experiment 1","year":2023,"doi":"10.5334/irsp.751","url":"https://pubmed.ncbi.nlm.nih.gov/40951810/"}
+        {
+          "title": "Fifty years of hindsight bias research—Reflection on Fischhoff (1975)",
+          "year": 2025,
+          "doi": "10.1037/xhp0001232",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39913490/"
+        },
+        {
+          "title": "Outcome bias in decision evaluation",
+          "year": 1988,
+          "doi": "10.1037/0022-3514.54.4.569",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
+        },
+        {
+          "title": "Outcomes Affect Evaluations of Decision Quality: Replication and Extensions of Baron and Hershey's (1988) Outcome Bias Experiment 1",
+          "year": 2023,
+          "doi": "10.5334/irsp.751",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40951810/"
+        }
       ]
     },
     {
@@ -37,23 +91,82 @@
       "summary": "Both let a known result reshape a retrospective judgment, but the target is different. Outcome bias changes how good or bad a decision process looks; moral luck changes blame, praise, punishment, or moral responsibility while also depending on the actor's intentions, beliefs, causal role, and controllable risk.",
       "keyDifference": "Ask what you are judging: the quality of the decision process, or the moral responsibility and blameworthiness of the person who acted?",
       "dimensions": [
-        {"dimension":"Core judgment","left":"Was this a good decision or a good decision process?","right":"How blameworthy, praiseworthy, punishable, or morally responsible is the actor?"},
-        {"dimension":"Role of the outcome","left":"A good result can upgrade the perceived quality of the decision; a bad result can downgrade it even when the ex-ante information is held constant.","right":"A harmful or beneficial result can change moral evaluation even when much of the actor's choice is similar, but the effect interacts with intention, belief, negligence, and causal responsibility."},
-        {"dimension":"Mental-state information","left":"Relevant because beliefs and information shape whether the original process was reasonable, but they are not the defining target of the bias.","right":"Central. What the actor intended and reasonably believed can substantially change blame and can explain part of an apparent moral-luck effect."},
-        {"dimension":"Best review record","left":"Decision rationale, information set, alternatives, expected values, assumptions, and decision rule recorded before the result.","right":"The same ex-ante record plus intention, belief justification, controllable risk, causal contribution, and the moral judgment being made."}
+        {
+          "dimension": "Core judgment",
+          "left": "Was this a good decision or a good decision process?",
+          "right": "How blameworthy, praiseworthy, punishable, or morally responsible is the actor?"
+        },
+        {
+          "dimension": "Role of the outcome",
+          "left": "A good result can upgrade the perceived quality of the decision; a bad result can downgrade it even when the ex-ante information is held constant.",
+          "right": "A harmful or beneficial result can change moral evaluation even when much of the actor's choice is similar, but the effect interacts with intention, belief, negligence, and causal responsibility."
+        },
+        {
+          "dimension": "Mental-state information",
+          "left": "Relevant because beliefs and information shape whether the original process was reasonable, but they are not the defining target of the bias.",
+          "right": "Central. What the actor intended and reasonably believed can substantially change blame and can explain part of an apparent moral-luck effect."
+        },
+        {
+          "dimension": "Best review record",
+          "left": "Decision rationale, information set, alternatives, expected values, assumptions, and decision rule recorded before the result.",
+          "right": "The same ex-ante record plus intention, belief justification, controllable risk, causal contribution, and the moral judgment being made."
+        }
       ],
-      "diagnostic": ["Name the judgment first: decision quality, moral wrongness, blame, praise, or punishment.","Reconstruct the actor's information, beliefs, intentions, options, and controllable risks before revealing the result.","Imagine a matched counterfactual where the same choice produces the opposite outcome because of luck. Check which judgment changes.","If process quality changes mainly with the result, outcome bias is the closer lens. If blame or responsibility changes, examine moral luck while still checking whether the bad result altered how you interpret the actor's beliefs or negligence."],
+      "diagnostic": [
+        "Name the judgment first: decision quality, moral wrongness, blame, praise, or punishment.",
+        "Reconstruct the actor's information, beliefs, intentions, options, and controllable risks before revealing the result.",
+        "Imagine a matched counterfactual where the same choice produces the opposite outcome because of luck. Check which judgment changes.",
+        "If process quality changes mainly with the result, outcome bias is the closer lens. If blame or responsibility changes, examine moral luck while still checking whether the bad result altered how you interpret the actor's beliefs or negligence."
+      ],
       "examples": [
-        {"title":"Safety decision","left":"Two managers approve the same defensible safety procedure; one later experiences an accident and their decision is rated much worse solely because the rare failure occurred.","right":"Two people take the same negligent risk; only one causes serious harm, and that person receives much more blame or punishment partly because the harmful outcome occurred."},
-        {"title":"Investment","left":"An investment process is judged brilliant after a profit and foolish after a loss even when the information and method were identical at the time of choice.","right":"A losing investment is judged less moral or its decision-maker less ethically acceptable than a matched profitable investment, despite comparable intentions and ex-ante reasoning."},
-        {"title":"Incident review","left":"A responder's action is scored as a bad operational decision because the incident escalated, without reconstructing the signals available then.","right":"The same outcome is used to infer that the responder was morally reckless or deserving of blame, without separating what they knew, intended, controlled, and actually caused."}
+        {
+          "title": "Safety decision",
+          "left": "Two managers approve the same defensible safety procedure; one later experiences an accident and their decision is rated much worse solely because the rare failure occurred.",
+          "right": "Two people take the same negligent risk; only one causes serious harm, and that person receives much more blame or punishment partly because the harmful outcome occurred."
+        },
+        {
+          "title": "Investment",
+          "left": "An investment process is judged brilliant after a profit and foolish after a loss even when the information and method were identical at the time of choice.",
+          "right": "A losing investment is judged less moral or its decision-maker less ethically acceptable than a matched profitable investment, despite comparable intentions and ex-ante reasoning."
+        },
+        {
+          "title": "Incident review",
+          "left": "A responder's action is scored as a bad operational decision because the incident escalated, without reconstructing the signals available then.",
+          "right": "The same outcome is used to infer that the responder was morally reckless or deserving of blame, without separating what they knew, intended, controlled, and actually caused."
+        }
       ],
-      "reviewProtocol": ["State whether the review is evaluating process quality or moral responsibility before discussing the outcome.","Freeze the ex-ante information, beliefs, intentions, available actions, and controllable risks.","Compare a matched good-outcome and bad-outcome version of the same choice.","Score process quality separately from wrongness, blame, praise, and punishment.","Use the real outcome to update risk models and future safeguards, but do not let it silently rewrite the actor's prior mental state."],
+      "reviewProtocol": [
+        "State whether the review is evaluating process quality or moral responsibility before discussing the outcome.",
+        "Freeze the ex-ante information, beliefs, intentions, available actions, and controllable risks.",
+        "Compare a matched good-outcome and bad-outcome version of the same choice.",
+        "Score process quality separately from wrongness, blame, praise, and punishment.",
+        "Use the real outcome to update risk models and future safeguards, but do not let it silently rewrite the actor's prior mental state."
+      ],
       "sources": [
-        {"title":"Outcome bias in decision evaluation","year":1988,"doi":"10.1037/0022-3514.54.4.569","url":"https://pubmed.ncbi.nlm.nih.gov/3367280/"},
-        {"title":"Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment","year":2008,"doi":"10.1016/j.cognition.2008.03.006","url":"https://pubmed.ncbi.nlm.nih.gov/18439575/"},
-        {"title":"Investigating the Neural and Cognitive Basis of Moral Luck: It's Not What You Do but What You Know","year":2010,"doi":"10.1007/s13164-010-0027-y","url":"https://pubmed.ncbi.nlm.nih.gov/22558062/"},
-        {"title":"Moral luck in investment contexts: We consciously find unprofitable investments less moral","year":2023,"doi":"10.1371/journal.pone.0278677","url":"https://pubmed.ncbi.nlm.nih.gov/36649364/"}
+        {
+          "title": "Outcome bias in decision evaluation",
+          "year": 1988,
+          "doi": "10.1037/0022-3514.54.4.569",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/3367280/"
+        },
+        {
+          "title": "Crime and punishment: distinguishing the roles of causal and intentional analyses in moral judgment",
+          "year": 2008,
+          "doi": "10.1016/j.cognition.2008.03.006",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18439575/"
+        },
+        {
+          "title": "Investigating the Neural and Cognitive Basis of Moral Luck: It's Not What You Do but What You Know",
+          "year": 2010,
+          "doi": "10.1007/s13164-010-0027-y",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22558062/"
+        },
+        {
+          "title": "Moral luck in investment contexts: We consciously find unprofitable investments less moral",
+          "year": 2023,
+          "doi": "10.1371/journal.pone.0278677",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/36649364/"
+        }
       ]
     },
     {
@@ -65,23 +178,82 @@
       "summary": "Both can involve resistance to evidence, but they are not the same construct. Confirmation bias is a broad family of search, testing, interpretation, and memory tendencies shaped by existing beliefs; the backfire effect is the narrower outcome in which a correction makes belief in the targeted false claim stronger.",
       "keyDifference": "Ask whether you are observing selective information processing, or a measured increase in the false belief after a correction. Without the latter, you have not shown a backfire effect.",
       "dimensions": [
-        {"dimension":"Core pattern","left":"Existing beliefs or hypotheses influence which information is sought, tested, interpreted, remembered, or given weight.","right":"A correction increases belief in the specific false claim it was intended to reduce."},
-        {"dimension":"Does a correction have to occur?","left":"No. Confirmation bias can shape information processing before any explicit correction or challenge appears.","right":"Yes. Backfire is defined relative to a corrective intervention and the direction of subsequent belief change."},
-        {"dimension":"Does the original belief have to get stronger?","left":"No. A person can selectively seek or interpret confirming evidence while the strength of the belief stays similar.","right":"Yes. Mere disagreement, anger, distrust, or failure to change is not enough; belief in the corrected false claim must increase relative to an appropriate baseline."},
-        {"dimension":"Evidence status","left":"A broad, well-established research area with multiple forms and mechanisms across hypothesis testing and information processing.","right":"A real but uncommon and context-sensitive correction outcome that should not be assumed whenever someone resists factual correction."}
+        {
+          "dimension": "Core pattern",
+          "left": "Existing beliefs or hypotheses influence which information is sought, tested, interpreted, remembered, or given weight.",
+          "right": "A correction increases belief in the specific false claim it was intended to reduce."
+        },
+        {
+          "dimension": "Does a correction have to occur?",
+          "left": "No. Confirmation bias can shape information processing before any explicit correction or challenge appears.",
+          "right": "Yes. Backfire is defined relative to a corrective intervention and the direction of subsequent belief change."
+        },
+        {
+          "dimension": "Does the original belief have to get stronger?",
+          "left": "No. A person can selectively seek or interpret confirming evidence while the strength of the belief stays similar.",
+          "right": "Yes. Mere disagreement, anger, distrust, or failure to change is not enough; belief in the corrected false claim must increase relative to an appropriate baseline."
+        },
+        {
+          "dimension": "Evidence status",
+          "left": "A broad, well-established research area with multiple forms and mechanisms across hypothesis testing and information processing.",
+          "right": "A real but uncommon and context-sensitive correction outcome that should not be assumed whenever someone resists factual correction."
+        }
       ],
-      "diagnostic": ["Write the exact belief or hypothesis under review and, when possible, the starting confidence in it.","Check the information process: were supporting cases searched for, disconfirming cases avoided, or evidence judged by different standards? Those are confirmation-bias questions.","If a correction occurs, measure belief in the same targeted claim afterwards rather than inferring belief change from tone, argument, or source distrust.","Call it backfire only if the correction is followed by stronger belief in the targeted false claim. Otherwise describe the observed process more narrowly: selective search, selective interpretation, no correction effect, reactance, distrust, or continued influence."],
+      "diagnostic": [
+        "Write the exact belief or hypothesis under review and, when possible, the starting confidence in it.",
+        "Check the information process: were supporting cases searched for, disconfirming cases avoided, or evidence judged by different standards? Those are confirmation-bias questions.",
+        "If a correction occurs, measure belief in the same targeted claim afterwards rather than inferring belief change from tone, argument, or source distrust.",
+        "Call it backfire only if the correction is followed by stronger belief in the targeted false claim. Otherwise describe the observed process more narrowly: selective search, selective interpretation, no correction effect, reactance, distrust, or continued influence."
+      ],
       "examples": [
-        {"title":"AI-assisted research","left":"A user repeatedly asks an AI for arguments supporting a preferred architecture and does not request failure cases or competing explanations.","right":"After receiving a clear correction that a cited benchmark result was false, the user's measured confidence in that same false benchmark claim rises."},
-        {"title":"Fact-checking","left":"A reader treats weak evidence from an agreeable source as persuasive while demanding much stronger evidence from an opposing source.","right":"A fact-check causes the reader to endorse the corrected factual falsehood more strongly than before the fact-check."},
-        {"title":"Project review","left":"A team searches logs for clues supporting its favored root cause and stops once it finds a plausible match.","right":"A corrective analysis directly addressing that root-cause claim is followed by stronger confidence in the disproven cause, not merely frustration with the review."}
+        {
+          "title": "AI-assisted research",
+          "left": "A user repeatedly asks an AI for arguments supporting a preferred architecture and does not request failure cases or competing explanations.",
+          "right": "After receiving a clear correction that a cited benchmark result was false, the user's measured confidence in that same false benchmark claim rises."
+        },
+        {
+          "title": "Fact-checking",
+          "left": "A reader treats weak evidence from an agreeable source as persuasive while demanding much stronger evidence from an opposing source.",
+          "right": "A fact-check causes the reader to endorse the corrected factual falsehood more strongly than before the fact-check."
+        },
+        {
+          "title": "Project review",
+          "left": "A team searches logs for clues supporting its favored root cause and stops once it finds a plausible match.",
+          "right": "A corrective analysis directly addressing that root-cause claim is followed by stronger confidence in the disproven cause, not merely frustration with the review."
+        }
       ],
-      "reviewProtocol": ["Separate the information-processing question from the belief-change question.","Record the target belief and pre-correction confidence when testing for backfire.","Use the same claim and comparable measurement after correction; do not substitute attitude, trust, or emotional reaction for factual belief.","When evaluating confirmation bias, inspect search strategy, falsification opportunities, evidence standards, and interpretation across competing hypotheses.","Name only the pattern the evidence supports. Resistance to correction is not automatically backfire, and confirmation bias is not proof that a correction made beliefs worse."],
+      "reviewProtocol": [
+        "Separate the information-processing question from the belief-change question.",
+        "Record the target belief and pre-correction confidence when testing for backfire.",
+        "Use the same claim and comparable measurement after correction; do not substitute attitude, trust, or emotional reaction for factual belief.",
+        "When evaluating confirmation bias, inspect search strategy, falsification opportunities, evidence standards, and interpretation across competing hypotheses.",
+        "Name only the pattern the evidence supports. Resistance to correction is not automatically backfire, and confirmation bias is not proof that a correction made beliefs worse."
+      ],
       "sources": [
-        {"title":"On the Failure to Eliminate Hypotheses in a Conceptual Task","year":1960,"doi":"10.1080/17470216008416717","url":"https://doi.org/10.1080/17470216008416717"},
-        {"title":"Confirmation Bias: A Ubiquitous Phenomenon in Many Guises","year":1998,"doi":"10.1037/1089-2680.2.2.175","url":"https://doi.org/10.1037/1089-2680.2.2.175"},
-        {"title":"Searching for the Backfire Effect: Measurement and Design Considerations","year":2020,"doi":"10.1016/j.jarmac.2020.06.006","url":"https://doi.org/10.1016/j.jarmac.2020.06.006"},
-        {"title":"Factual corrections: Concerns and current evidence","year":2024,"doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
+        {
+          "title": "On the Failure to Eliminate Hypotheses in a Conceptual Task",
+          "year": 1960,
+          "doi": "10.1080/17470216008416717",
+          "url": "https://doi.org/10.1080/17470216008416717"
+        },
+        {
+          "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+          "year": 1998,
+          "doi": "10.1037/1089-2680.2.2.175",
+          "url": "https://doi.org/10.1037/1089-2680.2.2.175"
+        },
+        {
+          "title": "Searching for the Backfire Effect: Measurement and Design Considerations",
+          "year": 2020,
+          "doi": "10.1016/j.jarmac.2020.06.006",
+          "url": "https://doi.org/10.1016/j.jarmac.2020.06.006"
+        },
+        {
+          "title": "Factual corrections: Concerns and current evidence",
+          "year": 2024,
+          "doi": "10.1016/j.copsyc.2023.101715",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101715"
+        }
       ]
     },
     {
@@ -93,10 +265,26 @@
       "summary": "Both happen in the context of correcting misinformation, but they describe different outcomes. Continued influence means the correction helps yet some influence of the old information remains. Backfire is the narrower case where the correction makes belief in the targeted false claim stronger.",
       "keyDifference": "Ask what happened to the false claim after correction: did its influence decrease but remain above zero, or did belief in the claim actually increase? The first can be continued influence; only the second is backfire.",
       "dimensions": [
-        {"dimension":"What happens after correction?","left":"Reliance on the false information is reduced but not eliminated, so it can still affect later inference or judgment.","right":"Belief in the targeted false claim becomes stronger after the correction relative to the relevant baseline."},
-        {"dimension":"Does the correction help?","left":"Often yes. Partial improvement and continued influence can occur at the same time.","right":"Not on the targeted belief. By definition, the measured belief moves in the wrong direction."},
-        {"dimension":"What is not enough?","left":"Simply remembering the original claim is not enough; the corrected misinformation must still affect belief, inference, or judgment.","right":"Disagreement, anger, distrust, no change, or incomplete updating are not enough. The false belief must actually strengthen."},
-        {"dimension":"How common is it?","left":"A robust finding across misinformation-correction research, although its size varies with the task and correction.","right":"A documented but uncommon and context-sensitive outcome. Recent reviews find factual corrections generally improve belief accuracy and true backfire is rare."}
+        {
+          "dimension": "What happens after correction?",
+          "left": "Reliance on the false information is reduced but not eliminated, so it can still affect later inference or judgment.",
+          "right": "Belief in the targeted false claim becomes stronger after the correction relative to the relevant baseline."
+        },
+        {
+          "dimension": "Does the correction help?",
+          "left": "Often yes. Partial improvement and continued influence can occur at the same time.",
+          "right": "Not on the targeted belief. By definition, the measured belief moves in the wrong direction."
+        },
+        {
+          "dimension": "What is not enough?",
+          "left": "Simply remembering the original claim is not enough; the corrected misinformation must still affect belief, inference, or judgment.",
+          "right": "Disagreement, anger, distrust, no change, or incomplete updating are not enough. The false belief must actually strengthen."
+        },
+        {
+          "dimension": "How common is it?",
+          "left": "A robust finding across misinformation-correction research, although its size varies with the task and correction.",
+          "right": "A documented but uncommon and context-sensitive outcome. Recent reviews find factual corrections generally improve belief accuracy and true backfire is rare."
+        }
       ],
       "diagnostic": [
         "Write the exact false claim and measure the relevant belief or inference before the correction when possible.",
@@ -105,9 +293,21 @@
         "Use the term backfire only if belief in the targeted false claim increased after correction. Do not infer it from argument, frustration, distrust, or continued influence."
       ],
       "examples": [
-        {"title":"Breaking news","left":"A news report first blames a fire on faulty wiring. The report is corrected, and readers accept the correction, but some still use the wiring explanation when reasoning about later details.","right":"After the wiring claim is clearly corrected, readers become more confident that faulty wiring caused the fire than they were before the correction."},
-        {"title":"Incident review","left":"A team removes an early root-cause claim from the record, yet parts of the later discussion still assume that cause when explaining the timeline.","right":"After a corrective analysis rules the cause out, measured confidence in that same disproven cause rises."},
-        {"title":"AI-generated claim","left":"A user learns that a generated statistic was false but later still uses it as part of an explanation or estimate.","right":"After the statistic is corrected, the user reports stronger belief in that exact false statistic than before the correction."}
+        {
+          "title": "Breaking news",
+          "left": "A news report first blames a fire on faulty wiring. The report is corrected, and readers accept the correction, but some still use the wiring explanation when reasoning about later details.",
+          "right": "After the wiring claim is clearly corrected, readers become more confident that faulty wiring caused the fire than they were before the correction."
+        },
+        {
+          "title": "Incident review",
+          "left": "A team removes an early root-cause claim from the record, yet parts of the later discussion still assume that cause when explaining the timeline.",
+          "right": "After a corrective analysis rules the cause out, measured confidence in that same disproven cause rises."
+        },
+        {
+          "title": "AI-generated claim",
+          "left": "A user learns that a generated statistic was false but later still uses it as part of an explanation or estimate.",
+          "right": "After the statistic is corrected, the user reports stronger belief in that exact false statistic than before the correction."
+        }
       ],
       "reviewProtocol": [
         "Use the same target claim before and after correction where measurement is possible.",
@@ -117,10 +317,969 @@
         "Reserve backfire for measured strengthening of the targeted false belief."
       ],
       "sources": [
-        {"title":"Misinformation and Its Correction: Continued Influence and Successful Debiasing","year":2012,"doi":"10.1177/1529100612451018","url":"https://doi.org/10.1177/1529100612451018"},
-        {"title":"Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation","year":2017,"doi":"10.1177/0956797617714579","url":"https://doi.org/10.1177/0956797617714579"},
-        {"title":"The psychological drivers of misinformation belief and its resistance to correction","year":2022,"doi":"10.1038/s44159-021-00006-y","url":"https://doi.org/10.1038/s44159-021-00006-y"},
-        {"title":"Factual corrections: Concerns and current evidence","year":2024,"doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
+        {
+          "title": "Misinformation and Its Correction: Continued Influence and Successful Debiasing",
+          "year": 2012,
+          "doi": "10.1177/1529100612451018",
+          "url": "https://doi.org/10.1177/1529100612451018"
+        },
+        {
+          "title": "Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation",
+          "year": 2017,
+          "doi": "10.1177/0956797617714579",
+          "url": "https://doi.org/10.1177/0956797617714579"
+        },
+        {
+          "title": "The psychological drivers of misinformation belief and its resistance to correction",
+          "year": 2022,
+          "doi": "10.1038/s44159-021-00006-y",
+          "url": "https://doi.org/10.1038/s44159-021-00006-y"
+        },
+        {
+          "title": "Factual corrections: Concerns and current evidence",
+          "year": 2024,
+          "doi": "10.1016/j.copsyc.2023.101715",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101715"
+        }
+      ]
+    },
+    {
+      "slug": "anchoring-effect-vs-automation-bias",
+      "leftSlug": "cognitive-bias-anchoring-effect",
+      "rightSlug": "false-priors-automation-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Anchoring Effect vs Automation Bias",
+      "summary": "Both can distort AI-assisted decisions, but the error is different. Anchoring pulls a judgment toward a starting value; automation bias is inappropriate reliance on automated advice or cues.",
+      "keyDifference": "Ask what is driving the judgment: the specific starting number, or the fact that the recommendation came from an automated system?",
+      "dimensions": [
+        {
+          "dimension": "Core pattern",
+          "left": "A starting numerical value pulls the later estimate toward it.",
+          "right": "A person follows or defers to automated advice when independent checking would justify a different response."
+        },
+        {
+          "dimension": "Does automation have to be involved?",
+          "left": "No. Anchors can come from people, prices, targets, previous estimates, random values, or automated systems.",
+          "right": "Yes. The defining feature is reliance on an automated cue, recommendation, alert, or decision aid."
+        },
+        {
+          "dimension": "Does a number have to be involved?",
+          "left": "The classic evidence is strongest for numerical judgments and reference values.",
+          "right": "No. Automation bias can involve a classification, alert, route, diagnosis, recommendation, or omission as well as a number."
+        },
+        {
+          "dimension": "Best diagnostic check",
+          "left": "Form an independent estimate or compare against base rates and alternative reference points, then see how much the original number still pulls the judgment.",
+          "right": "Check whether the recommendation is being accepted because the system produced it and whether contradictory source evidence is being ignored or left unexamined."
+        }
+      ],
+      "diagnostic": [
+        "Write the automated recommendation and identify any numerical value it supplied.",
+        "Make or reconstruct an independent judgment using source evidence, base rates, or a separate estimate.",
+        "Change or remove the starting number while keeping the automation source similar. If the judgment follows the number, anchoring is the closer lens.",
+        "Change the source or expose contradictory evidence while keeping the recommendation similar. If the person still defers mainly because the system recommended it, automation bias is the closer lens."
+      ],
+      "examples": [
+        {
+          "title": "Performance review",
+          "left": "An AI suggests a score of 8.2 and the manager’s later rating stays close to that value even after reviewing the employee’s evidence.",
+          "right": "The manager accepts the AI rating despite clear contradictory performance evidence because the automated system is assumed to have processed the data better."
+        },
+        {
+          "title": "Project estimate",
+          "left": "A model proposes 12 weeks and the team’s revised estimate remains near 12 even though comparable projects point to a much wider range.",
+          "right": "The team skips its normal estimate review because the model is treated as the authoritative estimator."
+        },
+        {
+          "title": "Risk score",
+          "left": "A generated risk score becomes the numerical reference point around which later discussion moves.",
+          "right": "Reviewers ignore a missing input or obvious data-quality issue because the automated risk system still returned a recommendation."
+        }
+      ],
+      "reviewProtocol": [
+        "Record the human judgment or range before automated advice when the decision is important enough to justify it.",
+        "Separate the recommendation’s content from its source: what number or claim was supplied, and who or what supplied it?",
+        "Compare against independent evidence, relevant base rates, and at least one alternative estimate.",
+        "Ask whether changing the starting value changes the final number and whether changing the automated source changes the willingness to rely on it.",
+        "Name only the pattern the evidence supports. An AI number can anchor a judgment without proving automation bias, and automation bias can occur without numerical anchoring."
+      ],
+      "sources": [
+        {
+          "title": "Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis",
+          "year": 2026,
+          "doi": "10.1287/mnsc.2023.03238",
+          "url": "https://doi.org/10.1287/mnsc.2023.03238"
+        },
+        {
+          "title": "Automation bias: a systematic review of frequency, effect mediators, and mitigators",
+          "year": 2011,
+          "doi": "10.1136/amiajnl-2011-000089",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21685142/"
+        },
+        {
+          "title": "How was my performance? Exploring the role of anchoring bias in AI-assisted decision making",
+          "year": 2025,
+          "doi": "10.1016/j.ijinfomgt.2025.102875",
+          "url": "https://doi.org/10.1016/j.ijinfomgt.2025.102875"
+        }
+      ]
+    },
+    {
+      "slug": "availability-heuristic-vs-illusory-truth-effect",
+      "leftSlug": "heuristic-bias-availability-bias",
+      "rightSlug": "truth-judgment-illusory-truth-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Availability Heuristic vs Illusory Truth Effect",
+      "summary": "Both can make familiar information influential, but they affect different judgments. Availability uses accessible examples as a cue for frequency or probability; illusory truth is the tendency for repeated statements to be judged as more true than comparable new statements.",
+      "keyDifference": "Ask what changed: how common or likely the event seems, or how true the statement seems?",
+      "dimensions": [
+        {
+          "dimension": "Core judgment",
+          "left": "How frequent, likely, or representative is this event or category?",
+          "right": "How true or credible is this specific statement?"
+        },
+        {
+          "dimension": "Role of memory",
+          "left": "Examples or scenarios that come to mind easily can receive more weight in frequency or probability judgments.",
+          "right": "Prior exposure can make a statement more familiar or fluent, increasing its judged truth on average."
+        },
+        {
+          "dimension": "Does repetition have to occur?",
+          "left": "No. Accessibility can come from vividness, recency, personal experience, search, or real frequency as well as repetition.",
+          "right": "Yes. The defining manipulation compares repeated information with comparable new information."
+        },
+        {
+          "dimension": "Best check",
+          "left": "Compare remembered examples with a base rate or deliberately sampled reference set.",
+          "right": "Trace the statement to independent evidence and do not treat familiarity or repeated exposure as proof."
+        }
+      ],
+      "diagnostic": [
+        "Write the exact judgment: frequency/probability or truth/credibility.",
+        "List the examples that came to mind and ask why they were accessible. Compare them with a broader reference set when possible.",
+        "Trace repeated versions of a claim back to their sources. Multiple repetitions of one source are not multiple pieces of evidence.",
+        "If accessibility changes the estimated frequency, availability is the closer lens. If repetition changes belief in the statement’s truth, illusory truth is the closer lens. Both can occur together."
+      ],
+      "examples": [
+        {
+          "title": "AI answers",
+          "left": "Several memorable examples of a model failure make that type of failure seem very common without checking benchmark or incident rates.",
+          "right": "A factual claim appears in several generated answers and begins to feel more credible because the wording has become familiar."
+        },
+        {
+          "title": "News and risk",
+          "left": "A striking incident is easy to recall, so a reader gives it more weight when estimating how often the event occurs.",
+          "right": "A repeated claim about the incident is judged as more true after several exposures even when no new evidence was added."
+        },
+        {
+          "title": "Project review",
+          "left": "One vivid failed project becomes the main reference for estimating the failure rate of a new project.",
+          "right": "A causal explanation repeated across meetings feels increasingly credible despite coming from the same original assumption."
+        }
+      ],
+      "reviewProtocol": [
+        "Name the target judgment before discussing bias: frequency, probability, truth, or something else.",
+        "For frequency judgments, compare accessible examples with a relevant denominator, base rate, or sampled reference set.",
+        "For truth judgments, separate the number of exposures from the number and quality of independent sources.",
+        "Do not call repeated information 'availability bias' merely because it is familiar, and do not call every memorable example an illusory-truth effect.",
+        "When both processes may be present, check frequency and truth separately."
+      ],
+      "sources": [
+        {
+          "title": "Availability: A heuristic for judging frequency and probability",
+          "year": 1973,
+          "doi": "10.1016/0010-0285(73)90033-9",
+          "url": "https://doi.org/10.1016/0010-0285(73)90033-9"
+        },
+        {
+          "title": "Frequency and the conference of referential validity",
+          "year": 1977,
+          "doi": "10.1016/S0022-5371(77)80012-1",
+          "url": "https://doi.org/10.1016/S0022-5371(77)80012-1"
+        },
+        {
+          "title": "The illusory truth effect: A review of how repetition increases belief in misinformation",
+          "year": 2024,
+          "doi": "10.1016/j.copsyc.2023.101736",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38113667/"
+        },
+        {
+          "title": "The perception of dramatic risks: Biased media, but unbiased minds",
+          "year": 2024,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38368678/"
+        }
+      ]
+    },
+    {
+      "slug": "confirmation-bias-vs-congruence-bias",
+      "leftSlug": "cognitive-bias-confirmation-bias",
+      "rightSlug": "confirmation-bias-congruence-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Confirmation Bias vs Congruence Bias",
+      "summary": "Confirmation Bias is a broad umbrella for belief-consistent search and interpretation. Congruence Bias is narrower: it concerns choosing a hypothesis test that fits the favored explanation but does not discriminate well among competing explanations.",
+      "keyDifference": "Ask whether the problem is broad evidence processing around an existing belief, or specifically the choice of a test whose likely result is congruent with one hypothesis but insufficiently diagnostic against alternatives.",
+      "dimensions": [
+        {
+          "dimension": "Scope",
+          "left": "Broad patterns in information search, interpretation, weighting, memory, and hypothesis testing.",
+          "right": "A narrower failure in selecting or valuing diagnostic tests among competing hypotheses."
+        },
+        {
+          "dimension": "Typical question",
+          "left": "What evidence would make me change this belief, and am I applying the same standard to supporting and challenging evidence?",
+          "right": "If this test is positive, would a plausible alternative hypothesis predict the same result?"
+        },
+        {
+          "dimension": "Positive evidence",
+          "left": "Supportive evidence can be overweighted or challenging evidence can receive less attention or stricter scrutiny.",
+          "right": "A positive result is weak when several hypotheses predict it; the problem is low diagnosticity, not positivity itself."
+        },
+        {
+          "dimension": "Best countermeasure",
+          "left": "Predefine disconfirming evidence and compare competing explanations using the same standard.",
+          "right": "List alternatives and choose observations where the hypotheses make meaningfully different predictions."
+        }
+      ],
+      "diagnostic": [
+        "Write the current belief or leading hypothesis and what evidence would weaken it.",
+        "List at least one plausible alternative explanation before gathering another round of evidence.",
+        "For each proposed test, predict the likely result under the focal and alternative hypotheses.",
+        "Prefer tests where outcomes separate the explanations rather than merely allowing the favored hypothesis to receive another positive result.",
+        "Use the broader Confirmation Bias label only when the issue extends beyond test choice into search, interpretation, weighting, or memory."
+      ],
+      "examples": [
+        {
+          "title": "Software troubleshooting",
+          "left": "An engineer gives more weight to logs that support the suspected root cause and discounts contradictory traces.",
+          "right": "An engineer runs a test that the suspected cause should pass, but a second likely cause would pass the same test."
+        },
+        {
+          "title": "Product research",
+          "left": "A team interprets ambiguous customer comments as support for the roadmap it already prefers.",
+          "right": "A team asks whether users like a new feature without designing a comparison that separates feature value from novelty or selection effects."
+        },
+        {
+          "title": "AI-assisted analysis",
+          "left": "A user repeatedly prompts a model to strengthen one explanation and judges supportive outputs as more credible.",
+          "right": "A user asks the model for evidence expected under the favored explanation but never asks what observation would distinguish it from a rival explanation."
+        }
+      ],
+      "reviewProtocol": [
+        "State the focal belief and at least one alternative explanation.",
+        "Write what evidence would count against each explanation before reviewing more data.",
+        "Evaluate the diagnostic value of proposed tests, not only whether they can produce a result consistent with the focal hypothesis.",
+        "Apply the same evidence-quality standard to results that support and challenge the preferred explanation.",
+        "Record which evidence actually changed the conclusion and why."
+      ],
+      "sources": [
+        {
+          "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+          "year": 1998,
+          "doi": "10.1037/1089-2680.2.2.175",
+          "url": "https://doi.org/10.1037/1089-2680.2.2.175"
+        },
+        {
+          "title": "Diagnosticity of evidence and congruence bias in hypothesis testing",
+          "year": 1988,
+          "doi": "10.1016/0749-5978(88)90012-2",
+          "url": "https://doi.org/10.1016/0749-5978(88)90012-2"
+        },
+        {
+          "title": "Confirmation, disconfirmation, and information in hypothesis testing",
+          "year": 1987,
+          "doi": "10.1037/0033-295X.94.2.211",
+          "url": "https://doi.org/10.1037/0033-295X.94.2.211"
+        }
+      ]
+    },
+    {
+      "slug": "curse-of-knowledge-vs-dunning-kruger-effect",
+      "leftSlug": "cognitive-bias-curse-of-knowledge",
+      "rightSlug": "self-assessment-dunning",
+      "reviewedAt": "2026-08-18",
+      "title": "Curse of Knowledge vs Dunning–Kruger Effect",
+      "summary": "Both are often discussed around expertise, but they concern different judgments. Curse of Knowledge is about estimating another person's knowledge after you already know something. Dunning–Kruger research is about calibration between a person's own performance and their self-assessment.",
+      "keyDifference": "Ask whose knowledge is being judged: another person's perspective, or your own performance relative to your self-assessment?",
+      "dimensions": [
+        {
+          "dimension": "Target of judgment",
+          "left": "What does another person know, understand, notice, or predict?",
+          "right": "How well did I perform, compared with how well I think I performed?"
+        },
+        {
+          "dimension": "Role of expertise",
+          "left": "Your own knowledge can contaminate estimates of a less-informed person's perspective.",
+          "right": "Lower performers can be more miscalibrated in some tasks, but expertise level alone does not diagnose the effect."
+        },
+        {
+          "dimension": "Typical mistake",
+          "left": "An expert assumes a missing step or fact is obvious because it is already accessible to the expert.",
+          "right": "A person predicts or reports performance that does not line up with an objective measure."
+        },
+        {
+          "dimension": "Best check",
+          "left": "Ask the other person to paraphrase, predict, or perform the task and use their errors as perspective feedback.",
+          "right": "Record confidence or predicted performance before feedback and compare it with an objective result across repeated attempts."
+        }
+      ],
+      "diagnostic": [
+        "Name the judgment first: are you estimating somebody else's understanding, or evaluating your own performance?",
+        "For another person's understanding, remove hidden prerequisites and ask them to explain or act without hints. Mismatches point toward a perspective-taking problem.",
+        "For self-assessment, record the predicted score or performance before feedback and compare it with an objective measure.",
+        "Do not use either label as a personality diagnosis. Both effects depend on tasks, information and measurement."
+      ],
+      "examples": [
+        {
+          "title": "Technical onboarding",
+          "left": "A senior engineer omits a deployment prerequisite because everyone on the old team already knows it, then overestimates how clear the guide will be to a new hire.",
+          "right": "A new engineer predicts near-perfect performance on a deployment exercise but repeatedly misses important steps on an objective test."
+        },
+        {
+          "title": "Training",
+          "left": "An instructor uses unexplained terminology and believes the lesson is straightforward because the concepts are fluent to the instructor.",
+          "right": "A learner rates their mastery much higher than the results of a practical assessment support."
+        },
+        {
+          "title": "Project handoff",
+          "left": "The outgoing team assumes the incoming team knows why a workaround exists because the history feels obvious to the people who lived through it.",
+          "right": "A team estimates its own readiness to operate the system much higher than a realistic incident drill later shows."
+        }
+      ],
+      "reviewProtocol": [
+        "Separate other-perspective judgments from self-performance judgments before choosing a label.",
+        "For Curse of Knowledge, collect evidence from the less-informed person's actual explanation, prediction or action.",
+        "For Dunning–Kruger questions, use objective performance and a pre-feedback self-assessment rather than confidence alone.",
+        "Repeat the measurement across tasks or attempts before treating one mismatch as a stable tendency.",
+        "Use the result to improve communication or calibration, not to attach a flattering or insulting identity label."
+      ],
+      "sources": [
+        {
+          "title": "The Curse of Knowledge in Economic Settings: An Experimental Analysis",
+          "year": 1989,
+          "doi": "10.1086/261651",
+          "url": "https://doi.org/10.1086/261651"
+        },
+        {
+          "title": "Unskilled and unaware of it: how difficulties in recognizing one's own incompetence lead to inflated self-assessments",
+          "year": 1999,
+          "doi": "10.1037/0022-3514.77.6.1121",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10626367/"
+        },
+        {
+          "title": "A 'curse of knowledge' in the absence of knowledge? People misattribute fluency when judging how common knowledge is among their peers",
+          "year": 2017,
+          "doi": "10.1016/j.cognition.2017.04.015",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28641221/"
+        },
+        {
+          "title": "Lifting the curse of knowing: How feedback improves perspective-taking",
+          "year": 2021,
+          "doi": "10.1177/1747021820987080",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33427086/"
+        },
+        {
+          "title": "Reevaluating the Dunning-Kruger effect: A response to and replication of Gignac and Zajenkowski (2020)",
+          "year": 2023,
+          "doi": "10.1016/j.intell.2022.101717",
+          "url": "https://doi.org/10.1016/j.intell.2022.101717"
+        }
+      ]
+    },
+    {
+      "slug": "declinism-vs-rosy-retrospection",
+      "leftSlug": "cognitive-bias-declinism",
+      "rightSlug": "memory-bias-rosy-retrospection",
+      "reviewedAt": "2026-08-18",
+      "title": "Declinism vs Rosy Retrospection",
+      "summary": "Both can make the past look better than the present, but they operate at different levels. Declinism is a broad label for judging a domain, society, institution, or era as having declined. Rosy Retrospection is a narrower event-memory pattern in which a specific past experience is remembered more positively than it was experienced at the time.",
+      "keyDifference": "Ask whether the claim is about a broad trend across time or about how a personally experienced event is remembered later. A rosy memory can contribute to a decline story, but it does not by itself establish Declinism, and a real historical decline can exist even when memory is imperfect.",
+      "dimensions": [
+        {
+          "dimension": "Unit of judgment",
+          "left": "A broad domain, group, institution, society, technology, profession, or era across time.",
+          "right": "A specific experience or set of autobiographical events remembered later."
+        },
+        {
+          "dimension": "Best evidence",
+          "left": "Repeated historical measures, contemporaneous records, comparable datasets, and clearly defined indicators of change.",
+          "right": "In-the-moment ratings or records that can be compared with later recollection of the same event."
+        },
+        {
+          "dimension": "What would not prove it?",
+          "left": "One fond memory, one bad current example, or the fact that a decline claim feels nostalgic.",
+          "right": "Simply liking the past, feeling nostalgia, or accurately remembering a genuinely good event."
+        },
+        {
+          "dimension": "Main caution",
+          "left": "Do not use Declinism to dismiss real deterioration without domain-specific data.",
+          "right": "Do not treat later positive meaning as a complete record of how the experience felt at the time."
+        }
+      ],
+      "diagnostic": [
+        "Write the claim in measurable terms: what exactly was better before, where, and during which years?",
+        "If the evidence is mainly personal memory, identify whether it comes from one event or a representative set of experiences.",
+        "For broad decline claims, look for repeated historical measures that were collected at the time rather than reconstructed later.",
+        "For event-memory claims, compare later recollection with contemporaneous ratings or records when available.",
+        "Allow both possibilities: memory can shift and a real trend can also have worsened. The task is to estimate each separately."
+      ],
+      "examples": [
+        {
+          "title": "Work",
+          "left": "Someone says the whole profession has become worse over 20 years based mainly on a general sense of decline.",
+          "right": "Someone remembers a previous project as smooth and enjoyable although messages from the period show frequent frustration and rework."
+        },
+        {
+          "title": "Technology",
+          "left": "A user claims software quality broadly declined across an era without defining quality or comparing historical defect, reliability, or usability measures.",
+          "right": "A user fondly remembers one older product after the everyday friction of using it has faded from memory."
+        },
+        {
+          "title": "Social life",
+          "left": "People today are judged as less kind than people decades ago based on retrospective impressions.",
+          "right": "A specific school, holiday, or community experience is remembered more positively years later than it was rated while happening."
+        }
+      ],
+      "reviewProtocol": [
+        "Define the domain, indicator, comparison years, and population before evaluating decline.",
+        "Separate personal event memories from population-level evidence.",
+        "Look for contemporaneous measurements from both periods.",
+        "Check whether positive and negative indicators move in the same direction or tell a mixed story.",
+        "State uncertainty explicitly when comparable historical evidence is weak."
+      ],
+      "sources": [
+        {
+          "title": "The illusion of moral decline",
+          "year": 2023,
+          "doi": "10.1038/s41586-023-06137-x",
+          "url": "https://www.nature.com/articles/s41586-023-06137-x"
+        },
+        {
+          "title": "Temporal Adjustments in the Evaluation of Events: The Rosy View",
+          "year": 1997,
+          "doi": "10.1006/jesp.1997.1333",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9247371/"
+        }
+      ]
+    },
+    {
+      "slug": "decoy-effect-vs-default-effect",
+      "leftSlug": "framing-effect-decoy-effect",
+      "rightSlug": "framing-effect-default-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Decoy Effect vs Default Effect",
+      "summary": "Both can change choices without changing the core product, but they work through different choice structures. A decoy changes the comparison between options by adding another alternative; a default changes what happens when the person does not actively choose something else.",
+      "keyDifference": "Ask what changed: was an inferior comparison option added to the choice set, or was one option made the automatic outcome under inaction?",
+      "dimensions": [
+        {
+          "dimension": "Choice structure",
+          "left": "An additional option changes the relative comparison among alternatives already under consideration.",
+          "right": "One option is pre-selected or applies automatically if the person does nothing."
+        },
+        {
+          "dimension": "Does the influential option need to be chosen?",
+          "left": "No. The decoy can affect preference even when few people choose the decoy itself.",
+          "right": "The default is often the option people end up with unless they actively switch."
+        },
+        {
+          "dimension": "Classic test",
+          "left": "Compare target-versus-competitor choice shares before and after adding the suspected decoy.",
+          "right": "Compare the same options under different defaults or an active-choice condition."
+        },
+        {
+          "dimension": "Main caution",
+          "left": "Not every third tier is a decoy, and the effect depends on the relative position of the options and existing preferences.",
+          "right": "Default uptake does not by itself prove strong preference or improved welfare."
+        }
+      ],
+      "diagnostic": [
+        "Write the original options without the suspected decoy or default treatment.",
+        "For a decoy, check whether the extra option is inferior to one alternative on the relevant attributes and whether its presence changes choice between the original options.",
+        "For a default, identify exactly what happens if the person takes no action and compare with another default or active choice when possible.",
+        "Check whether anchoring, framing or switching friction is also present before attributing the whole result to one effect."
+      ],
+      "examples": [
+        {
+          "title": "Subscription plans",
+          "left": "Basic and Pro are difficult to compare. Adding a third plan that is almost as expensive as Pro but clearly worse on features makes Pro easier to justify.",
+          "right": "Pro is pre-selected during checkout, so customers receive Pro unless they actively change the plan."
+        },
+        {
+          "title": "Cloud storage",
+          "left": "A middle storage tier is priced so poorly relative to the largest tier that the largest tier looks more attractive than it did in the original two-option comparison.",
+          "right": "Existing customers renew automatically at their current storage tier unless they change it before renewal."
+        },
+        {
+          "title": "Software vendor review",
+          "left": "A weak third vendor makes one of two serious candidates look superior on the dimensions where the third vendor is clearly dominated.",
+          "right": "The incumbent vendor remains selected unless the review team actively submits a migration decision."
+        }
+      ],
+      "reviewProtocol": [
+        "Freeze the product attributes and prices of the main alternatives.",
+        "Remove the suspected decoy and record the preference between the remaining options.",
+        "Remove the default by requiring an active choice and record what changes.",
+        "Separate these changes from anchors, labels, framing, switching costs and recommendation signals.",
+        "Judge the final option on fit and expected value, not on how persuasive the menu architecture feels."
+      ],
+      "sources": [
+        {
+          "title": "Choice in Context: Tradeoff Contrast and Extremeness Aversion",
+          "year": 1992,
+          "doi": "10.1177/002224379202900301",
+          "url": "https://doi.org/10.1177/002224379202900301"
+        },
+        {
+          "title": "When and why defaults influence decisions: a meta-analysis of default effects",
+          "year": 2019,
+          "doi": "10.1017/bpp.2018.43",
+          "url": "https://doi.org/10.1017/bpp.2018.43"
+        },
+        {
+          "title": "Revisiting the decoy effect: replication and extension of Ariely and Wallsten (1995) and Connolly, Reb, and Kausel (2013)",
+          "year": 2021,
+          "doi": "10.1080/23743603.2021.1878340",
+          "url": "https://doi.org/10.1080/23743603.2021.1878340"
+        },
+        {
+          "title": "An integrative review of the decoy effect on choice behavior",
+          "year": 2024,
+          "doi": "10.1002/mar.22076",
+          "url": "https://doi.org/10.1002/mar.22076"
+        }
+      ]
+    },
+    {
+      "slug": "default-effect-vs-status-quo-bias",
+      "leftSlug": "framing-effect-default-effect",
+      "rightSlug": "prospect-theory-status-quo-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Default Effect vs Status Quo Bias",
+      "summary": "Both can make one option unusually sticky, but they are not the same. A default is the option or outcome that applies if no active choice is made. Status quo bias is the broader tendency to give extra weight to the option that is already current or in place.",
+      "keyDifference": "Ask why one option is privileged: because the choice architecture makes it happen automatically, or because it is already the person's current state?",
+      "dimensions": [
+        {
+          "dimension": "What creates the privileged option?",
+          "left": "A form, policy, system or interface defines what happens if the person does not actively switch.",
+          "right": "The person already has, uses or occupies one option, so change must be considered relative to the current state."
+        },
+        {
+          "dimension": "Does a designer have to set it?",
+          "left": "Usually yes. Someone or some system defines the pre-selected or automatic outcome.",
+          "right": "No. A current bank, workflow, software system or possession can become the status quo without anyone deliberately designing it as a nudge."
+        },
+        {
+          "dimension": "What does staying tell us?",
+          "left": "It shows that the default influenced observed choice, but not necessarily that the person strongly preferred it.",
+          "right": "It shows persistence with the current option, but that persistence may reflect bias, real switching costs, uncertainty or a genuinely better current option."
+        },
+        {
+          "dimension": "Best diagnostic",
+          "left": "Compare the same choice with a different default or an active-choice condition while keeping the options otherwise comparable.",
+          "right": "Ask what would be chosen if none of the options were already current, then add genuine switching costs back into the comparison."
+        }
+      ],
+      "diagnostic": [
+        "Identify exactly what happens if the person does nothing. If one option is automatically selected, you have a default to examine.",
+        "Identify whether the person already owns, uses or occupies an option before the choice begins. That is the status quo question.",
+        "Separate changing effort and real switching costs from familiarity, endorsement signals and simple inattention.",
+        "Do not infer strong preference only because many people stayed. Compare with active choice, another default or a no-status-quo version when the decision is important."
+      ],
+      "examples": [
+        {
+          "title": "Privacy settings",
+          "left": "A new account starts with personalised ads enabled unless the user changes the setting. The pre-selected state is the default.",
+          "right": "A long-time user keeps an old privacy configuration after new options are introduced partly because the existing setup is already familiar and in place."
+        },
+        {
+          "title": "Work software",
+          "left": "A new tool opens with one workflow enabled automatically, so most users begin there unless they deliberately change it.",
+          "right": "A team keeps its existing software during a migration review even when the alternatives are presented neutrally, partly because the current system defines the starting point."
+        },
+        {
+          "title": "Retirement plan",
+          "left": "Employees are automatically enrolled at a contribution rate unless they opt out or change it.",
+          "right": "An employee who has used the same allocation for years keeps it during a later review because it is already the current portfolio."
+        }
+      ],
+      "reviewProtocol": [
+        "Write the options and outcomes without marking any one as current or pre-selected.",
+        "Record what happens under inaction and whether the current state existed before the decision screen or policy.",
+        "Estimate real switching costs, effort and uncertainty separately.",
+        "Where possible, compare behaviour under active choice, alternative defaults or a neutral starting condition.",
+        "Judge welfare and preference from the full decision evidence, not from default uptake or persistence alone."
+      ],
+      "sources": [
+        {
+          "title": "Status quo bias in decision making",
+          "year": 1988,
+          "doi": "10.1007/BF00055564",
+          "url": "https://doi.org/10.1007/BF00055564"
+        },
+        {
+          "title": "Recommendations Implicit in Policy Defaults",
+          "year": 2006,
+          "doi": "10.1111/j.1467-9280.2006.01721.x",
+          "url": "https://doi.org/10.1111/j.1467-9280.2006.01721.x"
+        },
+        {
+          "title": "Limited attention and status quo bias",
+          "year": 2017,
+          "doi": "10.1016/j.jet.2017.01.009",
+          "url": "https://doi.org/10.1016/j.jet.2017.01.009"
+        },
+        {
+          "title": "When and why defaults influence decisions: a meta-analysis of default effects",
+          "year": 2019,
+          "doi": "10.1017/bpp.2018.43",
+          "url": "https://doi.org/10.1017/bpp.2018.43"
+        }
+      ]
+    },
+    {
+      "slug": "framing-effect-vs-anchoring-effect",
+      "leftSlug": "framing-effect-core",
+      "rightSlug": "cognitive-bias-anchoring-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Framing Effect vs Anchoring Effect",
+      "summary": "Both show that presentation can shape judgment, but the mechanism being tested is different. Framing changes how equivalent information or outcomes are described; anchoring tests how a starting numerical value pulls a later estimate toward it.",
+      "keyDifference": "Ask what changed: the description of the options, or the starting number used before the estimate?",
+      "dimensions": [
+        {
+          "dimension": "Core manipulation",
+          "left": "Equivalent or closely matched information is described in different ways, often as gains versus losses.",
+          "right": "A numerical starting value or reference point is introduced before a later estimate or judgment."
+        },
+        {
+          "dimension": "Typical outcome",
+          "left": "Preference, evaluation, or risk choice changes across descriptions.",
+          "right": "The final numerical estimate shifts toward the anchor."
+        },
+        {
+          "dimension": "Does a number have to be the anchor?",
+          "left": "No. The defining feature is the description or representation, although framing tasks often contain numbers and probabilities.",
+          "right": "Classic anchoring evidence concerns numerical starting values and numerical judgments."
+        },
+        {
+          "dimension": "Best consistency check",
+          "left": "Restate the same outcomes in equivalent gain, loss, or neutral descriptions while holding the underlying information constant.",
+          "right": "Form an independent estimate or change the starting number while keeping the evidence and target judgment otherwise comparable."
+        }
+      ],
+      "diagnostic": [
+        "Write the underlying outcomes, probabilities, and quantities without persuasive labels.",
+        "Create an equivalent alternative description. If the choice changes while the underlying outcomes stay the same, framing is the closer lens.",
+        "Identify any starting numerical value shown before the estimate. Replace or remove that number while keeping the decision evidence similar.",
+        "If the estimate moves toward the starting number, anchoring is the closer lens. Both effects can occur in the same interface, so test them separately."
+      ],
+      "examples": [
+        {
+          "title": "Project risk",
+          "left": "A team prefers a plan more when it is described as having a 90% chance of acceptable delivery than when the same outcome is described as a 10% chance of failure.",
+          "right": "The same team’s delivery estimate stays close to an initial 12-week target even after reviewing comparable projects."
+        },
+        {
+          "title": "AI recommendation",
+          "left": "An assistant presents equivalent evidence as expected gains rather than expected losses and the user’s risk preference changes.",
+          "right": "The assistant supplies a score of 82 before the user evaluates the evidence, and the user’s final score remains close to 82."
+        },
+        {
+          "title": "Health information",
+          "left": "Equivalent outcome statistics lead to different treatment preferences when described using survival rather than mortality language.",
+          "right": "A numerical estimate given first influences a later probability judgment, even though the framing of the outcome remains the same."
+        }
+      ],
+      "reviewProtocol": [
+        "Separate presentation variables before reviewing the decision: wording/frame and starting numerical values are different inputs.",
+        "Keep outcomes and probabilities complete and matched when testing a framing effect.",
+        "Use an independent estimate or varied anchors when testing anchoring.",
+        "Record the choice or estimate under each version rather than inferring an effect from how persuasive the language feels.",
+        "If both manipulations matter, document both instead of forcing the decision into one bias label."
+      ],
+      "sources": [
+        {
+          "title": "The framing of decisions and the psychology of choice",
+          "year": 1981,
+          "doi": "10.1126/science.7455683",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7455683/"
+        },
+        {
+          "title": "The Influence of Framing on Risky Decisions: A Meta-analysis",
+          "year": 1998,
+          "doi": "10.1006/obhd.1998.2781",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9719656/"
+        },
+        {
+          "title": "All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects",
+          "year": 1998,
+          "doi": "10.1006/obhd.1998.2804",
+          "url": "https://doi.org/10.1006/obhd.1998.2804"
+        },
+        {
+          "title": "Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis",
+          "year": 2026,
+          "doi": "10.1287/mnsc.2023.03238",
+          "url": "https://doi.org/10.1287/mnsc.2023.03238"
+        }
+      ]
+    },
+    {
+      "slug": "loss-aversion-vs-sunk-cost-effect",
+      "leftSlug": "prospect-theory-loss-aversion",
+      "rightSlug": "cognitive-bias-sunk-cost-effect",
+      "reviewedAt": "2026-08-18",
+      "title": "Loss Aversion vs Sunk Cost Effect",
+      "summary": "Both can make stopping, switching or giving something up feel difficult, but they ask different questions. Loss aversion concerns how prospective losses are valued relative to comparable gains around a reference point. Sunk cost effect concerns whether irrecoverable past investment is influencing the current choice.",
+      "keyDifference": "Ask which information is doing the work: a possible loss from the current reference point, or resources that have already been spent and cannot be recovered?",
+      "dimensions": [
+        {
+          "dimension": "Time direction",
+          "left": "The judgment concerns prospective gains and losses relative to a reference point.",
+          "right": "The decision is influenced by investment that is already in the past and irrecoverable."
+        },
+        {
+          "dimension": "Core comparison",
+          "left": "Would an equal-sized loss receive more subjective weight than a comparable gain under the same conditions?",
+          "right": "Would the current choice change if the past cost had never been incurred but the future options were identical?"
+        },
+        {
+          "dimension": "Typical project example",
+          "left": "Stopping is experienced as accepting or realising a loss, which can make continuation feel more attractive.",
+          "right": "The team argues for another investment because too much money or time has already been spent."
+        },
+        {
+          "dimension": "Best check",
+          "left": "State the reference point and compare matched gain/loss descriptions or absolute outcomes.",
+          "right": "Remove irrecoverable past costs from the forward-looking comparison and evaluate only remaining costs, benefits and alternatives."
+        }
+      ],
+      "diagnostic": [
+        "Write the decision from today forward, including realistic future outcomes and alternatives.",
+        "Mark any past cost that cannot be recovered. If removing that history changes the choice, sunk-cost reasoning is relevant.",
+        "State the reference point that makes an outcome feel like a gain or loss. Check whether an equivalent gain and loss are being valued differently.",
+        "Keep both effects separate. A project can contain a sunk cost and also make stopping feel like a prospective loss, but evidence for one does not prove the other."
+      ],
+      "examples": [
+        {
+          "title": "Software migration",
+          "left": "Stopping the migration is framed as losing the expected future capability that the team had already started treating as theirs.",
+          "right": "The migration continues mainly because six months of work has already been spent, even though the remaining business case is weak."
+        },
+        {
+          "title": "Subscription",
+          "left": "Cancelling a service feels like giving up a benefit that has become the reference point, even when a cheaper alternative offers similar value.",
+          "right": "A customer renews because they already paid a setup fee that cannot be recovered, although that fee does not change next year's value."
+        },
+        {
+          "title": "Investment review",
+          "left": "A possible reduction from the current portfolio value receives more weight than an equal possible increase when comparing future choices.",
+          "right": "New money is committed because the investor wants to justify or recover an earlier investment that is already lost."
+        }
+      ],
+      "reviewProtocol": [
+        "Separate past, current and future values before discussing the recommendation.",
+        "Remove sunk costs from the forward-looking calculation, while preserving any real future consequences of stopping or switching.",
+        "Name the reference point and express equivalent changes as both gains and losses when possible.",
+        "Check whether the decision survives when written in absolute outcomes rather than only relative gains or losses.",
+        "Describe only the pattern the evidence supports instead of calling any reluctance to stop both loss aversion and sunk cost."
+      ],
+      "sources": [
+        {
+          "title": "Prospect Theory: An Analysis of Decision under Risk",
+          "year": 1979,
+          "doi": "10.2307/1914185",
+          "url": "https://doi.org/10.2307/1914185"
+        },
+        {
+          "title": "The psychology of sunk cost",
+          "year": 1985,
+          "doi": "10.1016/0749-5978(85)90049-4",
+          "url": "https://doi.org/10.1016/0749-5978(85)90049-4"
+        },
+        {
+          "title": "Meta-analysis of Empirical Estimates of Loss Aversion",
+          "year": 2024,
+          "doi": "10.1257/jel.20221698",
+          "url": "https://doi.org/10.1257/jel.20221698"
+        },
+        {
+          "title": "Loss aversion is not robust: A re-meta-analysis",
+          "year": 2025,
+          "doi": "10.1016/j.joep.2025.102801",
+          "url": "https://doi.org/10.1016/j.joep.2025.102801"
+        }
+      ]
+    },
+    {
+      "slug": "sunk-cost-effect-vs-escalation-of-commitment",
+      "leftSlug": "cognitive-bias-sunk-cost-effect",
+      "rightSlug": "logical-fallacy-escalation-of-commitment",
+      "reviewedAt": "2026-08-18",
+      "title": "Sunk Cost Effect vs Escalation of Commitment",
+      "summary": "The two ideas overlap, but they answer different questions. Sunk cost effect asks whether irrecoverable past investment is influencing the current choice; escalation of commitment describes a broader pattern of persisting or investing more after setbacks.",
+      "keyDifference": "Ask whether you are identifying one reason for continuing, or the wider process of increasing commitment after bad results. Sunk costs can drive escalation, but escalation can have other drivers too.",
+      "dimensions": [
+        {
+          "dimension": "Core question",
+          "left": "Is an irrecoverable past cost changing the choice I make now?",
+          "right": "Are negative results leading to continued or increased commitment to the same course of action?"
+        },
+        {
+          "dimension": "What must be present?",
+          "left": "A prior investment of money, time, effort, or another cost that cannot be recovered.",
+          "right": "An existing course of action, negative feedback or setbacks, and a decision about whether to persist or commit additional resources."
+        },
+        {
+          "dimension": "Possible drivers",
+          "left": "The prior sunk investment itself is the defining feature of the effect.",
+          "right": "Sunk costs can matter, but responsibility for the original choice, self-justification, completion pressure, organizational structure, and other factors can also contribute."
+        },
+        {
+          "dimension": "Can continuation still be reasonable?",
+          "left": "Yes. Future benefits, switching costs, new information, or completion value can justify continuing even though sunk costs should not receive independent weight.",
+          "right": "Yes. Additional investment is not automatically irrational if the updated forward-looking case remains strong enough."
+        }
+      ],
+      "diagnostic": [
+        "Write all past costs that cannot be recovered and move them out of the forward-looking calculation.",
+        "Write the next increment of cost, the expected future value, realistic alternatives, and the value created by actual completion.",
+        "Ask whether the choice changes when the irrecoverable past investment is hidden. If it does, sunk cost is a relevant lens.",
+        "Then inspect the wider process: are setbacks, personal responsibility, reputation, completion pressure, or organizational incentives leading to repeated additional commitments? If so, escalation of commitment is the broader lens."
+      ],
+      "examples": [
+        {
+          "title": "Software project",
+          "left": "The team argues for six more months mainly because two years of development would otherwise feel wasted.",
+          "right": "After several missed milestones, the team repeatedly expands the budget and scope, with sunk costs, ownership pressure, and the belief that success is always one more milestone away all contributing."
+        },
+        {
+          "title": "Subscription",
+          "left": "A person keeps using a service they no longer value because the annual fee has already been paid.",
+          "right": "There may be persistence, but this is not necessarily escalation unless the person responds to poor results by making further commitments or investments."
+        },
+        {
+          "title": "AI program",
+          "left": "A company keeps an underused AI tool because the implementation cost has already been spent.",
+          "right": "After weak adoption metrics, leaders approve repeated new integrations and budgets partly to justify the original program and avoid admitting the strategy needs to change."
+        }
+      ],
+      "reviewProtocol": [
+        "Separate sunk costs from costs and benefits that still lie in the future.",
+        "State what useful completion produces and what alternatives are available for the remaining resources.",
+        "Record who made the original decision and whether responsibility, reputation, or ownership could affect the next commitment.",
+        "Use pre-agreed review or exit criteria when available; otherwise write new criteria before the next outcome arrives.",
+        "Describe the evidence narrowly: sunk cost is one influence on a choice, while escalation is the broader dynamic of continued or increased commitment after setbacks."
+      ],
+      "sources": [
+        {
+          "title": "Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action",
+          "year": 1976,
+          "doi": "10.1016/0030-5073(76)90005-2",
+          "url": "https://doi.org/10.1016/0030-5073(76)90005-2"
+        },
+        {
+          "title": "The Escalation of Commitment To a Course of Action",
+          "year": 1981,
+          "doi": "10.5465/AMR.1981.4285694",
+          "url": "https://doi.org/10.5465/AMR.1981.4285694"
+        },
+        {
+          "title": "The psychology of sunk cost",
+          "year": 1985,
+          "doi": "10.1016/0749-5978(85)90049-4",
+          "url": "https://doi.org/10.1016/0749-5978(85)90049-4"
+        },
+        {
+          "title": "Looking forward and looking back: integrating completion and sunk-cost effects within an escalation-of-commitment progress decision",
+          "year": 2001,
+          "doi": "10.1037/0021-9010.86.1.104",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11302222/"
+        },
+        {
+          "title": "On the sunk-cost effect in economic decision-making: a meta-analytic review",
+          "year": 2015,
+          "doi": "10.1007/s40685-014-0014-8",
+          "url": "https://doi.org/10.1007/s40685-014-0014-8"
+        }
+      ]
+    },
+    {
+      "slug": "surrogation-vs-systematic-bias",
+      "leftSlug": "cognitive-bias-surrogation",
+      "rightSlug": "cognitive-bias-systematic-bias",
+      "reviewedAt": "2026-08-18",
+      "title": "Surrogation vs Systematic Bias",
+      "summary": "Both can make a metric misleading, but the failure is different. Surrogation happens when people start treating a performance measure as though it were the goal or construct itself. Systematic bias is a consistent or predictable deviation in a measurement, estimate, sample, or process relative to a target or reference.",
+      "keyDifference": "Ask whether the problem is that people are optimizing or interpreting the proxy as the goal, or that the measurement process itself is systematically shifted away from the target.",
+      "dimensions": [
+        {
+          "dimension": "Core problem",
+          "left": "A measure replaces the underlying strategic construct in judgment or action.",
+          "right": "A measurement or estimation process has a consistent or predictable deviation from its reference."
+        },
+        {
+          "dimension": "The metric can be accurate?",
+          "left": "Yes. A measure can be calculated accurately and still be an incomplete proxy that people over-treat as the objective.",
+          "right": "The issue is the deviation of the measurement or estimate itself, so accuracy relative to the reference is central."
+        },
+        {
+          "dimension": "Typical KPI example",
+          "left": "A support team optimizes ticket-closure time and treats that score as customer service quality, even when repeat contacts rise.",
+          "right": "A dashboard systematically undercounts a class of support contacts because the data pipeline excludes one channel."
+        },
+        {
+          "dimension": "Best check",
+          "left": "Define the objective, list what the proxy misses, and test whether the number can improve while the objective gets worse.",
+          "right": "Define the reference, then test calibration, sampling, collection and estimation for a directional error."
+        }
+      ],
+      "diagnostic": [
+        "Write the underlying objective and the metric as two separate statements.",
+        "Check whether the metric can improve while the objective stays flat or becomes worse. If so, Surrogation is a relevant risk when the metric starts replacing the objective.",
+        "Independently test whether the measurement itself is shifted relative to a reference because of calibration, sampling, collection or analysis. That is a systematic-bias problem.",
+        "Do not use one label to hide the other. A team can surrogate on a metric that is also systematically biased, so the behavioral and measurement failures may need separate fixes."
+      ],
+      "examples": [
+        {
+          "title": "Customer support",
+          "left": "Agents treat average handle time as the definition of good support and rush difficult cases to protect the score.",
+          "right": "Calls transferred through one system are missing from the dataset, so average handle time is systematically estimated from an incomplete population."
+        },
+        {
+          "title": "AI evaluation",
+          "left": "A team treats one benchmark score as the product's real-world usefulness and optimizes releases around that score.",
+          "right": "The evaluation sample consistently overrepresents easy cases, shifting the estimate of real-world performance upward."
+        },
+        {
+          "title": "Education",
+          "left": "A program treats test scores as though they fully represent learning and narrows instruction around the tested material.",
+          "right": "A test or sampling procedure consistently disadvantages a subgroup relative to the intended construct or target population."
+        }
+      ],
+      "reviewProtocol": [
+        "Define the construct or goal in ordinary language before looking at the metric.",
+        "Document what the metric measures directly, what it only approximates, and what it leaves out.",
+        "Test the measurement process against an independent reference or validation source.",
+        "Look for actions that improve the metric without improving the construct.",
+        "Use different remedies for different failures: measurement correction for systematic error, and goal/proxy separation plus better decision processes for Surrogation."
+      ],
+      "sources": [
+        {
+          "title": "Strategy Selection, Surrogation, and Strategic Performance Measurement Systems",
+          "year": 2013,
+          "doi": "10.1111/j.1475-679X.2012.00465.x",
+          "url": "https://doi.org/10.1111/j.1475-679X.2012.00465.x"
+        },
+        {
+          "title": "Decreasing Operational Distortion and Surrogation Through Narrative Reporting",
+          "year": 2019,
+          "doi": "10.2308/accr-52277",
+          "url": "https://doi.org/10.2308/accr-52277"
+        },
+        {
+          "title": "NIST Technical Note 1297, Appendix D1: Terminology",
+          "year": 1994,
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"
+        }
       ]
     }
   ]

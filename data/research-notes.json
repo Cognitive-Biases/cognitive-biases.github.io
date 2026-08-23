@@ -9,18 +9,68 @@
       "status": "reviewed synthesis",
       "summary": "Recent studies make a stronger case that LLM outputs can show repeatable decision patterns that resemble named cognitive biases. They also show why we should be careful with the label: the effects depend on the task, model, prompt and conversational context, and a debiasing prompt that helps one kind of task can hurt another.",
       "sections": [
-        {"heading":"What changed","paragraphs":["The discussion has moved beyond isolated demonstrations. A 2025 study tested 30 cognitive biases across 20 large language models using 30,000 generated tests and found evidence for every tested bias in at least some models. That does not mean every model showed every bias, or that the models share the human psychological mechanism behind the label. It does show that these patterns can be measured at a much larger scale than a few hand-picked prompts.","Newer work is also testing when the patterns appear. A 2026 preprint found that biased reasoning in an earlier user turn increased later bias expression in six of eight tested models compared with a zero-shot baseline. Another 2026 benchmark reported that prompt-level debiasing helped some families of bias but made judgment biases worse in its tested models."]},
-        {"heading":"Why agent behaviour matters","paragraphs":["The next step is moving from one-off answers to agents that make a series of operational decisions. AIM-Bench, a 2025 preprint, evaluates LLM agents acting as inventory managers under uncertainty and reports decision patterns such as framing and pull-to-centre effects. This is useful because an agent can turn a small decision tendency into repeated actions over time.","For this project, that makes AI-assisted decision making a better research focus than a simple list of biases supposedly found in chatbots. The practical question is not whether an AI can be given a human bias label. It is whether a repeatable decision pattern appears, under what conditions, and what a person should verify before relying on the output."]},
-        {"heading":"What we should not claim","paragraphs":["We should not say that LLMs think like humans because they produce behaviour that fits the same experimental label. Similar output patterns can come from very different mechanisms.","We should also avoid a single score for how biased a model is. The studies we reviewed use different tasks and definitions, and the results change with model family, task complexity and prompt context. Several of the most interesting 2026 results are still preprints, so they belong in a research watch rather than in a settled textbook claim."]},
-        {"heading":"What this changes in our library","paragraphs":["We will keep a separate AI-assisted decisions context and connect research to concrete lenses such as automation bias, confirmation bias, anthropomorphism and repeated-information effects. We will also track LLM-specific benchmark results without pretending that every benchmark maps cleanly onto the human construct with the same name.","When a new study arrives, the useful update may be a narrower qualification, a new decision context or no change at all. Recency alone is not evidence."]}
+        {
+          "heading": "What changed",
+          "paragraphs": [
+            "The discussion has moved beyond isolated demonstrations. A 2025 study tested 30 cognitive biases across 20 large language models using 30,000 generated tests and found evidence for every tested bias in at least some models. That does not mean every model showed every bias, or that the models share the human psychological mechanism behind the label. It does show that these patterns can be measured at a much larger scale than a few hand-picked prompts.",
+            "Newer work is also testing when the patterns appear. A 2026 preprint found that biased reasoning in an earlier user turn increased later bias expression in six of eight tested models compared with a zero-shot baseline. Another 2026 benchmark reported that prompt-level debiasing helped some families of bias but made judgment biases worse in its tested models."
+          ]
+        },
+        {
+          "heading": "Why agent behaviour matters",
+          "paragraphs": [
+            "The next step is moving from one-off answers to agents that make a series of operational decisions. AIM-Bench, a 2025 preprint, evaluates LLM agents acting as inventory managers under uncertainty and reports decision patterns such as framing and pull-to-centre effects. This is useful because an agent can turn a small decision tendency into repeated actions over time.",
+            "For this project, that makes AI-assisted decision making a better research focus than a simple list of biases supposedly found in chatbots. The practical question is not whether an AI can be given a human bias label. It is whether a repeatable decision pattern appears, under what conditions, and what a person should verify before relying on the output."
+          ]
+        },
+        {
+          "heading": "What we should not claim",
+          "paragraphs": [
+            "We should not say that LLMs think like humans because they produce behaviour that fits the same experimental label. Similar output patterns can come from very different mechanisms.",
+            "We should also avoid a single score for how biased a model is. The studies we reviewed use different tasks and definitions, and the results change with model family, task complexity and prompt context. Several of the most interesting 2026 results are still preprints, so they belong in a research watch rather than in a settled textbook claim."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We will keep a separate AI-assisted decisions context and connect research to concrete lenses such as automation bias, confirmation bias, anthropomorphism and repeated-information effects. We will also track LLM-specific benchmark results without pretending that every benchmark maps cleanly onto the human construct with the same name.",
+            "When a new study arrives, the useful update may be a narrower qualification, a new decision context or no change at all. Recency alone is not evidence."
+          ]
+        }
       ],
       "sources": [
-        {"title":"A Comprehensive Evaluation of Cognitive Biases in LLMs","year":2025,"type":"peer-reviewed conference paper","doi":"10.18653/v1/2025.nlp4dh-1.50","url":"https://aclanthology.org/2025.nlp4dh-1.50/"},
-        {"title":"CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models","year":2026,"type":"preprint","url":"https://arxiv.org/abs/2604.01366"},
-        {"title":"Conditional Cognitive Biases in LLMs: How Biased User Turns Modulate In-Context Reasoning","year":2026,"type":"preprint","url":"https://arxiv.org/abs/2608.05166"},
-        {"title":"AIM-Bench: Evaluating Decision-making Biases of Agentic LLM as Inventory Manager","year":2025,"type":"preprint","url":"https://arxiv.org/abs/2508.11416"}
+        {
+          "title": "A Comprehensive Evaluation of Cognitive Biases in LLMs",
+          "year": 2025,
+          "type": "peer-reviewed conference paper",
+          "doi": "10.18653/v1/2025.nlp4dh-1.50",
+          "url": "https://aclanthology.org/2025.nlp4dh-1.50/"
+        },
+        {
+          "title": "CogBias: Measuring and Mitigating Cognitive Bias in Large Language Models",
+          "year": 2026,
+          "type": "preprint",
+          "url": "https://arxiv.org/abs/2604.01366"
+        },
+        {
+          "title": "Conditional Cognitive Biases in LLMs: How Biased User Turns Modulate In-Context Reasoning",
+          "year": 2026,
+          "type": "preprint",
+          "url": "https://arxiv.org/abs/2608.05166"
+        },
+        {
+          "title": "AIM-Bench: Evaluating Decision-making Biases of Agentic LLM as Inventory Manager",
+          "year": 2025,
+          "type": "preprint",
+          "url": "https://arxiv.org/abs/2508.11416"
+        }
       ],
-      "related": ["false-priors-automation-bias","cognitive-bias-confirmation-bias","availability-heuristic-anthropomorphism","truth-judgment-illusory-truth-effect"]
+      "related": [
+        "false-priors-automation-bias",
+        "cognitive-bias-confirmation-bias",
+        "availability-heuristic-anthropomorphism",
+        "truth-judgment-illusory-truth-effect"
+      ]
     },
     {
       "slug": "planning-fallacy-project-estimates-outside-view",
@@ -29,18 +79,72 @@
       "status": "reviewed synthesis",
       "summary": "Research supports a recurring pattern of optimistic completion-time estimates. The useful response is to compare the plan with similar completed work and keep uncertainty visible, not to multiply every estimate by one fixed number.",
       "sections": [
-        {"heading":"What the evidence supports","paragraphs":["Classic experiments found that people often predicted their own tasks would finish sooner than they actually did. When making the prediction, they tended to focus on a scenario for the current task and gave too little weight to relevant past experience.","Later reviews found the same broad pattern across many time-prediction studies, while also showing that the size of the error and its causes depend on the task, motivation, perspective and social setting. A late project is therefore not proof that one cognitive bias caused the delay."]},
-        {"heading":"Why a detailed plan can still be optimistic","paragraphs":["A detailed plan feels concrete because it describes what should happen next. That can make it easy to overlook the distribution of outcomes from similar work: interruptions, rework, dependencies and ordinary delays that were not prominent in the current scenario.","This is the basic value of the outside view. Before refining the new plan, look at comparable completed cases and ask where the current project sits in that history. The past is not a perfect predictor, but it is evidence that a fresh plan can otherwise ignore."]},
-        {"heading":"The outside view is not a magic formula","paragraphs":["Reference-class forecasting is one practical way to use the outside view. Research in project settings suggests it can improve estimates when the comparison class is meaningful, but choosing that class is itself an important problem. A reference set that is too broad, too small or genuinely unlike the current work can mislead rather than correct.","That is why we removed the old advice to multiply every estimate by 1.5. We did not find evidence for one universal correction factor. A better procedure is to use comparable outcomes, show a range, make assumptions visible and measure forecast error over time."]},
-        {"heading":"A newer boundary condition","paragraphs":["A 2026 cross-cultural study found that reminders about past experience and warnings about the social consequences of delay changed time predictions differently across cultural groups. This does not overturn the planning-fallacy literature. It is a useful reminder that an intervention that changes one group’s estimates may not work identically everywhere.","For this library, the practical lesson is simple: keep the core pattern separate from the proposed fix, and test whether the fix actually improves calibration in the setting where it will be used."]}
+        {
+          "heading": "What the evidence supports",
+          "paragraphs": [
+            "Classic experiments found that people often predicted their own tasks would finish sooner than they actually did. When making the prediction, they tended to focus on a scenario for the current task and gave too little weight to relevant past experience.",
+            "Later reviews found the same broad pattern across many time-prediction studies, while also showing that the size of the error and its causes depend on the task, motivation, perspective and social setting. A late project is therefore not proof that one cognitive bias caused the delay."
+          ]
+        },
+        {
+          "heading": "Why a detailed plan can still be optimistic",
+          "paragraphs": [
+            "A detailed plan feels concrete because it describes what should happen next. That can make it easy to overlook the distribution of outcomes from similar work: interruptions, rework, dependencies and ordinary delays that were not prominent in the current scenario.",
+            "This is the basic value of the outside view. Before refining the new plan, look at comparable completed cases and ask where the current project sits in that history. The past is not a perfect predictor, but it is evidence that a fresh plan can otherwise ignore."
+          ]
+        },
+        {
+          "heading": "The outside view is not a magic formula",
+          "paragraphs": [
+            "Reference-class forecasting is one practical way to use the outside view. Research in project settings suggests it can improve estimates when the comparison class is meaningful, but choosing that class is itself an important problem. A reference set that is too broad, too small or genuinely unlike the current work can mislead rather than correct.",
+            "That is why we removed the old advice to multiply every estimate by 1.5. We did not find evidence for one universal correction factor. A better procedure is to use comparable outcomes, show a range, make assumptions visible and measure forecast error over time."
+          ]
+        },
+        {
+          "heading": "A newer boundary condition",
+          "paragraphs": [
+            "A 2026 cross-cultural study found that reminders about past experience and warnings about the social consequences of delay changed time predictions differently across cultural groups. This does not overturn the planning-fallacy literature. It is a useful reminder that an intervention that changes one group’s estimates may not work identically everywhere.",
+            "For this library, the practical lesson is simple: keep the core pattern separate from the proposed fix, and test whether the fix actually improves calibration in the setting where it will be used."
+          ]
+        }
       ],
       "sources": [
-        {"title":"Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times","year":1994,"type":"experimental studies","doi":"10.1037/0022-3514.67.3.366","url":"https://doi.org/10.1037/0022-3514.67.3.366"},
-        {"title":"The Planning Fallacy: Cognitive, Motivational, and Social Origins","year":2010,"type":"research review","doi":"10.1016/S0065-2601(10)43001-4","url":"https://doi.org/10.1016/S0065-2601(10)43001-4"},
-        {"title":"I Can Do It in No Time! Time Predictions in the Cultural Context","year":2026,"type":"cross-cultural experiments","doi":"10.1177/00220221261418305","url":"https://doi.org/10.1177/00220221261418305"},
-        {"title":"Reducing risks in megaprojects: The potential of reference class forecasting","year":2023,"type":"literature review of reference class forecasting","doi":"10.1016/j.plas.2023.100103","url":"https://doi.org/10.1016/j.plas.2023.100103"}
+        {
+          "title": "Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times",
+          "year": 1994,
+          "type": "experimental studies",
+          "doi": "10.1037/0022-3514.67.3.366",
+          "url": "https://doi.org/10.1037/0022-3514.67.3.366"
+        },
+        {
+          "title": "The Planning Fallacy: Cognitive, Motivational, and Social Origins",
+          "year": 2010,
+          "type": "research review",
+          "doi": "10.1016/S0065-2601(10)43001-4",
+          "url": "https://doi.org/10.1016/S0065-2601(10)43001-4"
+        },
+        {
+          "title": "I Can Do It in No Time! Time Predictions in the Cultural Context",
+          "year": 2026,
+          "type": "cross-cultural experiments",
+          "doi": "10.1177/00220221261418305",
+          "url": "https://doi.org/10.1177/00220221261418305"
+        },
+        {
+          "title": "Reducing risks in megaprojects: The potential of reference class forecasting",
+          "year": 2023,
+          "type": "literature review of reference class forecasting",
+          "doi": "10.1016/j.plas.2023.100103",
+          "url": "https://doi.org/10.1016/j.plas.2023.100103"
+        }
       ],
-      "related": ["egocentric-bias-planning-fallacy","probability-bias-subadditivity-effect","heuristic-bias-availability-bias","cognitive-bias-hindsight-bias","logical-fallacy-escalation-of-commitment"]
+      "related": [
+        "egocentric-bias-planning-fallacy",
+        "probability-bias-subadditivity-effect",
+        "heuristic-bias-availability-bias",
+        "cognitive-bias-hindsight-bias",
+        "logical-fallacy-escalation-of-commitment"
+      ]
     },
     {
       "slug": "continued-influence-corrections-misinformation",
@@ -86,14 +190,1236 @@
         }
       ],
       "sources": [
-        {"title":"Misinformation and Its Correction: Continued Influence and Successful Debiasing","year":2012,"type":"research review","doi":"10.1177/1529100612451018","url":"https://doi.org/10.1177/1529100612451018"},
-        {"title":"Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation","year":2017,"type":"meta-analysis","doi":"10.1177/0956797617714579","url":"https://doi.org/10.1177/0956797617714579"},
-        {"title":"The psychological drivers of misinformation belief and its resistance to correction","year":2022,"type":"research review","doi":"10.1038/s44159-021-00006-y","url":"https://doi.org/10.1038/s44159-021-00006-y"},
-        {"title":"A meta-analysis of correction effects in science-relevant misinformation","year":2023,"type":"meta-analysis","doi":"10.1038/s41562-023-01623-8","url":"https://doi.org/10.1038/s41562-023-01623-8"},
-        {"title":"Effective correction of misinformation","year":2023,"type":"research review","doi":"10.1016/j.copsyc.2023.101712","url":"https://doi.org/10.1016/j.copsyc.2023.101712"},
-        {"title":"Factual corrections: Concerns and current evidence","year":2024,"type":"research review","doi":"10.1016/j.copsyc.2023.101715","url":"https://doi.org/10.1016/j.copsyc.2023.101715"}
+        {
+          "title": "Misinformation and Its Correction: Continued Influence and Successful Debiasing",
+          "year": 2012,
+          "type": "research review",
+          "doi": "10.1177/1529100612451018",
+          "url": "https://doi.org/10.1177/1529100612451018"
+        },
+        {
+          "title": "Debunking: A Meta-Analysis of the Psychological Efficacy of Messages Countering Misinformation",
+          "year": 2017,
+          "type": "meta-analysis",
+          "doi": "10.1177/0956797617714579",
+          "url": "https://doi.org/10.1177/0956797617714579"
+        },
+        {
+          "title": "The psychological drivers of misinformation belief and its resistance to correction",
+          "year": 2022,
+          "type": "research review",
+          "doi": "10.1038/s44159-021-00006-y",
+          "url": "https://doi.org/10.1038/s44159-021-00006-y"
+        },
+        {
+          "title": "A meta-analysis of correction effects in science-relevant misinformation",
+          "year": 2023,
+          "type": "meta-analysis",
+          "doi": "10.1038/s41562-023-01623-8",
+          "url": "https://doi.org/10.1038/s41562-023-01623-8"
+        },
+        {
+          "title": "Effective correction of misinformation",
+          "year": 2023,
+          "type": "research review",
+          "doi": "10.1016/j.copsyc.2023.101712",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101712"
+        },
+        {
+          "title": "Factual corrections: Concerns and current evidence",
+          "year": 2024,
+          "type": "research review",
+          "doi": "10.1016/j.copsyc.2023.101715",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101715"
+        }
       ],
-      "related": ["memory-bias-continued-influence-effect","confirmation-bias-backfire-effect","cognitive-bias-confirmation-bias","truth-judgment-illusory-truth-effect","heuristic-bias-availability-bias"]
+      "related": [
+        "memory-bias-continued-influence-effect",
+        "confirmation-bias-backfire-effect",
+        "cognitive-bias-confirmation-bias",
+        "truth-judgment-illusory-truth-effect",
+        "heuristic-bias-availability-bias"
+      ]
+    },
+    {
+      "slug": "anchoring-ai-assisted-decisions-first-number",
+      "title": "Anchoring in AI-assisted decisions: why the first number matters",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Anchoring is strongly supported in human numerical judgment, and newer studies show two AI-related risks: people can anchor on AI recommendations, while model outputs can also shift when prompts contain numerical anchors.",
+      "sections": [
+        {
+          "heading": "The human anchoring effect is strong, but not every anchor is equal",
+          "paragraphs": [
+            "Anchoring has been studied for decades: an initial numerical value can pull a later estimate toward it. A 2026 meta-analysis covering 2,601 effect sizes found a large overall effect even after accounting for publication bias.",
+            "The same meta-analysis also gives an important boundary condition. Incidental anchors, values from a different dimension, clearly random numbers, incentives and some debiasing conditions were associated with smaller or null effects. The useful claim is therefore not that every first number controls judgment, but that starting values can systematically influence later estimates under many common conditions."
+          ]
+        },
+        {
+          "heading": "An AI recommendation can become the anchor for a person",
+          "paragraphs": [
+            "A 2025 study used two controlled experiments with 775 managers making performance appraisal judgments. The managers’ ratings were influenced by high and low recommendations, and the source of the recommendation interacted with the anchor. In other words, the number mattered and whether it came from AI or a human could matter too.",
+            "This is useful for AI product design because a model does not need to be wrong in a dramatic way to shape a decision. Showing a precise score before a person forms an independent estimate can change the starting point of the whole review."
+          ]
+        },
+        {
+          "heading": "Models can also respond to anchors in prompts",
+          "paragraphs": [
+            "A peer-reviewed study published online in 2025 and appearing in the 2026 Journal of Computational Social Science tested anchoring in LLM responses. It found that model answers were sensitive to biased numerical hints in its experimental tasks.",
+            "The study also found that several simple mitigation prompts, including asking models to ignore the anchor or reflect, were not sufficient in the tested setup. That should not be turned into a universal rule about every model or every task. It is evidence that prompt-level anchoring deserves direct testing rather than assuming a generic reasoning instruction removes it."
+          ]
+        },
+        {
+          "heading": "A practical workflow is better than a warning",
+          "paragraphs": [
+            "For consequential numerical decisions, one useful design is to collect an independent human estimate or range before revealing the AI recommendation. Another is to show relevant base rates, completed cases or several independent estimates rather than one prominent number with false precision.",
+            "If the AI is producing the estimate itself, test the system with changed anchors and otherwise equivalent prompts. The question is observable: how much does the output move when the starting value changes, and does the mitigation improve calibration rather than merely changing the wording?"
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We added Anchoring Effect as an evidence-reviewed canonical concept and connected it to AI-assisted decisions and project estimation. We also compare it directly with Automation Bias because the two can occur together but describe different errors.",
+            "The distinction is practical. A person may be anchored by one AI-generated number without generally over-relying on automation, and a person can show automation bias without any numerical anchor at all."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Judgment under Uncertainty: Heuristics and Biases",
+          "year": 1974,
+          "type": "foundational experimental review",
+          "doi": "10.1126/science.185.4157.1124",
+          "url": "https://doi.org/10.1126/science.185.4157.1124"
+        },
+        {
+          "title": "Fifty Years of Anchoring Effects: A Theoretical Reintegration and Meta-Analysis",
+          "year": 2026,
+          "type": "meta-analysis",
+          "doi": "10.1287/mnsc.2023.03238",
+          "url": "https://doi.org/10.1287/mnsc.2023.03238"
+        },
+        {
+          "title": "How was my performance? Exploring the role of anchoring bias in AI-assisted decision making",
+          "year": 2025,
+          "type": "controlled experiments with managers",
+          "doi": "10.1016/j.ijinfomgt.2025.102875",
+          "url": "https://doi.org/10.1016/j.ijinfomgt.2025.102875"
+        },
+        {
+          "title": "Anchoring bias in large language models: an experimental study",
+          "year": 2026,
+          "type": "peer-reviewed experimental study",
+          "doi": "10.1007/s42001-025-00435-2",
+          "url": "https://doi.org/10.1007/s42001-025-00435-2"
+        }
+      ],
+      "related": [
+        "cognitive-bias-anchoring-effect",
+        "false-priors-automation-bias",
+        "egocentric-bias-planning-fallacy"
+      ]
+    },
+    {
+      "slug": "availability-heuristic-vivid-does-not-mean-common",
+      "title": "Availability heuristic: vivid does not automatically mean common",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Availability is a useful shortcut when accessible examples track real frequency. It becomes misleading when accessibility comes from non-diagnostic causes, and some popular claims about dramatic media risks and ease of retrieval are less universal than textbook examples suggest.",
+      "sections": [
+        {
+          "heading": "Availability was proposed as a heuristic, not a permanent error",
+          "paragraphs": [
+            "Tversky and Kahneman’s 1973 paper described a heuristic in which people use the ease with which examples or scenarios come to mind when judging frequency or probability. The paper also noted an important point that simplified explanations often lose: availability is generally correlated with real frequency.",
+            "That means easy recall can sometimes be informative. Bias appears when other forces such as vividness, repetition, recency, search, or personal experience change accessibility without tracking the quantity being estimated."
+          ]
+        },
+        {
+          "heading": "Ease of retrieval is one proposed cue, not the whole heuristic",
+          "paragraphs": [
+            "A well-known 1991 line of work suggested that people can use the subjective ease or difficulty of retrieving examples as information. This became a common mechanism in explanations of availability.",
+            "Later tests show why it should not be treated as universal. A 2021 series of eyewitness experiments found no predicted ease-of-retrieval effect on confidence and also failed to reproduce the original effect in an additional test. The broader availability heuristic does not disappear because one mechanism fails in one setting, but the mechanism needs direct evidence rather than automatic reuse."
+          ]
+        },
+        {
+          "heading": "The dramatic-news story is more complicated than the textbook version",
+          "paragraphs": [
+            "A common example says that dramatic risks are overestimated because media coverage makes vivid incidents easier to recall. A 2024 study revisited this idea across several datasets and found that the classic differential distortion of dramatic versus non-dramatic causes of death did not generalize across the datasets it examined.",
+            "Its analyses suggested that people’s available samples can come from personal social networks rather than simply mirroring media coverage. This does not prove that media never changes risk perception. It shows that one intuitive explanation should not be promoted to a universal mechanism without testing the source of the examples people are actually using."
+          ]
+        },
+        {
+          "heading": "Repetition can affect availability and truth in different ways",
+          "paragraphs": [
+            "Repeated information can become easier to retrieve, which may affect frequency or probability judgments. Repetition can also increase judged truth for a statement compared with comparable new information, which is studied as the illusory truth effect.",
+            "Those outcomes should be measured separately. A claim can feel common because examples are easy to recall without becoming more believable, and a repeated statement can feel more true without changing a person’s estimate of how often the underlying event occurs."
+          ]
+        },
+        {
+          "heading": "A practical check starts with the denominator",
+          "paragraphs": [
+            "When a memorable example is shaping a decision, write the question in measurable form: how often, among what set of cases, over what period? Then compare the recalled examples with a relevant base rate or deliberately sampled reference set.",
+            "Also ask why these examples were available. If the answer is 'because they happened often', availability may be doing useful work. If the answer is 'because this one was shocking, recent, repeated, or personal', the estimate needs stronger independent support."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We renamed the legacy Availability Bias page to Availability Heuristic and rewrote the top explanation so the shortcut is not automatically treated as an error. The evidence review already made this distinction; the public page now matches it.",
+            "We also added a direct Availability versus Illusory Truth comparison so repeated and memorable information can be checked against the type of judgment it is actually changing."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Availability: A heuristic for judging frequency and probability",
+          "year": 1973,
+          "type": "foundational experiments",
+          "doi": "10.1016/0010-0285(73)90033-9",
+          "url": "https://doi.org/10.1016/0010-0285(73)90033-9"
+        },
+        {
+          "title": "Ease of retrieval as information: Another look at the availability heuristic",
+          "year": 1991,
+          "type": "experiments",
+          "doi": "10.1037/0022-3514.61.2.195",
+          "url": "https://doi.org/10.1037/0022-3514.61.2.195"
+        },
+        {
+          "title": "Investigating the ease-of-retrieval effect in an eyewitness context",
+          "year": 2021,
+          "type": "replication and boundary-condition tests",
+          "doi": "10.1080/09658211.2021.1882502",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33557719/"
+        },
+        {
+          "title": "The perception of dramatic risks: Biased media, but unbiased minds",
+          "year": 2024,
+          "type": "multi-dataset reanalysis and replication tests",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38368678/"
+        },
+        {
+          "title": "The illusory truth effect: A review of how repetition increases belief in misinformation",
+          "year": 2024,
+          "type": "review",
+          "doi": "10.1016/j.copsyc.2023.101736",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38113667/"
+        }
+      ],
+      "related": [
+        "heuristic-bias-availability-bias",
+        "truth-judgment-illusory-truth-effect",
+        "cognitive-bias-confirmation-bias"
+      ]
+    },
+    {
+      "slug": "confirmation-bias-is-more-than-seeking-agreeable-information",
+      "title": "Confirmation bias is more than seeking agreeable information",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Confirmation bias is a broad family of belief-consistent information-processing tendencies. Classic hypothesis-testing work also shows why a narrower problem matters: a test can fit the favored hypothesis while offering little information against plausible alternatives.",
+      "sections": [
+        {
+          "heading": "The popular definition is too narrow",
+          "paragraphs": [
+            "Confirmation Bias is often described as consuming only information that agrees with existing beliefs. That can be one expression, but the research literature is wider. Nickerson's review covers selective search, interpretation, weighting, memory, and hypothesis testing across many settings.",
+            "This matters because a practical check should do more than tell people to read an opposing opinion. The better question is what evidence could change the belief and whether competing explanations are being judged by the same standard."
+          ]
+        },
+        {
+          "heading": "Classic hypothesis testing shows the problem clearly",
+          "paragraphs": [
+            "Wason's conceptual-task experiments showed how people can search for cases consistent with a current rule instead of selecting observations that efficiently eliminate alternatives. The result became an important foundation for later work on confirmation and hypothesis testing.",
+            "But later theory made the story more careful. Klayman and Ha argued that a positive test strategy can be useful in many environments. Looking where a hypothesis predicts an event is not automatically irrational; the diagnostic value depends on what competing hypotheses predict and on the structure of the task."
+          ]
+        },
+        {
+          "heading": "Congruence Bias is the narrower test-design problem",
+          "paragraphs": [
+            "Baron, Beattie and Hershey studied which questions people prefer when testing hypotheses. Participants could overvalue tests likely to return a positive answer under the leading hypothesis even when another test was more diagnostic among alternatives.",
+            "The practical distinction is useful. Confirmation Bias can describe a broad pattern around an existing belief. Congruence Bias is especially relevant when the mistake is choosing a test that agrees with the focal hypothesis but cannot distinguish it from rivals."
+          ]
+        },
+        {
+          "heading": "Counterevidence is not the same as arbitrary disagreement",
+          "paragraphs": [
+            "A good correction procedure does not require balancing every claim with an opposite claim. Some alternatives are weak, unsupported, or already ruled out. The goal is diagnostic evidence, not symmetrical content consumption.",
+            "For consequential decisions, define plausible alternatives, write what each predicts, and look for observations where their predictions differ. This creates a real chance for the preferred explanation to lose rather than merely surrounding it with more material."
+          ]
+        },
+        {
+          "heading": "AI makes the distinction operational",
+          "paragraphs": [
+            "Generative systems make it very easy to request ten better arguments for a conclusion already chosen. That workflow can amplify broad confirmation problems even when the model itself is not the original source of the belief.",
+            "A stronger workflow asks the model to identify rival explanations and discriminating tests, then verifies important claims independently. The model can help generate alternatives, but repeated generated support is not independent evidence."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "On the Failure to Eliminate Hypotheses in a Conceptual Task",
+          "year": 1960,
+          "type": "foundational experiment",
+          "doi": "10.1080/17470216008416717",
+          "url": "https://doi.org/10.1080/17470216008416717"
+        },
+        {
+          "title": "Confirmation, disconfirmation, and information in hypothesis testing",
+          "year": 1987,
+          "type": "theory + experimental evidence",
+          "doi": "10.1037/0033-295X.94.2.211",
+          "url": "https://doi.org/10.1037/0033-295X.94.2.211"
+        },
+        {
+          "title": "Diagnosticity of evidence and congruence bias in hypothesis testing",
+          "year": 1988,
+          "type": "hypothesis-testing experiments",
+          "doi": "10.1016/0749-5978(88)90012-2",
+          "url": "https://doi.org/10.1016/0749-5978(88)90012-2"
+        },
+        {
+          "title": "Confirmation Bias: A Ubiquitous Phenomenon in Many Guises",
+          "year": 1998,
+          "type": "review",
+          "doi": "10.1037/1089-2680.2.2.175",
+          "url": "https://doi.org/10.1037/1089-2680.2.2.175"
+        }
+      ],
+      "related": [
+        "cognitive-bias-confirmation-bias",
+        "confirmation-bias-congruence-bias"
+      ]
+    },
+    {
+      "slug": "curse-of-knowledge-experts-beginners-feedback",
+      "title": "Curse of Knowledge: why expert clarity is a poor test of beginner understanding",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Once you know an answer, your own knowledge can distort estimates of what another person knows. The most useful correction is not 'explain more simply' in the abstract, but feedback from the less-informed person's actual perspective.",
+      "sections": [
+        {
+          "heading": "The original problem was not teaching style",
+          "paragraphs": [
+            "The classic 1989 experiments studied economic judgments. Better-informed participants had difficulty ignoring private information when predicting what less-informed people would do. The important structure is perspective taking: knowledge available to one person leaks into a judgment about someone who does not have it.",
+            "That structure appears naturally in teaching, documentation and handoffs, but the research claim should stay narrower than the slogan that experts are bad teachers. Expertise can improve teaching; the risk is using one's own fluent understanding as evidence about another person's understanding."
+          ]
+        },
+        {
+          "heading": "Knowing the answer is not the only route",
+          "paragraphs": [
+            "Later experiments found a similar distortion even when participants did not literally possess privileged factual knowledge. When information felt easier to process, people could infer that it was also more commonly known by their peers.",
+            "This suggests that subjective fluency can be misattributed when we estimate other people's knowledge. Something can feel obvious because it is familiar to us, not because the missing step is genuinely obvious to a newcomer."
+          ]
+        },
+        {
+          "heading": "The mechanism is not settled into one simple story",
+          "paragraphs": [
+            "Researchers have proposed several contributors: anchoring on one's own knowledge, difficulty suppressing known information, missing cues about another person's perspective and misattributing processing fluency. Different tasks may rely on different combinations of these processes.",
+            "For this library, the observed perspective distortion is more important than choosing one universal mechanism. A useful explanation can say what the evidence shows without pretending every expert communication failure has the same psychological cause."
+          ]
+        },
+        {
+          "heading": "Feedback can improve perspective taking",
+          "paragraphs": [
+            "A 2021 series of experiments tested whether feedback could reduce later egocentric projection. Feedback that explained the other person's perspective improved subsequent perspective taking more than a simple accuracy score in the studied tasks.",
+            "That gives a practical direction for documentation and onboarding. Do not ask only whether the expert thinks the explanation is complete. Ask the less-informed person to predict, paraphrase or perform the next step, then show the expert where the perspectives diverged."
+          ]
+        },
+        {
+          "heading": "Why this is not Dunning–Kruger",
+          "paragraphs": [
+            "Curse of Knowledge concerns a judgment about another person's perspective. Dunning–Kruger research concerns calibration between a person's own performance and self-assessment. An expert can accurately understand their own performance and still overestimate what a beginner knows.",
+            "Conversely, a beginner can be poorly calibrated about their own performance without making any judgment about somebody else's knowledge. The two labels should not be used interchangeably just because both conversations mention expertise."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We rewrote Curse of Knowledge as a perspective-taking bias and moved it into Social judgment. The page now asks for evidence from the other person's actual understanding instead of telling experts merely to remember what being a beginner felt like.",
+            "We also added a direct comparison with Dunning–Kruger so search and AI answers can separate other-perspective judgment from self-assessment calibration."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "The Curse of Knowledge in Economic Settings: An Experimental Analysis",
+          "year": 1989,
+          "type": "foundational experiments",
+          "doi": "10.1086/261651",
+          "url": "https://doi.org/10.1086/261651"
+        },
+        {
+          "title": "A 'curse of knowledge' in the absence of knowledge? People misattribute fluency when judging how common knowledge is among their peers",
+          "year": 2017,
+          "type": "mechanism experiments",
+          "doi": "10.1016/j.cognition.2017.04.015",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28641221/"
+        },
+        {
+          "title": "Lifting the curse of knowing: How feedback improves perspective-taking",
+          "year": 2021,
+          "type": "debiasing experiments",
+          "doi": "10.1177/1747021820987080",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/33427086/"
+        }
+      ],
+      "related": [
+        "cognitive-bias-curse-of-knowledge",
+        "self-assessment-dunning"
+      ]
+    },
+    {
+      "slug": "why-the-past-can-look-better-than-it-was",
+      "title": "Why the past can look better than it was",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Several different processes can make past periods look better from the present, but they should not be collapsed into one universal bias. Event recollection, changing emotional intensity, exposure to current negative information, and real historical trends need separate evidence.",
+      "sections": [
+        {
+          "heading": "There is no single 'past was better' mechanism",
+          "paragraphs": [
+            "Declinism is useful here as an umbrella label, not as one standardized psychological mechanism. A claim that a city, profession, institution, technology, or society has declined can be true, false, or mixed depending on the indicator and time window.",
+            "The safer approach is to identify the narrower process that might be affecting the comparison and then test the historical claim with evidence collected as close as possible to the periods being compared."
+          ]
+        },
+        {
+          "heading": "Specific experiences can become rosier in memory",
+          "paragraphs": [
+            "Mitchell and colleagues followed three meaningful events and compared anticipation, experience, and later recollection. In all three, later recollection was more positive than the experience recorded during the event.",
+            "That finding supports Rosy Retrospection for event memory. It does not establish that every remembered decade, workplace, relationship, or cultural period was worse than people remember. Moving from an event-memory result to a historical trend claim requires different evidence."
+          ]
+        },
+        {
+          "heading": "Negative emotional intensity can fade faster",
+          "paragraphs": [
+            "Fading Affect Bias research finds an average asymmetry in autobiographical memory: negative affect tends to weaken faster than positive affect. A 2014 research review describes a long history of this pattern, and a 2025 study found it again in a large set of autobiographical memories using both calculated and subjectively reported affect change.",
+            "This concerns emotional intensity associated with memories. It should not be rewritten as a rule that factual details become positive or that every painful event stops feeling painful."
+          ]
+        },
+        {
+          "heading": "Moral decline is a narrower and unusually well-tested case",
+          "paragraphs": [
+            "Mastroianni and Gilbert combined archival and original data and found a widespread perception that morality has declined, while repeated reports of the current morality of contemporaries were broadly stable. Their proposed account combines disproportionate exposure to negative information about current people with memory processes that reduce the force of negative information about the past.",
+            "An independent 2024 replication of Study 5b reported the same key pattern: perceived moral decline during participants' lifetimes but not across periods before they were born. This strengthens that specific finding, not every possible claim about social decline."
+          ]
+        },
+        {
+          "heading": "The practical test is historical, not rhetorical",
+          "paragraphs": [
+            "Before deciding that something really declined, define the variable, population, place, and comparison years. Then look for measures collected during both periods. If the evidence is only autobiographical memory, label it as memory evidence rather than a population trend.",
+            "The goal is not to defend the present. It is to make criticism testable. Some indicators may genuinely worsen while others improve, and a mixed result is often more informative than forcing the whole period into 'better' or 'worse'."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Temporal Adjustments in the Evaluation of Events: The Rosy View",
+          "year": 1997,
+          "type": "three event-evaluation studies",
+          "doi": "10.1006/jesp.1997.1333",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9247371/"
+        },
+        {
+          "title": "The Fading Affect Bias: Its History, Its Implications, and Its Future",
+          "year": 2014,
+          "type": "research review",
+          "doi": "10.1016/B978-0-12-800052-6.00003-2",
+          "url": "https://doi.org/10.1016/B978-0-12-800052-6.00003-2"
+        },
+        {
+          "title": "Evidence for a fading affect bias in subjectively assessed affect changes in autobiographical memory",
+          "year": 2025,
+          "type": "large-sample autobiographical-memory study",
+          "doi": "10.3389/fpsyg.2025.1608751",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40792093/"
+        },
+        {
+          "title": "The illusion of moral decline",
+          "year": 2023,
+          "type": "archival analysis + multi-study experiments",
+          "doi": "10.1038/s41586-023-06137-x",
+          "url": "https://www.nature.com/articles/s41586-023-06137-x"
+        },
+        {
+          "title": "Replication of a study from The illusion of moral decline",
+          "year": 2024,
+          "type": "independent replication report / preprint",
+          "doi": "10.31234/osf.io/32xvw",
+          "url": "https://replications.clearerthinking.org/replication-2023nature618/"
+        }
+      ],
+      "related": [
+        "cognitive-bias-declinism",
+        "memory-bias-rosy-retrospection",
+        "memory-bias-fading-affect-bias"
+      ]
+    },
+    {
+      "slug": "decoy-effect-pricing-choice-sets",
+      "title": "Decoy Effect in pricing: when a third option changes the comparison",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Adding an inferior option can change the choice between stronger alternatives, but not every three-tier pricing table creates a reliable decoy effect. The position of the options, prior preferences and the decision context all matter.",
+      "sections": [
+        {
+          "heading": "The important change is the choice set",
+          "paragraphs": [
+            "The decoy effect is interesting because the main options do not need to change. Instead, adding another alternative changes the context in which they are evaluated. In the classic attraction-effect setup, the new option is asymmetrically dominated: it is clearly worse than the target on relevant attributes while the competitor is not similarly dominant over it.",
+            "That can increase the target's choice share even when the decoy itself is rarely selected. The result challenges the simple idea that a person's preference between two options should stay unchanged when an inferior third option appears."
+          ]
+        },
+        {
+          "heading": "Decoy is not one universal three-option formula",
+          "paragraphs": [
+            "The literature uses several related context effects. Attraction, compromise and phantom-decoy effects are not identical. A 2024 integrative review separates multiple decoy configurations and documents many moderators rather than treating every additional option as the same intervention.",
+            "This matters for pricing advice. A middle plan is not automatically a decoy, and an expensive plan is not automatically there only to sell the plan beside it. The relative attributes and dominance relationship need to be examined before applying the label."
+          ]
+        },
+        {
+          "heading": "The effect is documented, but its size is conditional",
+          "paragraphs": [
+            "Experiments have repeatedly found context-dependent preference shifts. A 2019 risky-choice study replicated asymmetric dominance and found that the effect depended on which option people already preferred and became weaker as preference strength increased.",
+            "Preregistered work also gives a useful warning against treating famous demonstrations as fixed effect sizes. A 2021 replication project failed to reproduce one original result and reproduced another with a much smaller effect. The reasonable conclusion is not that the decoy effect disappeared, but that the conditions and magnitude deserve attention."
+          ]
+        },
+        {
+          "heading": "There is no single agreed mechanism",
+          "paragraphs": [
+            "Different accounts focus on contrast between attribute trade-offs, relative-value computation, attention, or the ease of justifying one option over another. The 2024 review finds no clear consensus on one mechanism that explains all decoy effects.",
+            "For this library, the observed choice pattern is therefore firmer than a claim about one mental process. We describe what changed in the choice set first and keep mechanism claims qualified."
+          ]
+        },
+        {
+          "heading": "A useful check for pricing tables",
+          "paragraphs": [
+            "Write the attributes that matter before looking at which plan is highlighted. Compare the serious options without the suspected decoy, then add it back. If the preference changes, inspect the contrast rather than treating the new preference as automatically more informed.",
+            "Also separate other choice architecture. A pre-selected plan is a default, a displayed list price can become an anchor, and gain or loss wording can frame the same feature differently. One screen can contain several effects at once."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We rewrote Decoy Effect as a reviewed context effect rather than a guaranteed marketing trick. We also compare it directly with Default Effect and added a Comparing plans & pricing context that connects Decoy with Default, Anchoring and Framing.",
+            "The practical rule is simple: remove the extra option and see whether the comparison between the remaining options changes. Then return to the attributes and goals that actually matter."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Choice in Context: Tradeoff Contrast and Extremeness Aversion",
+          "year": 1992,
+          "type": "foundational experiments",
+          "doi": "10.1177/002224379202900301",
+          "url": "https://doi.org/10.1177/002224379202900301"
+        },
+        {
+          "title": "The asymmetric dominance effect: Reexamination and extension in risky choice – An experimental study",
+          "year": 2019,
+          "type": "experimental replication and extension",
+          "doi": "10.1016/j.joep.2019.05.007",
+          "url": "https://doi.org/10.1016/j.joep.2019.05.007"
+        },
+        {
+          "title": "Revisiting the decoy effect: replication and extension of Ariely and Wallsten (1995) and Connolly, Reb, and Kausel (2013)",
+          "year": 2021,
+          "type": "preregistered replication",
+          "doi": "10.1080/23743603.2021.1878340",
+          "url": "https://doi.org/10.1080/23743603.2021.1878340"
+        },
+        {
+          "title": "An integrative review of the decoy effect on choice behavior",
+          "year": 2024,
+          "type": "systematic integrative review",
+          "doi": "10.1002/mar.22076",
+          "url": "https://doi.org/10.1002/mar.22076"
+        }
+      ],
+      "related": [
+        "framing-effect-decoy-effect",
+        "framing-effect-default-effect",
+        "cognitive-bias-anchoring-effect",
+        "framing-effect-core"
+      ]
+    },
+    {
+      "slug": "defaults-status-quo-preference-choice-architecture",
+      "title": "Defaults and status quo: why staying does not prove preference",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Defaults often change what people choose, but staying with a pre-selected or existing option does not by itself show strong preference. The useful question is what made the option sticky and whether the result still serves the person's goals.",
+      "sections": [
+        {
+          "heading": "Defaults have a real effect, but not one fixed effect",
+          "paragraphs": [
+            "A default is the option that applies when a person does not actively choose something else. Across many studies, making an option the default increases its uptake. A 2019 meta-analysis of 58 studies found a substantial average effect, but also large variation between studies. Some defaults were very influential, some had small effects, and a few moved behaviour in the opposite direction.",
+            "This variation matters for product and policy work. A team should not copy a famous opt-in or opt-out example and assume the same effect will appear in a different decision. The setting, population, friction, trust and meaning of the default all matter."
+          ]
+        },
+        {
+          "heading": "Why a default can be sticky",
+          "paragraphs": [
+            "Research suggests several routes rather than one universal mechanism. Changing the default can require effort or attention. People can also read a pre-selected option as a recommendation from the person or organisation that designed the choice. And when the default feels like the current state, moving away from it can be evaluated as a change from what is already owned or expected.",
+            "These explanations can overlap. That is why a high uptake rate does not tell us, by itself, whether people stayed because they preferred the option, trusted the designer, avoided effort, missed the choice, or treated the starting state as a reference point."
+          ]
+        },
+        {
+          "heading": "Default effect and status quo bias overlap, but they are not synonyms",
+          "paragraphs": [
+            "Status quo bias is broader. It describes extra preference for the option that is already current. A current software system, bank or work process can be a status quo even when no new screen or policy deliberately pre-selects it.",
+            "A default can create or reinforce a status quo, but it can also operate through other channels such as recommendation or effort. For diagnosis, first ask what happens under inaction. Then ask whether the person already had a current option before the choice was presented."
+          ]
+        },
+        {
+          "heading": "Why uptake is not the same as welfare",
+          "paragraphs": [
+            "Defaults are useful because every system needs some starting behaviour. That also gives the designer responsibility. If changing the default is obscure or costly, observed persistence can partly measure friction rather than informed preference.",
+            "Recent reviews of choice architecture emphasise that effects can vary or even become counterproductive across settings. Research on downstream default effects also shows that we know less about what happens after the immediate choice than the popularity of defaults may suggest. A good design should therefore measure more than the first click."
+          ]
+        },
+        {
+          "heading": "A practical review for products and policies",
+          "paragraphs": [
+            "Start by writing the no-action outcome in plain language. Make important alternatives visible, keep switching reasonably easy, and separate a user's genuine switching costs from interface friction. If the decision is consequential, compare the default with an active-choice condition or another defensible default when testing is possible.",
+            "Then ask whether other choice effects are mixed into the design. A suggested number can anchor judgment, and equivalent gain or loss wording can frame the same outcome differently. Calling every change a default effect hides what the interface is actually doing."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We now treat Default Effect and Status Quo Bias as separate reviewed concepts and compare them directly. We also added a Defaults, settings & choice architecture context that connects them with Framing and Anchoring.",
+            "The main rule is deliberately simple: do not read preference directly from persistence. First identify the starting state, the cost of changing it, the information people saw and the alternatives they could realistically choose."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Status quo bias in decision making",
+          "year": 1988,
+          "type": "foundational experiments and field evidence",
+          "doi": "10.1007/BF00055564",
+          "url": "https://doi.org/10.1007/BF00055564"
+        },
+        {
+          "title": "Recommendations Implicit in Policy Defaults",
+          "year": 2006,
+          "type": "experiments",
+          "doi": "10.1111/j.1467-9280.2006.01721.x",
+          "url": "https://doi.org/10.1111/j.1467-9280.2006.01721.x"
+        },
+        {
+          "title": "Limited attention and status quo bias",
+          "year": 2017,
+          "type": "model and laboratory experiments",
+          "doi": "10.1016/j.jet.2017.01.009",
+          "url": "https://doi.org/10.1016/j.jet.2017.01.009"
+        },
+        {
+          "title": "When and why defaults influence decisions: a meta-analysis of default effects",
+          "year": 2019,
+          "type": "meta-analysis",
+          "doi": "10.1017/bpp.2018.43",
+          "url": "https://doi.org/10.1017/bpp.2018.43"
+        },
+        {
+          "title": "Generalizability of choice architecture interventions",
+          "year": 2025,
+          "type": "research review",
+          "doi": "10.1038/s44159-025-00471-9",
+          "url": "https://doi.org/10.1038/s44159-025-00471-9"
+        },
+        {
+          "title": "How default choice architecture impacts downstream behavior: A taxonomy, theoretical framework, and research agenda",
+          "year": 2026,
+          "type": "research review",
+          "doi": "10.1002/arcp.70007",
+          "url": "https://doi.org/10.1002/arcp.70007"
+        }
+      ],
+      "related": [
+        "framing-effect-default-effect",
+        "prospect-theory-status-quo-bias",
+        "framing-effect-core",
+        "cognitive-bias-anchoring-effect"
+      ]
+    },
+    {
+      "slug": "dunning-kruger-effect-what-research-shows",
+      "title": "Dunning–Kruger Effect: what the research does and does not show",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "The Dunning–Kruger Effect is better understood as a question about calibration between performance and self-assessment than as the internet rule that incompetent people are always extremely confident.",
+      "sections": [
+        {
+          "heading": "What the original studies found",
+          "paragraphs": [
+            "The 1999 studies compared objective performance with self-assessment on tasks including grammar, logic and humour. Participants in the lowest performance quartile substantially overestimated how well they had done. The authors proposed that limited skill can also make it harder to recognise one's own mistakes.",
+            "That result became much more famous than the details of the experiments. The popular version often turns a task-specific calibration finding into a general personality claim about who is confident and who is competent."
+          ]
+        },
+        {
+          "heading": "The viral story is too simple",
+          "paragraphs": [
+            "Dunning–Kruger does not mean that the least skilled person in a room must be the most confident person. It also does not require experts to underestimate themselves. The important measurement is the gap between an objective performance measure and a person's estimate of that performance.",
+            "This distinction matters because absolute confidence and calibration are different. Two people can report similar confidence while one estimate is much further from measured performance."
+          ]
+        },
+        {
+          "heading": "Why the familiar quartile chart is debated",
+          "paragraphs": [
+            "A major methodological criticism is that common plots based on performance quartiles can exaggerate the appearance of the effect. Regression toward the mean and broad better-than-average tendencies can produce part of the familiar pattern even without the proposed metacognitive mechanism.",
+            "A 2020 study using alternative statistical tests found no significant Dunning–Kruger pattern in its intelligence data and argued that the effect may be much smaller than commonly reported. This is a serious challenge to simple interpretations, not a reason to pretend the original research never happened."
+          ]
+        },
+        {
+          "heading": "The debate did not end with 'it is only an artefact'",
+          "paragraphs": [
+            "Later reanalysis and replication work argued that some conclusions depend on how self-assessment is transformed and tested. A 2023 paper using alternative methods reported a small significant effect in intelligence data and called for better tests of the hypothesis.",
+            "The useful conclusion is therefore narrower than either internet extreme. Self-assessment can be systematically miscalibrated, especially among lower performers in some tasks, but the size and shape of the effect depend on measurement and context."
+          ]
+        },
+        {
+          "heading": "A better way to use the idea",
+          "paragraphs": [
+            "Do not diagnose another person from a confident statement. Instead, use calibration on yourself or on a process: record a prediction of performance before feedback, compare it with an objective result, and repeat the exercise across several attempts.",
+            "Good feedback should improve more than the score. It should also help confidence move closer to actual performance. That makes calibration a measurable learning target instead of a label for people we dislike."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We removed the old headline that said 'the less you know, the more confident you are'. The canonical page now describes performance and self-assessment directly and keeps the methodological debate visible in the evidence section.",
+            "For search and AI use, this distinction matters: a short definition should not silently turn a conditional research pattern into a universal law about confidence, expertise or intelligence."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Unskilled and unaware of it: how difficulties in recognizing one's own incompetence lead to inflated self-assessments",
+          "year": 1999,
+          "type": "foundational experiments",
+          "doi": "10.1037/0022-3514.77.6.1121",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10626367/"
+        },
+        {
+          "title": "The Dunning-Kruger effect is (mostly) a statistical artefact: Valid approaches to testing the hypothesis with individual differences data",
+          "year": 2020,
+          "type": "methodological critique and empirical test",
+          "doi": "10.1016/j.intell.2020.101449",
+          "url": "https://doi.org/10.1016/j.intell.2020.101449"
+        },
+        {
+          "title": "Reevaluating the Dunning-Kruger effect: A response to and replication of Gignac and Zajenkowski (2020)",
+          "year": 2023,
+          "type": "reanalysis and replication",
+          "doi": "10.1016/j.intell.2022.101717",
+          "url": "https://doi.org/10.1016/j.intell.2022.101717"
+        }
+      ],
+      "related": [
+        "self-assessment-dunning"
+      ]
+    },
+    {
+      "slug": "framing-effect-not-all-frames-are-the-same",
+      "title": "Framing effect: why not all frames are the same",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Risky-choice framing is a robust finding, but the word 'framing' covers several different research paradigms. Treating every positive-versus-negative message as the same effect hides important differences in evidence and mechanism.",
+      "sections": [
+        {
+          "heading": "The classic result is about equivalent risky choices",
+          "paragraphs": [
+            "Tversky and Kahneman’s 1981 experiments showed that preferences can change when the same underlying outcomes are described in different ways. The best-known cases compare gain and loss descriptions of risky choices while preserving the essential outcomes and probabilities.",
+            "A 1998 meta-analysis covering 230 effect sizes from nearly 30,000 participants found a reliable overall risky-choice framing effect, but also substantial variation across research designs. This is a robust phenomenon with moderators, not a law that any positive wording creates risk aversion and any negative wording creates risk seeking."
+          ]
+        },
+        {
+          "heading": "Framing is not one experimental paradigm",
+          "paragraphs": [
+            "A major 1998 review separated valence framing into risky-choice framing, attribute framing, and goal framing. Risky-choice framing changes how options under risk are described. Attribute framing changes how a characteristic is described, such as success versus failure percentage. Goal framing changes whether a message emphasizes the benefit of doing something or the cost of not doing it.",
+            "Those tasks should not be collapsed into one effect simply because each uses positive and negative language. They ask different questions and may involve different psychological processes."
+          ]
+        },
+        {
+          "heading": "The evidence is not equally strong across types",
+          "paragraphs": [
+            "A 2023 systematic review concluded that risky-choice framing has strong and consistent evidence. It described the evidence for attribute framing as more limited but generally positive, while goal or message framing was much less consistent.",
+            "That changes how this library should write about framing. We can confidently teach the risky-choice pattern while keeping broader claims about persuasion and message framing narrower."
+          ]
+        },
+        {
+          "heading": "Complete information reduces one problem but does not erase framing",
+          "paragraphs": [
+            "Some framing tasks have been criticized because gain and loss versions can make different parts of an outcome more salient or omit complementary information. A large 2026 replication tested matched and complete descriptions and still found a residual risky-choice framing effect.",
+            "That result strengthens the case that framing is not only an artifact of obviously incomplete wording. At the same time, it reinforces the need to inspect exactly how the options were represented before generalizing from one task to another."
+          ]
+        },
+        {
+          "heading": "A practical check is to vary the presentation, not guess at neutrality",
+          "paragraphs": [
+            "For consequential decisions, write the underlying outcomes and probabilities first. Then compare equivalent gain, loss, and neutral descriptions while keeping the information complete. If preferences move, the presentation is part of the decision environment and should be documented.",
+            "This matters for AI interfaces too. A model can choose whether to describe the same forecast as success, failure, lives saved, losses avoided, or risk incurred. The useful governance question is observable: do reasonable presentation variants change the person’s decision?"
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We added Framing Effect as a canonical evidence-reviewed concept instead of leaving it only as a category label. The page explicitly separates risky-choice, attribute, and goal framing rather than presenting every wording effect as one construct.",
+            "We also added a Framing versus Anchoring comparison and a Presenting risk & options context, so people can start either from the concept or from a real communication and interface problem."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "The framing of decisions and the psychology of choice",
+          "year": 1981,
+          "type": "foundational experiments",
+          "doi": "10.1126/science.7455683",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/7455683/"
+        },
+        {
+          "title": "The Influence of Framing on Risky Decisions: A Meta-analysis",
+          "year": 1998,
+          "type": "meta-analysis",
+          "doi": "10.1006/obhd.1998.2781",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9719656/"
+        },
+        {
+          "title": "All Frames Are Not Created Equal: A Typology and Critical Analysis of Framing Effects",
+          "year": 1998,
+          "type": "critical review and typology",
+          "doi": "10.1006/obhd.1998.2804",
+          "url": "https://doi.org/10.1006/obhd.1998.2804"
+        },
+        {
+          "title": "A systematic review of risky-choice framing effects",
+          "year": 2023,
+          "type": "systematic review",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37927347/"
+        },
+        {
+          "title": "Accelerating Psychological Science With Metastudies: A Demonstration Using the Risky-Choice Framing Effect",
+          "year": 2022,
+          "type": "three metastudies",
+          "doi": "10.1177/17456916221079611",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/35834353/"
+        },
+        {
+          "title": "Risky-choice framing effects persist when option descriptions are matched and complete: A replication and extension of DeKay and Dou (2024)",
+          "year": 2026,
+          "type": "large replication and extension",
+          "doi": "10.3758/s13423-025-02771-w",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41979840/"
+        }
+      ],
+      "related": [
+        "framing-effect-core",
+        "cognitive-bias-anchoring-effect",
+        "probability-bias-subadditivity-effect",
+        "heuristic-bias-availability-bias"
+      ]
+    },
+    {
+      "slug": "hungry-judge-effect-what-study-actually-shows",
+      "title": "Hungry Judge Effect: what the famous study actually shows",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "The famous parole-board study found a strong sequence pattern around food breaks, but it did not measure hunger or randomly manipulate meals. Later critiques and simulations provide plausible alternative explanations for part of the striking result.",
+      "sections": [
+        {
+          "heading": "The original result was a sequence pattern",
+          "paragraphs": [
+            "A 2011 observational study examined repeated parole decisions across daily decision sessions. Favorable rulings were much more common near the start of sessions and became less common later, then rose again after food breaks.",
+            "The pattern was striking and became widely retold as evidence that hungry judges make harsher decisions. That retelling is stronger than the study itself. Hunger, glucose, fatigue and mood were not directly measured, and the breaks combined eating with rest."
+          ]
+        },
+        {
+          "heading": "The authors themselves could not isolate hunger",
+          "paragraphs": [
+            "The original discussion treated mental depletion as one possible interpretation, but explicitly noted that eating and resting happened together and that mood and mental resources were not measured. This means the design could not identify hunger as the causal mechanism.",
+            "The safer claim is that decision outcomes were associated with position within sessions and break structure in this dataset. Moving from that association to a general law about hunger requires evidence the study did not provide."
+          ]
+        },
+        {
+          "heading": "Case ordering became an immediate point of dispute",
+          "paragraphs": [
+            "A 2011 critique argued that cases were not randomly ordered around breaks. Using additional data and interviews, the critics reported that represented and unrepresented prisoners, prison grouping and attorney scheduling could contribute to the within-session pattern.",
+            "The original authors replied with analyses intended to show that representation did not remove the result. The exchange is important because it shows that the causal interpretation was disputed from the beginning rather than being a settled experiment later challenged only by replication concerns."
+          ]
+        },
+        {
+          "heading": "Simulation work provides another alternative",
+          "paragraphs": [
+            "A later simulation analysis showed that some of the dramatic decline can arise when favorable cases tend to take longer and sessions end before cases expected to require more time. Under such conditions, a large order pattern can appear even for a hypothetical rational decision-maker without invoking depletion or hunger.",
+            "The simulation does not prove that every part of the original pattern was an artifact. It does show why the size of the famous graph should not be read directly as the size of a physiological hunger effect."
+          ]
+        },
+        {
+          "heading": "What a useful operational lesson looks like",
+          "paragraphs": [
+            "Repeated high-stakes decisions can still deserve checks for sequence and context effects. A good review records case order, workload, decision duration, break timing, case difficulty, representation and other scheduling variables rather than assigning one cause from the shape of a graph.",
+            "If hunger is the hypothesis, measure hunger or manipulate food independently from rest. If fatigue is the hypothesis, measure fatigue. This sounds less exciting than 'justice depends on lunch', but it is how causal questions stop being slogans."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We keep Hungry Judge Effect because the study and the debate are useful examples of how an observational finding can become a stronger popular story. The canonical page now describes the sequence result first and keeps the uncertain mechanism visible.",
+            "We also exclude this entry from the Decision Audit. It is not a good self-diagnostic lens for a person's current choice; its useful role is as a research case about sequence effects, confounding and causal overreach."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Extraneous factors in judicial decisions",
+          "year": 2011,
+          "type": "observational study",
+          "doi": "10.1073/pnas.1018033108",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21482790/"
+        },
+        {
+          "title": "Overlooked factors in the analysis of parole decisions",
+          "year": 2011,
+          "type": "data critique and letter",
+          "doi": "10.1073/pnas.1110910108",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21987788/"
+        },
+        {
+          "title": "Reply to Weinshall-Margel and Shapard: Extraneous factors in judicial decisions persist",
+          "year": 2011,
+          "type": "author reply and reanalysis",
+          "doi": "10.1073/pnas.1112190108",
+          "url": "https://doi.org/10.1073/pnas.1112190108"
+        },
+        {
+          "title": "The irrational hungry judge effect revisited: Simulations reveal that the magnitude of the effect is overestimated",
+          "year": 2023,
+          "type": "simulation and methodological analysis",
+          "url": "https://www.cambridge.org/core/journals/judgment-and-decision-making/article/irrational-hungry-judge-effect-revisited-simulations-reveal-that-the-magnitude-of-the-effect-is-overestimated/61CE825D4DC137675BB9CAD04571AE58"
+        }
+      ],
+      "related": [
+        "cognitive-bias-hungry-judge-effect"
+      ]
+    },
+    {
+      "slug": "loss-aversion-how-large-and-how-robust",
+      "title": "Loss Aversion: how large is the effect, and how robust is it?",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Loss aversion is one of the best-known ideas in behavioural economics, but recent meta-analyses disagree substantially about its average size and about which experimental designs provide clean evidence for it.",
+      "sections": [
+        {
+          "heading": "The famous idea is about a reference point",
+          "paragraphs": [
+            "Prospect theory models outcomes as gains and losses relative to a reference point rather than only as final levels of wealth. Loss aversion adds an asymmetry: a loss can receive more subjective weight than an equivalent gain around that reference point.",
+            "This is different from a general dislike of risk. It is also different from sunk cost. A sunk cost is already irrecoverable; loss aversion concerns how prospective losses and gains are valued from a reference point."
+          ]
+        },
+        {
+          "heading": "A large 2024 meta-analysis found substantial loss aversion",
+          "paragraphs": [
+            "Brown and colleagues collected 607 empirical estimates from 150 articles across economics, psychology, neuroscience and other fields. Their meta-analysis estimated a mean loss-aversion coefficient of about 1.96, close to the familiar claim that losses can receive roughly twice the weight of gains.",
+            "That is strong aggregate evidence that loss-sensitive estimates are common in the literature. It still does not mean that 1.96 is a psychological constant that should be copied into every product, policy or forecasting model."
+          ]
+        },
+        {
+          "heading": "Another 2024 meta-analysis found a much smaller effect",
+          "paragraphs": [
+            "Walasek and colleagues focused on risky-choice datasets where prospect-theory parameters could be fitted to individual choices. Across the usable datasets, their random-effects estimate of the loss-aversion parameter was about 1.31 rather than around two.",
+            "The authors also noted that surprisingly few datasets were suitable for this kind of model fitting and that much of the available data made precise parameter estimation difficult. Different inclusion and modelling choices therefore lead to materially different summaries of the literature."
+          ]
+        },
+        {
+          "heading": "The 2025 re-meta-analysis sharpened the disagreement",
+          "paragraphs": [
+            "A 2025 re-analysis of much of the Brown et al. dataset separated studies by payoff symmetry and by whether gains and losses were presented in an ordered way. It found strong loss aversion in some design categories but a parameter close to one in symmetric, unordered studies.",
+            "The authors interpret this as evidence that loss aversion is not robust across cleanly matched designs. That conclusion is itself part of an active scientific debate, but it is enough to reject a universal rule about one fixed loss-aversion coefficient."
+          ]
+        },
+        {
+          "heading": "What a practical check can still do",
+          "paragraphs": [
+            "For a real decision, start by naming the reference point. Then compare equal-sized positive and negative changes under the same probabilities and time horizon. When possible, also write the final outcomes directly so that the reference frame is visible rather than hidden inside the wording.",
+            "If a product team, analyst or model needs a numerical loss-aversion parameter, estimate or validate it for the relevant setting instead of importing a famous coefficient from another experiment."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We added Loss Aversion as a core reviewed concept, but we do not describe it as a settled 'losses hurt twice as much' law. The evidence page keeps the competing 2024 meta-analyses and the 2025 re-meta-analysis together so readers can see the disagreement.",
+            "We also compare Loss Aversion directly with Sunk Cost Effect and connect it to the guides for presenting risk and deciding whether a project should continue, change or stop."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Prospect Theory: An Analysis of Decision under Risk",
+          "year": 1979,
+          "type": "foundational theory and experiments",
+          "doi": "10.2307/1914185",
+          "url": "https://doi.org/10.2307/1914185"
+        },
+        {
+          "title": "Meta-analysis of Empirical Estimates of Loss Aversion",
+          "year": 2024,
+          "type": "interdisciplinary meta-analysis",
+          "doi": "10.1257/jel.20221698",
+          "url": "https://doi.org/10.1257/jel.20221698"
+        },
+        {
+          "title": "A meta-analysis of loss aversion in risky contexts",
+          "year": 2024,
+          "type": "meta-analysis of risky-choice datasets",
+          "doi": "10.1016/j.joep.2024.102740",
+          "url": "https://doi.org/10.1016/j.joep.2024.102740"
+        },
+        {
+          "title": "Loss aversion is not robust: A re-meta-analysis",
+          "year": 2025,
+          "type": "re-meta-analysis",
+          "doi": "10.1016/j.joep.2025.102801",
+          "url": "https://doi.org/10.1016/j.joep.2025.102801"
+        }
+      ],
+      "related": [
+        "prospect-theory-loss-aversion",
+        "cognitive-bias-sunk-cost-effect",
+        "framing-effect-core"
+      ]
+    },
+    {
+      "slug": "sunk-cost-escalation-why-past-spend-is-only-part",
+      "title": "Sunk cost vs escalation: why past spending is only part of the story",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Past, unrecoverable costs can influence whether people continue, but escalation of commitment is a broader process. Responsibility for the original choice, completion pressure, project structure and advice can also shape the next investment.",
+      "sections": [
+        {
+          "heading": "Sunk cost is a real effect, not a complete theory of persistence",
+          "paragraphs": [
+            "Classic sunk-cost experiments found that prior investments of money, time or effort can increase the tendency to continue. A later meta-analysis of 98 effect sizes found clear evidence for the effect overall, while also showing that its size and moderators depend on the kind of decision being made.",
+            "That supports a narrow and useful definition: sunk cost is about the influence of an irrecoverable past investment on a current choice. It does not mean every decision to continue after spending money is irrational."
+          ]
+        },
+        {
+          "heading": "Escalation is the wider process",
+          "paragraphs": [
+            "Barry Staw’s early escalation experiments studied what happens after negative consequences. Participants who were personally responsible for the original investment decision committed more resources to the same course under failure conditions. Later reviews treated escalation as a process with several possible determinants rather than as another name for sunk cost.",
+            "This distinction matters in organizations. A project can escalate because leaders want to justify the original choice, protect reputation, respond to incentives, preserve a coalition, or because the project structure makes another small commitment feel easier than a clean stop. Sunk costs can be part of that story without being the whole story."
+          ]
+        },
+        {
+          "heading": "Being almost finished changes the forward-looking question",
+          "paragraphs": [
+            "A 2001 experiment examined sunk costs and project completion together. Both influenced commitment, and they interacted. This is a useful warning against another oversimplification: the percentage already completed is not itself a reason to continue, but actual value that becomes available only at completion can be part of the future case.",
+            "A better review therefore asks what the remaining investment buys from today forward. If a small final cost unlocks large useful value, continuation may be sensible. If 'almost done' mainly describes effort already spent and completion creates little value, it should not carry the same weight."
+          ]
+        },
+        {
+          "heading": "AI advice can enter the escalation process too",
+          "paragraphs": [
+            "A 2025 Academy of Management Proceedings paper tested algorithmic and human advice in escalation decisions using three preregistered experiments with 727 participants. In the study, escalation was higher with algorithmic advice than human advice for subjective tasks, while the difference was not significant for objective tasks.",
+            "This is a newer application rather than a reason to declare that AI generally causes escalation. It does show why an AI recommendation should be treated as another input to a continue-or-stop review, not as a substitute for separating sunk costs, future value and exit criteria."
+          ]
+        },
+        {
+          "heading": "A decision procedure is more useful than the slogan 'ignore sunk costs'",
+          "paragraphs": [
+            "For a difficult project review, start with four forward-looking fields: remaining cost, expected useful value, important uncertainty, and the best realistic alternative for the same resources. Put irrecoverable past costs in a separate field so they stay visible without silently becoming a benefit of continuing.",
+            "Then check the broader escalation conditions: who owns the original decision, what completion really unlocks, which incentives reward continuation, what evidence would trigger a change, and whether an independent reviewer reaches the same conclusion. The goal is not to force stopping. It is to make continuing earn its case again."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We now keep Sunk Cost Effect and Escalation of Commitment as separate canonical concepts. The old Escalation page no longer presents them as synonyms, and a direct comparison explains where they overlap and where they do not.",
+            "We also added a Continue, change, or stop a project context so a person can begin with the decision problem instead of needing to know the bias name first."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Knee-deep in the big muddy: a study of escalating commitment to a chosen course of action",
+          "year": 1976,
+          "type": "foundational experiment",
+          "doi": "10.1016/0030-5073(76)90005-2",
+          "url": "https://doi.org/10.1016/0030-5073(76)90005-2"
+        },
+        {
+          "title": "The Escalation of Commitment To a Course of Action",
+          "year": 1981,
+          "type": "research review",
+          "doi": "10.5465/AMR.1981.4285694",
+          "url": "https://doi.org/10.5465/AMR.1981.4285694"
+        },
+        {
+          "title": "The psychology of sunk cost",
+          "year": 1985,
+          "type": "field study and experiments",
+          "doi": "10.1016/0749-5978(85)90049-4",
+          "url": "https://doi.org/10.1016/0749-5978(85)90049-4"
+        },
+        {
+          "title": "Looking forward and looking back: integrating completion and sunk-cost effects within an escalation-of-commitment progress decision",
+          "year": 2001,
+          "type": "experimental study",
+          "doi": "10.1037/0021-9010.86.1.104",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11302222/"
+        },
+        {
+          "title": "On the sunk-cost effect in economic decision-making: a meta-analytic review",
+          "year": 2015,
+          "type": "meta-analysis",
+          "doi": "10.1007/s40685-014-0014-8",
+          "url": "https://doi.org/10.1007/s40685-014-0014-8"
+        },
+        {
+          "title": "Still Stuck in the Mud: How Advice from Algorithms Affects Escalation of Commitment",
+          "year": 2025,
+          "type": "conference proceedings; three preregistered experiments",
+          "doi": "10.5465/AMPROC.2025.119bp",
+          "url": "https://doi.org/10.5465/AMPROC.2025.119bp"
+        }
+      ],
+      "related": [
+        "cognitive-bias-sunk-cost-effect",
+        "logical-fallacy-escalation-of-commitment",
+        "cognitive-bias-anchoring-effect",
+        "egocentric-bias-planning-fallacy",
+        "cognitive-bias-confirmation-bias"
+      ]
+    },
+    {
+      "slug": "surrogation-when-a-kpi-starts-replacing-the-goal",
+      "title": "Surrogation: when a KPI starts replacing the goal",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Surrogation is more specific than the slogan 'what gets measured gets managed.' Research in strategic performance systems shows how a measure can start to stand in for the construct it was designed to represent, and how decision processes can reduce that substitution.",
+      "sections": [
+        {
+          "heading": "A proxy is not automatically a problem",
+          "paragraphs": [
+            "Organizations need measures because goals such as service quality, strategic fit or long-term value are difficult to observe directly. A KPI can be a useful proxy without fully representing the construct behind it.",
+            "Surrogation begins when the distinction is lost: the measure is treated as though it were the construct itself. A higher number then starts to count as success even when important unmeasured dimensions move in the wrong direction."
+          ]
+        },
+        {
+          "heading": "The evidence comes from strategic performance-measure settings",
+          "paragraphs": [
+            "Choi, Hecht and Tayler studied managers working with strategic performance measurement systems. Their experiments found that involvement in selecting the strategy reduced surrogation, while deliberation without actual strategy choice did not produce the same result.",
+            "That matters for interpretation. Surrogation is a domain-specific management-accounting construct with experimental support, not a universal label for every case where people care too much about a number."
+          ]
+        },
+        {
+          "heading": "Narrative explanation can restore missing dimensions",
+          "paragraphs": [
+            "Bentley's experiment used experienced chess players and an imperfect performance measure. Participants who could provide narrative explanations to a principal distorted their decisions less and later showed less surrogation.",
+            "One practical interpretation is that a short explanation can force attention back onto parts of the underlying construct that a single score does not capture. The result does not imply that narrative reporting fixes every incentive or measurement problem."
+          ]
+        },
+        {
+          "heading": "Surrogation and measurement bias are different failures",
+          "paragraphs": [
+            "A metric can be calculated accurately and still be an incomplete proxy. Surrogation concerns how people interpret and optimize that proxy. Systematic bias concerns whether the measurement or estimation process itself is consistently shifted relative to a reference.",
+            "The two can occur together. A team may over-treat a benchmark as the goal while the benchmark sample also overrepresents easy cases. Those problems need different checks."
+          ]
+        },
+        {
+          "heading": "A useful KPI review starts before the dashboard",
+          "paragraphs": [
+            "Write the objective in ordinary language first. Then list what each measure captures, what it misses, and how someone could improve the number without improving the objective.",
+            "For important decisions, add validation evidence, companion measures or a short narrative explanation. The purpose is not to reject metrics. It is to keep the metric in its proper role as evidence about the goal rather than a replacement for it."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Strategy Selection, Surrogation, and Strategic Performance Measurement Systems",
+          "year": 2013,
+          "type": "management-accounting experiments",
+          "doi": "10.1111/j.1475-679X.2012.00465.x",
+          "url": "https://doi.org/10.1111/j.1475-679X.2012.00465.x"
+        },
+        {
+          "title": "Decreasing Operational Distortion and Surrogation Through Narrative Reporting",
+          "year": 2019,
+          "type": "experiment",
+          "doi": "10.2308/accr-52277",
+          "url": "https://doi.org/10.2308/accr-52277"
+        }
+      ],
+      "related": [
+        "cognitive-bias-surrogation",
+        "cognitive-bias-systematic-bias"
+      ]
+    },
+    {
+      "slug": "systematic-bias-why-more-data-is-not-enough",
+      "title": "Systematic Bias: why more data is not enough",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Systematic bias is not one mental shortcut. It is a measurement and statistical problem: a process can keep pushing results away from a target in a consistent direction, and collecting more data from the same biased process does not automatically fix it.",
+      "sections": [
+        {
+          "heading": "Systematic and random error are different problems",
+          "paragraphs": [
+            "Measurement standards distinguish systematic error from random error. Random error varies unpredictably across repeated measurements. Systematic error has a consistent or predictable component relative to a reference value.",
+            "That distinction matters because repeated observations can make an average more precise while the whole process is still centred on the wrong value. Precision and accuracy are not the same thing."
+          ]
+        },
+        {
+          "heading": "The word bias does not make it a cognitive bias",
+          "paragraphs": [
+            "Statistics, measurement science and research methods use the word bias for many systematic deviations. A sampling procedure can be biased. An estimator can be biased. An instrument can have measurement bias. None of these labels, by themselves, identify a psychological mechanism in a person.",
+            "Human judgment can also be systematically biased, but the useful scientific question is then which specific process or construct explains the pattern. Calling it only 'systematic bias' is a description of the deviation, not a mechanism."
+          ]
+        },
+        {
+          "heading": "More data can make the wrong answer look more certain",
+          "paragraphs": [
+            "If every observation comes through the same miscalibrated instrument or the same unrepresentative sampling process, collecting more observations can reduce random uncertainty around a systematically shifted estimate. The result can look stable and precise while remaining wrong relative to the target.",
+            "That is why large datasets do not remove the need for calibration, validation, representative sampling and checks against independent sources or methods."
+          ]
+        },
+        {
+          "heading": "A practical review starts with the reference",
+          "paragraphs": [
+            "First define what the measurement or estimate is supposed to represent. Then ask where the process could push the result consistently high, low, early, late or toward one group or condition.",
+            "Useful checks depend on the system: calibration against a known reference, holdout or validation data, alternative instruments, representative sampling, sensitivity analysis, process controls, or independent replication."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We keep Systematic Bias because people and agents encounter the term in measurement, data and research. But it is now explicitly classified as a Measurement concept rather than a cognitive bias or generic psychological phenomenon.",
+            "It remains excluded from the Decision Audit. The right response is to inspect the measurement or estimation process, not to diagnose a person with a mental bias called 'Systematic Bias'."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "International vocabulary of metrology — systematic measurement error and measurement bias",
+          "year": 2008,
+          "type": "international metrology vocabulary",
+          "url": "https://www.iso.org/sites/JCGM/VIM/JCGM_200e_FILES/MAIN_JCGM_200e/02_e.html"
+        },
+        {
+          "title": "NIST Technical Note 1297, Appendix D1: Terminology",
+          "year": 1994,
+          "type": "measurement uncertainty guidance",
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"
+        },
+        {
+          "title": "Bias, Statistical",
+          "year": 2023,
+          "type": "NIST glossary definition",
+          "url": "https://www.nist.gov/glossary-term/19181"
+        }
+      ],
+      "related": [
+        "cognitive-bias-systematic-bias"
+      ]
     }
   ]
 }

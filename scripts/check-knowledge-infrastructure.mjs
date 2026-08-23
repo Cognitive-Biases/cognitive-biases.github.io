@@ -151,13 +151,14 @@ const smallBrand = await stat(join(OUT, "assets", "biases_icon.png"));
 const brandWebp = await stat(join(OUT, "assets", "brand.webp"));
 const heroPng = await stat(join(OUT, "assets", "1152.png"));
 const heroWebp = await stat(join(OUT, "assets", "hero.webp"));
+const editorialHeroWebp = await stat(join(OUT, "assets", "editorial", "hero-collage.webp"));
 assert(smallBrand.size <= 50000, `header brand PNG fallback is unexpectedly large: ${smallBrand.size} bytes`);
 assert(brandWebp.size < smallBrand.size, `brand WebP must be smaller than its PNG fallback: ${brandWebp.size} >= ${smallBrand.size}`);
 assert(brandWebp.size <= 30000, `brand WebP is too large for 40–48 px rendering: ${brandWebp.size} bytes`);
 assert(heroWebp.size < heroPng.size, `hero WebP must be smaller than its PNG fallback: ${heroWebp.size} >= ${heroPng.size}`);
 assert(heroWebp.size <= 650000, `hero WebP is not materially smaller than the current PNG: ${heroWebp.size} bytes`);
 const homepage = await readFile(join(OUT, "index.html"), "utf8");
-assert(homepage.includes('<source type="image/webp" srcset="/assets/hero.webp">'), "homepage hero does not prefer WebP");
-assert(homepage.includes('<img src="/assets/1152.png" width="1152" height="1152"'), "homepage hero PNG fallback or dimensions are missing");
+assert(homepage.includes('<img class="editorial-hero__art" src="/assets/editorial/hero-collage.webp" width="1536" height="1024"'), "homepage editorial hero WebP or dimensions are missing");
+assert(editorialHeroWebp.size <= 650000, `editorial hero WebP is unexpectedly large: ${editorialHeroWebp.size} bytes`);
 
 console.log(`Knowledge infrastructure check passed: release ${release.releaseVersion}, ${evidence.length} reviewed concepts, ${sources.length} sources, ${ragLines.length} RAG chunks, ${benchmark.cases.length} evals, ${guidesPayload.generatedGuides.length} guides.`);
