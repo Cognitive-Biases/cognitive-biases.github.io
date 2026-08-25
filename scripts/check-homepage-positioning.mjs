@@ -32,7 +32,7 @@ if (renderedAuditPatterns.length !== auditEligible.length) {
 }
 
 if (html.includes("Educational mobile app + public reference")) throw new Error("Homepage regressed to the legacy app-first positioning.");
-if (!html.includes("Decision tools + evidence-reviewed reference") || !html.includes("Notice the pattern.<br>Test the decision.")) throw new Error("Homepage decision-system hero is missing.");
+if (!html.includes('class="editorial-hero"') || !html.includes("<span>Your</span> <span>brain</span> <span>edits</span> <span>reality.</span>") || !html.includes("Learn the patterns. Check the evidence.<br>Make a clearer move.")) throw new Error("Homepage editorial decision-system hero is missing.");
 for (const route of ["/tools/decision-audit/","/contexts/","/evidence/","/compare/","/explore/","/kinds/","/research/","/data/"]) if (!html.includes(`href="${route}"`)) throw new Error(`Homepage is missing product route ${route}.`);
 if (html.includes("play.google.com/store/apps/details?id=cognitivebiases.thinking.psychology")) throw new Error("Homepage still promotes the legacy mobile app.");
 
