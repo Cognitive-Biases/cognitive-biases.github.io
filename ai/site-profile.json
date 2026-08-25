@@ -1,0 +1,60 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/site-profile.schema.json",
+  "profileVersion": "0.1",
+  "id": "cognitive-biases-knowledge",
+  "name": "Cognitive Biases Knowledge Library",
+  "canonicalUrl": "https://cognitive-biases.github.io/",
+  "description": "Public knowledge library about cognitive biases, evidence and decision making with versioned data, retrieval-ready releases and a local read-only MCP adapter.",
+  "languages": ["en"],
+  "web": {
+    "sitemap": "https://cognitive-biases.github.io/sitemap.xml",
+    "robots": "https://cognitive-biases.github.io/robots.txt",
+    "llms": "https://cognitive-biases.github.io/llms.txt"
+  },
+  "data": {
+    "catalog": "https://cognitive-biases.github.io/data/catalog.json",
+    "schemas": "https://raw.githubusercontent.com/Cognitive-Biases/cognitive-biases.github.io/main/schemas/reasoning-practice.schema.json",
+    "distributions": [
+      {
+        "name": "Knowledge release manifest",
+        "url": "https://cognitive-biases.github.io/data/manifest.json",
+        "mediaType": "application/json",
+        "role": "release",
+        "description": "Versioned knowledge-release manifest with file hashes and release metadata."
+      },
+      {
+        "name": "Retrieval distribution",
+        "url": "https://cognitive-biases.github.io/data/rag.ndjson",
+        "mediaType": "application/x-ndjson",
+        "role": "rag",
+        "description": "Retrieval-ready public knowledge distribution preserving canonical knowledge context."
+      }
+    ]
+  },
+  "retrieval": {
+    "indexes": [
+      {
+        "name": "Cognitive Biases RAG",
+        "url": "https://cognitive-biases.github.io/data/rag.ndjson",
+        "mediaType": "application/x-ndjson",
+        "format": "ndjson",
+        "description": "Retrieval-ready distribution generated from the maintained public knowledge release."
+      }
+    ]
+  },
+  "mcp": {
+    "servers": [
+      {
+        "name": "cognitive-biases-reference-mcp",
+        "transport": "stdio",
+        "source": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/tree/main/integrations/mcp",
+        "documentation": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/integrations/mcp/README.md",
+        "readOnly": true
+      }
+    ]
+  },
+  "trust": {
+    "license": "https://raw.githubusercontent.com/Cognitive-Biases/cognitive-biases.github.io/main/LICENSE",
+    "provenance": "https://cognitive-biases.github.io/data/provenance.json"
+  }
+}
