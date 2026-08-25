@@ -158,7 +158,10 @@ assert(brandWebp.size <= 30000, `brand WebP is too large for 40–48 px renderin
 assert(heroWebp.size < heroPng.size, `hero WebP must be smaller than its PNG fallback: ${heroWebp.size} >= ${heroPng.size}`);
 assert(heroWebp.size <= 650000, `hero WebP is not materially smaller than the current PNG: ${heroWebp.size} bytes`);
 const homepage = await readFile(join(OUT, "index.html"), "utf8");
-assert(homepage.includes('<img class="editorial-hero__art" src="/assets/editorial/hero-collage.webp" width="1536" height="1024"'), "homepage editorial hero WebP or dimensions are missing");
+assert(homepage.includes('<section class="editorial-hero">'), "homepage editorial hero is missing");
+assert(homepage.includes('src="/assets/editorial/home/cat-collage.webp" width="650" height="635"'), "homepage editorial cat collage WebP or dimensions are missing");
+assert(homepage.includes('src="/assets/editorial/home/filter-brain.webp" width="235" height="270"'), "homepage editorial brain WebP or dimensions are missing");
+assert(homepage.includes('/assets/editorial/hero-collage.webp'), "homepage social preview editorial hero is missing");
 assert(editorialHeroWebp.size <= 650000, `editorial hero WebP is unexpectedly large: ${editorialHeroWebp.size} bytes`);
 
 console.log(`Knowledge infrastructure check passed: release ${release.releaseVersion}, ${evidence.length} reviewed concepts, ${sources.length} sources, ${ragLines.length} RAG chunks, ${benchmark.cases.length} evals, ${guidesPayload.generatedGuides.length} guides.`);
