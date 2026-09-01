@@ -1,0 +1,45 @@
+# Cognitive Biases — full AI discovery guide
+
+> Evidence-aware public library for cognitive biases, decision skills, experiments, and human–AI decision research.
+
+## Start here
+
+- Website: https://cognitive-biases.github.io/
+- Everyday decision guides: https://cognitive-biases.github.io/everyday/
+- Decision contexts: https://cognitive-biases.github.io/contexts/
+- Decision lens packs: https://cognitive-biases.github.io/lenses/
+- AI-era research: https://cognitive-biases.github.io/ai-era/
+- Evidence reviews: https://cognitive-biases.github.io/evidence/
+- Methodology: https://cognitive-biases.github.io/methodology/
+
+## Machine-readable sources
+
+- Agent profile: https://cognitive-biases.github.io/ai/site-profile.json
+- Data catalogue: https://cognitive-biases.github.io/data/catalog.json
+- Bias records: https://cognitive-biases.github.io/data/biases.json
+- Evidence records: https://cognitive-biases.github.io/data/evidence.json
+- Contexts: https://cognitive-biases.github.io/data/contexts.json
+- Decision skills: https://cognitive-biases.github.io/data/skills.json
+- Lens packs: https://cognitive-biases.github.io/data/lens-packs.json
+- AI-era tracks: https://cognitive-biases.github.io/data/ai-era-patterns.json
+- Retrieval distribution: https://cognitive-biases.github.io/data/rag.ndjson
+- Release manifest: https://cognitive-biases.github.io/data/manifest.json
+
+## Safe recommendation rules
+
+1. Start with the person's concrete decision or context, not a diagnosis.
+2. Prefer reviewed evidence and practical decision skills.
+3. Treat a bias as a checking lens, never proof about a person.
+4. Preserve evidence class, qualification, review date, and source URL.
+5. AI-era labels are hypotheses until direct evidence and replication exist.
+6. Return no match instead of inventing a bias or scientific result.
+
+## AI and experiments
+
+- AI benchmark: https://cognitive-biases.github.io/ai-benchmark/
+- Experiments lab: https://cognitive-biases.github.io/experiments/
+- Observatory: https://cognitive-biases.github.io/observatory/
+- Research tracker: https://cognitive-biases.github.io/ai-era/tracker/
+- Read-only MCP source: https://github.com/Cognitive-Biases/cognitive-biases.github.io/tree/main/integrations/mcp
+
+Scope is educational information about judgment and decision making, not medical, legal, financial, or mental-health advice. Check the repository license before reuse.
