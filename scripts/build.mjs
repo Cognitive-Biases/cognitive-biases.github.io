@@ -61,6 +61,7 @@ await emit("/terms/", page({ title: "Terms | Cognitive Biases", description: "Te
 await emit("/support/", page({ title: "Support | Cognitive Biases", description: "Support for the Cognitive Biases website and mobile app.", path: "/support/", body: infoPage("Support", "Need help with the Cognitive Biases app or website? We are glad to hear from you.", `<h2>Get in touch</h2><p>Email <a href="mailto:metalhatscats@gmail.com?subject=Cognitive%20Biases%20support">metalhatscats@gmail.com</a> with a description of the issue, the device and app version if relevant, and any helpful screenshots.</p><h2>Explore the reference</h2><p>For a specific thinking pattern, search the <a href="/explore/">bias library</a>.</p>`), schema: layoutSchema("/support/", "Support", "Support contact for Cognitive Biases.") }));
 await writeFile(join(OUT, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 await writeFile(join(OUT, "llms.txt"), await readFile("llms.txt"));
+await writeFile(join(OUT, "llms-full.txt"), await readFile("llms-full.txt"));
 const urls = ["/", "/explore/", "/how-it-works/", "/about/", "/privacy/", "/terms/", "/support/", ...biases.map((bias) => `/biases/${bias.slug}/`)];
 await writeFile(join(OUT, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((url) => `<url><loc>${absolute(url)}</loc><lastmod>${now}</lastmod></url>`).join("")}</urlset>`);
 console.log(`Built ${urls.length} static pages from ${biases.length} published bias records.`);
