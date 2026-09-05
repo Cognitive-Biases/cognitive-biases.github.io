@@ -52,7 +52,7 @@
       "situation": "checking-repeated-claims",
       "skill": "information-verification",
       "primaryLens": "truth-judgment-illusory-truth-effect",
-      "alternativeLenses": ["heuristic-bias-availability-bias"],
+      "alternativeLenses": [],
       "technique": "source-trace",
       "prompt": "You have seen the same claim in several Instagram-style posts during the week. Some posts also show many likes. By Friday the claim feels familiar and easy to accept.",
       "question": "What is the most useful check?",
