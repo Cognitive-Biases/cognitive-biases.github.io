@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-09-05",
   "description": "Public maturity tracker for AI-era human–AI decision research. Stage reflects project artifacts, not scientific certainty.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/tracker/",
   "stageOrder": ["idea", "protocol", "experiment", "result", "replication"],
@@ -21,6 +21,15 @@
       "studyArtifacts": ["/research/ai-advice-order-v1/", "/experiments/ai-advice-order-v1/", "/data/studies/ai-advice-order-v1.json"],
       "nextMilestone": "Collect 40 complete adult pilot sessions under the preregistered AI Advice Order v1 protocol, then publish anonymized data, scoring output, limitations and any deviations before considering result stage.",
       "whyItMatters": "AI can become the first numerical reference before a person has formed an independent estimate."
+    },
+    {
+      "track": "evaluation-history-contamination",
+      "name": "Evaluation History Contamination",
+      "stage": "protocol",
+      "protocolSlugs": ["blind-vs-history-aware-ai-judging"],
+      "studyArtifacts": ["/research/ai-judge-history-v1/", "/experiments/ai-judge-history-v1/", "/data/studies/ai-judge-history-v1.json", "/data/studies/ai-judge-history-prompt-pack-v1.json", "/schemas/ai-judge-history-results.schema.json"],
+      "nextMilestone": "Run the complete blind, history-framing and prior-score matrix on at least three fully specified models, publish raw result JSON plus scorer output, and document deviations before considering experiment or result stage.",
+      "whyItMatters": "Repeated AI reviews can look independent even when later evaluators are partly inheriting earlier scores."
     },
     {
       "track": "sycophancy-reinforcement-loop",
