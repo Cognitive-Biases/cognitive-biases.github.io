@@ -8,6 +8,8 @@ const canonicalBiases = biases.filter((bias) => !duplicateIds.has(bias.id));
 const taxonomy = JSON.parse(await readFile("data/taxonomy-v2.json", "utf8"));
 const contexts = JSON.parse(await readFile("data/contexts.json", "utf8"));
 const comparisons = JSON.parse(await readFile("data/comparisons.json", "utf8"));
+const digests = JSON.parse(await readFile("data/monthly-research-digests.json", "utf8"));
+const latestDigest = [...(digests.digests || [])].sort((a, b) => String(b.slug).localeCompare(String(a.slug)))[0];
 const auditExclusions = JSON.parse(await readFile("data/audit-exclusions.json", "utf8"));
 const explicitlyExcludedAuditSlugs = new Set((auditExclusions.entries || []).map((entry) => entry.slug));
 const evidenceFiles = (await readdir("data")).filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name));
@@ -43,4 +45,11 @@ if (!html.includes("Drafts stay in your browser")) throw new Error("Homepage is 
 if (!html.includes("<title>Cognitive Biases | Decision tools, evidence & bias reference</title>")) throw new Error("Homepage title is not aligned to the decision-system positioning.");
 if (!html.includes('meta name="description"') || !html.includes("local-first Decision Audit")) throw new Error("Homepage meta description is not aligned to the decision-system positioning.");
 
-console.log(`Homepage positioning check passed: ${canonicalBiases.length} canonical entries, ${reviews.length} evidence reviews, ${renderedAuditPatterns.length} audit lenses, ${contexts.entries.length} contexts, ${comparisons.entries.length} comparisons, ${familyHubCount} family hubs, with homepage count matching rendered Audit data.`);
+if (latestDigest) {
+  const digestRoute = `/research/digests/${latestDigest.slug}/`;
+  if (!html.includes(`href="${digestRoute}"`)) throw new Error(`Homepage is missing latest monthly digest route ${digestRoute}.`);
+  if (!html.includes("What changed in the evidence?")) throw new Error("Homepage is missing the monthly evidence-delta explanation.");
+  if (!html.includes(latestDigest.month)) throw new Error(`Homepage does not identify the latest digest month: ${latestDigest.month}.`);
+}
+
+console.log(`Homepage positioning check passed: ${canonicalBiases.length} canonical entries, ${reviews.length} evidence reviews, ${renderedAuditPatterns.length} audit lenses, ${contexts.entries.length} contexts, ${comparisons.entries.length} comparisons, ${familyHubCount} family hubs${latestDigest ? `, latest digest ${latestDigest.slug}` : ""}, with homepage count matching rendered Audit data.`);

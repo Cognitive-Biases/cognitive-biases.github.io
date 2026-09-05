@@ -65,8 +65,12 @@ const digestHubHtml = await readFile(join(OUT, "research", "digests", "index.htm
 if (!digestHubHtml.includes('rel="alternate" type="application/atom+xml"')) throw new Error("Monthly digest hub does not advertise the Atom feed.");
 const dataHtml = await readFile(join(OUT, "data", "index.html"), "utf8");
 if (!dataHtml.includes('href="/data/monthly-research-digests.json"')) throw new Error("Data page does not expose monthly research digest JSON.");
+if (!dataHtml.includes('href="/schemas/monthly-research-digests.schema.json"')) throw new Error("Data page does not expose the monthly research digest schema.");
+const digestSchema = JSON.parse(await readFile(join(OUT, "schemas", "monthly-research-digests.schema.json"), "utf8"));
+if (digestSchema.$schema !== "https://json-schema.org/draft/2020-12/schema") throw new Error("Monthly digest schema dialect is incorrect.");
+if (digestSchema.$id !== `${SITE}/schemas/monthly-research-digests.schema.json`) throw new Error("Monthly digest schema ID is incorrect.");
 
 if (!robots.includes(`Sitemap: ${SITE}/sitemap.xml`)) throw new Error("robots.txt is missing the XML sitemap.");
 if (!robots.includes(`Sitemap: ${SITE}/research/feed.xml`)) throw new Error("robots.txt is missing the research Atom feed sitemap.");
 
-console.log(`SEO discovery hygiene passed: ${feedEntries} feed entries (${(digests.digests || []).length} monthly digest(s)), truthful Research lastmod values, public digest data, and no fabricated lastmod for undated resource pages.`);
+console.log(`SEO discovery hygiene passed: ${feedEntries} feed entries (${(digests.digests || []).length} monthly digest(s)), truthful Research lastmod values, public digest data + schema, and no fabricated lastmod for undated resource pages.`);
