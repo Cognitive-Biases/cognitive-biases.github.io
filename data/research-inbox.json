@@ -3,6 +3,108 @@
   "updatedAt": "2026-09-05",
   "items": [
     {
+      "id": "openalex-w7207701428",
+      "discoveredAt": "2026-09-05",
+      "title": "A confirmation bias szerepe a büntetőeljárásban A móri bankrablás tanulságai",
+      "url": "https://doi.org/10.38146/bsz-ajia.2026.v74.i8.pp2065-2105",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-03",
+      "journal": "Belügyi Szemle",
+      "doi": "10.38146/bsz-ajia.2026.v74.i8.pp2065-2105",
+      "relatedConcepts": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 6,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42694724",
+      "discoveredAt": "2026-09-05",
+      "title": "Long-anchoring Stent Method as a Rescue Technique for Early Dysfunction of Covered Self-Expandable Metal Stents in Distal Malignant Biliary Obstruction: A Retrospective Case Series.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42694724/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2027 Apr",
+      "journal": "DEN open",
+      "doi": "10.1002/deo2.70394",
+      "relatedConcepts": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 5,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42679601",
+      "discoveredAt": "2026-09-05",
+      "title": "A tablet-based attentional cognitive bias modification intervention for positive emotion processing in major depressive disorder: a single-blind randomised controlled two-centre trial.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42679601/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Sep 1",
+      "journal": "EBioMedicine",
+      "doi": "10.1016/j.ebiom.2026.106453",
+      "relatedConcepts": [],
+      "whyItMatters": "Potential evidence about whether a decision-improvement technique works, for whom, and under what conditions.",
+      "score": 5,
+      "rankingReasons": [
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42526227",
+      "discoveredAt": "2026-09-05",
+      "title": "Plasma-spark-induced ultrafast anchoring of Ni nanocatalysts on monolithic carbon for robust Li-CO(2) batteries.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42526227/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Dec 15",
+      "journal": "Journal of colloid and interface science",
+      "doi": "10.1016/j.jcis.2026.141216",
+      "relatedConcepts": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 5,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42492287",
+      "discoveredAt": "2026-09-05",
+      "title": "Accelerating the reconstruction of NiFe via molybdate anchoring for chloride-tolerant and stable seawater splitting.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42492287/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Dec 15",
+      "journal": "Journal of colloid and interface science",
+      "doi": "10.1016/j.jcis.2026.141182",
+      "relatedConcepts": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 5,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
       "id": "openalex-w7208716557",
       "discoveredAt": "2026-09-05",
       "title": "Behavioral finance as a factor in investment decision-making: the impact of cognitive biases on financial choices",
