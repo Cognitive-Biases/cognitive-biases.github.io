@@ -1,0 +1,82 @@
+{
+  "project": "Cognitive Biases Knowledge Library",
+  "canonicalUrl": "https://cognitive-biases.github.io/",
+  "repository": "https://github.com/Cognitive-Biases/cognitive-biases.github.io",
+  "status": "active",
+  "maturity": "maintained-public-project",
+  "startedAt": "2026-07-14",
+  "lastUpdated": "2026-09-05",
+  "versions": {
+    "sitePackage": "1.0.0",
+    "agentProfileContract": "0.1"
+  },
+  "statusMeaning": {
+    "active": "The public library, evidence layer, research tooling and agent-facing distribution continue to be maintained.",
+    "maintained-public-project": "The site is publicly usable and versioned, while research tracks retain explicit maturity states rather than being presented as universally settled findings."
+  },
+  "events": [
+    {
+      "date": "2026-07-14",
+      "status": "completed",
+      "kind": "origin",
+      "title": "Repository created",
+      "summary": "The Cognitive Biases website repository was created as the public home for the educational product and its knowledge base.",
+      "evidence": [
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io"
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "status": "completed",
+      "kind": "agent-discovery",
+      "title": "Agent-Ready Web Profile baseline published",
+      "summary": "The Pages build began publishing and advertising a machine-readable ARWP site profile, with dedicated CI validation.",
+      "evidence": [
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/d158b805dc6d4f6f0eb390c5d75f908523ab07c7",
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/73d925e09428dd309de977d5541fc098cc3e4f3e"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "status": "completed",
+      "kind": "discovery",
+      "title": "AI discovery and search surfaces expanded",
+      "summary": "The project added a fuller AI discovery guide and a Google Search indexing workflow while keeping canonical pages and public data as the source of record.",
+      "evidence": [
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/a0288ee285856a5e5dcf448418fbbdb436ea6cb3",
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/71d7640be959854e1d9d2f3ca8c9c4ee9e55a8ba"
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "status": "completed",
+      "kind": "evidence",
+      "title": "Monthly evidence loop and Research Lab matured",
+      "summary": "Monthly evidence deltas, broader research scouting, an Evidence Change Log and a public Research Lab maturity surface were added to make changes and research status more inspectable.",
+      "evidence": [
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/8be7ef575f0284a0b83af82c6713dc5a769ae4eb",
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/912e1fbee35e00602f39d67d829cdacfda766eb2",
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commit/db44843ac3e1b6bd0223466176532212072268b5"
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "status": "active",
+      "kind": "agent-discovery",
+      "title": "ARWP search, citation, localization and trust layers aligned",
+      "summary": "The site now exposes multilingual agent routing, product history, an AI Search & Citation Profile, a citation index, a Trust Center, a corrections ledger and a JSON-LD knowledge graph. Planned modules remain explicitly marked as planned or not applicable.",
+      "evidence": [
+        "https://cognitive-biases.github.io/ai/site-profile.json",
+        "https://cognitive-biases.github.io/ai/ai-search-profile.json",
+        "https://cognitive-biases.github.io/ai/locales.json",
+        "https://cognitive-biases.github.io/trust/",
+        "https://cognitive-biases.github.io/knowledge/graph.json"
+      ]
+    }
+  ],
+  "sources": {
+    "commits": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/commits/main",
+    "research": "https://cognitive-biases.github.io/research/",
+    "evidenceChangeLog": "https://cognitive-biases.github.io/research/changes/"
+  }
+}
