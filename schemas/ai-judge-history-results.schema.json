@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitive-biases.github.io/schemas/ai-judge-history-results.schema.json",
+  "title": "AI Judge History Benchmark Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["studyId", "specVersion", "runId", "recordedAt", "model", "judgments"],
+  "properties": {
+    "studyId": {"const": "ai-judge-history-v1"},
+    "specVersion": {"const": 1},
+    "runId": {"type": "string", "minLength": 1},
+    "recordedAt": {"type": "string", "format": "date-time"},
+    "notes": {"type": "string"},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider", "name", "temperature", "freshContextPerJudgment"],
+      "properties": {
+        "provider": {"type": "string", "minLength": 1},
+        "name": {"type": "string", "minLength": 1},
+        "version": {"type": "string"},
+        "accessDate": {"type": "string", "format": "date"},
+        "temperature": {"type": ["number", "null"]},
+        "topP": {"type": ["number", "null"]},
+        "systemPrompt": {"type": "string"},
+        "freshContextPerJudgment": {"const": true},
+        "otherSettings": {"type": "object"}
+      }
+    },
+    "judgments": {
+      "type": "array",
+      "minItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["taskId", "condition", "repetition", "score", "verdict"],
+        "properties": {
+          "taskId": {"type": "string", "minLength": 1},
+          "condition": {"enum": ["blind", "history-framing", "history-anchor"]},
+          "repetition": {"type": "integer", "minimum": 1},
+          "score": {"type": "integer", "minimum": 1, "maximum": 5},
+          "verdict": {"enum": ["pass", "fail"]},
+          "reason": {"type": "string"},
+          "rawOutput": {"type": "string"}
+        }
+      }
+    }
+  }
+}
