@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-05",
+  "digests": [
+    {
+      "slug": "2026-08",
+      "month": "August 2026",
+      "title": "Cognitive Bias Research Digest — August 2026",
+      "publishedAt": "2026-09-05",
+      "summary": "The useful story this month is not simply that AI can look biased. Context can change automated evaluation, repetition still shapes truth judgments in social-media-like settings, and evidence from a specific professional domain can be much thinner than a broad bias list suggests.",
+      "editorialNote": "We include a study only when it changes a claim, adds a useful boundary condition, opens a practical decision context, or improves how the project should test evidence. A new paper is not automatically a new fact.",
+      "takeaways": [
+        "Independent AI evaluation is not independent if an earlier score remains in the context.",
+        "Repeated information can feel more true and more certain even when social endorsement cues are visible.",
+        "A review can identify many plausible bias risks while still showing that direct evidence in the target domain is sparse.",
+        "A named bias should be tested in the actual task. We should not assume that every model, person, or context will reproduce it.",
+        "When LLMs simulate people, realistic cognitive limits may matter more than a persona prompt."
+      ],
+      "signals": [
+        {
+          "id": "llm-judge-prior-score-anchor",
+          "title": "A previous score can pull an LLM judge toward it",
+          "delta": "new context",
+          "confidence": "provisional",
+          "sourceStatus": "arXiv manuscript; paper states CIKM 2026 publication",
+          "finding": "Across 192,000 attempted evaluations of fixed texts, seven of eight tested models showed a task-bootstrap interval below zero for the total anchored-metadata effect. In a separate categorical dataset, anchored metadata blocked 48% of error corrections and changed 10.18% of correct judgments toward an assigned wrong label.",
+          "whyItMatters": "Many agent loops keep previous scores, revision numbers, or reviewer comments in context. If the goal is an independent second judgment, that history can become part of the decision instead of harmless metadata.",
+          "practicalCheck": "When you want an independent re-evaluation, hide the previous score first. Compare a blind judgment with a history-aware judgment instead of assuming they are equivalent.",
+          "siteAction": "Add an LLM-as-a-judge scenario to AI-assisted reasoning practice and treat prior-evaluation metadata as a testable anchoring pathway, not as a universal model trait.",
+          "source": {
+            "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+            "publishedAt": "2026-08-26",
+            "url": "https://arxiv.org/abs/2608.25869"
+          }
+        },
+        {
+          "id": "illusory-truth-social-media",
+          "title": "Repetition stayed powerful in an Instagram-like setting",
+          "delta": "strengthens",
+          "confidence": "moderate",
+          "sourceStatus": "peer-reviewed experiment",
+          "finding": "In a study of 165 participants, repeated statements were more likely to be judged true and were judged with greater confidence. Showing like counts did not meaningfully remove the repetition effects. Like magnitude mattered more for new statements, where repetition was not available as a cue.",
+          "whyItMatters": "The classic repetition effect is not limited to plain laboratory lists. In this experiment, a social-media-like interface added another cue, but repetition still strongly shaped truth and certainty judgments.",
+          "practicalCheck": "Before treating familiarity as evidence, count independent sources. Ten exposures to the same claim can still be one piece of evidence repeated ten times.",
+          "siteAction": "Strengthen the social-media boundary condition on the Illusory Truth Effect page and add a practice item that separates source independence from exposure count.",
+          "source": {
+            "title": "The robustness of repetition-based illusory truth and certainty effects in social media contexts",
+            "publishedAt": "2026-08-05",
+            "doi": "10.1038/s41598-026-61449-y",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443530/"
+          }
+        },
+        {
+          "id": "ai-medical-bias-review",
+          "title": "AI-assisted medical decisions show many bias risks — and a domain-evidence gap",
+          "delta": "new context",
+          "confidence": "moderate",
+          "sourceStatus": "peer-reviewed structured review",
+          "finding": "A structured review synthesized 24 studies and identified 12 cognitive biases reported across AI-assisted medical decision making. Only one included study came directly from pathology, the review's target domain.",
+          "whyItMatters": "A long list of possible biases can look more settled than the underlying evidence. This review is useful partly because it exposes that gap: evidence from related medical settings can guide questions, but it should not be presented as direct pathology evidence.",
+          "practicalCheck": "Ask two questions separately: has this bias been observed in human-AI decisions, and has it been observed in this exact task and professional setting?",
+          "siteAction": "Add a domain-transfer caution to the AI-assisted decisions guide: related-domain evidence can motivate a check without proving the same effect in the target workflow.",
+          "source": {
+            "title": "Cognitive biases in AI-assisted medical decision making: A structured review as a primer for veterinary and human pathology",
+            "publishedAt": "2026-08-05",
+            "doi": "10.1177/03009858261472493",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/42557856/"
+          }
+        },
+        {
+          "id": "llm-human-assessment-boundary",
+          "title": "Not every bias manipulation works in every human-AI task",
+          "delta": "narrows",
+          "confidence": "provisional",
+          "sourceStatus": "preprint",
+          "finding": "A mixed-methods study compared 35 professionals with seven LLMs in neurodevelopmental support-allocation judgments. Neither group showed significant susceptibility to the study's anchoring or representativeness manipulations, while both showed inconsistencies between descriptive ratings and final decisions. LLMs reported higher intellectual humility, but that self-report was not related to decision consistency.",
+          "whyItMatters": "This is a useful negative result for a bias library. A familiar label should not be forced onto every decision problem. The task may reveal a different failure mode than the one the experiment expected.",
+          "practicalCheck": "Measure the decision change caused by the manipulation. Do not infer a bias from a plausible story about why the answer looks wrong.",
+          "siteAction": "Use this as a boundary-condition example in the AI research methodology: bias labels require task-level evidence, and null results are informative.",
+          "source": {
+            "title": "Language Models Reproduce Human Reductionist Bias and Decision Inconsistency in Neurodevelopmental Disorders Assessment",
+            "publishedAt": "2026-08-17",
+            "url": "https://arxiv.org/abs/2608.17105"
+          }
+        },
+        {
+          "id": "cognitively-bounded-user-simulators",
+          "title": "Persona prompting can make simulated users unrealistically capable",
+          "delta": "watch only",
+          "confidence": "provisional",
+          "sourceStatus": "preprint",
+          "finding": "Using more than 71,000 reading-comprehension responses from 2,359 primary-school students, researchers found that standard persona prompting produced near-perfect, low-variance LLM performance. A simulator that imposed a working-memory-like episodic bottleneck reduced the gap between model behavior and the student data.",
+          "whyItMatters": "This is not evidence for a canonical cognitive bias. It is a research-method signal: an LLM asked to 'act like' a person may still use knowledge and memory that the simulated person would not have.",
+          "practicalCheck": "If an LLM is being used as a synthetic participant, test it against real human response distributions. A convincing persona is not validation.",
+          "siteAction": "Keep this in the research-method watchlist and connect it to future guidance on AI-based behavioral simulation rather than adding a new bias entry.",
+          "source": {
+            "title": "\"Act Like a 5th Grader\" is Not Enough: Bounding Knowledge in LLM-Based User Simulators",
+            "publishedAt": "2026-08-30",
+            "url": "https://arxiv.org/abs/2608.30033"
+          }
+        }
+      ],
+      "whatChanged": [
+        "Create a monthly evidence-delta digest instead of a generic research-news page.",
+        "Separate peer-reviewed evidence updates from provisional preprint signals.",
+        "Connect each useful finding to a concrete page, practice item, dataset, or research-method change.",
+        "Keep null results and domain-evidence gaps visible instead of publishing only positive bias demonstrations."
+      ],
+      "nextQuestions": [
+        "Can blind-versus-history-aware LLM judging be turned into a small reproducible experiment for the site?",
+        "How often do repeated claims in AI answers come from genuinely independent sources rather than copied or circular evidence?",
+        "Which debiasing interventions improve calibration in real decisions rather than only reducing a benchmark bias score?"
+      ]
+    }
+  ]
+}
