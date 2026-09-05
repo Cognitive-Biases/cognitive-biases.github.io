@@ -42,3 +42,4 @@ await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 console.log(`Generated ${(notes.entries || []).length} public research notes.`);
 await import("./check-monthly-research-digests.mjs");
 await import("./generate-monthly-research-digests.mjs");
+await import("./link-monthly-research-data.mjs");

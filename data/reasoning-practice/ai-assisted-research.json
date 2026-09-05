@@ -88,6 +88,28 @@
       "missingEvidence": ["A blind second score.", "The history-aware score from the same material.", "Whether the difference is stable across repeated evaluations."],
       "evidenceNote": "A 2026 LLM-as-a-judge study found that prior scores in context could shift later evaluations. This is provisional model-specific evidence, not proof that every evaluator will anchor in every task.",
       "nextAction": "Create a blind-versus-history-aware evaluation pair and compare the score difference."
+    },
+    {
+      "slug": "ai-related-domain-is-not-direct-evidence",
+      "title": "The evidence comes from a related workflow",
+      "difficulty": "advanced",
+      "situation": "ai-assisted-research",
+      "skill": "ai-assisted-reasoning",
+      "primaryLens": "false-priors-automation-bias",
+      "alternativeLenses": [],
+      "technique": "source-trace",
+      "prompt": "A review reports several cognitive biases across AI-assisted medical decisions. A team wants to say those biases are established in its own specialist workflow, even though the review contains almost no direct studies from that workflow.",
+      "question": "How should the team use the review?",
+      "options": [
+        {"id": "a", "text": "Treat every reported bias as established in the target workflow because the general domain is similar."},
+        {"id": "b", "text": "Separate direct-domain evidence from related-domain evidence; use the latter to define checks and hypotheses, not to claim the same effect is already established."},
+        {"id": "c", "text": "Ignore the review completely because it contains evidence from other medical specialties."}
+      ],
+      "bestOption": "b",
+      "explanation": "Related-domain evidence can tell you what to test without proving that the same effect occurs in a different task, population or workflow. The useful question is evidence distance, not whether the neighboring field sounds similar.",
+      "missingEvidence": ["Direct studies from the target workflow.", "Whether the AI role, task, users and decision stakes match the source studies.", "A local test or monitoring design for the proposed failure mode."],
+      "evidenceNote": "A 2026 structured review found 12 reported biases across AI-assisted medical decision making, while only one included study came directly from pathology. That makes the review useful for generating checks in pathology, but not proof that all 12 effects are established there. This scenario is mainly about evidence transfer; Automation Bias is only a supporting lens when automated output is relied on without adequate verification.",
+      "nextAction": "Mark each claim as direct, transferred or hypothetical evidence before turning it into guidance."
     }
   ]
 }

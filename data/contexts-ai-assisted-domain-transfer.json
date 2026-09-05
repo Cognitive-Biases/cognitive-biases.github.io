@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "slug": "ai-assisted-decisions",
+      "title": "AI-assisted decisions",
+      "summary": "Use these evidence-reviewed lenses when a chatbot, model, recommendation system, or automated decision aid is influencing what you believe or do.",
+      "useWhen": [
+        "You are tempted to accept an AI recommendation without checking the underlying evidence.",
+        "A fluent, warm, or humanlike interface feels more capable or trustworthy than its tested performance justifies.",
+        "The system’s appearance, voice, avatar, or conversational style is shaping what you think it can understand or do.",
+        "An early AI score, estimate, or suggested number is becoming the starting point for your own judgment.",
+        "You are prompting an AI mainly to strengthen a conclusion you already prefer.",
+        "A claim has appeared in several AI outputs and is starting to feel true because it is familiar.",
+        "A bias finding from one profession, dataset, or task is being treated as direct evidence for a different AI-assisted workflow."
+      ],
+      "workflow": [
+        "Write a provisional judgment, success criterion, or uncertainty range before looking at AI advice when the decision is consequential.",
+        "Separate the interface from the capability: list what the system actually needs to know, access, or verify to support the recommendation.",
+        "When the AI supplies a number, compare it with an independent estimate, base rate, or reference class instead of adjusting only from the model’s value.",
+        "Ask for the strongest counterevidence or alternative explanation, then verify important claims against an independent source rather than another generated paraphrase.",
+        "Treat repeated wording as repetition, not independent evidence; trace important claims back to primary or genuinely independent sources.",
+        "Check evidence distance before transferring a result: was the bias observed in this exact task, population and decision workflow, or only in a related domain?",
+        "Record what changed after using AI, what was independently checked, and what trigger would make you reopen the decision."
+      ],
+      "lenses": [
+        {
+          "slug": "false-priors-automation-bias",
+          "question": "Am I using the automated recommendation as a substitute for checking the evidence I could realistically verify?"
+        },
+        {
+          "slug": "cognitive-bias-anchoring-effect",
+          "question": "Did the AI’s first number become my starting point before I formed an independent estimate?"
+        },
+        {
+          "slug": "availability-heuristic-anthropomorphism",
+          "question": "Which humanlike cues are making me infer understanding, intention, empathy, or competence that I have not actually tested?"
+        },
+        {
+          "slug": "human-robot-interaction-form",
+          "question": "What capabilities am I inferring from appearance, voice, interface polish, or conversational style rather than observed performance?"
+        },
+        {
+          "slug": "cognitive-bias-confirmation-bias",
+          "question": "Did I ask the AI to test my preferred conclusion, or mainly to produce better arguments for it?"
+        },
+        {
+          "slug": "truth-judgment-illusory-truth-effect",
+          "question": "Does this claim feel more credible because I have encountered it repeatedly, or because I verified independent evidence for it?"
+        }
+      ]
+    }
+  ]
+}
