@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-05",
+  "entries": [
+    {
+      "slug": "illusory-truth-where-repetition-stops-working",
+      "title": "Repetition can raise truth judgments — but not for every kind of statement",
+      "publishedAt": "2026-09-05",
+      "status": "reviewed synthesis",
+      "summary": "A large 2026 meta-analysis supports a reliable average illusory truth effect, while newer preregistered experiments show an important boundary: repeating social-political opinions did not meaningfully increase their truth ratings.",
+      "sections": [
+        {
+          "heading": "The broad effect is real, but the internet version is too simple",
+          "paragraphs": [
+            "A 2026 systematic review and meta-analysis combined 182 studies, 366 effect sizes and more than 31,000 participants. After correcting for small-study effects, repeated statements still received higher truth ratings than comparable new statements. The average effect was modest rather than overwhelming, and the results varied substantially across studies.",
+            "That supports the core Illusory Truth Effect. It does not support the stronger slogan that repeating any message will eventually make people believe it. Content, task design and the cues available during judgment can change the size of the effect."
+          ]
+        },
+        {
+          "heading": "Opinions are not just facts with softer wording",
+          "paragraphs": [
+            "A later 2026 paper tested social-political opinion statements in two preregistered experiments with 457 participants. Repetition did not reliably increase subjective truth judgments, and equivalence tests suggested that any effect was smaller than the researchers' predefined meaningful threshold in the tested conditions.",
+            "This is a useful boundary because many discussions of repetition move too easily from factual claims to values, preferences and political opinions. A statement such as a checkable statistic and a statement such as an evaluative political opinion do not necessarily use the same truth-judgment process."
+          ]
+        },
+        {
+          "heading": "Social media can still provide a strong repetition cue",
+          "paragraphs": [
+            "Another 2026 experiment used Instagram-like posts and found that repeated statements received higher truth and confidence ratings even when like counts were visible. That result shows that the classic effect can survive a richer interface with social endorsement cues.",
+            "Taken together, the studies give a more useful picture than either result alone. Repetition can matter in realistic-looking information environments, but the kind of statement being judged remains important."
+          ]
+        },
+        {
+          "heading": "The practical check is claim type plus source independence",
+          "paragraphs": [
+            "When something feels true because it is familiar, first ask what kind of statement it is. If it is a factual claim, trace the evidence and count independent sources rather than repeated appearances. If it is an opinion, do not automatically apply a factual truth-bias explanation; persuasion, identity, social norms or simple familiarity may be more relevant questions.",
+            "For AI-assisted research, the same rule matters twice. Several model answers can repeat one claim without adding independent evidence, and a bias label should not be transferred from factual statements to opinions merely because both are written as sentences."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We changed the Illusory Truth Effect page from a broad 'repeated lies start to feel true' framing to a narrower claim about repeated truth judgments. The evidence status now keeps the robust average effect and the content boundary visible at the same time.",
+            "This is the kind of update the monthly research process is meant to produce: not another paper in a bibliography, but a more accurate rule for when the concept should and should not be used."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Systematic review and meta-analysis of the evidence for an illusory truth effect and its determinants",
+          "year": 2026,
+          "type": "systematic review and meta-analysis",
+          "doi": "10.1038/s41467-026-70041-x",
+          "url": "https://doi.org/10.1038/s41467-026-70041-x"
+        },
+        {
+          "title": "Limits of the illusory truth effect for social-political opinions: Evidence from two experiments and a mini meta-analysis",
+          "year": 2026,
+          "type": "two preregistered experiments and mini meta-analysis",
+          "doi": "10.1016/j.concog.2026.104119",
+          "url": "https://doi.org/10.1016/j.concog.2026.104119"
+        },
+        {
+          "title": "The robustness of repetition-based illusory truth and certainty effects in social media contexts",
+          "year": 2026,
+          "type": "peer-reviewed experiment",
+          "doi": "10.1038/s41598-026-61449-y",
+          "url": "https://doi.org/10.1038/s41598-026-61449-y"
+        },
+        {
+          "title": "The illusory truth effect: A review of how repetition increases belief in misinformation",
+          "year": 2024,
+          "type": "research review",
+          "doi": "10.1016/j.copsyc.2023.101736",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101736"
+        }
+      ],
+      "related": [
+        "truth-judgment-illusory-truth-effect"
+      ]
+    }
+  ]
+}
