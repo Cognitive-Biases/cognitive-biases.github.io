@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@graph": [
+    {
+      "@id": "https://cognitive-biases.github.io/#website",
+      "@type": "WebSite",
+      "name": "Cognitive Biases",
+      "url": "https://cognitive-biases.github.io/",
+      "description": "Public knowledge library about cognitive biases, evidence, decision skills and better decision making.",
+      "inLanguage": "en",
+      "publisher": {"@id": "https://github.com/Cognitive-Biases#organization"},
+      "mainEntity": [
+        {"@id": "https://cognitive-biases.github.io/#dataset"},
+        {"@id": "https://cognitive-biases.github.io/#research"},
+        {"@id": "https://cognitive-biases.github.io/#trust"}
+      ]
+    },
+    {
+      "@id": "https://github.com/Cognitive-Biases#organization",
+      "@type": "Organization",
+      "name": "Cognitive-Biases",
+      "url": "https://github.com/Cognitive-Biases",
+      "member": {"@id": "https://github.com/dkharlanau#person"}
+    },
+    {
+      "@id": "https://github.com/dkharlanau#person",
+      "@type": "Person",
+      "name": "Dzmitryi Kharlanau",
+      "url": "https://github.com/dkharlanau"
+    },
+    {
+      "@id": "https://cognitive-biases.github.io/#dataset",
+      "@type": "Dataset",
+      "name": "Cognitive Biases Knowledge Dataset",
+      "url": "https://cognitive-biases.github.io/data/",
+      "distribution": [
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/json",
+          "contentUrl": "https://cognitive-biases.github.io/data/catalog.json"
+        },
+        {
+          "@type": "DataDownload",
+          "encodingFormat": "application/x-ndjson",
+          "contentUrl": "https://cognitive-biases.github.io/data/rag.ndjson"
+        }
+      ],
+      "license": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/LICENSE",
+      "isPartOf": {"@id": "https://cognitive-biases.github.io/#website"}
+    },
+    {
+      "@id": "https://cognitive-biases.github.io/#research",
+      "@type": "ResearchProject",
+      "name": "Cognitive Biases Research Lab",
+      "url": "https://cognitive-biases.github.io/research/",
+      "description": "Public research notes, preregistered study protocols, evidence updates and AI-era decision research with explicit maturity states.",
+      "isPartOf": {"@id": "https://cognitive-biases.github.io/#website"}
+    },
+    {
+      "@id": "https://cognitive-biases.github.io/#ai-benchmark",
+      "@type": "Dataset",
+      "name": "AI Bias Benchmark",
+      "url": "https://cognitive-biases.github.io/ai-benchmark/",
+      "isPartOf": {"@id": "https://cognitive-biases.github.io/#research"}
+    },
+    {
+      "@id": "https://cognitive-biases.github.io/#observatory",
+      "@type": "Dataset",
+      "name": "Cognitive Bias Observatory",
+      "url": "https://cognitive-biases.github.io/observatory/",
+      "isPartOf": {"@id": "https://cognitive-biases.github.io/#research"}
+    },
+    {
+      "@id": "https://cognitive-biases.github.io/#trust",
+      "@type": "WebPage",
+      "name": "Cognitive Biases Trust Center",
+      "url": "https://cognitive-biases.github.io/trust/",
+      "isPartOf": {"@id": "https://cognitive-biases.github.io/#website"},
+      "about": [
+        {"@id": "https://cognitive-biases.github.io/#dataset"},
+        {"@id": "https://cognitive-biases.github.io/#research"}
+      ]
+    }
+  ]
+}
