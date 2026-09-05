@@ -7,10 +7,12 @@ const researchNotes = JSON.parse(await readFile("data/research-notes.json", "utf
 const monthlyDigests = JSON.parse(await readFile("data/monthly-research-digests.json", "utf8"));
 const skills = JSON.parse(await readFile("data/skills.json", "utf8"));
 const aiJudgeHistory = JSON.parse(await readFile("data/studies/ai-judge-history-v1.json", "utf8"));
+const researchTracker = JSON.parse(await readFile("data/ai-era-research-tracker.json", "utf8"));
 const validDate = (value = "") => /^\d{4}-\d{2}-\d{2}/.test(String(value)) ? String(value).slice(0, 10) : null;
 
 const resources = [
   { path: "/research/", lastmod: validDate(researchNotes.updatedAt) },
+  { path: "/research/lab/", lastmod: validDate(researchTracker.updatedAt) },
   { path: "/research/digests/", lastmod: validDate(monthlyDigests.updatedAt) },
   { path: "/research/ai-judge-history-v1/", lastmod: validDate(aiJudgeHistory.preregisteredAt) },
   { path: "/experiments/ai-judge-history-v1/", lastmod: validDate(aiJudgeHistory.preregisteredAt) },
