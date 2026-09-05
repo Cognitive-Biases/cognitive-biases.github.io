@@ -1,7 +1,39 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-01",
+  "updatedAt": "2026-09-05",
   "items": [
+    {
+      "id": "pubmed-42698299",
+      "discoveredAt": "2026-09-05",
+      "title": "Expanding Quantitative Medicines' Reach: Systems and Methods to Enhance R&D Productivity and Decision-Making in the Agentic-Era.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42698299/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Sep",
+      "journal": "Clinical and translational science",
+      "doi": "10.1111/cts.70721",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 5,
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42093195",
+      "discoveredAt": "2026-09-05",
+      "title": "Cognitive bias in veterinary clinical decision-making: Antemortem misdiagnosis of suspected giant kidney worm (Dioctophyme renale) in Australia.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42093195/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Aug",
+      "journal": "Australian veterinary journal",
+      "doi": "10.1111/avj.70091",
+      "relatedConcepts": [],
+      "whyItMatters": "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.",
+      "score": 5,
+      "status": "new"
+    },
     {
       "id": "arxiv-2608.24156",
       "discoveredAt": "2026-09-01",
