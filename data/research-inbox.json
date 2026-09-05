@@ -24,27 +24,6 @@
       "status": "new"
     },
     {
-      "id": "pubmed-42694724",
-      "discoveredAt": "2026-09-05",
-      "title": "Long-anchoring Stent Method as a Rescue Technique for Early Dysfunction of Covered Self-Expandable Metal Stents in Distal Malignant Biliary Obstruction: A Retrospective Case Series.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42694724/",
-      "source": "PubMed",
-      "sourceType": "journal article",
-      "publishedAt": "2027 Apr",
-      "journal": "DEN open",
-      "doi": "10.1002/deo2.70394",
-      "relatedConcepts": [
-        "cognitive-bias-anchoring-effect"
-      ],
-      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
-      "score": 5,
-      "rankingReasons": [
-        "direct canonical concept match",
-        "journal or review source type"
-      ],
-      "status": "new"
-    },
-    {
       "id": "pubmed-42679601",
       "discoveredAt": "2026-09-05",
       "title": "A tablet-based attentional cognitive bias modification intervention for positive emotion processing in major depressive disorder: a single-blind randomised controlled two-centre trial.",
@@ -58,48 +37,6 @@
       "whyItMatters": "Potential evidence about whether a decision-improvement technique works, for whom, and under what conditions.",
       "score": 5,
       "rankingReasons": [
-        "journal or review source type"
-      ],
-      "status": "new"
-    },
-    {
-      "id": "pubmed-42526227",
-      "discoveredAt": "2026-09-05",
-      "title": "Plasma-spark-induced ultrafast anchoring of Ni nanocatalysts on monolithic carbon for robust Li-CO(2) batteries.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42526227/",
-      "source": "PubMed",
-      "sourceType": "journal article",
-      "publishedAt": "2026 Dec 15",
-      "journal": "Journal of colloid and interface science",
-      "doi": "10.1016/j.jcis.2026.141216",
-      "relatedConcepts": [
-        "cognitive-bias-anchoring-effect"
-      ],
-      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
-      "score": 5,
-      "rankingReasons": [
-        "direct canonical concept match",
-        "journal or review source type"
-      ],
-      "status": "new"
-    },
-    {
-      "id": "pubmed-42492287",
-      "discoveredAt": "2026-09-05",
-      "title": "Accelerating the reconstruction of NiFe via molybdate anchoring for chloride-tolerant and stable seawater splitting.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42492287/",
-      "source": "PubMed",
-      "sourceType": "journal article",
-      "publishedAt": "2026 Dec 15",
-      "journal": "Journal of colloid and interface science",
-      "doi": "10.1016/j.jcis.2026.141182",
-      "relatedConcepts": [
-        "cognitive-bias-anchoring-effect"
-      ],
-      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
-      "score": 5,
-      "rankingReasons": [
-        "direct canonical concept match",
         "journal or review source type"
       ],
       "status": "new"
@@ -206,7 +143,6 @@
       "url": "https://arxiv.org/abs/2608.14320",
       "source": "arXiv",
       "sourceType": "preprint",
-      "publishedAt": "2026-08-14",
       "relatedConcepts": [
         "ai-assisted-decisions"
       ],
@@ -222,7 +158,6 @@
       "url": "https://arxiv.org/abs/2607.25227",
       "source": "arXiv",
       "sourceType": "preprint",
-      "publishedAt": "2026-07-28",
       "relatedConcepts": [
         "ai-assisted-decisions"
       ],
@@ -238,7 +173,6 @@
       "url": "https://arxiv.org/abs/2607.19063",
       "source": "arXiv",
       "sourceType": "preprint",
-      "publishedAt": "2026-07-21",
       "relatedConcepts": [
         "ai-assisted-decisions"
       ],
