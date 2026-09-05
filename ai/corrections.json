@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "project": "Cognitive Biases Knowledge Library",
+  "canonicalUrl": "https://cognitive-biases.github.io/",
+  "policy": {
+    "scope": "Material factual, evidence, provenance, methodology or data-contract errors in published project content.",
+    "report": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/issues/new?template=correction.yml",
+    "principles": [
+      "Correct the canonical page or data object when an error is verified.",
+      "Preserve source provenance and review dates when evidence-sensitive text changes.",
+      "Record material corrections here instead of silently presenting the historical statement as if it never existed.",
+      "Minor copy edits, formatting fixes and non-substantive wording changes do not require ledger entries."
+    ]
+  },
+  "lastReviewed": "2026-09-05",
+  "entries": []
+}

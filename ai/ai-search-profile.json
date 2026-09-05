@@ -1,0 +1,267 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/ai-search-profile.schema.json",
+  "profileVersion": "0.1",
+  "site": {
+    "id": "cognitive-biases-knowledge",
+    "name": "Cognitive Biases Knowledge Library",
+    "canonicalUrl": "https://cognitive-biases.github.io/",
+    "languages": ["en", "de", "ru"],
+    "canonicalLanguage": "en"
+  },
+  "objective": {
+    "primary": "Make the Cognitive Biases knowledge library easy for people, search systems and AI agents to identify, retrieve, verify and cite while preserving evidence status, research maturity and the distinction between a useful decision lens and a psychological diagnosis.",
+    "targetQuestions": [
+      "What is a cognitive bias and how should it be used as a decision lens?",
+      "What evidence supports or limits a named cognitive bias?",
+      "Which cognitive biases are relevant to a real decision when the bias name is not known?",
+      "How can an AI assistant use cognitive-bias evidence without diagnosing a person?",
+      "What human-AI decision effects are being studied by this project and what is their maturity?",
+      "How can AI models be tested for sensitivity to controlled decision conditions?",
+      "What does the Cognitive Bias Observatory measure and what does it not measure?",
+      "How can builders reuse the public Cognitive Biases dataset reproducibly?"
+    ],
+    "canonicalTerms": [
+      "Cognitive Biases Knowledge Library",
+      "Decision Lens Packs",
+      "AI-era Bias Lab",
+      "AI Bias Benchmark",
+      "Cognitive Bias Observatory",
+      "Reasoning Practice"
+    ]
+  },
+  "surfaces": {
+    "entityHome": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/",
+      "mediaType": "text/html"
+    },
+    "siteProfile": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/ai/site-profile.json",
+      "mediaType": "application/json"
+    },
+    "llmsCanonical": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/llms.txt",
+      "language": "en",
+      "mediaType": "text/plain"
+    },
+    "history": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/history/",
+      "mediaType": "text/html"
+    },
+    "localeManifest": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/ai/locales.json",
+      "mediaType": "application/json"
+    },
+    "sitemap": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/sitemap.xml",
+      "mediaType": "application/xml"
+    },
+    "robots": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/robots.txt",
+      "mediaType": "text/plain"
+    },
+    "knowledgeGraph": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/knowledge/graph.json",
+      "mediaType": "application/ld+json"
+    },
+    "trustCenter": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/trust/",
+      "mediaType": "text/html"
+    },
+    "correctionsLedger": {
+      "status": "active",
+      "url": "https://cognitive-biases.github.io/trust/corrections.json",
+      "mediaType": "application/json"
+    }
+  },
+  "modules": {
+    "answerPages": {
+      "status": "active",
+      "priority": "P0",
+      "description": "Publish situation-first and question-first pages that route a reader from a real decision to a small set of reviewed lenses instead of forcing them to know a bias name first.",
+      "url": "https://cognitive-biases.github.io/everyday/",
+      "machineReadable": ["https://cognitive-biases.github.io/data/everyday-guides.json"]
+    },
+    "originalResearch": {
+      "status": "active",
+      "priority": "P0",
+      "description": "Publish preregistered protocols, research notes, experiment specifications, benchmark methods and evidence updates with explicit maturity and limitations.",
+      "url": "https://cognitive-biases.github.io/research/",
+      "machineReadable": [
+        "https://cognitive-biases.github.io/data/research-notes.json",
+        "https://cognitive-biases.github.io/data/ai-era-research-tracker.json"
+      ],
+      "cadence": "monthly"
+    },
+    "protocolObservatory": {
+      "status": "not-applicable",
+      "priority": "P2",
+      "description": "The ARWP protocol-observatory module tracks agentic-web protocols; this project instead maintains a cognitive-bias information observatory and does not duplicate ARWP protocol research."
+    },
+    "comparisonPages": {
+      "status": "active",
+      "priority": "P1",
+      "description": "Publish reviewed comparisons that distinguish easily confused concepts and route agents to the narrower explanation when labels overlap.",
+      "url": "https://cognitive-biases.github.io/compare/",
+      "machineReadable": ["https://cognitive-biases.github.io/data/comparisons.json"]
+    },
+    "conceptDefinitions": {
+      "status": "active",
+      "priority": "P0",
+      "description": "Maintain canonical concept pages with explicit entry kinds, evidence state, related concepts and practical interpretation boundaries.",
+      "url": "https://cognitive-biases.github.io/explore/",
+      "machineReadable": ["https://cognitive-biases.github.io/data/biases.json"]
+    },
+    "claimsRegistry": {
+      "status": "planned",
+      "priority": "P1",
+      "description": "Promote a small subset of important evidence-sensitive project claims to stable claim identifiers only when the existing provenance model can support scoped review and supersession without duplicating the evidence database."
+    },
+    "evidenceReceipts": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Create compact replayable receipts for selected research and benchmark outputs when they add value beyond the existing release manifest, checksums and provenance records."
+    },
+    "crawlerMatrix": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Document site-specific AI/search crawler policy only from official crawler documentation and deployed robots behavior; do not infer training or retrieval behavior from user-agent names alone."
+    },
+    "agentFetchLab": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Test which Cognitive Biases surfaces assistants and agents actually retrieve for representative questions before optimizing around assumed discovery behavior.",
+      "cadence": "quarterly"
+    },
+    "knowledgeGraph": {
+      "status": "active",
+      "priority": "P1",
+      "description": "Expose a compact JSON-LD graph connecting the website, maintainer organization, public dataset, research program, benchmark, observatory and trust surface.",
+      "url": "https://cognitive-biases.github.io/knowledge/graph.json",
+      "machineReadable": ["https://cognitive-biases.github.io/knowledge/graph.json"]
+    },
+    "citationVisuals": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Publish selected evidence and research visuals with stable URLs, source notes and accessible descriptions when the visual materially improves understanding or citation."
+    },
+    "openReuseAssets": {
+      "status": "not-applicable",
+      "priority": "P2",
+      "description": "The project currently uses CC BY-NC-SA 4.0 content terms and does not claim the permission-free CC BY media profile used by ARWP; reuse must follow the repository licence."
+    },
+    "trustCenter": {
+      "status": "active",
+      "priority": "P0",
+      "description": "Publish one canonical trust surface covering identity, evidence and review practices, provenance, security reporting, licence boundaries and known limitations.",
+      "url": "https://cognitive-biases.github.io/trust/",
+      "machineReadable": ["https://cognitive-biases.github.io/trust/trust.json"]
+    },
+    "correctionsLedger": {
+      "status": "active",
+      "priority": "P1",
+      "description": "Maintain a public corrections policy and machine-readable ledger for material factual, evidence, provenance, methodology or data-contract errors.",
+      "url": "https://cognitive-biases.github.io/trust/",
+      "machineReadable": ["https://cognitive-biases.github.io/trust/corrections.json"],
+      "cadence": "on-change"
+    },
+    "softwareProvenance": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Add verifiable build or artifact provenance only for software artifacts that are actually distributed and consumed; do not treat ordinary Pages deployment as a security attestation."
+    },
+    "persistentIdentifiers": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Use a DOI or another externally issued persistent identifier for dataset or research releases only after issuance; repository citation metadata alone is not a DOI."
+    },
+    "externalTrustSignals": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Expose independent repository or archival trust signals only after they have actually run or been issued, and keep their scope separate from scientific correctness."
+    },
+    "externalDistribution": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Create externally distributed references for substantial evidence or research releases while keeping the canonical site and versioned dataset as the source of record.",
+      "cadence": "on-change"
+    },
+    "aiVisibility": {
+      "status": "planned",
+      "priority": "P2",
+      "description": "Measure observable AI citations, grounding queries and referrals separately from search visibility, without turning them into a single readiness or authority score.",
+      "cadence": "monthly"
+    },
+    "localization": {
+      "status": "active",
+      "priority": "P1",
+      "description": "Expose canonical English semantics plus German and Russian discovery-routing surfaces for AI agents with deterministic English fallback; this does not claim full human-interface translation.",
+      "url": "https://cognitive-biases.github.io/ai/locales.json",
+      "machineReadable": ["https://cognitive-biases.github.io/ai/locales.json"]
+    },
+    "history": {
+      "status": "active",
+      "priority": "P1",
+      "description": "Expose source-backed project evolution and current maturity as both a human-readable timeline and machine-readable JSON.",
+      "url": "https://cognitive-biases.github.io/history/",
+      "machineReadable": ["https://cognitive-biases.github.io/history.json"]
+    }
+  },
+  "vocabulary": [
+    {
+      "term": "Decision Lens Pack",
+      "definition": "A compact task-specific workflow that uses a small set of relevant cognitive-bias or decision-science lenses as checking questions rather than as diagnoses or scores.",
+      "url": "https://cognitive-biases.github.io/lenses/",
+      "status": "active"
+    },
+    {
+      "term": "AI-era Bias Lab",
+      "definition": "A project research layer for studying human-AI decision effects while preserving explicit maturity states and preferring established concepts when they already explain an observation.",
+      "url": "https://cognitive-biases.github.io/ai-era/",
+      "status": "active"
+    },
+    {
+      "term": "Cognitive Bias Observatory",
+      "definition": "A public descriptive observation layer for headline-level framing, certainty, salience, authority, social-proof, numerical and repetition signals with explicit sampling limits.",
+      "url": "https://cognitive-biases.github.io/observatory/",
+      "status": "active"
+    }
+  ],
+  "measurement": {
+    "signals": [
+      {
+        "name": "search visibility",
+        "status": "active",
+        "description": "Track canonical-page indexing and search performance through available webmaster tooling without treating visibility changes as proof that a content or ARWP change caused ranking gains."
+      },
+      {
+        "name": "AI citations and referrals",
+        "status": "planned",
+        "description": "Track observable citations, grounding references and referrals where platforms expose them, keeping platform coverage and query sampling explicit."
+      },
+      {
+        "name": "external references",
+        "status": "planned",
+        "description": "Track external links or references to the dataset, evidence reviews, research artifacts and project-defined decision tools without converting them into an authority score."
+      }
+    ],
+    "reviewCadence": "monthly",
+    "privacy": "Use aggregate, privacy-minimized visibility signals. Do not turn decision-tool drafts, MCP queries or visitor activity into a browsing-history or psychological-profile dataset."
+  },
+  "guardrails": {
+    "noRankingClaimsWithoutEvidence": true,
+    "separateOwnedFromIndependentEvidence": true,
+    "preserveNegativeResults": true,
+    "canonicalTechnicalSemantics": true,
+    "noFabricatedAdoption": true,
+    "noReadinessScore": true
+  }
+}
