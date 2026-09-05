@@ -3,6 +3,113 @@
   "updatedAt": "2026-09-05",
   "items": [
     {
+      "id": "pubmed-42459123",
+      "discoveredAt": "2026-09-05",
+      "title": "Polar anchoring effect-mediated solvation regulation in fluorinated gel polymer electrolytes for high-voltage lithium-ion full batteries.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42459123/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Sep 1",
+      "journal": "Materials horizons",
+      "doi": "10.1039/d6mh01062h",
+      "relatedConcepts": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 8,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42335861",
+      "discoveredAt": "2026-09-05",
+      "title": "Large language models exhibit greater diagnostic anchoring than physicians in a forced-choice vignette study.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42335861/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct",
+      "journal": "International journal of medical informatics",
+      "doi": "10.1016/j.ijmedinf.2026.106550",
+      "relatedConcepts": [
+        "ai-assisted-decisions",
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 8,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42690600",
+      "discoveredAt": "2026-09-05",
+      "title": "Institutional Confirmation Bias in Refugee Health Governance: Why Emergency Templates Persist Despite Evidence of Chronic Harm.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42690600/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Sep 3",
+      "journal": "Journal of immigrant and minority health",
+      "doi": "10.1007/s10903-026-01979-9",
+      "relatedConcepts": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 6,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42568154",
+      "discoveredAt": "2026-09-05",
+      "title": "Contrast bias, not confirmation bias, shapes daily impression updating across social and non-social targets.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42568154/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct",
+      "journal": "The British journal of social psychology",
+      "doi": "10.1111/bjso.70123",
+      "relatedConcepts": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 6,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42335651",
+      "discoveredAt": "2026-09-05",
+      "title": "Can I believe my voice? Self-similarity and the illusory truth effect.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42335651/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct",
+      "journal": "Cognition",
+      "doi": "10.1016/j.cognition.2026.106630",
+      "relatedConcepts": [
+        "truth-judgment-illusory-truth-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 6,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
       "id": "openalex-w7207701428",
       "discoveredAt": "2026-09-05",
       "title": "A confirmation bias szerepe a büntetőeljárásban A móri bankrablás tanulságai",
