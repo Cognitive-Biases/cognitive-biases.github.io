@@ -3,6 +3,53 @@
   "updatedAt": "2026-09-05",
   "items": [
     {
+      "id": "openalex-w7208716557",
+      "discoveredAt": "2026-09-05",
+      "title": "Behavioral finance as a factor in investment decision-making: the impact of cognitive biases on financial choices",
+      "url": "https://doi.org/10.36887/2415-8453-2026-3-46",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-04",
+      "journal": "Ukrainian Journal of Applied Economics and Technology",
+      "doi": "10.36887/2415-8453-2026-3-46",
+      "relatedConcepts": [],
+      "whyItMatters": "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.",
+      "score": 5,
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7208769541",
+      "discoveredAt": "2026-09-05",
+      "title": "Strategic Decision-Making Under Uncertainty In Nigeria: Investigating The Role Of Cognitive Bias And Risk Management",
+      "url": "https://doi.org/10.56201/ijssmr.vol.12no4.2026.pg395.415",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-04",
+      "journal": "INTERNATIONAL JOURNAL OF SOCIAL SCIENCES AND MANAGEMENT RESEARCH",
+      "doi": "10.56201/ijssmr.vol.12no4.2026.pg395.415",
+      "relatedConcepts": [],
+      "whyItMatters": "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.",
+      "score": 5,
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7160392532",
+      "discoveredAt": "2026-09-05",
+      "title": "Limits of the illusory truth effect for social-political opinions: Evidence from two experiments and a mini meta-analysis",
+      "url": "https://doi.org/10.1016/j.concog.2026.104119",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-08-27",
+      "journal": "Consciousness and Cognition",
+      "doi": "10.1016/j.concog.2026.104119",
+      "relatedConcepts": [
+        "truth-judgment-illusory-truth-effect"
+      ],
+      "whyItMatters": "Potentially high-signal review that may confirm, narrow, or challenge claims already in the library.",
+      "score": 5,
+      "status": "new"
+    },
+    {
       "id": "pubmed-42698299",
       "discoveredAt": "2026-09-05",
       "title": "Expanding Quantitative Medicines' Reach: Systems and Methods to Enhance R&D Productivity and Decision-Making in the Agentic-Era.",
