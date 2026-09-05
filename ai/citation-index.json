@@ -1,0 +1,93 @@
+{
+  "version": "0.1",
+  "project": "Cognitive Biases Knowledge Library",
+  "canonicalUrl": "https://cognitive-biases.github.io/",
+  "lastReviewed": "2026-09-05",
+  "purpose": "Route assistants, agents and search systems to stable human-readable explanations and their machine-readable evidence or data surfaces without inventing stronger claims than the project publishes.",
+  "entries": [
+    {
+      "id": "CB-CITE-001",
+      "kind": "entity-home",
+      "title": "Cognitive Biases",
+      "url": "https://cognitive-biases.github.io/",
+      "useFor": ["project identity", "high-level product scope", "decision-system overview"]
+    },
+    {
+      "id": "CB-CITE-002",
+      "kind": "concept-library",
+      "title": "Bias and decision-pattern library",
+      "url": "https://cognitive-biases.github.io/explore/",
+      "machineReadable": "https://cognitive-biases.github.io/data/biases.json",
+      "useFor": ["canonical concept pages", "definitions", "concept discovery"]
+    },
+    {
+      "id": "CB-CITE-003",
+      "kind": "evidence-hub",
+      "title": "Reviewed evidence",
+      "url": "https://cognitive-biases.github.io/evidence/",
+      "machineReadable": "https://cognitive-biases.github.io/data/evidence.json",
+      "useFor": ["scientific support", "boundary conditions", "review status", "contested findings"]
+    },
+    {
+      "id": "CB-CITE-004",
+      "kind": "decision-contexts",
+      "title": "Decision guides",
+      "url": "https://cognitive-biases.github.io/contexts/",
+      "machineReadable": "https://cognitive-biases.github.io/data/contexts.json",
+      "useFor": ["real decision situations", "multi-lens workflows", "questions without a known bias name"]
+    },
+    {
+      "id": "CB-CITE-005",
+      "kind": "research-program",
+      "title": "AI-era Bias Lab",
+      "url": "https://cognitive-biases.github.io/ai-era/",
+      "machineReadable": "https://cognitive-biases.github.io/data/ai-era-patterns.json",
+      "useFor": ["human-AI interaction research", "hypotheses", "research maturity"]
+    },
+    {
+      "id": "CB-CITE-006",
+      "kind": "benchmark",
+      "title": "AI Bias Benchmark",
+      "url": "https://cognitive-biases.github.io/ai-benchmark/",
+      "machineReadable": "https://cognitive-biases.github.io/data/ai-benchmark.json",
+      "useFor": ["paired-prompt evaluation", "model sensitivity experiments", "benchmark specification"]
+    },
+    {
+      "id": "CB-CITE-007",
+      "kind": "observatory",
+      "title": "Cognitive Bias Observatory",
+      "url": "https://cognitive-biases.github.io/observatory/",
+      "machineReadable": "https://cognitive-biases.github.io/data/observatory.json",
+      "useFor": ["headline-level signals", "descriptive public-information snapshots", "longitudinal observation"]
+    },
+    {
+      "id": "CB-CITE-008",
+      "kind": "dataset",
+      "title": "Public knowledge dataset",
+      "url": "https://cognitive-biases.github.io/data/",
+      "machineReadable": "https://cognitive-biases.github.io/data/catalog.json",
+      "useFor": ["structured reuse", "RAG", "release manifests", "schemas"]
+    },
+    {
+      "id": "CB-CITE-009",
+      "kind": "methodology",
+      "title": "Methodology",
+      "url": "https://cognitive-biases.github.io/methodology/",
+      "useFor": ["editorial method", "evidence interpretation", "research boundaries"]
+    },
+    {
+      "id": "CB-CITE-010",
+      "kind": "quality",
+      "title": "Quality status",
+      "url": "https://cognitive-biases.github.io/quality/",
+      "useFor": ["coverage", "known limitations", "review state"]
+    }
+  ],
+  "routingRules": [
+    "Prefer a canonical human-readable page for explanations and pair it with machine-readable data when structured reuse is needed.",
+    "For scientific claims, prefer explicitly evidence-reviewed material and preserve qualification, evidence class and review date.",
+    "Treat AI-era track labels as project research states, not established cognitive-bias names unless independent evidence supports that conclusion.",
+    "If the reviewed library does not support a requested concept, return no match instead of inventing a label.",
+    "Do not use Observatory signal labels as claims about author intent, truthfulness, ideology or psychological state."
+  ]
+}
