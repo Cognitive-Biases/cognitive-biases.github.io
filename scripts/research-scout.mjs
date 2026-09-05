@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const CONFIG_PATH = "data/research-scout-config.json";
 const INBOX_PATH = "data/research-inbox.json";
-const USER_AGENT = "CognitiveBiasesResearchScout/1.1 (https://cognitive-biases.github.io/)";
+const USER_AGENT = "CognitiveBiasesResearchScout/1.2 (https://cognitive-biases.github.io/)";
 
 const compact = (value = "") => String(value).replace(/\s+/g, " ").trim();
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -16,6 +16,7 @@ const decodeXml = (value = "") => compact(String(value)
 const tag = (xml, name) => decodeXml(xml.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)</${name}>`, "i"))?.[1] || "");
 const today = () => new Date().toISOString().slice(0, 10);
 const slugPart = (value = "") => value.toLowerCase().replace(/^https?:\/\//, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(-90);
+const normalizeDoi = (value = "") => compact(value).replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, "").toLowerCase() || null;
 
 function relatedConcepts(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
@@ -24,7 +25,12 @@ function relatedConcepts(candidate) {
   if (/automation bias|automation reliance|decision aid|appropriate reliance/.test(text)) related.add("false-priors-automation-bias");
   if (/anthropomorph|humanlike|human-like|human robot|human-robot/.test(text)) related.add("availability-heuristic-anthropomorphism");
   if (/confirmation bias/.test(text)) related.add("cognitive-bias-confirmation-bias");
-  if (/anchor|anchoring/.test(text)) related.add("cognitive-bias-anchoring-bias");
+  if (/anchor|anchoring/.test(text)) related.add("cognitive-bias-anchoring-effect");
+  if (/illusory truth|repetition[- ]based truth/.test(text)) related.add("truth-judgment-illusory-truth-effect");
+  if (/hindsight bias/.test(text)) related.add("cognitive-bias-hindsight-bias");
+  if (/outcome bias/.test(text)) related.add("cognitive-bias-outcome-bias");
+  if (/sunk cost|escalation of commitment/.test(text)) related.add("cognitive-bias-sunk-cost-effect");
+  if (/planning fallacy/.test(text)) related.add("egocentric-bias-planning-fallacy");
   if (/forecast|prediction|prospection/.test(text)) related.add("forecasting-future-choices");
   return [...related];
 }
@@ -32,7 +38,7 @@ function relatedConcepts(candidate) {
 function isCoreRelevant(candidate) {
   const title = String(candidate.title || "").toLowerCase();
   if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(title)) return false;
-  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|automation bias|confirmation bias|anchoring|anchor effect|framing effect|hindsight bias|outcome bias|sunk cost|anthropomorph/.test(title)) return true;
+  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|automation bias|confirmation bias|anchoring|anchor effect|framing effect|hindsight bias|outcome bias|sunk cost|escalation of commitment|planning fallacy|illusory truth|continued influence|backfire effect|loss aversion|decoy effect|default effect|overconfidence|base[- ]rate|availability heuristic|anthropomorph/.test(title)) return true;
   const ai = /large language model|\bllm\b|artificial intelligence|\bai[- ]assisted\b|agentic/.test(title);
   const decision = /decision|judgment|judgement|reasoning|reliance|trust|heuristic|bias/.test(title);
   return ai && decision;
@@ -41,12 +47,13 @@ function isCoreRelevant(candidate) {
 function scoreCandidate(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
   let score = 0;
-  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|anchoring effect/.test(text)) score += 3;
+  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|anchoring effect|illusory truth|hindsight bias|outcome bias|sunk cost|planning fallacy|loss aversion|confirmation bias/.test(text)) score += 3;
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) score += 4;
   if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) score += 3;
   if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph|anchoring/.test(text)) score += 2;
-  if (/benchmark|dataset|evaluation/.test(text)) score += 1;
+  if (/debias|calibrat|intervention|benchmark|dataset|evaluation/.test(text)) score += 1;
   if (/editorial|opinion|commentary/.test(text)) score -= 2;
+  if (/case report|single case/.test(text)) score -= 1;
   if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(text)) score -= 5;
   return score;
 }
@@ -55,6 +62,7 @@ function whyItMatters(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis/.test(text)) return "Potentially high-signal review that may confirm, narrow, or challenge claims already in the library.";
   if (/replication|registered report/.test(text)) return "Potential replication evidence worth comparing with the current evidence status and qualifications.";
+  if (/debias|calibrat|intervention/.test(text)) return "Potential evidence about whether a decision-improvement technique works, for whom, and under what conditions.";
   if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) return "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.";
   if (/forecast|decision making|decision-making|judgment|judgement/.test(text)) return "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.";
   return "Potential research update that passed the scout relevance threshold and needs editorial review.";
@@ -72,6 +80,29 @@ function parseArxiv(xml) {
       summary: tag(entry, "summary"),
       publishedAt: tag(entry, "published").slice(0, 10),
       url: `https://arxiv.org/abs/${arxivId}`
+    };
+  }).filter((item) => item.title && item.url);
+}
+
+function parseOpenAlex(payload = {}) {
+  return (payload.results || []).map((work) => {
+    const openAlexId = String(work.id || "").split("/").pop() || slugPart(work.title || "work");
+    const doi = normalizeDoi(work.doi || work.ids?.doi || "");
+    const journal = compact(work.primary_location?.source?.display_name || "");
+    const landingPage = work.primary_location?.landing_page_url || work.best_oa_location?.landing_page_url || null;
+    const url = doi ? `https://doi.org/${doi}` : landingPage || work.id;
+    const type = String(work.type || "").toLowerCase();
+    const sourceType = type === "preprint" ? "preprint" : type === "review" ? "review" : type === "article" ? "journal article" : type || "research work";
+    return {
+      id: `openalex-${openAlexId.toLowerCase()}`,
+      source: "OpenAlex",
+      sourceType,
+      title: compact(work.title || work.display_name || ""),
+      summary: "",
+      publishedAt: work.publication_date || String(work.publication_year || ""),
+      ...(journal ? { journal } : {}),
+      ...(doi ? { doi } : {}),
+      url
     };
   }).filter((item) => item.title && item.url);
 }
@@ -118,7 +149,7 @@ async function collectPubMed(query) {
   return (payload.result?.uids || []).map((uid) => {
     const record = payload.result?.[uid] || {};
     const articleIds = record.articleids || [];
-    const doi = articleIds.find((item) => item.idtype === "doi")?.value || null;
+    const doi = normalizeDoi(articleIds.find((item) => item.idtype === "doi")?.value || "");
     return {
       id: `pubmed-${uid}`,
       source: "PubMed",
@@ -127,10 +158,20 @@ async function collectPubMed(query) {
       summary: "",
       publishedAt: compact(record.pubdate || ""),
       journal: compact(record.fulljournalname || ""),
-      doi,
+      ...(doi ? { doi } : {}),
       url: `https://pubmed.ncbi.nlm.nih.gov/${uid}/`
     };
   }).filter((item) => item.title);
+}
+
+async function collectOpenAlex(query, lookbackDays) {
+  const from = new Date(Date.now() - lookbackDays * 86400000).toISOString().slice(0, 10);
+  const search = new URL("https://api.openalex.org/works");
+  search.searchParams.set("search", query);
+  search.searchParams.set("filter", `from_publication_date:${from},to_publication_date:${today()}`);
+  search.searchParams.set("sort", "publication_date:desc,relevance_score:desc");
+  search.searchParams.set("per_page", "20");
+  return parseOpenAlex(await fetchJson(search));
 }
 
 function withinLookback(candidate, days) {
@@ -141,6 +182,7 @@ function withinLookback(candidate, days) {
 
 function normalizeCandidate(candidate) {
   const related = relatedConcepts(candidate);
+  const doi = normalizeDoi(candidate.doi || "");
   return {
     id: candidate.id || `${candidate.source?.toLowerCase() || "source"}-${slugPart(candidate.url || candidate.title)}`,
     discoveredAt: today(),
@@ -150,7 +192,7 @@ function normalizeCandidate(candidate) {
     sourceType: candidate.sourceType || "research",
     publishedAt: candidate.publishedAt || null,
     ...(candidate.journal ? { journal: candidate.journal } : {}),
-    ...(candidate.doi ? { doi: candidate.doi } : {}),
+    ...(doi ? { doi } : {}),
     relatedConcepts: related,
     whyItMatters: whyItMatters(candidate),
     score: scoreCandidate(candidate),
@@ -167,7 +209,11 @@ function selfTest() {
 
   const anchor = { title: "AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs", summary: "Controlled anchoring tests." };
   assert.equal(isCoreRelevant(anchor), true);
-  assert.ok(relatedConcepts(anchor).includes("cognitive-bias-anchoring-bias"));
+  assert.ok(relatedConcepts(anchor).includes("cognitive-bias-anchoring-effect"));
+
+  const truth = { title: "The illusory truth effect in social media", summary: "Repeated claims and truth judgments." };
+  assert.equal(isCoreRelevant(truth), true);
+  assert.ok(relatedConcepts(truth).includes("truth-judgment-illusory-truth-effect"));
 
   const vrFalsePositive = { title: "Quality Action Assurance: Multimodal Verification of Examiner Claims in VR OSCEs", summary: "Examiner subjectivity, cognitive bias and an LLM verifier." };
   assert.equal(isCoreRelevant(vrFalsePositive), false);
@@ -178,6 +224,12 @@ function selfTest() {
   const parsed = parseArxiv(`<feed><entry><id>http://arxiv.org/abs/2608.12345v2</id><published>2026-08-17T00:00:00Z</published><title> Cognitive bias in agents </title><summary> Test summary. </summary></entry></feed>`);
   assert.equal(parsed[0].id, "arxiv-2608.12345");
   assert.equal(parsed[0].url, "https://arxiv.org/abs/2608.12345");
+
+  const openAlex = parseOpenAlex({ results: [{ id: "https://openalex.org/W123", doi: "https://doi.org/10.1234/TEST", title: "Anchoring effect in judgment", publication_date: "2026-08-20", type: "article", primary_location: { source: { display_name: "Journal of Judgment" } } }] });
+  assert.equal(openAlex[0].id, "openalex-w123");
+  assert.equal(openAlex[0].doi, "10.1234/test");
+  assert.equal(openAlex[0].url, "https://doi.org/10.1234/test");
+  assert.equal(openAlex[0].journal, "Journal of Judgment");
   console.log("Research scout self-test passed.");
 }
 
@@ -208,6 +260,15 @@ for (const query of config.pubmedQueries || []) {
   }
   await sleep(500);
 }
+for (const query of config.openAlexQueries || []) {
+  try {
+    collected.push(...await collectOpenAlex(query, config.lookbackDays || 45));
+    successfulSources += 1;
+  } catch (error) {
+    console.warn(`OpenAlex scout warning: ${error.message}`);
+  }
+  await sleep(1100);
+}
 if (!successfulSources) throw new Error("Research scout could not reach any configured source.");
 
 const existingKeys = new Set((inbox.items || []).flatMap((item) => [item.id, item.url, item.doi].filter(Boolean).map((value) => String(value).toLowerCase())));
@@ -219,7 +280,7 @@ for (const raw of collected) {
   if (candidate.score < (config.scoreThreshold || 5)) continue;
   const keys = [candidate.id, candidate.url, candidate.doi].filter(Boolean).map((value) => String(value).toLowerCase());
   if (keys.some((key) => existingKeys.has(key))) continue;
-  const key = candidate.url.toLowerCase();
+  const key = String(candidate.doi ? `doi:${candidate.doi}` : candidate.url).toLowerCase();
   const previous = candidateMap.get(key);
   if (!previous || candidate.score > previous.score) candidateMap.set(key, candidate);
 }
@@ -229,7 +290,7 @@ const additions = [...candidateMap.values()]
   .slice(0, config.maxNewItems || 12);
 
 if (!additions.length) {
-  console.log(`Research scout found no new candidates above threshold. Sources checked: ${successfulSources}.`);
+  console.log(`Research scout found no new candidates above threshold. Source queries checked: ${successfulSources}.`);
   process.exit(0);
 }
 
