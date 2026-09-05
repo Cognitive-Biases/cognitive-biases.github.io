@@ -25,13 +25,13 @@ function isCognitiveAnchoring(value = "") {
   if (!hasAnchorTerm) return false;
   const materialsContext = /batter(?:y|ies)|electrolyte|electrode|polymer|solvation|catalyst|catalytic|nanocatalyst|molybdate|seawater splitting|surface chemistry|nanoparticle|adsorption|fluorinated|lithium|nickel|molecular|alloy|plasma|stent|vascular device/.test(text);
   if (materialsContext) return false;
-  return /decision|judg(?:e|ment)|judgement|estimate|estimating|choice|evaluation|rating|diagnos|physician|clinician|patient|participant|human|manager|consumer|forecast|reasoning|belief|numerical|number|score|advice|large language model|\bllm\b|artificial intelligence|\bai\b|model response/.test(text);
+  return /decision|judg(?:e|ment)|judgement|estimate|estimating|choice|evaluation|rating|diagnos|physician|clinician|patient|participant|human|manager|consumer|forecast|reasoning|belief|numerical|number|score|advice|large language model|\bllms?\b|artificial intelligence|\bai\b|model response|evaluator|reviewer/.test(text);
 }
 
 function relatedConcepts(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
   const related = new Set();
-  if (/large language model|\bllm\b|artificial intelligence|\bai\b|agentic|ai agent|ai-assisted/.test(text)) related.add("ai-assisted-decisions");
+  if (/large language model|\bllms?\b|artificial intelligence|\bai\b|agentic|ai agent|ai-assisted/.test(text)) related.add("ai-assisted-decisions");
   if (/automation bias|automation reliance|decision aid|appropriate reliance/.test(text)) related.add("false-priors-automation-bias");
   if (/anthropomorph|humanlike|human-like|human robot|human-robot/.test(text)) related.add("availability-heuristic-anthropomorphism");
   if (/confirmation bias/.test(text)) related.add("cognitive-bias-confirmation-bias");
@@ -50,7 +50,7 @@ function isCoreRelevant(candidate) {
   if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(title)) return false;
   if (isCognitiveAnchoring(title)) return true;
   if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|automation bias|confirmation bias|framing effect|hindsight bias|outcome bias|sunk cost|escalation of commitment|planning fallacy|illusory truth|continued influence|backfire effect|loss aversion|decoy effect|default effect|overconfidence|base[- ]rate|availability heuristic|anthropomorph/.test(title)) return true;
-  const ai = /large language model|\bllm\b|artificial intelligence|\bai[- ]assisted\b|agentic/.test(title);
+  const ai = /large language model|\bllms?\b|artificial intelligence|\bai[- ]assisted\b|agentic/.test(title);
   const decision = /decision|judgment|judgement|reasoning|reliance|trust|heuristic|bias/.test(title);
   return ai && decision;
 }
@@ -65,7 +65,7 @@ function scoreCandidate(candidate) {
   if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|illusory truth|hindsight bias|outcome bias|sunk cost|planning fallacy|loss aversion|confirmation bias/.test(text)) score += 3;
   if (cognitiveAnchoring) score += 3;
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) score += 4;
-  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) score += 3;
+  if (/large language model|\bllms?\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) score += 3;
   if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph/.test(text)) score += 2;
   if (cognitiveAnchoring) score += 2;
   if (/debias|calibrat|intervention|benchmark|dataset|evaluation/.test(text)) score += 1;
@@ -87,7 +87,7 @@ function rankingReasons(candidate) {
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) reasons.push("review, replication, or registered evidence");
   if (/preregister|pre-registered|equivalence test|boundary condition|limits of|failed to replicate|failure to replicate|null result|no effect/.test(text)) reasons.push("boundary, null, or preregistered evidence");
   if (/journal article|review/.test(sourceType)) reasons.push("journal or review source type");
-  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) reasons.push("human-AI decision relevance");
+  if (/large language model|\bllms?\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) reasons.push("human-AI decision relevance");
   return reasons;
 }
 
@@ -97,7 +97,7 @@ function whyItMatters(candidate) {
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis/.test(text)) return "Potentially high-signal review that may confirm, narrow, or challenge claims already in the library.";
   if (/replication|registered report/.test(text)) return "Potential replication evidence worth comparing with the current evidence status and qualifications.";
   if (/debias|calibrat|intervention/.test(text)) return "Potential evidence about whether a decision-improvement technique works, for whom, and under what conditions.";
-  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) return "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.";
+  if (/large language model|\bllms?\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) return "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.";
   if (/forecast|decision making|decision-making|judgment|judgement/.test(text)) return "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.";
   return "Potential research update that passed the scout relevance threshold and needs editorial review.";
 }
