@@ -7,6 +7,8 @@ const notes = await json("data/research-notes.json");
 const biases = await json("data/biases.json");
 const duplicates = await json("data/duplicate-dispositions.json");
 const evidence = await json("dist/data/evidence.json");
+const tracker = await json("data/ai-era-research-tracker.json");
+const labData = await json("dist/data/research-lab.json");
 const duplicateIds = new Set((duplicates.groups || []).flatMap((group) => group.duplicateIds || []));
 const canonical = new Map(biases.filter((entry) => entry.published && !duplicateIds.has(entry.id)).map((entry) => [entry.slug, entry]));
 const reviewed = new Set((evidence.reviews || []).map((entry) => entry.slug));
@@ -43,4 +45,28 @@ for (const note of notes.entries || []) {
 }
 
 if (!relationships) throw new Error("Research discovery has no note-to-concept relationships.");
-console.log(`Research discovery check passed: ${relationships} reciprocal Article↔DefinedTerm relationships across ${linkedConcepts.size} evidence-reviewed concepts.`);
+
+const labHtml = await readFile(resolve("dist", "research", "lab", "index.html"), "utf8");
+const researchIndex = await readFile(resolve("dist", "research", "index.html"), "utf8");
+const dataIndex = await readFile(resolve("dist", "data", "index.html"), "utf8");
+const sitemap = await readFile(resolve("dist", "sitemap.xml"), "utf8");
+if (!labHtml.includes(`<link rel="canonical" href="${SITE}/research/lab/">`)) throw new Error("Research Lab canonical is missing.");
+if (!researchIndex.includes('href="/research/lab/"')) throw new Error("Research index does not discover Research Lab.");
+if (!dataIndex.includes('href="/data/research-lab.json"')) throw new Error("Data page does not expose Research Lab JSON.");
+if (!sitemap.includes(`<loc>${SITE}/research/lab/</loc>`)) throw new Error("Research Lab is missing from sitemap.");
+if (labData.interpretationRule !== tracker.interpretationRule) throw new Error("Research Lab interpretation rule drifted from tracker.");
+if (JSON.stringify(labData.stageOrder) !== JSON.stringify(tracker.stageOrder)) throw new Error("Research Lab stage order drifted from tracker.");
+if ((labData.tracks || []).length !== (tracker.entries || []).length) throw new Error("Research Lab track count does not match tracker.");
+for (const entry of tracker.entries || []) {
+  if (!labHtml.includes(escapeForCheck(entry.name)) || !labHtml.includes(escapeForCheck(entry.nextMilestone))) throw new Error(`${entry.track}: Research Lab is missing visible tracker content.`);
+  const published = (labData.tracks || []).find((track) => track.track === entry.track);
+  if (!published || published.stage !== entry.stage) throw new Error(`${entry.track}: Research Lab JSON stage drift.`);
+  for (const artifact of entry.studyArtifacts || []) if (!labHtml.includes(`href="${artifact}"`)) throw new Error(`${entry.track}: Research Lab is missing artifact ${artifact}.`);
+}
+if (!labHtml.includes("A protocol is not a result") || !labData.resultGate) throw new Error("Research Lab result gate is missing.");
+
+function escapeForCheck(value = "") {
+  return String(value).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#39;");
+}
+
+console.log(`Research discovery check passed: ${relationships} reciprocal Article↔DefinedTerm relationships across ${linkedConcepts.size} evidence-reviewed concepts; Research Lab exposes ${labData.tracks.length} maturity-tracked research tracks.`);
