@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const HOME = "dist/index.html";
 const STYLES = "dist/styles.css";
+const LLMS = "dist/llms.txt";
 const DIGESTS = "data/monthly-research-digests.json";
 const DECISION_LINK = '<a class="button button--dark" href="/decide/">Open the decision review</a>';
 const escape = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
@@ -48,4 +49,27 @@ if (!styles.includes(".research-digest-home{")) {
   await writeFile(STYLES, styles);
 }
 
-console.log(`Decision and research discovery verified: /decide/${latestDigest ? ` and /research/digests/${latestDigest.slug}/` : ""} are linked from the homepage.`);
+let llms = await readFile(LLMS, "utf8");
+if (!llms.includes("Monthly research digests:")) {
+  const researchLine = "- Research: https://cognitive-biases.github.io/research/";
+  if (!llms.includes(researchLine)) throw new Error("Cannot add monthly digest to llms.txt: Research line is missing.");
+  const discovery = `${researchLine}\n- Monthly research digests: https://cognitive-biases.github.io/research/digests/ — evidence-delta updates that label new findings as strengthening, narrowing, new context or watch-only instead of treating every new paper as settled evidence.\n- Research Atom feed: https://cognitive-biases.github.io/research/feed.xml — research notes and monthly digests in one update feed.`;
+  llms = llms.replace(researchLine, discovery);
+}
+if (!llms.includes("Monthly research digest data:")) {
+  const notesLine = "- Research notes: https://cognitive-biases.github.io/data/research-notes.json";
+  if (!llms.includes(notesLine)) throw new Error("Cannot add monthly digest data to llms.txt: Research notes line is missing.");
+  llms = llms.replace(notesLine, `${notesLine}\n- Monthly research digest data: https://cognitive-biases.github.io/data/monthly-research-digests.json`);
+}
+if (!llms.includes("Treat `watch only` monthly research signals as provisional")) {
+  const rule = "Important interpretation rule: older library entries are not automatically evidence-reviewed. Prefer entries with an explicit evidence review when making claims about scientific support. Preserve the evidence class, descriptive status, qualification and review date when summarising reviewed material.";
+  if (!llms.includes(rule)) throw new Error("Cannot add monthly digest interpretation rule to llms.txt.");
+  llms = llms.replace(rule, `${rule}\n\nTreat \`watch only\` monthly research signals as provisional discovery, not canonical evidence. A monthly \`strengthens\`, \`narrows\` or \`new context\` label describes how the project interpreted a reviewed source; when making a scientific claim, prefer the resulting canonical evidence page and its sources when one exists.`);
+}
+await writeFile(LLMS, llms);
+
+if (!llms.includes("https://cognitive-biases.github.io/data/monthly-research-digests.json") || !llms.includes("https://cognitive-biases.github.io/research/feed.xml")) {
+  throw new Error("Monthly research discovery is incomplete in generated llms.txt.");
+}
+
+console.log(`Decision and research discovery verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed and monthly digest data` : ""} are discoverable.`);
