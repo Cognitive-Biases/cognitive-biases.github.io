@@ -8,33 +8,18 @@
       "situation": "checking-repeated-claims",
       "skill": "information-verification",
       "primaryLens": "truth-judgment-illusory-truth-effect",
-      "alternativeLenses": [
-        "memory-bias-continued-influence-effect"
-      ],
+      "alternativeLenses": ["memory-bias-continued-influence-effect"],
       "technique": "source-trace",
       "prompt": "A claim appears in ten articles. Following the links shows that nine articles cite the tenth, which cites one small report.",
       "question": "What should determine confidence?",
       "options": [
-        {
-          "id": "a",
-          "text": "The number of pages containing the sentence."
-        },
-        {
-          "id": "b",
-          "text": "The quality of the original report and any genuinely independent evidence."
-        },
-        {
-          "id": "c",
-          "text": "How high the articles rank in search results."
-        }
+        {"id": "a", "text": "The number of pages containing the sentence."},
+        {"id": "b", "text": "The quality of the original report and any genuinely independent evidence."},
+        {"id": "c", "text": "How high the articles rank in search results."}
       ],
       "bestOption": "b",
       "explanation": "Ten repetitions do not equal ten independent observations. Source tracing reveals the evidence structure behind the apparent agreement.",
-      "missingEvidence": [
-        "Method and sample of the original report.",
-        "Independent replications or datasets.",
-        "Whether later articles add new evidence or only repeat the claim."
-      ],
+      "missingEvidence": ["Method and sample of the original report.", "Independent replications or datasets.", "Whether later articles add new evidence or only repeat the claim."],
       "evidenceNote": "Illusory truth may make the repeated claim feel more credible. The main operational problem is source dependence, which can be checked directly.",
       "nextAction": "Draw a simple source tree and assess each independent root."
     },
@@ -45,35 +30,42 @@
       "situation": "checking-repeated-claims",
       "skill": "information-verification",
       "primaryLens": "memory-bias-continued-influence-effect",
-      "alternativeLenses": [
-        "truth-judgment-illusory-truth-effect"
-      ],
+      "alternativeLenses": ["truth-judgment-illusory-truth-effect"],
       "technique": "source-trace",
       "prompt": "A report corrects a false explanation for an event but gives no supported alternative. Later discussions still use the old explanation because it is the only coherent story people remember.",
       "question": "What would make the correction more usable?",
       "options": [
-        {
-          "id": "a",
-          "text": "Repeat only that the old claim was false."
-        },
-        {
-          "id": "b",
-          "text": "State the supported replacement explanation, its evidence and what remains unknown."
-        },
-        {
-          "id": "c",
-          "text": "Avoid discussing the event again so the old story fades naturally."
-        }
+        {"id": "a", "text": "Repeat only that the old claim was false."},
+        {"id": "b", "text": "State the supported replacement explanation, its evidence and what remains unknown."},
+        {"id": "c", "text": "Avoid discussing the event again so the old story fades naturally."}
       ],
       "bestOption": "b",
       "explanation": "Corrections are easier to use when they replace the old causal story with a supported account. Source tracing also shows what evidence supports the replacement.",
-      "missingEvidence": [
-        "Evidence against the old explanation.",
-        "Evidence for the replacement explanation.",
-        "Uncertainty that remains after correction."
-      ],
+      "missingEvidence": ["Evidence against the old explanation.", "Evidence for the replacement explanation.", "Uncertainty that remains after correction."],
       "evidenceNote": "Continued influence is a relevant lens because the rejected explanation still guides reasoning. The effect can also reflect an unresolved information gap.",
       "nextAction": "Write a replacement account with source links and explicit unknowns."
+    },
+    {
+      "slug": "claim-many-likes-and-many-repeats",
+      "title": "The post feels true because you have seen it all week",
+      "difficulty": "starter",
+      "situation": "checking-repeated-claims",
+      "skill": "information-verification",
+      "primaryLens": "truth-judgment-illusory-truth-effect",
+      "alternativeLenses": ["heuristic-bias-availability-bias"],
+      "technique": "source-trace",
+      "prompt": "You have seen the same claim in several Instagram-style posts during the week. Some posts also show many likes. By Friday the claim feels familiar and easy to accept.",
+      "question": "What is the most useful check?",
+      "options": [
+        {"id": "a", "text": "Count how many times the claim appeared in the feed."},
+        {"id": "b", "text": "Trace the claim to independent evidence and separate exposure count from source count."},
+        {"id": "c", "text": "Trust the claim if both repetition and likes point in the same direction."}
+      ],
+      "bestOption": "b",
+      "explanation": "Repetition can increase perceived truth without adding evidence. Social endorsement can be another cue, but neither exposure count nor like count tells you whether the underlying evidence is independent and reliable.",
+      "missingEvidence": ["The original source of the claim.", "How many genuinely independent sources support it.", "Whether the repeated posts copied one another."],
+      "evidenceNote": "A 2026 experiment in an Instagram-like setting found that repeated statements were judged as more true and with greater confidence. Like counts did not remove the repetition effect.",
+      "nextAction": "Write two numbers: exposures seen and independent sources found. Use the second number for evidence strength."
     }
   ]
 }
