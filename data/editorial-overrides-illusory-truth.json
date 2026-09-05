@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-09-05",
+  "entries": [
+    {
+      "id": 87,
+      "slug": "truth-judgment-illusory-truth-effect",
+      "previousTitle": "Illusory Truth Effect – when repeated lies start to feel like truth",
+      "title": "Illusory Truth Effect – when repetition makes a claim feel more true",
+      "description": "The Illusory Truth Effect is the tendency for repeated claims to receive higher truth ratings than comparable new claims. The effect is well supported overall, but it is not a rule that repeating any sentence makes people believe it. A 2026 meta-analysis found a reliable average repetition effect with substantial variation across studies, and later preregistered experiments found little or no effect for social-political opinion statements.\n\n🔍 Where’s the trap?\n- News and social media – the same factual claim appears again and again, so familiarity starts to feel like evidence.\n- AI answers – several outputs repeat one claim, but the apparent agreement may come from overlapping sources or the same retrieved material.\n- Debate – a result about factual truth judgments is stretched into the stronger claim that repetition will make any opinion more believable.\n\n💡 How to avoid it?\n- Separate exposure count from evidence count: ten repeats can still come from one source.\n- Ask whether the statement is a factual claim that can be checked or an evaluative opinion; the evidence does not support treating these as interchangeable.\n- Trace repeated claims back to independent sources when accuracy matters.\n- Treat familiarity as a cue to verify, not as proof that a claim is true or false.",
+      "reason": "The old title and copy implied that repeated falsehoods generally become believed. The broader evidence supports a robust but heterogeneous truth-judgment effect, while 2026 preregistered work on social-political opinions provides an important content boundary condition."
+    }
+  ]
+}
