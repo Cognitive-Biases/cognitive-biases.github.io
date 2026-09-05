@@ -59,7 +59,7 @@ if (!llms.includes("Monthly research digests:")) {
 if (!llms.includes("Monthly research digest data:")) {
   const notesLine = "- Research notes: https://cognitive-biases.github.io/data/research-notes.json";
   if (!llms.includes(notesLine)) throw new Error("Cannot add monthly digest data to llms.txt: Research notes line is missing.");
-  llms = llms.replace(notesLine, `${notesLine}\n- Monthly research digest data: https://cognitive-biases.github.io/data/monthly-research-digests.json`);
+  llms = llms.replace(notesLine, `${notesLine}\n- Monthly research digest data: https://cognitive-biases.github.io/data/monthly-research-digests.json\n- Monthly research digest schema: https://cognitive-biases.github.io/schemas/monthly-research-digests.schema.json`);
 }
 if (!llms.includes("Treat `watch only` monthly research signals as provisional")) {
   const rule = "Important interpretation rule: older library entries are not automatically evidence-reviewed. Prefer entries with an explicit evidence review when making claims about scientific support. Preserve the evidence class, descriptive status, qualification and review date when summarising reviewed material.";
@@ -68,8 +68,12 @@ if (!llms.includes("Treat `watch only` monthly research signals as provisional")
 }
 await writeFile(LLMS, llms);
 
-if (!llms.includes("https://cognitive-biases.github.io/data/monthly-research-digests.json") || !llms.includes("https://cognitive-biases.github.io/research/feed.xml")) {
-  throw new Error("Monthly research discovery is incomplete in generated llms.txt.");
+for (const required of [
+  "https://cognitive-biases.github.io/data/monthly-research-digests.json",
+  "https://cognitive-biases.github.io/schemas/monthly-research-digests.schema.json",
+  "https://cognitive-biases.github.io/research/feed.xml"
+]) {
+  if (!llms.includes(required)) throw new Error(`Monthly research discovery is incomplete in generated llms.txt: ${required}`);
 }
 
-console.log(`Decision and research discovery verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed and monthly digest data` : ""} are discoverable.`);
+console.log(`Decision and research discovery verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed, monthly digest data and schema` : ""} are discoverable.`);
