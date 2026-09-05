@@ -80,11 +80,11 @@
     },
     {
       "slug": "truth-judgment-illusory-truth-effect",
-      "evidenceStatus": "robust, including a recent social-media-like test",
+      "evidenceStatus": "robust average effect with important content boundary conditions",
       "reviewedAt": "2026-09-05",
-      "qualification": "Repeated information is, on average, judged as more truthful than comparable new information. A 2026 experiment using Instagram-like posts found that the repetition effect remained when like counts were visible, and repeated statements were also judged with greater confidence. Like counts mattered more when the statements were new. This adds a useful social-media-like test, but one controlled study does not show that every feed, topic, or platform will produce the same pattern.",
-      "mechanism": "Repetition can make information easier or more coherent to process and retrieve. People can then use that subjective ease or familiarity as one cue when judging truth, even though repetition itself is not evidence that the statement is correct. The 2026 social-media-like study also found a repetition-based increase in confidence, while the mechanisms behind that certainty effect remain less established than the truth effect itself.",
-      "practical": "When a claim feels true because you have seen it repeatedly, separate exposure count from evidence count. Trace repeated posts, articles, or AI outputs back to their sources and count genuinely independent evidence rather than appearances. Likes and repetition can both be cues, but neither is a substitute for checking the underlying evidence. Repetition is not proof that a claim is true, and it is not proof that the claim is false either.",
+      "qualification": "Repeated claims receive higher truth ratings than comparable new claims on average, but the effect is heterogeneous and does not generalize equally to every kind of statement. A 2026 systematic review and meta-analysis covering 182 studies, 366 effect sizes and more than 31,000 participants found a reliable corrected average effect. A later 2026 paper with two preregistered experiments found little or no meaningful repetition effect for social-political opinion statements. The useful claim is therefore narrower than 'repeat anything and people will believe it.'",
+      "mechanism": "Familiarity, processing fluency, memory and source-related cues can all contribute to repetition-based truth judgments, and the literature does not require one mechanism to explain every result. The 2026 meta-analysis found substantial variation across studies, while targeted opinion experiments suggest that content type and the kind of judgment being made can matter. A factual truth judgment and an evaluative opinion should not be treated as psychologically interchangeable simply because both are written as sentences.",
+      "practical": "When a repeated statement feels true, separate exposure count from evidence count and trace it to independent sources. Also identify the statement type before applying the label: a checkable factual claim is a better fit for the classic truth-judgment literature than an evaluative social or political opinion. For opinions, other processes such as persuasion, identity, norms or familiarity may be more relevant. Repetition is not evidence that a statement is true, and it is not evidence that the statement is false either.",
       "sources": [
         {
           "title": "Frequency and the conference of referential validity",
@@ -108,11 +108,25 @@
           "url": "https://pubmed.ncbi.nlm.nih.gov/38113667/"
         },
         {
+          "title": "Systematic review and meta-analysis of the evidence for an illusory truth effect and its determinants",
+          "year": 2026,
+          "type": "systematic review and meta-analysis",
+          "doi": "10.1038/s41467-026-70041-x",
+          "url": "https://doi.org/10.1038/s41467-026-70041-x"
+        },
+        {
           "title": "The robustness of repetition-based illusory truth and certainty effects in social media contexts",
           "year": 2026,
           "type": "peer-reviewed experiment",
           "doi": "10.1038/s41598-026-61449-y",
           "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443530/"
+        },
+        {
+          "title": "Limits of the illusory truth effect for social-political opinions: Evidence from two experiments and a mini meta-analysis",
+          "year": 2026,
+          "type": "two preregistered experiments and mini meta-analysis",
+          "doi": "10.1016/j.concog.2026.104119",
+          "url": "https://doi.org/10.1016/j.concog.2026.104119"
         }
       ]
     },
