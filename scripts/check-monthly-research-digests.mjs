@@ -18,6 +18,7 @@ for (const digest of data.digests) {
   for (const field of ["month", "title", "publishedAt", "summary", "editorialNote"]) {
     assert.ok(String(digest[field] || "").trim(), `${digest.slug}: missing ${field}`);
   }
+  assert.ok(digest.summary.length <= 160, `${digest.slug}: summary must stay within 160 characters for search previews`);
   assert.ok(Array.isArray(digest.takeaways) && digest.takeaways.length >= 3, `${digest.slug}: needs at least three takeaways`);
   assert.ok(Array.isArray(digest.signals) && digest.signals.length >= 3, `${digest.slug}: needs at least three research signals`);
   assert.ok(Array.isArray(digest.whatChanged) && digest.whatChanged.length > 0, `${digest.slug}: needs project changes`);
