@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const CONFIG_PATH = "data/research-scout-config.json";
 const INBOX_PATH = "data/research-inbox.json";
-const USER_AGENT = "CognitiveBiasesResearchScout/1.3 (https://cognitive-biases.github.io/)";
+const USER_AGENT = "CognitiveBiasesResearchScout/1.4 (https://cognitive-biases.github.io/)";
 
 const compact = (value = "") => String(value).replace(/\s+/g, " ").trim();
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -18,6 +18,16 @@ const today = () => new Date().toISOString().slice(0, 10);
 const slugPart = (value = "") => value.toLowerCase().replace(/^https?:\/\//, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(-90);
 const normalizeDoi = (value = "") => compact(value).replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, "").toLowerCase() || null;
 
+function isCognitiveAnchoring(value = "") {
+  const text = String(value).toLowerCase();
+  if (/\banchoring bias\b/.test(text)) return true;
+  const hasAnchorTerm = /\banchoring effect\b|\bdiagnostic anchoring\b|\banchoring\b|\banchor(?:ed|ing)?\b/.test(text);
+  if (!hasAnchorTerm) return false;
+  const materialsContext = /batter(?:y|ies)|electrolyte|electrode|polymer|solvation|catalyst|catalytic|nanocatalyst|molybdate|seawater splitting|surface chemistry|nanoparticle|adsorption|fluorinated|lithium|nickel|molecular|alloy|plasma|stent|vascular device/.test(text);
+  if (materialsContext) return false;
+  return /decision|judg(?:e|ment)|judgement|estimate|estimating|choice|evaluation|rating|diagnos|physician|clinician|patient|participant|human|manager|consumer|forecast|reasoning|belief|numerical|number|score|advice|large language model|\bllm\b|artificial intelligence|\bai\b|model response/.test(text);
+}
+
 function relatedConcepts(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
   const related = new Set();
@@ -25,7 +35,7 @@ function relatedConcepts(candidate) {
   if (/automation bias|automation reliance|decision aid|appropriate reliance/.test(text)) related.add("false-priors-automation-bias");
   if (/anthropomorph|humanlike|human-like|human robot|human-robot/.test(text)) related.add("availability-heuristic-anthropomorphism");
   if (/confirmation bias/.test(text)) related.add("cognitive-bias-confirmation-bias");
-  if (/anchor|anchoring/.test(text)) related.add("cognitive-bias-anchoring-effect");
+  if (isCognitiveAnchoring(text)) related.add("cognitive-bias-anchoring-effect");
   if (/illusory truth|repetition[- ]based truth/.test(text)) related.add("truth-judgment-illusory-truth-effect");
   if (/hindsight bias/.test(text)) related.add("cognitive-bias-hindsight-bias");
   if (/outcome bias/.test(text)) related.add("cognitive-bias-outcome-bias");
@@ -38,7 +48,8 @@ function relatedConcepts(candidate) {
 function isCoreRelevant(candidate) {
   const title = String(candidate.title || "").toLowerCase();
   if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(title)) return false;
-  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|automation bias|confirmation bias|anchoring|anchor effect|framing effect|hindsight bias|outcome bias|sunk cost|escalation of commitment|planning fallacy|illusory truth|continued influence|backfire effect|loss aversion|decoy effect|default effect|overconfidence|base[- ]rate|availability heuristic|anthropomorph/.test(title)) return true;
+  if (isCognitiveAnchoring(title)) return true;
+  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|automation bias|confirmation bias|framing effect|hindsight bias|outcome bias|sunk cost|escalation of commitment|planning fallacy|illusory truth|continued influence|backfire effect|loss aversion|decoy effect|default effect|overconfidence|base[- ]rate|availability heuristic|anthropomorph/.test(title)) return true;
   const ai = /large language model|\bllm\b|artificial intelligence|\bai[- ]assisted\b|agentic/.test(title);
   const decision = /decision|judgment|judgement|reasoning|reliance|trust|heuristic|bias/.test(title);
   return ai && decision;
@@ -49,11 +60,14 @@ function scoreCandidate(candidate) {
   const sourceType = String(candidate.sourceType || "").toLowerCase();
   const related = relatedConcepts(candidate);
   const directConceptMatches = related.filter((slug) => !["ai-assisted-decisions", "forecasting-future-choices"].includes(slug));
+  const cognitiveAnchoring = isCognitiveAnchoring(text);
   let score = 0;
-  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|anchoring effect|illusory truth|hindsight bias|outcome bias|sunk cost|planning fallacy|loss aversion|confirmation bias/.test(text)) score += 3;
+  if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|illusory truth|hindsight bias|outcome bias|sunk cost|planning fallacy|loss aversion|confirmation bias/.test(text)) score += 3;
+  if (cognitiveAnchoring) score += 3;
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) score += 4;
   if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) score += 3;
-  if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph|anchoring/.test(text)) score += 2;
+  if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph/.test(text)) score += 2;
+  if (cognitiveAnchoring) score += 2;
   if (/debias|calibrat|intervention|benchmark|dataset|evaluation/.test(text)) score += 1;
   if (/preregister|pre-registered|equivalence test|boundary condition|limits of|failed to replicate|failure to replicate|null result|no effect/.test(text)) score += 2;
   if (directConceptMatches.length) score += 2;
@@ -231,6 +245,16 @@ function selfTest() {
   const anchor = { title: "AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs", summary: "Controlled anchoring tests.", sourceType: "preprint" };
   assert.equal(isCoreRelevant(anchor), true);
   assert.ok(relatedConcepts(anchor).includes("cognitive-bias-anchoring-effect"));
+
+  const diagnosticAnchor = { title: "Large language models exhibit greater diagnostic anchoring than physicians in a forced-choice vignette study.", summary: "", sourceType: "journal article" };
+  assert.equal(isCoreRelevant(diagnosticAnchor), true);
+  assert.ok(relatedConcepts(diagnosticAnchor).includes("cognitive-bias-anchoring-effect"));
+  assert.ok(scoreCandidate(diagnosticAnchor) >= 8);
+
+  const batteryAnchor = { title: "Polar anchoring effect-mediated solvation regulation in fluorinated gel polymer electrolytes for high-voltage lithium-ion full batteries.", summary: "", sourceType: "journal article" };
+  assert.equal(isCoreRelevant(batteryAnchor), false);
+  assert.ok(!relatedConcepts(batteryAnchor).includes("cognitive-bias-anchoring-effect"));
+  assert.ok(scoreCandidate(batteryAnchor) < 6);
 
   const truth = { title: "The illusory truth effect in social media", summary: "Repeated claims and truth judgments.", sourceType: "journal article" };
   assert.equal(isCoreRelevant(truth), true);
