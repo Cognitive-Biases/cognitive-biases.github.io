@@ -101,10 +101,11 @@
         }
       ],
       "whatChanged": [
-        "Create a monthly evidence-delta digest instead of a generic research-news page.",
-        "Separate peer-reviewed evidence updates from provisional preprint signals.",
-        "Connect each useful finding to a concrete page, practice item, dataset, or research-method change.",
-        "Keep null results and domain-evidence gaps visible instead of publishing only positive bias demonstrations."
+        "Launched the monthly evidence-delta digest and added it to Research, the sitemap and the public data manifest.",
+        "Updated the Illusory Truth evidence review with the 2026 social-media-like experiment and a clearer independent-source check.",
+        "Added an evidence-distance check to the AI-assisted decisions guide so related-domain findings are not silently treated as direct evidence.",
+        "Added practice scenarios for blind AI re-evaluation, repetition versus independent sources, and evidence transfer between professional workflows.",
+        "Expanded the research scout beyond LLM benchmarks to debiasing, replication, forecasting and applied human decision research."
       ],
       "nextQuestions": [
         "Can blind-versus-history-aware LLM judging be turned into a small reproducible experiment for the site?",
