@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-09-05",
   "description": "Research tracks for human-AI decision patterns. These labels are working hypotheses, not established cognitive biases unless explicitly stated.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/",
   "interpretationRule": "Do not present a research-track label as a validated cognitive bias. Preserve the status, related established concepts, testable prediction and source links.",
@@ -14,6 +14,18 @@
       "testablePrediction": "Participants who form an independent estimate before seeing AI advice should show a smaller shift toward an arbitrary AI anchor than participants who see AI advice first.",
       "sources": [
         {"title": "Anchoring bias in large language models: an experimental study", "year": 2025, "url": "https://doi.org/10.1007/s42001-025-00435-2"}
+      ]
+    },
+    {
+      "slug": "evaluation-history-contamination",
+      "name": "Evaluation History Contamination",
+      "status": "emerging evaluation pattern",
+      "relatedConcepts": ["anchoring effect", "automation bias", "information cascade"],
+      "idea": "A later AI evaluator may partly inherit an earlier score or verdict from the evaluation history, so several review passes can look more independent than they really are.",
+      "testablePrediction": "For the same fixed answer and rubric, an AI judge shown an experimentally assigned previous score should move its new score toward that value more than a blind judge or a judge shown revision framing without a score.",
+      "sources": [
+        {"title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence", "year": 2026, "url": "https://arxiv.org/abs/2608.25869"},
+        {"title": "Mediocrity is the key for LLM as a Judge Anchor Selection", "year": 2026, "url": "https://aclanthology.org/2026.acl-long.706/"}
       ]
     },
     {
