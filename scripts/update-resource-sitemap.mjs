@@ -9,7 +9,7 @@ const skills = JSON.parse(await readFile("data/skills.json", "utf8"));
 const validDate = (value = "") => /^\d{4}-\d{2}-\d{2}/.test(String(value)) ? String(value).slice(0, 10) : null;
 
 const resources = [
-  { path: "/research/", lastmod: validDate(monthlyDigests.updatedAt || researchNotes.updatedAt) },
+  { path: "/research/", lastmod: validDate(researchNotes.updatedAt) },
   { path: "/research/digests/", lastmod: validDate(monthlyDigests.updatedAt) },
   { path: "/skills/", lastmod: null },
   { path: "/data/", lastmod: null },
