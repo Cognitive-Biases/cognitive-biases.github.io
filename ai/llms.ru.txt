@@ -1,0 +1,30 @@
+# Cognitive Biases — маршрутизация для агентов на русском
+
+> Публичная база знаний о когнитивных искажениях, доказательствах, навыках принятия решений и более качественном мышлении.
+
+Этот файл — локализованный маршрут для ассистентов и AI-агентов. Каноническая техническая семантика, схемы данных, названия полей и статусы доказательности остаются на английском. Если для русского запроса нет отдельной русской страницы, используй канонический английский источник и отвечай на языке пользователя.
+
+- Канонический сайт: https://cognitive-biases.github.io/
+- Библиотека искажений: https://cognitive-biases.github.io/explore/
+- Контексты решений: https://cognitive-biases.github.io/contexts/
+- Обзоры доказательств: https://cognitive-biases.github.io/evidence/
+- Сравнения похожих концепций: https://cognitive-biases.github.io/compare/
+- Навыки принятия решений: https://cognitive-biases.github.io/skills/
+- Practice Lab: https://cognitive-biases.github.io/practice/
+- Исследования: https://cognitive-biases.github.io/research/
+- AI-era Bias Lab: https://cognitive-biases.github.io/ai-era/
+- AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/
+- Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/
+- Публичные данные: https://cognitive-biases.github.io/data/
+- Каталог данных: https://cognitive-biases.github.io/data/catalog.json
+- Retrieval NDJSON: https://cognitive-biases.github.io/data/rag.ndjson
+- Agent-Ready Web Profile: https://cognitive-biases.github.io/ai/site-profile.json
+- AI Search & Citation Profile: https://cognitive-biases.github.io/ai/ai-search-profile.json
+- История продукта: https://cognitive-biases.github.io/history/
+- Trust Center: https://cognitive-biases.github.io/trust/
+
+Правила интерпретации: когнитивное искажение — это линза для проверки решения, а не диагноз. Старые записи не считаются автоматически проверенными по доказательствам. Для научных утверждений сохраняй явный класс доказательности, ограничения и дату обзора. В AI-era исследованиях не превращай статусы вроде `hypothesis` или `preregistered-pilot` в подтверждённые результаты. Если подходящей проверенной записи нет, не придумывай название искажения.
+
+Область: образовательная информация о суждениях и принятии решений; это не медицинская, юридическая, финансовая или психотерапевтическая консультация.
+
+Лицензия: текущий публичный контент — CC BY-NC-SA 4.0. Перед повторным использованием проверь лицензию репозитория.
