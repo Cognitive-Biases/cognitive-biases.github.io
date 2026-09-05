@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const researchPath = "dist/research/index.html";
 const dataPath = "dist/data/index.html";
+const protocolPath = "dist/research/ai-judge-history-v1/index.html";
 const marker = "<!-- ai-judge-history-v1 -->";
 
 async function inject(path, section) {
@@ -17,4 +18,11 @@ await inject(researchPath, `${marker}<section class="research-lab-callout"><p cl
 
 await inject(dataPath, `${marker}<section class="research-lab-callout"><h2>Research protocols and reproducible artifacts</h2><p>The research layer is machine-readable too. Protocols, prompt packs and result schemas are public before project findings are promoted.</p><p><a href="/data/studies/ai-judge-history-v1.json">AI Judge History protocol JSON</a><br><a href="/data/studies/ai-judge-history-prompt-pack-v1.json">AI Judge History prompt pack</a><br><a href="/schemas/ai-judge-history-results.schema.json">AI Judge History result schema</a><br><a href="/data/studies/ai-advice-order-v1.json">AI Advice Order preregistration JSON</a></p></section>`);
 
-console.log("Linked AI Judge History v1 from Research and Data pages.");
+let protocol = await readFile(protocolPath, "utf8");
+const metricHeading = "<h2>Measure movement toward the previous score.</h2>";
+if (!protocol.includes("signed prior-score pull") && protocol.includes(metricHeading)) {
+  protocol = protocol.replace(metricHeading, `${metricHeading}<p><strong>Primary metric: signed prior-score pull.</strong> Positive values mean the new score moved toward the displayed previous score; zero means no movement; negative values mean it moved away.</p>`);
+  await writeFile(protocolPath, protocol);
+}
+
+console.log("Linked AI Judge History v1 from Research and Data pages and exposed its primary metric in plain language.");
