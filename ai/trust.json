@@ -1,0 +1,57 @@
+{
+  "version": "0.1",
+  "project": "Cognitive Biases Knowledge Library",
+  "canonicalUrl": "https://cognitive-biases.github.io/",
+  "trustCenter": "https://cognitive-biases.github.io/trust/",
+  "status": "active-maintenance",
+  "lastReviewed": "2026-09-05",
+  "maintainer": {
+    "name": "Dzmitryi Kharlanau",
+    "organization": "Cognitive-Biases",
+    "repository": "https://github.com/Cognitive-Biases/cognitive-biases.github.io",
+    "citation": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/CITATION.cff"
+  },
+  "identity": {
+    "projectSite": "https://cognitive-biases.github.io/",
+    "repository": "https://github.com/Cognitive-Biases/cognitive-biases.github.io",
+    "citationMetadata": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/CITATION.cff",
+    "license": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/LICENSE"
+  },
+  "reviewModel": {
+    "sourceProvenanceRequiredForEvidenceChanges": true,
+    "evidenceStatusPreserved": true,
+    "negativeAndNullResultsMayBePublished": true,
+    "researchTrackMaturityExplicit": true,
+    "plannedCapabilitiesSeparatedFromActiveCapabilities": true,
+    "correctionsVisible": true,
+    "noReadinessScore": true
+  },
+  "evidence": {
+    "reviewedEvidence": "https://cognitive-biases.github.io/evidence/",
+    "methodology": "https://cognitive-biases.github.io/methodology/",
+    "qualityStatus": "https://cognitive-biases.github.io/quality/",
+    "claimProvenance": "https://cognitive-biases.github.io/data/provenance.json",
+    "releaseManifest": "https://cognitive-biases.github.io/data/manifest.json",
+    "history": "https://cognitive-biases.github.io/history.json",
+    "corrections": "https://cognitive-biases.github.io/trust/corrections.json"
+  },
+  "security": {
+    "policy": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/SECURITY.md",
+    "publicSiteIsStatic": true,
+    "referenceMcpReadOnly": true,
+    "referenceMcpSource": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/tree/main/integrations/mcp"
+  },
+  "reuse": {
+    "publicContentLicense": "CC-BY-NC-SA-4.0",
+    "commercialUse": "requires-prior-written-permission",
+    "brandAssets": "not-licensed-for-reuse",
+    "licenseUrl": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/LICENSE"
+  },
+  "boundaries": [
+    "Evidence review status is scoped to the reviewed entry and its stated sources; it is not a universal scientific certainty score.",
+    "Research-track maturity labels describe project artifacts and do not by themselves establish an effect in the scientific literature.",
+    "Observatory outputs are descriptive headline-level signals, not diagnoses of authors, outlets or audiences.",
+    "The public MCP adapter is a read-only reference interface over published project data, not an authority beyond the underlying evidence.",
+    "Trust metadata documents project practices and boundaries; it is not a security, correctness or scientific-validity certificate."
+  ]
+}
