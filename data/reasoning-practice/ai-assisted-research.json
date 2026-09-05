@@ -8,33 +8,18 @@
       "situation": "ai-assisted-research",
       "skill": "ai-assisted-reasoning",
       "primaryLens": "cognitive-bias-anchoring-effect",
-      "alternativeLenses": [
-        "false-priors-automation-bias"
-      ],
+      "alternativeLenses": ["false-priors-automation-bias"],
       "technique": "independent-estimate",
       "prompt": "Before reviewing the source material, a researcher asks an AI assistant for the likely explanation. The rest of the search follows the categories in that first answer.",
       "question": "What should be done before relying on the model’s frame?",
       "options": [
-        {
-          "id": "a",
-          "text": "Write an independent provisional question, alternatives and evidence needs before reading the generated explanation."
-        },
-        {
-          "id": "b",
-          "text": "Ask the same model to make the original explanation more detailed."
-        },
-        {
-          "id": "c",
-          "text": "Use the first answer as the literature-review structure because it is efficient."
-        }
+        {"id": "a", "text": "Write an independent provisional question, alternatives and evidence needs before reading the generated explanation."},
+        {"id": "b", "text": "Ask the same model to make the original explanation more detailed."},
+        {"id": "c", "text": "Use the first answer as the literature-review structure because it is efficient."}
       ],
       "bestOption": "a",
       "explanation": "The first generated frame can become an anchor for search and interpretation. An independent provisional view preserves alternatives before the model shapes them.",
-      "missingEvidence": [
-        "The researcher’s pre-AI question and candidate explanations.",
-        "Primary sources that support or challenge each explanation.",
-        "Evidence not represented in the model’s first frame."
-      ],
+      "missingEvidence": ["The researcher’s pre-AI question and candidate explanations.", "Primary sources that support or challenge each explanation.", "Evidence not represented in the model’s first frame."],
       "evidenceNote": "Anchoring is a plausible interaction risk. The model’s first hypothesis can still be useful, but it should compete with independently stated alternatives.",
       "nextAction": "Write the research question and at least two plausible alternatives before reading the generated answer."
     },
@@ -45,33 +30,18 @@
       "situation": "ai-assisted-research",
       "skill": "ai-assisted-reasoning",
       "primaryLens": "false-priors-automation-bias",
-      "alternativeLenses": [
-        "truth-judgment-illusory-truth-effect"
-      ],
+      "alternativeLenses": ["truth-judgment-illusory-truth-effect"],
       "technique": "source-trace",
       "prompt": "An AI assistant gives a clear recommendation and names several studies, but the citations cannot be located. The team wants to use the recommendation because it sounds complete.",
       "question": "What is the best next move?",
       "options": [
-        {
-          "id": "a",
-          "text": "Trace every consequential claim to an inspectable independent source and mark unsupported claims as unverified."
-        },
-        {
-          "id": "b",
-          "text": "Ask another AI assistant whether the first answer sounds correct."
-        },
-        {
-          "id": "c",
-          "text": "Keep the recommendation but remove the citations from the final document."
-        }
+        {"id": "a", "text": "Trace every consequential claim to an inspectable independent source and mark unsupported claims as unverified."},
+        {"id": "b", "text": "Ask another AI assistant whether the first answer sounds correct."},
+        {"id": "c", "text": "Keep the recommendation but remove the citations from the final document."}
       ],
       "bestOption": "a",
       "explanation": "Automation bias concerns inappropriate reliance on automated output. Source tracing makes the recommendation depend on evidence that can be inspected outside the model.",
-      "missingEvidence": [
-        "Existence and content of the cited studies.",
-        "Whether sources support the exact claim.",
-        "Alternative evidence or expert review for consequential decisions."
-      ],
+      "missingEvidence": ["Existence and content of the cited studies.", "Whether sources support the exact claim.", "Alternative evidence or expert review for consequential decisions."],
       "evidenceNote": "Automation bias is a possible lens because fluency is substituting for verification. The recommendation may still be correct, but correctness must be checked independently.",
       "nextAction": "Create a claim table with verified, disputed and unsupported status."
     },
@@ -82,35 +52,42 @@
       "situation": "ai-assisted-research",
       "skill": "ai-assisted-reasoning",
       "primaryLens": "truth-judgment-illusory-truth-effect",
-      "alternativeLenses": [
-        "false-priors-automation-bias"
-      ],
+      "alternativeLenses": ["false-priors-automation-bias"],
       "technique": "source-trace",
       "prompt": "Five generated summaries repeat the same market statistic. The team treats the repetition as strong agreement, but every answer appears to depend on the same unverified report.",
       "question": "How should confidence be assessed?",
       "options": [
-        {
-          "id": "a",
-          "text": "Count each generated answer as an independent source because the wording differs."
-        },
-        {
-          "id": "b",
-          "text": "Trace the statistic to its origin and count genuinely independent evidence, not repeated outputs."
-        },
-        {
-          "id": "c",
-          "text": "Accept the statistic if it appears in at least three model responses."
-        }
+        {"id": "a", "text": "Count each generated answer as an independent source because the wording differs."},
+        {"id": "b", "text": "Trace the statistic to its origin and count genuinely independent evidence, not repeated outputs."},
+        {"id": "c", "text": "Accept the statistic if it appears in at least three model responses."}
       ],
       "bestOption": "b",
       "explanation": "Repetition increases familiarity without creating independent evidence. Source tracing collapses dependent summaries back to their shared origin.",
-      "missingEvidence": [
-        "The earliest inspectable source.",
-        "Independent datasets or analyses.",
-        "Definitions, sample and date behind the statistic."
-      ],
+      "missingEvidence": ["The earliest inspectable source.", "Independent datasets or analyses.", "Definitions, sample and date behind the statistic."],
       "evidenceNote": "Illusory truth is a relevant lens because repeated wording can increase acceptance. Dependence between model outputs is also a data-provenance problem.",
       "nextAction": "Replace the answer count with an independent-source count."
+    },
+    {
+      "slug": "ai-review-sees-old-score",
+      "title": "The second reviewer can see the first score",
+      "difficulty": "intermediate",
+      "situation": "ai-assisted-research",
+      "skill": "ai-assisted-reasoning",
+      "primaryLens": "cognitive-bias-anchoring-effect",
+      "alternativeLenses": ["false-priors-automation-bias"],
+      "technique": "independent-estimate",
+      "prompt": "An AI evaluator is asked to independently rescore a report, but the prompt includes the previous model's score and comments. The team treats the second score as independent confirmation.",
+      "question": "How should the second evaluation be designed?",
+      "options": [
+        {"id": "a", "text": "Run a blind evaluation without the previous score, then compare it with a history-aware review."},
+        {"id": "b", "text": "Keep the previous score because more context always improves evaluation."},
+        {"id": "c", "text": "Ask the second model to promise that it will ignore the previous score."}
+      ],
+      "bestOption": "a",
+      "explanation": "If a previous evaluation remains visible, it can become part of the new judgment. A blind pass gives you a cleaner test of whether two evaluations are genuinely independent.",
+      "missingEvidence": ["A blind second score.", "The history-aware score from the same material.", "Whether the difference is stable across repeated evaluations."],
+      "evidenceNote": "A 2026 LLM-as-a-judge study found that prior scores in context could shift later evaluations. This is provisional model-specific evidence, not proof that every evaluator will anchor in every task.",
+      "nextAction": "Create a blind-versus-history-aware evaluation pair and compare the score difference."
     }
   ]
 }
