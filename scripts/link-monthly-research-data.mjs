@@ -1,7 +1,14 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const dataPath = join("dist", "data", "index.html");
+const schemaDir = join("dist", "schemas");
+const schemaSource = join("schemas", "monthly-research-digests.schema.json");
+const schemaTarget = join(schemaDir, "monthly-research-digests.schema.json");
+
+await mkdir(schemaDir, { recursive: true });
+await writeFile(schemaTarget, await readFile(schemaSource, "utf8"));
+
 let html = await readFile(dataPath, "utf8");
 
 if (!html.includes('href="/data/monthly-research-digests.json"')) {
@@ -23,4 +30,4 @@ if (!html.includes('href="/schemas/monthly-research-digests.schema.json"')) {
 }
 
 await writeFile(dataPath, html);
-console.log("Linked monthly research digest data and schema from the public Data page.");
+console.log("Published monthly research digest schema and linked data + schema from the public Data page.");
