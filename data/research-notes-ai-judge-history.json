@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-05",
+  "entries": [
+    {
+      "slug": "prior-scores-can-contaminate-ai-judges",
+      "title": "Prior scores can contaminate later AI judgments",
+      "publishedAt": "2026-09-05",
+      "status": "reviewed synthesis",
+      "summary": "A recent large LLM-as-a-judge study suggests that previous evaluation scores can shift later ratings even when the evaluated text is unchanged.",
+      "sections": [
+        {
+          "heading": "The simple question: is the second review independent?",
+          "paragraphs": [
+            "Many AI workflows evaluate the same answer more than once. A first model gives a score, a revision happens, and another judge scores again. It is easy to treat the second score as fresh evidence.",
+            "That assumption becomes weaker when the later judge can see the earlier score. The new evaluation may be responding to both the answer and the evaluation history."
+          ]
+        },
+        {
+          "heading": "What the recent study tested",
+          "paragraphs": [
+            "A 2026 study compared fixed texts under three prompt conditions: no evaluation metadata, revision framing without a score, and metadata that included a previous score. The text being judged stayed fixed, so the previous score did not add new evidence about quality.",
+            "Across eight tested models, the authors report systematic movement associated with the prior-score condition in the main analysis. They also report cases where this context blocked error corrections or changed correct categorical judgments."
+          ]
+        },
+        {
+          "heading": "What this does not prove",
+          "paragraphs": [
+            "The result is not a licence to say that every AI judge is anchored in every task. Models, prompt formats, scoring scales and domains can all change the effect.",
+            "It also does not establish that the internal mechanism is the same as human anchoring. The safer description is behavioural: under the tested conditions, evaluation history changed later model judgments."
+          ]
+        },
+        {
+          "heading": "A useful design check for real systems",
+          "paragraphs": [
+            "If a later review is supposed to be independent, hide the previous score and verdict during that pass. Then compare the blind result with a history-aware result instead of assuming that a warning such as ‘judge independently’ is enough.",
+            "This matters for content grading, agent self-review, quality gates and iterative scoring pipelines. Several review passes do not automatically equal several independent opinions."
+          ]
+        },
+        {
+          "heading": "What this changes in our project",
+          "paragraphs": [
+            "We added Evaluation History Contamination as an AI-era research track. It is a working label for a practical failure mode, not a new established cognitive bias.",
+            "We also published AI Judge History v1, a provider-neutral benchmark that holds the answer and rubric fixed while comparing blind, history-framing and prior-score conditions. The protocol is public before any Cognitive Biases result exists."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+          "year": 2026,
+          "type": "conference paper / arXiv record",
+          "url": "https://arxiv.org/abs/2608.25869"
+        },
+        {
+          "title": "Mediocrity is the key for LLM as a Judge Anchor Selection",
+          "year": 2026,
+          "type": "peer-reviewed conference paper",
+          "doi": "10.18653/v1/2026.acl-long.706",
+          "url": "https://aclanthology.org/2026.acl-long.706/"
+        }
+      ],
+      "related": ["false-priors-automation-bias", "cognitive-bias-anchoring-effect"]
+    }
+  ]
+}

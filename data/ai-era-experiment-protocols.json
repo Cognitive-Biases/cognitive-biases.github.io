@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-21",
+  "updatedAt": "2026-09-05",
   "description": "Reusable research protocols for testing human-AI decision patterns without treating working labels as established cognitive biases.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/protocol/",
   "rules": [
@@ -25,6 +25,20 @@
       "studyUrl": "/research/ai-advice-order-v1/",
       "instrumentUrl": "/experiments/ai-advice-order-v1/",
       "stimulusNote": "The v1 pilot isolates advice-order effects with standardized AI-labelled numerical recommendations fixed by protocol rather than live model calls."
+    },
+    {
+      "slug": "blind-vs-history-aware-ai-judging",
+      "title": "Blind vs History-Aware AI Judging",
+      "track": "evaluation-history-contamination",
+      "question": "Does an earlier evaluation score change a later AI judge's score when the candidate answer and rubric stay fixed?",
+      "conditions": ["Blind evaluation with no history", "Prior-review framing without a score", "Prior-review framing with an experimentally assigned score and verdict"],
+      "primaryMeasure": "Signed movement of the history-aware score toward the displayed previous score relative to the blind score",
+      "secondaryMeasures": ["history-anchor versus history-framing difference", "absolute error against constructed gold score", "correction-harm rate", "verdict flip rate", "repeat dispersion"],
+      "minimumReport": "Use fresh contexts, keep model/version/settings fixed within a run, report every task-condition score, and publish model-level results before pooling.",
+      "preregisteredStudyId": "ai-judge-history-v1",
+      "studyUrl": "/research/ai-judge-history-v1/",
+      "instrumentUrl": "/experiments/ai-judge-history-v1/",
+      "stimulusNote": "The previous score is controlled metadata, not new evidence about candidate quality. The protocol tests evaluation sensitivity without assuming the model shares a human psychological mechanism."
     },
     {
       "slug": "agreement-pressure",
@@ -60,6 +74,8 @@
   "startingEvidence": [
     {"title": "How was my performance? Exploring the role of anchoring bias in AI-assisted decision making", "year": 2025, "url": "https://doi.org/10.1016/j.ijinfomgt.2025.102875"},
     {"title": "Anchoring bias in large language models: an experimental study", "year": 2025, "url": "https://doi.org/10.1007/s42001-025-00435-2"},
+    {"title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence", "year": 2026, "url": "https://arxiv.org/abs/2608.25869"},
+    {"title": "Mediocrity is the key for LLM as a Judge Anchor Selection", "year": 2026, "url": "https://aclanthology.org/2026.acl-long.706/"},
     {"title": "Good Arguments Against the People Pleasers: How Reasoning Mitigates (Yet Masks) LLM Sycophancy", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1126"},
     {"title": "Too Nice to Tell the Truth: Quantifying Agreeableness-Driven Sycophancy in Role-Playing Language Models", "year": 2026, "url": "https://doi.org/10.18653/v1/2026.acl-long.1421"},
     {"title": "Large Language Models are overconfident and amplify human bias", "year": 2025, "url": "https://arxiv.org/abs/2505.02151"},

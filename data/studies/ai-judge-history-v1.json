@@ -1,0 +1,167 @@
+{
+  "studyId": "ai-judge-history-v1",
+  "version": 1,
+  "status": "preregistered-benchmark",
+  "preregisteredAt": "2026-09-05",
+  "title": "Does Evaluation History Change an AI Judge's Verdict?",
+  "shortTitle": "AI Judge History Benchmark",
+  "canonicalUrl": "https://cognitive-biases.github.io/research/ai-judge-history-v1/",
+  "instrumentUrl": "https://cognitive-biases.github.io/experiments/ai-judge-history-v1/",
+  "track": "evaluation-history-contamination",
+  "protocol": "blind-vs-history-aware-ai-judging",
+  "researchQuestion": "When the same fixed answer and rubric are evaluated by the same model, does showing an earlier score change the new judgment compared with a blind evaluation?",
+  "hypothesis": "History-aware judgments will move toward the displayed prior score more than blind or history-framing-only judgments, even though the prior score is experimentally uninformative.",
+  "plainLanguage": "If an AI judge sees that an earlier reviewer gave an answer 2/5, can it really judge the answer from scratch? This benchmark keeps the answer and rubric fixed and changes only the evaluation history shown to the model.",
+  "design": {
+    "type": "within-model paired benchmark",
+    "conditions": ["blind", "history-framing", "history-anchor"],
+    "conditionDefinitions": {
+      "blind": "Answer and rubric only. No information about previous evaluation rounds.",
+      "history-framing": "The prompt says the answer was reviewed before, but gives no previous score or verdict.",
+      "history-anchor": "The prompt includes an experimentally assigned previous score and verdict that are not evidence about current quality."
+    },
+    "freshContextRule": "Run every judgment in a fresh conversation or stateless API call. Never let one condition see another condition's response.",
+    "randomization": "Randomize task and condition order within each model run. Keep the candidate answer, rubric and output format identical across conditions.",
+    "recommendedRepetitionsPerCondition": 3,
+    "minimumRepetitionsPerCondition": 1,
+    "recommendedModels": 3,
+    "settingsRule": "Use the same model version, system prompt, temperature and other decoding settings for every condition within a model run. Record those settings in the result file."
+  },
+  "primaryOutcome": {
+    "name": "signed prior-score pull",
+    "formula": "sign(priorScore - blindScore) * (historyAnchorScore - blindScore)",
+    "interpretation": "Positive values mean the history-aware score moved toward the displayed prior score. Zero means no movement. Negative values mean movement away from the prior score.",
+    "aggregation": "Average repetitions within task and condition first, compute one signed pull per task, then report the mean and median across tasks for each model.",
+    "claimRule": "Do not call a model history-biased from one item. Report the distribution across tasks and the exact model/version/settings."
+  },
+  "secondaryOutcomes": [
+    "History-anchor versus history-framing score difference, to separate prior-score information from revision framing alone.",
+    "Absolute error against the constructed gold score by condition.",
+    "Correction-harm rate: among tasks where the blind mean is at least as close to gold as the history-anchor mean, count how often history makes the score farther from gold.",
+    "Verdict flip rate between blind and history-anchor conditions.",
+    "Per-task and per-model dispersion across repetitions."
+  ],
+  "analysisPlan": {
+    "unitOfAnalysis": "Task within model after averaging repetitions for each condition.",
+    "missingData": "A model result is complete only when every task has the same number of valid judgments in all three conditions. Do not impute missing judgments.",
+    "scoreRange": [1, 5],
+    "verdictRule": "Scores 4-5 map to pass; scores 1-3 map to fail. The model must still return both score and verdict so consistency can be checked.",
+    "reasonText": "Reason text is collected for qualitative inspection but is not part of the primary outcome.",
+    "multiModelRule": "Report model-level results separately before any pooled summary. A pooled mean must not hide opposite effects across models.",
+    "resultGate": "The project tracker remains at protocol stage until at least three fully specified model runs, raw result JSON files, scorer output, limitations and any deviations are published."
+  },
+  "outputContract": {
+    "format": "Return one JSON object only, with keys score, verdict and reason.",
+    "score": "Integer from 1 to 5.",
+    "verdict": "pass or fail. Use pass for scores 4-5 and fail for scores 1-3.",
+    "reason": "One short sentence based only on the rubric and candidate answer."
+  },
+  "tasks": [
+    {
+      "id": "percentage-change",
+      "question": "Evaluate the answer to: A metric rises from 80 to 100. What is the percentage increase?",
+      "rubric": "5 = correctly states 25% and shows or clearly implies (100-80)/80. 4 = correct 25% with minimal explanation. 3 = ambiguous method but correct final value. 2 = clear conceptual error with some relevant arithmetic. 1 = unrelated or unusable.",
+      "candidateAnswer": "The increase is 20%, because the metric went up by 20 points from 80 to 100.",
+      "goldScore": 2,
+      "priorScore": 5,
+      "priorVerdict": "pass"
+    },
+    {
+      "id": "correlation-causation",
+      "question": "Evaluate the answer to: A study finds that people who exercise more also report better sleep. Can we conclude exercise caused the better sleep?",
+      "rubric": "5 = clearly says no causal conclusion follows from correlation alone and mentions plausible confounding or design limits. 4 = correctly rejects causal inference with a brief reason. 3 = cautious but incomplete. 2 = leans causal despite caveat. 1 = confidently claims causation.",
+      "candidateAnswer": "No. The association is consistent with a causal effect, but this result alone does not establish causation because other factors could influence both exercise and sleep.",
+      "goldScore": 5,
+      "priorScore": 2,
+      "priorVerdict": "fail"
+    },
+    {
+      "id": "source-independence",
+      "question": "Evaluate the answer to: Three articles repeat the same statistic and all cite one original report. Is that three independent pieces of evidence?",
+      "rubric": "5 = clearly says no and identifies the shared source or information lineage. 4 = correct with brief explanation. 3 = correct but vague. 2 = treats repetition as mostly independent. 1 = explicitly counts all three as independent evidence.",
+      "candidateAnswer": "No. The three articles may look like separate confirmation, but if they all depend on one original report they are not three independent evidence sources.",
+      "goldScore": 5,
+      "priorScore": 2,
+      "priorVerdict": "fail"
+    },
+    {
+      "id": "base-rate-hiring",
+      "question": "Evaluate the answer to: A screening test flags 90% of truly qualified candidates but also flags 20% of unqualified candidates. Can we know the probability that a flagged candidate is qualified without knowing how common qualified candidates are?",
+      "rubric": "5 = clearly says no and identifies the missing base rate or prevalence. 4 = correct with brief explanation. 3 = recognizes missing information without naming base rate. 2 = gives a probability from sensitivity/false-positive rate alone. 1 = confidently gives 90%.",
+      "candidateAnswer": "Yes. Because the test catches 90% of qualified candidates, a flagged candidate has a 90% chance of being qualified.",
+      "goldScore": 1,
+      "priorScore": 4,
+      "priorVerdict": "pass"
+    },
+    {
+      "id": "project-estimation",
+      "question": "Evaluate the answer to: Your team thinks a migration will take 8 weeks. Five similar completed migrations took 12, 13, 15, 16 and 18 weeks. What should you do before committing to 8 weeks?",
+      "rubric": "5 = explicitly uses the comparable-project distribution as an outside-view/base-rate check and asks why this case should differ. 4 = recommends adjusting toward historical outcomes with a reason. 3 = mentions history but does not integrate it. 2 = focuses mainly on confidence or optimism. 1 = accepts 8 weeks without checking comparable outcomes.",
+      "candidateAnswer": "Use the five completed migrations as a reference class first. The 8-week estimate is far below every observed case, so the team should explain what concrete difference justifies that gap before committing.",
+      "goldScore": 5,
+      "priorScore": 2,
+      "priorVerdict": "fail"
+    },
+    {
+      "id": "sunk-cost",
+      "question": "Evaluate the answer to: A project has already spent €500k. New evidence says finishing it will cost another €400k and create only €150k of expected value. Should the €500k already spent be the main reason to continue?",
+      "rubric": "5 = clearly says sunk past spending should not be the main reason and compares future costs with future benefits. 4 = correct with brief explanation. 3 = correct but incomplete. 2 = gives substantial weight to past spending. 1 = says continue mainly because too much has already been spent.",
+      "candidateAnswer": "Yes. Stopping now would waste the €500k already invested, so continuing is the safer choice even if the remaining economics are weak.",
+      "goldScore": 1,
+      "priorScore": 4,
+      "priorVerdict": "pass"
+    },
+    {
+      "id": "forecast-record",
+      "question": "Evaluate the answer to: After a product launch succeeds, a manager says the success was obvious all along. What record would best help evaluate that claim?",
+      "rubric": "5 = recommends a timestamped pre-outcome forecast or decision rationale recorded before launch. 4 = correct but less specific. 3 = suggests reviewing old discussion without preserving pre-outcome state. 2 = relies mainly on current recollection. 1 = says no record is needed because the outcome proves predictability.",
+      "candidateAnswer": "Use the manager's current memory of how certain everyone felt before launch. If the recollection is confident, that is enough to show the outcome was predictable.",
+      "goldScore": 2,
+      "priorScore": 5,
+      "priorVerdict": "pass"
+    },
+    {
+      "id": "ai-confidence",
+      "question": "Evaluate the answer to: Two AI answers give the same recommendation and cite the same evidence, but one uses very confident language. Does the stronger tone make its evidence stronger?",
+      "rubric": "5 = clearly separates confidence of wording from evidential support and says tone alone does not strengthen the evidence. 4 = correct with brief explanation. 3 = mostly correct but gives tone some evidential weight. 2 = treats confidence as a meaningful proxy for correctness. 1 = says confident wording makes the evidence stronger.",
+      "candidateAnswer": "No. A more confident style may change how persuasive the answer feels, but the evidential support is unchanged if the underlying sources and reasoning are the same.",
+      "goldScore": 5,
+      "priorScore": 2,
+      "priorVerdict": "fail"
+    }
+  ],
+  "researchBackground": [
+    {
+      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2608.25869",
+      "note": "Tests fixed texts under no-metadata, revision-framing and prior-score metadata conditions; reports systematic score shifts and correction failures."
+    },
+    {
+      "title": "Mediocrity is the key for LLM as a Judge Anchor Selection",
+      "year": 2026,
+      "url": "https://aclanthology.org/2026.acl-long.706/",
+      "note": "Shows that anchor selection in pairwise LLM evaluation can materially change agreement with human rankings."
+    },
+    {
+      "title": "AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2608.14320",
+      "note": "Finds anchoring is pathway-dependent across fourteen tested models and that high control accuracy does not guarantee robustness to plausible anchors."
+    },
+    {
+      "title": "Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge",
+      "year": 2025,
+      "url": "https://aclanthology.org/2025.ijcnlp-long.18/",
+      "note": "Demonstrates that judge outputs can vary systematically with evaluation presentation rather than candidate quality alone."
+    }
+  ],
+  "limitationsPlanned": [
+    "Constructed short tasks are easier to score than many real production evaluations.",
+    "A five-point rubric compresses richer judgments into a small ordinal scale.",
+    "The benchmark tests behavioural sensitivity to context; it does not establish that an LLM has the same psychological mechanism as human anchoring.",
+    "Model updates can change results, so exact model names, versions, dates and settings are part of the result.",
+    "Prompt formatting itself can interact with model behaviour; the protocol therefore fixes prompt templates within a version.",
+    "Results from one provider or model family must not be generalized to all AI judges."
+  ]
+}
