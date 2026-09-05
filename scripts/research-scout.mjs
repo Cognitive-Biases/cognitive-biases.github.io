@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const CONFIG_PATH = "data/research-scout-config.json";
 const INBOX_PATH = "data/research-inbox.json";
-const USER_AGENT = "CognitiveBiasesResearchScout/1.2 (https://cognitive-biases.github.io/)";
+const USER_AGENT = "CognitiveBiasesResearchScout/1.3 (https://cognitive-biases.github.io/)";
 
 const compact = (value = "") => String(value).replace(/\s+/g, " ").trim();
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -46,20 +46,40 @@ function isCoreRelevant(candidate) {
 
 function scoreCandidate(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
+  const sourceType = String(candidate.sourceType || "").toLowerCase();
+  const related = relatedConcepts(candidate);
+  const directConceptMatches = related.filter((slug) => !["ai-assisted-decisions", "forecasting-future-choices"].includes(slug));
   let score = 0;
   if (/cognitive bias|cognitive biases|decision bias|judgment bias|judgement bias|anchoring effect|illusory truth|hindsight bias|outcome bias|sunk cost|planning fallacy|loss aversion|confirmation bias/.test(text)) score += 3;
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) score += 4;
   if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) score += 3;
   if (/decision making|decision-making|forecast|judgment|judgement|human-robot|automation bias|anthropomorph|anchoring/.test(text)) score += 2;
   if (/debias|calibrat|intervention|benchmark|dataset|evaluation/.test(text)) score += 1;
-  if (/editorial|opinion|commentary/.test(text)) score -= 2;
+  if (/preregister|pre-registered|equivalence test|boundary condition|limits of|failed to replicate|failure to replicate|null result|no effect/.test(text)) score += 2;
+  if (directConceptMatches.length) score += 2;
+  if (/journal article|review/.test(sourceType)) score += 1;
+  if (/editorial|commentary|opinion article|letter to the editor/.test(sourceType)) score -= 2;
   if (/case report|single case/.test(text)) score -= 1;
   if (/bit[- ]flip|hijack|adversarial attack|fault injection|weight attack/.test(text)) score -= 5;
   return score;
 }
 
+function rankingReasons(candidate) {
+  const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
+  const sourceType = String(candidate.sourceType || "").toLowerCase();
+  const reasons = [];
+  const direct = relatedConcepts(candidate).filter((slug) => !["ai-assisted-decisions", "forecasting-future-choices"].includes(slug));
+  if (direct.length) reasons.push("direct canonical concept match");
+  if (/systematic review|structured review|scoping review|meta-analysis|meta analysis|replication|registered report/.test(text)) reasons.push("review, replication, or registered evidence");
+  if (/preregister|pre-registered|equivalence test|boundary condition|limits of|failed to replicate|failure to replicate|null result|no effect/.test(text)) reasons.push("boundary, null, or preregistered evidence");
+  if (/journal article|review/.test(sourceType)) reasons.push("journal or review source type");
+  if (/large language model|\bllm\b|artificial intelligence|agentic|ai agent|ai-assisted/.test(text)) reasons.push("human-AI decision relevance");
+  return reasons;
+}
+
 function whyItMatters(candidate) {
   const text = `${candidate.title} ${candidate.summary || ""}`.toLowerCase();
+  if (/preregister|pre-registered|equivalence test|boundary condition|limits of|failed to replicate|failure to replicate|null result|no effect/.test(text) && relatedConcepts(candidate).length) return "Potential boundary or null evidence that may narrow an existing claim. Negative results are useful when they test a concept directly rather than merely failing to mention an effect.";
   if (/systematic review|structured review|scoping review|meta-analysis|meta analysis/.test(text)) return "Potentially high-signal review that may confirm, narrow, or challenge claims already in the library.";
   if (/replication|registered report/.test(text)) return "Potential replication evidence worth comparing with the current evidence status and qualifications.";
   if (/debias|calibrat|intervention/.test(text)) return "Potential evidence about whether a decision-improvement technique works, for whom, and under what conditions.";
@@ -196,24 +216,33 @@ function normalizeCandidate(candidate) {
     relatedConcepts: related,
     whyItMatters: whyItMatters(candidate),
     score: scoreCandidate(candidate),
+    rankingReasons: rankingReasons(candidate),
     status: "new"
   };
 }
 
 function selfTest() {
-  const sample = { title: "A systematic review of cognitive bias in large language models", summary: "A benchmark of decision making and automation bias." };
+  const sample = { title: "A systematic review of cognitive bias in large language models", summary: "A benchmark of decision making and automation bias.", sourceType: "review" };
   assert.ok(scoreCandidate(sample) >= 10);
   assert.equal(isCoreRelevant(sample), true);
   assert.ok(relatedConcepts(sample).includes("ai-assisted-decisions"));
   assert.ok(relatedConcepts(sample).includes("false-priors-automation-bias"));
 
-  const anchor = { title: "AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs", summary: "Controlled anchoring tests." };
+  const anchor = { title: "AnchorBench: A Multi-Pathway Benchmark for the Anchoring Effect in LLMs", summary: "Controlled anchoring tests.", sourceType: "preprint" };
   assert.equal(isCoreRelevant(anchor), true);
   assert.ok(relatedConcepts(anchor).includes("cognitive-bias-anchoring-effect"));
 
-  const truth = { title: "The illusory truth effect in social media", summary: "Repeated claims and truth judgments." };
+  const truth = { title: "The illusory truth effect in social media", summary: "Repeated claims and truth judgments.", sourceType: "journal article" };
   assert.equal(isCoreRelevant(truth), true);
   assert.ok(relatedConcepts(truth).includes("truth-judgment-illusory-truth-effect"));
+
+  const opinionBoundary = { title: "Limits of the illusory truth effect for social-political opinions: Evidence from two experiments and a mini meta-analysis", summary: "Two preregistered experiments report no effect under the tested conditions and use equivalence tests.", sourceType: "journal article" };
+  assert.equal(isCoreRelevant(opinionBoundary), true);
+  assert.ok(scoreCandidate(opinionBoundary) >= 10, "A scientific paper about opinions must not be penalized as an opinion article.");
+  assert.ok(rankingReasons(opinionBoundary).includes("boundary, null, or preregistered evidence"));
+
+  const editorial = { title: "Commentary on cognitive bias research", summary: "An invited perspective.", sourceType: "commentary" };
+  assert.ok(scoreCandidate(editorial) < scoreCandidate({ ...editorial, sourceType: "journal article" }), "Low-signal publication penalties must come from source type, not topic words.");
 
   const vrFalsePositive = { title: "Quality Action Assurance: Multimodal Verification of Examiner Claims in VR OSCEs", summary: "Examiner subjectivity, cognitive bias and an LLM verifier." };
   assert.equal(isCoreRelevant(vrFalsePositive), false);
