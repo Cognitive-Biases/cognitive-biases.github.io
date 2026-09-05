@@ -3,27 +3,6 @@
   "updatedAt": "2026-09-05",
   "items": [
     {
-      "id": "pubmed-42459123",
-      "discoveredAt": "2026-09-05",
-      "title": "Polar anchoring effect-mediated solvation regulation in fluorinated gel polymer electrolytes for high-voltage lithium-ion full batteries.",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/42459123/",
-      "source": "PubMed",
-      "sourceType": "journal article",
-      "publishedAt": "2026 Sep 1",
-      "journal": "Materials horizons",
-      "doi": "10.1039/d6mh01062h",
-      "relatedConcepts": [
-        "cognitive-bias-anchoring-effect"
-      ],
-      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
-      "score": 8,
-      "rankingReasons": [
-        "direct canonical concept match",
-        "journal or review source type"
-      ],
-      "status": "new"
-    },
-    {
       "id": "pubmed-42335861",
       "discoveredAt": "2026-09-05",
       "title": "Large language models exhibit greater diagnostic anchoring than physicians in a forced-choice vignette study.",
