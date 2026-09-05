@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-05",
+  "entries": [
+    {
+      "slug": "prior-scores-can-contaminate-ai-judges",
+      "title": "Prior scores can contaminate later AI judgments",
+      "publishedAt": "2026-09-05",
+      "updatedAt": "2026-09-05",
+      "summary": "A recent large LLM-as-a-judge study suggests that previous evaluation scores can shift later ratings even when the evaluated text is unchanged.",
+      "question": "Can repeated AI evaluation be treated as independent when a later judge sees earlier scores?",
+      "whatWasTested": "The study compared fixed texts under no-metadata, revision-framing and prior-score metadata conditions across eight models. The previous score was contextual metadata rather than new evidence about the text.",
+      "whatWasFound": "Seven of eight tested models showed a systematic total anchored-metadata effect in the reported main analysis. The paper also reports that prior-score context could block some error corrections and flip some correct categorical judgments.",
+      "whatItDoesNotEstablish": "This does not show that every AI judge, task or production pipeline will behave the same way. It also does not establish that the internal mechanism is the same as human anchoring.",
+      "whyItMatters": "A pipeline with several review passes may look like independent checking while later evaluators partly inherit earlier judgments. Blind re-evaluation is therefore a design choice worth testing, not just an implementation detail.",
+      "projectChange": "We created the provider-neutral AI Judge History v1 benchmark. It compares blind, history-framing and prior-score conditions while holding the answer and rubric fixed. The project still has no result from this benchmark.",
+      "relatedConcepts": ["false-priors-automation-bias", "cognitive-bias-anchoring-effect"],
+      "relatedContexts": ["ai-assisted-decisions"],
+      "sources": [
+        {
+          "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+          "year": 2026,
+          "url": "https://arxiv.org/abs/2608.25869",
+          "sourceType": "conference paper / arXiv record"
+        },
+        {
+          "title": "Mediocrity is the key for LLM as a Judge Anchor Selection",
+          "year": 2026,
+          "url": "https://aclanthology.org/2026.acl-long.706/",
+          "sourceType": "peer-reviewed conference paper"
+        }
+      ]
+    }
+  ]
+}
