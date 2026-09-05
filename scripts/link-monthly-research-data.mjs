@@ -11,7 +11,16 @@ if (!html.includes('href="/data/monthly-research-digests.json"')) {
     researchNotesLink,
     `${researchNotesLink}<a href="/data/monthly-research-digests.json">Monthly research digests</a><br>`
   );
-  await writeFile(dataPath, html);
 }
 
-console.log("Linked monthly research digest data from the public Data page.");
+if (!html.includes('href="/schemas/monthly-research-digests.schema.json"')) {
+  const digestLink = '<a href="/data/monthly-research-digests.json">Monthly research digests</a><br>';
+  if (!html.includes(digestLink)) throw new Error("Data page monthly digest link was not found.");
+  html = html.replace(
+    digestLink,
+    `${digestLink}<a href="/schemas/monthly-research-digests.schema.json">Monthly research digest schema</a><br>`
+  );
+}
+
+await writeFile(dataPath, html);
+console.log("Linked monthly research digest data and schema from the public Data page.");
