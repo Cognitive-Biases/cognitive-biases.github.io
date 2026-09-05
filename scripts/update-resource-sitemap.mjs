@@ -9,11 +9,13 @@ const skills = JSON.parse(await readFile("data/skills.json", "utf8"));
 const aiJudgeHistory = JSON.parse(await readFile("data/studies/ai-judge-history-v1.json", "utf8"));
 const researchTracker = JSON.parse(await readFile("data/ai-era-research-tracker.json", "utf8"));
 const validDate = (value = "") => /^\d{4}-\d{2}-\d{2}/.test(String(value)) ? String(value).slice(0, 10) : null;
+const latestDigestDate = [...(monthlyDigests.digests || [])].map((digest) => validDate(digest.publishedAt)).filter(Boolean).sort().at(-1) || validDate(monthlyDigests.updatedAt);
 
 const resources = [
   { path: "/research/", lastmod: validDate(researchNotes.updatedAt) },
   { path: "/research/lab/", lastmod: validDate(researchTracker.updatedAt) },
   { path: "/research/digests/", lastmod: validDate(monthlyDigests.updatedAt) },
+  { path: "/research/changes/", lastmod: latestDigestDate },
   { path: "/research/ai-judge-history-v1/", lastmod: validDate(aiJudgeHistory.preregisteredAt) },
   { path: "/experiments/ai-judge-history-v1/", lastmod: validDate(aiJudgeHistory.preregisteredAt) },
   { path: "/skills/", lastmod: null },
