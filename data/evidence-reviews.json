@@ -80,11 +80,11 @@
     },
     {
       "slug": "truth-judgment-illusory-truth-effect",
-      "evidenceStatus": "robust",
-      "reviewedAt": "2026-08-18",
-      "qualification": "Repeated information is, on average, judged as more truthful than comparable new information. The size of the effect varies with the material and procedure, and repetition does not make every claim believable or erase all prior knowledge.",
-      "mechanism": "Repetition can make information easier or more coherent to process and retrieve. People can then use that subjective ease or familiarity as one cue when judging truth, even though repetition itself is not evidence that the statement is correct.",
-      "practical": "When a claim feels true mainly because it sounds familiar, switch from familiarity to source checking. Ask where the claim came from and what evidence would support it. Do not treat familiarity as proof, but do not treat repetition as proof of falsehood either.",
+      "evidenceStatus": "robust, including a recent social-media-like test",
+      "reviewedAt": "2026-09-05",
+      "qualification": "Repeated information is, on average, judged as more truthful than comparable new information. A 2026 experiment using Instagram-like posts found that the repetition effect remained when like counts were visible, and repeated statements were also judged with greater confidence. Like counts mattered more when the statements were new. This adds a useful social-media-like test, but one controlled study does not show that every feed, topic, or platform will produce the same pattern.",
+      "mechanism": "Repetition can make information easier or more coherent to process and retrieve. People can then use that subjective ease or familiarity as one cue when judging truth, even though repetition itself is not evidence that the statement is correct. The 2026 social-media-like study also found a repetition-based increase in confidence, while the mechanisms behind that certainty effect remain less established than the truth effect itself.",
+      "practical": "When a claim feels true because you have seen it repeatedly, separate exposure count from evidence count. Trace repeated posts, articles, or AI outputs back to their sources and count genuinely independent evidence rather than appearances. Likes and repetition can both be cues, but neither is a substitute for checking the underlying evidence. Repetition is not proof that a claim is true, and it is not proof that the claim is false either.",
       "sources": [
         {
           "title": "Frequency and the conference of referential validity",
@@ -106,6 +106,13 @@
           "type": "review",
           "doi": "10.1016/j.copsyc.2023.101736",
           "url": "https://pubmed.ncbi.nlm.nih.gov/38113667/"
+        },
+        {
+          "title": "The robustness of repetition-based illusory truth and certainty effects in social media contexts",
+          "year": 2026,
+          "type": "peer-reviewed experiment",
+          "doi": "10.1038/s41598-026-61449-y",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443530/"
         }
       ]
     },
