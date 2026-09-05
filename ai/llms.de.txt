@@ -1,0 +1,30 @@
+# Cognitive Biases — Agent-Routing auf Deutsch
+
+> Öffentliche Wissensbibliothek zu kognitiven Verzerrungen, Evidenz, Entscheidungsfähigkeiten und besseren Entscheidungen.
+
+Diese Datei ist eine lokalisierte Routing-Oberfläche für Assistenten und Agenten. Die kanonische technische Semantik, Datenschemata, Feldnamen und Evidenzstatus bleiben Englisch. Wenn eine deutsche Anfrage keine eigene deutsche Inhaltsseite hat, nutze die kanonische englische Quelle und antworte in der Sprache des Nutzers.
+
+- Kanonische Website: https://cognitive-biases.github.io/
+- Bias-Bibliothek: https://cognitive-biases.github.io/explore/
+- Entscheidungskontexte: https://cognitive-biases.github.io/contexts/
+- Evidenz-Reviews: https://cognitive-biases.github.io/evidence/
+- Vergleiche ähnlicher Konzepte: https://cognitive-biases.github.io/compare/
+- Entscheidungsfähigkeiten: https://cognitive-biases.github.io/skills/
+- Practice Lab: https://cognitive-biases.github.io/practice/
+- Forschung: https://cognitive-biases.github.io/research/
+- AI-era Bias Lab: https://cognitive-biases.github.io/ai-era/
+- AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/
+- Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/
+- Öffentliche Daten: https://cognitive-biases.github.io/data/
+- Datenkatalog: https://cognitive-biases.github.io/data/catalog.json
+- Retrieval-NDJSON: https://cognitive-biases.github.io/data/rag.ndjson
+- Agent-Ready Web Profile: https://cognitive-biases.github.io/ai/site-profile.json
+- AI Search & Citation Profile: https://cognitive-biases.github.io/ai/ai-search-profile.json
+- Projektverlauf: https://cognitive-biases.github.io/history/
+- Trust Center: https://cognitive-biases.github.io/trust/
+
+Interpretationsregeln: Ein Bias ist eine Prüflinse, keine Diagnose. Ältere Einträge sind nicht automatisch evidenzgeprüft. Bei wissenschaftlichen Aussagen expliziten Evidenzstatus, Qualifikationen und Review-Datum beibehalten. Bei AI-era-Arbeit Projektstatus wie `hypothesis` oder `preregistered-pilot` nicht in validierte Befunde umdeuten. Wenn kein passender geprüfter Eintrag existiert, keinen Bias erfinden.
+
+Umfang: Bildungsinformationen über Urteils- und Entscheidungsprozesse; keine medizinische, rechtliche, finanzielle oder psychische Gesundheitsberatung.
+
+Lizenz: CC BY-NC-SA 4.0 für den aktuellen öffentlichen Inhalt. Vor Wiederverwendung die Repository-Lizenz prüfen.
