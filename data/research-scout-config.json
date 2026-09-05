@@ -23,5 +23,14 @@
     "(\"cognitive bias\"[Title/Abstract] OR \"judgment bias\"[Title/Abstract] OR \"decision bias\"[Title/Abstract]) AND (debias*[Title/Abstract] OR intervention[Title/Abstract] OR calibration[Title/Abstract])",
     "(\"cognitive bias\"[Title/Abstract] OR \"decision bias\"[Title/Abstract]) AND (diagnos*[Title/Abstract] OR hiring[Title/Abstract] OR workplace[Title/Abstract] OR finance[Title/Abstract] OR forecast*[Title/Abstract])",
     "(\"anchoring\"[Title/Abstract] OR \"illusory truth\"[Title/Abstract] OR \"confirmation bias\"[Title/Abstract] OR \"hindsight bias\"[Title/Abstract] OR \"sunk cost\"[Title/Abstract]) AND 2026[Date - Publication]"
+  ],
+  "openAlexQueries": [
+    "cognitive bias decision making",
+    "anchoring effect judgment decision",
+    "illusory truth repetition",
+    "confirmation bias reasoning decision",
+    "hindsight bias outcome bias decision",
+    "sunk cost escalation commitment decision",
+    "debiasing judgment calibration forecasting"
   ]
 }

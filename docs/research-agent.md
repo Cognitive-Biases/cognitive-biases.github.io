@@ -10,10 +10,12 @@ Priority topics:
 
 - new studies, reviews and meta-analyses about cognitive biases and decision making;
 - replication results or important challenges to well-known findings;
+- research on debiasing, calibration and decision improvement;
 - research on people making decisions with AI;
 - cognitive-bias findings in language models and AI agents;
 - useful datasets and benchmarks;
 - practical studies on forecasting, product decisions, group decisions and information evaluation;
+- applied human judgment in medicine, work, hiring and finance;
 - corrections to claims already present in our library.
 
 General psychology news is not enough. A candidate should have a clear connection to an existing concept, a new concept worth reviewing, or a research question the project follows.
@@ -98,6 +100,8 @@ Prefer primary papers and strong reviews. Treat preprints as provisional. Treat 
 
 For fast-moving AI research, publication venue alone is not enough. Check the task design, model versions, sample size, comparison method and whether the claimed bias is actually comparable to the human concept using the same name.
 
+A discovery database can help us find a paper, but it does not replace reading the paper. Metadata from OpenAlex, PubMed or arXiv is used for discovery and deduplication; claims still need review from the underlying source before they change the public library.
+
 ## Safety against content drift
 
 The agent must not:
@@ -114,9 +118,9 @@ The agent must not:
 
 The repository includes a scheduled `Research Scout` workflow. It runs once a week and can also be started manually.
 
-The scout searches configured arXiv and PubMed queries, scores candidates for relevance, removes records already present in the inbox, and adds only a small number of recent candidates. The queries, lookback window, score threshold and maximum batch size live in `data/research-scout-config.json`.
+The scout searches configured arXiv, PubMed and OpenAlex queries, scores candidates for relevance, removes records already present in the inbox, and adds only a small number of recent candidates. arXiv keeps strong coverage of fast-moving AI work, PubMed covers biomedical and applied decision research, and OpenAlex broadens discovery across psychology, judgment and behavioural science. The queries, lookback window, score threshold and maximum batch size live in `data/research-scout-config.json`.
 
-The scout deliberately stores metadata and our own relevance note rather than copying source abstracts into the project. Title-level scope checks keep papers out when cognitive bias is only incidental to the work, and obvious adversarial-security papers are outside the current editorial scope.
+The scout deliberately stores metadata and our own relevance note rather than copying source abstracts into the project. Title-level scope checks keep papers out when cognitive bias is only incidental to the work, and obvious adversarial-security papers are outside the current editorial scope. DOI-based deduplication also helps prevent the same paper from being queued twice when it appears in more than one discovery service.
 
 When new candidates are found, the workflow commits only `data/research-inbox.json`. It first tries to persist that internal queue directly on `main`. If branch protection rejects the update, it pushes a fallback `research-scout/<run-id>` branch instead. It never changes evidence status, public research notes or canonical bias pages automatically.
 
