@@ -10,7 +10,13 @@
     "sitemap": "https://cognitive-biases.github.io/sitemap.xml",
     "robots": "https://cognitive-biases.github.io/robots.txt",
     "llms": "https://cognitive-biases.github.io/llms.txt",
-    "researchFeed": "https://cognitive-biases.github.io/research/feed.xml"
+    "feeds": [
+      {
+        "url": "https://cognitive-biases.github.io/research/feed.xml",
+        "mediaType": "application/atom+xml",
+        "title": "Cognitive Biases Research"
+      }
+    ]
   },
   "data": {
     "catalog": "https://cognitive-biases.github.io/data/catalog.json",
@@ -27,7 +33,7 @@
         "name": "Monthly research evidence deltas",
         "url": "https://cognitive-biases.github.io/data/monthly-research-digests.json",
         "mediaType": "application/json",
-        "role": "research-updates",
+        "role": "other",
         "description": "Monthly reviewed research signals labeled as strengthening, narrowing, new context or watch-only, with practical checks and resulting project changes."
       },
       {
