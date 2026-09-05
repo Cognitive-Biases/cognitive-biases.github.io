@@ -7,11 +7,12 @@
       "month": "August 2026",
       "title": "Cognitive Bias Research Digest — August 2026",
       "publishedAt": "2026-09-05",
-      "summary": "August research highlights anchoring in AI evaluation, repetition-driven truth judgments, and limits of domain transfer in human-AI evidence.",
+      "summary": "August research highlights anchoring in AI evaluation, both the strength and limits of repetition-driven truth judgments, and limits of domain transfer in human-AI evidence.",
       "editorialNote": "We include a study only when it changes a claim, adds a useful boundary condition, opens a practical decision context, or improves how the project should test evidence. A new paper is not automatically a new fact.",
       "takeaways": [
         "Independent AI evaluation is not independent if an earlier score remains in the context.",
-        "Repeated information can feel more true and more certain even when social endorsement cues are visible.",
+        "Repeated factual claims can feel more true even when social endorsement cues are visible, but this effect should not be generalized automatically to evaluative opinions.",
+        "A strong average effect can coexist with important boundary conditions. Good evidence updates should preserve both.",
         "A review can identify many plausible bias risks while still showing that direct evidence in the target domain is sparse.",
         "A named bias should be tested in the actual task. We should not assume that every model, person, or context will reproduce it.",
         "When LLMs simulate people, realistic cognitive limits may matter more than a persona prompt."
@@ -48,6 +49,23 @@
             "publishedAt": "2026-08-05",
             "doi": "10.1038/s41598-026-61449-y",
             "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13443530/"
+          }
+        },
+        {
+          "id": "illusory-truth-opinion-boundary",
+          "title": "Repeating an opinion is not the same test as repeating a factual claim",
+          "delta": "narrows",
+          "confidence": "moderate",
+          "sourceStatus": "peer-reviewed; two preregistered experiments and mini meta-analysis",
+          "finding": "Two preregistered experiments with 457 participants found no reliable increase in truth ratings when social-political opinion statements were repeated. Equivalence tests indicated that any repetition effect in the tested conditions was smaller than the researchers' predefined meaningful threshold.",
+          "whyItMatters": "The Illusory Truth Effect has a robust overall evidence base, but the popular version is often too broad. A checkable factual statement and an evaluative social-political opinion should not be assumed to respond to repetition in the same way.",
+          "practicalCheck": "Before applying the Illusory Truth label, classify the statement. For factual claims, trace independent evidence. For evaluative opinions, also consider persuasion, identity, norms and preference rather than forcing a factual truth-judgment explanation.",
+          "siteAction": "Narrow the canonical Illusory Truth page, publish a boundary-condition research note, and keep both the positive social-media result and the opinion null result visible in the same digest.",
+          "source": {
+            "title": "Limits of the illusory truth effect for social-political opinions: Evidence from two experiments and a mini meta-analysis",
+            "publishedAt": "2026-08-27",
+            "doi": "10.1016/j.concog.2026.104119",
+            "url": "https://doi.org/10.1016/j.concog.2026.104119"
           }
         },
         {
@@ -102,13 +120,14 @@
       ],
       "whatChanged": [
         "Launched the monthly evidence-delta digest and added it to Research, the sitemap and the public data manifest.",
-        "Updated the Illusory Truth evidence review with the 2026 social-media-like experiment and a clearer independent-source check.",
+        "Updated the Illusory Truth evidence review twice: first with a social-media-like replication, then with a factual-claim versus opinion boundary condition from later preregistered experiments.",
         "Added an evidence-distance check to the AI-assisted decisions guide so related-domain findings are not silently treated as direct evidence.",
         "Added practice scenarios for blind AI re-evaluation, repetition versus independent sources, and evidence transfer between professional workflows.",
-        "Expanded the research scout beyond LLM benchmarks to debiasing, replication, forecasting and applied human decision research."
+        "Expanded the research scout beyond LLM benchmarks to debiasing, replication, forecasting and applied human decision research.",
+        "Published the Research Lab maturity layer so protocols, studies and result gates are visible before project findings are claimed."
       ],
       "nextQuestions": [
-        "Can blind-versus-history-aware LLM judging be turned into a small reproducible experiment for the site?",
+        "Which statement types show the strongest and weakest repetition effects when tested under otherwise comparable conditions?",
         "How often do repeated claims in AI answers come from genuinely independent sources rather than copied or circular evidence?",
         "Which debiasing interventions improve calibration in real decisions rather than only reducing a benchmark bias score?"
       ]
