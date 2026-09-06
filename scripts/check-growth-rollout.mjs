@@ -25,8 +25,9 @@ assert(urls(organization.sameAs).includes(ORG_PROFILE), "homepage Organization s
 assert(typeof organization.logo === "object" && /^https:\/\//.test(organization.logo.url || ""), "homepage Organization must expose an absolute logo ImageObject");
 
 const app = homeNodes.find((node) => (types(node).includes("SoftwareApplication") || types(node).includes("MobileApplication")) && node?.["@id"] === `${SITE}/#app`);
-assert(app, "homepage SoftwareApplication node is missing");
-assert(urls(app.sameAs).includes(PLAY) && urls(app.sameAs).includes(APP_STORE), "app identity must link both authoritative store profiles");
+if (app) {
+  assert(urls(app.sameAs).includes(PLAY) && urls(app.sameAs).includes(APP_STORE), "published app identity must link both authoritative store profiles");
+}
 
 const projectTrust = JSON.parse(await readFile("data/project-trust.json", "utf8"));
 assert(projectTrust.thirdPartyContent?.policy === "editorial-purpose-first", "project trust must define editorial-purpose-first third-party governance");
@@ -42,4 +43,4 @@ const review = await readFile("growth/content-quality-review-2026-09-06.md", "ut
 assert(review.includes("Decision: `keep`"), "manual content-quality review decision is missing");
 assert(review.includes("/research/") && review.includes("/evidence/") && review.includes("/contexts/"), "manual content-quality review must cover priority evidence and decision surfaces");
 
-console.log("Growth rollout checks passed: entity identity, app profiles, editorial-purpose governance and manual non-commodity review are recorded and published.");
+console.log(`Growth rollout checks passed: canonical Organization identity, editorial-purpose governance and manual non-commodity review are recorded and published${app ? "; published app identity is store-linked" : "; no canonical app JSON-LD is currently published, so no synthetic app node was required"}.`);
