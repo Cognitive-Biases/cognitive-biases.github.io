@@ -17,3 +17,40 @@ jobs:
       inspection_mode: ${{ github.event_name == 'schedule' && 'rotate' || inputs.inspection_mode }}
     secrets:
       google_search_console_service_account: ${{ secrets.GOOGLE_SEARCH_CONSOLE_SERVICE_ACCOUNT }}
+
+  search-appearance-probe:
+    needs: google-search
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Google authentication client
+        run: python -m pip install "google-auth[requests]>=2.35,<3"
+      - name: Prepare read-only Search Console credentials
+        id: credentials
+        shell: bash
+        env:
+          SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SEARCH_CONSOLE_SERVICE_ACCOUNT }}
+        run: |
+          set -euo pipefail
+          test -n "${SERVICE_ACCOUNT_JSON:-}" || { echo "::error::GOOGLE_SEARCH_CONSOLE_SERVICE_ACCOUNT is not configured."; exit 1; }
+          credentials_path="$RUNNER_TEMP/google-search-console.json"
+          umask 077
+          printf '%s' "$SERVICE_ACCOUNT_JSON" > "$credentials_path"
+          echo "path=$credentials_path" >> "$GITHUB_OUTPUT"
+      - name: Probe Search Analytics appearance values
+        run: |
+          python scripts/probe-google-search-appearance.py \
+            --site-url https://cognitive-biases.github.io/ \
+            --credentials "${{ steps.credentials.outputs.path }}" \
+            --days 90 \
+            --output reports/seo/google-search/search-appearance-probe.json
+      - name: Upload Search appearance probe
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-search-appearance-probe
+          path: reports/seo/google-search/search-appearance-probe.json
+          if-no-files-found: error
+          retention-days: 30
