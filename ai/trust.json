@@ -4,7 +4,7 @@
   "canonicalUrl": "https://cognitive-biases.github.io/",
   "trustCenter": "https://cognitive-biases.github.io/trust/",
   "status": "active-maintenance",
-  "lastReviewed": "2026-09-05",
+  "lastReviewed": "2026-09-06",
   "maintainer": {
     "name": "Dzmitryi Kharlanau",
     "organization": "Cognitive-Biases",
@@ -14,6 +14,7 @@
   "identity": {
     "projectSite": "https://cognitive-biases.github.io/",
     "repository": "https://github.com/Cognitive-Biases/cognitive-biases.github.io",
+    "organizationProfile": "https://github.com/Cognitive-Biases",
     "citationMetadata": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/CITATION.cff",
     "license": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/LICENSE"
   },
@@ -41,6 +42,15 @@
     "referenceMcpReadOnly": true,
     "referenceMcpSource": "https://github.com/Cognitive-Biases/cognitive-biases.github.io/tree/main/integrations/mcp"
   },
+  "governance": {
+    "thirdPartyContent": {
+      "policy": "editorial-purpose-first",
+      "disclosureRequiredForCommercialRelationships": true,
+      "unrelatedReputationHostingAllowed": false,
+      "externalSubmissionsBypassReview": false,
+      "humanPolicy": "https://cognitive-biases.github.io/about/editorial/#third-party-content-policy"
+    }
+  },
   "reuse": {
     "publicContentLicense": "CC-BY-NC-SA-4.0",
     "commercialUse": "requires-prior-written-permission",
@@ -52,6 +62,7 @@
     "Research-track maturity labels describe project artifacts and do not by themselves establish an effect in the scientific literature.",
     "Observatory outputs are descriptive headline-level signals, not diagnoses of authors, outlets or audiences.",
     "The public MCP adapter is a read-only reference interface over published project data, not an authority beyond the underlying evidence.",
+    "Third-party or sponsored material must serve the project's real editorial purpose and cannot bypass evidence, disclosure or review requirements.",
     "Trust metadata documents project practices and boundaries; it is not a security, correctness or scientific-validity certificate."
   ]
 }
