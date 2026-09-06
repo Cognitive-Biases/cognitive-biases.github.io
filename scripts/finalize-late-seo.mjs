@@ -1,7 +1,13 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
+const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
+const SITEMAP_PATH = join(OUT, "sitemap.xml");
+const UNDATED_STATIC_ROUTES = ["/", "/explore/", "/how-it-works/", "/about/", "/privacy/", "/terms/", "/support/"];
+
+const escapeRegExp = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 async function walk(dir) {
   const files = [];
   for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -37,4 +43,26 @@ for (const file of await walk(OUT)) {
 
   if (html !== before) await writeFile(file, html);
 }
-console.log(`Late finalizer: SEO metadata updated on ${seoChanged} page(s); optimized brand source repaired on ${brandChanged} page(s).`);
+
+let sitemap = await readFile(SITEMAP_PATH, "utf8");
+let freshnessChanged = 0;
+for (const route of UNDATED_STATIC_ROUTES) {
+  const url = `${SITE}${route}`;
+  const pattern = new RegExp(`(<url><loc>${escapeRegExp(url)}</loc>)<lastmod>[^<]+</lastmod>(</url>)`, "g");
+  const next = sitemap.replace(pattern, "$1$2");
+  if (next !== sitemap) {
+    sitemap = next;
+    freshnessChanged += 1;
+  }
+}
+
+const remainingSyntheticDates = UNDATED_STATIC_ROUTES.filter((route) => {
+  const url = `${SITE}${route}`;
+  return new RegExp(`<url><loc>${escapeRegExp(url)}</loc><lastmod>`, "i").test(sitemap);
+});
+if (remainingSyntheticDates.length) {
+  throw new Error(`Sitemap still exposes build-time lastmod for static routes without reliable modification dates: ${remainingSyntheticDates.join(", ")}`);
+}
+if (freshnessChanged) await writeFile(SITEMAP_PATH, sitemap);
+
+console.log(`Late finalizer: SEO metadata updated on ${seoChanged} page(s); optimized brand source repaired on ${brandChanged} page(s); sitemap lastmod removed from ${freshnessChanged} static route(s) without reliable modification dates.`);
