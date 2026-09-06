@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/growth-owner-review.schema.json",
+  "version": "0.1",
+  "site": "https://cognitive-biases.github.io/",
+  "evidenceClass": "owner-controlled",
+  "guardrails": {
+    "notIndependentEvidence": true,
+    "noRankingClaim": true,
+    "manualJudgmentPreserved": true
+  },
+  "reviews": [
+    {
+      "actionId": "growth:non-commodity-review",
+      "status": "completed",
+      "decision": "keep",
+      "reviewedAt": "2026-09-06",
+      "reviewer": "Dzmitryi Kharlanau",
+      "summary": "Priority Search and AI-discovery surfaces were manually reviewed for original evidence, usefulness, provenance, decision value and thin-query duplication risk. The review keeps evidence, research, situation-first routes and reusable data as the preferred growth surface instead of query-variant page expansion.",
+      "scope": [
+        "https://cognitive-biases.github.io/",
+        "https://cognitive-biases.github.io/explore/",
+        "https://cognitive-biases.github.io/evidence/",
+        "https://cognitive-biases.github.io/research/",
+        "https://cognitive-biases.github.io/contexts/",
+        "https://cognitive-biases.github.io/compare/",
+        "https://cognitive-biases.github.io/data/"
+      ],
+      "evidence": [
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/growth/content-quality-review-2026-09-06.md",
+        "https://cognitive-biases.github.io/about/editorial/"
+      ]
+    },
+    {
+      "actionId": "growth:site-reputation-policy",
+      "status": "completed",
+      "decision": "keep",
+      "reviewedAt": "2026-09-06",
+      "reviewer": "Dzmitryi Kharlanau",
+      "summary": "Third-party, sponsored, partner and contributed-content boundaries were reviewed and published. Such material must serve the project's real educational or research purpose, disclose commercial or editorial-control relationships when present, and cannot bypass evidence, correction or editorial-review requirements.",
+      "scope": [
+        "https://cognitive-biases.github.io/",
+        "https://cognitive-biases.github.io/about/editorial/",
+        "https://cognitive-biases.github.io/trust/"
+      ],
+      "evidence": [
+        "https://cognitive-biases.github.io/about/editorial/#third-party-content-policy",
+        "https://cognitive-biases.github.io/trust/trust.json",
+        "https://github.com/Cognitive-Biases/cognitive-biases.github.io/blob/main/data/project-trust.json"
+      ]
+    }
+  ]
+}

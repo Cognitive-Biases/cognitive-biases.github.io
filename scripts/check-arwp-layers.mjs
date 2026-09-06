@@ -4,11 +4,15 @@ const readJson = async (path) => JSON.parse(await readFile(path, "utf8"));
 const assert = (condition, message) => {
   if (!condition) throw new Error(message);
 };
+const isHttps = (value) => {
+  try { return new URL(value).protocol === "https:"; } catch { return false; }
+};
 
-const [site, search, locales, history, citations, trust, corrections, graph] = await Promise.all([
+const [site, search, locales, growthReview, history, citations, trust, corrections, graph] = await Promise.all([
   readJson("ai/site-profile.json"),
   readJson("ai/ai-search-profile.json"),
   readJson("ai/locales.json"),
+  readJson("ai/growth-review.json"),
   readJson("ai/history.json"),
   readJson("ai/citation-index.json"),
   readJson("ai/trust.json"),
@@ -51,6 +55,25 @@ assert(locales.canonicalLanguage === "en" && locales.fallbackLanguage === "en", 
 assert(locales.locales?.some((item) => item.language === "de" && item.llms.endsWith("/de/llms.txt")), "German routing surface is missing");
 assert(locales.locales?.some((item) => item.language === "ru" && item.llms.endsWith("/ru/llms.txt")), "Russian routing surface is missing");
 
+assert(growthReview.version === "0.1", "Growth owner review version must remain 0.1");
+assert(growthReview.$schema?.includes("growth-owner-review.schema.json"), "Growth owner review schema reference is missing");
+assert(growthReview.site === "https://cognitive-biases.github.io/", "Growth owner review must bind to the canonical site");
+assert(growthReview.evidenceClass === "owner-controlled", "Growth owner review must remain owner-controlled evidence");
+assert(growthReview.guardrails?.notIndependentEvidence === true, "Growth owner review must not claim independent evidence");
+assert(growthReview.guardrails?.noRankingClaim === true, "Growth owner review must not claim ranking impact");
+assert(growthReview.guardrails?.manualJudgmentPreserved === true, "Growth owner review must preserve manual judgment");
+assert(Array.isArray(growthReview.reviews) && growthReview.reviews.length === 2, "Growth owner review must contain the two completed manual reviews");
+const expectedManualActions = new Set(["growth:non-commodity-review", "growth:site-reputation-policy"]);
+for (const review of growthReview.reviews) {
+  assert(expectedManualActions.delete(review.actionId), `unexpected or duplicate Growth owner review action: ${review.actionId}`);
+  assert(review.status === "completed" && review.decision === "keep", `${review.actionId} must be a completed keep decision`);
+  assert(/^2026-09-06$/.test(review.reviewedAt), `${review.actionId} review date is unexpected`);
+  assert(String(review.summary || "").length > 40, `${review.actionId} review summary is too small`);
+  assert(Array.isArray(review.scope) && review.scope.length > 0 && review.scope.every(isHttps), `${review.actionId} scope must contain HTTPS URLs`);
+  assert(Array.isArray(review.evidence) && review.evidence.length > 0 && review.evidence.every(isHttps), `${review.actionId} evidence must contain HTTPS URLs`);
+}
+assert(expectedManualActions.size === 0, "Growth owner review is missing a required manual action");
+
 assert(history.status === "active", "history must expose the active project status");
 assert(history.startedAt === "2026-07-14", "history origin date changed unexpectedly");
 assert(history.events?.length >= 5, "history must retain source-backed milestones");
@@ -65,9 +88,9 @@ assert(Array.isArray(corrections.entries), "corrections ledger entries must be a
 assert(corrections.policy?.report?.includes("correction.yml"), "correction reporting route is missing");
 assert(Array.isArray(graph["@graph"]) && graph["@graph"].length >= 6, "knowledge graph is unexpectedly small");
 
-const allText = JSON.stringify({ site, search, locales, history, citations, trust, corrections, graph });
-for (const forbidden of ["doi-issued", "observed-success", "readinessScore", "commercial-use-allowed"]) {
+const allText = JSON.stringify({ site, search, locales, growthReview, history, citations, trust, corrections, graph });
+for (const forbidden of ["doi-issued", "observed-success", "readinessScore", "commercial-use-allowed", '"evidenceClass":"independent"']) {
   assert(!allText.includes(forbidden), `unsubstantiated or incompatible claim found: ${forbidden}`);
 }
 
-console.log("ARWP layer checks passed: profile, localization, history, citation, trust, corrections and knowledge graph are coherent.");
+console.log("ARWP layer checks passed: profile, localization, owner-controlled Growth review, history, citation, trust, corrections and knowledge graph are coherent.");

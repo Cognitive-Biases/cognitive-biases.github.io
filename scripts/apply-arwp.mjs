@@ -8,6 +8,7 @@ const artifacts = [
   ["ai/site-profile.json", "ai/site-profile.json"],
   ["ai/ai-search-profile.json", "ai/ai-search-profile.json"],
   ["ai/locales.json", "ai/locales.json"],
+  ["ai/growth-review.json", "ai/growth-review.json"],
   ["ai/history.json", "history.json"],
   ["ai/citation-index.json", "citation-index.json"],
   ["ai/trust.json", "trust/trust.json"],
@@ -23,6 +24,7 @@ const discoveryLinks = [
   '<link rel="describedby" type="application/json" href="/ai/site-profile.json" title="Agent-Ready Web Profile">',
   '<link rel="describedby" type="application/json" href="/ai/ai-search-profile.json" title="AI Search & Citation Profile">',
   '<link rel="describedby" type="application/json" href="/ai/locales.json" title="Agent locale manifest">',
+  '<link rel="describedby" type="application/json" href="/ai/growth-review.json" title="ARWP Growth owner review receipt">',
   '<link rel="alternate" type="text/plain" hreflang="en" href="/llms.txt" title="English agent routing">',
   '<link rel="alternate" type="text/plain" hreflang="de" href="/de/llms.txt" title="German agent routing">',
   '<link rel="alternate" type="text/plain" hreflang="ru" href="/ru/llms.txt" title="Russian agent routing">',
@@ -93,7 +95,7 @@ await writeFile(join(OUT, "trust", "index.html"), trustPage(trust));
 
 const llmsPath = join(OUT, "llms.txt");
 let llms = await readFile(llmsPath, "utf8");
-const arwpRouting = `\n- Project history: ${SITE}/history/\n- Machine-readable history: ${SITE}/history.json\n- Agent locale manifest: ${SITE}/ai/locales.json\n- German agent routing: ${SITE}/de/llms.txt\n- Russian agent routing: ${SITE}/ru/llms.txt\n- AI Search & Citation Profile: ${SITE}/ai/ai-search-profile.json\n- Canonical citation index: ${SITE}/citation-index.json\n- Trust Center: ${SITE}/trust/\n- Corrections ledger: ${SITE}/trust/corrections.json\n- Knowledge graph: ${SITE}/knowledge/graph.json\n`;
+const arwpRouting = `\n- Project history: ${SITE}/history/\n- Machine-readable history: ${SITE}/history.json\n- Agent locale manifest: ${SITE}/ai/locales.json\n- Growth owner review receipt: ${SITE}/ai/growth-review.json\n- German agent routing: ${SITE}/de/llms.txt\n- Russian agent routing: ${SITE}/ru/llms.txt\n- AI Search & Citation Profile: ${SITE}/ai/ai-search-profile.json\n- Canonical citation index: ${SITE}/citation-index.json\n- Trust Center: ${SITE}/trust/\n- Corrections ledger: ${SITE}/trust/corrections.json\n- Knowledge graph: ${SITE}/knowledge/graph.json\n`;
 if (!llms.includes("AI Search & Citation Profile:")) {
   const anchor = `- Canonical website: ${SITE}/`;
   llms = llms.includes(anchor) ? llms.replace(anchor, `${anchor}${arwpRouting}`) : `${llms.trim()}\n${arwpRouting}`;
