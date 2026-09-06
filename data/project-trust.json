@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-22",
+  "updatedAt": "2026-09-06",
   "maintainer": {
     "name": "Dzmitryi Kharlanau",
     "role": "Project maintainer and editor"
@@ -28,6 +28,16 @@
       "Automatically promote an unreviewed claim to reviewed evidence.",
       "Invent sources, findings or certainty to complete a page.",
       "Diagnose a person or team with a cognitive bias from limited information."
+    ]
+  },
+  "thirdPartyContent": {
+    "policy": "editorial-purpose-first",
+    "currentState": "The current public knowledge library has no sponsored, affiliate, white-label or reputation-renting section.",
+    "rules": [
+      "Third-party, partner, sponsored or contributed material may be published only when it directly serves the site's educational or research purpose.",
+      "Commercial sponsorship, affiliate relationships or external editorial control must be disclosed when present.",
+      "The project does not host unrelated third-party pages primarily to benefit from the site's search reputation.",
+      "External submissions do not bypass source, evidence, correction or editorial-review requirements."
     ]
   },
   "corrections": {
