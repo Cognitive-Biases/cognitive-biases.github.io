@@ -5,21 +5,31 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Google Search Pipeline"]
+    types: [completed]
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
 concurrency:
-  group: pages-${{ github.ref }}
+  group: pages-${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
   cancel-in-progress: true
 
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        if: github.event_name != 'workflow_run'
+      - uses: actions/checkout@v4
+        if: github.event_name == 'workflow_run'
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -34,8 +44,23 @@ jobs:
         run: node scripts/apply-arwp.mjs
       - name: Apply ARWP Growth rollout
         run: node scripts/apply-growth-rollout.mjs
+      - name: Restore latest Google Search owner report
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p .owner-data/google-search
+          run_id="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "Google Search Pipeline" --status success --limit 1 --json databaseId --jq '.[0].databaseId // empty')"
+          if [[ -n "$run_id" ]]; then
+            gh run download "$run_id" --repo "$GITHUB_REPOSITORY" --name google-search-report --dir .owner-data/google-search
+          fi
+      - name: Publish bounded Growth owner-data receipt
+        run: node scripts/publish-growth-owner-data.mjs .owner-data/google-search/google-indexing.json
       - name: Verify ARWP Growth rollout
         run: node scripts/check-growth-rollout.mjs
+      - name: Verify Growth owner-data scope
+        run: node scripts/check-growth-owner-data.mjs
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
