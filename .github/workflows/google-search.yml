@@ -1,5 +1,10 @@
 name: Google Search Pipeline
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/google-search.yml
+      - scripts/probe-google-search-appearance.py
   workflow_dispatch:
     inputs:
       max_inspections: { description: Maximum page URLs to inspect, required: false, default: 500, type: number }
@@ -13,8 +18,8 @@ jobs:
       site_url: https://cognitive-biases.github.io/
       sitemap_url: https://cognitive-biases.github.io/sitemap.xml
       runner_ref: 88f3a30a721d762517a179c9ebe93526792b6065
-      max_inspections: ${{ github.event_name == 'schedule' && 120 || inputs.max_inspections }}
-      inspection_mode: ${{ github.event_name == 'schedule' && 'rotate' || inputs.inspection_mode }}
+      max_inspections: ${{ github.event_name == 'schedule' && 120 || github.event_name == 'workflow_dispatch' && inputs.max_inspections || 20 }}
+      inspection_mode: ${{ github.event_name == 'workflow_dispatch' && inputs.inspection_mode || 'rotate' }}
     secrets:
       google_search_console_service_account: ${{ secrets.GOOGLE_SEARCH_CONSOLE_SERVICE_ACCOUNT }}
 
