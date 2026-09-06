@@ -32,6 +32,10 @@ jobs:
         run: node scripts/inject-google-tag-manager.mjs
       - name: Publish ARWP discovery surface
         run: node scripts/apply-arwp.mjs
+      - name: Apply ARWP Growth rollout
+        run: node scripts/apply-growth-rollout.mjs
+      - name: Verify ARWP Growth rollout
+        run: node scripts/check-growth-rollout.mjs
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
