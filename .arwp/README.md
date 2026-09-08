@@ -2,6 +2,8 @@
 
 This directory contains publisher-authored ARWP contracts for Cognitive Biases. They describe product intent and adoption state; they are not ranking, indexing, citation, diagnostic or efficacy certification.
 
+Contract revision: 2026-09-08.
+
 ## Current contracts
 
 - `adoption.json` — retained discoverability/adoption experiment contract.
