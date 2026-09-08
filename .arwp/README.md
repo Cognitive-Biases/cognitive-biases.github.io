@@ -1,30 +1,29 @@
-# Agent-Ready Web Profile adoption
+# Cite Goose / ARWP adoption
 
-Start with the repository's governing instructions and `.arwp/adoption.json`. This is a publisher-authored adoption contract, not a ranking certification.
+This directory contains publisher-authored ARWP contracts for Cognitive Biases. They describe product intent and adoption state; they are not ranking, indexing, citation, diagnostic or efficacy certification.
 
-Audience: Readers checking evidence and improving a specific decision. Useful action: Use a relevant decision practice and inspect supporting evidence.
+## Current contracts
 
-## Sources and publication
+- `adoption.json` — retained discoverability/adoption experiment contract.
+- `site-focus.json` — Cite Goose Site Focus v0.3 problem, scope, navigation and experience contract.
+- `../ai/site-profile.json` — machine/agent service map for real published interfaces.
 
-- Canonical publication: https://cognitive-biases.github.io/
-- Profile source: `ai/site-profile.json`; public location: `ai/site-profile.json` under the canonical site base.
-- Authoritative site source: `src + data + ai`.
-- Published directory: `dist`.
-- Build evidence: `package.json; .github/workflows/deploy-pages.yml`.
-- Product claims are bounded by `README.md`; CLI or source availability does not imply a hosted agent endpoint.
+The Site Focus contract keeps the project centered on evidence-backed decision understanding rather than catalog growth. A longer list of bias names is not itself a product improvement.
 
-## Editorial experiment
+## Product boundary
 
-Contrast two plausible decision interventions with their evidence limits; measure a completed useful action before widening the topic.
+IN: cognitive biases, evidence, comparisons, real decision contexts and bounded decision practices.
 
-Reuse the existing intent owner before adding a page. Put the direct answer, concrete example, sources and strongest limitation in visible HTML. Keep comparison criteria symmetric; state where another approach is a better fit. Label synthetic fixtures and first-party interpretations.
+ADJACENT: research methodology, quality governance, datasets, schemas and AI/agent retrieval surfaces.
 
-The tactic IDs in the adoption contract resolve against [the ARWP corpus](https://github.com/dkharlanau/agent-ready-web-profile/blob/main/knowledge/discoverability-corpus.json). New tactics require evidence and a measurable product consequence.
+OUT: diagnosis/treatment, personality typing, generic self-help, claims of becoming bias-free and Search/AI guarantees.
 
-## Validation and baseline
+## Validation
 
-Validate the profile against [the ARWP v0.1 schema](https://github.com/dkharlanau/agent-ready-web-profile/blob/main/schema/site-profile.schema.json). Use this repository's existing build and profile publication mechanism; `public/` assets are served directly by Next.js, and root static assets must survive the site generator.
+The Cite Goose Site Focus workflow compares the declared v0.3 contract with the public site and preserves a machine-readable report as a workflow artifact. Drift is a review signal, not automatic permission to delete, merge or rewrite pages.
 
-Check the exact emitted JSON and HTML before release. After an authorized release, verify the canonical live URL, HTTP status, profile link and response body. Record crawl eligibility, index status, search clicks/impressions, useful-action completion and independent AI citation separately. Missing observations remain unavailable; no score is a ranking promise.
+Do not weaken the declared boundary to silence a warning. Review whether the page has a legitimate product, proof, trust or technical-reference role.
 
-This application is local only. Existing unrelated changes, product telemetry constraints and publication approvals remain in force.
+## Evidence rule
+
+Implementation proof remains separate from field outcomes. A valid profile or successful audit does not establish indexing, ranking, AI citation, educational effect or user adoption. Missing provider observations remain unknown rather than zero.
