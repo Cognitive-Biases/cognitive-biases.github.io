@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/main/schema/site-focus-profile-v0.3.schema.json",
+  "version": "0.3",
+  "canonicalUrl": "https://cognitive-biases.github.io/",
+  "thesis": {
+    "primaryProblem": "Popular cognitive-bias content is often a long list of labels without enough evidence, limitations, comparisons or help for an actual decision.",
+    "primaryAudience": "Readers, learners and decision-makers who want to understand a cognitive bias and use the evidence carefully in a real decision context.",
+    "usefulOutcome": "Identify a relevant bias or decision problem, inspect the strength and limits of the evidence, compare nearby explanations, and choose one bounded decision practice.",
+    "distinctEvidence": "Reviewed evidence records, dated sources, explicit claim provenance, comparisons, decision contexts, research notes and versioned public data.",
+    "primaryAction": "Explore one bias or decision context and inspect the supporting evidence before applying a decision practice."
+  },
+  "scope": {
+    "in": [
+      "cognitive biases and their evidence",
+      "decision-making contexts and bounded decision practices",
+      "comparisons between nearby biases or explanations",
+      "source-backed educational explanations with explicit uncertainty"
+    ],
+    "adjacent": [
+      "research methodology and evidence review",
+      "public datasets, schemas and retrieval interfaces",
+      "AI and agent integration for the maintained knowledge base",
+      "quality and editorial-governance surfaces"
+    ],
+    "out": [
+      "mental-health diagnosis or treatment",
+      "personality typing or deterministic labels for people",
+      "generic productivity or self-help publishing",
+      "claims that a person can become bias-free",
+      "search ranking or AI citation guarantees"
+    ]
+  },
+  "problemLanes": [
+    {
+      "id": "understand",
+      "label": "Understand",
+      "job": "Move from a term or situation to a clear explanation of the relevant cognitive mechanism.",
+      "audience": "A reader who encountered a bias term or a confusing decision pattern and wants a grounded explanation.",
+      "problem": "Bias names are easy to repeat while their definitions, boundaries and evidence remain unclear.",
+      "desiredOutcome": "Understand what the bias means, what it does not mean and how confident the project is in the underlying claim.",
+      "primaryAction": "Open the relevant bias or concept page."
+    },
+    {
+      "id": "compare",
+      "label": "Compare",
+      "job": "Distinguish nearby biases, competing explanations and evidence strengths before drawing a conclusion.",
+      "audience": "A reader who has more than one plausible explanation for a judgment or behavior.",
+      "problem": "Similar bias labels can create false certainty when criteria and conflicting evidence are not compared directly.",
+      "desiredOutcome": "See symmetric comparison criteria, supporting sources, limits and cases where another explanation fits better.",
+      "primaryAction": "Inspect the comparison and evidence records."
+    },
+    {
+      "id": "decide",
+      "label": "Decide",
+      "job": "Use the maintained knowledge to improve one concrete decision without turning a bias label into a diagnosis.",
+      "audience": "A person making a real decision who wants a bounded practical check rather than another list of biases.",
+      "problem": "Knowing a bias name does not automatically improve the decision that triggered the question.",
+      "desiredOutcome": "Choose one relevant decision practice while preserving uncertainty and evidence limits.",
+      "primaryAction": "Use the relevant decision-context guide."
+    }
+  ],
+  "homepage": {
+    "primaryLane": "understand",
+    "supportingLanes": ["compare", "decide"],
+    "requiredSignals": ["problem", "audience", "outcome", "evidence", "action"]
+  },
+  "primaryNavigation": [
+    "/explore/",
+    "/contexts/",
+    "/evidence/",
+    "/research/",
+    "/quality/"
+  ],
+  "routeRules": [
+    { "match": { "path": "/" }, "role": "problem-commercial", "scope": "IN", "lane": "understand" },
+    { "match": { "pathPrefix": "/explore" }, "role": "problem-commercial", "scope": "IN", "lane": "understand" },
+    { "match": { "pathPrefix": "/bias" }, "role": "problem-commercial", "scope": "IN", "lane": "understand" },
+    { "match": { "pathPrefix": "/comparisons" }, "role": "problem-commercial", "scope": "IN", "lane": "compare" },
+    { "match": { "pathPrefix": "/contexts" }, "role": "problem-commercial", "scope": "IN", "lane": "decide" },
+    { "match": { "pathPrefix": "/evidence" }, "role": "proof-portfolio", "scope": "IN", "lane": "compare" },
+    { "match": { "pathPrefix": "/research" }, "role": "proof-portfolio", "scope": "ADJACENT", "lane": "compare" },
+    { "match": { "pathPrefix": "/quality" }, "role": "trust-utility", "scope": "ADJACENT", "lane": "compare" },
+    { "match": { "pathPrefix": "/data" }, "role": "technical-reference", "scope": "ADJACENT", "lane": "understand" },
+    { "match": { "pathPrefix": "/schemas" }, "role": "technical-reference", "scope": "ADJACENT", "lane": "understand" },
+    { "match": { "pathPrefix": "/ai" }, "role": "technical-reference", "scope": "ADJACENT", "lane": "understand" },
+    { "match": { "pathPrefix": "/about" }, "role": "trust-utility", "scope": "ADJACENT", "lane": "understand" }
+  ],
+  "experience": {
+    "visualPrinciples": [
+      "Make the explanation and decision context easier to see than the size of the bias catalog.",
+      "Visually separate evidence strength, uncertainty and review status from the main definition without hiding them.",
+      "Use comparisons and decision paths to reduce label-first browsing and false certainty.",
+      "Keep the interface fast and readable enough to work as a reference during an actual decision."
+    ],
+    "navigation": {
+      "maxPrimaryItems": 5,
+      "consistentAcrossPages": true
+    },
+    "performance": {
+      "lcpMsP75Max": 2500,
+      "inpMsP75Max": 200,
+      "clsP75Max": 0.1
+    }
+  },
+  "notes": [
+    "The project should not win by increasing the count of named biases; useful evidence and decision context take priority over catalog breadth.",
+    "Decision practices are bounded educational tools, not treatment or individualized professional advice.",
+    "A Site Focus pass is product-structure evidence and does not prove Search or AI visibility outcomes."
+  ]
+}
