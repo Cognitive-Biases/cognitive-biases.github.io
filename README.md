@@ -4,6 +4,8 @@ Cognitive Biases is a public knowledge library about cognitive biases, evidence 
 
 The project started as an educational mobile app. The website and the maintained knowledge base are now the main product.
 
+For repository work from ChatGPT or another coding agent, start with [AGENTS.md](AGENTS.md).
+
 - Website: https://cognitive-biases.github.io/
 - Explore the library: https://cognitive-biases.github.io/explore/
 - Reviewed evidence: https://cognitive-biases.github.io/evidence/
