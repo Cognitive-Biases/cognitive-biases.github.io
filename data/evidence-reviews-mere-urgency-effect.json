@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-mere-urgency-effect",
+      "evidenceStatus": "supported by five original experiments and a large independent replication; the effect attenuates under additional controls but remains detectable",
+      "reviewedAt": "2026-09-10",
+      "qualification": "Zhu, Yang and Hsee (2018) reported five experiments in which people sometimes chose objectively lower-payoff tasks when those tasks had short, spurious completion windows, even after several ordinary reasons for prioritizing urgent work were controlled. An independent replication accepted in 2026 tested the effect with 2,374 participants across a close replication, additional confound controls, a fresh-eyes redesign and a meta-analytic synthesis. The effect became smaller as design confounds were removed but remained significant in the tests intended to isolate illusory urgency. This supports the phenomenon in the tested task-allocation paradigms without implying that every short deadline is irrational or that urgency never contains useful information.",
+      "mechanism": "The original account proposes that urgency can attract attention and acquire value of its own, so a short completion window can pull choice toward a dominated task even when its objective payoff is lower. The independent replication found the effect robust to several design changes while also showing attenuation, which makes it important to separate urgency itself from misunderstanding, immediate payoff, progress, completion preference and real deadline costs.",
+      "practical": "When two tasks compete, score importance and urgency separately before acting. Remove countdown wording mentally and compare the underlying payoffs. If a deadline changes the consequences, treat it as real information. If it changes only the feeling that something must be done now, protect time for the higher-value task and handle the urgent-looking item later or with a strict time box.",
+      "sources": [
+        {
+          "title": "The Mere Urgency Effect",
+          "year": 2018,
+          "type": "five experiments on urgency versus importance and dominated task choice",
+          "doi": "10.1093/jcr/ucy008",
+          "url": "https://academic.oup.com/jcr/article-abstract/45/3/673/4847790"
+        },
+        {
+          "title": "Brief commentary: an independent republication study of the Mere Urgency Effect",
+          "year": 2026,
+          "type": "large independent replication with 2,374 participants, confound controls and fresh-eyes redesign; accepted peer-reviewed article",
+          "url": "https://nottingham-repository.worktribe.com/output/68194012"
+        }
+      ]
+    }
+  ]
+}

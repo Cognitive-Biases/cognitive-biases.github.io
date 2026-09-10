@@ -1,5 +1,18 @@
 {
   "version": 1,
   "updatedAt": "2026-09-10",
-  "entries": []
+  "entries": [
+    {
+      "id": 225,
+      "number": 225,
+      "typeOfBias": "Cognitive Bias",
+      "title": "Mere Urgency Effect – when ‘urgent’ steals the day from ‘important’",
+      "description": "The mere urgency effect is our tendency to choose a less important task because it looks urgent, even when the urgency is artificial and the other task has an objectively better payoff. A deadline enters the room and suddenly importance is asked to wait outside.\n\nWhere can it show up?\n- Work – we answer a low-value message with a short response window before doing a high-value task that has no flashing deadline.\n- Learning – we clear tiny exercises that expire today while postponing deeper practice that matters more for the exam or skill.\n- Personal admin – a countdown, expiring badge, or artificial deadline pulls attention away from a task with larger consequences.\n- Digital products – timers and short availability windows can make low-value actions feel more deserving of immediate attention than they objectively are.\n\nA better check\n- Write down importance and urgency separately. Do not let one word do both jobs.\n- Ask what happens if neither task had a countdown. Which one would create more value?\n- Compare payoffs before completion windows. A short window is information about timing, not automatically about importance.\n- Protect time for important work before opening channels designed to manufacture urgency.\n\nReal urgency exists. Fires, production incidents, medical emergencies, and hard deadlines are not cognitive illusions. The trap is spurious urgency: when the clock changes our choice even though it changes none of the underlying value.",
+      "slug": "cognitive-bias-mere-urgency-effect",
+      "related": [],
+      "status": "reviewed",
+      "updatedAt": "2026-09-10T16:58:00.000Z",
+      "published": true
+    }
+  ]
 }
