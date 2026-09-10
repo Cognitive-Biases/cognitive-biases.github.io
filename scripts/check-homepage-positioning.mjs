@@ -1,6 +1,7 @@
 import { readFile, readdir } from "node:fs/promises";
 import { resolve } from "node:path";
 
+const identity = JSON.parse(await readFile("config/site-identity.json", "utf8"));
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
 const duplicates = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
 const duplicateIds = new Set((duplicates.groups || []).flatMap((group) => group.duplicateIds || []));
@@ -42,8 +43,11 @@ const expectedStrings = [`${renderedAuditPatterns.length} reviewed lenses`,`${co
 for (const expected of expectedStrings) if (!html.includes(expected)) throw new Error(`Homepage live metric/content is stale: ${expected}`);
 if (!html.includes("Recognize → Test → Counter → Decide.")) throw new Error("Homepage is missing the product decision loop.");
 if (!html.includes("Drafts stay in your browser")) throw new Error("Homepage is missing the local-first Audit disclosure.");
-if (!html.includes("<title>Cognitive Biases | Decision tools, evidence & bias reference</title>")) throw new Error("Homepage title is not aligned to the decision-system positioning.");
-if (!html.includes('meta name="description"') || !html.includes("local-first Decision Audit")) throw new Error("Homepage meta description is not aligned to the decision-system positioning.");
+if (!html.includes(`<title>${identity.homepageTitle}</title>`)) throw new Error("Homepage title does not match config/site-identity.json.");
+if (!html.includes(`<meta name="description" content="${identity.homepageDescription}">`)) throw new Error("Homepage meta description does not match config/site-identity.json.");
+if (!html.includes(`<meta property="og:site_name" content="${identity.siteName}">`)) throw new Error("Homepage og:site_name does not match config/site-identity.json.");
+if (!html.includes(`<link rel="canonical" href="${identity.siteUrl}">`)) throw new Error("Homepage canonical does not match config/site-identity.json.");
+if (!html.includes(`href="${identity.faviconPath}"`)) throw new Error("Homepage favicon does not match config/site-identity.json.");
 
 if (latestDigest) {
   const digestRoute = `/research/digests/${latestDigest.slug}/`;
@@ -52,4 +56,4 @@ if (latestDigest) {
   if (!html.includes(latestDigest.month)) throw new Error(`Homepage does not identify the latest digest month: ${latestDigest.month}.`);
 }
 
-console.log(`Homepage positioning check passed: ${canonicalBiases.length} canonical entries, ${reviews.length} evidence reviews, ${renderedAuditPatterns.length} audit lenses, ${contexts.entries.length} contexts, ${comparisons.entries.length} comparisons, ${familyHubCount} family hubs${latestDigest ? `, latest digest ${latestDigest.slug}` : ""}, with homepage count matching rendered Audit data.`);
+console.log(`Homepage positioning check passed: ${canonicalBiases.length} canonical entries, ${reviews.length} evidence reviews, ${renderedAuditPatterns.length} audit lenses, ${contexts.entries.length} contexts, ${comparisons.entries.length} comparisons, ${familyHubCount} family hubs${latestDigest ? `, latest digest ${latestDigest.slug}` : ""}; search identity matches config/site-identity.json.`);
