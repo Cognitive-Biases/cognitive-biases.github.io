@@ -95,7 +95,7 @@ await writeFile(join(OUT, "trust", "index.html"), trustPage(trust));
 
 const llmsPath = join(OUT, "llms.txt");
 let llms = await readFile(llmsPath, "utf8");
-const arwpRouting = `\n- Project history: ${SITE}/history/\n- Machine-readable history: ${SITE}/history.json\n- Agent locale manifest: ${SITE}/ai/locales.json\n- Growth owner review receipt: ${SITE}/ai/growth-review.json\n- German agent routing: ${SITE}/de/llms.txt\n- Russian agent routing: ${SITE}/ru/llms.txt\n- AI Search & Citation Profile: ${SITE}/ai/ai-search-profile.json\n- Canonical citation index: ${SITE}/citation-index.json\n- Trust Center: ${SITE}/trust/\n- Corrections ledger: ${SITE}/trust/corrections.json\n- Knowledge graph: ${SITE}/knowledge/graph.json\n`;
+const arwpRouting = `\n- Project history: ${SITE}/history/\n- Machine-readable history: ${SITE}/history.json\n- Decision situations: ${SITE}/situations/\n- Deep decision guide data: ${SITE}/data/situation-guides.json\n- Deep decision guide schema: ${SITE}/schemas/situation-guides.schema.json\n- Agent locale manifest: ${SITE}/ai/locales.json\n- Growth owner review receipt: ${SITE}/ai/growth-review.json\n- German agent routing: ${SITE}/de/llms.txt\n- Russian agent routing: ${SITE}/ru/llms.txt\n- AI Search & Citation Profile: ${SITE}/ai/ai-search-profile.json\n- Canonical citation index: ${SITE}/citation-index.json\n- Trust Center: ${SITE}/trust/\n- Corrections ledger: ${SITE}/trust/corrections.json\n- Knowledge graph: ${SITE}/knowledge/graph.json\n`;
 if (!llms.includes("AI Search & Citation Profile:")) {
   const anchor = `- Canonical website: ${SITE}/`;
   llms = llms.includes(anchor) ? llms.replace(anchor, `${anchor}${arwpRouting}`) : `${llms.trim()}\n${arwpRouting}`;
