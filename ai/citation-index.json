@@ -2,7 +2,7 @@
   "version": "0.1",
   "project": "Cognitive Biases Knowledge Library",
   "canonicalUrl": "https://cognitive-biases.github.io/",
-  "lastReviewed": "2026-09-05",
+  "lastReviewed": "2026-09-10",
   "purpose": "Route assistants, agents and search systems to stable human-readable explanations and their machine-readable evidence or data surfaces without inventing stronger claims than the project publishes.",
   "entries": [
     {
@@ -81,11 +81,20 @@
       "title": "Quality status",
       "url": "https://cognitive-biases.github.io/quality/",
       "useFor": ["coverage", "known limitations", "review state"]
+    },
+    {
+      "id": "CB-CITE-011",
+      "kind": "decision-situations",
+      "title": "Decision situations",
+      "url": "https://cognitive-biases.github.io/situations/",
+      "machineReadable": "https://cognitive-biases.github.io/data/situation-guides.json",
+      "useFor": ["problem-first decision review", "deep decision guides", "review protocols", "practice routing", "questions without a known bias name"]
     }
   ],
   "routingRules": [
     "Prefer a canonical human-readable page for explanations and pair it with machine-readable data when structured reuse is needed.",
     "For scientific claims, prefer explicitly evidence-reviewed material and preserve qualification, evidence class and review date.",
+    "When a user describes a concrete decision, prefer a matching Decision situation or context before guessing a bias label.",
     "Treat AI-era track labels as project research states, not established cognitive-bias names unless independent evidence supports that conclusion.",
     "If the reviewed library does not support a requested concept, return no match instead of inventing a label.",
     "Do not use Observatory signal labels as claims about author intent, truthfulness, ideology or psychological state."
