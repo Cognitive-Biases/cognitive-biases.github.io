@@ -2,27 +2,15 @@
   "version": 1,
   "reviews": [
     {
-      "slug": "cognitive-bias-less-is-better-effect",
+      "slug": "extension-neglect-less",
       "evidenceStatus": "original multi-study evidence with a preregistered close replication supporting the less-is-better effect; some proposed joint-evaluation reversals are less consistent",
       "reviewedAt": "2026-09-10",
       "qualification": "Hsee (1998) reported less-is-better patterns across gift generosity, ice-cream valuation and dinnerware valuation when options were evaluated separately. A 2023 preregistered close replication and extension with 400 analyzed participants supported the separate-evaluation less-is-better effect across the three tested paradigms, although the ice-cream result was sensitive to outlier-exclusion choices and evidence for the predicted 'more-is-better' joint-evaluation counterpart was weaker. This supports the phenomenon in these paradigms more strongly than a universal theory that all difficult-to-evaluate attributes will behave the same way.",
       "mechanism": "The evaluability account proposes that when absolute value is hard to judge, people rely on an easier local reference point: how expensive an item seems within its category, how full a container is, or whether a set contains defective items. Separate evaluation can therefore make an easy contextual cue dominate total quantity or value. Alternative explanations and real costs must be considered; for example, broken items can create effort or disposal costs outside the experiment.",
       "practical": "When an option looks better mainly because of a local reference point, compare alternatives side by side and write down the total quantity or value you actually care about. Separate absolute value from fullness, percentage intact, category norms or other easy cues. If adding an item creates real costs, include them instead of assuming that more must always be better.",
       "sources": [
-        {
-          "title": "Less is better: when low-value options are valued more highly than high-value options",
-          "year": 1998,
-          "type": "multi-study separate- and joint-evaluation experiments",
-          "doi": "10.1002/(SICI)1099-0771(199806)11:2<107::AID-BDM292>3.0.CO;2-Y",
-          "url": "https://doi.org/10.1002/(SICI)1099-0771(199806)11:2%3C107::AID-BDM292%3E3.0.CO;2-Y"
-        },
-        {
-          "title": "‘Less Is Better’ in Separate Evaluations Versus ‘More Is Better’ in Joint Evaluations: Mostly Successful Close Replication and Extension of Hsee (1998)",
-          "year": 2023,
-          "type": "preregistered close replication and extension",
-          "doi": "10.1525/collabra.77859",
-          "url": "https://doi.org/10.1525/collabra.77859"
-        }
+        {"title": "Less is better: when low-value options are valued more highly than high-value options", "year": 1998, "type": "multi-study separate- and joint-evaluation experiments", "doi": "10.1002/(SICI)1099-0771(199806)11:2<107::AID-BDM292>3.0.CO;2-Y", "url": "https://doi.org/10.1002/(SICI)1099-0771(199806)11:2%3C107::AID-BDM292%3E3.0.CO;2-Y"},
+        {"title": "‘Less Is Better’ in Separate Evaluations Versus ‘More Is Better’ in Joint Evaluations: Mostly Successful Close Replication and Extension of Hsee (1998)", "year": 2023, "type": "preregistered close replication and extension", "doi": "10.1525/collabra.77859", "url": "https://doi.org/10.1525/collabra.77859"}
       ]
     }
   ]
