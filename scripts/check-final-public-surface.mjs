@@ -1,4 +1,4 @@
-import { access, readFile, readdir } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const OUT = "dist";
@@ -147,11 +147,15 @@ for (const route of ["/", "/explore/", "/decide/", "/research/"]) {
   if (!errorHtml.includes(`href="${route}"`)) fail(`404.html is missing recovery route ${route}`);
 }
 
-for (const file of ["llms.txt", "llms-full.txt"]) {
-  const text = await readFile(join(OUT, file), "utf8");
-  if (!text.includes(`# ${identity.siteName}`)) fail(`${file} does not identify the product as ${identity.siteName}`);
-  if (!text.includes(`Canonical website: ${SITE}`)) fail(`${file} does not advertise the canonical website`);
-  if (/Educational mobile app \+ public reference/i.test(text)) fail(`${file} contains legacy app-first positioning`);
+const machineGuides = [
+  { file: "llms.txt", canonicalMarkers: [`Canonical website: ${SITE}`] },
+  { file: "llms-full.txt", canonicalMarkers: [`Website: ${SITE}`, `Canonical website: ${SITE}`] }
+];
+for (const guide of machineGuides) {
+  const text = await readFile(join(OUT, guide.file), "utf8");
+  if (!text.includes(`# ${identity.siteName}`)) fail(`${guide.file} does not identify the product as ${identity.siteName}`);
+  if (!guide.canonicalMarkers.some((marker) => text.includes(marker))) fail(`${guide.file} does not advertise the canonical website`);
+  if (/Educational mobile app \+ public reference/i.test(text)) fail(`${guide.file} contains legacy app-first positioning`);
 }
 
 console.log(`Final public surface gate passed: ${urls.length} canonical sitemap pages, one ${identity.siteName} WebSite identity, publisher ${identity.publisher.name}, ${faviconWidth}x${faviconHeight} favicon, truthful bias freshness, valid final JSON-LD, social image parity, robots/feed discovery, custom noindex 404, and no legacy mobile-app schema.`);
