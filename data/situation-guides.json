@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-10",
+  "description": "Deep, situation-first decision guides. Each record extends a canonical situation with a problem question, five-step review, worked example, decision record, evidence boundary and links to existing practice, comparisons or reviewed research.",
+  "guides": [
+    {
+      "situation": "hiring-interviews",
+      "tier": "deep",
+      "reviewedAt": "2026-09-10",
+      "hook": "Confidence is cheap. Comparable evidence is slower.",
+      "problemQuestion": "How do we compare candidates without letting the first ten minutes write the rest of the interview?",
+      "whyHard": [
+        "Interviews compress a lot of noisy information into a short meeting. Confidence, fluency, similarity and one memorable answer can feel diagnostic before the job evidence is complete. Once an early story forms, later answers are easy to read through that story.",
+        "A stronger process does not require pretending human judgment can be removed. It makes the judgment inspectable: fix the criteria first, ask comparable questions, record evidence before the overall rating and compare independent views before the group starts negotiating a shared story."
+      ],
+      "reviewProtocol": [
+        "Write four to six role criteria and any real disqualifiers before the interview starts.",
+        "Ask the same core evidence questions for every candidate, then add follow-ups only where the answer needs clarification.",
+        "Record evidence against each criterion before writing an overall rating or discussing the candidate with the group.",
+        "Ask what evidence would lower the current top candidate and what evidence would raise the next candidate.",
+        "Compare independent ratings, disagreements and missing evidence before making the final ranking."
+      ],
+      "workedExample": {
+        "title": "The polished candidate",
+        "setup": "A candidate gives a confident first answer and has an easy conversation with the panel. The next candidate is less polished but gives stronger examples for two critical parts of the role.",
+        "weakReview": "The panel describes the first candidate as a better fit and then searches the notes for examples that support that impression.",
+        "strongerReview": "The panel scores both candidates against the same prewritten criteria, separates communication style from job evidence, records uncertainty and discusses the largest rating differences before choosing."
+      },
+      "decisionRecord": [
+        "Role criteria fixed before the interview.",
+        "Evidence for and against each important criterion.",
+        "Independent rating before group discussion.",
+        "Largest uncertainty or missing evidence.",
+        "What new evidence would change the ranking."
+      ],
+      "comparisonSlugs": [
+        "hindsight-bias-vs-outcome-bias"
+      ],
+      "researchNoteSlugs": [],
+      "evidenceBoundary": "Anchoring, confirmation bias and outcome bias are useful questions to test here, not diagnoses of an interviewer. Structured criteria can improve consistency, but they do not guarantee that the final hire will be correct.",
+      "sourceBoundary": "This guide combines existing project evidence, reviewed comparison material and scenario practice. It does not create a new scientific claim."
+    },
+    {
+      "situation": "project-estimation",
+      "tier": "deep",
+      "reviewedAt": "2026-09-10",
+      "searchIntent": "forecasting-estimation",
+      "hook": "A target date is not a forecast wearing a tie.",
+      "problemQuestion": "How do we estimate a project when the business already has a date in mind?",
+      "whyHard": [
+        "A target is useful for planning, but it becomes dangerous when it quietly turns into the starting estimate. Detailed plans then explain how the date could work while comparable completed work, rework and ordinary delays stay outside the frame.",
+        "The outside view is not an excuse to ignore project details. It is a second source of evidence. A useful estimate keeps the target, the forecast and the assumptions separate so the team can see whether it is committing to a date or predicting one."
+      ],
+      "reviewProtocol": [
+        "Make an independent first estimate or range before discussing the target date in detail.",
+        "Choose a reference class of genuinely comparable completed work and record the observed range.",
+        "List the few assumptions that would move the current project toward the fast or slow end of that range.",
+        "Show the business target and the forecast as two separate numbers instead of averaging them into one comfortable answer.",
+        "Define the evidence or milestone that should trigger an estimate update and keep the previous forecast for calibration."
+      ],
+      "workedExample": {
+        "title": "The twelve-week migration",
+        "setup": "A steering group wants a migration completed in twelve weeks. The project plan can be drawn to fit twelve weeks, but the closest completed projects took sixteen to twenty-four weeks and all had fewer dependencies.",
+        "weakReview": "The team adds a small buffer to the twelve-week target and calls the result conservative.",
+        "strongerReview": "The team starts with the comparable-project range, explains which current differences could justify moving within that range and reports the twelve-week date separately as a business target that would require explicit scope, capacity or risk changes."
+      },
+      "decisionRecord": [
+        "Business target and reason for it.",
+        "Independent forecast range.",
+        "Reference class and why it is comparable.",
+        "Assumptions that drive the fast and slow cases.",
+        "Update trigger and previous forecast for later calibration."
+      ],
+      "comparisonSlugs": [],
+      "researchNoteSlugs": [
+        "planning-fallacy-project-estimates-outside-view"
+      ],
+      "evidenceBoundary": "Planning fallacy, anchoring and availability are plausible lenses for the reasoning process. Real delivery also depends on scope, skills, dependencies, incentives and technical constraints, so a late project is not proof of a cognitive bias.",
+      "sourceBoundary": "The guide reuses the project's reviewed planning-fallacy synthesis and anchoring evidence. Reference-class forecasting is a practical procedure, not a universal correction formula."
+    },
+    {
+      "situation": "negotiation",
+      "tier": "deep",
+      "reviewedAt": "2026-09-10",
+      "hook": "The first number is information, not gravity.",
+      "problemQuestion": "How do we use the other side's offer without letting it define our range?",
+      "whyHard": [
+        "Negotiations often begin with a number before both sides have exposed the evidence behind it. That number can become the reference point for later judgments, while public positions make it harder to update without feeling inconsistent.",
+        "A better process keeps the independent range, the reservation point and the reasons for changing them visible. The goal is not to ignore the first offer. It is to evaluate it as new information instead of quietly rebuilding the whole analysis around it."
+      ],
+      "reviewProtocol": [
+        "Set an independent target range, reservation point and best alternative before receiving or discussing the other side's first number.",
+        "Write the evidence behind the range: comparable prices, value, costs, constraints and important unknowns.",
+        "Separate underlying interests from the public position so more than one package can satisfy the real objective.",
+        "Define which new facts would move the reservation point and which facts would not.",
+        "After an anchor arrives, recalculate from the evidence before making a counteroffer instead of starting from the other side's number."
+      ],
+      "workedExample": {
+        "title": "The 180k opening offer",
+        "setup": "A vendor opens at 180k. Before the call, the buyer's comparable deals and internal value model supported a range around 120k to 140k.",
+        "weakReview": "The team treats 180k as the new reality and argues about whether a midpoint near 160k would be a fair compromise.",
+        "strongerReview": "The team returns to the independent range, checks whether the offer revealed any new facts, updates only for evidence that matters and builds a counterproposal around price, scope and terms rather than splitting the first number."
+      },
+      "decisionRecord": [
+        "Independent target range before the first offer.",
+        "Reservation point and best alternative.",
+        "Evidence and comparables behind the range.",
+        "Facts that would justify an update.",
+        "Alternative packages that protect the same interests."
+      ],
+      "comparisonSlugs": [],
+      "researchNoteSlugs": [],
+      "evidenceBoundary": "Anchoring is well supported in numerical judgment, but a negotiation also depends on alternatives, information, incentives and bargaining power. Movement toward an opening offer is not, by itself, proof that anchoring caused the decision.",
+      "sourceBoundary": "This guide uses the project's anchoring evidence and existing negotiation practice. It is a decision-review procedure, not legal or commercial advice."
+    },
+    {
+      "situation": "ai-assisted-research",
+      "tier": "deep",
+      "reviewedAt": "2026-09-10",
+      "searchIntent": "ai-assisted-decisions",
+      "hook": "Three fluent answers are still one model conversation, not three independent sources.",
+      "problemQuestion": "How do I use AI to move faster without letting the model choose the frame and verify itself?",
+      "whyHard": [
+        "AI compresses search, synthesis and argument into one smooth interface. That is useful, but it makes provenance easy to lose: a sentence can sound finished before its source, boundary conditions or uncertainty have been checked.",
+        "Repeated model answers are also correlated evidence. Asking the same system three ways can reveal useful alternatives, but it does not create three independent studies. A strong workflow separates model output from source evidence and keeps track of what actually changed the conclusion."
+      ],
+      "reviewProtocol": [
+        "Write the research question, current belief or initial estimate before asking the model for an answer.",
+        "Turn the answer into a short claim-to-source table and mark claims that have no inspectable source.",
+        "Open the important sources and verify that they support the claim, population, time period and strength of wording used in the summary.",
+        "Test at least one competing explanation or search path that does not depend on the model's first framing.",
+        "Count independent sources rather than generated summaries, then record which evidence changed your confidence and which uncertainty remains."
+      ],
+      "workedExample": {
+        "title": "The study that supposedly proves it",
+        "setup": "An AI assistant says a recent study proves that a workplace intervention improves performance and provides a confident paragraph explaining why.",
+        "weakReview": "The researcher asks two follow-up prompts, receives similar explanations and treats the repeated agreement as confirmation.",
+        "strongerReview": "The researcher isolates the empirical claim, opens the cited source, checks the sample and outcome measure, searches for a competing review or replication and records whether the evidence supports 'improves', 'may improve' or no useful conclusion."
+      },
+      "decisionRecord": [
+        "Question and belief before the first AI answer.",
+        "Key claims with inspectable source links.",
+        "Independent source count, not answer count.",
+        "Contradictory or missing evidence.",
+        "Confidence change and reason for the change."
+      ],
+      "comparisonSlugs": [
+        "anchoring-effect-vs-automation-bias",
+        "confirmation-bias-vs-congruence-bias"
+      ],
+      "researchNoteSlugs": [
+        "anchoring-ai-assisted-decisions-first-number",
+        "llm-cognitive-biases-what-recent-research-shows"
+      ],
+      "evidenceBoundary": "Automation bias, anchoring and illusory truth are lenses for checking the workflow. An AI answer can be correct, and a repeated answer can still be useful. The problem is treating fluency, automation or repetition as a substitute for independent evidence.",
+      "sourceBoundary": "The guide uses reviewed project evidence and research syntheses. It does not claim that one model response reveals a psychological state in the user or the model."
+    },
+    {
+      "situation": "kpi-review",
+      "tier": "deep",
+      "reviewedAt": "2026-09-10",
+      "searchIntent": "kpis-proxy-metrics",
+      "hook": "A green dashboard can still be describing a bad outcome.",
+      "problemQuestion": "Is the metric measuring the goal, or has the metric quietly become the goal?",
+      "whyHard": [
+        "Teams need proxies because many goals are difficult to observe directly. The trouble starts when a convenient score stops being treated as partial evidence and becomes the definition of success. A number is easier to compare than a messy objective, so the substitution can happen without anyone deciding to do it.",
+        "Metric problems are not all the same. Surrogation asks whether the proxy is replacing the goal in judgment or action. Systematic bias asks whether the measurement process itself is shifted. Outcome bias and confirmation bias can create additional reasoning problems around a good score. Different failures need different fixes."
+      ],
+      "reviewProtocol": [
+        "Write the real objective in ordinary language before opening the dashboard.",
+        "State what the metric measures directly, what it only approximates and at least one important dimension it misses.",
+        "Run the gaming test: describe a realistic action that improves the number while leaving the objective unchanged or worse.",
+        "Compare the score with an outcome measure, validation sample, companion metric or qualitative evidence that does not share the same blind spot.",
+        "Review the process and incentives behind the score, then define when the metric should be changed, complemented or retired."
+      ],
+      "workedExample": {
+        "title": "The green support dashboard",
+        "setup": "A support team meets its response-time KPI by closing difficult tickets early and reopening them later. The dashboard improves while repeat contacts and customer frustration rise.",
+        "weakReview": "Leaders treat the green KPI as proof that the process works and ask how to push the score even higher.",
+        "strongerReview": "The team separates response time from the customer outcome, checks how workflow choices affect the metric, adds repeat-contact evidence and asks whether the KPI still represents the objective it was designed to support."
+      },
+      "decisionRecord": [
+        "Underlying objective in plain language.",
+        "Metric definition and what it captures.",
+        "Important dimensions the metric misses.",
+        "How the number can be improved without improving the goal.",
+        "Independent outcome or validation evidence.",
+        "Trigger for changing or retiring the metric."
+      ],
+      "comparisonSlugs": [
+        "surrogation-vs-systematic-bias"
+      ],
+      "researchNoteSlugs": [
+        "surrogation-when-a-kpi-starts-replacing-the-goal"
+      ],
+      "evidenceBoundary": "The project treats surrogation as a narrower management-accounting construct, not as a synonym for every bad metric. A KPI can also fail because of data quality, incentives, sampling, calibration or an unsuitable objective, so the label should never replace direct measurement analysis.",
+      "sourceBoundary": "This guide links a reviewed surrogation synthesis and the separate systematic-bias comparison while keeping the existing evidence-reviewed cognitive lenses visible."
+    }
+  ]
+}
