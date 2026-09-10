@@ -86,6 +86,7 @@
   "recordFamilyOverrides": {
     "51": "attention-information",
     "64": "time-commitment",
+    "71": "social-judgment",
     "76": "valuation-choice",
     "78": "valuation-choice",
     "81": "future-state-forecasting",
@@ -134,8 +135,7 @@
     "178": "past-present-comparison",
     "204": "past-present-comparison",
     "222": "valuation-choice",
-    "223": "time-commitment",
-    "225": "social-judgment"
+    "223": "time-commitment"
   },
   "recordContexts": {
     "9": ["human-ai-interaction"],
