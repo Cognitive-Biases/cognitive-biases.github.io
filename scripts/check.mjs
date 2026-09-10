@@ -35,11 +35,16 @@ const publishedFamilySlugs = new Set(publishedFamilies.map((family) => family.sl
 const missingUrls = canonicalBiases.filter((bias) => !sitemap.includes(`/biases/${bias.slug}/`));
 if (missingUrls.length) throw new Error(`Sitemap is missing ${missingUrls.length} canonical published bias URLs.`);
 
-const missingDates = canonicalBiases.filter((bias) => {
-  if (!/^\d{4}-\d{2}-\d{2}/.test(bias.updatedAt || "")) return false;
-  return !sitemap.includes(`<loc>https://cognitive-biases.github.io/biases/${bias.slug}/</loc><lastmod>${bias.updatedAt.slice(0, 10)}</lastmod>`);
+const fabricatedBiasDates = canonicalBiases.filter((bias) => {
+  const loc = `<loc>https://cognitive-biases.github.io/biases/${bias.slug}/</loc>`;
+  const start = sitemap.indexOf(loc);
+  if (start < 0) return false;
+  const close = sitemap.indexOf("</url>", start);
+  return sitemap.slice(start, close).includes("<lastmod>");
 });
-if (missingDates.length) throw new Error(`Sitemap has incorrect lastmod metadata for ${missingDates.length} canonical bias URLs.`);
+if (fabricatedBiasDates.length) {
+  throw new Error(`Sitemap exposes unproven lastmod metadata for ${fabricatedBiasDates.length} canonical bias URLs. Base-record updatedAt values do not represent all later evidence, navigation and structured-data changes on the generated page.`);
+}
 
 if (!explore.includes('"@type":"DefinedTermSet"') || !explore.includes("/explore/#bias-library")) {
   throw new Error("Explore page is missing the DefinedTermSet structured-data node.");
@@ -81,4 +86,4 @@ for (const bias of biases) {
 }
 
 const reviewedFamilyCount = canonicalBiases.filter((bias) => familyFor(bias)).length;
-console.log(`Static site check passed: ${biases.length} bias pages (${canonicalBiases.length} canonical), ${categories.length} category anchors, ${publishedFamilies.length} canonical family hubs, ${reviewedFamilyCount} canonical family mappings, structured data, and sitemap metadata verified.`);
+console.log(`Static site check passed: ${biases.length} bias pages (${canonicalBiases.length} canonical), ${categories.length} category anchors, ${publishedFamilies.length} canonical family hubs, ${reviewedFamilyCount} canonical family mappings, structured data, and sitemap inventory/freshness policy verified.`);

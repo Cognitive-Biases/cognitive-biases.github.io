@@ -56,6 +56,12 @@ for (const route of UNDATED_STATIC_ROUTES) {
   }
 }
 
+let biasFreshnessChanged = 0;
+sitemap = sitemap.replace(/(<url><loc>https:\/\/cognitive-biases\.github\.io\/biases\/[^<]+<\/loc>)<lastmod>[^<]+<\/lastmod>(<\/url>)/g, (_match, open, close) => {
+  biasFreshnessChanged += 1;
+  return `${open}${close}`;
+});
+
 const remainingSyntheticDates = UNDATED_STATIC_ROUTES.filter((route) => {
   const url = `${SITE}${route}`;
   return new RegExp(`<url><loc>${escapeRegExp(url)}</loc><lastmod>`, "i").test(sitemap);
@@ -63,6 +69,9 @@ const remainingSyntheticDates = UNDATED_STATIC_ROUTES.filter((route) => {
 if (remainingSyntheticDates.length) {
   throw new Error(`Sitemap still exposes build-time lastmod for static routes without reliable modification dates: ${remainingSyntheticDates.join(", ")}`);
 }
-if (freshnessChanged) await writeFile(SITEMAP_PATH, sitemap);
+if (/<url><loc>https:\/\/cognitive-biases\.github\.io\/biases\/[^<]+<\/loc><lastmod>/i.test(sitemap)) {
+  throw new Error("Sitemap still exposes build-time lastmod for bias pages without per-page modification provenance.");
+}
+if (freshnessChanged || biasFreshnessChanged) await writeFile(SITEMAP_PATH, sitemap);
 
-console.log(`Late finalizer: SEO metadata updated on ${seoChanged} page(s); optimized brand source repaired on ${brandChanged} page(s); sitemap lastmod removed from ${freshnessChanged} static route(s) without reliable modification dates.`);
+console.log(`Late finalizer: SEO metadata updated on ${seoChanged} page(s); optimized brand source repaired on ${brandChanged} page(s); sitemap lastmod removed from ${freshnessChanged} undated static route(s) and ${biasFreshnessChanged} bias page(s) without reliable per-page dates.`);

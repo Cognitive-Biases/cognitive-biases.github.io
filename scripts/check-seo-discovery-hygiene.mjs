@@ -40,6 +40,10 @@ for (const path of ["/data/", "/partners/"]) {
   if (block.includes("<lastmod>")) throw new Error(`${path}: lastmod must be omitted until the page has a reliable maintained content date.`);
 }
 
+const biasBlocks = [...sitemap.matchAll(/<url><loc>https:\/\/cognitive-biases\.github\.io\/biases\/[^<]+<\/loc>([\s\S]*?)<\/url>/g)];
+const biasBlocksWithLastmod = biasBlocks.filter((match) => match[1].includes("<lastmod>"));
+if (biasBlocksWithLastmod.length) throw new Error(`Bias sitemap freshness is fabricated for ${biasBlocksWithLastmod.length} page(s); omit lastmod until per-page modification provenance exists.`);
+
 if (!feed.includes('<feed xmlns="http://www.w3.org/2005/Atom">')) throw new Error("Research feed is not valid Atom 1.0 markup.");
 if (!feed.includes(`<link href="${SITE}/research/feed.xml" rel="self" type="application/atom+xml"/>`)) throw new Error("Research feed is missing its self link.");
 const feedEntries = (feed.match(/<entry>/g) || []).length;
@@ -73,4 +77,4 @@ if (digestSchema.$id !== `${SITE}/schemas/monthly-research-digests.schema.json`)
 if (!robots.includes(`Sitemap: ${SITE}/sitemap.xml`)) throw new Error("robots.txt is missing the XML sitemap.");
 if (!robots.includes(`Sitemap: ${SITE}/research/feed.xml`)) throw new Error("robots.txt is missing the research Atom feed sitemap.");
 
-console.log(`SEO discovery hygiene passed: ${feedEntries} feed entries (${(digests.digests || []).length} monthly digest(s)), truthful Research lastmod values, public digest data + schema, and no fabricated lastmod for undated resource pages.`);
+console.log(`SEO discovery hygiene passed: ${feedEntries} feed entries (${(digests.digests || []).length} monthly digest(s)), truthful Research lastmod values, ${biasBlocks.length} bias pages without fabricated lastmod, public digest data + schema, and no fabricated lastmod for undated resource pages.`);
