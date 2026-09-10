@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-10",
+  "title": "AI Systematic Biases",
+  "description": "An evidence-backed catalog of repeatable directional sensitivities and evaluation distortions observed in large language models. These labels describe measured model behaviour, not human mental states.",
+  "terminologyBoundary": "AI systems do not need to possess human psychology for their outputs to show systematic bias. Human bias names are used only when an experimental manipulation is meaningfully analogous. Every model-specific claim is a dated evidence snapshot, not a permanent property of a provider or model family.",
+  "reviewPolicy": {
+    "defaultReviewDays": 180,
+    "volatileModelSnapshotDays": 90,
+    "rules": [
+      "Keep historical findings when models change, but label them historical rather than silently treating them as current.",
+      "Do not infer behaviour for a newer model version from an older version or another provider.",
+      "Prefer peer-reviewed multi-model studies, controlled benchmarks and provider incident reports over anecdotes.",
+      "Separate preprints from peer-reviewed evidence and describe important methodological limits.",
+      "Re-run project benchmarks when a materially new model generation or evaluation method appears."
+    ]
+  },
+  "contexts": [
+    "chat-assistants",
+    "coding-and-automation-agents",
+    "rag-and-document-assistants",
+    "research-and-summarization",
+    "llm-as-a-judge",
+    "decision-support",
+    "benchmarks-and-multiple-choice"
+  ],
+  "entries": [
+    {
+      "slug": "sycophancy",
+      "name": "Sycophancy",
+      "category": "conversational-alignment",
+      "humanAnalogy": "agreement pressure and confirmation-seeking",
+      "definition": "A model shifts toward the user's stated or implied position when accuracy or independent judgment should matter more than agreement.",
+      "whyItMatters": "In advice, review and decision support, an agreeable answer can feel helpful while quietly removing the independent check the user expected.",
+      "evidenceLevel": "peer-reviewed-multi-model-plus-provider-incident",
+      "evidenceStatus": "strong, but model- and task-dependent",
+      "contexts": ["chat-assistants", "coding-and-automation-agents", "decision-support", "research-and-summarization"],
+      "signals": [
+        "A factual answer changes after the user states a preferred answer.",
+        "A critique becomes materially softer after the user says they already chose the option.",
+        "Reasoning appears to justify agreement after the conclusion has shifted."
+      ],
+      "selfTest": "Ask the same objective question in fresh chats. In one condition, add a confident but wrong user opinion. Compare correctness and confidence, not friendliness.",
+      "mitigations": [
+        "Ask for an independent assessment before revealing your preferred answer.",
+        "For important decisions, require evidence for and against the user's current view.",
+        "Use counterfactual or adversarial review prompts and compare fresh-context runs."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "GPT-4o in ChatGPT, April 2025 update",
+          "observedAt": "2025-04-25",
+          "status": "historical-rolled-back",
+          "finding": "OpenAI reported that this update became overly flattering or agreeable and rolled it back.",
+          "source": "https://openai.com/index/sycophancy-in-gpt-4o/"
+        },
+        {
+          "scope": "multiple LLMs in ACL 2026 study",
+          "observedAt": "2026-07-01",
+          "status": "peer-reviewed-snapshot",
+          "finding": "Reasoning generally reduced final-answer sycophancy in the study, but some reasoning traces masked agreement through inconsistent or one-sided justification.",
+          "source": "https://aclanthology.org/2026.acl-long.1126/"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Good Arguments Against the People Pleasers: How Reasoning Mitigates (Yet Masks) LLM Sycophancy",
+          "venue": "ACL 2026",
+          "year": 2026,
+          "doi": "10.18653/v1/2026.acl-long.1126",
+          "url": "https://aclanthology.org/2026.acl-long.1126/"
+        },
+        {
+          "kind": "provider-incident",
+          "title": "Sycophancy in GPT-4o: what happened and what we're doing about it",
+          "venue": "OpenAI",
+          "year": 2025,
+          "url": "https://openai.com/index/sycophancy-in-gpt-4o/"
+        }
+      ]
+    },
+    {
+      "slug": "anchoring-like-sensitivity",
+      "name": "Anchoring-like sensitivity",
+      "category": "prompt-and-context",
+      "humanAnalogy": "anchoring effect",
+      "definition": "A model's numeric judgment moves systematically toward an irrelevant or weakly relevant value supplied in the prompt.",
+      "whyItMatters": "Price estimates, effort forecasts, risk estimates and planning answers can inherit a number placed into the context before the model forms its own estimate.",
+      "evidenceLevel": "peer-reviewed-multi-model",
+      "evidenceStatus": "strong experimental evidence; magnitude varies by model and prompt",
+      "contexts": ["chat-assistants", "coding-and-automation-agents", "decision-support"],
+      "signals": [
+        "Estimates move when only an initial number changes.",
+        "The model repeats an expert hint even after being asked to ignore it.",
+        "Simple reflection or chain-of-thought prompts do not reliably remove the shift."
+      ],
+      "selfTest": "Create a low-anchor, no-anchor and high-anchor version of the same estimation question. Run each condition repeatedly in fresh contexts and compare the distributions.",
+      "mitigations": [
+        "Generate an independent estimate before showing external estimates.",
+        "Collect several independent reference points rather than one anchor.",
+        "Use paired tests when an important workflow contains suggested numbers."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "GPT-4o, GPT-4, GPT-3.5 Turbo, GPT-o3, DeepSeek-R1-Qwen-32B, Gemini 2.5 Flash, Gemini 2.5 Flash-Lite, Claude 3 Haiku and Claude 3.5 Haiku as tested by Lou and Sun",
+          "observedAt": "2025-12-05",
+          "status": "peer-reviewed-snapshot",
+          "finding": "The study reported anchoring susceptibility across tested model families, with heterogeneous effect sizes and limited benefit from several simple prompting mitigations.",
+          "source": "https://doi.org/10.1007/s42001-025-00435-2"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Anchoring bias in large language models: an experimental study",
+          "venue": "Journal of Computational Social Science",
+          "year": 2026,
+          "doi": "10.1007/s42001-025-00435-2",
+          "url": "https://doi.org/10.1007/s42001-025-00435-2"
+        }
+      ]
+    },
+    {
+      "slug": "judge-position-bias",
+      "name": "Judge position bias",
+      "category": "evaluation",
+      "humanAnalogy": "primacy and position effects",
+      "definition": "An LLM evaluator can change its preference when the same candidate answers are shown in a different order.",
+      "whyItMatters": "If an LLM judge selects releases, scores agents or filters generated content, answer order can become an invisible evaluation variable.",
+      "evidenceLevel": "peer-reviewed-large-scale-multi-model",
+      "evidenceStatus": "strong for LLM-as-a-judge settings; varies across judges, tasks and quality gaps",
+      "contexts": ["llm-as-a-judge", "coding-and-automation-agents"],
+      "signals": [
+        "A/B preference changes after swapping candidates.",
+        "The same judge is inconsistent across repeated order permutations.",
+        "Close-quality candidates show larger order effects than clearly different candidates."
+      ],
+      "selfTest": "Evaluate A vs B and B vs A with identical rubric and fresh context. Treat disagreement as a reliability signal instead of choosing one order as canonical.",
+      "mitigations": [
+        "Counterbalance candidate order.",
+        "Run repeated judgments and report position consistency.",
+        "Use multiple judges or human review when the quality gap is small."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "15 LLM judges across MTBench and DevBench",
+          "observedAt": "2025-12-01",
+          "status": "peer-reviewed-snapshot",
+          "finding": "A study of more than 150,000 evaluation instances found non-random position bias with substantial variation by judge, candidate and task.",
+          "source": "https://aclanthology.org/2025.ijcnlp-long.18/"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge",
+          "venue": "IJCNLP-AACL 2025",
+          "year": 2025,
+          "doi": "10.18653/v1/2025.ijcnlp-long.18",
+          "url": "https://aclanthology.org/2025.ijcnlp-long.18/"
+        }
+      ]
+    },
+    {
+      "slug": "judge-superficial-quality-bias",
+      "name": "Judge superficial-quality bias",
+      "category": "evaluation",
+      "humanAnalogy": "style-over-substance and fluency effects",
+      "definition": "An LLM evaluator can prefer answers with stronger surface presentation, such as verbosity or fluency, even when those signals are not the target quality.",
+      "whyItMatters": "Automated evaluation can accidentally reward longer, smoother output instead of instruction following, correctness or usefulness.",
+      "evidenceLevel": "peer-reviewed-multi-study",
+      "evidenceStatus": "established evaluation risk; exact strength is judge- and task-dependent",
+      "contexts": ["llm-as-a-judge", "research-and-summarization", "coding-and-automation-agents"],
+      "signals": [
+        "Scores rise when an answer is padded without adding relevant information.",
+        "Fluent but instruction-breaking answers outrank concise compliant ones.",
+        "A judge's rubric says correctness matters, while decisions track surface quality."
+      ],
+      "selfTest": "Create semantically matched concise and padded answers, including one padded answer with a controlled instruction-following defect. Compare judge scores and rationales.",
+      "mitigations": [
+        "Score explicit dimensions separately instead of asking for one overall impression.",
+        "Include adversarially verbose negatives in evaluator tests.",
+        "Calibrate automated judging against human-reviewed edge cases."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "LLM judges studied in MT-Bench/Chatbot Arena and later evaluation-bias work",
+          "observedAt": "2024-07-01",
+          "status": "peer-reviewed-historical-snapshot",
+          "finding": "Published evaluation studies identify verbosity and other superficial-quality preferences as limitations of LLM judges.",
+          "source": "https://papers.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena",
+          "venue": "NeurIPS 2023 Datasets and Benchmarks",
+          "year": 2023,
+          "doi": "10.52202/075280-2020",
+          "url": "https://papers.neurips.cc/paper_files/paper/2023/hash/91f18a1287b398d378ef22505bf41832-Abstract-Datasets_and_Benchmarks.html"
+        },
+        {
+          "kind": "peer-reviewed",
+          "title": "Mitigating the Bias of Large Language Model Evaluation",
+          "venue": "CCL 2024",
+          "year": 2024,
+          "doi": "10.18653/v1/2024.ccl-1.101",
+          "url": "https://aclanthology.org/2024.ccl-1.101/"
+        }
+      ]
+    },
+    {
+      "slug": "option-order-sensitivity",
+      "name": "Option-order sensitivity",
+      "category": "prompt-and-context",
+      "humanAnalogy": "order and position effects",
+      "definition": "A model's multiple-choice accuracy or selected option can change when answer choices are reordered without changing their meaning.",
+      "whyItMatters": "Benchmarks, classification prompts and structured agent decisions can produce different results because of layout rather than reasoning quality.",
+      "evidenceLevel": "peer-reviewed-multi-model",
+      "evidenceStatus": "strong benchmark evidence; older model snapshot should be retested on new generations",
+      "contexts": ["benchmarks-and-multiple-choice", "decision-support", "coding-and-automation-agents"],
+      "signals": [
+        "Accuracy changes materially across permutations of identical options.",
+        "A particular slot is preferred when the model is uncertain between top choices."
+      ],
+      "selfTest": "Permute answer choices across otherwise identical fresh runs. Compare both accuracy and the distribution of selected positions.",
+      "mitigations": [
+        "Randomize or counterbalance option order in evaluations.",
+        "Avoid treating a single fixed ordering as a stable measurement.",
+        "Prefer free-response verification when the task allows it."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "models and benchmarks evaluated by Pezeshkpour and Hruschka",
+          "observedAt": "2024-06-01",
+          "status": "peer-reviewed-historical-snapshot",
+          "finding": "The paper reported large accuracy gaps across option reorderings on several benchmarks, with the size depending on model and task.",
+          "source": "https://aclanthology.org/2024.findings-naacl.130/"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Large Language Models Sensitivity to The Order of Options in Multiple-Choice Questions",
+          "venue": "Findings of NAACL 2024",
+          "year": 2024,
+          "doi": "10.18653/v1/2024.findings-naacl.130",
+          "url": "https://aclanthology.org/2024.findings-naacl.130/"
+        }
+      ]
+    },
+    {
+      "slug": "context-position-sensitivity",
+      "name": "Context-position sensitivity",
+      "category": "prompt-and-context",
+      "humanAnalogy": "primacy and recency effects",
+      "definition": "A model can use the same relevant information differently depending on where that information appears in a long context.",
+      "whyItMatters": "RAG and long-document systems can miss evidence not because it was absent, but because retrieval placed it in a weak part of the context.",
+      "evidenceLevel": "peer-reviewed-multi-study",
+      "evidenceStatus": "well documented historically; newer long-context models require fresh re-testing",
+      "contexts": ["rag-and-document-assistants", "research-and-summarization", "coding-and-automation-agents"],
+      "signals": [
+        "Answer quality drops when the relevant passage moves from the beginning or end into the middle.",
+        "Retrieval succeeds but generation still ignores a centrally placed passage."
+      ],
+      "selfTest": "Hold documents constant and rotate the relevant passage through early, middle and late positions. Measure answer accuracy and citation use.",
+      "mitigations": [
+        "Test context placement as part of RAG evaluation.",
+        "Reduce irrelevant context instead of filling the entire window by default.",
+        "Use retrieval and reranking strategies that expose decisive evidence clearly."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "long-context language models evaluated by Liu et al.",
+          "observedAt": "2024-01-01",
+          "status": "peer-reviewed-historical-snapshot",
+          "finding": "Performance was often strongest when relevant information appeared near the beginning or end and weaker in the middle.",
+          "source": "https://aclanthology.org/2024.tacl-1.9/"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Lost in the Middle: How Language Models Use Long Contexts",
+          "venue": "TACL 2024",
+          "year": 2024,
+          "doi": "10.1162/tacl_a_00638",
+          "url": "https://aclanthology.org/2024.tacl-1.9/"
+        },
+        {
+          "kind": "peer-reviewed",
+          "title": "Found in the middle: Calibrating Positional Attention Bias Improves Long Context Utilization",
+          "venue": "Findings of ACL 2024",
+          "year": 2024,
+          "doi": "10.18653/v1/2024.findings-acl.890",
+          "url": "https://aclanthology.org/2024.findings-acl.890/"
+        }
+      ]
+    },
+    {
+      "slug": "external-assertion-susceptibility",
+      "name": "External-assertion susceptibility",
+      "category": "retrieval-and-sources",
+      "humanAnalogy": "authority and source-cue effects",
+      "definition": "A model can accept misleading user or document assertions instead of reliably separating useful external evidence from harmful or false assertions.",
+      "whyItMatters": "In RAG, a retrieved document may look authoritative simply because the system labeled it as context. Source conflict becomes a model-behaviour problem, not only a retrieval problem.",
+      "evidenceLevel": "peer-reviewed-large-scale-multi-model",
+      "evidenceStatus": "strong recent evidence in tested families; not a claim about every current model",
+      "contexts": ["rag-and-document-assistants", "chat-assistants", "coding-and-automation-agents", "decision-support"],
+      "signals": [
+        "The model follows a false document assertion over correct internal knowledge.",
+        "The same assertion receives different weight when labeled as a document instead of a user statement.",
+        "Post-training changes source preference without reliably improving truth discrimination."
+      ],
+      "selfTest": "Build matched cases with correct, incorrect and conflicting assertions from user and document sources. Track whether the model follows source labels or evidence quality.",
+      "mitigations": [
+        "Evaluate source conflict explicitly in RAG test sets.",
+        "Attach provenance and verification signals to retrieved evidence.",
+        "Require the model to identify conflicts before synthesizing an answer."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "27 LLMs from GPT-4o, Llama 3/3.1 and Qwen3 families",
+          "observedAt": "2026-07-01",
+          "status": "peer-reviewed-snapshot",
+          "finding": "Most tested models relied more on document assertions than user assertions and many did not reliably distinguish helpful from harmful external information.",
+          "source": "https://aclanthology.org/2026.findings-acl.1267/"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "How Large Language Models Balance Internal Knowledge with User and Document Assertions",
+          "venue": "Findings of ACL 2026",
+          "year": 2026,
+          "doi": "10.18653/v1/2026.findings-acl.1267",
+          "url": "https://aclanthology.org/2026.findings-acl.1267/"
+        }
+      ]
+    },
+    {
+      "slug": "narrative-license",
+      "name": "Narrative license in summaries",
+      "category": "scientific-communication",
+      "humanAnalogy": "story bias and confidence inflation",
+      "definition": "A model summary can make research claims sound more causal, confident or rhetorically strong than the source material supports.",
+      "whyItMatters": "Research assistants can preserve the topic while changing the epistemic strength of the evidence. The summary still sounds plausible, which makes the distortion easy to miss.",
+      "evidenceLevel": "peer-reviewed-multi-model",
+      "evidenceStatus": "strong recent evidence for scientific summarization; context-specific",
+      "contexts": ["research-and-summarization", "rag-and-document-assistants", "decision-support"],
+      "signals": [
+        "Correlational findings become causal language.",
+        "Limitations disappear while confidence increases.",
+        "A user's stated stance shifts the summary's rhetoric or emphasis."
+      ],
+      "selfTest": "Compare the source abstract with model summaries for causal verbs, certainty language, limitations and effect direction. Repeat after stating opposing user preferences.",
+      "mitigations": [
+        "Require claim-by-claim evidence mapping for important summaries.",
+        "Ask the model to preserve study design and uncertainty language explicitly.",
+        "Verify consequential claims against the primary source rather than the generated summary."
+      ],
+      "modelSnapshots": [
+        {
+          "scope": "six leading models tested on 100 peer-reviewed articles",
+          "observedAt": "2026-07-01",
+          "status": "peer-reviewed-snapshot",
+          "finding": "Basic prompts often increased causal overreach, rhetorical confidence or sentiment relative to source abstracts; guardrail prompts reduced distortions in the study.",
+          "source": "https://aclanthology.org/2026.acl-long.746/"
+        }
+      ],
+      "sources": [
+        {
+          "kind": "peer-reviewed",
+          "title": "Narrative License and Model Sycophancy in LLM Summaries of Scientific Work",
+          "venue": "ACL 2026",
+          "year": 2026,
+          "doi": "10.18653/v1/2026.acl-long.746",
+          "url": "https://aclanthology.org/2026.acl-long.746/"
+        }
+      ]
+    }
+  ]
+}
