@@ -4,8 +4,12 @@
   "id": "cognitive-biases-knowledge",
   "name": "Cognitive Biases Knowledge Library",
   "canonicalUrl": "https://cognitive-biases.github.io/",
-  "description": "Public knowledge library about cognitive biases, evidence and decision making with versioned data, monthly evidence updates, retrieval-ready releases, explicit research maturity and a local read-only MCP adapter.",
-  "languages": ["en", "de", "ru"],
+  "description": "Public knowledge library about cognitive biases, evidence and decision making with situation-first guides, versioned data, monthly evidence updates, retrieval-ready releases, explicit research maturity and a local read-only MCP adapter.",
+  "languages": [
+    "en",
+    "de",
+    "ru"
+  ],
   "web": {
     "sitemap": "https://cognitive-biases.github.io/sitemap.xml",
     "robots": "https://cognitive-biases.github.io/robots.txt",
@@ -28,6 +32,13 @@
         "mediaType": "application/json",
         "role": "release",
         "description": "Versioned knowledge-release manifest with file hashes and release metadata."
+      },
+      {
+        "name": "Decision situation guides",
+        "url": "https://cognitive-biases.github.io/data/situation-guides.json",
+        "mediaType": "application/json",
+        "role": "other",
+        "description": "Situation-first decision records. Deep guides add a problem question, five-step review protocol, worked example, decision record, evidence boundary and links to practice, comparisons or reviewed research where available."
       },
       {
         "name": "Monthly research evidence deltas",
@@ -69,7 +80,7 @@
         "url": "https://cognitive-biases.github.io/citation-index.json",
         "mediaType": "application/json",
         "role": "search-index",
-        "description": "Stable routing index for canonical explanations, evidence, research, methodology and public data surfaces."
+        "description": "Stable routing index for canonical explanations, evidence, decision situations, research, methodology and public data surfaces."
       },
       {
         "name": "Trust Center",
@@ -129,8 +140,14 @@
       "status": "experimental-project-extension",
       "defaultLanguage": "en",
       "fallbackLanguage": "en",
-      "humanInterfaceLanguages": ["en"],
-      "agentRoutingLanguages": ["en", "de", "ru"],
+      "humanInterfaceLanguages": [
+        "en"
+      ],
+      "agentRoutingLanguages": [
+        "en",
+        "de",
+        "ru"
+      ],
       "manifest": "https://cognitive-biases.github.io/ai/locales.json"
     },
     "io.github.dkharlanau/ai-search-profile": {
