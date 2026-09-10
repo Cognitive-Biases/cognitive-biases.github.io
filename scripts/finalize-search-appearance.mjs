@@ -5,7 +5,7 @@ const SITE = "https://cognitive-biases.github.io/";
 const TITLE = "Cognitive Biases: Examples, Evidence & Decision Tools";
 const DESCRIPTION = "Explore cognitive biases with clear examples, evidence reviews, comparisons and practical decision tools for everyday choices, work and AI.";
 const SITE_NAME = "Cognitive Biases";
-const ALTERNATE_NAME = "Cognitive Biases Library";
+const ALTERNATE_NAMES = ["Cognitive Biases Library", "cognitive-biases.github.io"];
 const FAVICON = "/assets/biases_icon.png";
 
 function setOrAdd(html, pattern, replacement) {
@@ -38,7 +38,7 @@ function visit(node) {
 
   if (types.includes("WebSite")) {
     node.name = SITE_NAME;
-    node.alternateName = ALTERNATE_NAME;
+    node.alternateName = ALTERNATE_NAMES;
     node.url = SITE;
     node.description = DESCRIPTION;
     sawWebsite = true;
@@ -46,7 +46,7 @@ function visit(node) {
 
   if (types.includes("Organization") && (node["@id"] === `${SITE}#organization` || node.url === SITE || node.url === SITE.slice(0, -1))) {
     node.name = SITE_NAME;
-    node.alternateName = ALTERNATE_NAME;
+    node.alternateName = ALTERNATE_NAMES;
     node.url = SITE;
     node.logo = {
       "@type": "ImageObject",
@@ -77,7 +77,7 @@ if (!sawWebsite) {
     "@id": `${SITE}#website`,
     url: SITE,
     name: SITE_NAME,
-    alternateName: ALTERNATE_NAME,
+    alternateName: ALTERNATE_NAMES,
     description: DESCRIPTION
   };
   html = html.replace("</head>", `<script type="application/ld+json" data-search-site-name="true">${JSON.stringify(website)}</script></head>`);
@@ -89,7 +89,7 @@ const required = [
   `<meta property="og:site_name" content="${SITE_NAME}">`,
   `<link rel="icon" type="image/png" sizes="80x80" href="${FAVICON}">`,
   `"name":"${SITE_NAME}"`,
-  `"alternateName":"${ALTERNATE_NAME}"`
+  `"alternateName":["Cognitive Biases Library","cognitive-biases.github.io"]`
 ];
 for (const token of required) {
   if (!html.includes(token)) throw new Error(`Search appearance finalization failed: missing ${token}`);
