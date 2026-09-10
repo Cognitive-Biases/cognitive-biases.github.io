@@ -56,8 +56,8 @@ for (const guide of guides) assert(sitemap.includes(`<loc>${SITE}/everyday/${gui
 const homepage = await readFile(join(OUT, "index.html"), "utf8");
 assert(homepage.includes("everyday-home") && homepage.includes('href="/everyday/"'), "homepage does not surface Everyday life");
 const explorePage = await readFile(join(OUT, "explore", "index.html"), "utf8");
-const primaryNav = explorePage.match(/<nav aria-label="Primary">([\s\S]*?)<\/nav>/i)?.[1] || "";
-assert(primaryNav.includes('href="/everyday/"'), "primary navigation drawer missing Everyday life");
+const footerLinks = explorePage.match(/<div class="footer-links">([\s\S]*?)<\/div>/i)?.[1] || "";
+assert(footerLinks.includes('href="/everyday/"'), "secondary navigation missing Everyday life");
 
 const llms = await readFile(join(OUT, "llms.txt"), "utf8");
 assert(llms.includes("https://cognitive-biases.github.io/everyday/"), "llms.txt does not expose Everyday life");
@@ -69,4 +69,4 @@ for (const biasSlug of uniqueBiasSlugs) {
   assert(html.includes('class="everyday-teaser"'), `${biasSlug}: everyday cross-link teaser missing`);
 }
 
-console.log(`Everyday life check passed: ${guides.length} guides across ${new Set(guides.map((guide) => guide.category)).size} categories and ${uniqueBiasSlugs.length} reviewed concepts.`);
+console.log(`Everyday life check passed: ${guides.length} guides across ${new Set(guides.map((guide) => guide.category)).size} categories and ${uniqueBiasSlugs.length} reviewed concepts, with global secondary discovery.`);

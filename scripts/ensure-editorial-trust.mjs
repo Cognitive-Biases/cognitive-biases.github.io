@@ -5,6 +5,7 @@ const OUT = "dist";
 const trust = JSON.parse(await readFile("data/project-trust.json", "utf8"));
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const trustLink = `<span class="editorial-trust-credit">Maintained by <a href="/about/editorial/">${esc(trust.maintainer.name)}</a></span>`;
+const everydayLink = '<a href="/everyday/">Everyday life</a>';
 
 async function walk(dir) {
   const files = [];
@@ -18,6 +19,7 @@ async function walk(dir) {
 
 let changed = 0;
 let footerPages = 0;
+let everydayLinks = 0;
 for (const path of await walk(OUT)) {
   let html = await readFile(path, "utf8");
   if (!html.includes("</footer>")) continue;
@@ -30,6 +32,13 @@ for (const path of await walk(OUT)) {
     html = html.replace("</footer>", `${trustLink}</footer>`);
   }
 
+  const footerPattern = /<div class="footer-links">([\s\S]*?)<\/div>/;
+  const footerMatch = html.match(footerPattern);
+  if (footerMatch && !footerMatch[1].includes('href="/everyday/"')) {
+    html = html.replace(footerPattern, `<div class="footer-links">${everydayLink}${footerMatch[1]}</div>`);
+    everydayLinks += 1;
+  }
+
   if (html !== before) {
     await writeFile(path, html);
     changed += 1;
@@ -37,4 +46,4 @@ for (const path of await walk(OUT)) {
 }
 
 if (!footerPages) throw new Error("No footer pages found while restoring editorial trust.");
-console.log(`Editorial trust preserved after final theme on ${footerPages} footer pages; ${changed} page(s) updated.`);
+console.log(`Editorial trust preserved after final theme on ${footerPages} footer pages; ${changed} page(s) updated; ${everydayLinks} Everyday life secondary links restored.`);
