@@ -7,8 +7,13 @@ const STYLES = "dist/styles.css";
 const LLMS = "dist/llms.txt";
 const DIGESTS = "data/monthly-research-digests.json";
 const DECISION_LINK = '<a class="button button--dark" href="/decide/">Open the decision review</a>';
-const SITE_FOCUS_DESCRIPTION = "More than a list of bias labels: review evidence, limits, sources and comparisons, start from real decision contexts, and use a local-first Decision Audit.";
-const SITE_FOCUS_PROOF = "For readers, learners and decision-makers who want more than a bias label. Reviewed evidence, dated sources and limits are shown where the project has them.";
+const SEARCH_TITLE = "Cognitive Biases: Examples, Evidence & Decision Tools";
+const SEARCH_DESCRIPTION = "Explore cognitive biases with clear examples, evidence reviews, comparisons and practical decision tools for everyday choices, work and AI.";
+const SITE_FOCUS_PROOF = "Cognitive Biases is a practical reference with clear examples, evidence reviews, comparisons and decision tools for real choices.";
+const SITE_NAME = "Cognitive Biases";
+const SITE_ALTERNATE_NAME = "Cognitive Biases Library";
+const SITE_URL = "https://cognitive-biases.github.io/";
+const FAVICON_PATH = "/favicon.png";
 const escape = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
   "&": "&amp;",
   "<": "&lt;",
@@ -53,6 +58,75 @@ function ensureSecondaryPractice(html) {
   return html.replace(footerPattern, `<div class="footer-links"><a href="/practice/">Practice</a>${match[1]}</div>`);
 }
 
+function ensureMeta(html, matcher, tag) {
+  if (matcher.test(html)) return html.replace(matcher, tag);
+  return html.replace("</head>", `${tag}</head>`);
+}
+
+function normalizeSearchAppearance(html) {
+  html = html.replace(/<title>[^<]*<\/title>/i, `<title>${SEARCH_TITLE}</title>`);
+  html = ensureMeta(html, /<meta\b[^>]*name=["']description["'][^>]*>/i, `<meta name="description" content="${SEARCH_DESCRIPTION}">`);
+  html = ensureMeta(html, /<meta\b[^>]*property=["']og:site_name["'][^>]*>/i, `<meta property="og:site_name" content="${SITE_NAME}">`);
+  html = ensureMeta(html, /<meta\b[^>]*property=["']og:title["'][^>]*>/i, `<meta property="og:title" content="${SEARCH_TITLE}">`);
+  html = ensureMeta(html, /<meta\b[^>]*property=["']og:description["'][^>]*>/i, `<meta property="og:description" content="${SEARCH_DESCRIPTION}">`);
+  html = ensureMeta(html, /<meta\b[^>]*name=["']twitter:title["'][^>]*>/i, `<meta name="twitter:title" content="${SEARCH_TITLE}">`);
+  html = ensureMeta(html, /<meta\b[^>]*name=["']twitter:description["'][^>]*>/i, `<meta name="twitter:description" content="${SEARCH_DESCRIPTION}">`);
+  html = ensureMeta(html, /<link\b[^>]*rel=["'](?:shortcut\s+)?icon["'][^>]*>/i, `<link rel="icon" type="image/png" sizes="192x192" href="${FAVICON_PATH}">`);
+
+  let websiteNodes = 0;
+  let organizationNodes = 0;
+  const visit = (node) => {
+    if (!node || typeof node !== "object") return;
+    if (Array.isArray(node)) {
+      for (const item of node) visit(item);
+      return;
+    }
+    const types = Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]];
+    if (types.includes("WebSite")) {
+      node.name = SITE_NAME;
+      node.alternateName = SITE_ALTERNATE_NAME;
+      node.url = SITE_URL;
+      node.description = SEARCH_DESCRIPTION;
+      websiteNodes += 1;
+    }
+    if (types.includes("Organization") && (node["@id"] === `${SITE_URL}#organization` || node.url === SITE_URL.replace(/\/$/, ""))) {
+      node.name = SITE_NAME;
+      node.alternateName = SITE_ALTERNATE_NAME;
+      node.logo = { "@type": "ImageObject", url: `${SITE_URL}favicon.png`, width: 192, height: 192 };
+      organizationNodes += 1;
+    }
+    for (const value of Object.values(node)) visit(value);
+  };
+
+  html = html.replace(/(<script\b[^>]*type=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi, (match, open, json, close) => {
+    try {
+      const data = JSON.parse(json);
+      const beforeWebsites = websiteNodes;
+      const beforeOrganizations = organizationNodes;
+      visit(data);
+      if (websiteNodes === beforeWebsites && organizationNodes === beforeOrganizations) return match;
+      return `${open}${JSON.stringify(data)}${close}`;
+    } catch {
+      return match;
+    }
+  });
+
+  if (websiteNodes === 0) {
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": `${SITE_URL}#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      alternateName: SITE_ALTERNATE_NAME,
+      description: SEARCH_DESCRIPTION
+    };
+    html = html.replace("</head>", `<script type="application/ld+json" data-search-site-name="true">${JSON.stringify(schema)}</script></head>`);
+  }
+
+  return html;
+}
+
 let html = await readFile(HOME, "utf8");
 
 if (!html.includes('href="/decide/"')) {
@@ -86,7 +160,20 @@ if (!html.includes(SITE_FOCUS_PROOF)) {
   if (!html.includes(heroLead)) throw new Error("Cannot add homepage focus proof: editorial hero lead is missing.");
   html = html.replace(heroLead, `${heroLead}<p class="editorial-hero__proof">${SITE_FOCUS_PROOF}</p>`);
 }
-html = html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${SITE_FOCUS_DESCRIPTION}">`);
+
+html = normalizeSearchAppearance(html);
+
+for (const required of [
+  `<title>${SEARCH_TITLE}</title>`,
+  `<meta name="description" content="${SEARCH_DESCRIPTION}">`,
+  `<meta property="og:site_name" content="${SITE_NAME}">`,
+  `<link rel="icon" type="image/png" sizes="192x192" href="${FAVICON_PATH}">`,
+  `"name":"${SITE_NAME}"`,
+  `"alternateName":"${SITE_ALTERNATE_NAME}"`
+]) {
+  if (!html.includes(required)) throw new Error(`Homepage search appearance is incomplete: ${required}`);
+}
+
 await writeFile(HOME, html);
 
 const files = await htmlFiles(OUT);
@@ -151,4 +238,4 @@ for (const required of [
   if (!llms.includes(required)) throw new Error(`Monthly research discovery is incomplete in generated llms.txt: ${required}`);
 }
 
-console.log(`Decision, research and site-focus discovery verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed, monthly digest data and schema` : ""}; ${focusedHeaders} page headers normalized to five primary destinations; ${secondaryPracticeLinks} Practice footer links restored.`);
+console.log(`Decision, research, site-focus and search appearance verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed, monthly digest data and schema` : ""}; ${focusedHeaders} page headers normalized to five primary destinations; ${secondaryPracticeLinks} Practice footer links restored; homepage title, description, site name and favicon normalized.`);
