@@ -71,19 +71,20 @@ assert(home.includes('href="/practice/"'), "homepage does not link to Practice L
 const schemaFiles = await readdir(join(OUT, "schemas"));
 assert(schemaFiles.includes("practice-set.schema.json"), "practice JSON Schema missing");
 
-let primaryNavPages = 0;
-async function checkPrimaryNav(dir) {
+let siteShellPages = 0;
+async function checkSecondaryDiscovery(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name);
-    if (entry.isDirectory()) await checkPrimaryNav(path);
+    if (entry.isDirectory()) await checkSecondaryDiscovery(path);
     else if (entry.isFile() && entry.name.endsWith(".html")) {
       const html = await readFile(path, "utf8");
       if (!html.includes('<nav aria-label="Primary">')) continue;
-      primaryNavPages += 1;
-      assert(html.includes('href="/practice/"'), `primary navigation missing Practice: ${path}`);
+      siteShellPages += 1;
+      const footer = html.match(/<div class="footer-links">([\s\S]*?)<\/div>/)?.[1] || "";
+      assert(footer.includes('href="/practice/"'), `secondary navigation missing Practice: ${path}`);
     }
   }
 }
-await checkPrimaryNav(OUT);
-assert(primaryNavPages > 0, "no primary navigation pages checked");
-console.log(`Practice Lab check passed: ${practice.sets.length} sets, ${scenarioCount} evidence-linked exercises, ${primaryNavPages} primary navigation pages.`);
+await checkSecondaryDiscovery(OUT);
+assert(siteShellPages > 0, "no site-shell pages checked");
+console.log(`Practice Lab check passed: ${practice.sets.length} sets, ${scenarioCount} evidence-linked exercises, ${siteShellPages} site-shell pages with secondary Practice discovery.`);

@@ -46,6 +46,13 @@ function focusedHeader(route) {
   return `<header class="site-header${homeClass}"><a class="brand" href="/" aria-label="Cognitive Biases home"><picture class="brand-picture"><source type="image/webp" srcset="/assets/brand.webp"><img src="/assets/biases_icon.png" width="52" height="52" alt=""></picture><span><strong>Cognitive Biases</strong><small>Public knowledge library</small></span></a><nav aria-label="Primary"><div class="site-nav"><div class="site-nav__core">${core}${search}</div><button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-nav-drawer">Menu</button><div class="site-nav__drawer" id="site-nav-drawer" hidden><div class="site-nav__drawer-core">${drawerCore}</div><a class="nav-search" href="/explore/#search">Search the library</a></div></div></nav></header>`;
 }
 
+function ensureSecondaryPractice(html) {
+  const footerPattern = /<div class="footer-links">([\s\S]*?)<\/div>/;
+  const match = html.match(footerPattern);
+  if (!match || match[1].includes('href="/practice/"')) return html;
+  return html.replace(footerPattern, `<div class="footer-links"><a href="/practice/">Practice</a>${match[1]}</div>`);
+}
+
 let html = await readFile(HOME, "utf8");
 
 if (!html.includes('href="/decide/"')) {
@@ -84,15 +91,19 @@ await writeFile(HOME, html);
 
 const files = await htmlFiles(OUT);
 let focusedHeaders = 0;
+let secondaryPracticeLinks = 0;
 for (const file of files) {
   const route = routeFor(file);
   const before = await readFile(file, "utf8");
   const headerPattern = /<header class="site-header(?: site-header--home)?">[\s\S]*?<\/header>/;
-  if (!headerPattern.test(before)) continue;
-  const after = before.replace(headerPattern, focusedHeader(route));
+  let after = before;
+  if (headerPattern.test(after)) after = after.replace(headerPattern, focusedHeader(route));
+  const withPractice = ensureSecondaryPractice(after);
+  if (withPractice !== after) secondaryPracticeLinks += 1;
+  after = withPractice;
   if (after !== before) {
     await writeFile(file, after);
-    focusedHeaders += 1;
+    if (headerPattern.test(before)) focusedHeaders += 1;
   }
 }
 
@@ -100,7 +111,7 @@ html = await readFile(HOME, "utf8");
 for (const route of ["/explore/", "/contexts/", "/evidence/", "/tools/decision-audit/", "/compare/"]) {
   if (!html.includes(`href="${route}"`)) throw new Error(`Focused primary navigation is missing ${route}.`);
 }
-for (const secondary of ["/research/", "/quality/", "/about/", "/data/"]) {
+for (const secondary of ["/practice/", "/research/", "/quality/", "/about/", "/data/"]) {
   if (!html.includes(`href="${secondary}"`)) throw new Error(`Homepage lost secondary proof/utility discovery for ${secondary}.`);
 }
 
@@ -140,4 +151,4 @@ for (const required of [
   if (!llms.includes(required)) throw new Error(`Monthly research discovery is incomplete in generated llms.txt: ${required}`);
 }
 
-console.log(`Decision, research and site-focus discovery verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed, monthly digest data and schema` : ""}; ${focusedHeaders} page headers normalized to five primary destinations.`);
+console.log(`Decision, research and site-focus discovery verified: /decide/${latestDigest ? `, /research/digests/${latestDigest.slug}/, research feed, monthly digest data and schema` : ""}; ${focusedHeaders} page headers normalized to five primary destinations; ${secondaryPracticeLinks} Practice footer links restored.`);
