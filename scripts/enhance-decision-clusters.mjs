@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const OUT = "dist";
 const situationsData = JSON.parse(await readFile("data/situations.json", "utf8"));
+const guidesData = JSON.parse(await readFile("data/situation-guides.json", "utf8"));
 const practiceIndex = JSON.parse(await readFile("data/reasoning-practice/index.json", "utf8"));
 
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (c) => ({
@@ -24,7 +25,13 @@ for (const slug of practiceIndex.packs || []) {
   practiceBySituation.set(slug, pack.scenarios || []);
 }
 
-const deepSituations = situationsData.situations.filter((situation) => situation.guide?.tier === "deep");
+const situationBySlug = new Map(situationsData.situations.map((situation) => [situation.slug, situation]));
+const deepSituations = guidesData.guides.map((guide) => {
+  const situation = situationBySlug.get(guide.situation);
+  if (!situation) throw new Error(`Unknown situation for deep guide: ${guide.situation}`);
+  if (guide.tier !== "deep") throw new Error(`${guide.situation}: deep guide tier must be deep.`);
+  return { ...situation, guide };
+});
 
 function insertAfterHero(html, block) {
   const heroStart = html.indexOf('<section class="page-hero">');
@@ -139,5 +146,7 @@ for (const situation of deepSituations) {
     await access(join(OUT, "research", slug, "index.html"));
   }
 }
+
+await writeFile(join(OUT, "data", "situation-guides.json"), JSON.stringify(guidesData, null, 2) + "\n");
 
 console.log(`Deep decision guides injected for ${deepSituations.length} situations with reciprocal practice, comparison and research links.`);
