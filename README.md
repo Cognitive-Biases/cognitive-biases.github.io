@@ -1,12 +1,16 @@
 # Cognitive Biases
 
-Cognitive Biases is a public knowledge library about cognitive biases, evidence and decision making.
+Cognitive Biases is a public knowledge library about human cognitive biases, systematic AI behaviour, evidence and decision making.
 
 The project started as an educational mobile app. The website and the maintained knowledge base are now the main product.
 
 For repository work from ChatGPT or another coding agent, start with [AGENTS.md](AGENTS.md).
 
 - Website: https://cognitive-biases.github.io/
+- Human biases: https://cognitive-biases.github.io/everyday/
+- AI systematic biases: https://cognitive-biases.github.io/ai-biases/
+- AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/
+- Observatory: https://cognitive-biases.github.io/observatory/
 - Explore the library: https://cognitive-biases.github.io/explore/
 - Reviewed evidence: https://cognitive-biases.github.io/evidence/
 - Decision guides: https://cognitive-biases.github.io/contexts/
@@ -20,9 +24,15 @@ There are already many lists of cognitive biases. This project is not trying to 
 
 We connect clear explanations with evidence, sources, review dates, useful comparisons and real decision contexts. When the evidence is mixed or a popular claim is too strong, the page should say so.
 
+The project now has three connected but deliberately separate layers:
+
+1. **Human Biases** — psychological constructs, evidence and practical decision tools for people.
+2. **AI Systematic Biases** — repeatable model sensitivities, evaluator distortions and dated model snapshots. Human bias names are analogies where experiments justify them, not claims that an LLM has human psychology.
+3. **Human–AI Interaction Patterns** — effects that emerge when people, models and information environments interact.
+
 The same maintained knowledge is also published as structured data so search tools, assistants and agents can reuse it without having to guess what a page means.
 
-See [`docs/project-direction.md`](docs/project-direction.md) for the product direction, [`docs/editorial-policy.md`](docs/editorial-policy.md) for the writing rules, and [`docs/data-contract.md`](docs/data-contract.md) for the public data compatibility contract.
+See [`docs/project-direction.md`](docs/project-direction.md) for the product direction, [`docs/editorial-policy.md`](docs/editorial-policy.md) for the writing rules, [`docs/ai-systematic-bias-methodology.md`](docs/ai-systematic-bias-methodology.md) for AI evidence/freshness rules, and [`docs/data-contract.md`](docs/data-contract.md) for the public data compatibility contract.
 
 ## Local development
 
@@ -43,13 +53,17 @@ node integrations/mcp/server.mjs
 
 ## Content
 
-The original corpus lives in [`data/biases.json`](data/biases.json). Reviewed evidence, comparisons, contexts, relations and taxonomy data live beside it in `data/`.
+The original human-bias corpus lives in [`data/biases.json`](data/biases.json). Reviewed evidence, comparisons, contexts, relations and taxonomy data live beside it in `data/`.
+
+The AI behaviour catalog lives in [`data/ai-systematic-biases.json`](data/ai-systematic-biases.json). Each entry includes evidence scope, practical signals, a self-test, mitigations and dated model snapshots. Older model evidence is preserved as history rather than silently presented as a current-model fact.
 
 Older records marked as generated are useful legacy material, but they are not automatically treated as independently reviewed. Evidence-sensitive entries are improved in batches and keep an explicit review status.
 
 ## Research workflow
 
-[`docs/research-agent.md`](docs/research-agent.md) defines the research loop. New papers and research updates enter an inbox first. They are compared with the existing library before any public claim is changed.
+[`docs/research-agent.md`](docs/research-agent.md) defines the general research loop. New papers and research updates enter an inbox first. They are compared with the existing library before any public claim is changed.
+
+AI model behaviour also has a dedicated research scout. It tracks research signals around sycophancy, cognitive-bias analogues, LLM-as-a-judge, position/order effects, RAG source conflict, long-context behaviour and summarization integrity. Candidates enter [`data/ai-bias-research-inbox.json`](data/ai-bias-research-inbox.json); the scout does not promote them automatically to canonical claims.
 
 Repository skills for recurring work live in `skills/`:
 
@@ -60,6 +74,8 @@ Repository skills for recurring work live in `skills/`:
 ## Public data and AI use
 
 The build publishes a versioned public data release beside the human-readable pages. It includes the bias library, consolidated evidence reviews, canonical source identities, claim provenance, decision contexts, comparisons, research notes, quality metrics, translation state and a retrieval-ready NDJSON distribution.
+
+The AI systematic-bias catalog is also exported at `/data/ai-systematic-biases.json` and `/ai/ai-systematic-biases.json` so agents can retrieve evidence status, contexts and dated model snapshots directly.
 
 The latest aliases stay under `/data/`. Reproducible consumers can pin `/data/releases/<releaseVersion>/`. Every release has a checksum manifest and public JSON Schemas.
 
