@@ -7,8 +7,8 @@ const trust = JSON.parse(await readFile("data/project-trust.json", "utf8"));
 const citation = await readFile("CITATION.cff", "utf8");
 const errors = [];
 
-if (!trust.maintainer?.name || trust.maintainer.name !== "Dzmitryi Kharlanau") errors.push("trust data: maintainer name missing or unexpected");
-if (!citation.includes('family-names: "Kharlanau"') || !citation.includes('given-names: "Dzmitryi"')) errors.push("CITATION.cff and trust maintainer are not aligned");
+if (!trust.maintainer?.name || trust.maintainer.name !== "MetalHatsCats") errors.push("trust data: maintainer name missing or unexpected");
+if (!citation.includes('name: "MetalHatsCats"')) errors.push("CITATION.cff and trust maintainer are not aligned");
 if (!Array.isArray(trust.workflow) || trust.workflow.length < 5) errors.push("trust data: editorial workflow is incomplete");
 if (!Array.isArray(trust.automation?.notAllowed) || !trust.automation.notAllowed.some((item) => item.includes("Automatically promote"))) errors.push("trust data: automation boundary is missing");
 
