@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cognitive-biases.github.io/schemas/situation-guides.schema.json",
+  "title": "Cognitive Biases deep decision situation guides",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "version", "updatedAt", "description", "guides"],
+  "properties": {
+    "$schema": {"const": "https://cognitive-biases.github.io/schemas/situation-guides.schema.json"},
+    "version": {"const": 1},
+    "updatedAt": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "description": {"type": "string", "minLength": 40},
+    "guides": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["situation", "tier", "reviewedAt", "hook", "problemQuestion", "whyHard", "reviewProtocol", "workedExample", "decisionRecord", "comparisonSlugs", "researchNoteSlugs", "evidenceBoundary", "sourceBoundary"],
+        "properties": {
+          "situation": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "tier": {"const": "deep"},
+          "reviewedAt": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "searchIntent": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "hook": {"type": "string", "minLength": 12},
+          "problemQuestion": {"type": "string", "minLength": 20},
+          "whyHard": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 40}},
+          "reviewProtocol": {"type": "array", "minItems": 5, "maxItems": 5, "items": {"type": "string", "minLength": 30}},
+          "workedExample": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["title", "setup", "weakReview", "strongerReview"],
+            "properties": {
+              "title": {"type": "string", "minLength": 8},
+              "setup": {"type": "string", "minLength": 40},
+              "weakReview": {"type": "string", "minLength": 40},
+              "strongerReview": {"type": "string", "minLength": 40}
+            }
+          },
+          "decisionRecord": {"type": "array", "minItems": 4, "items": {"type": "string", "minLength": 12}},
+          "comparisonSlugs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+          "researchNoteSlugs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+          "evidenceBoundary": {"type": "string", "minLength": 80},
+          "sourceBoundary": {"type": "string", "minLength": 60}
+        }
+      }
+    }
+  }
+}
