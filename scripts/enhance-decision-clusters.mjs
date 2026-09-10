@@ -4,6 +4,7 @@ import { join } from "node:path";
 const OUT = "dist";
 const situationsData = JSON.parse(await readFile("data/situations.json", "utf8"));
 const guidesData = JSON.parse(await readFile("data/situation-guides.json", "utf8"));
+const searchIntentsData = JSON.parse(await readFile("data/search-intents.json", "utf8"));
 const practiceIndex = JSON.parse(await readFile("data/reasoning-practice/index.json", "utf8"));
 
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (c) => ({
@@ -66,6 +67,16 @@ function researchCards(slugs) {
   return `<section class="section decision-guide-research"><p class="kicker">Reviewed research notes</p><h2>Go deeper where the evidence needs more context.</h2><div class="application-grid">${entries.map((entry) =>
     `<article class="application-card"><span>${esc(entry.status || "Research note")}</span><strong>${esc(entry.title)}</strong><p>${esc(entry.summary)}</p><a href="/research/${esc(entry.slug)}/">Read the synthesis →</a></article>`
   ).join("")}</div></section>`;
+}
+
+function situationCardsForIntent(intent) {
+  const cards = (intent.situationSlugs || []).map((slug) => {
+    const situation = situationBySlug.get(slug);
+    if (!situation) throw new Error(`${intent.slug}: unknown situation in search intent: ${slug}`);
+    const deep = guidesData.guides.some((guide) => guide.situation === slug && guide.tier === "deep");
+    return `<article class="application-card"><span>${deep ? "Deep decision guide" : "Decision situation"}</span><strong>${esc(situation.title)}</strong><p>${esc(situation.summary)}</p><a href="/situations/${esc(slug)}/">Review this decision →</a></article>`;
+  }).join("");
+  return cards ? `<section class="decision-search-bridge" id="decision-situations"><h2>Decision situations</h2><p>Use the evidence in a real decision instead of stopping at a bias label.</p><div class="application-grid">${cards}</div></section>` : "";
 }
 
 function deepGuideMarkup(situation) {
@@ -134,6 +145,18 @@ if (!hub.includes('id="deep-decision-guides"')) {
   await writeFile(hubPath, hub);
 }
 
+for (const intent of searchIntentsData.intents || []) {
+  if (!(intent.situationSlugs || []).length) continue;
+  const path = join(OUT, "guides", intent.slug, "index.html");
+  let html = await readFile(path, "utf8");
+  if (html.includes('id="decision-situations"')) throw new Error(`${intent.slug}: decision situation bridge already injected.`);
+  const block = situationCardsForIntent(intent);
+  const anchor = "<h2>How to use this page</h2>";
+  if (!html.includes(anchor)) throw new Error(`${intent.slug}: search guide usage section not found.`);
+  html = html.replace(anchor, `${block}${anchor}`);
+  await writeFile(path, html);
+}
+
 for (const situation of deepSituations) {
   const scenarios = practiceBySituation.get(situation.slug) || [];
   if (scenarios.length < 2) throw new Error(`${situation.slug}: deep guide needs at least two practice scenarios.`);
@@ -149,4 +172,4 @@ for (const situation of deepSituations) {
 
 await writeFile(join(OUT, "data", "situation-guides.json"), JSON.stringify(guidesData, null, 2) + "\n");
 
-console.log(`Deep decision guides injected for ${deepSituations.length} situations with reciprocal practice, comparison and research links.`);
+console.log(`Deep decision guides injected for ${deepSituations.length} situations; search-intent guides now route to mapped decision situations.`);
