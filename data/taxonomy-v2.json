@@ -2,66 +2,21 @@
   "version": 2,
   "hubMinimumRecords": 3,
   "families": {
-    "memory-retrieval": {
-      "label": "Memory & retrieval",
-      "description": "Patterns involving encoding, recall, reconstruction, source memory, and forgetting."
-    },
-    "belief-updating": {
-      "label": "Belief updating",
-      "description": "Patterns that shape how evidence, priors, repetition, and existing beliefs change what feels true."
-    },
-    "probability-risk": {
-      "label": "Probability & risk",
-      "description": "Patterns involving uncertainty, probability estimates, base rates, and perceived risk."
-    },
-    "attention-information": {
-      "label": "Attention & information",
-      "description": "Patterns that affect what gets noticed, sampled, searched for, or omitted from consideration."
-    },
-    "perception-patterns": {
-      "label": "Perception & patterns",
-      "description": "Patterns involving perceptual interpretation, agency detection, and seeing structure in ambiguous input."
-    },
-    "valuation-choice": {
-      "label": "Valuation & choice",
-      "description": "Patterns involving framing, reference points, gains and losses, option comparison, and preference construction."
-    },
-    "reasoning-flexibility": {
-      "label": "Reasoning & flexibility",
-      "description": "Patterns involving logical errors, problem representation, rigidity, and fixation on familiar tools or solutions."
-    },
-    "self-metacognition": {
-      "label": "Self & metacognition",
-      "description": "Patterns involving confidence, self-assessment, introspection, and beliefs about one's own thinking."
-    },
-    "social-judgment": {
-      "label": "Social judgment",
-      "description": "Patterns involving attribution, conformity, social inference, and judgments about other people."
-    },
-    "time-commitment": {
-      "label": "Time & commitment",
-      "description": "Patterns involving temporal preference, persistence, escalation, and commitment dynamics."
-    },
-    "future-state-forecasting": {
-      "label": "Future state forecasting",
-      "description": "Patterns involving predictions about future feelings, preferences, and behavior when current or imagined states are an imperfect guide to the future state."
-    },
-    "retrospective-evaluation": {
-      "label": "Retrospective evaluation",
-      "description": "Patterns where knowing an outcome changes later judgments of predictability, decision quality, blame, or responsibility."
-    },
-    "measurement-methods": {
-      "label": "Measurement & methods",
-      "description": "Concepts about measurement, sampling, calibration, estimation, study design, and systematic error rather than one psychological tendency."
-    },
-    "goals-proxies-incentives": {
-      "label": "Goals, proxies & incentives",
-      "description": "Patterns where measures, targets, incentives, or proxies can start shaping behavior differently from the underlying objective they were meant to represent."
-    },
-    "past-present-comparison": {
-      "label": "Past & present comparison",
-      "description": "Patterns that can shape comparisons between remembered past experiences, current experience, and broad judgments of change over time."
-    }
+    "memory-retrieval": {"label": "Memory & retrieval", "description": "Patterns involving encoding, recall, reconstruction, source memory, and forgetting."},
+    "belief-updating": {"label": "Belief updating", "description": "Patterns that shape how evidence, priors, repetition, and existing beliefs change what feels true."},
+    "probability-risk": {"label": "Probability & risk", "description": "Patterns involving uncertainty, probability estimates, base rates, and perceived risk."},
+    "attention-information": {"label": "Attention & information", "description": "Patterns that affect what gets noticed, sampled, searched for, or omitted from consideration."},
+    "perception-patterns": {"label": "Perception & patterns", "description": "Patterns involving perceptual interpretation, agency detection, and seeing structure in ambiguous input."},
+    "valuation-choice": {"label": "Valuation & choice", "description": "Patterns involving framing, reference points, gains and losses, option comparison, and preference construction."},
+    "reasoning-flexibility": {"label": "Reasoning & flexibility", "description": "Patterns involving logical errors, problem representation, rigidity, and fixation on familiar tools or solutions."},
+    "self-metacognition": {"label": "Self & metacognition", "description": "Patterns involving confidence, self-assessment, introspection, and beliefs about one's own thinking."},
+    "social-judgment": {"label": "Social judgment", "description": "Patterns involving attribution, conformity, social inference, and judgments about other people."},
+    "time-commitment": {"label": "Time & commitment", "description": "Patterns involving temporal preference, persistence, escalation, and commitment dynamics."},
+    "future-state-forecasting": {"label": "Future state forecasting", "description": "Patterns involving predictions about future feelings, preferences, and behavior when current or imagined states are an imperfect guide to the future state."},
+    "retrospective-evaluation": {"label": "Retrospective evaluation", "description": "Patterns where knowing an outcome changes later judgments of predictability, decision quality, blame, or responsibility."},
+    "measurement-methods": {"label": "Measurement & methods", "description": "Concepts about measurement, sampling, calibration, estimation, study design, and systematic error rather than one psychological tendency."},
+    "goals-proxies-incentives": {"label": "Goals, proxies & incentives", "description": "Patterns where measures, targets, incentives, or proxies can start shaping behavior differently from the underlying objective they were meant to represent."},
+    "past-present-comparison": {"label": "Past & present comparison", "description": "Patterns that can shape comparisons between remembered past experiences, current experience, and broad judgments of change over time."}
   },
   "directCategoryFamily": {
     "Memory Bias": "memory-retrieval",
@@ -135,7 +90,8 @@
     "178": "past-present-comparison",
     "204": "past-present-comparison",
     "222": "valuation-choice",
-    "223": "time-commitment"
+    "223": "time-commitment",
+    "225": "valuation-choice"
   },
   "recordContexts": {
     "9": ["human-ai-interaction"],
