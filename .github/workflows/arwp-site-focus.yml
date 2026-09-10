@@ -1,24 +1,26 @@
-name: Cite Goose Site Focus
+name: AWRP Site Quality
 
 on:
   workflow_dispatch:
   pull_request:
     paths:
       - '.github/workflows/arwp-site-focus.yml'
-      - '.arwp/site-focus.json'
-      - '.arwp/README.md'
-      - 'src/**'
+      - '.arwp/**'
+      - 'AGENTS.md'
+      - 'ai/**'
       - 'data/**'
       - 'docs/**'
+      - 'scripts/**'
   push:
     branches: [main]
     paths:
       - '.github/workflows/arwp-site-focus.yml'
-      - '.arwp/site-focus.json'
-      - '.arwp/README.md'
-      - 'src/**'
+      - '.arwp/**'
+      - 'AGENTS.md'
+      - 'ai/**'
       - 'data/**'
       - 'docs/**'
+      - 'scripts/**'
   workflow_run:
     workflows: ['Deploy GitHub Pages']
     types: [completed]
@@ -27,36 +29,56 @@ on:
 permissions:
   contents: read
 
+env:
+  ARWP_REVISION: 716e0a13aeaef1f2dcb2dd89d868fbf7343acc63
+  ARWP_TARGET: https://cognitive-biases.github.io/
+
 jobs:
   source-focus:
     if: github.event_name != 'workflow_run'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Cognitive Biases source
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Validate local Site Focus declaration
-        run: >-
-          node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('.arwp/site-focus.json','utf8'));if(p.version!=='0.3')throw new Error('Site Focus v0.3 required');if(!p.homepage?.primaryLane)throw new Error('homepage.primaryLane required');console.log('Site Focus source declaration OK:',p.homepage.primaryLane)"
+        env:
+          EXPECTED_SCHEMA: https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/716e0a13aeaef1f2dcb2dd89d868fbf7343acc63/schema/site-focus-profile-v0.3.schema.json
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const profile = JSON.parse(fs.readFileSync('.arwp/site-focus.json', 'utf8'));
+          const fail = (message) => { throw new Error(message); };
+          if (profile.version !== '0.3') fail('Site Focus v0.3 required');
+          if (profile.$schema !== process.env.EXPECTED_SCHEMA) fail('Site Focus schema must be pinned to the active ARWP revision');
+          if (!profile.homepage?.primaryLane) fail('homepage.primaryLane required');
+          if (!Array.isArray(profile.primaryNavigation) || !profile.primaryNavigation.length) fail('primaryNavigation required');
+          if (profile.primaryNavigation.length > profile.experience?.navigation?.maxPrimaryItems) fail('primary navigation exceeds declared budget');
+          console.log('Site Focus source declaration OK:', profile.homepage.primaryLane);
+          NODE
 
-  production-focus:
-    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
+      - name: Validate local ARWP layer coherence
+        run: node scripts/check-arwp-layers.mjs
+
+  production-quality:
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the deployed Cognitive Biases commit
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.workflow_run.head_sha }}
 
-      - name: Checkout Cite Goose / ARWP v0.3 baseline
-        uses: actions/checkout@v6
+      - name: Checkout pinned ARWP runtime
+        uses: actions/checkout@v7
         with:
           repository: dkharlanau/agent-ready-web-profile
-          ref: 8f1847e9ef7154f69a781071414f88be5b7eddd9
+          ref: ${{ env.ARWP_REVISION }}
           path: .tools/arwp
+          persist-credentials: false
 
       - name: Set up Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: npm
@@ -64,33 +86,147 @@ jobs:
 
       - name: Install ARWP runtime
         working-directory: .tools/arwp
-        run: npm ci --ignore-scripts
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
-      - name: Compare declared focus with deployed public site
+      - name: Record deployment lineage
+        env:
+          SITE_REVISION: ${{ github.event.workflow_run.head_sha }}
+          DEPLOY_RUN_ID: ${{ github.event.workflow_run.id }}
+          DEPLOY_EVENT: ${{ github.event.workflow_run.event }}
+        run: |
+          set -euo pipefail
+          out="$RUNNER_TEMP/arwp-production"
+          mkdir -p "$out"
+          git -C .tools/arwp rev-parse HEAD | tee "$out/arwp-revision.txt"
+          printf '%s\n' "$SITE_REVISION" | tee "$out/site-revision.txt"
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const evidence = {
+            site: process.env.ARWP_TARGET,
+            siteRevision: process.env.SITE_REVISION,
+            deployWorkflowRunId: Number(process.env.DEPLOY_RUN_ID),
+            deployEvent: process.env.DEPLOY_EVENT,
+            verifiedAfterSuccessfulDeploy: true,
+            arwpRevision: process.env.ARWP_REVISION
+          };
+          fs.writeFileSync(`${process.env.RUNNER_TEMP}/arwp-production/deployment-evidence.json`, JSON.stringify(evidence, null, 2) + '\n');
+          NODE
+
+      - name: Observe production Site Focus v0.3
         run: >-
           node .tools/arwp/bin/arwp-focus.mjs
-          https://cognitive-biases.github.io/
+          "$ARWP_TARGET"
           --focus-profile=.arwp/site-focus.json
           --max-pages=30
-          --output="$RUNNER_TEMP/site-focus-report.json"
+          --timeout=12000
+          --output="$RUNNER_TEMP/arwp-production/site-focus-report.json"
 
-      - name: Attach deployment lineage to report
-        env:
-          REPORT: ${{ runner.temp }}/site-focus-report.json
-          DEPLOYED_SHA: ${{ github.event.workflow_run.head_sha }}
-          DEPLOY_RUN_ID: ${{ github.event.workflow_run.id }}
+      - name: Run bounded Site Readiness Gate
+        shell: bash
+        run: |
+          set +e
+          node .tools/arwp/bin/arwp.mjs site-gate "$ARWP_TARGET" \
+            --site-type=large-knowledge-site \
+            --max-pages=30 \
+            --concurrency=2 \
+            --timeout=12000 \
+            --json > "$RUNNER_TEMP/arwp-production/site-gate-report.json"
+          code=$?
+          set -e
+          printf '%s\n' "$code" > "$RUNNER_TEMP/arwp-production/site-gate-exit-code.txt"
+          if [[ "$code" -eq 2 ]]; then
+            echo 'Site Readiness Gate failed to execute.'
+            cat "$RUNNER_TEMP/arwp-production/site-gate-report.json" || true
+            exit 1
+          fi
+          if [[ "$code" -eq 1 ]]; then
+            echo '::warning::Site Readiness Gate observed one or more P0 failures; see the uploaded report.'
+          fi
+
+      - name: Run bounded Technical Integrity
+        shell: bash
+        run: |
+          set +e
+          node .tools/arwp/bin/arwp.mjs technical-integrity "$ARWP_TARGET" \
+            --max-pages=20 \
+            --max-link-targets=24 \
+            --concurrency=2 \
+            --timeout=12000 \
+            --json > "$RUNNER_TEMP/arwp-production/technical-integrity-report.json"
+          code=$?
+          set -e
+          printf '%s\n' "$code" > "$RUNNER_TEMP/arwp-production/technical-integrity-exit-code.txt"
+          if [[ "$code" -eq 1 ]]; then
+            echo 'Technical Integrity failed to execute.'
+            exit 1
+          fi
+          if [[ "$code" -eq 2 ]]; then
+            echo '::warning::Technical Integrity observed one or more P0 failures; see the uploaded report.'
+          fi
+
+      - name: Detect declared URL migrations
+        id: migrations
+        shell: bash
+        run: |
+          if [[ ! -f .arwp/url-migrations.json ]]; then
+            echo 'enabled=false' >> "$GITHUB_OUTPUT"
+            echo '{"status":"not-applicable","reason":"No URL migration manifest in the deployed revision."}' > "$RUNNER_TEMP/arwp-production/url-migration-status.json"
+            exit 0
+          fi
+          count="$(node -e "const fs=require('fs');const x=JSON.parse(fs.readFileSync('.arwp/url-migrations.json','utf8'));const p=Array.isArray(x)?x:x.pairs;if(!Array.isArray(p))throw new Error('url-migrations.json must be an array or an object with pairs');process.stdout.write(String(p.length));")"
+          if [[ "$count" -gt 0 ]]; then
+            echo 'enabled=true' >> "$GITHUB_OUTPUT"
+            echo "count=$count" >> "$GITHUB_OUTPUT"
+          else
+            echo 'enabled=false' >> "$GITHUB_OUTPUT"
+            echo '{"status":"not-applicable","reason":"URL migration manifest is present but contains no pairs."}' > "$RUNNER_TEMP/arwp-production/url-migration-status.json"
+          fi
+
+      - name: Verify URL Migration Integrity
+        if: steps.migrations.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --max-time 20 --max-filesize 5242880 "${ARWP_TARGET}sitemap.xml" -o "$RUNNER_TEMP/arwp-production/live-sitemap.xml"
+          node .tools/arwp/bin/arwp.mjs url-migration inspect .arwp/url-migrations.json \
+            --after-sitemap="$RUNNER_TEMP/arwp-production/live-sitemap.xml" \
+            --timeout=12000 \
+            --concurrency=2 \
+            --output="$RUNNER_TEMP/arwp-production/url-migration-integrity.json"
+          node .tools/arwp/bin/arwp.mjs url-migration validate "$RUNNER_TEMP/arwp-production/url-migration-integrity.json"
+
+      - name: Summarize bounded production evidence
         run: |
           node --input-type=module <<'NODE'
           import fs from 'node:fs';
-          const report = JSON.parse(fs.readFileSync(process.env.REPORT, 'utf8'));
-          report.deploymentEvidence = { commitSha: process.env.DEPLOYED_SHA, deployWorkflowRunId: Number(process.env.DEPLOY_RUN_ID), verifiedAfterSuccessfulDeploy: true };
-          fs.writeFileSync(process.env.REPORT, JSON.stringify(report, null, 2) + '\n');
+          const dir = `${process.env.RUNNER_TEMP}/arwp-production`;
+          const read = (name) => JSON.parse(fs.readFileSync(`${dir}/${name}`, 'utf8'));
+          const focus = read('site-focus-report.json');
+          const gate = read('site-gate-report.json');
+          const technical = read('technical-integrity-report.json');
+          console.log(JSON.stringify({
+            siteFocus: {
+              version: focus.version,
+              pagesObserved: focus.metrics?.pagesObserved,
+              siteFindings: focus.siteFindings?.length ?? 0,
+              handoffCandidates: focus.transformationHandoff?.candidates?.length ?? 0
+            },
+            siteGate: gate.summary,
+            technicalIntegrity: technical.summary
+          }, null, 2));
           NODE
 
-      - name: Upload production focus evidence
-        uses: actions/upload-artifact@v4
+      - name: Hash production evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/arwp-production"
+          sha256sum *.json > SHA256SUMS
+
+      - name: Upload production ARWP evidence
+        uses: actions/upload-artifact@v6
         with:
-          name: cognitive-biases-site-focus-production-${{ github.event.workflow_run.head_sha }}
-          path: ${{ runner.temp }}/site-focus-report.json
+          name: cognitive-biases-arwp-production-${{ github.event.workflow_run.head_sha }}
+          path: ${{ runner.temp }}/arwp-production/
           if-no-files-found: error
           retention-days: 30

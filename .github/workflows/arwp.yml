@@ -5,29 +5,35 @@ on:
     branches: [main]
     paths:
       - 'ai/**'
+      - '.arwp/**'
       - 'data/**'
       - 'schemas/**'
       - 'integrations/mcp/**'
       - 'growth/**'
+      - 'AGENTS.md'
       - 'SECURITY.md'
       - 'scripts/apply-arwp.mjs'
       - 'scripts/check-arwp-layers.mjs'
       - 'scripts/finalize-late-seo.mjs'
       - '.github/workflows/arwp.yml'
       - '.github/workflows/arwp-growth.yml'
+      - '.github/workflows/arwp-site-focus.yml'
   pull_request:
     paths:
       - 'ai/**'
+      - '.arwp/**'
       - 'data/**'
       - 'schemas/**'
       - 'integrations/mcp/**'
       - 'growth/**'
+      - 'AGENTS.md'
       - 'SECURITY.md'
       - 'scripts/apply-arwp.mjs'
       - 'scripts/check-arwp-layers.mjs'
       - 'scripts/finalize-late-seo.mjs'
       - '.github/workflows/arwp.yml'
       - '.github/workflows/arwp-growth.yml'
+      - '.github/workflows/arwp-site-focus.yml'
   workflow_dispatch:
 
 permissions:
@@ -38,10 +44,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Validate Agent-Ready Web Profile
-        uses: dkharlanau/agent-ready-web-profile@a60be6a057f6ffe07a85ed884e89c91d2d4d740f
+        uses: dkharlanau/agent-ready-web-profile@716e0a13aeaef1f2dcb2dd89d868fbf7343acc63
         with:
           profile: ai/site-profile.json
 
