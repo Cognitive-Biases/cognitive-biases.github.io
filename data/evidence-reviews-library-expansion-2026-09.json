@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-unit-bias",
+      "evidenceStatus": "supported by experimental studies; strongest evidence here concerns consumption and unit-size judgments",
+      "reviewedAt": "2026-09-10",
+      "qualification": "The original unit-bias paper reported experiments in which changing the size of a food unit or serving tool changed how much people selected or consumed even when they could take as many units as they wanted. Later work by Geier and Rozin also found default-standard-unit effects in estimates of body weight and meal calories. These studies support sensitivity to salient units, but they do not prove that every default package, batch, or interface unit causes the same effect in every domain.",
+      "mechanism": "The proposed mechanism is that one unit can act as a simple consumption or judgment norm: a psychologically convenient amount that feels appropriate without a separate optimization step. Unit segmentation can therefore change behaviour by changing what counts as one normal action. Other mechanisms such as convenience, social norms, perceived waste, price, or physical effort can produce similar behaviour and should be separated when possible.",
+      "practical": "When the amount matters, choose a target before accepting the available unit as the target. Compare what you would select if the package, serving tool, queue, or batch were smaller or larger. If your preferred total moves with the unit, inspect whether the unit contains useful information or is merely a default supplied by the environment.",
+      "sources": [
+        {
+          "title": "Unit bias. A new heuristic that helps explain the effect of portion size on food intake",
+          "year": 2006,
+          "type": "controlled consumption experiments",
+          "doi": "10.1111/j.1467-9280.2006.01738.x",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16771803/"
+        },
+        {
+          "title": "Univariate and default standard unit biases in estimation of body weight and caloric content",
+          "year": 2009,
+          "type": "judgment experiments",
+          "doi": "10.1037/a0015955",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19586254/"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-distinction-bias",
+      "evidenceStatus": "original multi-study evidence with mixed results in a later close replication",
+      "reviewedAt": "2026-09-10",
+      "qualification": "Hsee and Zhang introduced distinction bias to describe cases where joint evaluation makes quantitative differences between options seem more important than those differences are during single evaluation or experience. A 2021 close replication and extension with 824 participants replicated one target finding but failed to consistently reproduce another. The effect should therefore be presented with its proposed boundary conditions and the mixed replication record, not as a universal law of comparison.",
+      "mechanism": "Joint evaluation makes differences between options easy to notice and use. Single evaluation often removes that direct reference point, so the same attribute difference may have less effect on experienced utility than predicted during comparison. The mechanism is specifically about evaluation mode and evaluability; ordinary contrast effects, preference construction, information quality, and genuinely important attribute differences can also explain side-by-side choice differences.",
+      "practical": "After comparing options side by side, evaluate each serious option on its own. Translate visible differences into expected daily experience and ask whether the attribute remains important without the neighboring option as a reference point. For high-stakes choices, give extra weight to attributes with demonstrated real-world impact rather than attributes that are merely easy to compare.",
+      "sources": [
+        {
+          "title": "Distinction bias: misprediction and mischoice due to joint evaluation",
+          "year": 2004,
+          "type": "multi-study judgment and affective-forecasting experiments",
+          "doi": "10.1037/0022-3514.86.5.680",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/15161394/"
+        },
+        {
+          "title": "Misprediction of affective outcomes due to different evaluation modes: Replication and extension of two distinction bias experiments by Hsee and Zhang (2004)",
+          "year": 2021,
+          "type": "preregistered close replications and extensions",
+          "doi": "10.1016/j.jesp.2020.104052",
+          "url": "https://doi.org/10.1016/j.jesp.2020.104052"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-restraint-bias",
+      "evidenceStatus": "supported by four original studies; broader visceral-state research supports the state-dependence mechanism",
+      "reviewedAt": "2026-09-10",
+      "qualification": "Nordgren and colleagues reported four studies in which stronger beliefs about impulse control were linked to greater exposure to temptation and, in a study of recovering smokers, higher later relapse through increased exposure. The broader idea that calm states can poorly predict behaviour under hunger, craving, emotion, pain, or other visceral states also has a longer theoretical research base. This review does not claim a complete independent replication record for the exact restraint-bias paradigm.",
+      "mechanism": "People estimate future self-control from a state that may be very different from the state in which temptation will occur. If we underestimate how much a visceral state can change motivation, inflated confidence can lead us to select riskier environments and stronger temptations. That exposure then makes failure more likely. This is different from saying that temptation always wins or that confidence itself is harmful in every setting.",
+      "practical": "Base self-control plans on observed behaviour in difficult states, not only on intentions formed in easy states. Reduce unnecessary exposure, add friction before temptation becomes active, and precommit when the cost of failure is high. A useful test is simple: would the plan still look sensible if you assumed your future self-control will be ordinary rather than heroic?",
+      "sources": [
+        {
+          "title": "The restraint bias: how the illusion of self-restraint promotes impulsive behavior",
+          "year": 2009,
+          "type": "four studies including prospective smoking outcomes",
+          "doi": "10.1111/j.1467-9280.2009.02468.x",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19883487/"
+        },
+        {
+          "title": "Out of Control: Visceral Influences on Behavior",
+          "year": 1996,
+          "type": "theoretical review of visceral-state effects on decision making",
+          "doi": "10.1006/obhd.1996.0028",
+          "url": "https://doi.org/10.1006/obhd.1996.0028"
+        }
+      ]
+    },
+    {
+      "slug": "cognitive-bias-denomination-effect",
+      "evidenceStatus": "supported across field and laboratory studies; effects depend on payment context and mechanism",
+      "reviewedAt": "2026-09-10",
+      "qualification": "Raghubir and Srivastava reported field and laboratory studies showing lower spending likelihood when the same amount of money was held as one larger denomination rather than several smaller denominations. Later work by Raghubir, Capizzani and Srivastava connected denomination and numerosity to how accurately people remember and monitor money in a wallet. More recent research also shows that the direction can differ in special contexts such as tipping, so denomination is not a context-free switch that always changes spending in one direction.",
+      "mechanism": "Large denominations may feel less fungible or more costly to break, while many smaller units can be harder to monitor and easier to spend piece by piece. Pain of paying, memory, transaction friction, social meaning and the specific payment context can all matter. The total economic value remains the same, but the psychological representation of that value changes.",
+      "practical": "Normalize alternatives to the same total value before deciding. Track total spending rather than the number of notes, coins, credits, or balance units remaining. If a payment format changes your willingness to spend, ask whether it changes real costs or only the mental packaging of the same amount.",
+      "sources": [
+        {
+          "title": "The Denomination Effect",
+          "year": 2009,
+          "type": "field and laboratory consumer studies",
+          "doi": "10.1086/599222",
+          "url": "https://doi.org/10.1086/599222"
+        },
+        {
+          "title": "What’s in Your Wallet? Psychophysical Biases in the Estimation of Money",
+          "year": 2017,
+          "type": "four studies of denomination, numerosity, memory and spending",
+          "doi": "10.1086/689867",
+          "url": "https://doi.org/10.1086/689867"
+        }
+      ]
+    }
+  ]
+}

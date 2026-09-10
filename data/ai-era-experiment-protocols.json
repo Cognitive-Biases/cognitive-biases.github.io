@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-10",
   "description": "Reusable research protocols for testing human-AI decision patterns without treating working labels as established cognitive biases.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/protocol/",
   "rules": [
@@ -69,6 +69,36 @@
       "primaryMeasure": "Delayed unaided retention or transfer performance",
       "secondaryMeasures": ["immediate task quality", "time on task", "self-rated effort", "confidence"],
       "minimumReport": "Do not infer long-term learning from immediate task quality. Include a delayed or transfer measure."
+    },
+    {
+      "slug": "structured-output-authority-test",
+      "title": "Structured Output Authority Test",
+      "track": "structured-output-authority",
+      "question": "Does formatting the same AI answer as a table or scorecard increase trust or reduce verification compared with equivalent prose?",
+      "conditions": ["Equivalent answer in plain prose", "Equivalent answer in a structured table or scorecard", "Structured answer plus a note that formatting does not increase evidence quality"],
+      "primaryMeasure": "Trust rating and verification rate",
+      "secondaryMeasures": ["error acceptance", "perceived objectivity", "decision confidence", "time to first verification action"],
+      "minimumReport": "Keep claims, wording, sources, model identity and planted error rate constant. Report readability separately so a fluency advantage is not silently treated as authority."
+    },
+    {
+      "slug": "dialogue-momentum-test",
+      "title": "Dialogue Momentum Test",
+      "track": "dialogue-momentum",
+      "question": "After a multi-turn AI conversation converges on a plan, are people less likely to reopen an early assumption when new counterevidence appears?",
+      "conditions": ["Continuous conversation with prior convergence", "Fresh context containing the same plan and new counterevidence", "Continuous conversation plus an explicit instruction to reopen the original assumption"],
+      "primaryMeasure": "Rate of revising the challenged assumption",
+      "secondaryMeasures": ["final decision quality", "confidence change", "amount of counterevidence discussed", "time to revision"],
+      "minimumReport": "Keep the plan, counterevidence and decision task equivalent across conditions. Report whether differences come from human revision, model response, or both."
+    },
+    {
+      "slug": "citation-density-halo-test",
+      "title": "Citation Density Halo Test",
+      "track": "citation-density-halo",
+      "question": "Do repeated citation markers make an AI answer look better supported when the number and quality of unique sources do not change?",
+      "conditions": ["Two unique sources cited once each", "The same two sources repeated through many citation markers", "Repeated markers plus explicit disclosure that only two unique sources are used"],
+      "primaryMeasure": "Perceived evidence strength",
+      "secondaryMeasures": ["trust", "verification intent", "estimate of unique source count", "error acceptance"],
+      "minimumReport": "Hold answer text, source quality and unique source count constant. Record whether participants correctly understand source independence rather than assuming every marker represents new evidence."
     }
   ],
   "startingEvidence": [

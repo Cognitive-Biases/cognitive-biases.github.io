@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-10",
   "description": "Research tracks for human-AI decision patterns. These labels are working hypotheses, not established cognitive biases unless explicitly stated.",
   "canonicalUrl": "https://cognitive-biases.github.io/ai-era/",
   "interpretationRule": "Do not present a research-track label as a validated cognitive bias. Preserve the status, related established concepts, testable prediction and source links.",
@@ -80,6 +80,33 @@
       "sources": [
         {"title": "Large Language Models are overconfident and amplify human bias", "year": 2025, "url": "https://arxiv.org/abs/2505.02151"}
       ]
+    },
+    {
+      "slug": "structured-output-authority",
+      "name": "Structured Output Authority",
+      "status": "testable hypothesis",
+      "relatedConcepts": ["authority bias", "processing fluency", "automation bias"],
+      "idea": "The same AI answer may feel more objective when it arrives as a table, scorecard or ranked framework instead of ordinary prose. We asked for columns; our brain may accidentally read them as peer review.",
+      "testablePrediction": "With facts, wording, source quality and error rate held constant, participants should rate a structured table or scorecard as more trustworthy and verify it less often than an equivalent prose answer.",
+      "sources": []
+    },
+    {
+      "slug": "dialogue-momentum",
+      "name": "Dialogue Momentum",
+      "status": "testable hypothesis",
+      "relatedConcepts": ["commitment and consistency", "confirmation bias", "sunk cost effect"],
+      "idea": "After several human-AI turns converge on a plan, we may become less willing to reopen an early assumption when new evidence challenges it. The conversation has acquired a direction, and apparently directions dislike U-turns.",
+      "testablePrediction": "After identical counterevidence, participants continuing a multi-turn AI conversation that previously converged on a plan should revise the key assumption less often than participants who receive the same plan and counterevidence in a fresh context.",
+      "sources": []
+    },
+    {
+      "slug": "citation-density-halo",
+      "name": "Citation Density Halo",
+      "status": "testable hypothesis",
+      "relatedConcepts": ["authority bias", "processing fluency", "illusory truth effect"],
+      "idea": "An AI answer with many citation markers may feel better grounded even when those markers add no independent evidence. Eight little brackets can look impressively scientific while still pointing back to the same two sources.",
+      "testablePrediction": "When unique sources and answer content are held constant, repeating citation markers throughout an AI answer should increase perceived evidence strength or trust relative to citing each source once; explicit source-lineage disclosure should reduce the effect.",
+      "sources": []
     }
   ]
 }
