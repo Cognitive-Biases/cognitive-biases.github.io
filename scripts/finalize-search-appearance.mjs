@@ -25,7 +25,7 @@ html = setOrAdd(html, /<meta\b[^>]*property=["']og:description["'][^>]*>/i, `<me
 html = setOrAdd(html, /<meta\b[^>]*property=["']og:url["'][^>]*>/i, `<meta property="og:url" content="${SITE}">`);
 html = setOrAdd(html, /<meta\b[^>]*name=["']twitter:title["'][^>]*>/i, `<meta name="twitter:title" content="${TITLE}">`);
 html = setOrAdd(html, /<meta\b[^>]*name=["']twitter:description["'][^>]*>/i, `<meta name="twitter:description" content="${DESCRIPTION}">`);
-html = setOrAdd(html, /<link\b[^>]*rel=["'](?:shortcut\s+)?icon["'][^>]*>/i, `<link rel="icon" type="image/png" sizes="80x80" href="${FAVICON}">`);
+html = setOrAdd(html, /<link\b[^>]*rel=["'](?:shortcut\s+)?icon["'][^>]*>/i, `<link rel="icon" type="image/png" href="${FAVICON}">`);
 
 let websiteCount = 0;
 
@@ -81,7 +81,7 @@ const required = [
   `<link rel="canonical" href="${SITE}">`,
   `<meta property="og:site_name" content="${SITE_NAME}">`,
   `<meta property="og:url" content="${SITE}">`,
-  `<link rel="icon" type="image/png" sizes="80x80" href="${FAVICON}">`,
+  `<link rel="icon" type="image/png" href="${FAVICON}">`,
   `"name":"${SITE_NAME}"`,
   `"url":"${SITE}"`
 ];
