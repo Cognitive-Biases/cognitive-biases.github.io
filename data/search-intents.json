@@ -8,7 +8,8 @@
       "description": "Reviewed lenses for forecasts, estimates, probability judgments and future choices.",
       "terms": ["forecast", "estimate", "estimation", "probability", "planning", "anchor", "subadditivity", "future"],
       "minimumReviewedConcepts": 2,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["project-estimation", "forecasting"]
     },
     {
       "slug": "ai-assisted-decisions",
@@ -17,7 +18,8 @@
       "description": "Evidence-aware checks for automation, anchoring, humanlike interfaces and repeated AI claims.",
       "terms": ["ai", "automation", "automated", "anthropomorphism", "humanlike", "capability", "assistant", "model"],
       "minimumReviewedConcepts": 2,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["ai-assisted-research"]
     },
     {
       "slug": "information-verification",
@@ -26,7 +28,8 @@
       "description": "Reviewed lenses for misinformation, corrections, source checking, competing explanations and belief updating.",
       "terms": ["truth", "misinformation", "correction", "backfire", "confirmation", "congruence", "hypothesis", "diagnostic", "alternative explanation", "familiar", "source", "evidence"],
       "minimumReviewedConcepts": 3,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["checking-repeated-claims", "ai-assisted-research"]
     },
     {
       "slug": "project-product-decisions",
@@ -35,7 +38,8 @@
       "description": "Reviewed lenses for delivery, metrics, escalation, sunk cost and retrospective project judgment.",
       "terms": ["project", "product", "delivery", "sunk cost", "escalation", "status quo", "metric", "decision"],
       "minimumReviewedConcepts": 2,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["project-estimation", "product-prioritization", "kpi-review"]
     },
     {
       "slug": "kpis-proxy-metrics",
@@ -44,7 +48,8 @@
       "description": "Reviewed lenses for proxy metrics, targets, benchmark scores, measurement quality and goal substitution.",
       "terms": ["kpi", "metric", "proxy", "benchmark", "surrogation", "measurement", "systematic", "score", "target", "dashboard"],
       "minimumReviewedConcepts": 2,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["kpi-review"]
     },
     {
       "slug": "past-present-comparison",
@@ -53,7 +58,8 @@
       "description": "Reviewed lenses for broad decline claims, rosy recollection, fading emotional intensity and comparisons between past and present.",
       "terms": ["past", "present", "better before", "decline", "declinism", "rosy", "retrospection", "nostalgia", "fading affect", "memory"],
       "minimumReviewedConcepts": 3,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": []
     },
     {
       "slug": "social-judgment",
@@ -62,7 +68,8 @@
       "description": "Reviewed lenses for perspective taking, self-assessment, attribution and social judgment.",
       "terms": ["social", "knowledge", "dunning", "attribution", "moral", "projection", "other person", "judgment"],
       "minimumReviewedConcepts": 2,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["hiring-interviews", "performance-review"]
     },
     {
       "slug": "sunk-cost-decisions",
@@ -71,7 +78,8 @@
       "description": "Reviewed lenses for sunk costs, escalation, loss aversion and status-quo pressure.",
       "terms": ["sunk cost", "escalation", "loss aversion", "status quo", "investment", "already spent"],
       "minimumReviewedConcepts": 2,
-      "maxConcepts": 10
+      "maxConcepts": 10,
+      "situationSlugs": ["product-prioritization", "career-change"]
     }
   ]
 }
