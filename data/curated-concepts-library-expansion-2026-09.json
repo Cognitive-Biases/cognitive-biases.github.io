@@ -1,5 +1,18 @@
 {
   "version": 1,
   "updatedAt": "2026-09-10",
-  "entries": []
+  "entries": [
+    {
+      "id": 225,
+      "number": 225,
+      "typeOfBias": "Cognitive Bias",
+      "title": "Less-Is-Better Effect – when less looks better because the comparison is missing",
+      "description": "The less-is-better effect appears when we evaluate a smaller or objectively lower-value option more positively because an easier contextual cue makes it look better, especially when options are judged separately. More can lose to less because context has a surprisingly good marketing department.\n\nClassic examples\n- Gifts – in the original research, a $45 scarf could make the giver seem more generous than a $55 coat when each gift was judged separately. The scarf looked expensive for a scarf; the coat looked modest for a coat.\n- Ice cream – people could value a smaller but overfilled serving more than a larger but underfilled serving. Fullness was easier to judge than the exact amount of ice cream.\n- Product sets – a smaller set containing only intact items could be valued more than a larger set that contained more intact items overall but also some broken pieces.\n\nA better check\n- Compare serious options side by side when separate evaluation may hide the total difference.\n- Separate total value from the easiest visible cue: fullness, percentage intact, category price, or another local reference point.\n- Ask what changed in absolute terms. Did we really get less value, or did the larger option simply look worse against its container or category?\n- Count real costs too. Extra broken items can create disposal or effort costs, so 'more' is not automatically better outside the experimental setup.\n\nThe effect is not a rule that smaller options are secretly superior. It is a warning that when comparison is difficult, we may judge the easiest reference point instead of the thing we actually care about.",
+      "slug": "cognitive-bias-less-is-better-effect",
+      "related": [],
+      "status": "reviewed",
+      "updatedAt": "2026-09-10T16:50:00.000Z",
+      "published": true
+    }
+  ]
 }
