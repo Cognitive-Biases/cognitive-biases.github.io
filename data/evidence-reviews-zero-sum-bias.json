@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "reviews": [
+    {
+      "slug": "cognitive-bias-zero-sum-bias",
+      "evidenceStatus": "original experimental evidence plus a broad later literature on zero-sum beliefs; scope and mechanisms vary by domain",
+      "reviewedAt": "2026-09-10",
+      "qualification": "Meegan introduced zero-sum bias in three university-grading experiments where grades were based on an absolute standard and high grades were not rationed. Participants were nevertheless more likely to predict a low next grade after seeing that many high grades had already been awarded. This is direct evidence for zero-sum judgment in that paradigm, not proof that every competitive interpretation has the same cause. Later reviews describe a much broader literature on zero-sum beliefs across interpersonal, intergroup, organizational and international settings. That wider literature often studies beliefs or mindsets rather than the exact 2010 task, so the concepts should be connected without pretending they are identical.",
+      "mechanism": "A zero-sum heuristic can make desirable resources feel scarce or competitive even when one person's gain does not mechanically reduce another person's opportunity. Broader work suggests that zero-sum beliefs can also reflect cognitive, motivational and contextual forces. Real scarcity, relative ranking, status competition and genuinely fixed budgets can produce correct zero-sum reasoning, so they must be separated from biased zero-sum assumptions.",
+      "practical": "Before treating a situation as win-lose, identify the resource that is supposedly fixed and write down the payoff rule. Ask whether both parties can gain, whether the total resource can expand, or whether one person's success leaves the other's payoff unchanged. If the situation really has a fixed total, zero-sum reasoning may be appropriate. If no conserved resource can be named, investigate whether the competition is being assumed rather than imposed by the rules.",
+      "sources": [
+        {
+          "title": "Zero-Sum Bias: Perceived Competition Despite Unlimited Resources",
+          "year": 2010,
+          "type": "three experiments on judgments under non-zero-sum grading rules",
+          "doi": "10.3389/fpsyg.2010.00191",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2010.00191/full"
+        },
+        {
+          "title": "The psychology of zero-sum beliefs",
+          "year": 2023,
+          "type": "review of social, cognitive, evolutionary and organizational psychology research",
+          "doi": "10.1038/s44159-023-00194-9",
+          "url": "https://doi.org/10.1038/s44159-023-00194-9"
+        },
+        {
+          "title": "The science of zero-sum thinking: a scoping review of 10 years of empirical research",
+          "year": 2025,
+          "type": "scoping review of 192 studies across 67 peer-reviewed papers",
+          "doi": "10.1080/17467586.2024.2441504",
+          "url": "https://doi.org/10.1080/17467586.2024.2441504"
+        }
+      ]
+    }
+  ]
+}
