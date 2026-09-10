@@ -61,6 +61,14 @@ jobs:
         run: node scripts/check-growth-rollout.mjs
       - name: Verify Growth owner-data scope
         run: node scripts/check-growth-owner-data.mjs
+      - name: Generate GitHub Pages 404
+        run: node scripts/generate-404.mjs
+      - name: Normalize final public metadata
+        run: node scripts/finalize-public-metadata.mjs
+      - name: Re-finalize homepage search identity
+        run: node scripts/finalize-search-appearance.mjs
+      - name: Gate final public surface
+        run: node scripts/check-final-public-surface.mjs
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:
