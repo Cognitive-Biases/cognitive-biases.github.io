@@ -4,7 +4,15 @@ This project is a public reference, not a content farm. Every new page or substa
 
 ## How we write
 
-Write in plain, natural English. Use a calm, semi-formal tone. Prefer a concrete example to abstract wording.
+Write in plain, natural English at roughly B2 level. Use a clear, semi-formal voice: informed but not academic for its own sake, practical without becoming self-help copy.
+
+A strong page should be understandable before the reader knows the bias name. Start from the question, situation or distinction that brought the reader there, then introduce terminology when it earns its place.
+
+Short memorable lines are welcome when they sharpen the idea. A little dry humor or contrast can make a difficult concept easier to remember. But a hook is not the content: move quickly from it to an explanation, evidence, a worked example or a procedure the reader can inspect.
+
+Do not add generic SEO introductions, repeated definitions, keyword-shaped filler, fake urgency, motivational padding or paragraphs whose only purpose is to make a page longer. A page should exist because it answers a real question better, not because another URL can be published.
+
+Prefer concrete language and realistic examples. Explain specialist terms when they matter. Avoid unnecessary jargon, but do not simplify away an important limitation.
 
 A good entry should separate:
 
@@ -14,7 +22,23 @@ A good entry should separate:
 - a practical question or check a reader can use;
 - the sources we relied on.
 
+A good decision guide should also make the procedure visible: what to record before the decision, what evidence to compare, what could change the conclusion, and what the procedure does not prove.
+
 Avoid claims such as "your brain always", "this bias proves", "people with this bias" or "this technique will remove the bias" unless a source genuinely supports that level of certainty.
+
+## Situation-first content
+
+For practical pages, prefer the decision over the label. A reader asking how to review a project estimate, KPI, interview or AI answer should not have to diagnose the correct bias before the site becomes useful.
+
+Deep situation guides should normally connect five layers instead of duplicating them:
+
+1. the concrete decision problem;
+2. a bounded review protocol;
+3. a realistic worked example or practice scenario;
+4. relevant comparisons or reviewed research already maintained by the project;
+5. an explicit evidence boundary.
+
+Do not create a second search landing page when an existing canonical situation can be improved. Do not manufacture a new cognitive-bias label to make a cluster look complete.
 
 ## Originality rule
 
@@ -49,6 +73,8 @@ Useful wording includes:
 
 Do not turn an editorial evidence label into a fake scientific score.
 
+A practical procedure is not evidence that a bias caused the original decision. State what the procedure helps inspect and what remains unknown.
+
 ## Legacy content
 
 The existing library contains older generated educational descriptions. They remain useful as a starting corpus, but "generated" does not mean "reviewed".
@@ -78,13 +104,16 @@ If the project later separates an open data layer from a more protected editoria
 
 ## Final review checklist
 
-Before a reviewed entry or research note is published, confirm that:
+Before a reviewed entry, deep decision guide or research note is published, confirm that:
 
 - the main claim matches the cited evidence;
 - limitations are visible where they matter;
 - the prose is our own;
+- the opening is useful to a reader, not generic SEO filler;
+- specialist terms are explained when needed;
+- examples are concrete without inventing outcomes or precision;
 - practical advice is framed as a check or procedure, not a guaranteed cure;
 - related concepts are not being treated as identical;
-- the review date is present;
+- the review date is present where the content is evidence-sensitive;
 - links still resolve;
 - the language is understandable without specialist knowledge.
