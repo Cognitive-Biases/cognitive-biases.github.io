@@ -1,4 +1,5 @@
 {
+  "$schema": "https://cognitive-biases.github.io/schemas/situation-guides.schema.json",
   "version": 1,
   "updatedAt": "2026-09-10",
   "description": "Deep, situation-first decision guides. Each record extends a canonical situation with a problem question, five-step review, worked example, decision record, evidence boundary and links to existing practice, comparisons or reviewed research.",
@@ -33,9 +34,7 @@
         "Largest uncertainty or missing evidence.",
         "What new evidence would change the ranking."
       ],
-      "comparisonSlugs": [
-        "hindsight-bias-vs-outcome-bias"
-      ],
+      "comparisonSlugs": ["hindsight-bias-vs-outcome-bias"],
       "researchNoteSlugs": [],
       "evidenceBoundary": "Anchoring, confirmation bias and outcome bias are useful questions to test here, not diagnoses of an interviewer. Structured criteria can improve consistency, but they do not guarantee that the final hire will be correct.",
       "sourceBoundary": "This guide combines existing project evidence, reviewed comparison material and scenario practice. It does not create a new scientific claim."
@@ -72,9 +71,7 @@
         "Update trigger and previous forecast for later calibration."
       ],
       "comparisonSlugs": [],
-      "researchNoteSlugs": [
-        "planning-fallacy-project-estimates-outside-view"
-      ],
+      "researchNoteSlugs": ["planning-fallacy-project-estimates-outside-view"],
       "evidenceBoundary": "Planning fallacy, anchoring and availability are plausible lenses for the reasoning process. Real delivery also depends on scope, skills, dependencies, incentives and technical constraints, so a late project is not proof of a cognitive bias.",
       "sourceBoundary": "The guide reuses the project's reviewed planning-fallacy synthesis and anchoring evidence. Reference-class forecasting is a practical procedure, not a universal correction formula."
     },
@@ -144,14 +141,8 @@
         "Contradictory or missing evidence.",
         "Confidence change and reason for the change."
       ],
-      "comparisonSlugs": [
-        "anchoring-effect-vs-automation-bias",
-        "confirmation-bias-vs-congruence-bias"
-      ],
-      "researchNoteSlugs": [
-        "anchoring-ai-assisted-decisions-first-number",
-        "llm-cognitive-biases-what-recent-research-shows"
-      ],
+      "comparisonSlugs": ["anchoring-effect-vs-automation-bias", "confirmation-bias-vs-congruence-bias"],
+      "researchNoteSlugs": ["anchoring-ai-assisted-decisions-first-number", "llm-cognitive-biases-what-recent-research-shows"],
       "evidenceBoundary": "Automation bias, anchoring and illusory truth are lenses for checking the workflow. An AI answer can be correct, and a repeated answer can still be useful. The problem is treating fluency, automation or repetition as a substitute for independent evidence.",
       "sourceBoundary": "The guide uses reviewed project evidence and research syntheses. It does not claim that one model response reveals a psychological state in the user or the model."
     },
@@ -187,12 +178,8 @@
         "Independent outcome or validation evidence.",
         "Trigger for changing or retiring the metric."
       ],
-      "comparisonSlugs": [
-        "surrogation-vs-systematic-bias"
-      ],
-      "researchNoteSlugs": [
-        "surrogation-when-a-kpi-starts-replacing-the-goal"
-      ],
+      "comparisonSlugs": ["surrogation-vs-systematic-bias"],
+      "researchNoteSlugs": ["surrogation-when-a-kpi-starts-replacing-the-goal"],
       "evidenceBoundary": "The project treats surrogation as a narrower management-accounting construct, not as a synonym for every bad metric. A KPI can also fail because of data quality, incentives, sampling, calibration or an unsuitable objective, so the label should never replace direct measurement analysis.",
       "sourceBoundary": "This guide links a reviewed surrogation synthesis and the separate systematic-bias comparison while keeping the existing evidence-reviewed cognitive lenses visible."
     }
