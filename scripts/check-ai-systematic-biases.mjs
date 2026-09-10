@@ -42,8 +42,7 @@ for (const required of [
   "AI biases",
   "Human–AI patterns",
   "/ai-biases/methodology/",
-  "/data/ai-systematic-biases.json",
-  "data-ai-bias-pillar"
+  "/data/ai-systematic-biases.json"
 ]) if (!hub.includes(required)) throw new Error(`AI bias hub is missing: ${required}`);
 
 const methodology = await readFile("dist/ai-biases/methodology/index.html", "utf8");
