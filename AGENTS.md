@@ -23,6 +23,7 @@ Do not start by loading all generated `dist/` output or the complete corpus when
 | Bias explanation/library record | `data/biases.json` and relevant reviewed data beside it | affected human page, evidence/relations/taxonomy records | `npm run build` and `npm run check` |
 | Evidence/claim update | reviewed evidence/source records | public explanation, source identity, claim provenance, review date/status | `npm run build` and `npm run check` |
 | Comparison/context/decision guide | canonical comparison/context data | related bias records, evidence, generated pages and retrieval data | `npm run build` and `npm run check` |
+| Deep situation guide | `data/situations.json` + `data/situation-guides.json` | matching reasoning-practice pack, `data/search-intents.json`, comparisons/research notes, schema, citation/AWRP routing | `npm run build` and `npm run check` |
 | Research update | workflow in `docs/research-agent.md` and research inbox/source data | existing library claims and research pages | relevant research checks plus `npm run check` |
 | Public data/API/RAG | canonical `data/` sources and schemas | release manifest, checksums, `/data/releases/`, MCP adapter | `npm run build` and `npm run check` |
 | Translation/localization | canonical reviewed meaning plus translation state | localized pages/data and review metadata | relevant translation skill/check plus `npm run check` |
@@ -33,12 +34,24 @@ Do not start by loading all generated `dist/` output or the complete corpus when
 
 - The project is not a race to publish the longest bias list. Prefer reviewed explanation, evidence, comparisons, decision contexts, provenance, and honest uncertainty.
 - `data/biases.json` is the original corpus; generated legacy records are not automatically independently reviewed.
+- `data/situation-guides.json` is the authored deep-guide extension keyed to canonical records in `data/situations.json`. Improve the existing `/situations/<slug>/` page instead of creating a second SEO landing page for the same decision.
+- `data/search-intents.json` is an editorial discovery model. A `situationSlugs` mapping says the situation is useful for that question; it is not evidence that Google demand, ranking or traffic has been measured.
+- Deep guides should connect a real decision to a bounded review protocol, realistic practice and the strongest existing comparison/research surfaces. Do not manufacture a new cognitive-bias label merely to fill a guide.
 - Research enters an inbox/review flow first. Do not change a public evidence-sensitive claim from search metadata or an unread source.
 - When evidence is mixed or a popular claim is too strong, preserve that uncertainty in both human and machine-readable representations.
 - Public data is another view of maintained knowledge. Keep page meaning, release data, schemas, provenance, and review status aligned.
 - The reference MCP adapter is read-only and must preserve `no_match` when the reviewed library cannot support a concept or comparison.
 - Fix canonical source or generator before generated `dist/` output; do not hand-edit derived output as a substitute for the source.
 - Do not copy third-party source prose into the project; source-backed facts must be expressed in original editorial language.
+
+## Public writing quality
+
+- Write public English at approximately B2 level: clear, concrete and readable without flattening the idea into baby language.
+- Prefer a semi-formal human voice. Short memorable lines are welcome when they sharpen the decision, for example a contrast or a small piece of dry humor, but the page must quickly move to evidence, procedure or an example.
+- Do not add generic SEO filler, throat-clearing introductions, repeated definitions or paragraphs whose only job is to make a page longer.
+- Explain specialist terms when they matter. A reader should be able to use the guide without already knowing the bias name.
+- Keep examples realistic and specific enough to transfer to work or everyday decisions, while avoiding fake precision and invented outcomes.
+- Every practical recommendation should be bounded: state what it helps inspect and what it does not prove.
 
 ## Search / AI technical preflight
 
