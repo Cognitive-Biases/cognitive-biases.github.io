@@ -10,6 +10,9 @@ const practiceIndex = JSON.parse(await readFile("data/reasoning-practice/index.j
 const errors = [];
 const assert = (condition, message) => { if (!condition) errors.push(message); };
 const requireText = (value, label) => assert(String(value || "").trim().length >= 12, `${label}: missing or too short`);
+const esc = (value = "") => String(value).replace(/[&<>"']/g, (c) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+})[c]);
 const situationSlugs = new Set(situationsData.situations.map((item) => item.slug));
 const deep = source.guides.filter((guide) => guide.tier === "deep");
 const publicBySituation = new Map(publicData.guides.map((item) => [item.situation, item]));
@@ -52,8 +55,8 @@ for (const guide of deep) {
   const html = await readFile(join(OUT, "situations", situationSlug, "index.html"), "utf8");
   assert(html.includes('class="decision-deep-guide"'), `${situationSlug}: rendered deep guide missing`);
   assert(html.includes('id="decision-review-protocol"'), `${situationSlug}: rendered protocol missing`);
-  assert(html.includes(guide.hook.replaceAll("&", "&amp;")), `${situationSlug}: hook not rendered`);
-  assert(html.includes(guide.problemQuestion.replaceAll("&", "&amp;")), `${situationSlug}: problem question not rendered`);
+  assert(html.includes(esc(guide.hook)), `${situationSlug}: hook not rendered`);
+  assert(html.includes(esc(guide.problemQuestion)), `${situationSlug}: problem question not rendered`);
   for (const scenario of pack.scenarios) assert(html.includes(`/practice/scenarios/${scenario.slug}/`), `${situationSlug}: practice link missing ${scenario.slug}`);
   for (const slug of guide.comparisonSlugs || []) assert(html.includes(`/compare/${slug}/`), `${situationSlug}: comparison link missing ${slug}`);
   for (const slug of guide.researchNoteSlugs || []) assert(html.includes(`/research/${slug}/`), `${situationSlug}: research link missing ${slug}`);
