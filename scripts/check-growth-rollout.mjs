@@ -36,6 +36,19 @@ for (const href of ["/llms.txt", "/de/llms.txt", "/ru/llms.txt"]) {
   assert(agentRouteLinks.some((tag) => tag.includes(`href="${href}"`)), `homepage is missing agent routing discovery for ${href}`);
 }
 
+const llms = await readFile("dist/llms.txt", "utf8");
+for (const route of [
+  `${SITE}/situations/`,
+  `${SITE}/data/situation-guides.json`,
+  `${SITE}/schemas/situation-guides.schema.json`
+]) {
+  assert(llms.includes(route), `published llms.txt is missing decision-guide routing: ${route}`);
+}
+
+const situationGuides = JSON.parse(await readFile("dist/data/situation-guides.json", "utf8"));
+assert(situationGuides.$schema === `${SITE}/schemas/situation-guides.schema.json`, "published situation guides lost their schema binding");
+assert((situationGuides.guides || []).filter((guide) => guide.tier === "deep").length >= 5, "published deep decision guide distribution is unexpectedly small");
+
 const projectTrust = JSON.parse(await readFile("data/project-trust.json", "utf8"));
 assert(projectTrust.thirdPartyContent?.policy === "editorial-purpose-first", "project trust must define editorial-purpose-first third-party governance");
 assert(projectTrust.thirdPartyContent?.rules?.length >= 4, "third-party governance rules are incomplete");
@@ -50,4 +63,4 @@ const review = await readFile("growth/content-quality-review-2026-09-06.md", "ut
 assert(review.includes("Decision: `keep`"), "manual content-quality review decision is missing");
 assert(review.includes("/research/") && review.includes("/evidence/") && review.includes("/contexts/"), "manual content-quality review must cover priority evidence and decision surfaces");
 
-console.log(`Growth rollout checks passed: canonical Organization identity, non-hreflang agent routing discovery, editorial-purpose governance and manual non-commodity review are recorded and published${app ? "; published app identity is store-linked" : "; no canonical app JSON-LD is currently published, so no synthetic app node was required"}.`);
+console.log(`Growth rollout checks passed: canonical Organization identity, non-hreflang agent routing discovery, deep decision-guide routing, editorial-purpose governance and manual non-commodity review are recorded and published${app ? "; published app identity is store-linked" : "; no canonical app JSON-LD is currently published, so no synthetic app node was required"}.`);
