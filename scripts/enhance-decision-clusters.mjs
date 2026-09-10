@@ -171,5 +171,6 @@ for (const situation of deepSituations) {
 }
 
 await writeFile(join(OUT, "data", "situation-guides.json"), JSON.stringify(guidesData, null, 2) + "\n");
+await writeFile(join(OUT, "schemas", "situation-guides.schema.json"), await readFile("schemas/situation-guides.schema.json", "utf8"));
 
 console.log(`Deep decision guides injected for ${deepSituations.length} situations; search-intent guides now route to mapped decision situations.`);
