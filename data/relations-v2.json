@@ -46,6 +46,12 @@
       "rightSlug": "confirmation-bias-backfire-effect",
       "type": "often-confused-with",
       "note": "Confirmation bias describes selective search, testing, interpretation, or memory shaped by existing beliefs. Backfire is the narrower measured outcome in which a correction increases belief in the targeted false claim; resistance or disagreement alone is not backfire."
+    },
+    {
+      "leftSlug": "cognitive-bias-less-is-better-effect",
+      "rightSlug": "framing-effect-distinction-bias",
+      "type": "overlaps-with",
+      "note": "Both involve evaluation mode and attribute evaluability. Less-Is-Better Effect focuses on cases where a smaller or lower-value option can receive a higher separate evaluation because an easy local cue dominates. Distinction Bias focuses on how joint comparison can make attribute differences look more consequential than they are in separate evaluation or later experience."
     }
   ]
 }
