@@ -16,7 +16,10 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages-${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
+  # Every production-capable trigger must share one lane. Otherwise a push and a
+  # workflow_run can publish in parallel and the run that finishes last wins.
+  # Pull requests only validate their own merge ref and never upload/deploy.
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'production' }}
   cancel-in-progress: true
 
 jobs:
