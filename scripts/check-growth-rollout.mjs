@@ -29,6 +29,13 @@ if (app) {
   assert(urls(app.sameAs).includes(PLAY) && urls(app.sameAs).includes(APP_STORE), "published app identity must link both authoritative store profiles");
 }
 
+const agentRouteLinks = [...home.matchAll(/<link\b[^>]*>/gi)].map((match) => match[0]).filter((tag) => /llms\.txt/i.test(tag));
+assert(agentRouteLinks.length >= 3, "homepage must advertise canonical and localized llms.txt routing surfaces");
+assert(agentRouteLinks.every((tag) => !/\bhreflang\s*=/i.test(tag)), "agent routing documents must not be emitted as page-level hreflang alternates");
+for (const href of ["/llms.txt", "/de/llms.txt", "/ru/llms.txt"]) {
+  assert(agentRouteLinks.some((tag) => tag.includes(`href="${href}"`)), `homepage is missing agent routing discovery for ${href}`);
+}
+
 const projectTrust = JSON.parse(await readFile("data/project-trust.json", "utf8"));
 assert(projectTrust.thirdPartyContent?.policy === "editorial-purpose-first", "project trust must define editorial-purpose-first third-party governance");
 assert(projectTrust.thirdPartyContent?.rules?.length >= 4, "third-party governance rules are incomplete");
@@ -43,4 +50,4 @@ const review = await readFile("growth/content-quality-review-2026-09-06.md", "ut
 assert(review.includes("Decision: `keep`"), "manual content-quality review decision is missing");
 assert(review.includes("/research/") && review.includes("/evidence/") && review.includes("/contexts/"), "manual content-quality review must cover priority evidence and decision surfaces");
 
-console.log(`Growth rollout checks passed: canonical Organization identity, editorial-purpose governance and manual non-commodity review are recorded and published${app ? "; published app identity is store-linked" : "; no canonical app JSON-LD is currently published, so no synthetic app node was required"}.`);
+console.log(`Growth rollout checks passed: canonical Organization identity, non-hreflang agent routing discovery, editorial-purpose governance and manual non-commodity review are recorded and published${app ? "; published app identity is store-linked" : "; no canonical app JSON-LD is currently published, so no synthetic app node was required"}.`);

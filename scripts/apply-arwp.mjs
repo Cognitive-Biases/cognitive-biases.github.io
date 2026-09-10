@@ -25,9 +25,9 @@ const discoveryLinks = [
   '<link rel="describedby" type="application/json" href="/ai/ai-search-profile.json" title="AI Search & Citation Profile">',
   '<link rel="describedby" type="application/json" href="/ai/locales.json" title="Agent locale manifest">',
   '<link rel="describedby" type="application/json" href="/ai/growth-review.json" title="ARWP Growth owner review receipt">',
-  '<link rel="alternate" type="text/plain" hreflang="en" href="/llms.txt" title="English agent routing">',
-  '<link rel="alternate" type="text/plain" hreflang="de" href="/de/llms.txt" title="German agent routing">',
-  '<link rel="alternate" type="text/plain" hreflang="ru" href="/ru/llms.txt" title="Russian agent routing">',
+  '<link rel="alternate" type="text/plain" href="/llms.txt" title="English agent routing">',
+  '<link rel="alternate" type="text/plain" href="/de/llms.txt" title="German agent routing">',
+  '<link rel="alternate" type="text/plain" href="/ru/llms.txt" title="Russian agent routing">',
   '<link rel="alternate" type="application/ld+json" href="/knowledge/graph.json" title="Knowledge graph">'
 ];
 
