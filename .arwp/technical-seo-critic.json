@@ -1,0 +1,63 @@
+{
+  "version": "0.1",
+  "reviewedAt": "2026-09-11",
+  "site": "https://cognitive-biases.github.io/",
+  "arwpRevision": "28c9cc9b75fa2b17791b7b294b4249fa28496445",
+  "mode": "deep-run-execute",
+  "scope": "ARWP Technical SEO Critic TSC-01 through TSC-09 applied after the existing Search Release and final public-surface gates.",
+  "findings": [
+    {
+      "id": "TSC-01-head-metadata-parser-integrity",
+      "status": "implemented-regression-gate",
+      "evidence": "scripts/check-technical-seo-critic.mjs inspects the final sitemap cohort and rejects invalid top-level elements inside the effective head."
+    },
+    {
+      "id": "TSC-02-search-field-performance",
+      "status": "owner-data",
+      "evidence": "The Site Focus contract declares LCP/INP/CLS budgets, but repository or Lighthouse data is not relabelled as field Core Web Vitals. Provider field evidence remains required."
+    },
+    {
+      "id": "TSC-03-pagination-canonical-independence",
+      "status": "not-applicable",
+      "evidence": "No current pagination URL family or page= implementation was observed in the reviewed source/sitemap architecture. The critic gate still rejects obsolete rel=next/prev metadata."
+    },
+    {
+      "id": "TSC-04-crawl-state-space-control",
+      "status": "implemented-watch",
+      "evidence": "The final-artifact critic counts discoverable same-origin query-bearing links and surfaces them as crawl-state review evidence; current source review found no page= or href query family requiring a production fix."
+    },
+    {
+      "id": "TSC-05-http-revalidation-efficiency",
+      "status": "live-verification",
+      "evidence": "scripts/check-live-technical-seo-critic.mjs records ETag/Last-Modified presence and bounded conditional 304 behavior without treating missing validators as a ranking failure."
+    },
+    {
+      "id": "TSC-06-link-follow-and-relationship-integrity",
+      "status": "implemented-regression-gate",
+      "evidence": "The final sitemap cohort is checked for accidental nofollow on same-origin internal discovery links."
+    },
+    {
+      "id": "TSC-07-obsolete-and-false-seo-signals",
+      "status": "implemented-regression-gate",
+      "evidence": "The final artifact rejects meta keywords, rel=next/prev and nositelinkssearchbox. html[lang] remains semantic/accessibility metadata rather than a claimed Google language-detection signal."
+    },
+    {
+      "id": "TSC-08-canonical-channel-conflict",
+      "status": "live-verification",
+      "evidence": "The live critic compares an HTTP Link rel=canonical target, when present, with the HTML canonical on a bounded sitemap cohort."
+    },
+    {
+      "id": "TSC-09-unintended-search-serving-restrictions",
+      "status": "implemented-offline-and-live",
+      "evidence": "Sitemap pages are rejected for unintended negative robots/googlebot directives in HTML and negative X-Robots-Tag restrictions are checked after deployment."
+    }
+  ],
+  "guardrails": {
+    "noRankingGuarantee": true,
+    "noFieldDataFabrication": true,
+    "noPaginationWorkWhenNotApplicable": true,
+    "noProductionMutationFromOwnerDataUnknown": true,
+    "finalArtifactBeforeRelease": true,
+    "liveHeadersAfterDeploy": true
+  }
+}
