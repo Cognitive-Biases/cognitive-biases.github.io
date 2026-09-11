@@ -6,10 +6,12 @@ const OUT = "dist";
 const researchNotes = JSON.parse(await readFile("data/research-notes.json", "utf8"));
 const monthlyDigests = JSON.parse(await readFile("data/monthly-research-digests.json", "utf8"));
 const skills = JSON.parse(await readFile("data/skills.json", "utf8"));
+const agentSkills = JSON.parse(await readFile("data/agent-skills.json", "utf8"));
 const aiJudgeHistory = JSON.parse(await readFile("data/studies/ai-judge-history-v1.json", "utf8"));
 const researchTracker = JSON.parse(await readFile("data/ai-era-research-tracker.json", "utf8"));
 const validDate = (value = "") => /^\d{4}-\d{2}-\d{2}/.test(String(value)) ? String(value).slice(0, 10) : null;
 const latestDigestDate = [...(monthlyDigests.digests || [])].map((digest) => validDate(digest.publishedAt)).filter(Boolean).sort().at(-1) || validDate(monthlyDigests.updatedAt);
+const agentSkillsDate = validDate(agentSkills.updatedAt);
 
 const resources = [
   { path: "/research/", lastmod: validDate(researchNotes.updatedAt) },
@@ -19,11 +21,13 @@ const resources = [
   { path: "/research/ai-judge-history-v1/", lastmod: validDate(aiJudgeHistory.preregisteredAt) },
   { path: "/experiments/ai-judge-history-v1/", lastmod: validDate(aiJudgeHistory.preregisteredAt) },
   { path: "/skills/", lastmod: null },
+  { path: "/agent-skills/", lastmod: agentSkillsDate },
   { path: "/data/", lastmod: null },
   { path: "/partners/", lastmod: null },
   ...(researchNotes.entries || []).map((note) => ({ path: `/research/${note.slug}/`, lastmod: validDate(note.updatedAt || note.publishedAt) })),
   ...(monthlyDigests.digests || []).map((digest) => ({ path: `/research/digests/${digest.slug}/`, lastmod: validDate(digest.publishedAt || monthlyDigests.updatedAt) })),
-  ...(skills.entries || []).map((skill) => ({ path: `/skills/${skill.slug}/`, lastmod: null }))
+  ...(skills.entries || []).map((skill) => ({ path: `/skills/${skill.slug}/`, lastmod: null })),
+  ...(agentSkills.skills || []).map((skill) => ({ path: `/agent-skills/${skill.name}/`, lastmod: agentSkillsDate }))
 ];
 
 const sitemapPath = join(OUT, "sitemap.xml");
