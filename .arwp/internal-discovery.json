@@ -1,0 +1,70 @@
+{
+  "version": "0.1",
+  "reviewedAt": "2026-09-11",
+  "site": "https://cognitive-biases.github.io/",
+  "arwpRevision": "793483e3404a97f7892e86bcda3fd317d5c7427c",
+  "mode": "deep-run-execute",
+  "findings": [
+    {
+      "id": "IDD-01-crawlable-canonical-internal-links",
+      "status": "implemented-final-artifact-gate",
+      "evidence": "The canonical sitemap cohort is checked against generated HTML; priority bias and context pages must retain observed inbound crawlable links, and continuation targets must resolve directly to canonical sitemap URLs rather than aliases or redirects."
+    },
+    {
+      "id": "IDD-02-descriptive-anchor-text",
+      "status": "implemented-bounded-anchor-contract",
+      "evidence": "New continuation cards use explicit job labels and descriptive destination titles. The deterministic gate rejects empty or generic click-here/read-more/article labels inside the new controlled continuation surface without pretending that every legacy anchor must use exact-match keywords."
+    },
+    {
+      "id": "IDD-03-reachability-depth-and-global-only-gaps",
+      "status": "implemented-priority-graph-gate",
+      "evidence": "The final-artifact gate constructs inbound and main-content inbound graphs across the canonical sitemap cohort. Canonical bias and context pages must have both inbound and contextual discovery; no synthetic authority score or universal click-depth rule is emitted."
+    },
+    {
+      "id": "IDD-04-semantic-related-and-reverse-links",
+      "status": "implemented-reviewed-relations-contexts-and-comparisons",
+      "evidence": "Existing relations-v2 reviewed edges remain reciprocal, context-to-bias links already have generated bias-to-context reverse paths, and comparison/context data now feeds the new continuation layer so semantic relationships are reused rather than replaced by random related-content rails."
+    },
+    {
+      "id": "IDD-05-visible-breadcrumbs-and-breadcrumblist",
+      "status": "implemented-bias-context-comparison-research",
+      "evidence": "Canonical bias pages now expose a visible Home → Explore biases → category path while their BreadcrumbList converges on Home → Explore biases → canonical bias. Context, comparison and research families receive visible user-path breadcrumbs without inventing category URLs that do not exist."
+    },
+    {
+      "id": "IDD-06-intentional-continuation-blocks",
+      "status": "implemented-data-aware-priority-cohort",
+      "evidence": "A compact Continue from here block is generated only when curated evidence, context, comparison or reviewed relation data provides a specific next step. Unreviewed pages are not given a generic sitewide block merely to increase internal-link counts; their existing related-entry surface remains the fallback."
+    },
+    {
+      "id": "IDD-07-page-utility-share-copy-save-cite",
+      "status": "implemented-progressive-local-utilities",
+      "evidence": "Canonical bias pages and selected context/comparison/research pages receive a compact Save, Share, Copy link and Cite utility bar. Web Share progressively enhances with canonical copy fallback, and Save uses browser-local storage with no account or server-side persistence claim."
+    },
+    {
+      "id": "IDD-08-citation-and-canonical-share-contract",
+      "status": "implemented-canonical-link-citation",
+      "evidence": "Copy, Share and Cite derive the destination from the page canonical link. The citation is intentionally lightweight and uses the visible title plus Cognitive Biases publisher identity; it does not invent authors, review dates, DOI identifiers or academic publication status."
+    },
+    {
+      "id": "IDD-09-preferred-source-affordance",
+      "status": "applicability-watch-not-enabled",
+      "evidence": "No prominent Google Preferred Sources control is published in this rollout because site availability in Google's source-preferences tool has not been verified. The feature remains an optional audience-distribution affordance rather than a ranking requirement."
+    },
+    {
+      "id": "IDD-10-regression-safe-link-graph-gate",
+      "status": "implemented-deterministic-ci-and-live-sample",
+      "evidence": "Build-time checks verify priority inbound/contextual paths, canonical continuation targets, utility contracts, BreadcrumbList convergence and reciprocal reviewed relations. A bounded post-deploy live check verifies representative published pages without converting sample coverage into whole-site outcome evidence."
+    }
+  ],
+  "guardrails": {
+    "noRankingGuarantee": true,
+    "noMagicLinkCount": true,
+    "utilityControlsNotRankingSignals": true,
+    "partialCoverageNeverOrphanProof": true,
+    "canonicalTargetsPreferred": true,
+    "noFabricatedCitationMetadata": true,
+    "preferredSourcesApplicabilityGated": true,
+    "finalArtifactBeforeRelease": true,
+    "liveVerificationAfterDeploy": true
+  }
+}
