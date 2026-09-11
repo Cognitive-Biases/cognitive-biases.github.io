@@ -8,7 +8,7 @@ const isHttps = (value) => {
   try { return new URL(value).protocol === "https:"; } catch { return false; }
 };
 
-const [site, search, locales, growthReview, history, citations, trust, corrections, graph, critic] = await Promise.all([
+const [site, search, locales, growthReview, history, citations, trust, corrections, graph, critic, imageDiscovery] = await Promise.all([
   readJson("ai/site-profile.json"),
   readJson("ai/ai-search-profile.json"),
   readJson("ai/locales.json"),
@@ -18,7 +18,8 @@ const [site, search, locales, growthReview, history, citations, trust, correctio
   readJson("ai/trust.json"),
   readJson("ai/corrections.json"),
   readJson("ai/knowledge-graph.json"),
-  readJson(".arwp/technical-seo-critic.json")
+  readJson(".arwp/technical-seo-critic.json"),
+  readJson(".arwp/image-discovery.json")
 ]);
 
 for (const language of ["en", "de", "ru"]) {
@@ -91,7 +92,7 @@ assert(Array.isArray(graph["@graph"]) && graph["@graph"].length >= 6, "knowledge
 
 assert(critic.version === "0.1", "Technical SEO Critic review version must remain 0.1");
 assert(critic.site === "https://cognitive-biases.github.io/", "Technical SEO Critic must bind to the canonical site");
-assert(critic.arwpRevision === "28c9cc9b75fa2b17791b7b294b4249fa28496445", "Technical SEO Critic must remain pinned to the reviewed ARWP revision");
+assert(critic.arwpRevision === "28c9cc9b75fa2b17791b7b294b4249fa28496445", "Technical SEO Critic must remain pinned to its reviewed ARWP revision");
 assert(Array.isArray(critic.findings) && critic.findings.length === 9, "Technical SEO Critic must record TSC-01 through TSC-09");
 const expectedCriticIds = new Set(Array.from({ length: 9 }, (_, index) => `TSC-${String(index + 1).padStart(2, "0")}-${[
   "head-metadata-parser-integrity",
@@ -114,9 +115,33 @@ for (const key of ["noRankingGuarantee", "noFieldDataFabrication", "noPagination
   assert(critic.guardrails?.[key] === true, `Technical SEO Critic guardrail ${key} must remain true`);
 }
 
-const allText = JSON.stringify({ site, search, locales, growthReview, history, citations, trust, corrections, graph, critic });
+assert(imageDiscovery.version === "0.1", "Image Discovery review version must remain 0.1");
+assert(imageDiscovery.site === "https://cognitive-biases.github.io/", "Image Discovery must bind to the canonical site");
+assert(imageDiscovery.arwpRevision === "73bd2a64e2e746deeb8de792ca01f654f0a7d33a", "Image Discovery must remain pinned to the reviewed ARWP revision");
+assert(Array.isArray(imageDiscovery.findings) && imageDiscovery.findings.length === 8, "Image Discovery must record IDL-01 through IDL-08");
+const expectedImageIds = new Set([
+  "IDL-01-crawlable-image-and-landing-page",
+  "IDL-02-preferred-image-signal-convergence",
+  "IDL-03-image-sitemap-canonical-cohort",
+  "IDL-04-context-and-alt-semantics",
+  "IDL-05-image-preview-and-serving-controls",
+  "IDL-06-representative-quality-and-discover-readiness",
+  "IDL-07-responsive-delivery-with-crawlable-fallback",
+  "IDL-08-license-and-creator-metadata-boundary"
+]);
+for (const finding of imageDiscovery.findings) {
+  assert(expectedImageIds.delete(finding.id), `unexpected or duplicate Image Discovery finding: ${finding.id}`);
+  assert(String(finding.status || "").length > 3, `${finding.id} needs an explicit status`);
+  assert(String(finding.evidence || "").length > 40, `${finding.id} needs bounded evidence`);
+}
+assert(expectedImageIds.size === 0, "Image Discovery is missing a required finding");
+for (const key of ["noRankingGuarantee", "noImageIndexingGuarantee", "discoverSpecificGuidanceSeparated", "noUnreviewedVisualClaims", "noDeprecatedImageSitemapFields", "finalArtifactBeforeRelease", "liveAssetVerificationAfterDeploy"]) {
+  assert(imageDiscovery.guardrails?.[key] === true, `Image Discovery guardrail ${key} must remain true`);
+}
+
+const allText = JSON.stringify({ site, search, locales, growthReview, history, citations, trust, corrections, graph, critic, imageDiscovery });
 for (const forbidden of ["doi-issued", "observed-success", "readinessScore", "commercial-use-allowed", '"evidenceClass":"independent"']) {
   assert(!allText.includes(forbidden), `unsubstantiated or incompatible claim found: ${forbidden}`);
 }
 
-console.log("ARWP layer checks passed: profile, localization, owner-controlled Growth review, Technical SEO Critic, history, citation, trust, corrections and knowledge graph are coherent.");
+console.log("ARWP layer checks passed: profile, localization, owner-controlled Growth review, Technical SEO Critic, Image Discovery, history, citation, trust, corrections and knowledge graph are coherent.");
