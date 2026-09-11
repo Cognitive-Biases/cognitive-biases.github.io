@@ -42,6 +42,20 @@ Use these rules:
 - Create a new portable skill only when it has a distinct trigger, workflow, output contract and quality check that existing skills cannot cover cleanly.
 - Bias-specific skills are allowed when the bias genuinely requires a distinct procedure, not because a page exists for it.
 
+## Bias synchronization contract
+
+A newly published canonical cognitive bias must never exist only in the human library while the Agent Skills layer remains unaware of it.
+
+The synchronization rule is:
+
+1. Every published canonical bias is automatically in scope of `cognitive-bias-lens`. That skill uses the canonical public bias dataset as its library source, so adding a new published canonical record extends the generic skill without creating a duplicate prompt.
+2. When the new bias is useful to an existing Decision Skill, add its canonical slug to that Decision Skill's reviewed `biases` list. The mapped portable Agent Skill must then expose the bias as an evidence-linked lens.
+3. Every public Decision Skill must keep a mapped portable Agent Skill. A new Decision Skill cannot be published as human-only functionality.
+4. Create a separate portable Agent Skill for a new bias only when it introduces a distinct recurring job, trigger, procedure and output contract. Do not create one merely to satisfy catalogue count.
+5. Repository checks must fail if `cognitive-bias-lens` loses its canonical bias-library source or if a Decision Skill loses its portable Agent Skill mapping.
+
+This makes bias publication and skill coverage one workflow. The default outcome for a new bias is **generic skill coverage plus relevant workflow lenses**, not **one new skill per bias**.
+
 ## Public surfaces
 
 Build output exposes:
@@ -65,12 +79,13 @@ Before adding or changing a public agent skill, check all of the following:
 4. **Output contract** — another agent can tell what a complete result looks like.
 5. **Evidence boundary** — bias names remain candidate lenses unless evidence supports a stronger statement.
 6. **Alternative explanation** — important bias interpretations should allow ordinary non-bias explanations such as incentives, constraints, missing information or chance.
-7. **Portability** — avoid tool names and filesystem assumptions inside the core workflow unless essential.
-8. **Security** — instruction-only is the default. Any future executable resource requires explicit review and a documented reason.
-9. **Source alignment** — mapped decision skills and evidence-linked lenses must still exist and remain canonical.
-10. **Discovery** — marketplace page, raw `SKILL.md`, public data, sitemap and internal links remain aligned.
+7. **Bias coverage** — every published canonical bias remains reachable through `cognitive-bias-lens`; relevant new biases are also wired into existing Decision Skills.
+8. **Portability** — avoid tool names and filesystem assumptions inside the core workflow unless essential.
+9. **Security** — instruction-only is the default. Any future executable resource requires explicit review and a documented reason.
+10. **Source alignment** — mapped decision skills and evidence-linked lenses must still exist and remain canonical; every Decision Skill keeps a portable mapping.
+11. **Discovery** — marketplace page, raw `SKILL.md`, public data, sitemap and internal links remain aligned.
 
-Run the normal repository build and checks after changes. `scripts/check-skills.mjs` validates both the human Decision Skills layer and the portable Agent Skills layer.
+Run the normal repository build and checks after changes. `scripts/check-skills.mjs` validates both the human Decision Skills layer and the portable Agent Skills layer, including the bias synchronization contract.
 
 ## Initial collection
 
