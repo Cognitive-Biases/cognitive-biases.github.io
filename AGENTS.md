@@ -12,7 +12,7 @@ Read only the context needed for the task:
 4. `docs/data-contract.md` — machine-readable compatibility contract.
 5. `docs/research-agent.md` — source-first research workflow when research is involved.
 6. Relevant repository skill under `skills/` for recurring research, content, or translation work.
-7. `.arwp/README.md`, `.arwp/site-focus.json` and `.arwp/technical-seo-critic.json` — current site-focus boundary, second-pass technical Search review and Search/AI verification policy when navigation, URLs, discovery, public structure or agent surfaces are involved.
+7. `.arwp/README.md`, `.arwp/site-focus.json`, `.arwp/technical-seo-critic.json` and `.arwp/image-discovery.json` — current site-focus boundary, second-pass technical Search review, image-discovery review and Search/AI verification policy when navigation, URLs, discovery, public structure, visual assets or agent surfaces are involved.
 
 Do not start by loading all generated `dist/` output or the complete corpus when a targeted source read is sufficient.
 
@@ -28,7 +28,8 @@ Do not start by loading all generated `dist/` output or the complete corpus when
 | Public data/API/RAG | canonical `data/` sources and schemas | release manifest, checksums, `/data/releases/`, MCP adapter | `npm run build` and `npm run check` |
 | Translation/localization | canonical reviewed meaning plus translation state | localized pages/data and review metadata | relevant translation skill/check plus `npm run check` |
 | MCP/integration | generated public release as input; `integrations/mcp/` and `docs/integration-cookbook.md` | schemas, retrieval/abstention contract | `npm run build`, `npm run check`; smoke the adapter when behavior changes |
-| Site/search/discovery | human source and build code | sitemap, metadata, ARWP/search surfaces, internal links, canonical URLs, Technical SEO Critic | `npm run build`, `npm run check`, `npm run check:technical-seo-critic`; review post-deploy ARWP/live critic evidence |
+| Site/search/discovery | human source and build code | sitemap, metadata, ARWP/search surfaces, internal links, canonical URLs, Technical SEO Critic, Image Discovery | `npm run build`, `npm run check`, `npm run check:technical-seo-critic`, `npm run check:image-discovery`; review post-deploy live critic/image evidence |
+| Editorial image/search image | `public/assets/editorial/`, `data/image-metadata.json`, build post-processors | page `og:image`, structured data, sitemap image entry, robots/preview policy | `npm run check:image-discovery`; live check after deployment |
 
 ## Source-of-truth rules
 
@@ -43,6 +44,7 @@ Do not start by loading all generated `dist/` output or the complete corpus when
 - The reference MCP adapter is read-only and must preserve `no_match` when the reviewed library cannot support a concept or comparison.
 - Fix canonical source or generator before generated `dist/` output; do not hand-edit derived output as a substitute for the source.
 - Do not copy third-party source prose into the project; source-backed facts must be expressed in original editorial language.
+- For images, fix the asset mapping, metadata source or build post-processor rather than hand-editing generated HTML/sitemap output. Informative images may carry contextual alt; decorative card/UI imagery may legitimately remain empty-alt.
 
 ## Public writing quality
 
@@ -55,12 +57,15 @@ Do not start by loading all generated `dist/` output or the complete corpus when
 
 ## Search / AI technical preflight
 
-- Search/technical verification is pinned to reviewed ARWP revision `28c9cc9b75fa2b17791b7b294b4249fa28496445` in the general validation/Growth paths. The Site Focus v0.3 contract and its dedicated workflow may remain on their separately reviewed compatible revision until Site Focus itself is migrated. Never silently follow upstream `main`, and never mix revisions without documenting the boundary in `.arwp/README.md`.
+- General ARWP validation/Growth is pinned to reviewed revision `73bd2a64e2e746deeb8de792ca01f654f0a7d33a`. The completed Technical SEO Critic review remains pinned to its reviewed source revision `28c9cc9b75fa2b17791b7b294b4249fa28496445`, while Image Discovery is pinned to `73bd2a64e2e746deeb8de792ca01f654f0a7d33a`. The Site Focus v0.3 contract and its dedicated workflow may remain on their separately reviewed compatible revision. Never silently follow upstream `main`; document revision boundaries in `.arwp/README.md`.
 - Run the Technical SEO Critic after ordinary Search Release/final-public-surface checks. Its job is to find false-green states: invalid effective `<head>`, missing field-CWV evidence, pagination/query-state mistakes, accidental internal `nofollow`, obsolete SEO metadata, HTTP/HTML canonical conflict and negative robots/X-Robots-Tag restrictions.
 - `scripts/check-technical-seo-critic.mjs` is deterministic final-artifact evidence and must run before release. `scripts/check-live-technical-seo-critic.mjs` is bounded post-deploy evidence for HTTP headers and revalidation. Neither check turns a clean technical state into a ranking claim.
+- Apply Image Discovery after canonical/search metadata generation and again after deploy-time metadata post-processing. `scripts/apply-image-discovery.mjs` aligns unique canonical bias assets with `og:image`, `twitter:image`, `WebPage.primaryImageOfPage` and image sitemap entries. `scripts/check-image-discovery.mjs` verifies the final artifact; `scripts/check-live-image-discovery.mjs` checks a bounded representative live cohort after deployment.
+- Keep general image Search eligibility, preferred Search thumbnail metadata, Google Images indexing and Discover suitability as separate outcomes. Image metadata/sitemaps do not prove any of them. Discover-oriented image-size guidance is a separate quality watch, not a universal image-indexing gate.
+- Do not mass-generate visual descriptions from slugs, filenames or keywords. `data/image-metadata.json` is the reviewed override source; unreviewed images retain conservative generator fallbacks. Do not add deprecated image sitemap `caption`, `geo_location`, `title` or `license` fields.
 - Field Core Web Vitals are owner/provider evidence. Do not relabel Lighthouse/lab measurements as field LCP/INP/CLS, and leave missing field data unknown.
 - Pagination is applicability-gated. Do not create pagination work when the site does not expose a pagination URL family. Same for faceted/query-state controls: surface the state space when it exists rather than manufacturing a generic SEO task.
-- Site Focus, Site Readiness Gate, Technical Integrity and Technical SEO Critic are bounded implementation checks. A pass is not evidence of ranking, indexing, AI citation, traffic, educational effect or business impact.
+- Site Focus, Site Readiness Gate, Technical Integrity, Technical SEO Critic and Image Discovery are bounded implementation checks. A pass is not evidence of ranking, indexing, Google Images inclusion, Discover placement, AI citation, traffic, educational effect or business impact.
 - Public ARWP audits run after a successful Pages deployment and record the deployed commit, deploy workflow run, ARWP revision and report digests. Do not label a pull-request-only build as deployment proof.
 - For an intentional URL rename, move or consolidation, add `.arwp/url-migrations.json` with explicit absolute HTTPS `oldUrl` → `newUrl` pairs. The post-deploy workflow must run URL Migration Integrity when that manifest is non-empty.
 - A direct Site Focus remediation may receive a remediation receipt only after source checks, successful deployment, production re-measurement, before/after diagnostics and known unknowns exist. Never invent transformation lineage.
@@ -87,8 +92,9 @@ For Search/discovery changes, also run:
 
 ```bash
 npm run check:technical-seo-critic
+npm run check:image-discovery
 ```
 
 Use repository skills and focused checks for research, content review, or translation work when relevant. Do not claim a check passed unless it ran for the changed revision.
 
-For public Search/AI structure, inspect the post-deploy `AWRP Site Quality` artifact and the live Technical SEO Critic after Pages deploys the target revision. Treat P0 findings as review/fix signals and preserve the raw reports.
+For public Search/AI structure, inspect the post-deploy `AWRP Site Quality` artifact plus the live Technical SEO Critic and live Image Discovery check after Pages deploys the target revision. Treat P0 findings as review/fix signals and preserve the raw reports.
