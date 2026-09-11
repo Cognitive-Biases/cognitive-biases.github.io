@@ -14,10 +14,11 @@ Keep public agent skills useful, portable, evidence-aware and safe to install.
 4. Check the output contract. A user or another agent should be able to tell whether the workflow completed.
 5. Inspect all bias language. Biases are candidate lenses, not diagnoses, intent claims or proof of causation.
 6. Require at least one alternative non-bias explanation when the workflow interprets a real person's or team's behavior.
-7. Verify mapped Decision Skills and evidence-linked lenses against canonical current data.
-8. Prefer framework-neutral instructions. Do not hard-code a tool name when the workflow can describe the capability generically.
-9. Keep public skills instruction-only by default. Executable scripts, secrets, network requirements or external writes require an explicit reason and separate security review.
-10. Inspect the generated marketplace page and raw `SKILL.md`, then run the normal build/check path.
+7. Verify bias coverage. Every published canonical cognitive bias must remain available through `cognitive-bias-lens`, whose canonical library source is the public bias dataset. When a new bias belongs to an existing Decision Skill, add it to that Decision Skill so the mapped portable Agent Skill receives the lens automatically.
+8. Verify mapped Decision Skills and evidence-linked lenses against canonical current data. Every public Decision Skill must have a mapped portable Agent Skill.
+9. Prefer framework-neutral instructions. Do not hard-code a tool name when the workflow can describe the capability generically.
+10. Keep public skills instruction-only by default. Executable scripts, secrets, network requirements or external writes require an explicit reason and separate security review.
+11. Inspect the generated marketplace page and raw `SKILL.md`, then run the normal build/check path.
 
 ## Routing test
 
@@ -33,6 +34,15 @@ Ask:
 ## Evidence test
 
 Public skills may summarize a procedure, but they should not create a second scientific source of truth. When a step depends on a reviewed cognitive-bias claim, link back to the canonical reviewed material. Preserve mixed, limited or unknown evidence instead of upgrading it for a cleaner prompt.
+
+## Bias synchronization test
+
+A new bias and the Agent Skills layer are one publication workflow, not two independent backlogs.
+
+- A new published canonical bias is automatically in scope of `cognitive-bias-lens` through the canonical public bias dataset.
+- If the bias strengthens an existing practical workflow, add it to that Decision Skill's reviewed `biases` list; the corresponding portable Agent Skill must then expose it as an evidence-linked lens.
+- Create a new portable Agent Skill only when the new concept enables a genuinely different recurring job with its own trigger, workflow and output contract.
+- Do not leave a new published bias outside the generic Agent Skill coverage path.
 
 ## Result
 
