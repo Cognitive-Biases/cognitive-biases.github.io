@@ -23,6 +23,10 @@ for (const match of sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)) {
   if (loc) urlBlocks.set(loc, match[1]);
 }
 
+async function exists(path) {
+  try { await access(path); return true; } catch { return false; }
+}
+
 function metaContent(html, key, value) {
   const tag = html.match(new RegExp(`<meta\\b(?=[^>]*\\b${key}=["']${value}["'])[^>]*>`, "i"))?.[0] || "";
   return tag.match(/\bcontent=["']([^"']*)["']/i)?.[1] || "";
@@ -57,17 +61,41 @@ function primaryImages(html) {
   return urls;
 }
 
+assert(discovery.version === "0.1", "image discovery manifest version must remain 0.1");
+assert(discovery.site === `${SITE}/`, "image discovery manifest must bind to the canonical site");
+assert(discovery.records?.length === canonicalBiases.length, "image discovery manifest coverage does not match the canonical bias cohort");
+const recordByPage = new Map((discovery.records || []).map((record) => [record.page, record]));
+
 let curated = 0;
+let unique = 0;
+let fallbacks = 0;
 for (const bias of canonicalBiases) {
   const page = `${SITE}/biases/${bias.slug}/`;
-  const image = `${SITE}/assets/editorial/biases/${bias.slug}.webp`;
+  const record = recordByPage.get(page);
+  assert(record, `image discovery manifest is missing ${page}`);
+  const image = record.image;
   const block = urlBlocks.get(page);
   assert(block, `canonical bias is missing from sitemap: ${page}`);
   assert(block.includes(`<image:image><image:loc>${image}</image:loc></image:image>`), `sitemap image entry is missing or wrong for ${page}`);
 
-  await access(join(OUT, "assets", "editorial", "biases", `${bias.slug}.webp`));
+  const uniqueLocal = join(OUT, "assets", "editorial", "biases", `${bias.slug}.webp`);
+  const hasUniqueImage = await exists(uniqueLocal);
+  if (hasUniqueImage) {
+    unique += 1;
+    assert(image === `${SITE}/assets/editorial/biases/${bias.slug}.webp`, `unique bias art is not the preferred image for ${page}`);
+    assert(record.imageSource === "unique-bias", `image source classification is wrong for ${page}`);
+  } else {
+    fallbacks += 1;
+    assert(image.startsWith(`${SITE}/assets/editorial/families/`), `missing unique art must resolve to a semantic family image for ${page}`);
+    assert(record.imageSource === "semantic-family-fallback", `fallback image source classification is wrong for ${page}`);
+  }
+
+  const imageUrl = new URL(image);
+  assert(imageUrl.origin === SITE && imageUrl.pathname.startsWith("/assets/editorial/"), `unexpected preferred image URL for ${page}: ${image}`);
+  await access(join(OUT, imageUrl.pathname.replace(/^\//, "")));
+
   const html = await readFile(join(OUT, "biases", bias.slug, "index.html"), "utf8");
-  assert(metaContent(html, "property", "og:image") === image, `og:image does not use the unique editorial asset for ${page}`);
+  assert(metaContent(html, "property", "og:image") === image, `og:image does not match the preferred editorial asset for ${page}`);
   assert(metaContent(html, "name", "twitter:image") === image, `twitter:image does not align with og:image for ${page}`);
   assert(/max-image-preview:large/i.test(html), `large image previews are not permitted on ${page}`);
   assert(!/\bnoimageindex\b/i.test(metaContent(html, "name", "robots")), `noimageindex unexpectedly suppresses ${page}`);
@@ -75,19 +103,19 @@ for (const bias of canonicalBiases) {
 
   const alt = html.match(/<figure class="article-visual"><img\b[^>]*\balt="([^"]*)"/i)?.[1] || "";
   assert(alt.trim().length >= 8, `informative editorial image has weak/empty alt text for ${page}`);
+  assert(record.alt === alt, `image discovery manifest alt does not match the final HTML for ${page}`);
   const curatedEntry = metadata.entries?.[bias.slug];
   if (curatedEntry?.reviewed) {
     curated += 1;
     assert(alt === curatedEntry.alt, `curated image description was not applied for ${page}`);
+    assert(record.altSource === "curated", `curated alt source classification is wrong for ${page}`);
   }
 }
 
-assert(discovery.version === "0.1", "image discovery manifest version must remain 0.1");
-assert(discovery.site === `${SITE}/`, "image discovery manifest must bind to the canonical site");
-assert(discovery.records?.length === canonicalBiases.length, "image discovery manifest coverage does not match the canonical bias cohort");
 for (const record of discovery.records || []) {
   assert(record.page.startsWith(`${SITE}/biases/`), `unexpected image discovery page: ${record.page}`);
-  assert(record.image.startsWith(`${SITE}/assets/editorial/biases/`), `unexpected preferred image origin/path: ${record.image}`);
+  assert(record.image.startsWith(`${SITE}/assets/editorial/`), `unexpected preferred image origin/path: ${record.image}`);
+  assert(["unique-bias", "semantic-family-fallback"].includes(record.imageSource), `unexpected image source classification for ${record.page}`);
   assert(record.alt?.trim(), `image discovery manifest has empty alt for ${record.page}`);
 }
 
@@ -99,4 +127,4 @@ for (const image of allImageLocs) {
   await access(join(OUT, url.pathname.replace(/^\//, "")));
 }
 
-console.log(`Image Discovery check passed: ${canonicalBiases.length} canonical bias pages expose unique crawlable image sitemap entries, converged og/schema preferred-image signals and informative alt text; ${curated} visual descriptions are explicitly reviewed. Discover's 1200px guidance remains a separate WATCH/optimization concern, not an indexing failure.`);
+console.log(`Image Discovery check passed: ${canonicalBiases.length} canonical bias pages expose crawlable image sitemap entries and converged og/schema preferred-image signals (${unique} unique bias assets, ${fallbacks} semantic family fallback(s)); ${curated} visual descriptions are explicitly reviewed. Discover's 1200px guidance remains a separate WATCH/optimization concern, not an indexing failure.`);
