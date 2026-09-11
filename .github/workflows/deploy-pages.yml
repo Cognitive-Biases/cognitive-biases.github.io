@@ -70,6 +70,8 @@ jobs:
         run: node scripts/finalize-public-metadata.mjs
       - name: Re-finalize homepage search identity
         run: node scripts/finalize-search-appearance.mjs
+      - name: Gate final Technical SEO Critic surface
+        run: node scripts/check-technical-seo-critic.mjs
       - name: Gate final public surface
         run: node scripts/check-final-public-surface.mjs
       - uses: actions/upload-pages-artifact@v3
@@ -86,3 +88,10 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Checkout deployed source revision
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify live Technical SEO Critic headers
+        run: node scripts/check-live-technical-seo-critic.mjs
