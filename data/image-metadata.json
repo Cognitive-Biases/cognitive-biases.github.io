@@ -1,0 +1,23 @@
+{
+  "version": "0.1",
+  "policy": {
+    "purpose": "Curated descriptions for informative editorial images. Missing entries keep the conservative generator fallback; they are not auto-invented from filenames or keywords.",
+    "decorativeImagesRemainEmptyAlt": true,
+    "noKeywordStuffing": true,
+    "noUnreviewedVisualClaims": true
+  },
+  "entries": {
+    "cognitive-bias-anchoring-effect": {
+      "alt": "Anchoring effect: a large red eight pulls later numbers toward it",
+      "reviewed": true
+    },
+    "confirmation-bias-congruence-bias": {
+      "alt": "Confirmation bias: blue and red lenses filter evidence",
+      "reviewed": true
+    },
+    "cognitive-bias-sunk-cost-effect": {
+      "alt": "Sunk cost: a person stands on a looping neon staircase",
+      "reviewed": true
+    }
+  }
+}

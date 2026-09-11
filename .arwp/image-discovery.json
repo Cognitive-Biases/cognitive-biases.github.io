@@ -1,0 +1,59 @@
+{
+  "version": "0.1",
+  "reviewedAt": "2026-09-11",
+  "site": "https://cognitive-biases.github.io/",
+  "arwpRevision": "73bd2a64e2e746deeb8de792ca01f654f0a7d33a",
+  "mode": "deep-run-execute",
+  "scope": "ARWP Image Discovery IDL-01 through IDL-08 applied to the canonical cognitive-bias page cohort and its representative editorial assets, preferring unique bias art and preserving a semantic family fallback when unique art is not available.",
+  "findings": [
+    {
+      "id": "IDL-01-crawlable-image-and-landing-page",
+      "status": "implemented-final-and-live-gate",
+      "evidence": "Canonical bias pages expose ordinary img references to same-origin WebP assets; the final-artifact gate verifies the selected asset exists and the live gate verifies representative image responses are fetchable image content."
+    },
+    {
+      "id": "IDL-02-preferred-image-signal-convergence",
+      "status": "implemented-regression-gate",
+      "evidence": "scripts/apply-image-discovery.mjs aligns og:image, twitter:image and WebPage.primaryImageOfPage to each canonical bias page's representative editorial asset, using unique bias art when present and the existing semantic family image otherwise; scripts/check-image-discovery.mjs verifies the final generated artifact."
+    },
+    {
+      "id": "IDL-03-image-sitemap-canonical-cohort",
+      "status": "implemented-regression-gate",
+      "evidence": "The final sitemap receives the Google image namespace and one image:image/image:loc entry for every canonical bias page. Deprecated image:caption, image:geo_location, image:title and image:license fields are rejected."
+    },
+    {
+      "id": "IDL-04-context-and-alt-semantics",
+      "status": "implemented-with-reviewed-overrides",
+      "evidence": "Informative bias hero images keep non-empty contextual alt text, decorative catalogue thumbnails remain empty-alt, and data/image-metadata.json provides reviewed visual-specific descriptions without inventing unreviewed image details."
+    },
+    {
+      "id": "IDL-05-image-preview-and-serving-controls",
+      "status": "covered-and-regression-gated",
+      "evidence": "The existing max-image-preview:large policy is preserved; final and live Image Discovery checks reject unintended noimageindex on the canonical bias cohort while keeping publisher controls authoritative."
+    },
+    {
+      "id": "IDL-06-representative-quality-and-discover-readiness",
+      "status": "watch-discover-specific-quality",
+      "evidence": "The editorial theme currently reports unique art for 219 of 220 published bias entries and uses a semantic family fallback for the remaining entry. Current markup declares 1024x768 display dimensions, but encoded pixel dimensions are not inferred from markup. Discover-specific 1200px guidance remains a separate optimization/watch and is not treated as a general image-indexing failure."
+    },
+    {
+      "id": "IDL-07-responsive-delivery-with-crawlable-fallback",
+      "status": "not-implemented-p2",
+      "evidence": "Current representative bias images use stable crawlable src URLs. Responsive variant generation is intentionally left as a later delivery/performance optimization rather than being represented as required for image indexing."
+    },
+    {
+      "id": "IDL-08-license-and-creator-metadata-boundary",
+      "status": "not-applicable-current-rollout",
+      "evidence": "This rollout does not introduce per-image licensing or creator-display claims. The site licence remains governed by the existing publisher policy, and deprecated image-sitemap licensing fields are explicitly rejected."
+    }
+  ],
+  "guardrails": {
+    "noRankingGuarantee": true,
+    "noImageIndexingGuarantee": true,
+    "discoverSpecificGuidanceSeparated": true,
+    "noUnreviewedVisualClaims": true,
+    "noDeprecatedImageSitemapFields": true,
+    "finalArtifactBeforeRelease": true,
+    "liveAssetVerificationAfterDeploy": true
+  }
+}
