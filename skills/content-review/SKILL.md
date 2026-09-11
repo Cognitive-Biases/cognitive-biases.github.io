@@ -15,7 +15,8 @@ Keep the library clear, original, evidence-aware and consistent with the project
 5. Keep practical advice as a question, check or procedure rather than a promised cure.
 6. Check related concepts for accidental duplication or contradiction.
 7. Confirm sources, review date and evidence status when the entry is marked reviewed.
-8. Run repository checks.
+8. When publishing a new canonical cognitive bias, verify Agent Skill coverage in the same change. Every published canonical bias must be available through `cognitive-bias-lens`; if it is relevant to an existing Decision Skill, add it to that skill's reviewed lenses so the mapped portable Agent Skill receives it too. Do not create a separate portable skill only to mirror the new bias name.
+9. Run repository checks. The skill checks must fail if the generic bias-skill coverage path or Decision Skill → Agent Skill mapping is broken.
 
 ## Public writing test
 
