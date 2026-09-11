@@ -66,6 +66,7 @@ if (agentSkillsDoc.security?.executableCode !== false || agentSkillsDoc.security
 
 await access("dist/agent-skills/index.html");
 await access("dist/agent-skills/catalog.json");
+await access("dist/agent-skills/llms.txt");
 await access("dist/data/agent-skills.json");
 await access("dist/schemas/agent-skill.schema.json");
 const agentHub = await readFile("dist/agent-skills/index.html", "utf8");
@@ -126,6 +127,7 @@ for (const skill of agentSkills) {
 
 const llms = await readFile("llms.txt", "utf8");
 if (!llms.includes("https://cognitive-biases.github.io/skills/") || !llms.includes("https://cognitive-biases.github.io/data/skills.json")) throw new Error("llms.txt does not expose the decision skills surfaces.");
-if (!llms.includes("https://cognitive-biases.github.io/agent-skills/") || !llms.includes("https://cognitive-biases.github.io/data/agent-skills.json")) throw new Error("llms.txt does not expose the portable Agent Skills surfaces.");
+const agentLlms = await readFile("dist/agent-skills/llms.txt", "utf8");
+if (!agentLlms.includes("https://cognitive-biases.github.io/agent-skills/") || !agentLlms.includes("https://cognitive-biases.github.io/data/agent-skills.json") || !agentLlms.includes("SKILL.md")) throw new Error("Agent Skills llms.txt does not expose the marketplace, public data and installable skill files.");
 
 console.log(`Skills check passed: ${skills.length} decision skills and ${agentSkills.length} portable agent skills with human and machine discovery.`);
