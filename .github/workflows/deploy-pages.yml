@@ -74,6 +74,8 @@ jobs:
         run: node scripts/apply-image-discovery.mjs
       - name: Gate final Image Discovery surface
         run: node scripts/check-image-discovery.mjs
+      - name: Gate final Internal Discovery & Distribution surface
+        run: node scripts/check-internal-discovery-distribution.mjs
       - name: Gate final Technical SEO Critic surface
         run: node scripts/check-technical-seo-critic.mjs
       - name: Gate final public surface
@@ -101,3 +103,5 @@ jobs:
         run: node scripts/check-live-technical-seo-critic.mjs
       - name: Verify live Image Discovery surface
         run: node scripts/check-live-image-discovery.mjs
+      - name: Verify live Internal Discovery & Distribution surface
+        run: node scripts/check-live-internal-discovery-distribution.mjs
