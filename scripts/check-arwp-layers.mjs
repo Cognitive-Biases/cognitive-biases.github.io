@@ -8,7 +8,7 @@ const isHttps = (value) => {
   try { return new URL(value).protocol === "https:"; } catch { return false; }
 };
 
-const [site, search, locales, growthReview, history, citations, trust, corrections, graph] = await Promise.all([
+const [site, search, locales, growthReview, history, citations, trust, corrections, graph, critic] = await Promise.all([
   readJson("ai/site-profile.json"),
   readJson("ai/ai-search-profile.json"),
   readJson("ai/locales.json"),
@@ -17,7 +17,8 @@ const [site, search, locales, growthReview, history, citations, trust, correctio
   readJson("ai/citation-index.json"),
   readJson("ai/trust.json"),
   readJson("ai/corrections.json"),
-  readJson("ai/knowledge-graph.json")
+  readJson("ai/knowledge-graph.json"),
+  readJson(".arwp/technical-seo-critic.json")
 ]);
 
 for (const language of ["en", "de", "ru"]) {
@@ -88,9 +89,34 @@ assert(Array.isArray(corrections.entries), "corrections ledger entries must be a
 assert(corrections.policy?.report?.includes("correction.yml"), "correction reporting route is missing");
 assert(Array.isArray(graph["@graph"]) && graph["@graph"].length >= 6, "knowledge graph is unexpectedly small");
 
-const allText = JSON.stringify({ site, search, locales, growthReview, history, citations, trust, corrections, graph });
+assert(critic.version === "0.1", "Technical SEO Critic review version must remain 0.1");
+assert(critic.site === "https://cognitive-biases.github.io/", "Technical SEO Critic must bind to the canonical site");
+assert(critic.arwpRevision === "28c9cc9b75fa2b17791b7b294b4249fa28496445", "Technical SEO Critic must remain pinned to the reviewed ARWP revision");
+assert(Array.isArray(critic.findings) && critic.findings.length === 9, "Technical SEO Critic must record TSC-01 through TSC-09");
+const expectedCriticIds = new Set(Array.from({ length: 9 }, (_, index) => `TSC-${String(index + 1).padStart(2, "0")}-${[
+  "head-metadata-parser-integrity",
+  "search-field-performance",
+  "pagination-canonical-independence",
+  "crawl-state-space-control",
+  "http-revalidation-efficiency",
+  "link-follow-and-relationship-integrity",
+  "obsolete-and-false-seo-signals",
+  "canonical-channel-conflict",
+  "unintended-search-serving-restrictions"
+][index]}`));
+for (const finding of critic.findings) {
+  assert(expectedCriticIds.delete(finding.id), `unexpected or duplicate Technical SEO Critic finding: ${finding.id}`);
+  assert(String(finding.status || "").length > 3, `${finding.id} needs an explicit status`);
+  assert(String(finding.evidence || "").length > 40, `${finding.id} needs bounded evidence`);
+}
+assert(expectedCriticIds.size === 0, "Technical SEO Critic is missing a required finding");
+for (const key of ["noRankingGuarantee", "noFieldDataFabrication", "noPaginationWorkWhenNotApplicable", "noProductionMutationFromOwnerDataUnknown", "finalArtifactBeforeRelease", "liveHeadersAfterDeploy"]) {
+  assert(critic.guardrails?.[key] === true, `Technical SEO Critic guardrail ${key} must remain true`);
+}
+
+const allText = JSON.stringify({ site, search, locales, growthReview, history, citations, trust, corrections, graph, critic });
 for (const forbidden of ["doi-issued", "observed-success", "readinessScore", "commercial-use-allowed", '"evidenceClass":"independent"']) {
   assert(!allText.includes(forbidden), `unsubstantiated or incompatible claim found: ${forbidden}`);
 }
 
-console.log("ARWP layer checks passed: profile, localization, owner-controlled Growth review, history, citation, trust, corrections and knowledge graph are coherent.");
+console.log("ARWP layer checks passed: profile, localization, owner-controlled Growth review, Technical SEO Critic, history, citation, trust, corrections and knowledge graph are coherent.");
