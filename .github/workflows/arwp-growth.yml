@@ -18,7 +18,7 @@ jobs:
     env:
       ARWP_TARGET: https://cognitive-biases.github.io/
       SITE_REVISION: ${{ github.event.workflow_run.head_sha || github.sha }}
-      ARWP_REVISION: 73bd2a64e2e746deeb8de792ca01f654f0a7d33a
+      ARWP_REVISION: 793483e3404a97f7892e86bcda3fd317d5c7427c
     steps:
       - name: Checkout pinned ARWP
         uses: actions/checkout@v7
