@@ -10,6 +10,7 @@ const duplicates = JSON.parse(await readFile("data/duplicate-dispositions.json",
 const contexts = new Set((contextsDoc.entries || []).map((entry) => entry.slug));
 const byBiasSlug = new Map(biases.map((bias) => [bias.slug, bias]));
 const duplicateIds = new Set((duplicates.groups || []).flatMap((group) => group.duplicateIds || []));
+const publishedCanonicalBiases = biases.filter((bias) => bias.published && !duplicateIds.has(bias.id));
 const evidenceFiles = (await readdir("data")).filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name));
 const evidenceDocs = await Promise.all(evidenceFiles.map(async (name) => JSON.parse(await readFile(join("data", name), "utf8"))));
 const evidence = new Set(evidenceDocs.flatMap((document) => document.reviews || []).map((review) => review.slug));
@@ -63,6 +64,30 @@ const agentSkills = agentSkillsDoc.skills || [];
 if (agentSkills.length < 8) throw new Error(`Expected at least 8 portable agent skills, found ${agentSkills.length}.`);
 if (agentSkillsDoc.standard !== "https://agentskills.io") throw new Error("Portable agent skills must declare the Agent Skills standard.");
 if (agentSkillsDoc.security?.executableCode !== false || agentSkillsDoc.security?.secretsRequired !== false || agentSkillsDoc.security?.networkRequired !== false) throw new Error("Initial agent skills must remain instruction-only, secret-free and offline-capable.");
+
+const cognitiveBiasLens = agentSkills.find((skill) => skill.name === "cognitive-bias-lens");
+if (!cognitiveBiasLens) throw new Error("Agent Skills Marketplace must keep the cognitive-bias-lens generic coverage skill.");
+const cognitiveBiasLensReferences = new Set((cognitiveBiasLens.references || []).map((item) => item.url));
+if (!cognitiveBiasLensReferences.has("https://cognitive-biases.github.io/data/biases.json")) throw new Error("cognitive-bias-lens must reference the canonical public bias dataset so newly published biases remain in Agent Skill coverage.");
+if (!publishedCanonicalBiases.length) throw new Error("No published canonical biases found for Agent Skill coverage.");
+
+const portableByDecisionSkill = new Map(agentSkills.filter((skill) => skill.sourceDecisionSkill).map((skill) => [skill.sourceDecisionSkill, skill]));
+for (const skill of skills) {
+  if (!portableByDecisionSkill.has(skill.slug)) throw new Error(`${skill.slug}: every public Decision Skill must have a mapped portable Agent Skill.`);
+}
+
+const biasCoverage = new Map(publishedCanonicalBiases.map((bias) => [bias.slug, new Set(["cognitive-bias-lens"])]));
+for (const skill of skills) {
+  const portable = portableByDecisionSkill.get(skill.slug);
+  for (const biasSlug of skill.biases || []) {
+    if (!biasCoverage.has(biasSlug)) throw new Error(`${skill.slug}: bias ${biasSlug} is not a published canonical bias.`);
+    biasCoverage.get(biasSlug).add(portable.name);
+  }
+}
+for (const bias of publishedCanonicalBiases) {
+  const coverage = biasCoverage.get(bias.slug);
+  if (!coverage || !coverage.has("cognitive-bias-lens")) throw new Error(`${bias.slug}: published canonical bias is missing generic Agent Skill coverage.`);
+}
 
 await access("dist/agent-skills/index.html");
 await access("dist/agent-skills/catalog.json");
@@ -130,4 +155,4 @@ if (!llms.includes("https://cognitive-biases.github.io/skills/") || !llms.includ
 const agentLlms = await readFile("dist/agent-skills/llms.txt", "utf8");
 if (!agentLlms.includes("https://cognitive-biases.github.io/agent-skills/") || !agentLlms.includes("https://cognitive-biases.github.io/data/agent-skills.json") || !agentLlms.includes("SKILL.md")) throw new Error("Agent Skills llms.txt does not expose the marketplace, public data and installable skill files.");
 
-console.log(`Skills check passed: ${skills.length} decision skills and ${agentSkills.length} portable agent skills with human and machine discovery.`);
+console.log(`Skills check passed: ${skills.length} decision skills, ${agentSkills.length} portable agent skills and ${publishedCanonicalBiases.length} published canonical biases covered by the Agent Skills layer.`);
