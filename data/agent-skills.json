@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-11",
+  "standard": "https://agentskills.io",
+  "license": "CC-BY-NC-SA-4.0",
+  "security": {
+    "networkRequired": false,
+    "executableCode": false,
+    "secretsRequired": false,
+    "notes": "The initial skill set is instruction-only. Skills may suggest checking public sources when tools are available, but they do not require external tools to run."
+  },
+  "skills": [
+    {
+      "name": "cognitive-bias-lens",
+      "title": "Cognitive Bias Lens",
+      "category": "understanding",
+      "description": "Explain or compare a named cognitive bias using an evidence-aware lens. Use when a user asks what a bias means, whether two concepts differ, or how a bias may matter in a decision. Do not diagnose people or treat a bias label as proof of cause.",
+      "sourceDecisionSkill": null,
+      "useWhen": [
+        "A user names a cognitive bias and wants a useful explanation rather than a dictionary definition.",
+        "Two bias concepts sound similar and need to be distinguished.",
+        "A real decision may involve a known pattern, but the user needs the evidence boundary kept visible."
+      ],
+      "procedure": [
+        "Identify the canonical concept the user means. If the name is ambiguous, keep the ambiguity explicit instead of silently choosing a different concept.",
+        "State the pattern in plain language, then separate the descriptive idea from claims about how strong or universal the effect is.",
+        "Give one realistic decision example and one alternative explanation that does not require the bias label.",
+        "Explain what observation would make the bias lens more relevant and what would make it less relevant.",
+        "When source access is available, prefer the reviewed Cognitive Biases page or public data and preserve its evidence status and qualification.",
+        "End with a practical check the user can apply before acting."
+      ],
+      "output": [
+        "Plain-language pattern",
+        "Evidence boundary",
+        "Where it may matter",
+        "Alternative explanation",
+        "Practical check",
+        "Related concepts when useful"
+      ],
+      "guardrails": [
+        "Never diagnose a person as having a bias.",
+        "Never infer intent, intelligence, personality or mental health from a bias label.",
+        "Do not present an unreviewed or disputed effect as settled science.",
+        "Return uncertainty or no match when the concept cannot be identified reliably."
+      ],
+      "references": [
+        { "label": "Bias library", "url": "https://cognitive-biases.github.io/explore/" },
+        { "label": "Evidence reviews", "url": "https://cognitive-biases.github.io/evidence/" },
+        { "label": "Public bias data", "url": "https://cognitive-biases.github.io/data/biases.json" }
+      ]
+    },
+    {
+      "name": "bias-aware-decision-review",
+      "title": "Bias-aware Decision Review",
+      "category": "decision-making",
+      "description": "Review an important decision for cognitive-bias risks without pretending the decision can be made bias-free. Separate facts, assumptions and unknowns; surface a few plausible lenses; challenge them; and produce concrete checks and next actions.",
+      "sourceDecisionSkill": null,
+      "useWhen": [
+        "A user is choosing between options, approving a plan or committing resources.",
+        "A team wants a pre-decision review rather than a post-hoc list of bias names.",
+        "An estimate, recommendation or AI answer is influencing a consequential choice."
+      ],
+      "procedure": [
+        "Frame the decision: decision to make, options, decision owner, deadline, stakes and reversibility.",
+        "Freeze the current information into observed facts, interpretations, assumptions and unknowns.",
+        "Check the outside view: comparable cases, base rates or reference classes when they are relevant and available.",
+        "Select no more than three to five plausible cognitive-bias lenses. For each lens, state the observed signal and an alternative non-bias explanation.",
+        "Run counter-checks: independent estimate before anchors, disconfirming evidence, counterfactual, pre-mortem, stopping rule or reversible test as appropriate.",
+        "Assess robustness. Prefer a decision that still makes sense if one favored assumption is wrong over a claim that the decision is bias-free.",
+        "Record what evidence or event should trigger a review of the decision."
+      ],
+      "output": [
+        "Decision frame",
+        "Facts / interpretations / assumptions / unknowns",
+        "Candidate bias lenses with alternative explanations",
+        "Counter-checks",
+        "Missing evidence",
+        "Recommended next action and review trigger"
+      ],
+      "guardrails": [
+        "Treat bias names as lenses, not diagnoses or causal findings.",
+        "Do not create a bias score for a person, team or decision.",
+        "Do not force a bias explanation when ordinary incentives, missing information or constraints explain the situation better.",
+        "For medical, legal, financial or mental-health decisions, keep the skill educational and defer professional judgment where appropriate."
+      ],
+      "references": [
+        { "label": "Decision guides", "url": "https://cognitive-biases.github.io/contexts/" },
+        { "label": "Decision skills", "url": "https://cognitive-biases.github.io/skills/" },
+        { "label": "Evidence reviews", "url": "https://cognitive-biases.github.io/evidence/" }
+      ]
+    },
+    {
+      "name": "evidence-evaluation",
+      "title": "Evidence Evaluation",
+      "category": "research",
+      "description": "Evaluate whether a claim deserves confidence before repetition, fluency, vivid examples or preference are mistaken for evidence. Use for research, proposals, fact checks and consequential AI-generated claims.",
+      "sourceDecisionSkill": "evidence-evaluation",
+      "useWhen": [
+        "A team already prefers one explanation and is mainly gathering support for it.",
+        "A claim appears in many places but may trace back to one source.",
+        "A vivid example is dominating broader evidence or base rates.",
+        "An AI answer sounds convincing but important claims remain unverified."
+      ],
+      "procedure": [
+        "Write the exact claim and the decision it would change.",
+        "Separate direct observations, source claims, inferences and assumptions.",
+        "Trace repeated claims back to genuinely independent sources when source access is available.",
+        "Write what evidence would weaken the preferred conclusion before collecting more supporting material.",
+        "Compare vivid examples with a broader sample, base rate or reference class when relevant.",
+        "Classify the result conservatively: supported for this use, limited, disputed, unverified or unknown. Explain why."
+      ],
+      "output": [
+        "Claim under review",
+        "Evidence that supports it",
+        "Evidence or tests that could weaken it",
+        "Source independence / provenance notes",
+        "Current confidence and limitations",
+        "Decision implication"
+      ],
+      "guardrails": [
+        "Do not treat source count as independent confirmation when sources repeat one origin.",
+        "Do not use another generated answer as independent verification of an AI-generated claim.",
+        "Do not upgrade confidence because wording is fluent, familiar or repeated.",
+        "Keep unknowns visible rather than filling them with plausible prose."
+      ],
+      "references": [
+        { "label": "Decision skill", "url": "https://cognitive-biases.github.io/skills/evidence-evaluation/" },
+        { "label": "Evidence reviews", "url": "https://cognitive-biases.github.io/evidence/" }
+      ]
+    },
+    {
+      "name": "decision-making-under-uncertainty",
+      "title": "Decision Making Under Uncertainty",
+      "category": "decision-making",
+      "description": "Make a decision without pretending uncertainty has disappeared. Use ranges, reference classes, independent estimates, future-value thinking and explicit review triggers when anchors, recent events or sunk costs may distort judgment.",
+      "sourceDecisionSkill": "decision-making-under-uncertainty",
+      "useWhen": [
+        "A deadline, budget, probability or value is being discussed as one precise number.",
+        "An early estimate may be anchoring later estimates.",
+        "A recent success or failure is dominating the next choice.",
+        "A team is continuing mainly because it has already invested heavily."
+      ],
+      "procedure": [
+        "Define the decision, time horizon and what is still uncertain.",
+        "Create an independent estimate or range before using a strong external anchor when possible.",
+        "Check comparable cases or a reference class and note where the current case genuinely differs.",
+        "Separate sunk costs from future costs, future value and opportunity cost.",
+        "Identify which assumptions dominate the decision and test at least one unfavorable scenario.",
+        "Choose a decision threshold, reversible step or stop condition and record when the choice should be revisited."
+      ],
+      "output": [
+        "Decision and uncertainty frame",
+        "Range / scenarios",
+        "Reference-class check",
+        "Anchor and sunk-cost checks",
+        "Key assumptions",
+        "Decision threshold, next step and review trigger"
+      ],
+      "guardrails": [
+        "Do not manufacture precise probabilities when the evidence does not support them.",
+        "Do not treat a range as uncertainty removed; state what remains unknown.",
+        "Do not count already-spent resources as a reason by itself to spend more.",
+        "Do not claim a cognitive bias caused the decision."
+      ],
+      "references": [
+        { "label": "Decision skill", "url": "https://cognitive-biases.github.io/skills/decision-making-under-uncertainty/" },
+        { "label": "Forecasting decisions", "url": "https://cognitive-biases.github.io/contexts/forecasting-future-choices/" }
+      ]
+    },
+    {
+      "name": "forecasting",
+      "title": "Forecasting",
+      "category": "forecasting",
+      "description": "Produce forecasts that can be challenged and learned from later. Use an outside view, explicit uncertainty, pre-outcome assumptions and a durable forecast record instead of one-point certainty and reconstructed hindsight.",
+      "sourceDecisionSkill": "forecasting",
+      "useWhen": [
+        "A project deadline or outcome estimate is built mostly from an inside plan.",
+        "A recent vivid case is driving the probability estimate.",
+        "A current feeling or preference is being projected far into the future.",
+        "A team wants to learn from forecasts rather than remember them selectively."
+      ],
+      "procedure": [
+        "Define exactly what is being forecast, the horizon and the observable resolution condition.",
+        "Start with comparable completed cases or another defensible outside-view reference when available.",
+        "Give a range or probability with the factors that would move the outcome toward either end.",
+        "Record assumptions, data date and major unknowns before the outcome is known.",
+        "Identify one or more signals that should update the forecast before the final outcome.",
+        "After resolution, compare the outcome with the original record rather than reconstructed memory, and separate forecast quality from luck."
+      ],
+      "output": [
+        "Forecast question and resolution rule",
+        "Outside-view reference",
+        "Estimate / range and uncertainty",
+        "Assumptions and update signals",
+        "Timestamped forecast record",
+        "Post-resolution review when applicable"
+      ],
+      "guardrails": [
+        "Do not hide weak evidence behind precise decimals.",
+        "Do not rewrite the original forecast after the outcome.",
+        "Do not treat one correct forecast as proof of a generally good process.",
+        "Keep reference-class mismatch visible."
+      ],
+      "references": [
+        { "label": "Decision skill", "url": "https://cognitive-biases.github.io/skills/forecasting/" },
+        { "label": "Project estimation context", "url": "https://cognitive-biases.github.io/contexts/project-estimation-delivery/" }
+      ]
+    },
+    {
+      "name": "metacognition",
+      "title": "Metacognition",
+      "category": "reflection",
+      "description": "Review how a judgment was formed without confusing confidence, outcome and hindsight with decision quality. Use for retrospectives, decision journals and learning from past choices.",
+      "sourceDecisionSkill": "metacognition",
+      "useWhen": [
+        "A good result is being treated as proof that the original decision process was good.",
+        "A bad result makes earlier warning signs feel obvious in retrospect.",
+        "A review is mainly testing arguments that support the preferred story.",
+        "A person or team wants to learn from a decision without rewriting what was knowable at the time."
+      ],
+      "procedure": [
+        "Reconstruct what information, options and constraints were actually available when the decision was made.",
+        "Separate the quality of the decision process from the eventual outcome.",
+        "Compare original confidence, assumptions and predictions with the contemporaneous record when one exists.",
+        "Generate at least one alternative explanation for the result, including luck, environment changes and missing information.",
+        "Identify which part of the process should be repeated, changed or instrumented next time.",
+        "Write a concrete review trigger or decision-journal field that will make the next retrospective less dependent on memory."
+      ],
+      "output": [
+        "What was knowable then",
+        "Decision process vs outcome",
+        "Original assumptions / confidence",
+        "Alternative explanations",
+        "Learning that transfers",
+        "Change for the next decision"
+      ],
+      "guardrails": [
+        "Do not use the outcome alone to grade the original decision.",
+        "Do not claim warning signs were obvious without contemporaneous evidence.",
+        "Do not turn the review into a personality judgment.",
+        "Distinguish a repeatable process lesson from a one-off story."
+      ],
+      "references": [
+        { "label": "Decision skill", "url": "https://cognitive-biases.github.io/skills/metacognition/" },
+        { "label": "Decision guides", "url": "https://cognitive-biases.github.io/contexts/" }
+      ]
+    },
+    {
+      "name": "information-verification",
+      "title": "Information Verification",
+      "category": "verification",
+      "description": "Verify important information by tracing provenance, counting independent sources instead of repetitions, preserving corrections and keeping verified, disputed and unknown claims separate.",
+      "sourceDecisionSkill": "information-verification",
+      "useWhen": [
+        "A claim feels true mainly because it is familiar or repeated.",
+        "Several articles or summaries may depend on the same original source.",
+        "A correction exists but the older explanation still shapes discussion.",
+        "A generated answer makes consequential claims without inspectable provenance."
+      ],
+      "procedure": [
+        "Extract the consequential claims instead of trying to verify the whole document at once.",
+        "For each claim, trace the earliest reliable or primary source you can actually inspect when tools are available.",
+        "Map source lineage and count independent evidence streams, not links or repetitions.",
+        "Look for corrections, later updates, contradictory evidence and date/version mismatches.",
+        "Restate the currently supported replacement explanation when an earlier claim was corrected.",
+        "Return a claim ledger with verified, supported-but-limited, disputed, unverified or unknown status and the reason for each label."
+      ],
+      "output": [
+        "Claim ledger",
+        "Provenance / source lineage",
+        "Independent confirmation count where knowable",
+        "Corrections and version/date notes",
+        "Open verification gaps",
+        "What is safe to rely on now"
+      ],
+      "guardrails": [
+        "Do not call a claim verified when you cannot inspect supporting evidence.",
+        "Do not treat multiple summaries of one source as independent confirmation.",
+        "Do not erase the correction history when a claim changes.",
+        "Do not infer truth from popularity, repetition or confident language."
+      ],
+      "references": [
+        { "label": "Decision skill", "url": "https://cognitive-biases.github.io/skills/information-verification/" },
+        { "label": "Checking claims context", "url": "https://cognitive-biases.github.io/contexts/checking-claims-misinformation/" }
+      ]
+    },
+    {
+      "name": "ai-assisted-reasoning",
+      "title": "AI-assisted Reasoning",
+      "category": "ai",
+      "description": "Use AI to expand reasoning without letting the first generated answer become an anchor, treating fluent output as evidence, or outsourcing the final judgment. Use for consequential recommendations, estimates and research with AI assistants.",
+      "sourceDecisionSkill": "ai-assisted-reasoning",
+      "useWhen": [
+        "A chatbot recommendation is influencing an important decision.",
+        "The model gives the first number, score or estimate in the discussion.",
+        "A polished conversational style makes the system feel more capable than has been tested.",
+        "The user may be using AI mainly to strengthen a conclusion already preferred."
+      ],
+      "procedure": [
+        "Before giving a recommendation, capture the user's provisional judgment, success criteria or independent estimate when the decision matters and doing so is practical.",
+        "Separate the AI contribution into ideas, calculations, factual claims, forecasts and recommendations; they need different checks.",
+        "Generate a credible counter-position and ask what evidence would make the preferred answer wrong.",
+        "Verify consequential factual claims against independent inspectable sources when tools are available; do not verify one model with another generated answer alone.",
+        "Check for anchoring, automation bias, anthropomorphic over-trust, confirmation seeking and repetition effects as candidate lenses, not diagnoses.",
+        "Return the decision to the user with verified facts, unresolved uncertainty, alternatives and the smallest useful next check."
+      ],
+      "output": [
+        "Human prior / criteria when available",
+        "What AI contributed",
+        "Candidate bias lenses",
+        "Independent checks",
+        "Counter-position",
+        "Remaining uncertainty and next action"
+      ],
+      "guardrails": [
+        "Do not present model fluency or confidence as evidence of factual reliability.",
+        "Do not let the agent's first number silently become the baseline when an independent estimate is feasible.",
+        "Do not claim AI advice is independent evidence merely because another model agrees.",
+        "Keep the user or accountable decision owner responsible for consequential judgment."
+      ],
+      "references": [
+        { "label": "Decision skill", "url": "https://cognitive-biases.github.io/skills/ai-assisted-reasoning/" },
+        { "label": "AI-assisted decisions", "url": "https://cognitive-biases.github.io/contexts/ai-assisted-decisions/" },
+        { "label": "AI-era Bias Lab", "url": "https://cognitive-biases.github.io/ai-era/" }
+      ]
+    }
+  ]
+}
