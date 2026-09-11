@@ -1,0 +1,32 @@
+# Cognitive Biases Agent Skills Marketplace
+
+> Portable, evidence-aware Agent Skills for decision review, evidence evaluation, forecasting, verification and AI-assisted reasoning.
+
+- Marketplace: https://cognitive-biases.github.io/agent-skills/
+- Machine-readable catalog: https://cognitive-biases.github.io/agent-skills/catalog.json
+- Public data distribution: https://cognitive-biases.github.io/data/agent-skills.json
+- Schema: https://cognitive-biases.github.io/schemas/agent-skill.schema.json
+- Agent Skills standard: https://agentskills.io
+
+The initial collection is instruction-only: no executable code, no secrets and no required network access.
+
+Installable skills:
+
+- Cognitive Bias Lens: https://cognitive-biases.github.io/agent-skills/cognitive-bias-lens/SKILL.md
+- Bias-aware Decision Review: https://cognitive-biases.github.io/agent-skills/bias-aware-decision-review/SKILL.md
+- Evidence Evaluation: https://cognitive-biases.github.io/agent-skills/evidence-evaluation/SKILL.md
+- Decision Making Under Uncertainty: https://cognitive-biases.github.io/agent-skills/decision-making-under-uncertainty/SKILL.md
+- Forecasting: https://cognitive-biases.github.io/agent-skills/forecasting/SKILL.md
+- Metacognition: https://cognitive-biases.github.io/agent-skills/metacognition/SKILL.md
+- Information Verification: https://cognitive-biases.github.io/agent-skills/information-verification/SKILL.md
+- AI-assisted Reasoning: https://cognitive-biases.github.io/agent-skills/ai-assisted-reasoning/SKILL.md
+
+Interpretation rules:
+
+- Treat cognitive biases as candidate lenses, not diagnoses of people or proof of causation.
+- Prefer a small number of relevant lenses over a long bias list.
+- Preserve evidence status and uncertainty when using linked Cognitive Biases material.
+- A skill should represent a repeatable job and workflow, not merely a bias name.
+- When no reviewed concept or workflow fits, return uncertainty or no match rather than inventing a label.
+
+Licence: CC BY-NC-SA 4.0 for current marketplace content. Free to install; commercial reuse requires prior written permission.
