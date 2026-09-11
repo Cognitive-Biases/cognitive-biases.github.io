@@ -20,6 +20,15 @@ const absoluteImage = (slug) => `${SITE}/assets/editorial/biases/${slug}.webp`;
 const pageUrl = (slug) => `${SITE}/biases/${slug}/`;
 const pageFile = (slug) => join(OUT, "biases", slug, "index.html");
 
+async function exists(path) {
+  try { await access(path); return true; } catch { return false; }
+}
+
+function metaContent(html, key, value) {
+  const tag = html.match(new RegExp(`<meta\\b(?=[^>]*\\b${key}=["']${value}["'])[^>]*>`, "i"))?.[0] || "";
+  return tag.match(/\bcontent=["']([^"']*)["']/i)?.[1] || "";
+}
+
 function setMeta(html, key, value, content) {
   const pattern = new RegExp(`<meta\\b(?=[^>]*\\b${key}=["']${value}["'])[^>]*>`, "i");
   const replacement = `<meta ${key}="${value}" content="${escapeAttr(content)}">`;
@@ -74,13 +83,21 @@ function applyCuratedAlt(html, slug) {
 const records = [];
 for (const bias of canonicalBiases) {
   const file = pageFile(bias.slug);
-  const image = absoluteImage(bias.slug);
-  await Promise.all([
-    access(file),
-    access(join(OUT, "assets", "editorial", "biases", `${bias.slug}.webp`))
-  ]);
-
+  await access(file);
   let html = await readFile(file, "utf8");
+
+  const uniqueImage = absoluteImage(bias.slug);
+  const uniqueLocal = join(OUT, "assets", "editorial", "biases", `${bias.slug}.webp`);
+  const hasUniqueImage = await exists(uniqueLocal);
+  const image = hasUniqueImage ? uniqueImage : metaContent(html, "property", "og:image");
+  if (!image) throw new Error(`No representative image is available for ${pageUrl(bias.slug)}`);
+
+  const imageUrl = new URL(image);
+  if (imageUrl.origin !== SITE || !imageUrl.pathname.startsWith("/assets/editorial/")) {
+    throw new Error(`Unexpected representative image for ${pageUrl(bias.slug)}: ${image}`);
+  }
+  await access(join(OUT, imageUrl.pathname.replace(/^\//, "")));
+
   html = setMeta(html, "property", "og:image", image);
   html = setMeta(html, "name", "twitter:image", image);
   html = alignStructuredData(html, image);
@@ -91,6 +108,7 @@ for (const bias of canonicalBiases) {
   records.push({
     page: pageUrl(bias.slug),
     image,
+    imageSource: hasUniqueImage ? "unique-bias" : "semantic-family-fallback",
     alt: altMatch?.[1] || "",
     altSource: metadata.entries?.[bias.slug]?.reviewed ? "curated" : "generator-fallback"
   });
@@ -114,8 +132,10 @@ await writeFile(sitemapPath, sitemap);
 await writeFile(join(OUT, "data", "image-discovery.json"), `${JSON.stringify({
   version: "0.1",
   site: `${SITE}/`,
-  scope: "canonical bias pages with unique editorial assets",
+  scope: "canonical bias pages with representative editorial assets",
   records
 }, null, 2)}\n`);
 
-console.log(`Image Discovery applied to ${records.length} canonical bias pages; ${records.filter((record) => record.altSource === "curated").length} image descriptions use reviewed visual-specific metadata.`);
+const uniqueCount = records.filter((record) => record.imageSource === "unique-bias").length;
+const fallbackCount = records.length - uniqueCount;
+console.log(`Image Discovery applied to ${records.length} canonical bias pages: ${uniqueCount} unique bias assets, ${fallbackCount} semantic family fallback(s); ${records.filter((record) => record.altSource === "curated").length} image descriptions use reviewed visual-specific metadata.`);
