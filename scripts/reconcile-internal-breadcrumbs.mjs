@@ -8,6 +8,11 @@ const duplicateIds = new Set((duplicates.groups || []).flatMap((group) => group.
 const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, (character) => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
 })[character]);
+const categorySlug = (value = '') => String(value)
+  .normalize('NFKD')
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-+|-+$/g, '') || 'other';
 
 let changed = 0;
 for (const bias of biases) {
@@ -17,7 +22,7 @@ for (const bias of biases) {
   try { html = await readFile(file, 'utf8'); } catch { continue; }
   const label = escapeHtml(bias.typeOfBias || 'Bias');
   const plain = `<span aria-current="page">${label}</span>`;
-  const linked = `<a href="/explore/#${encodeURIComponent(bias.typeOfBias)}">${label}</a>`;
+  const linked = `<a href="/explore/#${categorySlug(bias.typeOfBias)}">${label}</a>`;
   if (html.includes(plain)) {
     html = html.replace(plain, linked);
     await writeFile(file, html);
