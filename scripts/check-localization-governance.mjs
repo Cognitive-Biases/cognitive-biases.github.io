@@ -14,15 +14,31 @@ if (contract.policy !== aiLocales.discovery?.policy) {
 
 const fullCodes = contract.fullHumanLocales.map((locale) => locale.code);
 const manifestHuman = aiLocales.humanInterfaceLanguages || [];
-for (const code of fullCodes) {
+const glossaries = [];
+for (const locale of contract.fullHumanLocales) {
+  const { code } = locale;
   if (!manifestHuman.includes(code)) throw new Error(`${code}: full human locale missing from ai/locales.json humanInterfaceLanguages.`);
-  const record = aiLocales.locales?.find((locale) => locale.language === code);
+  const record = aiLocales.locales?.find((entry) => entry.language === code);
   if (!record) throw new Error(`${code}: locale record missing from ai/locales.json.`);
 
-  for (const script of [...localeScripts(code, "generatorScripts"), ...localeScripts(code, "checkScripts")]) {
-    await access(script);
+  for (const script of [...locale.generatorScripts, ...locale.checkScripts]) await access(script);
+
+  if (contract.glossaryPolicy?.requiredForHumanLocales) {
+    if (!locale.glossary) throw new Error(`${code}: full human locale must declare a versioned glossary.`);
+    const glossary = await readJson(locale.glossary);
+    validateGlossary(locale, glossary);
+    glossaries.push({ code, glossary });
+  }
+
+  if (locale.freshnessStrategy === "canonical-release-version") {
+    const checkSources = await Promise.all(locale.checkScripts.map((path) => readFile(path, "utf8")));
+    if (!checkSources.some((source) => source.includes("sourceRelease"))) {
+      throw new Error(`${code}: canonical-release-version freshness strategy requires a checker that validates sourceRelease.`);
+    }
   }
 }
+
+if (contract.glossaryPolicy?.stableIdsMustMatch && glossaries.length > 1) validateGlossaryParity(glossaries);
 
 for (const locale of contract.limitedLocales || []) {
   const record = aiLocales.locales?.find((entry) => entry.language === locale.code);
@@ -34,15 +50,37 @@ for (const locale of contract.limitedLocales || []) {
 validateExceptions(exceptions.exceptions || []);
 
 const changedFiles = getChangedFiles();
-if (changedFiles.length) {
-  enforceLocalizationImpact(changedFiles);
+if (changedFiles.length) enforceLocalizationImpact(changedFiles);
+
+console.log(`Localization governance OK: ${fullCodes.length} human locales, ${glossaries.length} versioned glossaries, ${(contract.limitedLocales || []).length} limited locales${changedFiles.length ? `, ${changedFiles.length} changed files inspected` : ""}.`);
+
+function validateGlossary(locale, glossary) {
+  if (glossary.locale !== locale.code || glossary.canonicalLocale !== contract.canonicalLocale) {
+    throw new Error(`${locale.code}: glossary locale contract is invalid.`);
+  }
+  if (!glossary.version || !glossary.status) throw new Error(`${locale.code}: glossary requires version and status.`);
+  const terms = glossary.terms || [];
+  const minimum = contract.glossaryPolicy?.minimumBaselineTerms || 1;
+  if (terms.length < minimum) throw new Error(`${locale.code}: glossary baseline needs at least ${minimum} reviewed concepts.`);
+  const ids = new Set();
+  for (const term of terms) {
+    if (!term.id || ids.has(term.id)) throw new Error(`${locale.code}: glossary term IDs must be unique and non-empty.`);
+    ids.add(term.id);
+    if (!String(term.source || "").trim() || !String(term.preferred || "").trim()) {
+      throw new Error(`${locale.code}/${term.id}: glossary requires source and preferred terms.`);
+    }
+    if (term.source === term.preferred) throw new Error(`${locale.code}/${term.id}: preferred term must not silently equal canonical English.`);
+  }
 }
 
-console.log(`Localization governance OK: ${fullCodes.length} human locales, ${(contract.limitedLocales || []).length} limited locales${changedFiles.length ? `, ${changedFiles.length} changed files inspected` : ""}.`);
-
-function localeScripts(code, key) {
-  const locale = contract.fullHumanLocales.find((entry) => entry.code === code);
-  return locale?.[key] || [];
+function validateGlossaryParity(items) {
+  const expected = [...new Set((items[0].glossary.terms || []).map((term) => term.id))].sort();
+  for (const { code, glossary } of items.slice(1)) {
+    const actual = [...new Set((glossary.terms || []).map((term) => term.id))].sort();
+    if (actual.join("\n") !== expected.join("\n")) {
+      throw new Error(`${code}: glossary stable concept IDs drifted from the shared baseline.`);
+    }
+  }
 }
 
 function validateExceptions(items) {
