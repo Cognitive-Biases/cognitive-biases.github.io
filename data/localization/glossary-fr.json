@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "locale": "fr",
+  "canonicalLocale": "en",
+  "status": "editorial-baseline",
+  "terms": [
+    {"id":"cognitive-bias","source":"cognitive bias","preferred":"biais cognitif","aliases":[],"avoid":["distorsion cognitive"],"note":"Use ‘biais cognitif’ for the general decision-science concept; ‘distorsion cognitive’ belongs mainly to CBT contexts."},
+    {"id":"anchoring-bias","source":"anchoring bias","preferred":"biais d’ancrage","aliases":["effet d’ancrage"],"avoid":[],"note":"Use ‘biais d’ancrage’ for the named bias and ‘effet d’ancrage’ when describing the phenomenon."},
+    {"id":"confirmation-bias","source":"confirmation bias","preferred":"biais de confirmation","aliases":[],"avoid":[],"note":"Standard psychology and decision-science term."},
+    {"id":"heuristic","source":"heuristic","preferred":"heuristique","aliases":[],"avoid":[],"note":"Keep the noun concise; explain it in plain language when first introduced to a broad audience."},
+    {"id":"decision-skill","source":"decision skill","preferred":"compétence décisionnelle","aliases":["compétence de prise de décision"],"avoid":[],"note":"Prefer the shorter form in navigation and the longer form when clarity matters."},
+    {"id":"debiasing","source":"debiasing","preferred":"réduction des biais","aliases":["débiaisage"],"avoid":[],"note":"‘Réduction des biais’ is more transparent for general readers; ‘débiaisage’ may be retained in technical contexts."},
+    {"id":"evidence","source":"evidence","preferred":"données probantes","aliases":["éléments de preuve"],"avoid":["évidence"],"note":"Avoid the English false friend ‘évidence’ when referring to research support."},
+    {"id":"decision-check","source":"decision check","preferred":"vérification de décision","aliases":["contrôle de décision"],"avoid":[],"note":"Use action-oriented wording rather than a literal technical calque where possible."}
+  ]
+}
