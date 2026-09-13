@@ -1,0 +1,54 @@
+{
+  "locale": "es",
+  "siteName": "Cognitive Biases",
+  "skipToContent": "Ir al contenido",
+  "nav": {
+    "home": "Inicio",
+    "explore": "Explorar",
+    "techniques": "Técnicas",
+    "skills": "Habilidades",
+    "english": "English"
+  },
+  "actions": {
+    "readEntry": "Leer la ficha",
+    "openTechnique": "Ver la técnica",
+    "browseTechniques": "Ver las técnicas",
+    "browseBiases": "Explorar los sesgos",
+    "englishVersion": "Ver la versión en inglés",
+    "fullEnglishLibrary": "Explorar toda la biblioteca en inglés",
+    "backToExplore": "Volver a explorar"
+  },
+  "labels": {
+    "bias": "Sesgo / efecto",
+    "technique": "Técnica",
+    "englishTerm": "Término en inglés",
+    "inBrief": "En pocas palabras",
+    "whereItShows": "Dónde puede aparecer",
+    "whatToDo": "Qué hacer",
+    "evidence": "Qué permiten afirmar los estudios",
+    "limits": "Qué conviene tener en cuenta",
+    "whenToUse": "Cuándo usarla",
+    "tryThis": "Pruébalo así",
+    "example": "Ejemplo",
+    "whyItCanHelp": "Por qué puede ayudar",
+    "relatedBiases": "Sesgos relacionados",
+    "reviewedLayer": "Versión española revisada",
+    "canonicalEnglish": "Contenido canónico en inglés"
+  },
+  "search": {
+    "label": "Buscar un sesgo o término",
+    "placeholder": "Ej. sesgo de confirmación, anchoring effect…",
+    "empty": "No hay ninguna ficha en español que coincida. Prueba el término en inglés o consulta la biblioteca canónica.",
+    "countSingular": "ficha en español",
+    "countPlural": "fichas en español"
+  },
+  "notices": {
+    "reviewedSubset": "La capa española publica texto revisado y conserva por separado el estado de la evidencia científica.",
+    "techniqueBoundary": "Una técnica estructurada no es un remedio garantizado. Su utilidad depende del contexto, de la información disponible y de cómo se aplique.",
+    "educational": "Información educativa sobre juicio y toma de decisiones. Este sitio no ofrece asesoramiento médico, jurídico, financiero ni de salud mental."
+  },
+  "footer": {
+    "tagline": "Herramientas para pensar y decidir mejor, con la evidencia y sus límites a la vista.",
+    "maintainedBy": "Mantenido por Dzmitryi Kharlanau"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "entries": [
+    {
+      "canonicalId": "cognitive-bias-mere-urgency-effect",
+      "localizedLabel": "Efecto de mera urgencia",
+      "aliases": ["efecto de urgencia", "urgencia ilusoria"],
+      "summary": "El efecto de mera urgencia describe una preferencia por una tarea que parece exigir atención inmediata, incluso cuando otra tarea aporta más beneficio y la urgencia no añade una consecuencia real.",
+      "practicalQuestion": "Si elimino mentalmente la cuenta atrás o la presión temporal, ¿qué tarea aporta realmente más valor?",
+      "example": "Una persona elige una tarea pequeña y poco valiosa con una ventana de pocos minutos en vez de otra más importante que seguirá disponible, aunque dejar caducar la primera no tenga un coste real.",
+      "boundary": "Un plazo real puede contener información importante: coste del retraso, pérdida de una opción o dependencia externa. El efecto se refiere sobre todo a situaciones donde la sensación de urgencia atrae la elección sin aumentar el valor objetivo de la tarea.",
+      "evidenceSummary": "Cinco experimentos iniciales y una gran replicación independiente respaldan el efecto en tareas de asignación del tiempo. Se debilita cuando se controlan mejor explicaciones alternativas, pero sigue siendo detectable en pruebas dirigidas a la urgencia ilusoria."
+    }
+  ]
+}

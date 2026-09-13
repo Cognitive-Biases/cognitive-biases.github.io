@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "locale": "es",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "contextLabels": {
+    "checking-claims-misinformation": "Comprobar afirmaciones e información engañosa",
+    "ai-assisted-decisions": "Decisiones asistidas por IA",
+    "work-project-decisions": "Decisiones de trabajo y proyecto",
+    "forecasting-future-choices": "Previsión y decisiones futuras",
+    "project-estimation-delivery": "Estimación y entrega de proyectos"
+  },
+  "entries": [
+    {
+      "canonicalSlug": "evidence-evaluation",
+      "localizedSlug": "evaluacion-de-la-evidencia",
+      "title": "Evaluación de la evidencia",
+      "aliases": ["Evidence evaluation", "evaluar evidencia", "comprobar la solidez de una afirmación"],
+      "summary": "Evalúa si una afirmación merece tu confianza antes de confundir repetición, fluidez o preferencia con evidencia independiente.",
+      "outcome": "Puedes distinguir una afirmación convincente de la información que realmente debería cambiar tu juicio.",
+      "whenToUse": [
+        "Un equipo ya prefiere una explicación y busca sobre todo información que la apoye.",
+        "Una afirmación aparece en muchos lugares, pero esos contenidos pueden depender de la misma fuente.",
+        "Un ejemplo llamativo pesa más que datos más amplios.",
+        "Una respuesta de IA parece sólida, aunque varias afirmaciones importantes siguen sin verificar."
+      ],
+      "actions": [
+        "Escribe qué debilitaría tu conclusión preferida antes de buscar más argumentos a su favor.",
+        "Rastrea las afirmaciones repetidas hasta fuentes realmente independientes.",
+        "Compara los ejemplos llamativos con una tasa base, una clase de referencia o una muestra más amplia.",
+        "Separa hechos verificados, inferencias plausibles y preguntas todavía abiertas."
+      ],
+      "example": "Tres artículos dicen que un método aumenta mucho la productividad. Antes de contarlos como tres confirmaciones, sigues sus referencias y descubres que todos citan el mismo estudio pequeño. Hay más enlaces, pero no más evidencia independiente.",
+      "boundary": "Esta habilidad mejora la revisión de una afirmación. No convierte datos débiles en certeza ni sustituye la experiencia especializada cuando el riesgo de la decisión la requiere."
+    },
+    {
+      "canonicalSlug": "decision-making-under-uncertainty",
+      "localizedSlug": "decidir-bajo-incertidumbre",
+      "title": "Decidir bajo incertidumbre",
+      "aliases": ["Decision making under uncertainty", "toma de decisiones bajo incertidumbre", "decidir sin certeza"],
+      "summary": "Toma decisiones útiles cuando el resultado sigue siendo incierto y un número, una historia reciente o una inversión pasada puede arrastrar demasiado el juicio.",
+      "outcome": "Puedes elegir una acción sin fingir que la incertidumbre ha desaparecido.",
+      "whenToUse": [
+        "Un plazo, presupuesto o probabilidad se discute como un único número preciso.",
+        "La primera estimación condiciona todas las siguientes.",
+        "El último éxito o fracaso domina la siguiente decisión.",
+        "Un equipo continúa principalmente porque ya ha invertido mucho."
+      ],
+      "actions": [
+        "Empieza por un intervalo o una clase de referencia antes de negociar un número preciso.",
+        "Haz una estimación independiente antes de ver un ancla fuerte cuando sea posible.",
+        "Separa lo ya gastado del coste futuro, el valor futuro y el coste de oportunidad del siguiente paso.",
+        "Registra qué supuestos o acontecimientos deberían obligarte a revisar la decisión."
+      ],
+      "example": "Un proyecto se anuncia para ocho semanas porque ese número apareció primero. Revisas proyectos comparables, obtienes un intervalo de diez a catorce semanas y explicitas qué tendría que ser diferente para terminar realmente antes.",
+      "boundary": "Un intervalo no elimina la incertidumbre. Esta habilidad hace visibles supuestos y compromisos; no garantiza una buena previsión ni un buen resultado."
+    },
+    {
+      "canonicalSlug": "forecasting",
+      "localizedSlug": "hacer-previsiones",
+      "title": "Hacer previsiones",
+      "aliases": ["Forecasting", "previsión", "estimar qué ocurrirá"],
+      "summary": "Estima qué puede ocurrir usando casos comparables, incertidumbre explícita y un registro escrito antes de conocer el resultado.",
+      "outcome": "Puedes producir previsiones más fáciles de cuestionar, comparar y usar para aprender después.",
+      "whenToUse": [
+        "Un plazo de proyecto se construye solo desde el plan interno.",
+        "Un sentimiento o preferencia actual se proyecta demasiado lejos en el futuro.",
+        "Un ejemplo reciente y memorable se usa casi por sí solo como estimación de probabilidad.",
+        "Después del resultado, todos sienten que el desenlace era evidente desde el principio."
+      ],
+      "actions": [
+        "Mira casos comparables terminados antes de afinar el plan del caso actual.",
+        "Da un intervalo e indica qué factores podrían mover el resultado hacia cada extremo.",
+        "Registra la previsión y sus supuestos antes de conocer el resultado.",
+        "Evalúa después la previsión usando ese registro original, no un recuerdo reconstruido."
+      ],
+      "example": "Antes de anunciar una fecha de entrega, comparas cinco proyectos similares, registras un intervalo de plazos y defines dos señales que te obligarán a actualizar la previsión durante el trabajo.",
+      "boundary": "Una previsión sigue siendo una estimación. Un buen proceso puede producir un mal resultado concreto, y un resultado afortunado no demuestra que el método fuera bueno."
+    },
+    {
+      "canonicalSlug": "metacognition",
+      "localizedSlug": "metacognicion",
+      "title": "Metacognición",
+      "aliases": ["Metacognition", "revisar el propio razonamiento", "analizar cómo se formó una decisión"],
+      "summary": "Examina cómo se formó un juicio, qué lo influyó y qué información debería hacerte cambiar de opinión.",
+      "outcome": "Puedes revisar tu razonamiento sin confundir confianza, resultado final o retrospectiva con la calidad de la decisión original.",
+      "whenToUse": [
+        "Un buen resultado se presenta como prueba de que el proceso de decisión fue bueno.",
+        "Un mal resultado hace que las señales de alerta parezcan mucho más evidentes de lo que eran antes.",
+        "Pones a prueba sobre todo argumentos que ya apoyan la respuesta preferida.",
+        "Quieres aprender de una decisión pasada sin reescribir lo que podía saberse en ese momento."
+      ],
+      "actions": [
+        "Fija por escrito qué se sabía realmente antes del resultado.",
+        "Evalúa la calidad del proceso por separado del resultado obtenido.",
+        "Escribe qué te haría cambiar de opinión antes de recoger más evidencia.",
+        "Compara la revisión con la previsión, las notas o los supuestos registrados en aquel momento."
+      ],
+      "example": "Una decisión comercial termina funcionando muy bien. En lugar de concluir que el razonamiento fue excelente, relees los supuestos escritos antes de decidir y separas qué partes eran sólidas, frágiles o simplemente afortunadas.",
+      "boundary": "La metacognición no ofrece una visión perfectamente objetiva del propio razonamiento. Funciona mejor cuando existen registros contemporáneos y se mantienen abiertas explicaciones alternativas."
+    },
+    {
+      "canonicalSlug": "information-verification",
+      "localizedSlug": "verificacion-de-la-informacion",
+      "title": "Verificación de la información",
+      "aliases": ["Information verification", "verificar información", "comprobar una afirmación"],
+      "summary": "Comprueba de dónde viene una información, si las fuentes son independientes y si una corrección ha sustituido realmente a la explicación anterior.",
+      "outcome": "Puedes verificar una afirmación importante sin tratar la repetición como confirmación independiente.",
+      "whenToUse": [
+        "Una afirmación parece cierta principalmente porque se ha vuelto familiar.",
+        "Varios resúmenes o artículos pueden depender de la misma fuente original.",
+        "Existe una corrección, pero la versión anterior sigue influyendo en el razonamiento.",
+        "Una respuesta generada repite una afirmación sin mostrar claramente su origen."
+      ],
+      "actions": [
+        "Rastrea la afirmación hasta la primera fuente fiable o primaria que realmente puedas inspeccionar.",
+        "Cuenta fuentes independientes, no repeticiones.",
+        "Después de una corrección, formula explícitamente la explicación que ahora sí está respaldada.",
+        "Distingue afirmaciones verificadas, discutidas, no verificadas y todavía desconocidas."
+      ],
+      "example": "Una estadística circula en varias publicaciones y newsletters. Llegas al informe original, descubres que el dato se corrigió en una versión posterior y usas el valor corregido en vez de repetir la versión más visible.",
+      "boundary": "La verificación puede quedar incompleta cuando las fuentes primarias no son accesibles. En ese caso, el resultado correcto puede ser «no verificado», no una respuesta más segura."
+    },
+    {
+      "canonicalSlug": "ai-assisted-reasoning",
+      "localizedSlug": "razonamiento-asistido-por-ia",
+      "title": "Razonamiento asistido por IA",
+      "aliases": ["AI-assisted reasoning", "razonar con IA", "usar IA para decidir"],
+      "summary": "Usa la IA como apoyo al razonamiento sin confundir fluidez, apariencia humana o repetición generada con capacidad demostrada y evidencia verificada.",
+      "outcome": "Puedes usar una IA para ampliar el razonamiento y mantener los juicios importantes verificables de forma independiente.",
+      "whenToUse": [
+        "Una recomendación de chatbot influye en una decisión importante.",
+        "El modelo proporciona el primer número, puntuación o plazo de la conversación.",
+        "Una interfaz conversacional muy natural hace que el sistema parezca más competente de lo que se ha probado.",
+        "Usas la IA principalmente para reforzar una conclusión que ya prefieres."
+      ],
+      "actions": [
+        "Escribe un juicio provisional o un criterio de éxito antes de pedir la opinión de la IA cuando la decisión sea importante.",
+        "Separa la calidad de la interfaz de la capacidad necesaria para la tarea.",
+        "Verifica las afirmaciones relevantes con una fuente independiente, no con otra respuesta generada.",
+        "Pide contraargumentos, evidencia contraria y explicaciones alternativas antes de concluir."
+      ],
+      "example": "Una IA recomienda a un proveedor y le asigna una puntuación alta. Antes de adoptar el ranking, defines tus propios criterios, verificas los hechos importantes en fuentes independientes y preguntas qué podría hacer que la recomendación fuera incorrecta.",
+      "boundary": "Esta habilidad no presupone que la IA sea fiable ni que no lo sea. Separa lo que el sistema afirma, lo que puedes verificar y el papel que realmente debería desempeñar en la decisión."
+    }
+  ]
+}
