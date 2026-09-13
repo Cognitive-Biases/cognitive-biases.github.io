@@ -67,7 +67,7 @@
       "aiStatus": "reviewed-human-interface",
       "guide": "docs/localization-fr.md",
       "glossary": "data/glossary-fr.json",
-      "checkerCommands": ["check:french", "check:french-skills"],
+      "checkerCommands": ["check:french-localization", "check:french-skills"],
       "surfaces": {
         "humanInterface": "complete",
         "biasCatalogue": "complete",
@@ -88,7 +88,7 @@
       "aiStatus": "reviewed-partial-human-interface",
       "guide": "docs/localization-pt-br.md",
       "glossary": "data/glossary-pt-br.json",
-      "checkerCommands": ["check:portuguese"],
+      "checkerCommands": ["check:portuguese-localization"],
       "surfaces": {
         "humanInterface": "complete",
         "biasCatalogue": "partial",
