@@ -1,8 +1,9 @@
 {
   "version": 1,
   "locale": "de",
-  "state": "reviewed",
+  "state": "draft",
   "updatedAt": "2026-09-13",
+  "editorialNote": "Staged situation-first content model. These records are not part of the public reviewed German surface until a renderer and localization quality gate publish them end to end.",
   "guides": [
     {
       "slug": "ki-antwort-pruefen",
