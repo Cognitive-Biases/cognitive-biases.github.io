@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/6a8168b854ed6f557f5906808a83eb67be9f42ea/schema/localization-profile.schema.json",
+  "version": "0.2",
+  "site": "https://cognitive-biases.github.io/",
+  "sourceLocale": "en",
+  "defaultLocale": "en",
+  "debtLedger": ".arwp/localization-debt.generated.json",
+  "locales": [
+    { "code": "en", "role": "canonical", "status": "published" },
+    { "code": "fr", "role": "human-interface", "status": "reviewed-human-interface" },
+    { "code": "pt-BR", "role": "human-interface", "status": "reviewed-partial-human-interface" },
+    { "code": "es", "role": "human-interface", "status": "reviewed-human-interface" },
+    { "code": "it", "role": "human-interface", "status": "reviewed-partial-human-interface" },
+    { "code": "de", "role": "routing-only", "status": "localized-agent-routing" },
+    { "code": "ru", "role": "routing-only", "status": "localized-agent-routing" }
+  ],
+  "surfaces": [
+    {
+      "id": "terminology-glossary",
+      "kind": "manual",
+      "parity": "semantic",
+      "requiredForRoles": ["human-interface"],
+      "checks": ["stable-concept-id-parity", "reviewed-terminology"]
+    },
+    {
+      "id": "ui-runtime",
+      "kind": "manual",
+      "parity": "adapted",
+      "requiredForRoles": ["human-interface"],
+      "checks": ["ui-copy", "runtime-states", "no-silent-fallback"]
+    },
+    {
+      "id": "structured-knowledge",
+      "kind": "manual",
+      "parity": "semantic",
+      "requiredForRoles": ["human-interface"],
+      "checks": ["bias-library", "technique-library", "decision-skills", "source-release-freshness"]
+    },
+    {
+      "id": "accessibility",
+      "kind": "manual",
+      "parity": "adapted",
+      "requiredForRoles": ["human-interface"],
+      "checks": ["accessible-names", "alt-text", "validation-announcements", "narrow-layout"]
+    },
+    {
+      "id": "seo-search",
+      "kind": "manual",
+      "parity": "adapted",
+      "requiredForRoles": ["human-interface"],
+      "checks": ["html-lang", "self-canonical", "hreflang", "sitemap", "structured-data-language"]
+    },
+    {
+      "id": "human-ai-agent",
+      "kind": "manual",
+      "parity": "semantic",
+      "requiredForRoles": ["human-interface"],
+      "checks": ["localized-llms", "localized-data-index", "localized-agent-skills-where-declared"]
+    },
+    {
+      "id": "agent-routing-llms",
+      "kind": "machine-files",
+      "parity": "routing-only",
+      "localePattern": "dist/{locale}/llms.txt",
+      "requiredForRoles": ["routing-only"],
+      "checks": ["declared-routing-surface", "no-human-search-publication"]
+    }
+  ],
+  "impactRules": [
+    {
+      "paths": ["data/biases.json", "data/techniques.json", "data/decision-skills/**", "data/skills/**", "skills/**"],
+      "surfaces": ["structured-knowledge", "terminology-glossary", "human-ai-agent", "seo-search"]
+    },
+    {
+      "paths": ["scripts/generate-skills.mjs", "scripts/generate-bias-agent-skills.mjs", "scripts/generate-decision-system.mjs"],
+      "surfaces": ["structured-knowledge", "human-ai-agent"]
+    },
+    {
+      "paths": ["scripts/build.mjs", "scripts/enhance*", "scripts/apply-seo-structured-data.mjs", "scripts/update-resource-sitemap.mjs"],
+      "surfaces": ["ui-runtime", "accessibility", "seo-search", "human-ai-agent", "agent-routing-llms"]
+    }
+  ],
+  "evidenceBoundary": "ARWP verifies only the declared generic implementation surfaces. Cognitive Biases domain validators remain authoritative for language-specific library, glossary, freshness, UI, Search and build semantics. A passing gate does not prove literary quality, cultural fit, deployed parity, indexing, ranking, AI citation/recommendation, traffic or conversion."
+}
