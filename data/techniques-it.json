@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "locale": "it",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalSlug": "consider-the-opposite",
+      "localizedSlug": "considera-ipotesi-opposta",
+      "title": "Considera l'ipotesi opposta",
+      "aliases": ["consider the opposite", "considerare il contrario"],
+      "summary": "Metti deliberatamente alla prova una spiegazione plausibile che porterebbe a una conclusione diversa da quella che preferisci.",
+      "steps": ["Scrivi la conclusione che preferisci oggi.", "Formula un'ipotesi concorrente che spieghi anch'essa i fatti importanti.", "Cerca un'evidenza che distingua le due ipotesi invece di accumulare solo conferme per una di esse."],
+      "example": "Pensi che un calo di conversione dipenda da una variazione di prezzo. Prima di raccogliere altri argomenti a favore, testi l'ipotesi che sia cambiata la qualità del traffico e cerchi dati capaci di distinguere le due spiegazioni.",
+      "boundary": "L'ipotesi alternativa deve essere plausibile. Inventare un'alternativa assurda non è un test serio e può soltanto rafforzare la conclusione iniziale."
+    },
+    {
+      "canonicalSlug": "independent-estimate",
+      "localizedSlug": "stima-indipendente",
+      "title": "Fai una stima indipendente",
+      "aliases": ["independent estimate", "stima prima dell'ancora"],
+      "summary": "Produci una stima prima di vedere un numero di riferimento forte, quando è possibile farlo.",
+      "steps": ["Definisci che cosa stai stimando e con quale unità.", "Usa dati propri, scomposizione del problema o casi comparabili per ottenere un intervallo.", "Solo dopo confronta la tua stima con la proposta, l'obiettivo o il numero presentato da altri."],
+      "example": "Prima di vedere la scadenza proposta da un fornitore, il team stima la durata usando progetti comparabili e registra un intervallo di 10–14 settimane.",
+      "boundary": "Una stima indipendente può comunque essere sbagliata. L'obiettivo è ridurre la dipendenza da un'ancora, non creare certezza artificiale."
+    },
+    {
+      "canonicalSlug": "reference-class-forecasting",
+      "localizedSlug": "classe-di-riferimento",
+      "title": "Usa una classe di riferimento",
+      "aliases": ["reference class forecasting", "prospettiva esterna", "casi comparabili"],
+      "summary": "Parti dai risultati di casi realmente comparabili prima di adattare la previsione al caso attuale.",
+      "steps": ["Definisci una classe di casi comparabili prima di concentrarti soltanto sul piano corrente.", "Osserva la distribuzione reale di tempi, costi o risultati in quella classe.", "Modifica l'intervallo solo per differenze rilevanti che puoi giustificare."],
+      "example": "Invece di sommare soltanto le attività del nuovo progetto, confronti dieci migrazioni simili e usi la distribuzione reale delle durate come punto di partenza.",
+      "boundary": "Una classe di riferimento inadeguata può fuorviare. Il confronto deve conservare le caratteristiche che incidono davvero sul risultato."
+    },
+    {
+      "canonicalSlug": "base-rate-check",
+      "localizedSlug": "controllo-tasso-base",
+      "title": "Controlla il tasso base",
+      "aliases": ["base rate check", "tasso base", "frequenza di base"],
+      "summary": "Confronta una storia vivida o un singolo caso con la frequenza osservata in un insieme pertinente.",
+      "steps": ["Chiedi qual è la frequenza dell'evento nella popolazione o situazione rilevante.", "Separa quel tasso base dalle caratteristiche specifiche del caso attuale.", "Aggiorna la stima quando esistono evidenze specifiche forti, senza ignorare il punto di partenza."],
+      "example": "Un incidente raro compare nelle notizie. Prima di concludere che il rischio sia aumentato molto, controlli la frequenza storica e verifichi se i dati recenti sono davvero cambiati.",
+      "boundary": "Tassi base vecchi o riferiti a una popolazione diversa possono essere inadeguati. Usa il riferimento più comparabile disponibile."
+    },
+    {
+      "canonicalSlug": "decision-journal",
+      "localizedSlug": "diario-delle-decisioni",
+      "title": "Tieni un diario delle decisioni",
+      "aliases": ["decision journal", "registro delle decisioni"],
+      "summary": "Registra ciò che sapevi, ti aspettavi e temevi prima di conoscere l'esito.",
+      "steps": ["Annota la decisione, le principali alternative e le informazioni disponibili.", "Registra previsioni, incertezze e condizioni che ti farebbero rivedere la scelta.", "Dopo l'esito, confronta la revisione con il registro originale, non con la memoria."],
+      "example": "Prima di lanciare una modifica, il team registra l'intervallo di impatto atteso, i rischi e i segnali che richiederebbero un rollback. Un mese dopo revisiona la decisione partendo da quel documento.",
+      "boundary": "Il diario rende il ragionamento più verificabile, ma un registro dettagliato non rende automaticamente buona una decisione."
+    },
+    {
+      "canonicalSlug": "red-team-review",
+      "localizedSlug": "revisione-critica",
+      "title": "Fai una revisione critica",
+      "aliases": ["red team review", "red team", "revisione avversariale"],
+      "summary": "Assegna esplicitamente a qualcuno il compito di cercare come un piano, un argomento o un'interpretazione potrebbero essere sbagliati.",
+      "steps": ["Definisci quale decisione o affermazione deve essere messa alla prova.", "Chiedi al revisore di cercare punti deboli, evidenze mancanti e spiegazioni concorrenti.", "Registra quali critiche cambiano la decisione, quali no e per quale motivo."],
+      "example": "Prima di approvare una migrazione, una persona che non ha scritto il piano cerca dipendenze dimenticate, ipotesi fragili e segnali che invaliderebbero la stima.",
+      "boundary": "La contraddizione senza criteri può diventare teatro. La revisione deve cercare informazioni decisive, non soltanto produrre obiezioni."
+    },
+    {
+      "canonicalSlug": "predefined-update-criteria",
+      "localizedSlug": "criteri-di-aggiornamento",
+      "title": "Definisci prima i criteri di aggiornamento",
+      "aliases": ["predefined update criteria", "criteri per cambiare idea"],
+      "summary": "Prima dell'esito, scrivi quali segnali dovrebbero farti rivedere una convinzione, una previsione o un piano.",
+      "steps": ["Elenca le ipotesi che sostengono la posizione attuale.", "Definisci segnali osservabili che indebolirebbero o rafforzerebbero quelle ipotesi.", "Quando compare un segnale, aggiorna la decisione secondo la regola stabilita oppure spiega in modo esplicito perché non lo fai."],
+      "example": "Un prodotto continua a ricevere investimenti solo finché retention e costo di acquisizione rimangono entro intervalli definiti prima del successivo ciclo di budget.",
+      "boundary": "Criteri rigidi possono diventare obsoleti se il contesto cambia. Possono essere modificati, ma la modifica deve restare visibile e motivata."
+    },
+    {
+      "canonicalSlug": "incremental-value-check",
+      "localizedSlug": "valore-della-prossima-fase",
+      "title": "Valuta il valore della prossima fase",
+      "aliases": ["incremental value check", "valore incrementale", "ignorare i costi irrecuperabili"],
+      "summary": "Valuta la prossima unità di investimento in base a costi e valore futuri, separandola da ciò che è già stato speso.",
+      "steps": ["Tratta i costi passati come informazioni sulla storia del progetto, non come beneficio futuro.", "Stima costo, valore atteso e costo opportunità della prossima fase.", "Confronta continuare, fermarti, ridurre l'ambito e cambiare direzione."],
+      "example": "Un progetto ha già assorbito 500.000 euro. La decisione successiva non chiede come recuperare quella cifra: confronta altri 80.000 euro di costo con valore atteso e alternative disponibili oggi.",
+      "boundary": "I costi passati possono rivelare rischi, dipendenze o costi di chiusura rilevanti. Il punto è non usarli, da soli, come motivo per continuare."
+    },
+    {
+      "canonicalSlug": "predefined-criteria",
+      "localizedSlug": "criteri-decisionali-prima",
+      "title": "Definisci prima i criteri decisionali",
+      "aliases": ["predefined criteria", "criteri prima di scegliere"],
+      "summary": "Definisci i criteri e, quando possibile, il loro peso prima di confrontare alternative che potrebbero trascinare il giudizio.",
+      "steps": ["Elenca gli obiettivi della decisione prima di analizzare tutte le opzioni in dettaglio.", "Definisci criteri minimi, trade-off e fattori che non dovrebbero contare.", "Confronta le alternative con lo stesso insieme di criteri e documenta le eccezioni."],
+      "example": "Prima di incontrare i fornitori, il team stabilisce sicurezza, costo totale e capacità di integrazione come criteri, evitando di cambiare i pesi solo perché una demo è stata impressionante.",
+      "boundary": "Criteri definiti in anticipo non eliminano il giudizio. Informazioni nuove possono giustificare una revisione, purché il cambiamento sia esplicito."
+    },
+    {
+      "canonicalSlug": "source-trace",
+      "localizedSlug": "risali-alla-fonte",
+      "title": "Risali alla fonte",
+      "aliases": ["source trace", "tracciare la fonte", "verificare la fonte originale"],
+      "summary": "Segui un'affermazione fino alla fonte primaria o alla fonte più vicina ai fatti che puoi davvero ispezionare.",
+      "steps": ["Separa l'affermazione precisa dall'interpretazione costruita sopra di essa.", "Segui citazioni e link fino alla fonte originale o alla migliore fonte disponibile.", "Conta conferme indipendenti, non pagine che ripetono la stessa origine."],
+      "example": "Cinque articoli citano la stessa statistica. Seguendo i link scopri che tutti dipendono da un unico rapporto: ci sono cinque ripetizioni, ma una sola fonte di evidenza.",
+      "boundary": "Una fonte primaria può essere debole o incompleta. Risalire all'origine aiuta a valutare le evidenze; non trasforma la fonte in verità."
+    },
+    {
+      "canonicalSlug": "reversible-test",
+      "localizedSlug": "test-piccolo-reversibile",
+      "title": "Fai un test piccolo e reversibile",
+      "aliases": ["reversible test", "esperimento reversibile", "test limitato"],
+      "summary": "Quando l'incertezza è alta, acquista informazione con un passo piccolo e reversibile prima di assumere un impegno grande.",
+      "steps": ["Identifica l'ipotesi più importante che può essere testata a basso costo.", "Definisci prima il segnale che cambierà la decisione successiva.", "Esegui il test su scala limitata e conserva una via d'uscita realistica."],
+      "example": "Invece di migrare tutta l'operatività verso uno strumento, un team testa per due settimane un flusso rappresentativo e stabilisce prima i criteri per estendere, modificare o abbandonare la soluzione.",
+      "boundary": "Non tutte le decisioni sono reversibili e i test piccoli possono non rappresentare gli effetti di scala. Usali quando l'apprendimento ottenuto è davvero rilevante per la decisione maggiore."
+    }
+  ]
+}

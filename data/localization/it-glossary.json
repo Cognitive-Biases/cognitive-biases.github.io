@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "locale": "it",
+  "canonicalLocale": "en",
+  "status": "editorial-baseline",
+  "terms": [
+    {"id":"cognitive-bias","source":"cognitive bias","preferred":"bias cognitivo","aliases":["distorsione cognitiva"],"note":"Use bias cognitivo for the project taxonomy; distorsione cognitiva is a useful search/user-language alias but can be broader in clinical contexts."},
+    {"id":"anchoring-bias","source":"anchoring bias","preferred":"bias di ancoraggio","aliases":["effetto ancoraggio"],"note":"Use effetto ancoraggio for the named phenomenon and bias di ancoraggio when the sentence refers to the bias lens."},
+    {"id":"confirmation-bias","source":"confirmation bias","preferred":"bias di conferma","aliases":["pregiudizio di conferma"],"note":"Bias di conferma is concise and common in Italian decision-science usage."},
+    {"id":"heuristic","source":"heuristic","preferred":"euristica","aliases":[],"note":"Explain the term in plain language on first use for a general audience."},
+    {"id":"decision-skill","source":"decision skill","preferred":"competenza decisionale","aliases":["abilità decisionale"],"note":"Prefer competenza decisionale in headings; use a more conversational form when needed in running text."},
+    {"id":"debiasing","source":"debiasing","preferred":"riduzione dei bias","aliases":["mitigazione dei bias"],"note":"Avoid implying that a technique can eliminate bias; use riduzione or mitigazione according to context."},
+    {"id":"evidence","source":"evidence","preferred":"evidenze","aliases":["prove"],"note":"Use evidenze for research context; use prove only when the source truly supports the stronger everyday meaning."},
+    {"id":"decision-check","source":"decision check","preferred":"controllo decisionale","aliases":["verifica della decisione"],"note":"Prefer action-oriented wording in practical checklists."}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "it",
+  "reviewedAt": "2026-09-13",
+  "home": {
+    "eyebrow": "Decidi con più chiarezza",
+    "title": "Riconosci i bias. Metti alla prova le ipotesi. Decidi meglio.",
+    "description": "Una guida pratica ai bias cognitivi, alle euristiche, al pensiero critico e al processo decisionale, con evidenze, limiti e controlli utili prima di decidere.",
+    "lede": "Conoscere il nome di un bias non basta. Capisci il meccanismo, verifica che cosa sostengono davvero le evidenze e applica un controllo pratico prima di agire.",
+    "journeys": [
+      {"title": "Conosco il nome del bias", "text": "Cerca il termine italiano o inglese e apri una scheda revisionata."},
+      {"title": "Ho un problema concreto", "text": "Parti dalla situazione: conferma, ancoraggio, stime, costi irrecuperabili, ripetizione o incertezza."},
+      {"title": "Voglio prendere decisioni migliori", "text": "Usa tecniche e competenze decisionali per trasformare una definizione in una verifica concreta."},
+      {"title": "Voglio usarlo con l'IA", "text": "Usa le Agent Skills in italiano per revisioni decisionali, evidenze, ipotesi e workflow assistiti dall'IA."}
+    ]
+  },
+  "explorer": {
+    "title": "Bias cognitivi in italiano",
+    "description": "Esplora schede revisionate sui bias cognitivi in italiano, con esempi, evidenze, limiti e controlli pratici.",
+    "intro": "Questa raccolta cresce tramite revisione editoriale, non con traduzioni automatiche di massa. Se una scheda non è ancora disponibile in italiano, usa il catalogo canonico inglese."
+  },
+  "techniques": {
+    "title": "Tecniche per prendere decisioni migliori",
+    "description": "Controlli pratici per ridurre errori di giudizio: classi di riferimento, tassi base, stime indipendenti, revisione critica e altro.",
+    "intro": "Riconoscere un bias è solo l'inizio. Queste tecniche aiutano a cambiare il processo prima di prendere una decisione."
+  },
+  "skills": {
+    "title": "Competenze decisionali",
+    "description": "Allena valutazione delle evidenze, decisioni sotto incertezza, previsioni, metacognizione, verifica delle informazioni e ragionamento assistito dall'IA.",
+    "intro": "Le competenze sono processi ripetibili. Non garantiscono un buon risultato, ma rendono il ragionamento più esplicito, verificabile e revisionabile."
+  },
+  "agentSkills": {
+    "title": "Skill per agenti IA",
+    "description": "Istruzioni in italiano per rilevare possibili bias, revisionare decisioni, valutare evidenze, mettere in discussione ipotesi e usare l'IA in modo più critico.",
+    "intro": "Gli ID e le versioni restano canonici in inglese. Le istruzioni italiane mantengono gli stessi limiti di evidenza, provenienza e sicurezza."
+  }
+}

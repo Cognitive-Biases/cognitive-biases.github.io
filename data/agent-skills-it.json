@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "locale": "it",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalSlug": "cognitive-bias-lens",
+      "name": "Lente per i bias cognitivi",
+      "summary": "Analizza una situazione cercando possibili bias cognitivi senza diagnosticare persone né trattare un'etichetta come causa dimostrata.",
+      "useWhen": ["L'utente chiede quali bias potrebbero influenzare una decisione, un argomento o una valutazione.", "Una spiegazione psicologica sta diventando troppo dominante.", "Serve generare ipotesi di bias e controlli capaci di distinguerle."],
+      "procedure": ["Riformula la situazione in modo neutro e separa fatti osservabili da interpretazioni.", "Seleziona pochi bias candidati realmente pertinenti e spiega perché potrebbero applicarsi.", "Aggiungi almeno una spiegazione alternativa che non richieda un bias.", "Per ogni candidato importante proponi un'osservazione, un confronto o una domanda che potrebbe indebolire l'ipotesi.", "Mantieni visibili i limiti delle evidenze ed evita inferenze su intenzioni, intelligenza, carattere o diagnosi."],
+      "output": ["Situazione riformulata", "Bias candidati", "Spiegazioni alternative", "Controlli discriminanti", "Incertezze e limiti"],
+      "guardrails": ["Tratta i bias come ipotesi, non diagnosi.", "Non attribuire motivazioni interne senza evidenze osservabili.", "Non usare un'etichetta di bias per chiudere una discussione.", "Conserva lo stato delle evidenze della conoscenza canonica."]
+    },
+    {
+      "canonicalSlug": "bias-aware-decision-review",
+      "name": "Revisione decisionale consapevole dei bias",
+      "summary": "Revisiona una decisione importante separando obiettivo, alternative, evidenze, incertezza, incentivi e possibili bias prima di raccomandare il passo successivo.",
+      "useWhen": ["L'utente deve rivedere una decisione di lavoro, progetto, prodotto o vita quotidiana.", "Esiste rischio di ancoraggio, conferma, costi irrecuperabili o eccesso di fiducia.", "Serve sfidare le ipotesi senza trasformare la revisione in opposizione generica."],
+      "procedure": ["Definisci decisione, obiettivo, orizzonte, alternative reali, posta in gioco e reversibilità.", "Separa fatti osservati, interpretazioni, ipotesi e incognite.", "Controlla tassi base, classi di riferimento o stime indipendenti quando sono pertinenti.", "Seleziona pochi possibili bias e, per ciascuno, indica un segnale osservabile e una spiegazione alternativa non basata sul bias.", "Applica controlli utili: evidenza contraria, premortem, criterio di stop, test reversibile o revisione critica.", "Definisci che cosa dovrebbe far cambiare la raccomandazione e quando rivedere la decisione."],
+      "output": ["Decisione e obiettivo", "Alternative", "Fatti / interpretazioni / ipotesi / incognite", "Rischi di bias con alternative", "Controlli pratici", "Passo successivo e trigger di revisione"],
+      "guardrails": ["La possibile presenza di un bias non dimostra che la scelta sia sbagliata.", "Non creare punteggi di bias per persone, team o decisioni.", "Non ignorare vincoli reali solo perché assomigliano a costi irrecuperabili.", "Nelle decisioni ad alto impatto mantieni la skill educativa e richiedi competenza professionale quando appropriato."]
+    },
+    {
+      "canonicalSlug": "evidence-evaluation",
+      "name": "Valutazione delle evidenze",
+      "summary": "Valuta la forza di un'affermazione separando fonte, indipendenza, metodo, rilevanza e incertezza; utile per ricerca, fact-checking e revisione di contenuti.",
+      "useWhen": ["L'utente vuole verificare una ricerca, una proposta, un articolo o una risposta di IA.", "Molte fonti potrebbero ripetere la stessa origine.", "Una conclusione forte dipende da evidenze limitate, indirette o controverse.", "Un contenuto rischia di trasformare una correlazione, un singolo studio o un esempio vivido in una conclusione generale."],
+      "procedure": ["Formula l'affermazione in modo specifico e verificabile e indica quale decisione cambierebbe.", "Separa osservazioni dirette, affermazioni delle fonti, inferenze e ipotesi.", "Quando hai accesso alle fonti, risali all'evidenza più vicina all'originale e verifica l'indipendenza tra fonti.", "Valuta disegno, campione, misure, confronto, contesto e limitazioni rilevanti.", "Scrivi quale evidenza indebolirebbe la conclusione preferita prima di raccogliere ulteriore sostegno.", "Classifica il risultato in modo conservativo: sostenuto per questo uso, limitato, contestato, non verificato o sconosciuto."],
+      "output": ["Affermazione in esame", "Fonti e indipendenza", "Forza e limiti delle evidenze", "Controevidenze o test mancanti", "Conclusioni sostenute", "Incertezze e implicazione decisionale"],
+      "guardrails": ["Non inventare fonti, citazioni o livelli di evidenza.", "Il numero di link non equivale a conferme indipendenti.", "Una localizzazione revisionata non aumenta la forza delle evidenze canoniche.", "Usa un linguaggio proporzionato alla qualità dei dati."]
+    },
+    {
+      "canonicalSlug": "decision-making-under-uncertainty",
+      "name": "Decisioni sotto incertezza",
+      "summary": "Struttura una scelta quando probabilità, risultati e informazioni sono incompleti, usando interventi di debiasing senza trasformare l'incertezza in falsa precisione.",
+      "useWhen": ["Esistono più alternative con risultati incerti.", "Un singolo numero sta dominando una decisione che dovrebbe usare intervalli.", "L'utente deve decidere prima di avere informazioni complete.", "Ancoraggi, disponibilità recente o costi irrecuperabili possono distorcere il processo."],
+      "procedure": ["Definisci obiettivo, alternative, orizzonte e conseguenze rilevanti.", "Produci, quando possibile, una stima indipendente prima di assorbire un'ancora forte.", "Usa intervalli, scenari, tassi base o classi di riferimento quando esiste una base ragionevole; non inventare precisione.", "Separa costi già sostenuti da costi futuri, valore futuro e costo opportunità.", "Valuta il valore dell'informazione aggiuntiva, la reversibilità e un eventuale test piccolo.", "Definisci soglie, criteri di stop e segnali che faranno rivedere la scelta."],
+      "output": ["Alternative", "Incertezze principali", "Riferimenti esterni", "Controlli di debiasing", "Trade-off", "Decisione o prossimo test", "Criteri di aggiornamento"],
+      "guardrails": ["Non produrre probabilità precise senza una base adeguata.", "Non presentare un intervento di debiasing come garanzia di neutralità.", "Mantieni aperti scenari plausibili quando i dati non permettono di distinguerli.", "Rendi esplicite le ipotesi che guidano la raccomandazione."]
+    },
+    {
+      "canonicalSlug": "forecasting",
+      "name": "Previsioni",
+      "summary": "Produci previsioni verificabili con classi di riferimento, intervalli espliciti, ipotesi registrate prima dell'esito e criteri di aggiornamento.",
+      "useWhen": ["L'utente vuole stimare tempi, costi, domanda, probabilità o un altro risultato futuro.", "La previsione dipende troppo dal piano interno o da un caso recente.", "Sarà importante imparare dall'errore dopo l'esito."],
+      "procedure": ["Definisci esattamente evento, metrica, orizzonte e regola di risoluzione.", "Cerca casi comparabili e una distribuzione dei risultati quando disponibile.", "Registra una stima iniziale prima di assorbire ancore forti, se possibile.", "Esplicita intervallo, ipotesi, data dei dati e fattori che possono spostare il risultato.", "Definisci segnali e momenti per aggiornare la previsione.", "Dopo l'esito confronta il risultato con il registro originale e separa qualità della previsione da fortuna."],
+      "output": ["Oggetto e orizzonte della previsione", "Classe di riferimento", "Stima o intervallo", "Ipotesi e rischi", "Segnali di aggiornamento", "Registro e piano di revisione"],
+      "guardrails": ["Non nascondere evidenze deboli dietro decimali precisi.", "Non riscrivere la previsione originale dopo l'esito.", "Una previsione corretta non dimostra da sola un buon processo generale.", "Mantieni visibili le differenze tra il caso attuale e la classe di riferimento."]
+    },
+    {
+      "canonicalSlug": "metacognition",
+      "name": "Metacognizione e sfida delle ipotesi",
+      "summary": "Esamina il processo di ragionamento, le ipotesi che sostengono una conclusione e le condizioni che dovrebbero farla cambiare.",
+      "useWhen": ["L'utente vuole sfidare le proprie assunzioni o capire come è arrivato a una conclusione.", "La fiducia soggettiva viene trattata come evidenza.", "Una retrospettiva rischia di confondere risultato, senno di poi e qualità del processo."],
+      "procedure": ["Separa osservazioni, interpretazioni, previsioni e preferenze.", "Elenca le ipotesi necessarie perché la conclusione attuale resti valida.", "Indica quali ipotesi sono state verificate e quali sono soltanto assunte.", "Costruisci almeno una spiegazione concorrente plausibile e cerca un test che distingua le due.", "Confronta la decisione con registrazioni precedenti all'esito quando esistono.", "Definisci una condizione concreta che obbligherà ad aggiornare il giudizio."],
+      "output": ["Ragionamento attuale", "Ipotesi critiche", "Ipotesi verificate vs assunte", "Spiegazione alternativa", "Test discriminante", "Condizione per cambiare idea"],
+      "guardrails": ["L'autorevisione non garantisce obiettività.", "Non trasformare il dubbio produttivo in paralisi.", "Non usare linguaggio psicologico per svalutare una persona.", "Distingui ciò che era conoscibile prima dall'apprendimento successivo."]
+    },
+    {
+      "canonicalSlug": "information-verification",
+      "name": "Verifica delle informazioni e dei contenuti",
+      "summary": "Revisiona affermazioni, ricerche e contenuti risalendo alla provenienza, distinguendo fonti indipendenti, correzioni, versioni e contesto.",
+      "useWhen": ["L'utente sta revisionando ricerca, contenuti, notizie o testo generato dall'IA.", "Un'informazione compare ripetutamente e sembra vera soprattutto perché è familiare.", "Serve capire se più citazioni rappresentano evidenze indipendenti.", "Una correzione o una versione più recente potrebbe cambiare la conclusione."],
+      "procedure": ["Estrai le affermazioni fattuali che contano davvero invece di verificare il documento come un blocco unico.", "Per ogni affermazione risali alla migliore fonte che puoi ispezionare.", "Mappa la dipendenza tra fonti e individua citazioni circolari o ripetizioni della stessa origine.", "Controlla data, versione, definizione, popolazione, contesto e possibili correzioni.", "Cerca evidenze contrarie rilevanti e formula la spiegazione aggiornata quando una vecchia affermazione è stata corretta.", "Restituisci un registro con stato verificato, sostenuto ma limitato, contestato, non verificato o sconosciuto e spiega il motivo."],
+      "output": ["Affermazioni critiche", "Origine e provenienza", "Indipendenza delle fonti", "Stato di verifica", "Correzioni o conflitti", "Lacune residue e ciò su cui è sicuro fare affidamento"],
+      "guardrails": ["Non dichiarare verificata un'affermazione se non puoi ispezionare evidenze adeguate.", "Non trattare più riassunti della stessa fonte come conferme indipendenti.", "Non cancellare la storia delle correzioni.", "Distingui assenza di evidenza da evidenza di assenza."]
+    },
+    {
+      "canonicalSlug": "ai-assisted-reasoning",
+      "name": "Ragionamento con l'IA e controllo dei bias",
+      "summary": "Usa l'IA per ampliare ipotesi, mettere alla prova argomenti e organizzare evidenze senza trasformare la prima risposta del modello in autorità.",
+      "useWhen": ["Un agente o modello partecipa a ricerca, analisi, decisioni o revisione di contenuti.", "La prima risposta può ancorare l'utente o gli agenti successivi.", "Il workflow deve mantenere separati fatti, inferenze, raccomandazioni e incertezze."],
+      "procedure": ["Definisci la domanda e, quando utile, registra una stima o ipotesi prima di consultare il modello.", "Chiedi alternative plausibili, controevidenze, rischi e condizioni che cambierebbero la risposta.", "Richiedi che fatti, inferenze, raccomandazioni e incertezze siano marcati separatamente.", "Verifica esternamente le affermazioni decisive e conta fonti indipendenti, non risposte concordanti di modelli.", "Usa modelli o prompt differenti come diversità di ragionamento, non come evidenza indipendente.", "Registra che cosa è stato verificato e chi mantiene la responsabilità della decisione."],
+      "output": ["Domanda e contesto", "Ipotesi alternative", "Affermazioni verificabili", "Evidenza esterna", "Incertezze", "Rischi di bias umano/IA", "Raccomandazione condizionata"],
+      "guardrails": ["L'accordo tra modelli non è conferma indipendente.", "Una risposta fluida non sostituisce fonti verificabili.", "Non delegare decisioni ad alto impatto senza supervisione appropriata.", "Dichiara i limiti del modello e delle evidenze disponibili."]
+    }
+  ]
+}

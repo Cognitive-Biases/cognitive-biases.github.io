@@ -6,7 +6,8 @@
     {"code": "ru", "name": "Русский", "role": "reviewed-layer"},
     {"code": "fr", "name": "Français", "role": "reviewed-layer"},
     {"code": "pt-BR", "name": "Português (Brasil)", "role": "reviewed-layer", "urlBase": "/pt-br/", "coverage": "reviewed-partial-human-layer"},
-    {"code": "es", "name": "Español", "role": "reviewed-layer"}
+    {"code": "es", "name": "Español", "role": "reviewed-layer"},
+    {"code": "it", "name": "Italiano", "role": "reviewed-layer", "urlBase": "/it/", "coverage": "reviewed-partial-human-layer"}
   ],
   "states": ["missing", "draft", "reviewed", "stale"]
 }
