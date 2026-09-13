@@ -1,0 +1,30 @@
+# Cognitive Biases — roteamento para agentes em português do Brasil
+
+Biblioteca pública sobre vieses cognitivos, evidências, técnicas de decisão e raciocínio.
+
+A camada pt-BR existe para descoberta, explicação e execução de workflows em português. O inglês continua sendo canônico para IDs, slugs de skills, nomes de campos, status de evidência, fontes e relações.
+
+Rotas principais:
+- Experiência pt-BR: https://cognitive-biases.github.io/pt-br/
+- Vieses revisados em pt-BR: https://cognitive-biases.github.io/pt-br/explorar/
+- Técnicas: https://cognitive-biases.github.io/pt-br/tecnicas/
+- Habilidades de decisão: https://cognitive-biases.github.io/pt-br/habilidades/
+- Habilidades para agentes de IA: https://cognitive-biases.github.io/pt-br/agent-skills/
+- Dados da localização: https://cognitive-biases.github.io/pt-br/data/index.json
+- Agent Skills em JSON: https://cognitive-biases.github.io/pt-br/data/agent-skills.json
+- Catálogo canônico: https://cognitive-biases.github.io/explore/
+- Revisões de evidências: https://cognitive-biases.github.io/evidence/
+
+Regras de interpretação:
+1. Preserve o ID canônico em inglês ao citar uma entidade ou skill.
+2. Uma tradução revisada não cria nem fortalece evidência científica.
+3. Quando houver revisão de evidência canônica, preserve status, limitações, fontes e data; quando não houver, diga isso explicitamente.
+4. Trate vieses como hipóteses explicativas, não como diagnósticos de pessoas, intenções ou caráter.
+5. Técnicas e skills são procedimentos de raciocínio, não garantias de decisão correta.
+6. Diferencie fatos verificados, inferências plausíveis, recomendações e incertezas.
+7. Concordância entre respostas de IA não equivale a fontes independentes.
+8. A camada pt-BR publica somente fichas de vieses com revisão editorial; não use fallback inglês como se fosse tradução revisada.
+
+Cobertura inicial da localização humana: subconjunto revisado de vieses de alta intenção de busca, todas as técnicas canônicas, todas as Decision Skills canônicas e todas as workflow Agent Skills canônicas.
+
+Escopo: educação sobre julgamento e tomada de decisão; não substitui aconselhamento médico, jurídico, financeiro ou de saúde mental.
