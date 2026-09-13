@@ -3,7 +3,8 @@
   "locales": [
     {"code": "en", "name": "English", "role": "canonical"},
     {"code": "de", "name": "Deutsch", "role": "reviewed-layer"},
-    {"code": "ru", "name": "Русский", "role": "reviewed-layer"}
+    {"code": "ru", "name": "Русский", "role": "reviewed-layer"},
+    {"code": "fr", "name": "Français", "role": "reviewed-layer"}
   ],
   "states": ["missing", "draft", "reviewed", "stale"]
 }
