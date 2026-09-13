@@ -1,0 +1,29 @@
+.locale-bar{display:flex;justify-content:flex-end;gap:.65rem;align-items:center;padding:.75rem max(1rem,calc((100vw - 1160px)/2));font-size:.92rem;background:#f5f2ea;border-bottom:1px solid rgba(16,22,34,.12)}
+.locale-bar a{font-weight:700;text-decoration:none}
+.locale-bar [aria-current="page"]{color:inherit;text-decoration:underline;text-underline-offset:.2em}
+.fr-hero-grid,.fr-card-grid,.fr-problem-grid{display:grid;gap:1rem}
+.fr-hero-grid{grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);align-items:start}
+.fr-card-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.fr-problem-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.fr-card,.fr-problem,.fr-note,.fr-search-panel{border:1px solid rgba(16,22,34,.14);border-radius:18px;padding:1.2rem;background:#fff}
+.fr-card h3,.fr-problem h3{margin-top:.3rem}
+.fr-card p,.fr-problem p{margin-bottom:.8rem}
+.fr-card a,.fr-problem a{font-weight:800}
+.fr-meta{display:flex;flex-wrap:wrap;gap:.45rem .7rem;margin:.8rem 0 0;padding:0;list-style:none;font-size:.93rem}
+.fr-meta li{padding:.32rem .58rem;border-radius:999px;background:#f1eee5}
+.fr-english-term{font-size:1rem;color:#495161}
+.fr-search{width:100%;box-sizing:border-box;border:1px solid rgba(16,22,34,.28);border-radius:12px;padding:.9rem 1rem;font:inherit;background:#fff}
+.fr-search:focus{outline:3px solid rgba(33,93,255,.22);outline-offset:2px}
+.fr-results-status{min-height:1.5rem;margin:.7rem 0 0;font-size:.93rem}
+.fr-hidden{display:none!important}
+.fr-steps{padding-left:1.35rem}
+.fr-steps li+li{margin-top:.65rem}
+.fr-boundary{border-left:4px solid currentColor;padding-left:1rem}
+.fr-evidence-state{display:inline-block;margin:.35rem 0 .9rem;padding:.32rem .58rem;border-radius:999px;background:#f1eee5;font-size:.9rem;font-weight:800}
+.fr-locale-note{margin:1rem 0;padding:1rem 1.1rem;border-radius:14px;background:#f5f2ea}
+.fr-locale-note p:last-child{margin-bottom:0}
+.fr-breadcrumbs{font-size:.92rem;margin:1rem 0 1.35rem}
+.fr-breadcrumbs a{text-decoration-thickness:.08em;text-underline-offset:.18em}
+.fr-data-link{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;overflow-wrap:anywhere}
+@media (max-width:760px){.fr-hero-grid{grid-template-columns:1fr}.locale-bar{justify-content:flex-start}.fr-card,.fr-problem,.fr-note,.fr-search-panel{padding:1rem}}
+@media (prefers-reduced-motion:reduce){.fr-search{scroll-behavior:auto}}
