@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "editorialNote": "Diese Erweiterung priorisiert stark gesuchte Begriffe, die für deutsche Entscheidungsseiten praktisch wichtig sind. Die Übersetzungen übernehmen die Stärke und die Grenzen der kanonischen Evidence Reviews; sie schaffen keine eigenständige deutsche Evidenzlage.",
+  "entries": [
+    {
+      "slug": "egocentric-bias-planning-fallacy",
+      "title": "Planungsfehlschluss",
+      "englishTitle": "Planning fallacy",
+      "aliases": ["Planungsfehler", "Planning Fallacy"],
+      "searchTerms": ["Zeit unterschätzen", "Projekt dauert länger", "Termin zu optimistisch", "Schätzung Projekt"],
+      "summary": "Bei eigenen Aufgaben und Projekten unterschätzen Menschen häufig die benötigte Zeit, obwohl frühere vergleichbare Vorhaben längere Laufzeiten nahelegen.",
+      "trap": "Ein detaillierter Plan macht den aktuellen Fall anschaulich. Dadurch bekommen ähnliche abgeschlossene Projekte, typische Verzögerungen und Abhängigkeiten oft zu wenig Gewicht.",
+      "evidence": "Zu optimistische Zeitschätzungen sind gut dokumentiert. Größe und Ursachen des Effekts unterscheiden sich jedoch nach Aufgabe und Kontext; verspätete Projekte können ebenso durch Scope-Änderungen, Abhängigkeiten, Anreize, schlechte Daten oder echte Ausnahmen entstehen.",
+      "boundary": "Nicht jeder verfehlte Termin ist ein Planungsfehlschluss. Referenzklassen helfen nur, wenn die Vergleichsfälle tatsächlich ähnlich sind. Es gibt keinen wissenschaftlich begründeten universellen Puffer, mit dem jede Schätzung einfach multipliziert werden sollte.",
+      "actions": [
+        "Starte mit drei bis fünf vergleichbaren abgeschlossenen Fällen, bevor du den aktuellen Detailplan verfeinerst.",
+        "Gib eine Spanne statt eines einzelnen präzisen Datums an und nenne die wichtigsten Unsicherheiten.",
+        "Trenne einen gewünschten Business-Termin von der Prognose, statt beide zu einer Zahl zu vermischen.",
+        "Bewahre die ursprüngliche Schätzung auf und vergleiche sie später mit dem tatsächlichen Ergebnis."
+      ]
+    },
+    {
+      "slug": "cognitive-bias-outcome-bias",
+      "title": "Ergebnisverzerrung",
+      "englishTitle": "Outcome bias",
+      "aliases": ["Outcome Bias", "Ergebnisfehler"],
+      "searchTerms": ["gutes Ergebnis gute Entscheidung", "schlechtes Ergebnis schlechte Entscheidung", "Glück Entscheidung"],
+      "summary": "Wenn das Ergebnis bekannt ist, beurteilen wir die Qualität einer früheren Entscheidung leicht danach, wie gut oder schlecht sie ausgegangen ist.",
+      "trap": "Ein gutes Ergebnis kann aus einem schwachen Prozess entstehen und ein schlechtes Ergebnis trotz vernünftiger Entscheidung. Im Rückblick ist es leicht, Glück oder Pech in die ursprüngliche Entscheidungsqualität hineinzulesen.",
+      "evidence": "Der Outcome Bias wurde experimentell gezeigt und in einer großen preregistrierten Replikation erneut gefunden: Bei gleicher Information über die ursprüngliche Entscheidung verändern unterschiedliche Ergebnisse die spätere Qualitätsbewertung.",
+      "boundary": "Ergebnisse sind für Lernen wichtig. Die Grenze lautet nicht 'Ignoriere Resultate', sondern: Beurteile zuerst, ob der damalige Prozess mit den damals verfügbaren Informationen vernünftig war, und nutze das Ergebnis anschließend für Updates.",
+      "actions": [
+        "Bewerte den Entscheidungsprozess zuerst mit den Informationen, die zum damaligen Zeitpunkt verfügbar waren.",
+        "Notiere getrennt, was am Prozess gut oder schwach war und was erst durch das Ergebnis sichtbar wurde.",
+        "Frage, ob du dieselbe Entscheidung bei einem anderen Ausgang gleich beurteilen würdest.",
+        "Nutze das Ergebnis danach, um Modelle, Annahmen und zukünftige Entscheidungen zu verbessern."
+      ]
+    },
+    {
+      "slug": "false-priors-automation-bias",
+      "title": "Automation Bias",
+      "englishTitle": "Automation bias",
+      "aliases": ["Automatisierungsbias", "Automatisierungsverzerrung"],
+      "searchTerms": ["KI blind vertrauen", "automatische Empfehlung", "AI recommendation trust", "Systemempfehlung prüfen"],
+      "summary": "Menschen können automatischen Hinweisen oder Empfehlungen zu stark folgen, besonders wenn ihre Prüfung aufwendig ist oder das System meist zuverlässig wirkt.",
+      "trap": "Eine Empfehlung aus Software oder KI kann wie eine Abkürzung für eigene Informationssuche wirken. Fehler entstehen, wenn falsche Hinweise übernommen werden oder ein Problem übersehen wird, weil das System keinen Alarm gegeben hat.",
+      "evidence": "Automation Bias ist in Forschung zu automatisierter Entscheidungsunterstützung dokumentiert. Er kann zu Commission- und Omission-Fehlern beitragen; zugleich kann gute Automatisierung die Gesamtleistung verbessern. Entscheidend ist, ob Vertrauen auch dann angemessen bleibt, wenn das System falsch, unvollständig oder schwer überprüfbar ist.",
+      "boundary": "Automation ist nicht grundsätzlich schädlich und jede Übereinstimmung mit einer Systemempfehlung ist kein Bias. Arbeitslast, Erfahrung, Zeitdruck, Aufgabenschwierigkeit und Verifikationskosten beeinflussen die Reliance.",
+      "actions": [
+        "Formuliere bei wichtigen Entscheidungen eine vorläufige eigene Einschätzung oder feste Prüfkriterien, bevor du die Empfehlung siehst, wenn das praktikabel ist.",
+        "Prüfe folgenreiche Empfehlungen gegen unabhängige Daten, Quellen oder Signale.",
+        "Fordere Quellen, zerlegte Prüfschritte und sichtbare Unsicherheit an, statt dich auf einen allgemeinen Hinweis wie 'KI kann Fehler machen' zu verlassen.",
+        "Lege fest, wer die finale Prüfung verantwortet, wenn ein automatisiertes System am Prozess beteiligt ist."
+      ]
+    },
+    {
+      "slug": "prospect-theory-loss-aversion",
+      "title": "Verlustaversion",
+      "englishTitle": "Loss aversion",
+      "aliases": ["Loss Aversion"],
+      "searchTerms": ["Verluste stärker als Gewinne", "Angst vor Verlust", "Verlust doppelt so stark"],
+      "summary": "Verluste können relativ zu einem Bezugspunkt subjektiv stärker gewichtet werden als vergleichbare Gewinne. Wie groß dieser Unterschied ist, hängt jedoch deutlich von Aufgabe und Messung ab.",
+      "trap": "Der Bezugspunkt kann die Entscheidung so rahmen, dass ein möglicher Verlust überproportional wichtig wirkt. Die populäre Faustregel 'Verluste wirken immer doppelt so stark' macht aus einer variablen Forschungsgröße eine falsche Konstante.",
+      "evidence": "Loss Aversion ist ein zentraler Bestandteil der Prospect Theory und wird in vielen Studien geschätzt. Aktuelle Meta-Analysen und Re-Analysen kommen aber zu deutlich unterschiedlichen Größen und zeigen, dass Design, Reihenfolge, Wahrscheinlichkeiten und Auswertung das Ergebnis materiell verändern können.",
+      "boundary": "Es gibt keinen universellen Loss-Aversion-Koeffizienten für jede Entscheidung. Verlustaversion ist außerdem nicht dasselbe wie Sunk-Cost-Denken über bereits unwiederbringlich investierte Ressourcen.",
+      "actions": [
+        "Schreibe den verwendeten Bezugspunkt ausdrücklich auf.",
+        "Vergleiche möglichst symmetrische Gewinne und Verluste mit denselben Wahrscheinlichkeiten und Zeithorizonten.",
+        "Formuliere Optionen zusätzlich als absolute Endzustände und prüfe, ob die Präferenz bestehen bleibt.",
+        "Verwende keinen festen 'Verluste zählen doppelt'-Faktor, wenn es dafür im konkreten Kontext keine Evidenz gibt."
+      ]
+    },
+    {
+      "slug": "self-assessment-dunning",
+      "title": "Dunning-Kruger-Effekt",
+      "englishTitle": "Dunning–Kruger effect",
+      "aliases": ["Dunning Kruger Effekt", "Dunning-Kruger"],
+      "searchTerms": ["Unfähige überschätzen sich", "Inkompetenz Selbstüberschätzung", "confidence competence"],
+      "summary": "Menschen mit schwächerer Leistung können ihre eigene Leistung in bestimmten Aufgaben deutlich überschätzen. Die bekannte Internet-Version des Effekts ist jedoch breiter und sicherer formuliert, als die Evidenz erlaubt.",
+      "trap": "Der Begriff wird oft als Etikett für andere Personen benutzt: 'Wer wenig weiß, ist besonders selbstsicher.' Damit werden aufgabenspezifische Kalibrierungsbefunde zu einer vermeintlichen Persönlichkeitseigenschaft.",
+      "evidence": "Die ursprünglichen Studien fanden starke Überschätzung bei niedrigen Performern in bestimmten Aufgaben. Spätere Arbeiten zeigten, dass übliche Quartilsdiagramme den Effekt durch Regression und Better-than-average-Muster vergrößern können; eine Reanalyse von 2023 fand mit geeigneteren Methoden weiterhin einen kleinen signifikanten Effekt in Intelligenzdaten.",
+      "boundary": "Die sichere Aussage betrifft Fehlkalibrierung zwischen objektiver Leistung und Selbsteinschätzung, nicht die Regel, dass inkompetente Menschen immer besonders selbstbewusst sind oder Experten sich systematisch unterschätzen.",
+      "actions": [
+        "Nutze den Begriff nicht als Diagnose für Menschen, mit denen du nicht übereinstimmst.",
+        "Kopple subjektive Sicherheit an objektive Tests, Feedback oder wiederholbare Leistungsdaten.",
+        "Prüfe, ob sich deine Sicherheit nach gutem Feedback angemessen verändert.",
+        "Beobachte Kalibrierung über mehrere Entscheidungen statt aus einem einzelnen selbstbewussten Urteil auf Kompetenz zu schließen."
+      ]
+    },
+    {
+      "slug": "confirmation-bias-backfire-effect",
+      "title": "Backfire-Effekt",
+      "englishTitle": "Backfire effect",
+      "aliases": ["Bumerang-Effekt bei Korrekturen"],
+      "searchTerms": ["Korrektur macht falschen Glauben stärker", "Fakten überzeugen nicht", "correction backfires"],
+      "summary": "Eine Korrektur kann in einzelnen Situationen mit einer stärkeren Zustimmung zur falschen Ausgangsbehauptung einhergehen. Als allgemeine Reaktion auf Korrekturen ist dieser Effekt jedoch selten und kontextabhängig.",
+      "trap": "Die populäre Erzählung lautet schnell: 'Wenn du Menschen mit Fakten korrigierst, glauben sie die Falschinformation danach noch stärker.' Das kann dazu führen, sinnvolle Korrekturen ganz zu vermeiden.",
+      "evidence": "Neuere Reviews stützen nicht die Annahme eines automatischen Backfire-Effekts. Korrekturen verbessern die faktische Genauigkeit im Durchschnitt; echte Verstärkungen der Zielüberzeugung scheinen ungewöhnlich zu sein und hängen stark von Kontext und Messung ab.",
+      "boundary": "Gewöhnlicher Widerspruch, unveränderte Einstellung oder unvollständige Aktualisierung sind nicht automatisch Backfire. Außerdem kann eine faktische Korrektur die konkrete Überzeugung verbessern, ohne breitere Einstellungen oder Verhalten zu verändern.",
+      "actions": [
+        "Vermeide Korrekturen nicht nur aus Angst vor einem automatischen Backfire-Effekt.",
+        "Formuliere die Korrektur klar und verbinde sie mit überprüfbarer Evidenz.",
+        "Unterscheide faktische Genauigkeit von breiteren Einstellungen und Verhalten.",
+        "Prüfe wichtige Überzeugungen später erneut, weil die Wirkung einer Korrektur mit der Zeit nachlassen kann."
+      ]
+    }
+  ]
+}
