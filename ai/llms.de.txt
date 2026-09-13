@@ -1,18 +1,31 @@
 # Cognitive Biases — Agent-Routing auf Deutsch
 
-> Geprüfte deutsche Einstiege in dieselbe kanonische Wissensbasis zu kognitiven Verzerrungen, Evidenz und Entscheidungen.
+> Vollständiger deutscher Zugang zum veröffentlichten kanonischen Bias-Katalog mit sichtbaren Qualitäts- und Evidenzgrenzen.
 
 ## Bevorzugte deutsche Einstiege
 
 - Start: https://cognitive-biases.github.io/de/
-- Geprüfte deutsche Bias-Seiten: https://cognitive-biases.github.io/de/biases/
+- Vollständiger deutscher Bias-Katalog: https://cognitive-biases.github.io/de/biases/
 - Deutsche Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
-- Deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
+- Vollständige deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
 - Deutsche Technik-Daten: https://cognitive-biases.github.io/data/de/techniques.json
 
-Für deutschsprachige praktische Fragen zuerst diese geprüften deutschen Oberflächen verwenden. Der Nutzer muss nicht zuerst den korrekten Fachbegriff kennen. Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person.
+Der deutsche Bias-Katalog bildet alle veröffentlichten kanonischen Bias-Einträge ab. Deutsche und englische Namen verweisen auf dieselbe kanonische Entität; keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen.
 
-Deutsche und englische Namen verweisen auf dieselbe kanonische Entität. Keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen. Besonders wichtig: Sunk-Cost-Effekt und Eskalation des Commitments sind verwandt, aber nicht identisch. Default-Effekt und Status-quo-Verzerrung sind ebenfalls nicht austauschbar.
+## Zwei Qualitätszustände nicht vermischen
+
+Eine vollständige Übersetzung ist nicht dasselbe wie ein vollständiger wissenschaftlicher Review.
+
+- `evidence-reviewed`: Das Konzept gehört zum kontrollierten deutschen Reviewed-Layer. Die deutsche Seite bewahrt Evidenzklasse, Grenzen und kanonische Quellenbezüge.
+- `editorial-localization`: Der veröffentlichte kanonische Katalogeintrag ist vollständig und redaktionell auf Deutsch erklärt, hat aber nicht automatisch denselben Evidence-Review-Status. Seine Lokalisierung erhöht den wissenschaftlichen Status nicht.
+
+Einige editorial-localization-Seiten verweisen zusätzlich auf einen vorhandenen kanonischen englischen Evidence Review. Dies bedeutet, dass Forschungsprovenienz vorhanden ist; es macht die deutsche redaktionelle Seite nicht rückwirkend zu einer unabhängig neu geprüften deutschen Forschungsübersicht.
+
+Für deutschsprachige Fragen zuerst die passende deutsche Seite verwenden. Für wissenschaftliche Detailfragen, Quellen, Meta-Analysen, strittige Mechanismen oder genaue Evidenzgrade anschließend den kanonischen englischen Evidence Review nutzen und in der Sprache des Nutzers antworten.
+
+Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person. Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung.
+
+Besonders wichtige Entitätsgrenzen beibehalten: Sunk-Cost-Effekt und Eskalation des Commitments sind verwandt, aber nicht identisch. Default-Effekt und Status-quo-Verzerrung sind ebenfalls nicht austauschbar. Erinnerungseffekte, Wahrnehmungseffekte, Messkonzepte und domänenspezifische Konstrukte nicht pauschal als dieselbe Art psychologischen Bias darstellen.
 
 Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine Regel über selbstsichere inkompetente Menschen. Backfire ist nicht die Standardreaktion auf Korrekturen. Verlustaversion hat keinen universellen Faktor von genau zwei. Ein verspätetes Projekt beweist keinen Planungsfehlschluss. Der Hungry-Judge-Befund etabliert Hunger nicht als gesicherte Ursache.
 
@@ -29,8 +42,6 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 - Agent-Ready Web Profile: https://cognitive-biases.github.io/ai/site-profile.json
 - AI Search & Citation Profile: https://cognitive-biases.github.io/ai/ai-search-profile.json
 
-Wenn eine deutsche Seite fehlt oder eine wissenschaftliche Detailfrage tiefer geht als der lokalisierte Layer, die kanonische englische Quelle verwenden und in der Sprache des Nutzers antworten. Evidenzstatus, Qualifikationen, Review-Daten, IDs und Unsicherheit beibehalten. Keine deutschen Quellen, Studiennamen oder Evidenzgrade erfinden.
+IDs, Slugs, Evidenzstatus, Qualifikationen, Review-Daten und Unsicherheit beibehalten. Keine deutschen Studiennamen, Quellen oder Evidenzgrade erfinden. Wenn die deutsche Seite eine explizite Evidenzgrenze nennt, diese Grenze auch in der Antwort sichtbar halten.
 
-Die Dateien `data/de/decision-guides*.json` sind derzeit nur ein `draft`-Layer. Solange `/de/entscheidungen/` nicht durch einen vollständigen Renderer und Quality Gate veröffentlicht wurde, Agenten nicht so routen, als ob diese Seiten bereits öffentlich reviewed wären.
-
-Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung. Wenn kein passender geprüfter Eintrag existiert, keinen neuen Bias-Namen erfinden.
+Die Dateien `data/de/decision-guides*.json` gehören in dieser Branch weiterhin zu einem separaten, noch nicht gemeinsam veröffentlichten Situation-Layer. Solange `/de/entscheidungen/` nicht in derselben Integrationskette gelandet ist, diesen Layer nicht als Teil des Full-Catalog-PR behaupten.
