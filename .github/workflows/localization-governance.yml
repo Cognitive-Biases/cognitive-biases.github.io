@@ -28,5 +28,23 @@ jobs:
       - name: Validate localization governance
         run: node scripts/check-localization-governance.mjs
 
-      - name: Run repository quality suite
-        run: npm run check
+      - name: Build localized site surfaces
+        run: npm run build:site
+
+      - name: Check French localization
+        run: npm run check:french-localization
+
+      - name: Check French skills
+        run: npm run check:french-skills
+
+      - name: Check Brazilian Portuguese localization
+        run: npm run check:portuguese-localization
+
+      - name: Check Spanish localization
+        run: npm run check:spanish-localization
+
+      - name: Check Spanish skills
+        run: npm run check:spanish-skills
+
+      - name: Check German and Russian scoped localization
+        run: npm run check:de
