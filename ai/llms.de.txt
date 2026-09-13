@@ -1,18 +1,35 @@
 # Cognitive Biases — Agent-Routing auf Deutsch
 
-> Vollständiger deutscher Zugang zum veröffentlichten kanonischen Bias-Katalog mit sichtbaren Qualitäts- und Evidenzgrenzen.
+> Vollständiger deutscher Zugang zum veröffentlichten kanonischen Bias-Katalog, zu Denkkompetenzen und portablen Agent Skills mit sichtbaren Qualitäts- und Evidenzgrenzen.
 
 ## Bevorzugte deutsche Einstiege
 
 - Start: https://cognitive-biases.github.io/de/
 - Vollständiger deutscher Bias-Katalog: https://cognitive-biases.github.io/de/biases/
 - Deutsche Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
+- Deutsche Denkkompetenzen: https://cognitive-biases.github.io/de/skills/
+- Deutsche Agent Skills: https://cognitive-biases.github.io/de/agent-skills/
+- Deutsche Bias Agent Skills: https://cognitive-biases.github.io/de/agent-skills/biases/
 - Vollständige deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
 - Deutsche Technik-Daten: https://cognitive-biases.github.io/data/de/techniques.json
+- Deutsche Skill-Daten: https://cognitive-biases.github.io/data/de/skills.json
+- Deutsche Agent-Skill-Daten: https://cognitive-biases.github.io/data/de/agent-skills.json
 
 Der deutsche Bias-Katalog bildet alle veröffentlichten kanonischen Bias-Einträge ab. Deutsche und englische Namen verweisen auf dieselbe kanonische Entität; keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen.
 
-## Zwei Qualitätszustände nicht vermischen
+## Drei praktische Ebenen nicht vermischen
+
+- **Denkkompetenzen** sind wiederverwendbare menschliche Fähigkeiten wie Evidenzprüfung, Prognosen, Informationsprüfung oder KI-gestütztes Denken. Sie beantworten: *Was muss ich besser können?*
+- **Denkwerkzeuge** sind konkrete Techniken und Interventionen wie eine unabhängige Schätzung, ein Entscheidungsjournal oder eine Referenzklasse. Sie beantworten: *Welchen konkreten Schritt kann ich jetzt ausführen?*
+- **Agent Skills** sind portable Instruktionen für AI-Agenten. Sie übertragen dieselben Evidenz- und Sicherheitsgrenzen in einen wiederholbaren Agenten-Workflow.
+
+Die deutsche Skill Library enthält sechs Denkkompetenzen, acht wiederverwendbare Workflow Agent Skills und für jede kanonische Bias-Linse einen eigenen deutschen Bias Agent Skill. Kanonische `name`- und slug-Werte bleiben über Sprachen stabil; nur Titel, Erklärung, Workflowtext und Discovery-Sprache werden lokalisiert.
+
+Für eine Aufgabe, die mehrere Bias-Linsen oder einen vollständigen Entscheidungsprozess braucht, einen Workflow Agent Skill verwenden. Für eine gezielte Prüfung eines einzelnen Bias den passenden Bias Agent Skill verwenden. Nicht mehrere einzelne Bias Skills aneinanderreihen, wenn ein Workflow Skill die Aufgabe bereits sauber strukturiert.
+
+Jeder Bias Agent Skill muss mindestens eine gewöhnliche Alternativerklärung ohne Bias nennen, Unsicherheit erhalten und das Label als Prüflinse statt als Diagnose behandeln. Ein Agent darf aus einem Bias-Namen keine Absicht, Intelligenz, Persönlichkeit oder psychische Verfassung ableiten.
+
+## Zwei Qualitätszustände bei Bias-Inhalten nicht vermischen
 
 Eine vollständige Übersetzung ist nicht dasselbe wie ein vollständiger wissenschaftlicher Review.
 
@@ -21,9 +38,9 @@ Eine vollständige Übersetzung ist nicht dasselbe wie ein vollständiger wissen
 
 Einige editorial-localization-Seiten verweisen zusätzlich auf einen vorhandenen kanonischen englischen Evidence Review. Dies bedeutet, dass Forschungsprovenienz vorhanden ist; es macht die deutsche redaktionelle Seite nicht rückwirkend zu einer unabhängig neu geprüften deutschen Forschungsübersicht.
 
-Für deutschsprachige Fragen zuerst die passende deutsche Seite verwenden. Für wissenschaftliche Detailfragen, Quellen, Meta-Analysen, strittige Mechanismen oder genaue Evidenzgrade anschließend den kanonischen englischen Evidence Review nutzen und in der Sprache des Nutzers antworten.
+Für deutschsprachige Fragen zuerst die passende deutsche Seite oder den passenden deutschen Skill verwenden. Für wissenschaftliche Detailfragen, Quellen, Meta-Analysen, strittige Mechanismen oder genaue Evidenzgrade anschließend den kanonischen englischen Evidence Review nutzen und in der Sprache des Nutzers antworten.
 
-Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person. Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung.
+Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person. Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung. Ein Agent Skill automatisiert diese Prüfung, nicht die Wahrheit der zugrunde liegenden Hypothese.
 
 Besonders wichtige Entitätsgrenzen beibehalten: Sunk-Cost-Effekt und Eskalation des Commitments sind verwandt, aber nicht identisch. Default-Effekt und Status-quo-Verzerrung sind ebenfalls nicht austauschbar. Erinnerungseffekte, Wahrnehmungseffekte, Messkonzepte und domänenspezifische Konstrukte nicht pauschal als dieselbe Art psychologischen Bias darstellen.
 
@@ -32,6 +49,8 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 ## Kanonische Vertiefung
 
 - Vollständige englische Bibliothek: https://cognitive-biases.github.io/explore/
+- Englische Decision Skills: https://cognitive-biases.github.io/skills/
+- Englische Agent Skills: https://cognitive-biases.github.io/agent-skills/
 - Evidence Reviews: https://cognitive-biases.github.io/evidence/
 - Entscheidungskontexte: https://cognitive-biases.github.io/contexts/
 - Vergleiche: https://cognitive-biases.github.io/compare/
@@ -42,6 +61,6 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 - Agent-Ready Web Profile: https://cognitive-biases.github.io/ai/site-profile.json
 - AI Search & Citation Profile: https://cognitive-biases.github.io/ai/ai-search-profile.json
 
-IDs, Slugs, Evidenzstatus, Qualifikationen, Review-Daten und Unsicherheit beibehalten. Keine deutschen Studiennamen, Quellen oder Evidenzgrade erfinden. Wenn die deutsche Seite eine explizite Evidenzgrenze nennt, diese Grenze auch in der Antwort sichtbar halten.
+IDs, Slugs, Agent-Skill-Namen, Evidenzstatus, Qualifikationen, Review-Daten und Unsicherheit beibehalten. Keine deutschen Studiennamen, Quellen oder Evidenzgrade erfinden. Wenn die deutsche Seite oder ein deutscher Skill eine explizite Evidenzgrenze nennt, diese Grenze auch in der Antwort sichtbar halten.
 
-Die Dateien `data/de/decision-guides*.json` gehören in dieser Branch weiterhin zu einem separaten `draft`-Situation-Layer. Solange `/de/entscheidungen/` nicht in derselben Integrationskette gelandet ist, diesen Layer nicht als Teil des Full-Catalog-PR behaupten.
+Die Dateien `data/de/decision-guides*.json` gehören in dieser Branch weiterhin zu einem separaten `draft`-Situation-Layer. Solange `/de/entscheidungen/` nicht in derselben Integrationskette gelandet ist, diesen Layer nicht als Teil des Full-Catalog- oder Skill-Library-PR behaupten.
