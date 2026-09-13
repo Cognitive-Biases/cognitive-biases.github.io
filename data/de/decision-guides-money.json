@@ -1,8 +1,9 @@
 {
   "version": 1,
   "locale": "de",
-  "state": "reviewed",
+  "state": "draft",
   "updatedAt": "2026-09-13",
+  "editorialNote": "Staged situation-first content. Not part of the reviewed public German surface until an end-to-end renderer and quality gate publish it.",
   "guides": [
     {
       "slug": "wichtiger-kauf",
