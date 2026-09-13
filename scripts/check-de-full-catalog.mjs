@@ -40,3 +40,4 @@ if (duplicates.length) console.log(`Duplicate German slugs: ${[...new Set(duplic
 
 if (missing.length || unexpectedExtra.length || duplicates.length) process.exit(1);
 console.log("Full German catalog parity: PASS");
+await import("./check-de-catalog-language.mjs");
