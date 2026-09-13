@@ -77,6 +77,10 @@ async function checkPage(relativePath,dePath,enPath,label){
   if(enPath&&!html.includes(`<link rel="alternate" hreflang="en" href="${SITE}${enPath}">`))fail(`${label}: English hreflang missing.`);
   if(!html.includes('href="/de/skills/"'))fail(`${label}: Denkkompetenzen discovery missing.`);
   if(!html.includes('href="/de/agent-skills/"'))fail(`${label}: Agent Skills discovery missing.`);
+  if(!html.includes('href="/about/editorial/"'))fail(`${label}: editorial-trust link missing.`);
+  const description=html.match(/<meta name="description" content="([^"]*)">/)?.[1] || "";
+  if(!description)fail(`${label}: meta description missing.`);
+  else if(description.length>180)fail(`${label}: meta description too long (${description.length}).`);
 }
 
 await checkPage("de/skills","/de/skills/","/skills/","Decision Skill hub");
