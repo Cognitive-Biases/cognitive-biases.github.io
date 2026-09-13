@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalSlug": "consider-the-opposite",
+      "localizedSlug": "considerar-hipotese-oposta",
+      "title": "Considere a hipótese oposta",
+      "aliases": ["consider the opposite", "considerar o contrário"],
+      "summary": "Teste deliberadamente uma explicação plausível que levaria a uma conclusão diferente da sua preferida.",
+      "steps": ["Escreva a conclusão que você prefere hoje.", "Formule uma hipótese concorrente que também explique os fatos importantes.", "Procure uma evidência que diferencie as duas hipóteses, em vez de acumular apenas apoio para uma delas."],
+      "example": "Você acha que uma queda de conversão veio de uma mudança de preço. Antes de buscar mais argumentos para isso, testa a hipótese de que a origem foi uma mudança no tráfego e procura dados que separem as duas explicações.",
+      "boundary": "A hipótese oposta precisa ser plausível. Inventar uma alternativa absurda não é um teste sério e pode apenas reforçar a conclusão inicial."
+    },
+    {
+      "canonicalSlug": "independent-estimate",
+      "localizedSlug": "estimativa-independente",
+      "title": "Faça uma estimativa independente",
+      "aliases": ["independent estimate", "estimativa antes de ver a âncora"],
+      "summary": "Produza uma estimativa antes de olhar um número de referência forte, quando isso for possível.",
+      "steps": ["Defina o que será estimado e a unidade.", "Use seus próprios dados, decomposição ou casos comparáveis para gerar uma faixa.", "Só depois compare sua estimativa com a proposta, meta ou número apresentado por outra pessoa."],
+      "example": "Antes de ver o prazo proposto pelo fornecedor, a equipe estima duração com base em projetos comparáveis e registra uma faixa de 10 a 14 semanas.",
+      "boundary": "Uma estimativa independente ainda pode estar errada. O objetivo é reduzir dependência de uma âncora, não criar certeza artificial."
+    },
+    {
+      "canonicalSlug": "reference-class-forecasting",
+      "localizedSlug": "classe-de-referencia",
+      "title": "Use uma classe de referência",
+      "aliases": ["reference class forecasting", "visão externa", "casos comparáveis"],
+      "summary": "Comece por resultados de casos realmente comparáveis antes de ajustar a previsão ao caso atual.",
+      "steps": ["Defina uma classe de casos comparáveis antes de olhar apenas para o plano atual.", "Observe a distribuição real de prazo, custo ou resultado nessa classe.", "Ajuste a faixa somente por diferenças relevantes que você consiga justificar."],
+      "example": "Em vez de somar apenas as tarefas do novo projeto, você compara dez migrações semelhantes e usa a distribuição real de duração como ponto de partida.",
+      "boundary": "Uma classe de referência ruim pode enganar. A comparação precisa preservar características que realmente influenciam o resultado."
+    },
+    {
+      "canonicalSlug": "base-rate-check",
+      "localizedSlug": "verificar-taxa-base",
+      "title": "Verifique a taxa-base",
+      "aliases": ["base rate check", "taxa base", "frequência de base"],
+      "summary": "Compare uma história marcante ou um caso individual com a frequência observada em um conjunto relevante.",
+      "steps": ["Pergunte qual é a frequência do evento na população ou situação relevante.", "Separe essa taxa-base das características específicas do caso atual.", "Atualize a estimativa quando houver evidência específica forte, sem ignorar o ponto de partida."],
+      "example": "Um incidente raro apareceu nas notícias. Antes de concluir que o risco disparou, você consulta a frequência histórica e verifica se os dados recentes realmente mudaram.",
+      "boundary": "Taxas-base antigas ou de uma população diferente podem ser inadequadas. Use a referência mais comparável disponível."
+    },
+    {
+      "canonicalSlug": "decision-journal",
+      "localizedSlug": "diario-de-decisao",
+      "title": "Mantenha um diário de decisão",
+      "aliases": ["decision journal", "registro de decisão"],
+      "summary": "Registre o que você sabia, esperava e temia antes de conhecer o resultado.",
+      "steps": ["Anote a decisão, as principais alternativas e as informações disponíveis.", "Registre previsões, incertezas e condições que fariam você revisar a escolha.", "Depois do resultado, compare a revisão com o registro original, não com a memória."],
+      "example": "Antes de lançar uma mudança, a equipe registra a faixa esperada de impacto, os riscos e os sinais que exigiriam rollback. Um mês depois, revisa a decisão usando esse registro.",
+      "boundary": "O diário melhora a auditabilidade do raciocínio, mas um registro detalhado não torna uma decisão automaticamente boa."
+    },
+    {
+      "canonicalSlug": "red-team-review",
+      "localizedSlug": "revisao-contraditoria",
+      "title": "Faça uma revisão contraditória",
+      "aliases": ["red team review", "red team", "revisão adversarial"],
+      "summary": "Dê a alguém a tarefa explícita de encontrar como o plano, argumento ou interpretação pode estar errado.",
+      "steps": ["Defina qual decisão ou afirmação será desafiada.", "Peça ao revisor para buscar falhas, evidência ausente e explicações concorrentes.", "Registre quais críticas mudam a decisão, quais não mudam e por quê."],
+      "example": "Antes de aprovar uma migração, uma pessoa que não escreveu o plano procura dependências esquecidas, premissas frágeis e sinais que invalidariam a estimativa.",
+      "boundary": "Contradição sem critérios pode virar teatro. A revisão deve procurar informação decisiva, não apenas produzir objeções."
+    },
+    {
+      "canonicalSlug": "predefined-update-criteria",
+      "localizedSlug": "criterios-de-atualizacao",
+      "title": "Defina critérios de atualização antes",
+      "aliases": ["predefined update criteria", "critérios para mudar de ideia"],
+      "summary": "Antes do resultado, escreva quais sinais deveriam fazer você revisar a crença, previsão ou plano.",
+      "steps": ["Liste as premissas que sustentam a posição atual.", "Defina sinais observáveis que enfraqueceriam ou fortaleceriam essas premissas.", "Quando um sinal ocorrer, atualize a decisão conforme a regra combinada ou explique explicitamente por que não."],
+      "example": "Um produto continua recebendo investimento apenas enquanto retenção e custo de aquisição permanecem dentro de faixas definidas antes da próxima rodada de orçamento.",
+      "boundary": "Critérios rígidos podem ficar obsoletos quando o contexto muda. Alterá-los é possível, mas a mudança deve ficar visível e justificada."
+    },
+    {
+      "canonicalSlug": "incremental-value-check",
+      "localizedSlug": "valor-da-proxima-etapa",
+      "title": "Avalie o valor da próxima etapa",
+      "aliases": ["incremental value check", "valor incremental", "ignorar custo afundado"],
+      "summary": "Avalie a próxima unidade de investimento pelo custo e valor futuros, separando o que já foi gasto.",
+      "steps": ["Trate custos passados como informação sobre o histórico, não como benefício futuro.", "Estime custo, valor esperado e custo de oportunidade da próxima etapa.", "Compare continuar, parar, reduzir escopo e mudar de direção."],
+      "example": "Um projeto já consumiu R$ 500 mil. A decisão seguinte não pergunta como recuperar esse valor; compara mais R$ 80 mil de custo com o valor esperado e as alternativas disponíveis agora.",
+      "boundary": "Custos passados podem revelar riscos, dependências ou custos de encerramento relevantes. O ponto é não tratá-los, por si só, como motivo para continuar."
+    },
+    {
+      "canonicalSlug": "predefined-criteria",
+      "localizedSlug": "criterios-de-decisao",
+      "title": "Defina critérios de decisão antes",
+      "aliases": ["predefined criteria", "critérios antes de escolher"],
+      "summary": "Defina os critérios e, quando possível, seus pesos antes de comparar alternativas que possam puxar o julgamento.",
+      "steps": ["Liste os objetivos da decisão antes de olhar todas as opções em detalhe.", "Defina critérios mínimos, trade-offs e fatores que não devem contar.", "Compare alternativas pelo mesmo conjunto de critérios e documente exceções."],
+      "example": "Antes de entrevistar fornecedores, a equipe define segurança, custo total e capacidade de integração como critérios e evita mudar os pesos apenas porque uma demonstração foi impressionante.",
+      "boundary": "Critérios prévios não eliminam julgamento. Informações novas podem justificar uma revisão, desde que a mudança seja explícita."
+    },
+    {
+      "canonicalSlug": "source-trace",
+      "localizedSlug": "rastrear-ate-a-fonte",
+      "title": "Rastreie até a fonte",
+      "aliases": ["source trace", "rastrear fonte", "verificar fonte original"],
+      "summary": "Siga uma afirmação até a fonte primária ou mais próxima do fato que você realmente consegue inspecionar.",
+      "steps": ["Separe a afirmação exata da interpretação feita sobre ela.", "Siga citações e links até a fonte original ou mais próxima possível.", "Conte confirmações independentes, não páginas que repetem a mesma origem."],
+      "example": "Cinco artigos citam a mesma estatística. Você segue os links e descobre que todos dependem de um único relatório; há cinco repetições, mas apenas uma fonte de evidência.",
+      "boundary": "Uma fonte primária pode ser fraca ou incompleta. Rastrear a origem ajuda a avaliar evidência; não transforma a origem em verdade."
+    },
+    {
+      "canonicalSlug": "reversible-test",
+      "localizedSlug": "teste-reversivel",
+      "title": "Faça um teste pequeno e reversível",
+      "aliases": ["reversible test", "experimento reversível", "teste pequeno"],
+      "summary": "Quando a incerteza é alta, compre informação com um passo pequeno que possa ser revertido antes de assumir um compromisso grande.",
+      "steps": ["Identifique a hipótese mais importante que pode ser testada com baixo custo.", "Defina antes o sinal que mudaria a decisão seguinte.", "Execute o teste em escala limitada e preserve uma saída realista."],
+      "example": "Em vez de migrar toda a operação para uma ferramenta, uma equipe testa um fluxo representativo por duas semanas e define previamente os critérios para expandir, ajustar ou abandonar.",
+      "boundary": "Nem toda decisão é reversível e testes pequenos podem não representar efeitos de escala. Use-os quando o aprendizado obtido for relevante para a decisão maior."
+    }
+  ]
+}
