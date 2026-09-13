@@ -1,12 +1,13 @@
-import { access, readFile, readdir } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { loadFrenchTranslations } from "./lib/french-translations.mjs";
 
 const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
+const TODAY = "2026-09-13";
 const errors = [];
 
-const [translations, techniqueTranslations, ui, pages, release, locales, aiLocales, biasesRaw, techniques] = await Promise.all([
-  readJson("data/translations-fr.json"),
+const [techniqueTranslations, ui, pages, release, locales, aiLocales, biasesRaw, techniques] = await Promise.all([
   readJson("data/techniques-fr.json"),
   readJson("data/ui-fr.json"),
   readJson("data/pages-fr.json"),
@@ -17,9 +18,10 @@ const [translations, techniqueTranslations, ui, pages, release, locales, aiLocal
   readJson("data/techniques.json")
 ]);
 const biases = Array.isArray(biasesRaw) ? biasesRaw : biasesRaw.biases || [];
-const publishedBiases = new Set(biases.filter((entry) => entry.published).map((entry) => entry.slug));
+const published = biases.filter((entry) => entry.published);
+const publishedBiases = new Set(published.map((entry) => entry.slug));
+const translations = await loadFrenchTranslations({ canonicalBiases: biases, releaseVersion: release.releaseVersion, today: TODAY });
 const canonicalTechniques = new Set(techniques.techniques.map((entry) => entry.slug));
-const evidenceSlugs = await loadEvidenceSlugs();
 
 expect(locales.locales.some((entry) => entry.code === "fr" && entry.role === "reviewed-layer"), "data/locales.json must declare fr as reviewed-layer");
 expect(aiLocales.humanInterfaceLanguages.includes("fr"), "ai/locales.json must expose fr as a human interface language");
@@ -29,37 +31,38 @@ expect(translations.locale === "fr" && translations.canonicalLocale === "en", "F
 expect(techniqueTranslations.locale === "fr" && techniqueTranslations.canonicalLocale === "en", "French technique dataset locale metadata is invalid");
 expect(translations.sourceRelease === release.releaseVersion, "French concept translations must point to the current canonical release");
 expect(techniqueTranslations.sourceRelease === release.releaseVersion, "French technique translations must point to the current canonical release");
-expect(translations.entries.length >= 8, "French v1 should contain at least eight reviewed concept entries");
+expect(translations.entries.length === publishedBiases.size, `French coverage must equal all published canonical biases (${translations.entries.length}/${publishedBiases.size})`);
 expect(techniqueTranslations.entries.length === canonicalTechniques.size, "Every canonical decision technique must have a French reviewed translation");
 
 const localizedBiasSlugs = new Set();
 const canonicalBiasIds = new Set();
 for (const entry of translations.entries) {
-  expect(entry.state === "reviewed", `${entry.canonicalId}: French concept state must be reviewed`);
+  expect(entry.state === "reviewed", `${entry.canonicalId}: French translation state must be reviewed`);
   expect(publishedBiases.has(entry.canonicalId), `${entry.canonicalId}: canonical bias is missing or unpublished`);
-  expect(evidenceSlugs.has(entry.canonicalId), `${entry.canonicalId}: French v1 concepts must have a canonical evidence review`);
   expect(entry.sourceRelease === release.releaseVersion, `${entry.canonicalId}: sourceRelease does not match current release`);
-  for (const field of ["localizedSlug", "localizedLabel", "englishLabel", "summary", "practicalQuestion", "evidenceSummary", "boundary", "translatedAt", "reviewedAt"]) {
+  for (const field of ["localizedSlug", "localizedLabel", "englishLabel", "summary", "practicalQuestion", "boundary", "translatedAt", "reviewedAt"]) {
     expect(Boolean(entry[field]), `${entry.canonicalId}: missing ${field}`);
   }
-  expect(Array.isArray(entry.examples) && entry.examples.length >= 2, `${entry.canonicalId}: add at least two localized examples`);
-  expect(Array.isArray(entry.searchTerms) && entry.searchTerms.length >= 2, `${entry.canonicalId}: add French/English discovery terms`);
-  expect(Array.isArray(entry.techniqueSlugs) && entry.techniqueSlugs.length >= 1, `${entry.canonicalId}: connect at least one practical technique`);
+  expect(entry.localizedLabel !== entry.englishLabel, `${entry.canonicalId}: localized label still equals English label`);
+  expect(entry.summary.length >= 55, `${entry.canonicalId}: French summary is too thin`);
+  expect(entry.practicalQuestion.length >= 20, `${entry.canonicalId}: practical question is too thin`);
+  expect(Array.isArray(entry.examples) && entry.examples.length >= 1, `${entry.canonicalId}: add at least one localized example`);
+  expect(Array.isArray(entry.searchTerms) && entry.searchTerms.length >= 3, `${entry.canonicalId}: add French/English discovery terms`);
+  expect(!/\b(TODO|TBD|translate|translation needed)\b/i.test(JSON.stringify(entry)), `${entry.canonicalId}: placeholder text detected`);
   for (const techniqueSlug of entry.techniqueSlugs || []) expect(canonicalTechniques.has(techniqueSlug), `${entry.canonicalId}: unknown technique ${techniqueSlug}`);
   expect(!localizedBiasSlugs.has(entry.localizedSlug), `Duplicate French bias slug: ${entry.localizedSlug}`);
   expect(!canonicalBiasIds.has(entry.canonicalId), `Duplicate canonical bias translation: ${entry.canonicalId}`);
   localizedBiasSlugs.add(entry.localizedSlug);
   canonicalBiasIds.add(entry.canonicalId);
 }
+for (const slug of publishedBiases) expect(canonicalBiasIds.has(slug), `Missing French bias translation: ${slug}`);
 
 const localizedTechniqueSlugs = new Set();
 const translatedCanonicalTechniques = new Set();
 for (const entry of techniqueTranslations.entries) {
   expect(entry.state === "reviewed", `${entry.canonicalSlug}: French technique state must be reviewed`);
   expect(canonicalTechniques.has(entry.canonicalSlug), `${entry.canonicalSlug}: canonical technique is missing`);
-  for (const field of ["localizedSlug", "title", "whenToUse", "example", "whyItCanHelp", "limitations", "translatedAt", "reviewedAt"]) {
-    expect(Boolean(entry[field]), `${entry.canonicalSlug}: missing ${field}`);
-  }
+  for (const field of ["localizedSlug", "title", "whenToUse", "example", "whyItCanHelp", "limitations", "translatedAt", "reviewedAt"]) expect(Boolean(entry[field]), `${entry.canonicalSlug}: missing ${field}`);
   expect(Array.isArray(entry.steps) && entry.steps.length >= 3, `${entry.canonicalSlug}: a practical technique needs at least three steps`);
   expect(!localizedTechniqueSlugs.has(entry.localizedSlug), `Duplicate French technique slug: ${entry.localizedSlug}`);
   expect(!translatedCanonicalTechniques.has(entry.canonicalSlug), `Duplicate canonical technique translation: ${entry.canonicalSlug}`);
@@ -81,7 +84,7 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`French localization checks passed: ${translations.entries.length} reviewed concepts and ${techniqueTranslations.entries.length} translated techniques.`);
+console.log(`French localization checks passed: ${translations.entries.length}/${publishedBiases.size} published biases and ${techniqueTranslations.entries.length} techniques.`);
 
 async function checkGeneratedOutput() {
   const expected = [
@@ -105,7 +108,6 @@ async function checkGeneratedOutput() {
     expect(html.includes(`<link rel="alternate" hreflang="x-default" href="${enUrl}">`), `${pair.path}: x-default must point to canonical English`);
     expect(html.includes('"inLanguage":"fr"'), `${pair.path}: JSON-LD must expose inLanguage=fr`);
     expect(!html.includes('>Skip to content<'), `${pair.path}: English skip-link copy leaked into French UI`);
-
     const englishTarget = outputFile(pair.englishPath);
     expect(await exists(englishTarget), `English equivalent is missing: ${pair.englishPath}`);
     if (await exists(englishTarget)) {
@@ -114,14 +116,15 @@ async function checkGeneratedOutput() {
       expect(englishHtml.includes('data-locale-switch="fr"'), `${pair.englishPath}: visible French language switch is missing`);
     }
   }
-
+  for (const entry of translations.entries) {
+    const html = await readFile(outputFile(`/fr/biais/${entry.localizedSlug}/`), "utf8");
+    expect(includesHtmlText(html, entry.localizedLabel), `${entry.canonicalId}: French label is missing from generated page`);
+    expect(includesHtmlText(html, entry.practicalQuestion), `${entry.canonicalId}: practical question is missing from generated page`);
+  }
   for (const entry of techniqueTranslations.entries) {
     const html = await readFile(outputFile(`/fr/techniques/${entry.localizedSlug}/`), "utf8");
-    for (const label of [ui.labels.whenToUse, ui.labels.tryThis, ui.labels.example, ui.labels.whyItCanHelp, "Limites"]) {
-      expect(includesHtmlText(html, label), `${entry.canonicalSlug}: generated technique page is missing section ${label}`);
-    }
+    for (const label of [ui.labels.whenToUse, ui.labels.tryThis, ui.labels.example, ui.labels.whyItCanHelp, "Limites"]) expect(includesHtmlText(html, label), `${entry.canonicalSlug}: generated technique page is missing section ${label}`);
   }
-
   const sitemap = await readFile(join(OUT, "sitemap.xml"), "utf8");
   for (const pair of expected) expect(sitemap.includes(`<loc>${SITE}${pair.path}</loc>`), `Sitemap is missing ${pair.path}`);
   expect(await exists(join(OUT, "fr", "llms.txt")), "French llms.txt is missing");
@@ -130,35 +133,17 @@ async function checkGeneratedOutput() {
     const manifest = await readJson(join(OUT, "fr", "data", "index.json"));
     expect(manifest.locale === "fr" && manifest.canonicalLocale === "en", "French locale manifest metadata is invalid");
     expect(manifest.coverage?.concepts === translations.entries.length, "French locale manifest concept count is stale");
-    expect(manifest.coverage?.techniques === techniqueTranslations.entries.length, "French locale manifest technique count is stale");
-    expect(manifest.semantics?.canonicalIdentifiersRemainEnglish === true, "French locale manifest must preserve canonical identifiers");
+    expect(manifest.coverage?.canonicalPublishedConcepts === publishedBiases.size, "French locale manifest canonical count is stale");
+    expect(manifest.coverage?.fallback === "none-for-published-biases", "French locale manifest must declare full published-bias coverage");
+    expect(manifest.semantics?.translationReviewSeparateFromEvidenceReview === true, "French locale manifest must separate translation and evidence review");
   }
 }
 
-function outputFile(route) {
-  return route === "/" ? join(OUT, "index.html") : join(OUT, route.replace(/^\//, ""), "index.html");
-}
+function outputFile(route) { return route === "/" ? join(OUT, "index.html") : join(OUT, route.replace(/^\//, ""), "index.html"); }
 function includesHtmlText(html, text) {
-  const escaped = String(text).replace(/[&<>"']/g, (character) => ({
-    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-  })[character]);
+  const escaped = String(text).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
   return html.includes(escaped);
 }
-function expect(condition, message) {
-  if (!condition) errors.push(message);
-}
-async function readJson(path) {
-  return JSON.parse(await readFile(path, "utf8"));
-}
-async function exists(path) {
-  try { await access(path); return true; } catch { return false; }
-}
-async function loadEvidenceSlugs() {
-  const names = (await readdir("data")).filter((name) => /^evidence-reviews(?:-[a-z0-9-]+)?\.json$/i.test(name));
-  const slugs = new Set();
-  for (const name of names) {
-    const document = await readJson(join("data", name));
-    for (const review of document.reviews || []) slugs.add(review.slug);
-  }
-  return slugs;
-}
+function expect(condition, message) { if (!condition) errors.push(message); }
+async function readJson(path) { return JSON.parse(await readFile(path, "utf8")); }
+async function exists(path) { try { await access(path); return true; } catch { return false; } }
