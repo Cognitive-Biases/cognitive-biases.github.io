@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "coverage": "curated-reviewed-subset",
+  "entries": [
+    {
+      "canonicalId": "cognitive-bias-confirmation-bias",
+      "localizedSlug": "vies-de-confirmacao",
+      "localizedLabel": "Viés de confirmação",
+      "englishLabel": "Confirmation Bias",
+      "aliases": ["confirmation bias"],
+      "searchTerms": ["viés de confirmação", "vieses cognitivos", "procurar apenas o que confirma minha ideia", "como evitar viés de confirmação"],
+      "state": "reviewed",
+      "summary": "O viés de confirmação reúne formas pelas quais uma crença ou hipótese já existente pode influenciar a busca, a interpretação, a lembrança ou a avaliação de informações.",
+      "practicalQuestion": "Que evidência realmente me faria mudar de ideia?",
+      "examples": [
+        "No trabalho, uma equipe procura principalmente os números que apoiam o plano que já prefere.",
+        "Em uma pesquisa, uma hipótese é testada sem definir antes o que contaria como evidência contrária.",
+        "Ao usar IA, a pessoa pede vários argumentos a favor de uma conclusão, mas não testa explicações concorrentes com o mesmo rigor."
+      ],
+      "evidenceSummary": "O fenômeno é bem documentado, mas o rótulo é amplo: mecanismos diferentes de busca e interpretação podem produzir efeitos diferentes conforme a tarefa.",
+      "boundary": "Começar por casos compatíveis com uma hipótese não é sempre irracional. O problema fica mais claro quando o teste não consegue diferenciar explicações plausíveis ou quando o padrão de evidência muda conforme a conclusão preferida.",
+      "techniqueSlugs": ["consider-the-opposite", "red-team-review", "predefined-update-criteria", "predefined-criteria", "reversible-test"]
+    },
+    {
+      "canonicalId": "cognitive-bias-anchoring-effect",
+      "localizedSlug": "efeito-de-ancoragem",
+      "localizedLabel": "Efeito de ancoragem",
+      "englishLabel": "Anchoring Effect",
+      "aliases": ["viés de ancoragem", "ancoragem", "anchoring effect"],
+      "searchTerms": ["efeito de ancoragem", "viés de ancoragem", "primeiro número influencia estimativa", "ancoragem psicologia"],
+      "state": "reviewed",
+      "summary": "O efeito de ancoragem descreve como um valor inicial pode puxar uma estimativa numérica posterior em sua direção, mesmo quando esse ponto de partida traz pouca informação útil.",
+      "practicalQuestion": "Qual seria minha estimativa se eu não tivesse visto esse número?",
+      "examples": [
+        "Em uma negociação, o primeiro preço apresentado pode deslocar a faixa em que as propostas seguintes parecem razoáveis.",
+        "Em um projeto, uma data sugerida cedo demais pode virar a referência implícita de todas as estimativas.",
+        "Em uma decisão assistida por IA, a primeira nota ou recomendação pode influenciar o julgamento humano que vem depois."
+      ],
+      "evidenceSummary": "A ancoragem é bem sustentada em julgamentos numéricos. A magnitude do efeito varia conforme o tipo de âncora, a tarefa e a forma como o valor inicial é apresentado.",
+      "boundary": "Nem todo número funciona como âncora com a mesma força. Um valor claramente aleatório e irrelevante pode influenciar menos do que um preço, uma meta ou uma estimativa que pareça pertinente.",
+      "techniqueSlugs": ["independent-estimate", "predefined-criteria"]
+    },
+    {
+      "canonicalId": "heuristic-bias-availability-bias",
+      "localizedSlug": "heuristica-da-disponibilidade",
+      "localizedLabel": "Heurística da disponibilidade",
+      "englishLabel": "Availability Heuristic",
+      "aliases": ["viés de disponibilidade", "availability heuristic", "availability bias"],
+      "searchTerms": ["heurística da disponibilidade", "viés de disponibilidade", "exemplo recente parece mais provável", "heurísticas psicologia"],
+      "state": "reviewed",
+      "summary": "A heurística da disponibilidade usa a facilidade com que exemplos vêm à mente como uma pista para julgar frequência ou probabilidade.",
+      "practicalQuestion": "Esses exemplos vêm à mente porque são frequentes ou porque são recentes, marcantes ou muito repetidos?",
+      "examples": [
+        "Depois de um acidente muito noticiado, um risco raro pode parecer subitamente muito mais comum.",
+        "Em um projeto, uma falha recente e memorável vira a referência para estimar todos os casos seguintes.",
+        "Uma história fácil de lembrar pode pesar mais do que um conjunto de dados maior, porém menos vívido."
+      ],
+      "evidenceSummary": "A disponibilidade é uma heurística bem estabelecida, mas não é automaticamente um erro. Ela engana quando a facilidade de lembrar vem de fatores que não representam a frequência real.",
+      "boundary": "Um caso marcante às vezes pode sinalizar uma mudança real. Antes de corrigir o julgamento, verifique se as taxas de base ou outros dados também mudaram.",
+      "techniqueSlugs": ["reference-class-forecasting", "base-rate-check"]
+    },
+    {
+      "canonicalId": "cognitive-bias-hindsight-bias",
+      "localizedSlug": "vies-retrospectivo",
+      "localizedLabel": "Viés retrospectivo",
+      "englishLabel": "Hindsight Bias",
+      "aliases": ["viés de retrospectiva", "hindsight bias", "efeito eu já sabia"],
+      "searchTerms": ["viés retrospectivo", "hindsight bias", "parecia óbvio depois que aconteceu", "eu já sabia desde o começo"],
+      "state": "reviewed",
+      "summary": "Depois que o resultado é conhecido, o passado pode parecer mais previsível do que realmente era no momento da decisão.",
+      "practicalQuestion": "O que eu realmente previa antes de conhecer o resultado?",
+      "examples": [
+        "Depois de um atraso, as causas do projeto parecem óbvias, embora fossem incertas no início.",
+        "Após um movimento do mercado, alguém se lembra de ter tido muito mais certeza da direção do que registrou na época.",
+        "Depois de uma decisão ruim, sinais fracos passam a parecer impossíveis de ignorar."
+      ],
+      "evidenceSummary": "O viés retrospectivo é robusto e estudado há décadas. Conhecer o desfecho pode alterar a reconstrução do que parecia previsível antes dele.",
+      "boundary": "Uma boa explicação depois do fato não é automaticamente enviesada. A questão é se ela reescreve a incerteza que realmente existia antes do resultado.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "cognitive-bias-outcome-bias",
+      "localizedSlug": "vies-de-resultado",
+      "localizedLabel": "Viés de resultado",
+      "englishLabel": "Outcome Bias",
+      "aliases": ["outcome bias"],
+      "searchTerms": ["viés de resultado", "julgar decisão pelo resultado", "outcome bias"],
+      "state": "reviewed",
+      "summary": "O viés de resultado ocorre quando a qualidade de uma decisão é julgada principalmente pelo desfecho, em vez das informações e do raciocínio disponíveis quando a escolha foi feita.",
+      "practicalQuestion": "Eu avaliaria essa decisão do mesmo modo se o resultado tivesse sido diferente?",
+      "examples": [
+        "Uma decisão arriscada é elogiada porque deu certo, apesar de o processo ter sido fraco.",
+        "Uma boa decisão é condenada porque um risco conhecido acabou se materializando.",
+        "Depois de um projeto, a equipe confunde sorte no resultado com qualidade do método de decisão."
+      ],
+      "evidenceSummary": "O efeito é sustentado por estudos experimentais sobre avaliação de decisões e por replicações modernas.",
+      "boundary": "Viés de resultado não é o mesmo que viés retrospectivo: o primeiro altera a avaliação da decisão; o segundo altera a percepção do que era previsível.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "egocentric-bias-planning-fallacy",
+      "localizedSlug": "falacia-do-planejamento",
+      "localizedLabel": "Falácia do planejamento",
+      "englishLabel": "Planning Fallacy",
+      "aliases": ["viés de planejamento", "planning fallacy"],
+      "searchTerms": ["falácia do planejamento", "viés de planejamento", "subestimar prazo de projeto", "por que projetos atrasam"],
+      "state": "reviewed",
+      "summary": "A falácia do planejamento descreve a tendência de subestimar o tempo ou os recursos necessários para um projeto, especialmente quando se olha demais para o plano atual e pouco para casos comparáveis já concluídos.",
+      "practicalQuestion": "Quanto tempo projetos realmente comparáveis levaram?",
+      "examples": [
+        "Uma migração parece caber em seis semanas porque cada etapa isolada parece razoável.",
+        "A equipe acrescenta uma pequena margem, mas nunca consulta a distribuição de prazos de projetos semelhantes.",
+        "Um plano otimista permanece igual mesmo quando o histórico mostra atrasos recorrentes."
+      ],
+      "evidenceSummary": "O fenômeno é bem documentado em estimativas de projetos. Usar uma visão externa e classes de referência é uma resposta prática frequente, sem garantir previsão perfeita.",
+      "boundary": "Um atraso não prova, por si só, a falácia do planejamento. Eventos realmente novos, mudanças de escopo e dependências externas também podem explicar o desvio.",
+      "techniqueSlugs": ["reference-class-forecasting"]
+    },
+    {
+      "canonicalId": "logical-fallacy-escalation-of-commitment",
+      "localizedSlug": "escalada-de-comprometimento",
+      "localizedLabel": "Escalada de comprometimento",
+      "englishLabel": "Escalation of Commitment",
+      "aliases": ["falácia do custo afundado", "custo afundado", "viés do custo afundado", "sunk cost fallacy", "escalation of commitment"],
+      "searchTerms": ["custo afundado", "falácia do custo afundado", "escalada de comprometimento", "continuar projeto porque já gastou muito"],
+      "state": "reviewed",
+      "summary": "A escalada de comprometimento descreve a continuação de uma linha de ação ou o acréscimo de recursos apesar de sinais negativos, muitas vezes porque abandonar ficou mais difícil de justificar depois das decisões já tomadas.",
+      "practicalQuestion": "Se este projeto chegasse hoje sem todo o histórico, eu financiaria a próxima etapa?",
+      "examples": [
+        "Um projeto recebe mais orçamento principalmente porque já custou caro.",
+        "Uma equipe protege uma decisão antiga mesmo depois que novos dados mudaram a relação entre custo e valor.",
+        "Uma solução técnica é mantida para evitar admitir que mudar de direção agora produz mais valor esperado."
+      ],
+      "evidenceSummary": "A pesquisa sobre escalada de comprometimento examina persistência após feedback negativo. Custos já incorridos podem contribuir, mas não são o único mecanismo relevante.",
+      "boundary": "Falácia do custo afundado e escalada de comprometimento são próximas, mas não idênticas. Continuar também pode ser racional quando custos futuros, valor esperado ou custos de mudança justificam a próxima etapa.",
+      "techniqueSlugs": ["predefined-update-criteria", "incremental-value-check", "reversible-test"]
+    },
+    {
+      "canonicalId": "truth-judgment-illusory-truth-effect",
+      "localizedSlug": "efeito-de-verdade-ilusoria",
+      "localizedLabel": "Efeito de verdade ilusória",
+      "englishLabel": "Illusory Truth Effect",
+      "aliases": ["efeito de verdade", "illusory truth effect"],
+      "searchTerms": ["efeito de verdade ilusória", "repetição faz afirmação parecer verdadeira", "illusory truth effect"],
+      "state": "reviewed",
+      "summary": "Uma afirmação repetida pode, em média, ser julgada como mais verdadeira do que uma afirmação comparável vista pela primeira vez, mesmo quando a repetição não acrescenta nova evidência.",
+      "practicalQuestion": "Esta afirmação parece confiável porque foi verificada ou principalmente porque eu já a vi muitas vezes?",
+      "examples": [
+        "A mesma estatística aparece em vários sites, mas todos remontam à mesma fonte.",
+        "Uma frase repetida nas redes sociais fica familiar e começa a parecer mais bem estabelecida do que é.",
+        "Várias respostas de IA repetem a mesma afirmação sem apresentar evidências independentes."
+      ],
+      "evidenceSummary": "O efeito médio da repetição sobre julgamentos de verdade é robusto, mas sua magnitude varia conforme o conteúdo, o procedimento e o contexto.",
+      "boundary": "Repetição não torna toda afirmação convincente e não substitui conhecimento prévio. Também não é prova de que uma afirmação seja falsa.",
+      "techniqueSlugs": ["source-trace"]
+    }
+  ]
+}
