@@ -1,0 +1,25 @@
+{
+  "version": "2026-09-13",
+  "locale": "ru",
+  "sourceLocale": "en",
+  "status": "reviewed",
+  "entries": [
+    {"conceptId":"cognitive-bias","source":"cognitive bias","preferred":"когнитивное искажение","aliases":["когнитивный bias"],"avoid":["диагноз мышления"],"context":"Общий термин для систематических паттернов суждения; не диагноз человека.","status":"reviewed"},
+    {"conceptId":"heuristic","source":"heuristic","preferred":"эвристика","aliases":["быстрое правило"],"avoid":["ошибка"],"context":"Эвристика может быть полезной и не является автоматически ошибкой.","status":"reviewed"},
+    {"conceptId":"decision-making","source":"decision making","preferred":"принятие решений","aliases":[],"avoid":[],"context":"Общий термин для процесса выбора и проверки вариантов.","status":"reviewed"},
+    {"conceptId":"evidence","source":"evidence","preferred":"доказательства / данные исследований","aliases":["свидетельства"],"avoid":["абсолютное доказательство"],"context":"Формулировка должна сохранять силу и ограничения канонического обзора.","status":"reviewed"},
+    {"conceptId":"uncertainty","source":"uncertainty","preferred":"неопределённость","aliases":[],"avoid":[],"context":"Используется для явного обозначения границ знания и прогноза.","status":"reviewed"},
+    {"conceptId":"confirmation-bias","source":"confirmation bias","preferred":"склонность к подтверждению","aliases":["предвзятость подтверждения","confirmation bias"],"avoid":[],"context":"Основной термин текущего русского reviewed-слоя.","status":"reviewed"},
+    {"conceptId":"availability-heuristic","source":"availability heuristic","preferred":"эвристика доступности","aliases":["ошибка доступности","availability heuristic"],"avoid":[],"context":"Не смешивать эвристику как механизм с ошибкой как возможным результатом.","status":"reviewed"},
+    {"conceptId":"anchoring-effect","source":"anchoring effect","preferred":"эффект якоря","aliases":["якорение","anchoring effect"],"avoid":[],"context":"Канонический эффект числового якорения; не каждое число является сильным якорем.","status":"reviewed"},
+    {"conceptId":"illusory-truth-effect","source":"illusory truth effect","preferred":"эффект иллюзорной правды","aliases":["эффект повторения","illusory truth effect"],"avoid":[],"context":"Повторение может повышать субъективную правдоподобность, но не истинность.","status":"reviewed"},
+    {"conceptId":"decision-skills","source":"Decision Skills","preferred":"навыки принятия решений","aliases":["Decision Skills"],"avoid":[],"context":"Повторно используемые практические навыки для улучшения процесса решения.","status":"reviewed"},
+    {"conceptId":"debiasing","source":"debiasing","preferred":"снижение влияния искажений","aliases":["дебайасинг"],"avoid":["устранение искажений"],"context":"Практические проверки снижают риск ошибки, но не гарантируют полное устранение bias.","status":"reviewed"}
+  ],
+  "rules": {
+    "canonicalIdsAreNeverTranslated": true,
+    "naturalGrammarMayInflectPreferredTerms": true,
+    "englishAliasesMaySupportDiscovery": true,
+    "evidenceStrengthMustNotChange": true
+  }
+}
