@@ -70,7 +70,7 @@
     },
     {
       "canonicalSlug": "ai-assisted-reasoning",
-      "name": "Ragionamento assistito dall'IA consapevole dei bias",
+      "name": "Ragionamento con l'IA e controllo dei bias",
       "summary": "Usa l'IA per ampliare ipotesi, mettere alla prova argomenti e organizzare evidenze senza trasformare la prima risposta del modello in autorità.",
       "useWhen": ["Un agente o modello partecipa a ricerca, analisi, decisioni o revisione di contenuti.", "La prima risposta può ancorare l'utente o gli agenti successivi.", "Il workflow deve mantenere separati fatti, inferenze, raccomandazioni e incertezze."],
       "procedure": ["Definisci la domanda e, quando utile, registra una stima o ipotesi prima di consultare il modello.", "Chiedi alternative plausibili, controevidenze, rischi e condizioni che cambierebbero la risposta.", "Richiedi che fatti, inferenze, raccomandazioni e incertezze siano marcati separatamente.", "Verifica esternamente le affermazioni decisive e conta fonti indipendenti, non risposte concordanti di modelli.", "Usa modelli o prompt differenti come diversità di ragionamento, non come evidenza indipendente.", "Registra che cosa è stato verificato e chi mantiene la responsabilità della decisione."],
