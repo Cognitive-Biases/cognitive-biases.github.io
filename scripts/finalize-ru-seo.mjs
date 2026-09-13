@@ -1,6 +1,8 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
+await import("./generate-ru-reviewed-expansion.mjs");
+
 const OUT = join("dist", "ru");
 
 async function walk(dir) {
