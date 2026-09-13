@@ -30,24 +30,20 @@ Use contemporary German at roughly B2 reading level where the subject allows it.
 
 ## Primary terminology
 
-The structured source is `data/de/glossary.json`.
+The structured source is `data/de/glossary.json`. Reviewed German pages may add a natural primary label while keeping the canonical English term searchable.
 
-Important defaults:
+Important boundaries:
 
-| English | Primary German | Notes |
-| --- | --- | --- |
-| cognitive bias | kognitive Verzerrung | `Denkfehler` is a plain-language/search alias, not a perfect synonym. |
-| heuristic | Heuristik | A heuristic can be useful; it is not automatically an error. |
-| confirmation bias | Bestätigungsfehler | Alias: Bestätigungsverzerrung. |
-| anchoring effect | Ankereffekt | Do not mechanically replace with Ankerheuristik. |
-| availability heuristic | Verfügbarkeitsheuristik | Do not imply the heuristic is always wrong. |
-| hindsight bias | Rückschaufehler | Keep the English name as a search alias. |
-| illusory truth effect | Wahrheitseffekt | Aliases include illusorischer Wahrheitseffekt and Reiterationseffekt. |
-| sunk cost effect | Sunk-Cost-Effekt | Explain as Effekt der versunkenen Kosten where useful. |
-| status quo bias | Status-quo-Verzerrung | Staying can still be rational when switching costs are real. |
-| framing effect | Framing-Effekt | Alias: Rahmungseffekt. |
+- `Sunk-Cost-Effekt` and `Eskalation des Commitments` are related but distinct constructs.
+- `Default-Effekt` and `Status-quo-Verzerrung` overlap but are not interchangeable.
+- Availability is a heuristic, not automatically an error.
+- Dunning–Kruger is about calibration patterns in studied tasks, not a personality diagnosis.
+- Backfire is not the normal response to factual corrections.
+- Loss aversion does not have one universal coefficient.
+- A late project does not prove a planning fallacy.
+- Humanlike AI cues do not establish understanding, consciousness or accuracy.
 
-Do not use search terms as semantic aliases when the concepts differ. For example, `Sunk-Cost-Effekt` is a search term around Escalation of Commitment, but the project keeps Sunk Cost Effect and Escalation of Commitment as separate canonical entities.
+Do not use search terms as semantic aliases when the concepts differ. `aliases` may be emitted as alternate names. `searchTerms` are discovery-only phrases and must not be promoted to synonyms.
 
 ## Content model
 
@@ -63,8 +59,6 @@ German bias entries keep the English canonical slug and add localized fields:
 - `boundary`
 - `actions`
 
-`aliases` may be emitted as alternate names in structured data. `searchTerms` are discovery-only phrases and must not be promoted to synonyms.
-
 German techniques preserve the canonical technique slug and canonical bias links. Translation may improve readability but must not silently change the technique's purpose, prerequisites or limitations.
 
 ## Evidence boundary
@@ -77,7 +71,7 @@ A German bias page may be published in the reviewed layer only when:
 - the boundary section remains visible;
 - source links continue to point to the reviewed canonical sources.
 
-Do not translate a broad popular definition when the canonical project has already narrowed or corrected it.
+Do not translate a broad popular definition when the canonical project has already narrowed or corrected it. Practical actions are checks, not guaranteed debiasing cures. A matching bias is a lens for inspecting a decision process, not proof that the bias caused one particular decision.
 
 ## UX vocabulary
 
@@ -92,24 +86,17 @@ Practical detail pages should expose these headings when applicable:
 - Warum es helfen kann
 - Grenzen
 
-Examples are useful when they improve transfer, but should not be added mechanically to every page.
-
 ## Search and entity resolution
 
-German search must match:
+German search must match the primary German name, accepted German aliases, the English canonical name and useful discovery-only phrases. All variants resolve to one canonical concept page.
 
-- the primary German name;
-- accepted German aliases;
-- the English canonical name;
-- discovery-only phrases such as common mixed German/English search queries.
-
-All variants resolve to one canonical concept page. Do not create separate pages for `Bestätigungsfehler`, `Bestätigungsverzerrung` and `Confirmation Bias`.
+For example, `Bestätigungsfehler`, `Bestätigungsverzerrung` and `Confirmation Bias` resolve to one entity. A search for `Sunk Cost` may help discover an escalation page, but it must not collapse Sunk Cost Effect and Escalation of Commitment into the same entity.
 
 ## International SEO
 
 - German pages use stable `/de/` URLs and self-canonicals.
 - Detail pages receive reciprocal `de` / `en` hreflang only when a true English equivalent exists.
-- Partial collections must not claim an English collection as an equivalent alternate merely because the topics overlap.
+- Partial collections must not claim a broader English collection as an equivalent alternate merely because the topics overlap.
 - No automatic browser-language redirect.
 - German metadata, Open Graph text, headings and structured data are localized.
 - The English canonical ID remains stable inside the data model.
@@ -134,9 +121,11 @@ German strings are expected to be longer than English strings.
 - English concept names on German pages use `lang="en"` where practical.
 - Avoid truncating German compound nouns when wrapping works.
 
-## Initial reviewed cohort
+## Current reviewed cohort
 
-The first German rollout deliberately prioritizes high-intent and practical concepts instead of bulk translating the corpus:
+The current German rollout contains 25 reviewed concept pages. It prioritizes practical search demand, useful decision clusters and popular claims that need careful evidence boundaries.
+
+Core and decision concepts include:
 
 - Bestätigungsfehler
 - Ankereffekt
@@ -148,16 +137,46 @@ The first German rollout deliberately prioritizes high-intent and practical conc
 - Sunk-Cost-Effekt
 - Status-quo-Verzerrung
 - Framing-Effekt
+- Planungsfehlschluss
+- Ergebnisverzerrung
+- Automation Bias
+- Verlustaversion
+- Dunning-Kruger-Effekt
+- Backfire-Effekt
+- Fluch des Wissens
+- Decoy-Effekt
+- Default-Effekt
+- Mere-Urgency-Effekt
+- Zero-Sum Bias
+- Anthropomorphisierung
+- Impact Bias
+- Projektionsbias
+- Hungry-Judge-Effekt
 
-All canonical decision techniques are localized so a German user can move from recognition to action even while long-tail bias coverage remains incomplete.
+All 11 canonical decision techniques are localized so a German user can move from recognition to action even while long-tail concept coverage remains incomplete.
+
+## Situation-first layer
+
+Problem-first decision guides are a separate product layer from reviewed concept pages. Current staged data lives in `data/de/decision-guides*.json` and covers AI answers, weak projects, fast team consensus, fixed project deadlines, purchase decisions and negotiations.
+
+These source packs intentionally remain `state: draft` until an end-to-end renderer, internal linking, machine-readable output and localization quality gate publish them together. Do not describe the staged records as public reviewed pages before that promotion.
+
+The intended route is:
+
+`situation → concrete check → relevant reviewed bias lenses → relevant Denkwerkzeuge`
+
+A situation guide may combine reviewed concepts and techniques, but it must not invent a new scientific claim, diagnose a person or team, or declare a related English context to be a reciprocal hreflang equivalent unless the pages are materially equivalent.
+
+Implementation and promotion criteria are tracked in GitHub issue #151.
 
 ## Next rollout criteria
 
-Add a bias to German when at least one of these is true and the evidence contract is ready:
+Add a concept or situation when at least one of these is true and the evidence contract is ready:
 
 - meaningful German search demand;
 - strong relationship to an existing German practical journey;
 - strong relevance to work, money, information, learning or AI-assisted decisions;
-- needed to remove a broken or awkward English fallback from a German path.
+- needed to remove a broken or awkward English fallback from a German path;
+- a popular oversimplification materially benefits from an evidence-bounded German correction.
 
-Prefer coherent clusters over arbitrary alphabetical batches.
+Prefer coherent clusters over arbitrary alphabetical batches. Missing German coverage is better than an authoritative-looking weak translation.
