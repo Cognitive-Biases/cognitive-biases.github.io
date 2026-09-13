@@ -4,165 +4,31 @@
   "state": "reviewed",
   "updatedAt": "2026-09-13",
   "terms": [
-    {
-      "id": "cognitive-bias",
-      "de": "kognitive Verzerrung",
-      "en": "cognitive bias",
-      "aliases": ["kognitiver Bias", "Denkfehler"],
-      "usage": "Primärer Oberbegriff in Navigation, Definitionen und Metadaten.",
-      "caution": "Denkfehler ist verständlicher, aber enger und wertender. Nicht jede Heuristik oder Verzerrung bedeutet automatisch eine falsche Entscheidung."
-    },
-    {
-      "id": "heuristic",
-      "de": "Heuristik",
-      "en": "heuristic",
-      "aliases": ["mentale Abkürzung", "Faustregel"],
-      "usage": "Heuristik als Fachbegriff; mentale Abkürzung oder Faustregel nur erklärend.",
-      "caution": "Heuristiken sparen Aufwand und können nützlich sein. Nicht als Synonym für Denkfehler verwenden."
-    },
-    {
-      "id": "debiasing",
-      "de": "Debiasing",
-      "en": "debiasing",
-      "aliases": ["Verringerung kognitiver Verzerrungen"],
-      "usage": "Debiasing kann in forschungsnahen Texten stehen; in UI und Alltagssprache lieber konkrete Technik benennen.",
-      "caution": "Nicht versprechen, eine Verzerrung vollständig auszuschalten."
-    },
-    {
-      "id": "bias-mitigation",
-      "de": "Maßnahmen zur Verringerung von Verzerrungen",
-      "en": "bias mitigation",
-      "aliases": ["Gegenmaßnahme"],
-      "usage": "Für systemische oder organisatorische Maßnahmen. Bei einzelnen Handlungen bevorzugt Denkwerkzeug oder praktische Technik.",
-      "caution": "Mitigation beschreibt Risikoreduktion, nicht garantierte Beseitigung."
-    },
-    {
-      "id": "intervention",
-      "de": "Intervention",
-      "en": "intervention",
-      "aliases": ["Maßnahme"],
-      "usage": "Intervention in Forschungszusammenhängen; Maßnahme in allgemeineren Texten.",
-      "caution": "Keine Wirksamkeit suggerieren, wenn nur eine plausible Technik beschrieben wird."
-    },
-    {
-      "id": "decision-making",
-      "de": "Entscheidungsfindung",
-      "en": "decision-making",
-      "aliases": ["Entscheiden"],
-      "usage": "Entscheidungsfindung in erklärenden Texten; entscheiden in direkter UX-Sprache.",
-      "caution": "Nominalstil vermeiden, wenn ein Verb klarer ist."
-    },
-    {
-      "id": "evidence",
-      "de": "Evidenz",
-      "en": "evidence",
-      "aliases": ["Belege"],
-      "usage": "Evidenz für den Forschungsstand; Belege für konkrete Informationen oder Quellen.",
-      "caution": "Evidenz nicht automatisch mit Beweis übersetzen."
-    },
-    {
-      "id": "confidence",
-      "de": "subjektive Sicherheit",
-      "en": "confidence",
-      "aliases": ["Sicherheit"],
-      "usage": "Subjektive Sicherheit bei Urteilen; statistische Konfidenz nur im statistischen Kontext.",
-      "caution": "Confidence ist kontextabhängig und darf nicht mechanisch als Konfidenz übersetzt werden."
-    },
-    {
-      "id": "uncertainty",
-      "de": "Unsicherheit",
-      "en": "uncertainty",
-      "aliases": [],
-      "usage": "Bevorzugter Begriff für epistemische oder prognostische Unsicherheit.",
-      "caution": "Unsicherheit sichtbar lassen; may, can und conditional claims nicht verstärken."
-    },
-    {
-      "id": "probability",
-      "de": "Wahrscheinlichkeit",
-      "en": "probability",
-      "aliases": [],
-      "usage": "Standardbegriff für probabilistische Aussagen.",
-      "caution": "Wahrscheinlichkeit, Häufigkeit und Risiko nicht ohne Grund gleichsetzen."
-    },
-    {
-      "id": "confirmation-bias",
-      "de": "Bestätigungsfehler",
-      "en": "Confirmation Bias",
-      "aliases": ["Bestätigungsverzerrung"],
-      "usage": "Bestätigungsfehler als primärer Seitentitel; englischer Name und Bestätigungsverzerrung als Suchalias.",
-      "caution": "Nicht auf das Lesen zustimmender Nachrichten reduzieren."
-    },
-    {
-      "id": "anchoring-effect",
-      "de": "Ankereffekt",
-      "en": "Anchoring Effect",
-      "aliases": ["Anchoring Bias"],
-      "usage": "Ankereffekt als etablierter deutscher Primärbegriff.",
-      "caution": "Ankerheuristik kann als verwandter Mechanismus vorkommen, ist aber nicht immer ein exaktes Synonym."
-    },
-    {
-      "id": "availability-heuristic",
-      "de": "Verfügbarkeitsheuristik",
-      "en": "Availability Heuristic",
-      "aliases": ["Verfügbarkeitsfehler"],
-      "usage": "Verfügbarkeitsheuristik als Primärbegriff; Verfügbarkeitsfehler nur als Suchvariante.",
-      "caution": "Die Heuristik ist nicht automatisch ein Fehler."
-    },
-    {
-      "id": "hindsight-bias",
-      "de": "Rückschaufehler",
-      "en": "Hindsight Bias",
-      "aliases": [],
-      "usage": "Rückschaufehler als etablierter deutscher Begriff.",
-      "caution": "Nicht jede Erklärung nach einem Ergebnis ist rückschauverzerrt."
-    },
-    {
-      "id": "illusory-truth-effect",
-      "de": "Wahrheitseffekt",
-      "en": "Illusory Truth Effect",
-      "aliases": ["illusorischer Wahrheitseffekt", "Reiterationseffekt"],
-      "usage": "Wahrheitseffekt als lesbarer Primärbegriff; englischen Namen als Alias behalten.",
-      "caution": "Befunde zu prüfbaren Aussagen nicht automatisch auf jede Meinung übertragen."
-    },
-    {
-      "id": "sunk-cost-effect",
-      "de": "Sunk-Cost-Effekt",
-      "en": "Sunk Cost Effect",
-      "aliases": ["Effekt der versunkenen Kosten"],
-      "usage": "Sunk-Cost-Effekt als gängiger Primärbegriff; deutsche Erklärung beim ersten Auftreten ergänzen.",
-      "caution": "Nicht mit Eskalation des Commitments gleichsetzen; versunkene Kosten sind ein möglicher Treiber, nicht die gesamte Eskalationsdynamik."
-    },
-    {
-      "id": "status-quo-bias",
-      "de": "Status-quo-Verzerrung",
-      "en": "Status Quo Bias",
-      "aliases": ["Tendenz zum Status quo"],
-      "usage": "Status-quo-Verzerrung als Primärbegriff.",
-      "caution": "Reale Wechselkosten oder Unsicherheit können das Beibehalten rational machen."
-    },
-    {
-      "id": "framing-effect",
-      "de": "Framing-Effekt",
-      "en": "Framing Effect",
-      "aliases": ["Rahmungseffekt"],
-      "usage": "Framing-Effekt als Primärbegriff, Rahmungseffekt als deutscher Alias.",
-      "caution": "Nicht jede Wirkung von Sprache ist ein Framing-Effekt im experimentellen Sinn."
-    },
-    {
-      "id": "overconfidence",
-      "de": "Selbstüberschätzung",
-      "en": "overconfidence",
-      "aliases": ["Overconfidence"],
-      "usage": "Selbstüberschätzung in allgemein verständlichen Texten; spezifische Overconfidence-Maße präzise benennen.",
-      "caution": "Overestimation, overplacement und overprecision nicht automatisch zusammenwerfen."
-    },
-    {
-      "id": "survivorship-bias",
-      "de": "Überlebenden-Verzerrung",
-      "en": "Survivorship Bias",
-      "aliases": ["Survivorship Bias"],
-      "usage": "Deutschen Primärbegriff mit englischem Alias für Auffindbarkeit kombinieren.",
-      "caution": "Nur verwenden, wenn fehlende oder ausgeschiedene Fälle die sichtbare Stichprobe systematisch verzerren."
-    }
+    {"id":"cognitive-bias","de":"kognitive Verzerrung","en":"cognitive bias","aliases":["kognitiver Bias","Denkfehler"],"usage":"Primärer Oberbegriff in Navigation, Definitionen und Metadaten.","caution":"Denkfehler ist verständlicher, aber enger und wertender. Nicht jede Heuristik oder Verzerrung bedeutet automatisch eine falsche Entscheidung."},
+    {"id":"heuristic","de":"Heuristik","en":"heuristic","aliases":["mentale Abkürzung","Faustregel"],"usage":"Heuristik als Fachbegriff; mentale Abkürzung oder Faustregel nur erklärend.","caution":"Heuristiken sparen Aufwand und können nützlich sein. Nicht als Synonym für Denkfehler verwenden."},
+    {"id":"debiasing","de":"Debiasing","en":"debiasing","aliases":["Verringerung kognitiver Verzerrungen"],"usage":"Debiasing kann in forschungsnahen Texten stehen; in UI und Alltagssprache lieber konkrete Technik benennen.","caution":"Nicht versprechen, eine Verzerrung vollständig auszuschalten."},
+    {"id":"bias-mitigation","de":"Maßnahmen zur Verringerung von Verzerrungen","en":"bias mitigation","aliases":["Gegenmaßnahme"],"usage":"Für systemische oder organisatorische Maßnahmen. Bei einzelnen Handlungen bevorzugt Denkwerkzeug oder praktische Technik.","caution":"Mitigation beschreibt Risikoreduktion, nicht garantierte Beseitigung."},
+    {"id":"intervention","de":"Intervention","en":"intervention","aliases":["Maßnahme"],"usage":"Intervention in Forschungszusammenhängen; Maßnahme in allgemeineren Texten.","caution":"Keine Wirksamkeit suggerieren, wenn nur eine plausible Technik beschrieben wird."},
+    {"id":"decision-making","de":"Entscheidungsfindung","en":"decision-making","aliases":["Entscheiden"],"usage":"Entscheidungsfindung in erklärenden Texten; entscheiden in direkter UX-Sprache.","caution":"Nominalstil vermeiden, wenn ein Verb klarer ist."},
+    {"id":"evidence","de":"Evidenz","en":"evidence","aliases":["Belege"],"usage":"Evidenz für den Forschungsstand; Belege für konkrete Informationen oder Quellen.","caution":"Evidenz nicht automatisch mit Beweis übersetzen."},
+    {"id":"confidence","de":"subjektive Sicherheit","en":"confidence","aliases":["Sicherheit"],"usage":"Subjektive Sicherheit bei Urteilen; statistische Konfidenz nur im statistischen Kontext.","caution":"Confidence ist kontextabhängig und darf nicht mechanisch als Konfidenz übersetzt werden."},
+    {"id":"uncertainty","de":"Unsicherheit","en":"uncertainty","aliases":[],"usage":"Bevorzugter Begriff für epistemische oder prognostische Unsicherheit.","caution":"Unsicherheit sichtbar lassen; may, can und conditional claims nicht verstärken."},
+    {"id":"probability","de":"Wahrscheinlichkeit","en":"probability","aliases":[],"usage":"Standardbegriff für probabilistische Aussagen.","caution":"Wahrscheinlichkeit, Häufigkeit und Risiko nicht ohne Grund gleichsetzen."},
+    {"id":"confirmation-bias","de":"Bestätigungsfehler","en":"Confirmation Bias","aliases":["Bestätigungsverzerrung"],"usage":"Bestätigungsfehler als primärer Seitentitel; englischer Name und Bestätigungsverzerrung als Suchalias.","caution":"Nicht auf das Lesen zustimmender Nachrichten reduzieren."},
+    {"id":"anchoring-effect","de":"Ankereffekt","en":"Anchoring Effect","aliases":["Anchoring Bias"],"usage":"Ankereffekt als etablierter deutscher Primärbegriff.","caution":"Ankerheuristik kann als verwandter Mechanismus vorkommen, ist aber nicht immer ein exaktes Synonym."},
+    {"id":"availability-heuristic","de":"Verfügbarkeitsheuristik","en":"Availability Heuristic","aliases":["Verfügbarkeitsfehler"],"usage":"Verfügbarkeitsheuristik als Primärbegriff; Verfügbarkeitsfehler nur als Suchvariante.","caution":"Die Heuristik ist nicht automatisch ein Fehler."},
+    {"id":"hindsight-bias","de":"Rückschaufehler","en":"Hindsight Bias","aliases":[],"usage":"Rückschaufehler als etablierter deutscher Begriff.","caution":"Nicht jede Erklärung nach einem Ergebnis ist rückschauverzerrt."},
+    {"id":"illusory-truth-effect","de":"Wahrheitseffekt","en":"Illusory Truth Effect","aliases":["illusorischer Wahrheitseffekt","Reiterationseffekt"],"usage":"Wahrheitseffekt als lesbarer Primärbegriff; englischen Namen als Alias behalten.","caution":"Befunde zu prüfbaren Aussagen nicht automatisch auf jede Meinung übertragen."},
+    {"id":"sunk-cost-effect","de":"Sunk-Cost-Effekt","en":"Sunk Cost Effect","aliases":["Effekt der versunkenen Kosten"],"usage":"Sunk-Cost-Effekt als gängiger Primärbegriff; deutsche Erklärung beim ersten Auftreten ergänzen.","caution":"Nicht mit Eskalation des Commitments gleichsetzen; versunkene Kosten sind ein möglicher Treiber, nicht die gesamte Eskalationsdynamik."},
+    {"id":"status-quo-bias","de":"Status-quo-Verzerrung","en":"Status Quo Bias","aliases":["Tendenz zum Status quo"],"usage":"Status-quo-Verzerrung als Primärbegriff.","caution":"Reale Wechselkosten oder Unsicherheit können das Beibehalten rational machen."},
+    {"id":"framing-effect","de":"Framing-Effekt","en":"Framing Effect","aliases":["Rahmungseffekt"],"usage":"Framing-Effekt als Primärbegriff, Rahmungseffekt als deutscher Alias.","caution":"Nicht jede Wirkung von Sprache ist ein Framing-Effekt im experimentellen Sinn."},
+    {"id":"overconfidence","de":"Selbstüberschätzung","en":"overconfidence","aliases":["Overconfidence"],"usage":"Selbstüberschätzung in allgemein verständlichen Texten; spezifische Overconfidence-Maße präzise benennen.","caution":"Overestimation, overplacement und overprecision nicht automatisch zusammenwerfen."},
+    {"id":"survivorship-bias","de":"Überlebenden-Verzerrung","en":"Survivorship Bias","aliases":["Survivorship Bias"],"usage":"Deutschen Primärbegriff mit englischem Alias für Auffindbarkeit kombinieren.","caution":"Nur verwenden, wenn fehlende oder ausgeschiedene Fälle die sichtbare Stichprobe systematisch verzerren."},
+    {"id":"planning-fallacy","de":"Planungsfehlschluss","en":"Planning fallacy","aliases":["Planungsfehler"],"usage":"Planungsfehlschluss als Primärbegriff; Planning Fallacy als Suchalias behalten.","caution":"Eine Terminüberschreitung beweist den Planungsfehlschluss nicht. Scope, Abhängigkeiten, Anreize und echte Ausnahmen separat prüfen."},
+    {"id":"outcome-bias","de":"Ergebnisverzerrung","en":"Outcome bias","aliases":["Outcome Bias","Ergebnisfehler"],"usage":"Ergebnisverzerrung als verständlicher Primärbegriff.","caution":"Prozessqualität mit damaliger Information und späteres Ergebnis getrennt bewerten."},
+    {"id":"automation-bias","de":"Automation Bias","en":"Automation bias","aliases":["Automatisierungsbias","Automatisierungsverzerrung"],"usage":"Automation Bias bleibt als Primärbegriff; deutsche Varianten dienen Suche und Erklärung.","caution":"Automatisierung ist nicht grundsätzlich schädlich. Der relevante Prüfpunkt ist unangemessene Reliance bei falschen, unvollständigen oder schwer prüfbaren Empfehlungen."},
+    {"id":"loss-aversion","de":"Verlustaversion","en":"Loss aversion","aliases":["Loss Aversion"],"usage":"Verlustaversion als etablierter deutscher Primärbegriff.","caution":"Keine universelle Regel verwenden, dass Verluste immer doppelt so stark wirken."},
+    {"id":"dunning-kruger-effect","de":"Dunning-Kruger-Effekt","en":"Dunning–Kruger effect","aliases":["Dunning Kruger Effekt"],"usage":"Eigenname bleibt erhalten; Erklärung auf Kalibrierung von Leistung und Selbsteinschätzung fokussieren.","caution":"Nicht als Personenetikett verwenden; die Evidenz betrifft aufgabenspezifische Fehlkalibrierung."},
+    {"id":"backfire-effect","de":"Backfire-Effekt","en":"Backfire effect","aliases":["Bumerang-Effekt bei Korrekturen"],"usage":"Backfire-Effekt als Primärbegriff mit kurzer Erklärung.","caution":"Nicht behaupten, dass Korrekturen normalerweise falsche Überzeugungen verstärken."}
   ]
 }
