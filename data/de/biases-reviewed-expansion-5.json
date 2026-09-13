@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "entries": [
+    {
+      "slug": "cognitive-bias-hungry-judge-effect",
+      "title": "Hungry-Judge-Effekt",
+      "englishTitle": "Hungry judge effect",
+      "aliases": ["Hungry Judge Effect"],
+      "searchTerms": ["hungrige Richter", "Essenspause Entscheidung", "parole food break"],
+      "summary": "Die bekannte Behauptung, Hunger mache Richter härter, ist stärker als das, was die berühmte Beobachtungsstudie direkt zeigen konnte.",
+      "trap": "Aus einem auffälligen Zeitmuster wird schnell eine einfache Kausalgeschichte. In der Studie wurden Hunger, Glukose, Müdigkeit und Stimmung jedoch nicht direkt gemessen.",
+      "evidence": "Die Studie von 2011 fand mehr günstige Entscheidungen früh in Sitzungen und nach Essenspausen. Weil Essen, Pause, Reihenfolge und weitere Faktoren vermischt waren, ist Hunger selbst nicht als Ursache identifiziert. Eine zeitnahe Kritik schlug Fallreihenfolge als alternative Erklärung vor; die Autoren antworteten mit Zusatzanalysen.",
+      "boundary": "Der Befund ist beobachtend und die populäre Hungererklärung umstritten. Er sollte nicht als allgemeines Gesetz oder Erklärung einer einzelnen Entscheidung verwendet werden.",
+      "actions": [
+        "Nutze den Effekt nicht als Diagnose einer einzelnen Entscheidungsperson.",
+        "Prüfe bei wiederholten wichtigen Entscheidungen Reihenfolge, Pausen, Arbeitslast und Fallzuweisung.",
+        "Miss Hunger separat, wenn genau eine Hungerhypothese getestet werden soll.",
+        "Trenne Essenszeit von Pause, Müdigkeit und Sequenzeffekten."
+      ]
+    }
+  ]
+}
