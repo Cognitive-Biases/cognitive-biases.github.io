@@ -1,0 +1,79 @@
+name: Localization quality
+
+on:
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'ai/**'
+      - 'skills/**'
+      - 'docs/localization*.md'
+      - 'docs/GERMAN*.md'
+      - 'docs/RUSSIAN*.md'
+      - 'index.html'
+      - 'assets/**'
+      - 'scripts/build-*.mjs'
+      - 'scripts/generate-*.mjs'
+      - 'scripts/enhance-*.mjs'
+      - 'scripts/apply-*.mjs'
+      - 'scripts/finalize-*.mjs'
+      - 'scripts/check-*-localization.mjs'
+      - 'scripts/check-*-skills.mjs'
+      - 'scripts/check-de-*.mjs'
+      - 'scripts/check-localization*.mjs'
+      - 'package.json'
+      - '.github/workflows/localization-quality.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'ai/**'
+      - 'skills/**'
+      - 'docs/localization*.md'
+      - 'docs/GERMAN*.md'
+      - 'docs/RUSSIAN*.md'
+      - 'index.html'
+      - 'assets/**'
+      - 'scripts/build-*.mjs'
+      - 'scripts/generate-*.mjs'
+      - 'scripts/enhance-*.mjs'
+      - 'scripts/apply-*.mjs'
+      - 'scripts/finalize-*.mjs'
+      - 'scripts/check-*-localization.mjs'
+      - 'scripts/check-*-skills.mjs'
+      - 'scripts/check-de-*.mjs'
+      - 'scripts/check-localization*.mjs'
+      - 'package.json'
+      - '.github/workflows/localization-quality.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  localization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Check localization scripts syntax
+        run: |
+          node --check scripts/check-localization.mjs
+          node --check scripts/check-localization-impact.mjs
+      - name: Build localized surfaces
+        run: npm run prepare:data && npm run build:site
+      - name: Existing locale quality gates
+        run: |
+          npm run check:de
+          npm run check:french-localization
+          npm run check:french-skills
+          npm run check:portuguese-localization
+      - name: Shared localization contract
+        run: npm run check:localization
+      - name: Pull-request localization impact
+        if: github.event_name == 'pull_request'
+        run: npm run check:localization-impact -- --base=origin/${{ github.base_ref }}
