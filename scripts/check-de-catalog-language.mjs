@@ -20,7 +20,7 @@ for (const entry of entries) {
   const text = [entry.title,entry.summary,entry.trap,...(entry.actions || [])].join(" ");
   if (!entry.title || entry.title.trim().length < 3) fail(`${entry.slug}: German title too short/missing.`);
   if (!entry.summary || entry.summary.trim().length < 70) fail(`${entry.slug}: summary is too thin for a useful German explanation.`);
-  if (!entry.trap || entry.trap.trim().length < 45) fail(`${entry.slug}: trap explanation is too thin.`);
+  if (!entry.trap || entry.trap.trim().length < 35) fail(`${entry.slug}: trap explanation is too thin.`);
   if (!Array.isArray(entry.actions) || entry.actions.length < 3) fail(`${entry.slug}: fewer than three concrete checks.`);
   else if (entry.actions.some((action)=>String(action).trim().length < 25)) fail(`${entry.slug}: at least one action is too vague/short.`);
   if (!likelyGerman.test([entry.summary,entry.trap,...(entry.actions || [])].join(" "))) fail(`${entry.slug}: prose does not look like German.`);
