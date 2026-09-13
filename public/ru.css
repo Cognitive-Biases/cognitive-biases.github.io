@@ -1,0 +1,9 @@
+html[lang="ru"] .site-header nav{flex-wrap:wrap}
+html[lang="ru"] .ru-filter{display:grid;gap:.85rem;margin-top:1rem}
+html[lang="ru"] .ru-filter label{max-width:52rem}
+html[lang="ru"] .ru-filter input[type="search"]{box-sizing:border-box;width:min(100%,52rem);min-height:3rem;padding:.72rem .9rem;border:2px solid var(--ink);background:#fff;color:var(--ink);font:inherit;font-weight:700;border-radius:0}
+html[lang="ru"] .ru-filter input[type="search"]:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+html[lang="ru"] [data-ru-filter-item][hidden],html[lang="ru"] [data-ru-filter-empty][hidden]{display:none!important}
+html[lang="ru"] .page-utility__actions{flex-wrap:wrap}
+html[lang="ru"] .evidence-sources span{display:inline}
+@media (max-width:760px){html[lang="ru"] .site-header{align-items:flex-start}html[lang="ru"] .site-header nav{gap:.55rem}html[lang="ru"] .page-utility{align-items:flex-start}}
