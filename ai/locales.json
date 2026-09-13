@@ -1,11 +1,11 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "status": "experimental-project-extension",
   "scope": "https://cognitive-biases.github.io/",
   "canonicalLanguage": "en",
   "fallbackLanguage": "en",
-  "humanInterfaceLanguages": ["en", "fr"],
-  "agentRoutingLanguages": ["en", "de", "ru", "fr"],
+  "humanInterfaceLanguages": ["en", "fr", "pt-BR"],
+  "agentRoutingLanguages": ["en", "de", "ru", "fr", "pt-BR"],
   "locales": [
     {
       "language": "en",
@@ -32,6 +32,16 @@
       "llms": "https://cognitive-biases.github.io/fr/llms.txt",
       "human": "https://cognitive-biases.github.io/fr/",
       "data": "https://cognitive-biases.github.io/fr/data/index.json"
+    },
+    {
+      "language": "pt-BR",
+      "label": "Português (Brasil)",
+      "status": "reviewed-partial-human-interface",
+      "llms": "https://cognitive-biases.github.io/pt-br/llms.txt",
+      "human": "https://cognitive-biases.github.io/pt-br/",
+      "data": "https://cognitive-biases.github.io/pt-br/data/index.json",
+      "agentSkills": "https://cognitive-biases.github.io/pt-br/data/agent-skills.json",
+      "coverage": "reviewed-subset-of-biases-full-techniques-decision-skills-and-workflow-agent-skills"
     }
   ],
   "selection": {
@@ -45,7 +55,7 @@
     "translateDatasetIdentifiers": false,
     "translateJsonFieldNames": false,
     "localizedSurfaceRole": "status-dependent",
-    "humanReviewedLanguages": ["fr"]
+    "humanReviewedLanguages": ["fr", "pt-BR"]
   },
   "discovery": {
     "htmlRelation": "describedby",
