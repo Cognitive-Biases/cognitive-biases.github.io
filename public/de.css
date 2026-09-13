@@ -1,0 +1,11 @@
+html[lang="de"] .site-header nav{flex-wrap:wrap}
+html[lang="de"] .de-filter{display:grid;gap:.85rem;margin-top:1rem}
+html[lang="de"] .de-filter label{max-width:52rem}
+html[lang="de"] .de-filter input[type="search"]{box-sizing:border-box;width:min(100%,52rem);min-height:3rem;padding:.72rem .9rem;border:2px solid var(--ink);background:#fff;color:var(--ink);font:inherit;font-weight:700;border-radius:0}
+html[lang="de"] .de-filter input[type="search"]:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+html[lang="de"] [data-de-filter-item][hidden],html[lang="de"] [data-de-filter-empty][hidden]{display:none!important}
+html[lang="de"] .de-aliases{overflow-wrap:anywhere}
+html[lang="de"] .de-language-note{max-width:70ch}
+html[lang="de"] .practice-set-card h2,html[lang="de"] .practice-set-card h3{overflow-wrap:anywhere;hyphens:auto}
+html[lang="de"] .site-header a,html[lang="de"] .footer-links a{overflow-wrap:anywhere}
+@media (max-width:760px){html[lang="de"] .site-header{align-items:flex-start}html[lang="de"] .site-header nav{gap:.55rem}html[lang="de"] .de-filter input[type="search"]{width:100%}}
