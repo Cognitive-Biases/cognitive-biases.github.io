@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "locale": "it",
+  "reviewedAt": "2026-09-13",
+  "siteName": "Cognitive Biases",
+  "skipToContent": "Vai al contenuto",
+  "navigation": {
+    "home": "Home",
+    "explore": "Esplora i bias",
+    "techniques": "Tecniche",
+    "skills": "Competenze decisionali",
+    "agentSkills": "Skill per agenti IA",
+    "english": "English",
+    "italian": "Italiano"
+  },
+  "labels": {
+    "evidence": "Evidenze",
+    "practicalCheck": "Controllo pratico",
+    "examples": "Esempi",
+    "limits": "Limiti e cautele",
+    "techniques": "Tecniche utili",
+    "englishTerm": "Termine inglese",
+    "canonicalId": "ID canonico",
+    "reviewStatus": "Stato della localizzazione",
+    "reviewed": "Revisionato",
+    "sourceRelease": "Release sorgente",
+    "relatedBiases": "Bias correlati",
+    "whenToUse": "Quando usarla",
+    "actions": "Come esercitarla",
+    "expectedOutcome": "Risultato atteso",
+    "machineReadable": "Dati leggibili dalle macchine"
+  },
+  "notices": {
+    "evidenceBoundary": "La localizzazione non modifica la forza delle evidenze. Stato, fonti, limiti e provenienza scientifica restano definiti dalla base canonica in inglese.",
+    "educational": "Contenuto educativo su giudizio e processo decisionale. Non sostituisce consulenza medica, legale, finanziaria o psicologica.",
+    "partialCatalog": "La versione italiana pubblica solo le schede sui bias che hanno superato una revisione editoriale in italiano. Il catalogo canonico inglese è più ampio.",
+    "techniqueBoundary": "Una tecnica struttura il ragionamento: non garantisce una decisione corretta e non elimina i bias."
+  },
+  "actions": {
+    "openEnglish": "Apri la scheda canonica in inglese",
+    "browseAll": "Esplora i bias revisionati in italiano",
+    "browseTechniques": "Vedi le tecniche pratiche",
+    "browseSkills": "Allena le competenze decisionali",
+    "browseAgentSkills": "Usa le skill con agenti IA",
+    "backToExplorer": "Torna ai bias",
+    "backToTechniques": "Torna alle tecniche",
+    "backToSkills": "Torna alle competenze"
+  },
+  "search": {
+    "label": "Cerca",
+    "placeholder": "Cerca per bias, situazione o termine inglese",
+    "noResults": "Nessun risultato revisionato in italiano corrisponde alla ricerca. Consulta anche il catalogo canonico in inglese."
+  }
+}
