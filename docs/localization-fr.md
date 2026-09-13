@@ -1,146 +1,119 @@
 # French localization guide
 
-French is a reviewed language layer. English remains the canonical source for identifiers, evidence status, sources, review dates and relations.
+French is a reviewed human-language layer. English remains canonical for identifiers, schemas, evidence status, sources, review dates and relations.
 
-The goal is not to translate every English sentence. The goal is to give a French-speaking reader a natural, useful and evidence-aware experience without changing the scientific strength of the canonical content.
+The published-bias catalog has complete French coverage. Translation review and evidence review are separate states: good French wording must never imply that a construct has stronger scientific support than the canonical record provides.
 
 ## Voice
 
 Use contemporary French at roughly B2 level when possible.
 
-- Prefer short, direct sentences.
-- Use `vous` when the reader is addressed directly.
+- Prefer short, direct sentences and `vous` for practical prompts.
 - Prefer a verb to an abstract noun when the meaning stays the same.
-- Keep the tone semi-formal and practical.
+- Keep the tone semi-formal, useful and calm.
 - Avoid bureaucratic phrasing, marketing language and academic ornament.
 - Do not use a cognitive bias as a diagnosis of a person.
-- Do not turn a conditional research result into a universal rule.
+- Do not turn a conditional or disputed result into a universal rule.
 
-Prefer:
-
-> Vérifiez ce qui pourrait contredire votre idée.
-
-Avoid unnecessarily formal phrasing such as:
-
-> Procédez à une recherche d'éléments susceptibles d'invalider votre hypothèse.
+Prefer: `Vérifiez ce qui pourrait contredire votre idée.`
 
 ## Product terminology
 
-Use **Technique** as the default label for a practical intervention.
+Use **Technique** as the default label for a practical intervention and **Que faire ?** as the action heading. Do not use `hack` as the main French product term.
 
-Use **Que faire ?** as the action heading on bias pages.
+Important preferred terms include:
 
-Do not use `hack` as the main French product term. It is familiar in some technology contexts, but it sounds less credible for evidence-aware decision guidance and does not describe the actual product well.
+| English | Preferred French |
+| --- | --- |
+| cognitive bias | biais cognitif |
+| heuristic | heuristique |
+| decision-making | prise de décision |
+| evidence | preuves / état des preuves |
+| uncertainty | incertitude |
+| framing effect | effet de cadrage |
+| anchoring effect | effet d'ancrage |
+| confirmation bias | biais de confirmation |
+| sunk-cost bias | biais des coûts irrécupérables |
+| hindsight bias | biais rétrospectif |
+| availability heuristic | heuristique de disponibilité |
+| overconfidence | excès de confiance |
+| survivorship bias | biais de survivance |
+| status quo bias | biais du statu quo |
+| loss aversion | aversion à la perte |
+| outcome bias | biais de résultat |
+| planning fallacy | biais de planification |
+| illusory truth effect | effet de vérité illusoire |
+| escalation of commitment | escalade d'engagement |
 
-Use **contre-mesure** only when the context genuinely describes a defensive measure. Use **astuce** only for lightweight advice. Neither should replace **Technique** globally.
-
-## Core terms
-
-| English | Preferred French | Notes |
-| --- | --- | --- |
-| cognitive bias | biais cognitif | Standard umbrella term. |
-| heuristic | heuristique | Keep when it names a judgment shortcut or an established construct. |
-| debiasing | réduction de l'effet d'un biais / technique de réduction du biais | Avoid `débiaisage` in normal UI. It can appear once as a technical alias when useful. |
-| decision-making | prise de décision | Use `décision` when the shorter form is enough. |
-| cognitive shortcut | raccourci cognitif | Explain rather than implying that every heuristic is an error. |
-| intervention | intervention / technique | Prefer `technique` for the product UI. |
-| evidence | preuves / état des preuves / ce que montrent les études | Do not use `preuve` to imply certainty when the evidence is mixed. |
-| uncertainty | incertitude | Keep it visible. |
-| confidence | niveau de confiance / degré de certitude | Choose according to context. |
-| framing | cadrage | Use `effet de cadrage` for the construct. |
-| anchoring | ancrage | Primary entity label: `Effet d'ancrage`. |
-| confirmation bias | biais de confirmation | Established French term. |
-| sunk cost | coût irrécupérable | `Biais des coûts irrécupérables` is useful for discovery, but it is not automatically identical to escalation of commitment. |
-| hindsight bias | biais rétrospectif | Established French term. |
-| availability heuristic | heuristique de disponibilité | `Biais de disponibilité` may be kept as a search alias. |
-| overconfidence | excès de confiance | Prefer this to an invented scientific-sounding calque. |
-| survivorship bias | biais du survivant | `Biais de survivance` can be retained as a discovery alias if the canonical entry is localized later. |
-| status quo bias | biais du statu quo | Keep `statu quo` unchanged. |
-| social proof | preuve sociale | Popular term; in scientific contexts check whether the canonical construct is actually social influence rather than treating the terms as interchangeable. |
-| loss aversion | aversion à la perte | Established term. |
-| outcome bias | biais de résultat | Keep distinct from hindsight bias. |
-| planning fallacy | biais de planification | `Erreur de planification` can be a secondary alias. |
-| illusory truth effect | effet de vérité illusoire | Preferred French term; `effet de vérité` and `effet de réitération` are useful aliases. |
-| escalation of commitment | escalade d'engagement | `Biais d'engagement` is an established variant. Do not collapse it into sunk-cost bias without explaining the difference. |
+Do not collapse nearby constructs. In particular, escalation of commitment and sunk-cost bias remain separate canonical entities even when they are linked for discovery.
 
 ## Bias names are entity labels
 
-A localized label does not create a new entity.
+A localized label does not create a new entity. The canonical ID remains unchanged in structured data and machine-readable datasets. French aliases improve discovery; they do not replace the canonical identifier.
 
-Example:
+If there is no well-established French scientific name, prefer a clear descriptive label over an invented scientific-sounding calque. Keep the English name as an alias.
 
-- canonical ID: `cognitive-bias-confirmation-bias`
-- English label: `Confirmation Bias`
-- French label: `Biais de confirmation`
-- French URL label: `biais-de-confirmation`
+Non-standard or domain-specific canonical entries must stay visibly bounded in French. A translation may say that an entry is a project label, measurement concept or disputed finding when that is important to prevent overclaiming.
 
-The canonical ID remains unchanged in structured data. French aliases are discovery aids, not new entities.
+## Practical content
 
-## Practical techniques
+A French bias page should normally provide:
 
-A French technique should answer five questions quickly:
+1. a natural French entity label;
+2. a concise definition;
+3. a practical question that can change a decision process;
+4. at least one realistic example;
+5. a visible limitation or evidence boundary;
+6. a link to a relevant technique when one is genuinely applicable.
 
-1. **Quand l'utiliser** — what situation should trigger the technique?
-2. **À essayer** — what concrete steps should the reader take?
-3. **Exemple** — what does this look like in a normal decision?
-4. **Pourquoi cela peut aider** — what reasoning problem does the procedure address?
-5. **Limites** — where can it fail or mislead?
+A French technique should answer: **Quand l'utiliser**, **À essayer**, **Exemple**, **Pourquoi cela peut aider**, and **Limites**.
 
-A technique is a structured check, not a guaranteed cure. Translate this boundary explicitly.
+A technique is a structured check, not a guaranteed cure.
 
 ## Examples
 
-Prefer situations that work naturally for French-speaking readers without requiring country-specific knowledge:
+Prefer situations that work naturally for French-speaking readers without unnecessary country-specific references: work, recruitment, salary, purchases, subscriptions, projects, investments, meetings, media, education, team decisions and AI-assisted work.
 
-- work and project decisions;
-- recruitment and vendor selection;
-- salaries and negotiations;
-- online purchases and subscriptions;
-- investments and forecasts;
-- meetings and team decisions;
-- information and media;
-- education;
-- AI-assisted work.
-
-Do not add a France-specific example merely to make a page look localized. Localize only when the example becomes clearer or more natural.
+Do not add a France-specific detail merely to make a page look localized.
 
 ## Search and aliases
 
-A French page can include the English term in search aliases and once near the title when it improves recognition.
+Search must resolve both French labels and useful English terms. A query such as `confirmation bias français` should reach the same canonical entity as `biais de confirmation`.
 
-Do not repeat bilingual labels mechanically throughout the page.
+Do not repeat bilingual labels mechanically throughout the page. Show the English term near the title and expose aliases in search/structured data where useful.
 
-Queries such as `confirmation bias français`, `anchoring effect français`, or a problem statement can resolve to the French entity page, while the canonical identifier remains English.
+## Coverage and fallback
 
-## Fallback
+Every currently `published` canonical bias must have a reviewed French translation entry. The French localization check fails when a published canonical bias has no French entry.
 
-Do not silently render English body text inside a page declared as French.
+Do not silently render English body text inside a page declared as French. If a future canonical bias is published without French coverage, CI must fail rather than publishing a mixed-language fallback.
 
-If a reviewed French page does not exist:
+English remains available as the canonical equivalent through the language switch and reciprocal `hreflang`.
 
-- say that the French version is not available yet;
-- provide an explicit link to the canonical English library or page;
-- keep the language of the fallback link clear.
+## Translation review vs evidence review
 
-This prevents a partial translation from looking complete to people, search engines or agents.
+These are different claims:
+
+- **translation reviewed** means the French wording, terminology and entity mapping were checked;
+- **evidence reviewed** means a canonical evidence review exists for that construct.
+
+A page without a dedicated evidence review must say so explicitly. It must not invent a local evidence class, local source list or local review date.
 
 ## SEO and AEO
 
-Every published French page should have:
+Every published French bias page must have:
 
 - `<html lang="fr">`;
 - a French title and meta description;
 - a self-canonical French URL;
-- reciprocal `hreflang="fr"` and `hreflang="en"` where an equivalent English page exists;
-- `hreflang="x-default"` pointing to the canonical English equivalent;
+- reciprocal `hreflang="fr"`, `hreflang="en"` and `x-default`;
 - structured data with `inLanguage: "fr"`;
-- the canonical English/internal identifier when the page represents an entity;
-- useful aliases in structured data without changing the canonical ID.
+- the canonical English/internal identifier;
+- French and useful English aliases for discovery;
+- inclusion in the sitemap and French machine-readable manifest.
 
-Machine-readable fields and identifiers stay in English. Localization changes values, not schema semantics.
+Machine-readable field names and identifiers stay in English. Localization changes values, not schema semantics.
 
 ## Review rule
 
-A French translation must be reviewed again when evidence-sensitive canonical content changes.
-
-Never make the French version more certain than the English canonical record. Never invent a French evidence status, source, relation or review date.
+A French translation must be reviewed again when evidence-sensitive canonical wording changes materially. Never make the French version more certain than the English canonical record.

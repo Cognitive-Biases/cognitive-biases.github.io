@@ -8,60 +8,28 @@
     "whyText": "Une fiche utile ne vous dit pas que vous êtes « biaisé ». Elle vous aide à repérer un risque de raisonnement, à chercher les informations qui manquent et à tester une autre façon de décider.",
     "startTitle": "Commencez par ce que vous savez déjà.",
     "journeys": [
-      {
-        "title": "Je connais le biais",
-        "text": "Cherchez son nom français ou anglais et ouvrez une fiche relue.",
-        "href": "/fr/explorer/",
-        "cta": "Explorer les fiches"
-      },
-      {
-        "title": "J'ai un problème concret",
-        "text": "Partez d'une situation : un projet qui continue par inertie, un premier chiffre qui influence l'estimation, ou une idée qu'on ne teste plus vraiment.",
-        "href": "/fr/explorer/#problemes",
-        "cta": "Partir du problème"
-      },
-      {
-        "title": "Je veux mieux décider",
-        "text": "Utilisez une procédure courte : estimation indépendante, journal de décision, classe de référence, revue contradictoire et plus encore.",
-        "href": "/fr/techniques/",
-        "cta": "Voir les techniques"
-      },
-      {
-        "title": "Je connais le terme anglais",
-        "text": "La recherche comprend les noms anglais utiles, par exemple Confirmation Bias ou Anchoring Effect.",
-        "href": "/fr/explorer/",
-        "cta": "Rechercher un terme"
-      }
+      {"title": "Je connais le biais", "text": "Cherchez son nom français ou anglais et ouvrez sa fiche française.", "href": "/fr/explorer/", "cta": "Explorer les fiches"},
+      {"title": "J'ai un problème concret", "text": "Partez d'une situation : un projet qui continue par inertie, un premier chiffre qui influence l'estimation, ou une idée qu'on ne teste plus vraiment.", "href": "/fr/explorer/#problemes", "cta": "Partir du problème"},
+      {"title": "Je veux mieux décider", "text": "Utilisez une procédure courte : estimation indépendante, journal de décision, classe de référence, revue contradictoire et plus encore.", "href": "/fr/techniques/", "cta": "Voir les techniques"},
+      {"title": "Je connais le terme anglais", "text": "La recherche comprend les noms anglais utiles, par exemple Confirmation Bias ou Anchoring Effect, et les relie au même concept canonique.", "href": "/fr/explorer/", "cta": "Rechercher un terme"}
     ],
     "problemTitle": "Vous n'avez pas besoin de connaître le nom du biais.",
     "problems": [
-      {
-        "question": "Je continue ce projet surtout parce que j'y ai déjà beaucoup investi.",
-        "canonicalId": "logical-fallacy-escalation-of-commitment"
-      },
-      {
-        "question": "Je cherche surtout ce qui confirme déjà mon idée.",
-        "canonicalId": "cognitive-bias-confirmation-bias"
-      },
-      {
-        "question": "Le premier prix, score ou délai influence toute l'estimation.",
-        "canonicalId": "cognitive-bias-anchoring-effect"
-      },
-      {
-        "question": "Un exemple récent ou frappant me semble représenter tous les cas.",
-        "canonicalId": "heuristic-bias-availability-bias"
-      }
+      {"question": "Je continue ce projet surtout parce que j'y ai déjà beaucoup investi.", "canonicalId": "logical-fallacy-escalation-of-commitment"},
+      {"question": "Je cherche surtout ce qui confirme déjà mon idée.", "canonicalId": "cognitive-bias-confirmation-bias"},
+      {"question": "Le premier prix, score ou délai influence toute l'estimation.", "canonicalId": "cognitive-bias-anchoring-effect"},
+      {"question": "Un exemple récent ou frappant me semble représenter tous les cas.", "canonicalId": "heuristic-bias-availability-bias"}
     ],
     "evidenceTitle": "Les limites font partie de la réponse.",
-    "evidenceText": "Le site distingue les concepts bien étayés, les effets dépendants du contexte et les entrées encore peu revues. La version française reprend ce niveau de prudence au lieu de transformer chaque règle en certitude."
+    "evidenceText": "Toutes les fiches publiées ont une version française relue. Cela ne signifie pas que tous les concepts ont le même niveau de preuves : la revue linguistique et la revue scientifique sont deux statuts distincts, affichés séparément."
   },
   "explorer": {
     "eyebrow": "Bibliothèque française",
     "title": "Explorer les biais cognitifs en français.",
-    "lede": "Recherchez par nom français, nom anglais ou situation. Cette première version privilégie un petit ensemble de fiches relues et reliées à des techniques concrètes.",
+    "lede": "Recherchez l'ensemble des biais publiés par nom français, nom anglais ou situation. Chaque fiche garde le même identifiant canonique que la version anglaise et distingue traduction relue, limites du concept et état des preuves.",
     "problemTitle": "Partir d'un problème courant",
-    "coverageTitle": "Pourquoi seulement quelques fiches ?",
-    "coverageText": "La bibliothèque anglaise reste la source canonique et contient beaucoup plus d'entrées. Nous publions une fiche française lorsque son sens, ses limites et sa terminologie ont été relus. Les fiches manquantes ne sont pas remplacées silencieusement par du texte anglais."
+    "coverageTitle": "Toute la bibliothèque publiée, sans faux niveau de certitude.",
+    "coverageText": "Chaque biais actuellement publié possède une fiche française. Lorsqu'une revue de preuves canonique existe, elle est reliée et résumée. Sinon, la fiche le dit explicitement : une traduction de qualité ne transforme pas une entrée peu étudiée en effet scientifique établi."
   },
   "techniques": {
     "eyebrow": "Outils de décision",
