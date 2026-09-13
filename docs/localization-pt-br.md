@@ -2,6 +2,8 @@
 
 The Brazilian Portuguese layer is a reviewed localization of the canonical English knowledge base. It is not a fork and it must not create independent scientific claims.
 
+Shared workflow and CI contract: [`localization.md`](./localization.md). The first-class terminology source is [`../data/glossary-pt-br.json`](../data/glossary-pt-br.json). This guide records locale-specific editorial choices; the structured glossary is the machine-readable terminology layer used by review tooling and agents.
+
 ## Scope
 
 The initial `pt-BR` release intentionally uses two coverage levels:
