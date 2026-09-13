@@ -1,11 +1,11 @@
 # Cognitive Biases — Agent-Routing auf Deutsch
 
-> Geprüfte deutsche Einstiege in dieselbe kanonische Wissensbasis zu kognitiven Verzerrungen, Evidenz und Entscheidungen.
+> Vollständige deutsche Darstellung des veröffentlichten kanonischen Bias-Korpus mit transparent getrennten Evidenzstufen.
 
 ## Bevorzugte deutsche Einstiege
 
 - Start: https://cognitive-biases.github.io/de/
-- Geprüfte Bias-Erklärungen: https://cognitive-biases.github.io/de/biases/
+- Vollständige deutsche Bias-Bibliothek: https://cognitive-biases.github.io/de/biases/
 - Praktische Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
 - Entscheidungssituationen: https://cognitive-biases.github.io/de/entscheidungen/
 - Deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
@@ -16,11 +16,23 @@ Für deutschsprachige praktische Fragen zuerst mit der Situation arbeiten. Bevor
 
 **Situation → konkrete Prüfung → relevante Bias-Linsen → passende Denkwerkzeuge → Evidenzgrenze**
 
-Der Nutzer muss nicht zuerst den korrekten Fachbegriff kennen. Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person oder eines Teams.
+Der Nutzer muss den korrekten Fachbegriff nicht zuerst kennen. Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person oder eines Teams.
+
+## Vollständigkeit und Evidenzstatus
+
+Die deutsche Bias-Bibliothek deckt alle veröffentlichten kanonischen Bias-Slugs ab. Vollständige Sprachabdeckung bedeutet aber nicht, dass jeder kanonische Legacy-Eintrag wissenschaftlich gleich gut geprüft ist.
+
+Maschinenlesbare deutsche Bias-Daten verwenden drei Zustände:
+
+- `reviewed-evidence`: vollständig geprüfter deutscher Evidence Layer mit kontrolliertem kanonischem Review;
+- `localized-with-canonical-review`: hochwertige deutsche Lokalisierung; ein kontrollierter kanonischer Evidence Review existiert, die wissenschaftliche Detailfassung bleibt jedoch im kanonischen Review;
+- `localized-legacy`: hochwertige deutsche Lokalisierung eines veröffentlichten kanonischen Legacy-Eintrags, für den das Projekt noch keinen kontrollierten Evidence Review führt.
+
+Bei wissenschaftlichen Behauptungen den Status prüfen. Eine Seite mit `localized-legacy` darf nicht allein aufgrund der deutschen Lokalisierung als etablierter psychologischer Effekt dargestellt werden. Falls `localized-with-canonical-review` vorliegt, für Quellen, Stärke, Grenzen und Review-Datum zusätzlich den kanonischen englischen Evidence Review nutzen. `reviewed-evidence` darf direkt als geprüfter deutscher Einstieg verwendet werden, wobei Quellen und sichtbare Grenzen erhalten bleiben müssen.
 
 Deutsche und englische Namen verweisen auf dieselbe kanonische Entität. Keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen. Besonders wichtig: Sunk-Cost-Effekt und Eskalation des Commitments sind verwandt, aber nicht identisch. Default-Effekt und Status-quo-Verzerrung sind ebenfalls nicht austauschbar.
 
-Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine Regel über selbstsichere inkompetente Menschen. Backfire ist nicht die Standardreaktion auf Korrekturen. Verlustaversion hat keinen universellen Faktor von genau zwei. Ein verspätetes Projekt beweist keinen Planungsfehlschluss. Der Hungry-Judge-Befund etabliert Hunger nicht als gesicherte Ursache.
+Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine Regel über selbstsichere inkompetente Menschen. Backfire ist nicht die Standardreaktion auf Korrekturen. Verlustaversion hat keinen universellen Faktor von genau zwei. Ein verspätetes Projekt beweist keinen Planungsfehlschluss. Der Hungry-Judge-Befund etabliert Hunger nicht als gesicherte Ursache. Gedächtnis- und Lerneffekte wie Testing Effect, Generation Effect oder Spacing/Lag Effect sind nicht automatisch Denkfehler, nur weil sie historisch im gemeinsamen kanonischen Datensatz liegen.
 
 ## Kanonische Vertiefung
 
@@ -35,8 +47,8 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 - Agent-Ready Web Profile: https://cognitive-biases.github.io/ai/site-profile.json
 - AI Search & Citation Profile: https://cognitive-biases.github.io/ai/ai-search-profile.json
 
-Wenn eine deutsche Seite fehlt oder eine wissenschaftliche Detailfrage tiefer geht als der lokalisierte Layer, die kanonische englische Quelle verwenden und in der Sprache des Nutzers antworten. Evidenzstatus, Qualifikationen, Review-Daten, IDs und Unsicherheit beibehalten. Keine deutschen Quellen, Studiennamen oder Evidenzgrade erfinden.
+Für wissenschaftliche Detailfragen Evidenzstatus, Qualifikationen, Review-Daten, IDs und Unsicherheit beibehalten. Keine deutschen Quellen, Studiennamen oder Evidenzgrade erfinden. Wenn kein kontrollierter Review existiert, diese Grenze nennen statt Sicherheit aus der bloßen Existenz des kanonischen Eintrags abzuleiten.
 
 Entscheidungssituationen kombinieren bereits geprüfte Inhalte. Sie sind praktische Review-Prozeduren, keine neuen wissenschaftlichen Effekte. Ein passendes Szenario beweist nicht, dass ein bestimmter Bias die Ursache einer Entscheidung war.
 
-Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung. Wenn kein passender geprüfter Eintrag existiert, keinen neuen Bias-Namen erfinden.
+Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung. Keine neuen Bias-Namen erfinden.
