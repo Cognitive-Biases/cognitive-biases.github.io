@@ -7,7 +7,18 @@
     {
       "slug": "ki-antwort-pruefen",
       "title": "Wenn KI überzeugend klingt",
-      "category": "KI & Recherche"
+      "category": "KI & Recherche",
+      "summary": "Ein flüssiger Text kann fertig wirken, bevor Quellen, Alternativen und Grenzen geprüft sind.",
+      "situation": "Du fragst ein System nach einer Empfehlung oder Studie. Die Antwort ist klar und bleibt auch nach Rückfragen ähnlich. Das fühlt sich wie Bestätigung an, obwohl die Antworten nicht unabhängig sein müssen.",
+      "checklist": [
+        "Schreibe bei wichtigen Fragen zuerst deine aktuelle Einschätzung oder einen eigenen Zahlenbereich auf.",
+        "Zerlege die Antwort in prüfbare Kernaussagen und ordne wichtigen Aussagen eine Quelle zu.",
+        "Öffne die Quellen und prüfe Population, Zeitraum, Messgröße und Stärke der Schlussfolgerung.",
+        "Suche mindestens eine plausible Alternative, die nicht vom ersten Frame abhängt.",
+        "Zähle unabhängige Quellen, nicht ähnlich klingende Antworten."
+      ],
+      "whyItHelps": "Der Ablauf trennt Antwort, Evidenz und Schlussfolgerung voneinander.",
+      "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert keinen Bias."
     }
   ]
 }
