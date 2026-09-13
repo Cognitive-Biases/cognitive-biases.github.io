@@ -32,3 +32,4 @@ for (const entry of publicDoc.entries || []) {
 await writeFile(dataPath, JSON.stringify(publicDoc, null, 2) + "\n");
 console.log(`German full-catalog provenance aligned: ${updated} editorial localization(s) linked to an existing canonical Evidence Review.`);
 await import("./finalize-de-catalog-disambiguation.mjs");
+await import("./generate-de-skill-library.mjs");

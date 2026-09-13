@@ -64,3 +64,4 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(`German full-catalog public check passed: ${entries.length}/${published.length} canonical pages; ${reviewed} reviewed-layer pages preserved; ${editorial} editorial localizations; ${canonicalReviewEditorial} editorial pages linked to canonical Evidence Reviews.`);
+await import("./check-de-skill-library.mjs");
