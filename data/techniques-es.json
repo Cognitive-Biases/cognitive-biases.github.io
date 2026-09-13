@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "locale": "es",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalSlug": "consider-the-opposite",
+      "localizedSlug": "considerar-la-hipotesis-opuesta",
+      "title": "Considerar la hipótesis opuesta",
+      "state": "reviewed",
+      "whenToUse": "Cuando la búsqueda de información empieza a servir sobre todo para apoyar una conclusión que ya prefieres.",
+      "steps": [
+        "Escribe tu conclusión actual en una frase.",
+        "Formula la alternativa plausible más sólida.",
+        "Enumera qué observaciones serían más probables si esa alternativa fuera cierta.",
+        "Busca esas observaciones antes de cerrar la decisión."
+      ],
+      "example": "Tu equipo ya prefiere a un proveedor. Antes de aprobarlo, formula la mejor razón por la que otra opción podría ser superior y busca datos capaces de distinguir realmente entre ambas.",
+      "whyItCanHelp": "Obliga a la explicación preferida a competir con una alternativa real, en lugar de acumular solo información compatible con ella.",
+      "limitations": "Una alternativa artificial o claramente débil aporta poco. La hipótesis opuesta debe ser genuinamente plausible.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "independent-estimate",
+      "localizedSlug": "estimacion-independiente",
+      "title": "Hacer una estimación independiente",
+      "state": "reviewed",
+      "whenToUse": "Antes de ver una estimación, un precio, una puntuación de IA o una recomendación que pueda convertirse en un ancla.",
+      "steps": [
+        "Oculta o retrasa el valor externo cuando sea posible.",
+        "Escribe tu propia estimación, preferiblemente como intervalo, junto con los supuestos principales.",
+        "Mira después el valor externo.",
+        "Si cambias tu estimación, anota qué nueva información justifica el cambio."
+      ],
+      "example": "Antes de abrir la oferta económica de un proveedor, estima un intervalo de valor a partir de tus necesidades, comparables y presupuesto. Solo entonces compáralo con el precio propuesto.",
+      "whyItCanHelp": "Conservas un punto de referencia construido sin la influencia directa del primer número presentado.",
+      "limitations": "Una estimación independiente también puede estar equivocada. Usa datos de referencia y explicita los supuestos cuando la decisión sea importante.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "reference-class-forecasting",
+      "localizedSlug": "prevision-por-clase-de-referencia",
+      "title": "Prever con una clase de referencia",
+      "state": "reviewed",
+      "whenToUse": "Para estimar plazos, presupuestos, adopción u otros resultados cuando existen casos comparables ya terminados.",
+      "steps": [
+        "Define con precisión qué quieres prever.",
+        "Reúne un conjunto relevante de casos comparables terminados.",
+        "Usa su distribución para construir un intervalo inicial.",
+        "Ajusta esa base solo por diferencias concretas que puedas justificar con evidencia."
+      ],
+      "example": "Para estimar una migración, empieza por las duraciones reales de varias migraciones comparables antes de añadir las particularidades del proyecto actual.",
+      "whyItCanHelp": "La vista externa reduce la dependencia del relato detallado que el equipo acaba de construir para su propio proyecto.",
+      "limitations": "Una clase de referencia mal elegida puede inducir a error. La similitud entre casos debe justificarse, no darse por supuesta.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "base-rate-check",
+      "localizedSlug": "comprobar-la-tasa-base",
+      "title": "Comprobar la tasa base",
+      "state": "reviewed",
+      "whenToUse": "Cuando una historia llamativa, un caso reciente o una excepción ocupa demasiado espacio en el juicio.",
+      "steps": [
+        "Formula el evento o resultado que intentas estimar.",
+        "Encuentra el denominador o conjunto de comparación adecuado.",
+        "Estima la tasa base antes de concentrarte en los detalles del caso actual.",
+        "Explica qué información específica del caso justifica apartarse de esa base."
+      ],
+      "example": "Después de leer una noticia espectacular sobre un incidente raro, comprueba cuántos incidentes ocurren realmente entre todos los casos comparables antes de actualizar tu estimación del riesgo.",
+      "whyItCanHelp": "Compara el ejemplo disponible con una frecuencia más amplia, en vez de tratar su facilidad de recuerdo como si fuera probabilidad.",
+      "limitations": "Una tasa base puede ser poco útil si la población de comparación está mal elegida o si el contexto ha cambiado de forma relevante.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "decision-journal",
+      "localizedSlug": "diario-de-decisiones",
+      "title": "Llevar un diario de decisiones",
+      "state": "reviewed",
+      "whenToUse": "Para previsiones importantes, decisiones de proyecto, revisiones de incidentes y juicios profesionales de los que quieras aprender después.",
+      "steps": [
+        "Anota la decisión y la fecha.",
+        "Registra la información disponible, tus supuestos y la incertidumbre.",
+        "Escribe qué tendría que ocurrir para hacerte cambiar de opinión.",
+        "Cuando conozcas el resultado, relee primero esa nota antes de sacar conclusiones."
+      ],
+      "example": "Antes de iniciar un proyecto, registra por qué lo eliges, qué riesgos ves y qué haría detener o modificar el plan. Revisa esa nota en la retrospectiva.",
+      "whyItCanHelp": "El diario conserva lo que realmente se sabía antes de que el resultado cambie el recuerdo de la decisión.",
+      "limitations": "Solo ayuda si se escribe antes del resultado y se consulta después. Un diario reconstruido a posteriori no recupera la incertidumbre original.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "red-team-review",
+      "localizedSlug": "revision-contradictoria",
+      "title": "Hacer una revisión contradictoria",
+      "state": "reviewed",
+      "whenToUse": "Antes de una aprobación, una selección de proveedor, un compromiso de roadmap o cualquier decisión colectiva importante.",
+      "steps": [
+        "Formula la opción preferida y su argumento más fuerte.",
+        "Pide a una persona o pequeño grupo que construya el mejor caso contra esa opción.",
+        "Exige modos de fallo concretos y evidencia que falta, no una crítica genérica.",
+        "Responde a las objeciones más fuertes o acepta explícitamente la incertidumbre restante antes de aprobar."
+      ],
+      "example": "Antes de firmar un contrato de tres años, asigna a un revisor la tarea de encontrar escenarios en los que la elección falle y los datos que aún faltan para descartarlos.",
+      "whyItCanHelp": "La decisión preferida recibe una contradicción estructurada con una posibilidad real de cambiar la conclusión.",
+      "limitations": "Si la revisión es solo un ritual, se convierte en teatro. El revisor necesita acceso a la información y permiso real para influir en la decisión.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "predefined-update-criteria",
+      "localizedSlug": "criterios-de-actualizacion-previos",
+      "title": "Definir criterios de actualización por adelantado",
+      "state": "reviewed",
+      "whenToUse": "Cuando un equipo puede reinterpretar después la información nueva para proteger un compromiso que ya hizo público.",
+      "steps": [
+        "Escribe la decisión o previsión actual.",
+        "Enumera las observaciones que la reforzarían.",
+        "Enumera las observaciones que la debilitarían o llevarían a detenerla.",
+        "Fija un momento de revisión antes de que lleguen esos datos."
+      ],
+      "example": "Antes de un piloto, define qué nivel de uso, coste o tasa de error te haría continuar, modificar o detener el proyecto. No reescribas esos umbrales en silencio después de ver los resultados.",
+      "whyItCanHelp": "Decides antes del resultado qué observaciones deberían mover de verdad la conclusión.",
+      "limitations": "Los criterios pueden revisarse si cambia el entorno, pero el cambio y su motivo deben quedar visibles.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "incremental-value-check",
+      "localizedSlug": "comprobar-el-valor-del-siguiente-paso",
+      "title": "Comprobar el valor del siguiente paso",
+      "state": "reviewed",
+      "whenToUse": "Cuando un proyecto, producto o elección profesional continúa sobre todo porque ya se han invertido muchos recursos.",
+      "steps": [
+        "Escribe lo que ya se ha gastado y márcalo como irrecuperable.",
+        "Estima el coste futuro del siguiente paso.",
+        "Estima su valor futuro y la incertidumbre asociada.",
+        "Pregunta si financiarías ese siguiente paso si el proyecto apareciera hoy sin su historia previa."
+      ],
+      "example": "Después de seis meses de desarrollo, no intentes recuperar esos seis meses. Compara el coste del próximo trimestre, el valor esperado y los costes reales de cambiar de dirección.",
+      "whyItCanHelp": "La decisión vuelve a centrarse en las consecuencias futuras de la siguiente acción, no en la necesidad psicológica de justificar el pasado.",
+      "limitations": "El pasado puede contener información útil sobre capacidades, deuda o costes de cambio. Ignora el coste hundido, no las consecuencias futuras que siguen siendo relevantes.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "predefined-criteria",
+      "localizedSlug": "criterios-de-decision-previos",
+      "title": "Fijar criterios de decisión por adelantado",
+      "state": "reviewed",
+      "whenToUse": "Para contratación, selección de proveedor, priorización de producto, una elección profesional o cualquier comparación donde una opción pueda convertirse pronto en favorita.",
+      "steps": [
+        "Escribe el objetivo de la decisión.",
+        "Elige un pequeño conjunto de criterios antes de examinar las opciones en detalle.",
+        "Define qué información cuenta para cada criterio.",
+        "Compara todas las opciones serias con los mismos criterios antes de introducir excepciones."
+      ],
+      "example": "Antes de las demos de proveedores, define cuatro criterios y qué evidencia esperas para cada uno. Evalúa cada solución de la misma manera antes de debatir excepciones.",
+      "whyItCanHelp": "Las dimensiones de comparación quedan fijadas antes de que una preferencia pueda mover las reglas a favor de una opción.",
+      "limitations": "Los criterios iniciales pueden omitir información importante. Permite revisiones explícitas, pero registra por qué cambiaron.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "source-trace",
+      "localizedSlug": "rastrear-hasta-la-fuente",
+      "title": "Rastrear hasta la fuente",
+      "state": "reviewed",
+      "whenToUse": "Cuando la misma afirmación aparece en muchos artículos, respuestas de IA o documentos internos y la repetición crea una impresión de consenso.",
+      "steps": [
+        "Escribe la afirmación exacta que quieres verificar.",
+        "Rastrea cada mención importante hasta la primera fuente que realmente puedas inspeccionar.",
+        "Agrupa las copias que dependen del mismo origen.",
+        "Ajusta tu confianza según la evidencia independiente, no según el número de repeticiones."
+      ],
+      "example": "Cinco blogs y tres respuestas de IA citan la misma estadística. Al seguir los enlaces descubres que todos dependen de un único informe: hay ocho repeticiones, pero una sola fuente independiente.",
+      "whyItCanHelp": "Separa la familiaridad y la repetición de la independencia real de la evidencia.",
+      "limitations": "La fuente más antigua no es automáticamente la mejor. Todavía hay que evaluar su método, calidad y relevancia.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    },
+    {
+      "canonicalSlug": "reversible-test",
+      "localizedSlug": "prueba-pequena-y-reversible",
+      "title": "Hacer una prueba pequeña y reversible",
+      "state": "reviewed",
+      "whenToUse": "Cuando una decisión de producto, carrera u organización puede probarse parcialmente antes de asumir un compromiso caro de revertir.",
+      "steps": [
+        "Nombra la incertidumbre más importante.",
+        "Diseña la acción más pequeña capaz de producir información útil sobre esa incertidumbre.",
+        "Define de antemano qué resultado cambiaría la decisión más amplia.",
+        "Ejecuta la prueba y actualiza después la decisión usando esa regla."
+      ],
+      "example": "Antes de migrar a todo un equipo a una nueva herramienta, prueba un flujo real con un grupo pequeño durante un periodo definido y fija qué condiciones justificarían ampliarlo.",
+      "whyItCanHelp": "Un compromiso limitado permite comprar información antes de que la decisión sea difícil o costosa de revertir.",
+      "limitations": "Una prueba pequeña puede representar mal las condiciones a gran escala. Trátala como evidencia adicional, no como una demostración definitiva.",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13"
+    }
+  ]
+}
