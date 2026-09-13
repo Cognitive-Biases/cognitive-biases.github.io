@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalId": "cognitive-bias-confirmation-bias",
+      "localizedSlug": "biais-de-confirmation",
+      "localizedLabel": "Biais de confirmation",
+      "englishLabel": "Confirmation Bias",
+      "aliases": ["confirmation bias"],
+      "searchTerms": ["biais de confirmation", "confirmation bias français", "chercher ce qui confirme mon idée"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "Le biais de confirmation regroupe plusieurs façons dont une croyance ou une hypothèse déjà présente peut influencer la recherche, l'interprétation, la mémoire ou l'évaluation des informations.",
+      "practicalQuestion": "Qu'est-ce qui pourrait réellement me faire changer d'avis ?",
+      "examples": [
+        "Au travail, une équipe cherche surtout les chiffres qui soutiennent le plan qu'elle préfère déjà.",
+        "Dans une recherche, on teste une hypothèse sans définir à l'avance ce qui pourrait la rendre moins plausible.",
+        "Avec un outil d'IA, on demande dix arguments en faveur d'une conclusion sans tester sérieusement les explications concurrentes."
+      ],
+      "evidenceSummary": "Le phénomène est bien documenté, mais le terme est large : plusieurs mécanismes de recherche et d'interprétation peuvent produire des comportements différents selon la tâche.",
+      "boundary": "Chercher d'abord des cas compatibles avec une hypothèse n'est pas toujours irrationnel. Le problème devient plus clair lorsque le test ne peut pas départager des explications plausibles ou lorsque les standards de preuve changent selon la conclusion préférée.",
+      "techniqueSlugs": ["consider-the-opposite", "red-team-review", "predefined-update-criteria", "predefined-criteria", "reversible-test"]
+    },
+    {
+      "canonicalId": "cognitive-bias-anchoring-effect",
+      "localizedSlug": "effet-ancrage",
+      "localizedLabel": "Effet d'ancrage",
+      "englishLabel": "Anchoring Effect",
+      "aliases": ["biais d'ancrage", "anchoring effect"],
+      "searchTerms": ["effet d'ancrage", "biais d'ancrage", "premier chiffre influence estimation"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "L'effet d'ancrage décrit la façon dont une valeur de départ peut tirer une estimation numérique ultérieure vers elle, même lorsque ce point de départ est peu informatif.",
+      "practicalQuestion": "Quelle serait mon estimation si je n'avais pas vu ce chiffre ?",
+      "examples": [
+        "En négociation, le premier prix annoncé peut déplacer la zone dans laquelle les offres suivantes semblent raisonnables.",
+        "Dans un projet, une date cible donnée trop tôt peut devenir la référence implicite de toutes les estimations.",
+        "Dans une décision assistée par IA, un premier score ou une première recommandation peut influencer le jugement humain qui suit."
+      ],
+      "evidenceSummary": "L'ancrage est bien étayé pour les jugements numériques. Son ampleur varie cependant selon le type d'ancre, la tâche et la manière dont la valeur initiale est présentée.",
+      "boundary": "Tous les nombres ne produisent pas le même effet. Une valeur clairement aléatoire, sans rapport avec la tâche, peut avoir moins d'influence qu'un prix, un objectif ou une estimation qui semble pertinente.",
+      "techniqueSlugs": ["independent-estimate", "predefined-criteria"]
+    },
+    {
+      "canonicalId": "heuristic-bias-availability-bias",
+      "localizedSlug": "heuristique-de-disponibilite",
+      "localizedLabel": "Heuristique de disponibilité",
+      "englishLabel": "Availability Heuristic",
+      "aliases": ["biais de disponibilité", "availability heuristic", "availability bias"],
+      "searchTerms": ["heuristique de disponibilité", "biais de disponibilité", "exemple récent semble fréquent"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "L'heuristique de disponibilité consiste à utiliser la facilité avec laquelle des exemples viennent à l'esprit comme un indice pour juger leur fréquence ou leur probabilité.",
+      "practicalQuestion": "Ces exemples me viennent-ils facilement parce qu'ils sont fréquents, ou parce qu'ils sont récents, frappants ou répétés ?",
+      "examples": [
+        "Après un accident très médiatisé, un risque rare peut sembler soudain beaucoup plus fréquent.",
+        "Dans un projet, un échec spectaculaire récent devient la référence pour estimer tous les cas suivants.",
+        "Une histoire facile à raconter peut peser davantage qu'un ensemble de données moins mémorable."
+      ],
+      "evidenceSummary": "La disponibilité est une heuristique bien établie, mais ce n'est pas automatiquement une erreur. Elle devient trompeuse lorsque la facilité de rappel vient de facteurs qui ne reflètent pas la fréquence réelle.",
+      "boundary": "Un exemple mémorable peut parfois signaler un vrai changement. Avant de corriger votre jugement, vérifiez si les données de base ont elles aussi changé.",
+      "techniqueSlugs": ["reference-class-forecasting", "base-rate-check"]
+    },
+    {
+      "canonicalId": "cognitive-bias-hindsight-bias",
+      "localizedSlug": "biais-retrospectif",
+      "localizedLabel": "Biais rétrospectif",
+      "englishLabel": "Hindsight Bias",
+      "aliases": ["hindsight bias", "effet je le savais depuis le début"],
+      "searchTerms": ["biais rétrospectif", "hindsight bias français", "c'était évident après coup"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "Une fois le résultat connu, le passé peut sembler plus prévisible qu'il ne l'était réellement au moment de la décision.",
+      "practicalQuestion": "Qu'avais-je réellement prévu avant de connaître le résultat ?",
+      "examples": [
+        "Après un retard de projet, les causes semblent évidentes alors qu'elles étaient incertaines au départ.",
+        "Après un mouvement de marché, on se souvient d'avoir été plus sûr de la direction qu'on ne l'était réellement.",
+        "Après une décision ratée, les signaux faibles paraissent soudain impossibles à manquer."
+      ],
+      "evidenceSummary": "Le biais rétrospectif est robuste et étudié depuis plusieurs décennies. Connaître le résultat peut modifier la reconstruction de ce qui paraissait prévisible auparavant.",
+      "boundary": "Une bonne explication après coup n'est pas automatiquement biaisée. La question est de savoir si elle reconstruit à tort l'incertitude qui existait avant le résultat.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "cognitive-bias-outcome-bias",
+      "localizedSlug": "biais-de-resultat",
+      "localizedLabel": "Biais de résultat",
+      "englishLabel": "Outcome Bias",
+      "aliases": ["outcome bias"],
+      "searchTerms": ["biais de résultat", "outcome bias français", "juger décision par résultat"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "Le biais de résultat consiste à juger la qualité d'une décision à partir de son résultat final plutôt qu'à partir des informations et du raisonnement disponibles au moment où elle a été prise.",
+      "practicalQuestion": "Aurais-je jugé cette décision de la même façon si le résultat avait été différent ?",
+      "examples": [
+        "Une décision risquée est félicitée parce qu'elle a réussi, alors que le processus était faible.",
+        "Une bonne décision est condamnée parce qu'un risque connu s'est finalement réalisé.",
+        "Après un projet, l'équipe confond la chance du résultat avec la qualité de la méthode utilisée."
+      ],
+      "evidenceSummary": "L'effet est soutenu par les travaux expérimentaux sur l'évaluation des décisions et par des réplications modernes.",
+      "boundary": "Le biais de résultat n'est pas le biais rétrospectif : le premier change l'évaluation de la décision, le second change la perception de ce qui était prévisible.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "egocentric-bias-planning-fallacy",
+      "localizedSlug": "biais-de-planification",
+      "localizedLabel": "Biais de planification",
+      "englishLabel": "Planning Fallacy",
+      "aliases": ["erreur de planification", "planning fallacy"],
+      "searchTerms": ["biais de planification", "planning fallacy français", "sous-estimer durée projet"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "Le biais de planification décrit la tendance à sous-estimer le temps ou les ressources nécessaires à un projet, notamment lorsque l'on se concentre surtout sur le plan actuel et pas assez sur des cas comparables terminés.",
+      "practicalQuestion": "Combien de temps des projets vraiment comparables ont-ils pris ?",
+      "examples": [
+        "Une migration détaillée semble tenir en six semaines parce que chaque étape paraît raisonnable prise séparément.",
+        "Une équipe ajoute un petit buffer mais ne regarde jamais la distribution des délais de projets similaires.",
+        "Un plan optimiste reste inchangé même lorsque l'expérience passée montre des dépassements réguliers."
+      ],
+      "evidenceSummary": "Le phénomène est bien documenté dans les estimations de projets. L'utilisation d'une vue extérieure et de classes de référence est une réponse pratique souvent recommandée, sans garantir une prévision parfaite.",
+      "boundary": "Un retard n'est pas une preuve automatique de biais de planification. Des événements réellement nouveaux ou des changements de portée peuvent aussi expliquer l'écart.",
+      "techniqueSlugs": ["reference-class-forecasting"]
+    },
+    {
+      "canonicalId": "logical-fallacy-escalation-of-commitment",
+      "localizedSlug": "escalade-engagement",
+      "localizedLabel": "Escalade d'engagement",
+      "englishLabel": "Escalation of Commitment",
+      "aliases": ["biais d'engagement", "escalation of commitment"],
+      "searchTerms": ["escalade d'engagement", "biais des coûts irrécupérables", "sunk cost fallacy", "continuer projet parce que déjà investi"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "L'escalade d'engagement décrit la poursuite d'une ligne d'action ou l'ajout de ressources malgré des signaux négatifs, souvent parce que l'abandon devient difficile à justifier après les décisions déjà prises.",
+      "practicalQuestion": "Si ce projet arrivait aujourd'hui sans son histoire, financerais-je encore la prochaine étape ?",
+      "examples": [
+        "Un projet reçoit encore du budget surtout parce qu'il a déjà coûté cher.",
+        "Une équipe protège une décision passée alors que les nouvelles données ont changé le rapport coût-valeur.",
+        "On poursuit une solution technique pour éviter d'admettre qu'un changement de direction est devenu préférable."
+      ],
+      "evidenceSummary": "La recherche sur l'escalade d'engagement étudie la persistance après des retours négatifs. Les coûts déjà engagés peuvent contribuer au phénomène, mais ils n'en sont pas l'unique mécanisme.",
+      "boundary": "Le biais des coûts irrécupérables et l'escalade d'engagement sont proches mais ne sont pas identiques. Continuer peut aussi être rationnel si les coûts futurs, la valeur attendue ou les coûts de changement le justifient.",
+      "techniqueSlugs": ["predefined-update-criteria", "incremental-value-check", "reversible-test"]
+    },
+    {
+      "canonicalId": "truth-judgment-illusory-truth-effect",
+      "localizedSlug": "effet-de-verite-illusoire",
+      "localizedLabel": "Effet de vérité illusoire",
+      "englishLabel": "Illusory Truth Effect",
+      "aliases": ["effet de vérité", "effet de réitération", "illusory truth effect"],
+      "searchTerms": ["effet de vérité illusoire", "répétition rend une affirmation vraie", "illusory truth effect français"],
+      "state": "reviewed",
+      "sourceRelease": "2026.08.18",
+      "translatedAt": "2026-09-13",
+      "reviewedAt": "2026-09-13",
+      "summary": "Une affirmation répétée peut, en moyenne, être jugée plus vraie qu'une affirmation comparable présentée pour la première fois, même si la répétition n'apporte aucune nouvelle preuve.",
+      "practicalQuestion": "Cette affirmation me paraît-elle crédible parce que je l'ai vérifiée, ou surtout parce que je l'ai déjà vue plusieurs fois ?",
+      "examples": [
+        "La même statistique apparaît dans plusieurs articles qui remontent en réalité à une seule source.",
+        "Une formule répétée dans les médias devient familière et finit par sembler mieux établie qu'elle ne l'est.",
+        "Plusieurs réponses d'IA répètent la même affirmation sans fournir de preuves indépendantes."
+      ],
+      "evidenceSummary": "L'effet moyen de la répétition sur les jugements de vérité est robuste, mais son ampleur varie selon le contenu, la procédure et le contexte.",
+      "boundary": "La répétition ne rend pas toute affirmation crédible et ne remplace pas les connaissances antérieures. Elle n'est pas non plus une preuve qu'une affirmation est fausse.",
+      "techniqueSlugs": ["source-trace"]
+    }
+  ]
+}
