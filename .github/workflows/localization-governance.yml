@@ -28,6 +28,9 @@ jobs:
       - name: Validate localization governance
         run: node scripts/check-localization-governance.mjs
 
+      - name: Prepare canonical data
+        run: npm run prepare:data
+
       - name: Build localized site surfaces
         run: npm run build:site
 
