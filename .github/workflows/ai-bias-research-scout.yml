@@ -1,0 +1,58 @@
+name: AI Bias Research Scout
+
+on:
+  schedule:
+    - cron: "41 6 * * 5"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/ai-bias-research-scout.yml"
+      - "scripts/ai-bias-research-scout.mjs"
+      - "data/ai-bias-research-config.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ai-bias-research-scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate AI bias scout
+        run: node scripts/ai-bias-research-scout.mjs --self-test
+      - name: Discover AI bias research candidates
+        run: node scripts/ai-bias-research-scout.mjs
+      - name: Persist AI bias research inbox
+        shell: bash
+        run: |
+          if git diff --quiet -- data/ai-bias-research-inbox.json; then
+            echo "No new AI bias research candidates to persist."
+            exit 0
+          fi
+
+          git config user.name "cognitive-biases-ai-research-scout[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ai-bias-research-inbox.json
+          git commit -m "Scout recent AI bias research"
+
+          if git push origin HEAD:main; then
+            echo "AI bias research inbox updated on main. Canonical public claims were not changed."
+            exit 0
+          fi
+
+          branch="ai-bias-research-scout/${GITHUB_RUN_ID}"
+          git push origin "HEAD:refs/heads/$branch"
+          echo "::warning::Main rejected the inbox update. A fallback branch was pushed: $branch"
