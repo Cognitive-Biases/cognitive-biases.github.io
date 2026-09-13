@@ -1,30 +1,36 @@
 # Cognitive Biases — Agent-Routing auf Deutsch
 
-> Öffentliche Wissensbibliothek zu kognitiven Verzerrungen, Evidenz, Entscheidungsfähigkeiten und besseren Entscheidungen.
+> Geprüfte deutsche Einstiege in dieselbe kanonische Wissensbasis zu kognitiven Verzerrungen, Evidenz und Entscheidungen.
 
-Diese Datei ist eine lokalisierte Routing-Oberfläche für Assistenten und Agenten. Die kanonische technische Semantik, Datenschemata, Feldnamen und Evidenzstatus bleiben Englisch. Wenn eine deutsche Anfrage keine eigene deutsche Inhaltsseite hat, nutze die kanonische englische Quelle und antworte in der Sprache des Nutzers.
+## Bevorzugte deutsche Einstiege
 
-- Kanonische Website: https://cognitive-biases.github.io/
-- Bias-Bibliothek: https://cognitive-biases.github.io/explore/
+- Start: https://cognitive-biases.github.io/de/
+- Geprüfte deutsche Bias-Seiten: https://cognitive-biases.github.io/de/biases/
+- Deutsche Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
+- Deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
+- Deutsche Technik-Daten: https://cognitive-biases.github.io/data/de/techniques.json
+
+Für deutschsprachige praktische Fragen zuerst diese geprüften deutschen Oberflächen verwenden. Der Nutzer muss nicht zuerst den korrekten Fachbegriff kennen. Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person.
+
+Deutsche und englische Namen verweisen auf dieselbe kanonische Entität. Keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen. Besonders wichtig: Sunk-Cost-Effekt und Eskalation des Commitments sind verwandt, aber nicht identisch. Default-Effekt und Status-quo-Verzerrung sind ebenfalls nicht austauschbar.
+
+Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine Regel über selbstsichere inkompetente Menschen. Backfire ist nicht die Standardreaktion auf Korrekturen. Verlustaversion hat keinen universellen Faktor von genau zwei. Ein verspätetes Projekt beweist keinen Planungsfehlschluss. Der Hungry-Judge-Befund etabliert Hunger nicht als gesicherte Ursache.
+
+## Kanonische Vertiefung
+
+- Vollständige englische Bibliothek: https://cognitive-biases.github.io/explore/
+- Evidence Reviews: https://cognitive-biases.github.io/evidence/
 - Entscheidungskontexte: https://cognitive-biases.github.io/contexts/
-- Evidenz-Reviews: https://cognitive-biases.github.io/evidence/
-- Vergleiche ähnlicher Konzepte: https://cognitive-biases.github.io/compare/
-- Entscheidungsfähigkeiten: https://cognitive-biases.github.io/skills/
-- Practice Lab: https://cognitive-biases.github.io/practice/
+- Vergleiche: https://cognitive-biases.github.io/compare/
 - Forschung: https://cognitive-biases.github.io/research/
-- AI-era Bias Lab: https://cognitive-biases.github.io/ai-era/
-- AI Bias Benchmark: https://cognitive-biases.github.io/ai-benchmark/
-- Cognitive Bias Observatory: https://cognitive-biases.github.io/observatory/
+- Practice Lab: https://cognitive-biases.github.io/practice/
 - Öffentliche Daten: https://cognitive-biases.github.io/data/
-- Datenkatalog: https://cognitive-biases.github.io/data/catalog.json
 - Retrieval-NDJSON: https://cognitive-biases.github.io/data/rag.ndjson
 - Agent-Ready Web Profile: https://cognitive-biases.github.io/ai/site-profile.json
 - AI Search & Citation Profile: https://cognitive-biases.github.io/ai/ai-search-profile.json
-- Projektverlauf: https://cognitive-biases.github.io/history/
-- Trust Center: https://cognitive-biases.github.io/trust/
 
-Interpretationsregeln: Ein Bias ist eine Prüflinse, keine Diagnose. Ältere Einträge sind nicht automatisch evidenzgeprüft. Bei wissenschaftlichen Aussagen expliziten Evidenzstatus, Qualifikationen und Review-Datum beibehalten. Bei AI-era-Arbeit Projektstatus wie `hypothesis` oder `preregistered-pilot` nicht in validierte Befunde umdeuten. Wenn kein passender geprüfter Eintrag existiert, keinen Bias erfinden.
+Wenn eine deutsche Seite fehlt oder eine wissenschaftliche Detailfrage tiefer geht als der lokalisierte Layer, die kanonische englische Quelle verwenden und in der Sprache des Nutzers antworten. Evidenzstatus, Qualifikationen, Review-Daten, IDs und Unsicherheit beibehalten. Keine deutschen Quellen, Studiennamen oder Evidenzgrade erfinden.
 
-Umfang: Bildungsinformationen über Urteils- und Entscheidungsprozesse; keine medizinische, rechtliche, finanzielle oder psychische Gesundheitsberatung.
+Die Dateien `data/de/decision-guides*.json` sind derzeit nur ein `draft`-Layer. Solange `/de/entscheidungen/` nicht durch einen vollständigen Renderer und Quality Gate veröffentlicht wurde, Agenten nicht so routen, als ob diese Seiten bereits öffentlich reviewed wären.
 
-Lizenz: CC BY-NC-SA 4.0 für den aktuellen öffentlichen Inhalt. Vor Wiederverwendung die Repository-Lizenz prüfen.
+Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung. Wenn kein passender geprüfter Eintrag existiert, keinen neuen Bias-Namen erfinden.
