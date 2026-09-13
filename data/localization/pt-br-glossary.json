@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "locale": "pt-BR",
+  "canonicalLocale": "en",
+  "status": "editorial-baseline",
+  "terms": [
+    {"id":"cognitive-bias","source":"cognitive bias","preferred":"viés cognitivo","aliases":[],"note":"Preferred Brazilian Portuguese decision-science term."},
+    {"id":"anchoring-bias","source":"anchoring bias","preferred":"viés de ancoragem","aliases":["efeito de ancoragem"],"note":"Use the bias form for the named concept and the effect form for the phenomenon."},
+    {"id":"confirmation-bias","source":"confirmation bias","preferred":"viés de confirmação","aliases":[],"note":"Standard psychology term."},
+    {"id":"heuristic","source":"heuristic","preferred":"heurística","aliases":[],"note":"Explain in plain language on first use for broad audiences."},
+    {"id":"decision-skill","source":"decision skill","preferred":"habilidade de tomada de decisão","aliases":["habilidade para decidir melhor"],"note":"Use the shorter alias when the interface needs a more natural action-oriented phrase."},
+    {"id":"debiasing","source":"debiasing","preferred":"redução de vieses","aliases":["mitigação de vieses"],"note":"Prefer transparent wording for general readers."},
+    {"id":"evidence","source":"evidence","preferred":"evidência","aliases":["evidências de pesquisa"],"note":"Use research-context wording consistently."},
+    {"id":"decision-check","source":"decision check","preferred":"checagem da decisão","aliases":["revisão da decisão"],"note":"Choose natural Brazilian Portuguese wording for the action context."}
+  ]
+}
