@@ -1,0 +1,20 @@
+{
+  "version": "2026-09-13",
+  "locale": "es",
+  "sourceLocale": "en",
+  "status": "reviewed",
+  "entries": [
+    {"conceptId":"cognitive-bias","source":"cognitive bias","preferred":"sesgo cognitivo","aliases":[],"avoid":[],"context":"Término general; no debe usarse como diagnóstico de una persona.","status":"reviewed"},
+    {"conceptId":"heuristic","source":"heuristic","preferred":"heurística","aliases":[],"avoid":["error"],"context":"Una heurística no es automáticamente un error.","status":"reviewed"},
+    {"conceptId":"decision-making","source":"decision making","preferred":"toma de decisiones","aliases":[],"avoid":[],"context":"Término general para el proceso de decidir.","status":"reviewed"},
+    {"conceptId":"evidence","source":"evidence","preferred":"evidencia / estado de la evidencia","aliases":["pruebas"],"avoid":["prueba definitiva"],"context":"Debe conservar la fuerza y los límites de la evidencia canónica.","status":"reviewed"},
+    {"conceptId":"uncertainty","source":"uncertainty","preferred":"incertidumbre","aliases":[],"avoid":[],"context":"Hace explícitos los límites del conocimiento o la predicción.","status":"reviewed"},
+    {"conceptId":"confirmation-bias","source":"confirmation bias","preferred":"sesgo de confirmación","aliases":["confirmation bias"],"avoid":[],"context":"Etiqueta principal de la entidad canónica.","status":"reviewed"},
+    {"conceptId":"anchoring-effect","source":"anchoring effect","preferred":"efecto de anclaje","aliases":["sesgo de anclaje","anchoring effect"],"avoid":[],"context":"Etiqueta principal con alias útiles para descubrimiento.","status":"reviewed"},
+    {"conceptId":"availability-heuristic","source":"availability heuristic","preferred":"heurística de disponibilidad","aliases":["availability heuristic"],"avoid":[],"context":"Mantener la distinción entre mecanismo heurístico y posible error.","status":"reviewed"},
+    {"conceptId":"planning-fallacy","source":"planning fallacy","preferred":"falacia de la planificación","aliases":["sesgo de planificación","planning fallacy"],"avoid":[],"context":"Etiqueta preferida para la entidad canónica.","status":"reviewed"},
+    {"conceptId":"debiasing","source":"debiasing","preferred":"reducción o mitigación de sesgos","aliases":[],"avoid":["eliminación del sesgo"],"context":"Una intervención reduce riesgo; no garantiza eliminar un sesgo.","status":"reviewed"},
+    {"conceptId":"decision-skills","source":"Decision Skills","preferred":"Habilidades de decisión","aliases":["Decision Skills"],"avoid":[],"context":"Capacidades prácticas reutilizables para mejorar el proceso de decisión.","status":"reviewed"}
+  ],
+  "rules": {"canonicalIdsAreNeverTranslated":true,"naturalGrammarMayInflectPreferredTerms":true,"englishAliasesMaySupportDiscovery":true,"evidenceStrengthMustNotChange":true}
+}
