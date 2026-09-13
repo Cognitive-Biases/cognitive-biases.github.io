@@ -1,0 +1,24 @@
+name: German Full Catalog Audit
+
+on:
+  pull_request:
+    paths:
+      - 'data/biases.json'
+      - 'data/de/**'
+      - 'scripts/check-de-full-catalog.mjs'
+      - '.github/workflows/de-full-catalog-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Audit German catalog parity
+        run: node scripts/check-de-full-catalog.mjs
