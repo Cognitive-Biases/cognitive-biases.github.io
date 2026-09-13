@@ -19,6 +19,7 @@
       ],
       "whyItHelps": "Der Ablauf trennt Antwort, Evidenz und Schlussfolgerung voneinander.",
       "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert keinen Bias.",
+      "biasSlugs": ["cognitive-bias-anchoring-effect", "truth-judgment-illusory-truth-effect"],
       "techniqueSlugs": ["source-trace", "independent-estimate", "consider-the-opposite"]
     }
   ]
