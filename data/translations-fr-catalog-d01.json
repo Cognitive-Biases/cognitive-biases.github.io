@@ -1,0 +1,14 @@
+{
+  "entries": [
+    {
+      "canonicalId": "cognitive-bias-mere-urgency-effect",
+      "localizedLabel": "Effet de simple urgence",
+      "aliases": ["effet d'urgence", "urgence illusoire"],
+      "summary": "L'effet de simple urgence décrit une préférence pour une tâche qui semble devoir être faite immédiatement, même lorsqu'une autre tâche offre un meilleur bénéfice et que l'urgence n'ajoute pas de conséquence réelle.",
+      "practicalQuestion": "Si je retire mentalement le compte à rebours ou la pression temporelle, quelle tâche apporte réellement le plus de valeur ?",
+      "example": "Une personne choisit une petite tâche peu rentable avec une fenêtre de quelques minutes plutôt qu'une tâche plus importante qui restera disponible plus longtemps, alors que laisser expirer la première n'entraîne aucun coût réel.",
+      "boundary": "Un vrai délai peut contenir une information importante : coût de retard, perte d'une option ou dépendance externe. L'effet concerne surtout les situations où la sensation d'urgence attire le choix sans améliorer la valeur objective de la tâche.",
+      "evidenceSummary": "Cinq expériences initiales et une grande réplication indépendante soutiennent l'effet dans des tâches d'allocation du temps. L'effet devient plus faible lorsque plusieurs explications concurrentes sont mieux contrôlées, mais reste détectable dans les tests visant l'urgence illusoire."
+    }
+  ]
+}
