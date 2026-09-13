@@ -1,20 +1,23 @@
 # Cognitive Biases — routage agent en français
 
-> Bibliothèque publique sur les biais cognitifs, les preuves, les techniques de décision et le raisonnement.
+> Bibliothèque publique sur les biais cognitifs, les preuves, les techniques de décision, les compétences de décision et le raisonnement.
 
-Cette surface française sert à la découverte et au routage pour les assistants et les agents. L'anglais reste la langue canonique des identifiants, schémas, noms de champs, statuts de preuve, sources et relations. Tous les biais actuellement publiés disposent d'une fiche humaine en français sous `/fr/`.
+Cette surface française sert à la découverte et au routage pour les assistants et les agents. L'anglais reste la langue canonique des identifiants, schémas, noms de champs, statuts de preuve, sources et relations. Tous les biais actuellement publiés et toutes les compétences de décision canoniques disposent d'une surface humaine relue en français sous `/fr/`.
 
 - Expérience française: https://cognitive-biases.github.io/fr/
 - Explorer tous les biais publiés en français: https://cognitive-biases.github.io/fr/explorer/
 - Techniques en français: https://cognitive-biases.github.io/fr/techniques/
+- Compétences de décision en français: https://cognitive-biases.github.io/fr/competences/
 - Bibliothèque canonique anglaise: https://cognitive-biases.github.io/explore/
 - Revues des preuves: https://cognitive-biases.github.io/evidence/
 - Comparaisons de concepts: https://cognitive-biases.github.io/compare/
 - Contextes de décision: https://cognitive-biases.github.io/contexts/
-- Compétences de décision: https://cognitive-biases.github.io/skills/
+- Compétences de décision canoniques: https://cognitive-biases.github.io/skills/
+- Agent Skills Marketplace: https://cognitive-biases.github.io/agent-skills/
 - Recherche: https://cognitive-biases.github.io/research/
 - Données publiques: https://cognitive-biases.github.io/data/
 - Données de localisation française: https://cognitive-biases.github.io/fr/data/index.json
+- Données des compétences FR: https://cognitive-biases.github.io/fr/data/skills.json
 - Profil Agent-Ready Web: https://cognitive-biases.github.io/ai/site-profile.json
 - Profil AI Search & Citation: https://cognitive-biases.github.io/ai/ai-search-profile.json
 - Trust Center: https://cognitive-biases.github.io/trust/
@@ -25,8 +28,9 @@ Règles d'interprétation :
 2. Une traduction française relue ne signifie pas automatiquement qu'une revue scientifique dédiée existe.
 3. Lorsqu'une revue de preuves canonique existe, conservez son statut, ses limites, ses sources et sa date. Lorsqu'elle n'existe pas, dites-le au lieu d'inventer un statut local.
 4. Une technique est une procédure de raisonnement, pas un remède garanti.
-5. Les identifiants canoniques ne sont jamais traduits. Par exemple `cognitive-bias-confirmation-bias` reste l'identifiant de l'entité dont le libellé français est « Biais de confirmation ».
-6. Certaines entrées du corpus sont des concepts de mesure, des labels de projet, des effets discutés ou des constructions très contextuelles. Ne les présentez pas comme des lois psychologiques universelles.
+5. Une compétence de décision décrit un processus à pratiquer ; elle ne garantit pas un bon résultat et ne prouve pas qu'un biais particulier a causé une décision.
+6. Les identifiants canoniques ne sont jamais traduits. Par exemple `cognitive-bias-confirmation-bias` reste l'identifiant de l'entité dont le libellé français est « Biais de confirmation », et `evidence-evaluation` reste l'identifiant canonique de la compétence « Évaluation des preuves ».
+7. Certaines entrées du corpus sont des concepts de mesure, des labels de projet, des effets discutés ou des constructions très contextuelles. Ne les présentez pas comme des lois psychologiques universelles.
 
 Portée : informations pédagogiques sur le jugement et la décision ; pas de conseil médical, juridique, financier ou de santé mentale.
 
