@@ -37,7 +37,7 @@ await access("dist/fr/data/skills.json");
 await access("dist/data/skills-fr.json");
 
 const hub = await readFile("dist/fr/competences/index.html", "utf8");
-if (!hub.includes('<html lang="fr">') || !hub.includes("Compétences de décision")) throw new Error("French decision-skill hub is missing its French language contract or heading.");
+if (!hub.includes('<html lang="fr">') || !includesHtmlText(hub, "Compétences de décision")) throw new Error("French decision-skill hub is missing its French language contract or heading.");
 if (!hub.includes('hreflang="fr"') || !hub.includes('hreflang="en"')) throw new Error("French decision-skill hub is missing reciprocal hreflang metadata.");
 if (!hub.includes("CollectionPage")) throw new Error("French decision-skill hub is missing CollectionPage structured data.");
 
@@ -49,11 +49,11 @@ for (const entry of localized) {
   const frenchUrl = `${SITE}/fr/competences/${entry.localizedSlug}/`;
   const englishUrl = `${SITE}/skills/${entry.canonicalSlug}/`;
   if (!html.includes('<html lang="fr">')) throw new Error(`${entry.canonicalSlug}: French skill page is not declared as French.`);
-  if (!html.includes(entry.title) || !html.includes(source.title)) throw new Error(`${entry.canonicalSlug}: French page must expose the French title and English recognition alias.`);
+  if (!includesHtmlText(html, entry.title) || !includesHtmlText(html, source.title)) throw new Error(`${entry.canonicalSlug}: French page must expose the French title and English recognition alias.`);
   if (!html.includes(`identifier":"${entry.canonicalSlug}`) && !html.includes(`identifier\":\"${entry.canonicalSlug}`)) throw new Error(`${entry.canonicalSlug}: LearningResource does not preserve the canonical identifier.`);
   if (!html.includes("LearningResource")) throw new Error(`${entry.canonicalSlug}: French skill page is missing LearningResource structured data.`);
   if (!html.includes(frenchUrl) || !html.includes(englishUrl)) throw new Error(`${entry.canonicalSlug}: French skill page is missing canonical or English equivalent URL.`);
-  if (!html.includes(entry.example) || !html.includes(entry.boundary)) throw new Error(`${entry.canonicalSlug}: generated page is missing example or boundary copy.`);
+  if (!includesHtmlText(html, entry.example) || !includesHtmlText(html, entry.boundary)) throw new Error(`${entry.canonicalSlug}: generated page is missing example or boundary copy.`);
 
   const englishPath = join("dist", "skills", entry.canonicalSlug, "index.html");
   const englishHtml = await readFile(englishPath, "utf8");
@@ -81,10 +81,15 @@ for (const entry of localized) {
 
 for (const path of ["dist/fr/index.html", "dist/fr/explorer/index.html", "dist/fr/techniques/index.html"]) {
   const html = await readFile(path, "utf8");
-  if (!html.includes('href="/fr/competences/"')) throw new Error(`${path}: French primary navigation does not expose the decision-skill library.`);
+  if (!html.includes('href="/fr/competences/"')) throw new Error(`${path}: French navigation or primary discovery surface does not expose the decision-skill library.`);
 }
 
 const agentRouting = await readFile("dist/fr/llms.txt", "utf8");
 if (!agentRouting.includes(`${SITE}/fr/competences/`)) throw new Error("French agent routing does not expose the localized decision-skill library.");
 
 console.log(`French decision skills OK: ${localized.length}/${canonical.length} canonical skills localized with pages, data, search discovery and reciprocal language links.`);
+
+function includesHtmlText(html, text) {
+  const escaped = String(text).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+  return html.includes(escaped);
+}
