@@ -118,7 +118,7 @@ async function checkGeneratedOutput() {
   for (const entry of techniqueTranslations.entries) {
     const html = await readFile(outputFile(`/fr/techniques/${entry.localizedSlug}/`), "utf8");
     for (const label of [ui.labels.whenToUse, ui.labels.tryThis, ui.labels.example, ui.labels.whyItCanHelp, "Limites"]) {
-      expect(html.includes(label), `${entry.canonicalSlug}: generated technique page is missing section ${label}`);
+      expect(includesHtmlText(html, label), `${entry.canonicalSlug}: generated technique page is missing section ${label}`);
     }
   }
 
@@ -137,6 +137,12 @@ async function checkGeneratedOutput() {
 
 function outputFile(route) {
   return route === "/" ? join(OUT, "index.html") : join(OUT, route.replace(/^\//, ""), "index.html");
+}
+function includesHtmlText(html, text) {
+  const escaped = String(text).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[character]);
+  return html.includes(escaped);
 }
 function expect(condition, message) {
   if (!condition) errors.push(message);
