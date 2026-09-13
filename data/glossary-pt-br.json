@@ -1,0 +1,21 @@
+{
+  "version": "2026-09-13",
+  "locale": "pt-BR",
+  "sourceLocale": "en",
+  "status": "reviewed",
+  "entries": [
+    {"conceptId":"cognitive-biases","source":"cognitive biases","preferred":"vieses cognitivos","aliases":[],"avoid":[],"context":"Categoria principal; não use como diagnóstico de uma pessoa.","status":"reviewed"},
+    {"conceptId":"decision-making","source":"decision making","preferred":"tomada de decisão","aliases":[],"avoid":[],"context":"Terminologia geral para o processo de decisão.","status":"reviewed"},
+    {"conceptId":"critical-thinking","source":"critical thinking","preferred":"pensamento crítico","aliases":[],"avoid":[],"context":"Use naturalmente, sem repetição artificial para busca.","status":"reviewed"},
+    {"conceptId":"heuristic","source":"heuristics","preferred":"heurísticas","aliases":[],"avoid":[],"context":"Mantenha a distinção entre uma heurística e um erro.","status":"reviewed"},
+    {"conceptId":"confirmation-bias","source":"confirmation bias","preferred":"viés de confirmação","aliases":["confirmation bias"],"avoid":[],"context":"Termo principal estável para a entidade canônica.","status":"reviewed"},
+    {"conceptId":"anchoring-effect","source":"anchoring effect","preferred":"efeito de ancoragem","aliases":["viés de ancoragem","ancoragem","anchoring effect"],"avoid":[],"context":"Termo principal com aliases úteis para descoberta.","status":"reviewed"},
+    {"conceptId":"availability-heuristic","source":"availability heuristic","preferred":"heurística da disponibilidade","aliases":["viés de disponibilidade","availability heuristic"],"avoid":[],"context":"Preserve a distinção entre heurística e viés quando relevante.","status":"reviewed"},
+    {"conceptId":"planning-fallacy","source":"planning fallacy","preferred":"falácia do planejamento","aliases":["viés de planejamento","planning fallacy"],"avoid":[],"context":"Termo principal da entidade canônica.","status":"reviewed"},
+    {"conceptId":"escalation-of-commitment","source":"escalation of commitment","preferred":"escalada de comprometimento","aliases":["escalation of commitment"],"avoid":[],"context":"Não colapse este conceito em custo afundado.","status":"reviewed"},
+    {"conceptId":"sunk-cost-fallacy","source":"sunk cost fallacy","preferred":"falácia do custo afundado","aliases":["sunk cost fallacy"],"avoid":[],"context":"Relacionado à escalada de comprometimento, mas não idêntico.","status":"reviewed"},
+    {"conceptId":"debiasing","source":"debiasing","preferred":"redução de vieses / mitigação de vieses","aliases":[],"avoid":["desenviesamento"],"context":"Evite literalismo pouco natural e promessas de eliminação do viés.","status":"reviewed"},
+    {"conceptId":"decision-skills","source":"Decision Skills","preferred":"Habilidades de decisão","aliases":["Decision Skills"],"avoid":[],"context":"Capacidades práticas reutilizáveis para melhorar processos de decisão.","status":"reviewed"}
+  ],
+  "rules": {"canonicalIdsAreNeverTranslated":true,"naturalGrammarMayInflectPreferredTerms":true,"englishAliasesMaySupportDiscovery":true,"evidenceStrengthMustNotChange":true,"useBrazilianPortuguese":true}
+}
