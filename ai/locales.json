@@ -1,10 +1,10 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "status": "experimental-project-extension",
   "scope": "https://cognitive-biases.github.io/",
   "canonicalLanguage": "en",
   "fallbackLanguage": "en",
-  "humanInterfaceLanguages": ["en", "fr", "pt-BR"],
+  "humanInterfaceLanguages": ["en", "de", "ru", "fr", "pt-BR"],
   "agentRoutingLanguages": ["en", "de", "ru", "fr", "pt-BR"],
   "locales": [
     {
@@ -16,14 +16,21 @@
     {
       "language": "de",
       "label": "Deutsch",
-      "status": "localized-agent-routing",
-      "llms": "https://cognitive-biases.github.io/de/llms.txt"
+      "status": "reviewed-human-interface",
+      "llms": "https://cognitive-biases.github.io/de/llms.txt",
+      "human": "https://cognitive-biases.github.io/de/",
+      "data": "https://cognitive-biases.github.io/data/de/biases.json",
+      "agentSkills": "https://cognitive-biases.github.io/data/de/agent-skills.json",
+      "coverage": "full-canonical-bias-catalog-full-techniques-decision-skills-and-agent-skills"
     },
     {
       "language": "ru",
       "label": "Русский",
-      "status": "localized-agent-routing",
-      "llms": "https://cognitive-biases.github.io/ru/llms.txt"
+      "status": "reviewed-partial-human-interface",
+      "llms": "https://cognitive-biases.github.io/ru/llms.txt",
+      "human": "https://cognitive-biases.github.io/ru/",
+      "data": "https://cognitive-biases.github.io/data/ru/biases.json",
+      "coverage": "reviewed-evidence-bias-subset-full-techniques-decision-skills-and-everyday-guides-partial-research"
     },
     {
       "language": "fr",
@@ -55,7 +62,7 @@
     "translateDatasetIdentifiers": false,
     "translateJsonFieldNames": false,
     "localizedSurfaceRole": "status-dependent",
-    "humanReviewedLanguages": ["fr", "pt-BR"]
+    "humanReviewedLanguages": ["de", "ru", "fr", "pt-BR"]
   },
   "discovery": {
     "htmlRelation": "describedby",
