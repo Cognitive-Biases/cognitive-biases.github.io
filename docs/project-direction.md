@@ -69,7 +69,7 @@ Names, relationships, evidence status and sources belong to the canonical record
 3. Continue evidence review of high-value entries.
 4. Build a public data release from the same records used by the site.
 5. Run a research workflow that collects candidate papers and news, checks them, and proposes changes without publishing unsupported claims automatically.
-6. Keep English canonical and add German and Russian as reviewed language layers.
+6. Keep English canonical and maintain German, Russian and French as reviewed language layers. Publish human-facing locale pages only where review coverage is sufficient; a small reviewed locale is better than a large machine-translated one.
 
 ## Success measures
 
