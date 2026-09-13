@@ -1,4 +1,11 @@
 (() => {
+  if (!document.querySelector('link[href="/ru.css"]')) {
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = '/ru.css';
+    document.head.append(styles);
+  }
+
   const normalize = (value = '') => String(value)
     .toLocaleLowerCase('ru-RU')
     .replaceAll('ё', 'е')
