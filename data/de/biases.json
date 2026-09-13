@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "editorialNote": "Reviewed German layer for practical, evidence-bounded bias pages. English canonical IDs remain stable; aliases support German and English discovery without creating duplicate concepts.",
+  "entries": [
+    {
+      "slug": "cognitive-bias-confirmation-bias",
+      "title": "Bestätigungsfehler",
+      "englishTitle": "Confirmation Bias",
+      "aliases": ["Bestätigungsverzerrung"],
+      "searchTerms": ["confirmation bias deutsch", "Denkfehler Bestätigung"],
+      "summary": "Der Bestätigungsfehler bezeichnet eine breite Gruppe von Mustern, bei denen eine vorhandene Überzeugung beeinflusst, welche Informationen wir suchen, wie wir Belege bewerten oder woran wir uns erinnern. Es geht nicht nur darum, zustimmende Quellen zu lesen.",
+      "trap": "Du sammelst immer mehr Material für deine bevorzugte Erklärung, ohne vorher festzulegen, was sie schwächer oder falsch machen würde. Passende Belege wirken überzeugend, Gegenbeispiele werden dagegen strenger geprüft oder nachträglich erklärt.",
+      "evidence": "Der Bestätigungsfehler ist ein gut belegtes, breites Konstrukt. Forschung beschreibt Muster bei Informationssuche, Interpretation, Erinnerung und Hypothesentests. Eine bestätigende Teststrategie ist aber nicht in jeder Situation irrational; entscheidend ist, ob der Test zwischen plausiblen Erklärungen unterscheiden kann.",
+      "boundary": "Das Label beweist weder, dass eine Person irrational handelt, noch dass ihre Schlussfolgerung falsch ist. Es beschreibt ein mögliches Muster der Informationsverarbeitung. Kontext, Testdesign und die Qualität der Gegenhypothesen bleiben wichtig.",
+      "actions": [
+        "Schreibe vor der nächsten Suche auf, welcher Befund deine bevorzugte Erklärung schwächen würde.",
+        "Vergleiche mindestens zwei plausible Erklärungen nach demselben Beweisstandard.",
+        "Suche nach einem diagnostischen Gegenbeispiel statt nach beliebigem Widerspruch.",
+        "Wenn du KI nutzt, lass zuerst den stärksten Fall gegen deine bevorzugte Schlussfolgerung prüfen und vergleiche danach die Quellen."
+      ]
+    },
+    {
+      "slug": "cognitive-bias-anchoring-effect",
+      "title": "Ankereffekt",
+      "englishTitle": "Anchoring Effect",
+      "aliases": ["Anchoring Bias"],
+      "searchTerms": ["Ankerheuristik", "anchoring deutsch"],
+      "summary": "Beim Ankereffekt zieht ein früher Zahlenwert oder Vergleichspunkt eine spätere Schätzung in seine Richtung. Der erste Wert kann dadurch mehr Gewicht bekommen, als seine tatsächliche Aussagekraft rechtfertigt.",
+      "trap": "Die erste Zahl im Gespräch wird zum stillen Ausgangspunkt. Danach passt du deine Schätzung zwar an, entfernst dich aber möglicherweise nicht weit genug vom Anker.",
+      "evidence": "Anchoring ist ein gut untersuchter Effekt, besonders bei numerischen Schätzungen. Die Stärke schwankt jedoch deutlich zwischen Aufgaben und Studien. Relevanz des Ankers, Zufälligkeit, Anreizstruktur und andere Bedingungen können den Effekt verändern.",
+      "boundary": "Nicht jede zuerst gesehene Zahl verändert jedes Urteil. Ein Anker ist keine Erklärung für jede schlechte Schätzung. Eigene Vorinformationen, Expertise, Aufgabenart und Qualität des Vergleichswerts müssen mitgedacht werden.",
+      "actions": [
+        "Erstelle eine eigene Schätzung oder Spanne, bevor du eine fremde Zahl siehst.",
+        "Nutze eine passende Referenzklasse statt nur einen einzelnen Vergleichswert.",
+        "Notiere, warum sich deine Schätzung nach dem externen Wert verändert hat.",
+        "Bei Verhandlungen: Lege Ziel, Untergrenze und Begründung vor dem ersten Angebot fest."
+      ]
+    },
+    {
+      "slug": "heuristic-bias-availability-bias",
+      "title": "Verfügbarkeitsheuristik",
+      "englishTitle": "Availability Heuristic",
+      "aliases": ["Availability Bias"],
+      "searchTerms": ["Verfügbarkeitsfehler", "availability heuristic deutsch"],
+      "summary": "Bei der Verfügbarkeitsheuristik nutzen wir oft, wie leicht uns Beispiele einfallen, um Häufigkeit oder Wahrscheinlichkeit einzuschätzen. Das spart Aufwand, kann aber täuschen, wenn Erinnerbarkeit und tatsächliche Häufigkeit auseinanderfallen.",
+      "trap": "Ein aktuelles, emotionales oder sehr sichtbares Beispiel dominiert dein Urteil. Seltene, aber einprägsame Fälle wirken dann häufiger oder wahrscheinlicher, als sie in einer passenden Vergleichsgruppe sind.",
+      "evidence": "Die Verfügbarkeitsheuristik ist ein etabliertes Muster der Urteilsforschung. Sie ist nicht automatisch ein Fehler: Leicht erinnerbare Beispiele können reale Häufigkeit widerspiegeln. Problematisch wird es, wenn Aufmerksamkeit, Medienpräsenz oder persönliche Erfahrung die Verfügbarkeit stärker treiben als die relevante Basisrate.",
+      "boundary": "Ein lebhaftes Beispiel ist nicht wertlos, und eine Basisrate ist nur so gut wie ihre Vergleichsgruppe. Die Technik hilft, einen möglichen Einfluss sichtbar zu machen; sie liefert nicht automatisch die richtige Wahrscheinlichkeit.",
+      "actions": [
+        "Suche nach dem passenden Nenner oder einer belastbaren Basisrate.",
+        "Trenne persönliche Erlebnisse und Medienpräsenz von Daten zur tatsächlichen Häufigkeit.",
+        "Frage, welche unspektakulären Fälle in deiner Erinnerung kaum auftauchen.",
+        "Vergleiche den Einzelfall erst nach der Baseline mit seinen besonderen Merkmalen."
+      ]
+    },
+    {
+      "slug": "cognitive-bias-hindsight-bias",
+      "title": "Rückschaufehler",
+      "englishTitle": "Hindsight Bias",
+      "aliases": [],
+      "searchTerms": ["hindsight bias deutsch", "im Nachhinein vorhersehbar"],
+      "summary": "Beim Rückschaufehler erscheint ein Ergebnis nachträglich vorhersehbarer, als es vor dem Ereignis tatsächlich war. Sobald wir den Ausgang kennen, ist die frühere Unsicherheit schwerer zu rekonstruieren.",
+      "trap": "Nach dem Ergebnis erinnerst du deine frühere Einschätzung so, als hättest du mehr gewusst oder sicherer prognostiziert. Dadurch kann eine Entscheidung im Rückblick zu offensichtlich gut oder schlecht wirken.",
+      "evidence": "Der Rückschaufehler ist seit Jahrzehnten robust untersucht. Ergebniswissen kann verändern, wie Menschen frühere Erwartungen rekonstruieren. Warnungen vor dem Effekt allein reichen nicht zuverlässig aus, um ihn zu vermeiden.",
+      "boundary": "Nicht jede Erklärung nach einem Ereignis ist verzerrt. Neue Informationen können eine echte Neubewertung rechtfertigen. Der relevante Vergleich ist, was vor dem Ergebnis bekannt und vernünftig ableitbar war.",
+      "actions": [
+        "Halte Prognose, Annahmen und Unsicherheit fest, bevor das Ergebnis bekannt ist.",
+        "Vergleiche im Review zuerst mit diesem früheren Eintrag statt mit deiner Erinnerung.",
+        "Bewerte Entscheidungsqualität und Ergebnisqualität getrennt.",
+        "Notiere vor wichtigen Entscheidungen mindestens zwei andere plausible Ausgänge."
+      ]
+    },
+    {
+      "slug": "truth-judgment-illusory-truth-effect",
+      "title": "Wahrheitseffekt",
+      "englishTitle": "Illusory Truth Effect",
+      "aliases": ["Illusorischer Wahrheitseffekt", "Reiterationseffekt"],
+      "searchTerms": ["illusory truth effect deutsch", "Wiederholung wirkt wahr"],
+      "summary": "Beim Wahrheitseffekt werden wiederholte Aussagen im Durchschnitt eher als wahr eingeschätzt als vergleichbare neue Aussagen. Wiederholung kann Vertrautheit erzeugen, doch Vertrautheit ist kein unabhängiger Beleg.",
+      "trap": "Eine Behauptung taucht in vielen Feeds, Artikeln oder KI-Antworten auf und fühlt sich dadurch immer plausibler an. Mehrere Wiederholungen können dabei auf dieselbe ursprüngliche Quelle zurückgehen.",
+      "evidence": "Eine systematische Übersichtsarbeit und Meta-Analyse von 2026 findet einen verlässlichen durchschnittlichen Illusory-Truth-Effekt, aber auch deutliche Unterschiede zwischen Studien und Bedingungen. Inhalt, Hinweise auf Wahrheitsgehalt und Art des Urteils können den Effekt verändern.",
+      "boundary": "Aus der Forschung folgt nicht, dass jede wiederholte Aussage geglaubt wird. Besonders vorsichtig sollte man sein, Befunde zu prüfbaren Tatsachenbehauptungen direkt auf politische oder soziale Meinungen zu übertragen.",
+      "actions": [
+        "Zähle unabhängige Quellen statt bloßer Wiederholungen.",
+        "Verfolge wichtige Behauptungen bis zur frühesten prüfbaren Quelle zurück.",
+        "Trenne Tatsachenbehauptung, Bewertung und Meinung, bevor du den Effekt anwendest.",
+        "Behandle Vertrautheit als Signal für erneute Prüfung, nicht als Beweis für Wahrheit oder Falschheit."
+      ]
+    },
+    {
+      "slug": "memory-bias-continued-influence-effect",
+      "title": "Effekt des fortdauernden Einflusses",
+      "englishTitle": "Continued Influence Effect",
+      "aliases": ["CIE"],
+      "searchTerms": ["Fehlinformation trotz Korrektur", "continued influence effect deutsch"],
+      "summary": "Beim Continued Influence Effect kann eine falsche Information das spätere Denken weiter beeinflussen, obwohl sie bereits korrigiert wurde. Man kann die Korrektur kennen und trotzdem Teile der alten Erklärung weiterverwenden.",
+      "trap": "Die falsche Information hat eine verständliche Geschichte geliefert. Die Korrektur entfernt zwar den Fehler, lässt aber eine Lücke zurück, die beim späteren Denken wieder mit der alten Erklärung gefüllt wird.",
+      "evidence": "Der fortdauernde Einfluss von Fehlinformationen wurde in vielen Experimenten untersucht und repliziert. Korrekturen helfen häufig, beseitigen den Einfluss aber nicht immer vollständig. Eine plausible Ersatz-Erklärung kann in manchen Situationen nützlich sein.",
+      "boundary": "Der Continued Influence Effect ist nicht dasselbe wie der Backfire-Effekt. Fortdauernder Einfluss bedeutet, dass Fehlinformation nach einer Korrektur noch wirkt; Backfire würde bedeuten, dass die Korrektur den falschen Glauben sogar verstärkt.",
+      "actions": [
+        "Formuliere die Korrektur klar und ergänze, wenn möglich, eine belegte Ersatz-Erklärung.",
+        "Prüfe später nicht nur, ob du die Korrektur erinnerst, sondern welche Erklärung du tatsächlich verwendest.",
+        "Trenne Originalquelle, Korrektur und unabhängige Belege voneinander.",
+        "Vermeide, die falsche Behauptung unnötig oft oder besonders einprägsam zu wiederholen."
+      ]
+    },
+    {
+      "slug": "logical-fallacy-escalation-of-commitment",
+      "title": "Eskalation des Commitments",
+      "englishTitle": "Escalation of Commitment",
+      "aliases": ["Commitment-Eskalation"],
+      "searchTerms": ["Sunk-Cost-Effekt", "versunkene Kosten", "sunk cost deutsch", "Projekt abbrechen Denkfehler"],
+      "summary": "Bei einer Eskalation des Commitments werden weitere Ressourcen in einen eingeschlagenen Weg gesteckt, obwohl neue Informationen einen Kurswechsel nahelegen. Bereits investierte Zeit, Geld, Status oder Verantwortung können das Loslassen erschweren.",
+      "trap": "Die Begründung für den nächsten Schritt lautet vor allem: Wir haben schon so viel investiert. Vergangene Ausgaben werden dadurch zu einem Argument für zusätzliche Ausgaben, obwohl sie nicht mehr zurückgeholt werden können.",
+      "evidence": "Eskalation des Commitments ist in Entscheidungs- und Organisationsforschung gut dokumentiert. Versunkene Kosten können dabei eine Rolle spielen, sind aber nicht die einzige mögliche Ursache; Selbstrechtfertigung, Verantwortung, Anreize und soziale Faktoren können ebenfalls beitragen.",
+      "boundary": "Weiterzumachen ist nicht automatisch irrational. Frühere Investitionen können Informationen über Fähigkeiten, Wechselkosten oder zukünftigen Nutzen liefern. Entscheidend ist, ob diese Folgen noch vor dir liegen und für die nächste Entscheidung relevant sind.",
+      "actions": [
+        "Markiere bereits ausgegebene Ressourcen ausdrücklich als nicht rückholbar.",
+        "Bewerte den nächsten Schritt nur nach seinen zukünftigen Kosten, Nutzen und Risiken.",
+        "Frage: Würde ich diesen nächsten Schritt heute finanzieren, wenn das Projekt keine Vorgeschichte hätte?",
+        "Definiere vor dem nächsten Meilenstein klare Stop-, Änderungs- oder Review-Kriterien."
+      ]
+    }
+  ]
+}
