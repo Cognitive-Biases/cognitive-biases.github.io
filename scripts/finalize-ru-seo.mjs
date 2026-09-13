@@ -22,8 +22,15 @@ const stripTags = (value = "") => String(value).replace(/<[^>]+>/g, " ").replace
 const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
 })[character]);
+const shortenMeta = (value, max = 210) => {
+  const text = String(value || "").replace(/\s+/g, " ").trim();
+  if (text.length <= max) return text;
+  const clipped = text.slice(0, max - 1).replace(/\s+\S*$/, "").replace(/[\s,;:–—-]+$/u, "");
+  return `${clipped || text.slice(0, max - 1)}…`;
+};
 
 let shortened = 0;
+let descriptionsShortened = 0;
 let styled = 0;
 let brandOptimized = 0;
 let trustLinked = 0;
@@ -95,7 +102,20 @@ for (const file of await walk(OUT)) {
     dirty = true;
   }
 
+  const descriptionTag = html.match(/<meta\b[^>]*name=["']description["'][^>]*>/i)?.[0]
+    || html.match(/<meta\b[^>]*content=["'][^"']*["'][^>]*name=["']description["'][^>]*>/i)?.[0];
+  const description = descriptionTag?.match(/\bcontent=(["'])([^"']*)\1/i)?.[2] || "";
+  if (description.length > 220) {
+    const nextDescription = shortenMeta(description, 210);
+    const nextTag = descriptionTag.replace(/\bcontent=(["'])([^"']*)\1/i, (match, quote) => `content=${quote}${nextDescription}${quote}`);
+    html = html.replace(descriptionTag, nextTag);
+    html = html.replace(/<meta\b([^>]*?)property=["']og:description["']([^>]*?)content=["'][^"']*["']([^>]*)>/i, `<meta$1property="og:description"$2content="${nextDescription}"$3>`);
+    html = html.replace(/<meta\b([^>]*?)content=["'][^"']*["']([^>]*?)property=["']og:description["']([^>]*)>/i, `<meta$1content="${nextDescription}"$2property="og:description"$3>`);
+    descriptionsShortened += 1;
+    dirty = true;
+  }
+
   if (dirty) await writeFile(file, html);
 }
 
-console.log(`Russian finalization aligned search-preview policy on ${previewAligned} page(s), attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, restored editorial-trust discovery on ${trustLinked} page(s), and shortened ${shortened} overlong title(s).`);
+console.log(`Russian finalization aligned search-preview policy on ${previewAligned} page(s), attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, restored editorial-trust discovery on ${trustLinked} page(s), shortened ${shortened} overlong title(s), and shortened ${descriptionsShortened} overlong search description(s).`);
