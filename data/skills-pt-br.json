@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "contextLabels": {
+    "checking-claims-misinformation": "Verificação de afirmações e desinformação",
+    "ai-assisted-decisions": "Decisões assistidas por IA",
+    "work-project-decisions": "Decisões de trabalho e projetos",
+    "forecasting-future-choices": "Previsões e escolhas futuras",
+    "project-estimation-delivery": "Estimativa e entrega de projetos"
+  },
+  "entries": [
+    {
+      "canonicalSlug": "evidence-evaluation",
+      "localizedSlug": "avaliacao-de-evidencias",
+      "title": "Avaliação de evidências",
+      "aliases": ["evidence evaluation", "avaliar evidências", "verificar força de uma afirmação"],
+      "summary": "Avalie se uma afirmação merece confiança antes de tratar repetição, fluência ou preferência como evidência.",
+      "outcome": "Você consegue separar uma afirmação convincente das evidências que realmente deveriam atualizar seu julgamento.",
+      "whenToUse": ["Uma equipe já prefere uma explicação e procura principalmente apoio para ela.", "Muitos textos repetem a mesma afirmação, mas podem depender da mesma fonte.", "Um exemplo marcante está pesando mais do que dados mais amplos.", "Uma resposta de IA parece segura, mas afirmações importantes ainda não foram verificadas."],
+      "actions": ["Escreva o que enfraqueceria sua conclusão preferida antes de buscar mais apoio.", "Rastreie afirmações repetidas até fontes realmente independentes.", "Compare exemplos marcantes com taxa-base, classe de referência ou amostra mais ampla.", "Separe fatos verificados, inferências plausíveis e perguntas ainda abertas."],
+      "example": "Três matérias dizem que um método aumenta muito a produtividade. Ao rastrear as fontes, você descobre que todas citam o mesmo estudo pequeno. A quantidade de links aumentou; a quantidade de evidência independente, não.",
+      "boundary": "A habilidade melhora a análise de uma afirmação. Ela não transforma dados fracos em certeza nem substitui conhecimento especializado quando o risco exige isso."
+    },
+    {
+      "canonicalSlug": "decision-making-under-uncertainty",
+      "localizedSlug": "tomada-de-decisao-sob-incerteza",
+      "title": "Tomada de decisão sob incerteza",
+      "aliases": ["decision making under uncertainty", "decidir sob incerteza", "tomar decisão sem certeza"],
+      "summary": "Tome decisões úteis quando o resultado permanece incerto e um número inicial, uma história recente ou um investimento passado pode puxar demais o julgamento.",
+      "outcome": "Você consegue escolher uma ação sem fingir que a incerteza desapareceu.",
+      "whenToUse": ["Prazo, orçamento ou probabilidade está sendo discutido como um único número preciso.", "A primeira estimativa está influenciando todas as estimativas seguintes.", "O último sucesso ou fracasso domina a próxima decisão.", "A equipe continua principalmente porque já investiu muito."],
+      "actions": ["Comece com uma faixa ou classe de referência antes de negociar um número preciso.", "Produza uma estimativa independente antes de olhar uma âncora forte, quando possível.", "Separe o que já foi gasto do custo futuro, valor futuro e custo de oportunidade da próxima etapa.", "Registre as condições que deveriam disparar uma revisão da decisão."],
+      "example": "Um projeto foi anunciado para oito semanas porque esse número apareceu primeiro. Você consulta projetos comparáveis, encontra uma faixa de dez a quatorze semanas e explicita quais condições poderiam realmente reduzir o prazo.",
+      "boundary": "Uma faixa não elimina incerteza. A habilidade torna premissas e trade-offs mais visíveis; não garante uma previsão nem um resultado correto."
+    },
+    {
+      "canonicalSlug": "forecasting",
+      "localizedSlug": "previsoes",
+      "title": "Previsões",
+      "aliases": ["forecasting", "previsão", "estimar o que vai acontecer"],
+      "summary": "Estime resultados usando casos comparáveis, incerteza explícita e registros feitos antes de conhecer o desfecho.",
+      "outcome": "Você produz previsões mais fáceis de contestar, comparar e revisar depois.",
+      "whenToUse": ["Um prazo de projeto foi construído apenas a partir do plano interno.", "Um sentimento atual está sendo projetado muito longe no futuro.", "Um caso recente e marcante virou quase toda a estimativa de probabilidade.", "Depois do resultado, todos sentem que a resposta era óbvia desde o início."],
+      "actions": ["Consulte casos comparáveis já concluídos antes de refinar o plano atual.", "Forneça uma faixa e descreva o que poderia mover o resultado para cada lado.", "Registre a previsão e suas premissas antes do resultado.", "Depois, avalie a previsão pelo registro original, não por uma memória reconstruída."],
+      "example": "Antes de anunciar uma data de entrega, você compara cinco projetos próximos, registra uma faixa de prazo e define dois sinais que obrigarão uma atualização da previsão.",
+      "boundary": "Previsão continua sendo estimativa. Um processo bom pode terminar em um resultado ruim; um resultado sortudo não prova que o método foi bom."
+    },
+    {
+      "canonicalSlug": "metacognition",
+      "localizedSlug": "metacognicao",
+      "title": "Metacognição",
+      "aliases": ["metacognition", "revisar o próprio raciocínio", "examinar como uma decisão foi formada"],
+      "summary": "Examine como um julgamento se formou, o que o influenciou e o que deveria fazer você mudar de ideia.",
+      "outcome": "Você revisa o próprio raciocínio sem confundir confiança, resultado final e retrospectiva com qualidade da decisão inicial.",
+      "whenToUse": ["Um bom resultado está sendo usado como prova de que o processo foi bom.", "Um resultado ruim faz os sinais de alerta parecerem muito mais óbvios do que eram.", "Você testa principalmente argumentos que sustentam a resposta preferida.", "Quer aprender com uma decisão passada sem reescrever o que era possível saber na época."],
+      "actions": ["Congele o que era realmente conhecido antes do resultado.", "Avalie a qualidade do processo separadamente do desfecho.", "Escreva o que faria você mudar de ideia antes de coletar mais evidências.", "Compare a revisão com previsões, notas ou premissas registradas na época."],
+      "example": "Uma decisão comercial deu muito certo. Em vez de concluir que o raciocínio foi excelente, você relê as premissas registradas antes da escolha e separa o que era sólido, frágil ou simplesmente sorte.",
+      "boundary": "Metacognição não oferece uma visão perfeitamente objetiva do próprio pensamento. Ela funciona melhor com registros contemporâneos e explicações alternativas mantidas abertas."
+    },
+    {
+      "canonicalSlug": "information-verification",
+      "localizedSlug": "verificacao-de-informacoes",
+      "title": "Verificação de informações",
+      "aliases": ["information verification", "verificar informação", "checar uma afirmação"],
+      "summary": "Verifique de onde vem uma informação, se as fontes são independentes e se uma correção realmente substituiu a explicação antiga.",
+      "outcome": "Você verifica afirmações importantes sem tratar repetição como confirmação independente.",
+      "whenToUse": ["Uma afirmação parece verdadeira principalmente porque ficou familiar.", "Vários resumos podem depender da mesma fonte original.", "Uma correção existe, mas a versão antiga continua influenciando o raciocínio.", "Uma resposta gerada repete uma afirmação sem mostrar claramente sua origem."],
+      "actions": ["Rastreie a afirmação até a fonte primária ou confiável mais próxima que você possa inspecionar.", "Conte fontes independentes, não repetições.", "Depois de uma correção, formule explicitamente a explicação atualmente sustentada.", "Diferencie o que foi verificado, o que é inferência e o que permanece desconhecido."],
+      "example": "Uma estatística aparece em seis posts. Ao seguir as citações, você descobre que todos remontam ao mesmo relatório. Você passa a tratar isso como uma fonte, não seis confirmações.",
+      "boundary": "Chegar à fonte original não garante que ela seja boa. A verificação ainda precisa avaliar método, contexto e força da evidência."
+    },
+    {
+      "canonicalSlug": "ai-assisted-reasoning",
+      "localizedSlug": "raciocinio-assistido-por-ia",
+      "title": "Raciocínio assistido por IA",
+      "aliases": ["AI-assisted reasoning", "raciocínio com IA", "usar IA para decidir melhor"],
+      "summary": "Use IA para ampliar alternativas e testes sem terceirizar julgamento, verificação de fatos ou responsabilidade pela decisão.",
+      "outcome": "Você usa o modelo como ferramenta de contraste e investigação, e não como uma âncora automática de autoridade.",
+      "whenToUse": ["A primeira resposta do modelo está virando o ponto de partida de toda a análise.", "Você quer testar uma recomendação contra hipóteses alternativas.", "A resposta mistura fatos, inferências e sugestões sem marcar a diferença.", "Uma equipe está pronta para agir com base em uma resposta que ainda não foi verificada."],
+      "actions": ["Formule o problema e sua própria estimativa antes de pedir uma recomendação quando isso for viável.", "Peça alternativas plausíveis, contraevidências e condições que mudariam a conclusão.", "Verifique externamente as afirmações factuais que importam para a decisão.", "Registre o que veio do modelo, o que foi confirmado e quem assume a decisão final."],
+      "example": "Antes de aceitar uma recomendação de arquitetura, você pede ao modelo três alternativas, riscos de cada uma e evidências que poderiam invalidar a opção preferida; depois verifica as premissas técnicas nas fontes relevantes.",
+      "boundary": "Um modelo pode produzir uma crítica persuasiva e ainda estar errado. Diversidade de prompts não equivale a independência de fontes, e o modelo não assume responsabilidade pela decisão."
+    }
+  ]
+}
