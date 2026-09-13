@@ -1,9 +1,9 @@
 {
   "version": 1,
   "locale": "de",
-  "state": "draft",
+  "state": "reviewed",
   "updatedAt": "2026-09-13",
-  "editorialNote": "Staged situation-first content model. These records are not part of the public reviewed German surface until a renderer and localization quality gate publish them end to end. Source concept and technique IDs remain canonical.",
+  "editorialNote": "Reviewed situation-first decision guides assembled from canonical evidence-reviewed concepts and decision techniques. A guide is a practical review procedure, not a new scientific claim.",
   "guides": [
     {
       "slug": "ki-antwort-pruefen",
@@ -12,11 +12,12 @@
       "summary": "Ein flüssiger Text kann fertig wirken, bevor Quellen, Alternativen und Grenzen geprüft sind.",
       "situation": "Du fragst ein System nach einer Empfehlung oder Studie. Die Antwort ist klar und bleibt auch nach Rückfragen ähnlich. Das fühlt sich wie Bestätigung an, obwohl die Antworten nicht unabhängig sein müssen.",
       "checklist": ["Schreibe zuerst deine aktuelle Einschätzung oder einen eigenen Zahlenbereich auf.", "Zerlege die Antwort in prüfbare Kernaussagen und ordne wichtigen Aussagen eine Quelle zu.", "Öffne die Quellen und prüfe Population, Zeitraum, Messgröße und Stärke der Schlussfolgerung.", "Suche mindestens eine plausible Alternative, die nicht vom ersten Frame abhängt.", "Zähle unabhängige Quellen, nicht ähnlich klingende Antworten."],
-      "whyItHelps": "Der Ablauf trennt Antwort, Evidenz und Schlussfolgerung voneinander.",
-      "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert keinen Bias.",
-      "biasSlugs": ["cognitive-bias-anchoring-effect", "truth-judgment-illusory-truth-effect"],
+      "whyItHelps": "Der Ablauf trennt Modellantwort, Evidenz und Schlussfolgerung voneinander und macht sichtbar, wann eine Empfehlung nur plausibel klingt statt unabhängig geprüft zu sein.",
+      "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert weder Automation Bias noch einen anderen Bias in einer einzelnen Nutzung.",
+      "biasSlugs": ["false-priors-automation-bias", "cognitive-bias-anchoring-effect", "truth-judgment-illusory-truth-effect"],
       "techniqueSlugs": ["source-trace", "independent-estimate", "consider-the-opposite"],
-      "searchTerms": ["KI prüfen", "KI Quellen", "AI research", "KI Empfehlung"]
+      "sourceRefs": [{"type":"situation-guide","id":"ai-assisted-research"}],
+      "searchTerms": ["KI prüfen", "ChatGPT Antwort prüfen", "KI Quellen", "AI research", "KI Empfehlung"]
     },
     {
       "slug": "schlechtes-projekt-stoppen",
@@ -26,9 +27,10 @@
       "situation": "Ein Projekt hat viel Zeit gekostet, die Nutzung bleibt schwach und neue Probleme tauchen auf. Stoppen fühlt sich trotzdem wie Verschwendung an.",
       "checklist": ["Markiere bereits verbrauchte Zeit und Kosten als nicht rückholbar.", "Bewerte nur den nächsten Schritt: zukünftige Kosten, erwarteter Nutzen, Unsicherheit und Alternativen.", "Frage, ob du denselben nächsten Schritt wählen würdest, wenn das Projekt heute ohne Vorgeschichte auf deinem Tisch läge.", "Definiere vor der nächsten Investition beobachtbare Stop- oder Update-Kriterien.", "Teste die wichtigste Unsicherheit mit einem kleinen reversiblen Schritt, wenn das möglich ist."],
       "whyItHelps": "Die Prüfung trennt Vergangenheit und Zukunft und macht sichtbar, ob die nächste Investition einen eigenen Business Case hat.",
-      "boundary": "Nicht jedes fortgesetzte Projekt ist irrational. Wechselkosten, Lernkurven oder neue Informationen können Fortsetzung rechtfertigen.",
+      "boundary": "Nicht jedes fortgesetzte Projekt ist irrational. Wechselkosten, Lernkurven, neue Informationen oder strategische Abhängigkeiten können Fortsetzung rechtfertigen.",
       "biasSlugs": ["logical-fallacy-escalation-of-commitment", "cognitive-bias-sunk-cost-effect"],
       "techniqueSlugs": ["incremental-value-check", "predefined-update-criteria", "reversible-test"],
+      "sourceRefs": [{"type":"everyday-guide","id":"why-bad-projects-are-so-hard-to-stop"}],
       "searchTerms": ["Projekt stoppen", "Sunk Cost Projekt", "Projekt abbrechen", "weiter investieren"]
     },
     {
@@ -39,10 +41,10 @@
       "situation": "Nach zehn Minuten bevorzugen alle dieselbe Option. Danach dreht sich die Diskussion fast nur noch um die Umsetzung; niemand hat festgehalten, welche Evidenz gegen die Lieblingslösung sprechen würde.",
       "checklist": ["Fixiere Ziel und Entscheidungskriterien vor der Detaildiskussion.", "Lass wichtige Beteiligte ihre erste Bewertung unabhängig notieren.", "Formuliere die stärkste plausible Alternative und frage, welche Daten eher für sie sprechen würden.", "Beauftrage eine Person oder ein kleines Red Team mit konkreten Failure Modes und fehlender Evidenz.", "Dokumentiere die stärkste verbleibende Unsicherheit und welche neue Evidenz die Entscheidung verändern würde."],
       "whyItHelps": "Unabhängige Ersturteile und ein ernst gemeintes Gegenmodell bewahren Informationen, die nach einer frühen Gruppeneinigung leicht verschwinden.",
-      "boundary": "Konsens ist nicht automatisch verdächtig. Diese Seite diagnostiziert kein Groupthink; sie bietet einen robusteren Prüfprozess.",
+      "boundary": "Konsens ist nicht automatisch verdächtig. Diese Seite diagnostiziert kein Groupthink; sie bietet einen robusteren Prüfprozess für folgenreiche Teamentscheidungen.",
       "biasSlugs": ["cognitive-bias-confirmation-bias", "framing-effect-core"],
       "techniqueSlugs": ["consider-the-opposite", "red-team-review", "predefined-criteria"],
-      "searchTerms": ["Team Konsens", "alle sind sich einig", "Red Team", "Entscheidung Meeting", "Gegenargument"]
+      "searchTerms": ["Team Konsens", "alle sind sich einig", "Groupthink vermeiden", "Red Team", "Entscheidung Meeting", "Gegenargument"]
     },
     {
       "slug": "projekt-schaetzen-mit-zieldatum",
@@ -51,10 +53,11 @@
       "summary": "Ein gewünschtes Datum ist ein Planungsziel, aber nicht automatisch eine Prognose. Halte Ziel, Referenzklasse und Schätzung getrennt.",
       "situation": "Ein Steering Committee erwartet zwölf Wochen. Das Team erstellt daraufhin einen Plan, der zwölf Wochen ergibt, obwohl ähnliche abgeschlossene Projekte länger brauchten.",
       "checklist": ["Erstelle zuerst eine unabhängige Schätzung oder Spanne.", "Wähle eine nachvollziehbare Referenzklasse vergleichbarer abgeschlossener Projekte.", "Liste konkrete Unterschiede auf, die dieses Projekt zum schnellen oder langsamen Ende der Bandbreite verschieben.", "Zeige Business-Ziel und Prognose als zwei getrennte Zahlen.", "Definiere ein beobachtbares Ereignis, bei dem die Prognose aktualisiert wird, und bewahre die vorige Prognose auf."],
-      "whyItHelps": "Die Trennung verhindert, dass ein Ziel als empirische Vorhersage verkleidet wird, und macht notwendige Änderungen sichtbar.",
+      "whyItHelps": "Die Trennung verhindert, dass ein Ziel als empirische Vorhersage verkleidet wird, und macht notwendige Scope-, Kapazitäts- oder Risikoänderungen sichtbar.",
       "boundary": "Ein spätes Projekt beweist weder Planning Fallacy noch Anchoring. Lieferfähigkeit hängt auch von Scope, Skills, Abhängigkeiten, Anreizen und Technik ab.",
       "biasSlugs": ["egocentric-bias-planning-fallacy", "cognitive-bias-anchoring-effect"],
       "techniqueSlugs": ["reference-class-forecasting", "independent-estimate", "predefined-update-criteria"],
+      "sourceRefs": [{"type":"situation-guide","id":"project-estimation"}],
       "searchTerms": ["Projekt Schätzung", "Termin steht fest", "Deadline schätzen", "Planning Fallacy Projekt", "Referenzklasse"]
     }
   ]
