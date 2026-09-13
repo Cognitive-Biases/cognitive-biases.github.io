@@ -1,0 +1,20 @@
+{
+  "version": "2026-09-13",
+  "locale": "fr",
+  "sourceLocale": "en",
+  "status": "reviewed",
+  "entries": [
+    {"conceptId":"cognitive-bias","source":"cognitive bias","preferred":"biais cognitif","aliases":[],"avoid":[],"context":"Terme général; ne pas l'utiliser comme diagnostic d'une personne.","status":"reviewed"},
+    {"conceptId":"heuristic","source":"heuristic","preferred":"heuristique","aliases":[],"avoid":[],"context":"Une heuristique n'est pas automatiquement une erreur.","status":"reviewed"},
+    {"conceptId":"decision-making","source":"decision-making","preferred":"prise de décision","aliases":[],"avoid":[],"context":"Terminologie générale du processus de décision.","status":"reviewed"},
+    {"conceptId":"evidence","source":"evidence","preferred":"preuves / état des preuves","aliases":[],"avoid":["preuve certaine"],"context":"Préserver la force et les limites des preuves canoniques.","status":"reviewed"},
+    {"conceptId":"uncertainty","source":"uncertainty","preferred":"incertitude","aliases":[],"avoid":[],"context":"Rendre explicites les limites de connaissance ou de prédiction.","status":"reviewed"},
+    {"conceptId":"confirmation-bias","source":"confirmation bias","preferred":"biais de confirmation","aliases":["confirmation bias"],"avoid":[],"context":"Libellé principal et alias anglais utile pour la découverte.","status":"reviewed"},
+    {"conceptId":"anchoring-effect","source":"anchoring effect","preferred":"effet d'ancrage","aliases":["anchoring effect"],"avoid":[],"context":"Libellé principal de l'entité canonique.","status":"reviewed"},
+    {"conceptId":"availability-heuristic","source":"availability heuristic","preferred":"heuristique de disponibilité","aliases":["availability heuristic"],"avoid":[],"context":"Conserver la distinction entre heuristique et erreur.","status":"reviewed"},
+    {"conceptId":"planning-fallacy","source":"planning fallacy","preferred":"biais de planification","aliases":["planning fallacy"],"avoid":[],"context":"Terme préféré du projet pour l'entité canonique.","status":"reviewed"},
+    {"conceptId":"practical-intervention","source":"debiasing technique","preferred":"technique","aliases":["technique de débiaisage"],"avoid":["hack"],"context":"Intervention pratique; pas une garantie de correction.","status":"reviewed"},
+    {"conceptId":"decision-skills","source":"Decision Skills","preferred":"Compétences de décision","aliases":["Decision Skills"],"avoid":[],"context":"Capacités pratiques réutilisables pour améliorer une décision.","status":"reviewed"}
+  ],
+  "rules": {"canonicalIdsAreNeverTranslated":true,"naturalGrammarMayInflectPreferredTerms":true,"englishAliasesMaySupportDiscovery":true,"evidenceStrengthMustNotChange":true}
+}
