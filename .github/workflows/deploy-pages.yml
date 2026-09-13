@@ -70,6 +70,8 @@ jobs:
         run: node scripts/finalize-public-metadata.mjs
       - name: Re-finalize homepage search identity
         run: node scripts/finalize-search-appearance.mjs
+      - name: Stage Goose ARWP Proof Mark
+        run: node scripts/inject-goose-proof-mark.mjs dist
       - name: Re-apply Image Discovery to the final artifact
         run: node scripts/apply-image-discovery.mjs
       - name: Gate final Image Discovery surface
