@@ -22,6 +22,7 @@ const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character)
 let shortened = 0;
 let styled = 0;
 let brandOptimized = 0;
+let trustLinked = 0;
 for (const file of await walk(OUT)) {
   let html = await readFile(file, "utf8");
   let dirty = false;
@@ -40,6 +41,14 @@ for (const file of await walk(OUT)) {
       .replaceAll('<img src="/assets/biases_icon.png" width="40" height="40" alt="">', '<picture><source srcset="/assets/brand.webp" type="image/webp"><img src="/assets/biases_icon.png" width="40" height="40" alt=""></picture>');
     if (html === before) throw new Error(`${file}: Russian brand markup could not be upgraded to the shared WebP source.`);
     brandOptimized += 1;
+    dirty = true;
+  }
+
+  if (html.includes("</footer>") && !html.includes('href="/about/editorial/"')) {
+    const footerLinks = /<div class="footer-links">([\s\S]*?)<\/div>/i;
+    if (!footerLinks.test(html)) throw new Error(`${file}: Russian footer is missing the footer-links container.`);
+    html = html.replace(footerLinks, (match, links) => `<div class="footer-links">${links}<a href="/about/editorial/">Как мы проверяем материалы <span lang="en">— English</span></a></div>`);
+    trustLinked += 1;
     dirty = true;
   }
 
@@ -62,4 +71,4 @@ for (const file of await walk(OUT)) {
   if (dirty) await writeFile(file, html);
 }
 
-console.log(`Russian finalization attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, and shortened ${shortened} overlong title(s).`);
+console.log(`Russian finalization attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, restored editorial-trust discovery on ${trustLinked} page(s), and shortened ${shortened} overlong title(s).`);
