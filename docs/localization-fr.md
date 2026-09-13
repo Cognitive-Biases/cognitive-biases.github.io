@@ -2,6 +2,8 @@
 
 French is a reviewed human-language layer. English remains canonical for identifiers, schemas, evidence status, sources, review dates and relations.
 
+Shared workflow and CI contract: [`localization.md`](./localization.md). The first-class terminology source is [`../data/glossary-fr.json`](../data/glossary-fr.json). This guide explains locale-specific editorial choices; the structured glossary is the machine-readable terminology layer used by review tooling and agents.
+
 The published-bias catalog has complete French coverage. Translation review and evidence review are separate states: good French wording must never imply that a construct has stronger scientific support than the canonical record provides.
 
 ## Voice
