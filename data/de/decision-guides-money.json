@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "guides": [
+    {
+      "slug": "wichtiger-kauf",
+      "title": "Vor einem wichtigen Kauf",
+      "category": "Kaufentscheidungen",
+      "summary": "Rabatt, Listenpreis und eine vertraute Marke können den Vergleich rahmen, bevor dein eigener Nutzen feststeht.",
+      "situation": "Ein Gerät ist deutlich reduziert. Gleichzeitig kennst du die bisherige Marke und willst nicht wieder von vorne vergleichen.",
+      "checklist": [
+        "Schreibe auf, welche Funktionen du wirklich brauchst und was sie dir maximal wert sind.",
+        "Vergleiche mindestens zwei reale Alternativen anhand derselben vorab festgelegten Kriterien.",
+        "Behandle Listenpreis und Rabatt nicht automatisch als Information über deinen Nutzen.",
+        "Schätze reale Wechselkosten separat: Einrichtung, Migration, Lernen, Zubehör und Zeit.",
+        "Frage am Ende, was du wählen würdest, wenn du den ersten Preis und deine bisherige Marke nie gesehen hättest."
+      ],
+      "whyItHelps": "Die Prüfung erzeugt einen eigenen Referenzpunkt und trennt Bequemlichkeit von tatsächlichen Wechselkosten.",
+      "boundary": "Beim Status quo zu bleiben kann rational sein. Ziel ist nicht, immer die billigste oder neue Option zu wählen.",
+      "biasSlugs": ["cognitive-bias-anchoring-effect", "prospect-theory-status-quo-bias"],
+      "techniqueSlugs": ["independent-estimate", "predefined-criteria"],
+      "searchTerms": ["Kaufentscheidung", "Rabatt prüfen", "Preisanker", "Marke wechseln"]
+    }
+  ]
+}
