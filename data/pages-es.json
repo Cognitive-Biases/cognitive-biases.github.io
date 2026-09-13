@@ -1,0 +1,41 @@
+{
+  "locale": "es",
+  "home": {
+    "eyebrow": "Decidir con más perspectiva",
+    "title": "Detecta sesgos. Pon a prueba tus supuestos. Decide con más claridad.",
+    "lede": "Saber el nombre de un sesgo no basta. Usa la biblioteca para entender un mecanismo, comprobar qué permite afirmar la evidencia y elegir una acción concreta antes de decidir.",
+    "whyTitle": "Pasa del nombre del sesgo a una pregunta mejor.",
+    "whyText": "Una ficha útil no te dice que «estás sesgado». Te ayuda a detectar un riesgo en el razonamiento, buscar la información que falta y probar otra forma de decidir.",
+    "startTitle": "Empieza por lo que ya sabes.",
+    "journeys": [
+      {"title": "Conozco el sesgo", "text": "Busca su nombre en español o en inglés y abre la ficha correspondiente.", "href": "/es/explorar/", "cta": "Explorar las fichas"},
+      {"title": "Tengo un problema concreto", "text": "Empieza por una situación: un proyecto que sigue por inercia, un primer número que arrastra la estimación o una idea que ya nadie pone a prueba.", "href": "/es/explorar/#problemas", "cta": "Empezar por el problema"},
+      {"title": "Quiero decidir mejor", "text": "Aplica un procedimiento breve: estimación independiente, diario de decisiones, clase de referencia, revisión contradictoria y otras técnicas.", "href": "/es/tecnicas/", "cta": "Ver las técnicas"},
+      {"title": "Conozco el término en inglés", "text": "La búsqueda reconoce nombres como Confirmation Bias o Anchoring Effect y los vincula con la misma entidad canónica.", "href": "/es/explorar/", "cta": "Buscar un término"}
+    ],
+    "problemTitle": "No necesitas conocer el nombre del sesgo.",
+    "problems": [
+      {"question": "Sigo con este proyecto sobre todo porque ya he invertido mucho en él.", "canonicalId": "logical-fallacy-escalation-of-commitment"},
+      {"question": "Busco sobre todo información que confirma lo que ya pienso.", "canonicalId": "cognitive-bias-confirmation-bias"},
+      {"question": "El primer precio, puntuación o plazo condiciona toda la estimación.", "canonicalId": "cognitive-bias-anchoring-effect"},
+      {"question": "Un ejemplo reciente o llamativo me parece representativo de todos los casos.", "canonicalId": "heuristic-bias-availability-bias"}
+    ],
+    "evidenceTitle": "Los límites forman parte de la respuesta.",
+    "evidenceText": "Todas las fichas publicadas tienen una versión española revisada. Eso no significa que todos los conceptos tengan el mismo nivel de evidencia: la revisión lingüística y la revisión científica son estados distintos y se muestran por separado."
+  },
+  "explorer": {
+    "eyebrow": "Biblioteca en español",
+    "title": "Explora los sesgos cognitivos en español.",
+    "lede": "Busca todos los sesgos publicados por nombre en español, nombre en inglés o situación. Cada ficha conserva el mismo identificador canónico que la versión inglesa y separa la traducción revisada, los límites del concepto y el estado de la evidencia.",
+    "problemTitle": "Empieza por un problema habitual",
+    "coverageTitle": "Toda la biblioteca publicada, sin fingir más certeza de la que existe.",
+    "coverageText": "Cada sesgo publicado actualmente tiene una ficha en español. Cuando existe una revisión canónica de evidencia, se enlaza y se resume. Cuando no existe, la ficha lo dice: una buena localización no convierte una entrada poco estudiada en un efecto científico establecido."
+  },
+  "techniques": {
+    "eyebrow": "Herramientas de decisión",
+    "title": "Técnicas para actuar, no solo para reconocer un sesgo.",
+    "lede": "Estos procedimientos breves ayudan a que una decisión sea más revisable: hacer una estimación independiente, usar una clase de referencia, definir criterios antes de ver el resultado o rastrear una afirmación hasta su fuente.",
+    "boundaryTitle": "Ninguna técnica es una solución universal.",
+    "boundaryText": "Importan el contexto, la calidad de la información y la forma de aplicar el procedimiento. El objetivo es mejorar el proceso de decisión, no prometer una racionalidad perfecta."
+  }
+}

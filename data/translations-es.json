@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "locale": "es",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalId": "cognitive-bias-confirmation-bias",
+      "localizedSlug": "sesgo-de-confirmacion",
+      "localizedLabel": "Sesgo de confirmación",
+      "aliases": ["confirmation bias"],
+      "searchTerms": ["sesgo de confirmación", "confirmation bias español", "buscar solo lo que confirma mi idea"],
+      "summary": "El sesgo de confirmación agrupa varias formas en las que una creencia o hipótesis previa puede influir en la búsqueda, interpretación, recuerdo o evaluación de la información.",
+      "practicalQuestion": "¿Qué evidencia podría hacerme cambiar realmente de opinión?",
+      "examples": [
+        "En el trabajo, un equipo busca sobre todo cifras que apoyan el plan que ya prefiere.",
+        "En una investigación, se pone a prueba una hipótesis sin definir de antemano qué resultado la haría menos plausible.",
+        "Con una herramienta de IA, se piden diez argumentos a favor de una conclusión sin examinar seriamente explicaciones alternativas."
+      ],
+      "evidenceSummary": "El fenómeno está bien documentado, pero el término es amplio: distintos mecanismos de búsqueda e interpretación pueden producir conductas diferentes según la tarea.",
+      "boundary": "Buscar primero casos compatibles con una hipótesis no siempre es irracional. El problema es más claro cuando la prueba no permite distinguir entre explicaciones plausibles o cuando el estándar de evidencia cambia según la conclusión preferida.",
+      "techniqueSlugs": ["consider-the-opposite", "red-team-review", "predefined-update-criteria", "predefined-criteria", "reversible-test"]
+    },
+    {
+      "canonicalId": "cognitive-bias-anchoring-effect",
+      "localizedSlug": "efecto-de-anclaje",
+      "localizedLabel": "Efecto de anclaje",
+      "aliases": ["sesgo de anclaje", "anchoring effect"],
+      "searchTerms": ["efecto de anclaje", "sesgo de anclaje", "primer número influye en estimación"],
+      "summary": "El efecto de anclaje describe cómo un valor inicial puede arrastrar una estimación numérica posterior hacia él, incluso cuando ese punto de partida aporta poca información.",
+      "practicalQuestion": "¿Qué estimaría si no hubiera visto ese número?",
+      "examples": [
+        "En una negociación, el primer precio puede desplazar el intervalo en el que las ofertas siguientes parecen razonables.",
+        "En un proyecto, una fecha objetivo fijada demasiado pronto puede convertirse en referencia implícita para todas las estimaciones.",
+        "En una decisión asistida por IA, una primera puntuación o recomendación puede influir en el juicio humano posterior."
+      ],
+      "evidenceSummary": "El anclaje está bien respaldado para juicios numéricos. Su magnitud varía según el tipo de ancla, la tarea y la forma en que se presenta el valor inicial.",
+      "boundary": "No todos los números producen el mismo efecto. Un valor claramente aleatorio y ajeno a la tarea puede influir menos que un precio, objetivo o estimación que parezca relevante.",
+      "techniqueSlugs": ["independent-estimate", "predefined-criteria"]
+    },
+    {
+      "canonicalId": "heuristic-bias-availability-bias",
+      "localizedSlug": "heuristica-de-disponibilidad",
+      "localizedLabel": "Heurística de disponibilidad",
+      "aliases": ["sesgo de disponibilidad", "availability heuristic", "availability bias"],
+      "searchTerms": ["heurística de disponibilidad", "sesgo de disponibilidad", "un ejemplo reciente parece frecuente"],
+      "summary": "La heurística de disponibilidad usa la facilidad con la que vienen ejemplos a la mente como una señal para juzgar su frecuencia o probabilidad.",
+      "practicalQuestion": "¿Estos ejemplos vienen a mi mente porque son frecuentes o porque son recientes, llamativos o muy repetidos?",
+      "examples": [
+        "Después de un accidente muy difundido, un riesgo raro puede parecer de repente mucho más frecuente.",
+        "En un proyecto, un fracaso espectacular reciente se convierte en referencia para estimar todos los casos siguientes.",
+        "Una historia fácil de contar puede pesar más que un conjunto de datos menos memorable."
+      ],
+      "evidenceSummary": "La disponibilidad es una heurística bien establecida, pero no es automáticamente un error. Puede engañar cuando la facilidad de recuerdo proviene de factores que no reflejan la frecuencia real.",
+      "boundary": "Un ejemplo memorable puede señalar a veces un cambio real. Antes de corregir el juicio, comprueba si también han cambiado los datos de base.",
+      "techniqueSlugs": ["reference-class-forecasting", "base-rate-check"]
+    },
+    {
+      "canonicalId": "cognitive-bias-hindsight-bias",
+      "localizedSlug": "sesgo-retrospectivo",
+      "localizedLabel": "Sesgo retrospectivo",
+      "aliases": ["hindsight bias", "sesgo de retrospectiva", "efecto ya lo sabía"],
+      "searchTerms": ["sesgo retrospectivo", "hindsight bias español", "parecía obvio después"],
+      "summary": "Una vez conocido el resultado, el pasado puede parecer más predecible de lo que realmente era en el momento de tomar la decisión.",
+      "practicalQuestion": "¿Qué había previsto realmente antes de conocer el resultado?",
+      "examples": [
+        "Después del retraso de un proyecto, las causas parecen evidentes aunque al principio eran inciertas.",
+        "Después de un movimiento del mercado, alguien recuerda haber estado más seguro de la dirección de lo que estaba en realidad.",
+        "Después de una mala decisión, señales débiles parecen de repente imposibles de ignorar."
+      ],
+      "evidenceSummary": "El sesgo retrospectivo es robusto y se estudia desde hace décadas. Conocer el resultado puede cambiar la reconstrucción de lo que antes parecía previsible.",
+      "boundary": "Una buena explicación posterior no es automáticamente sesgada. La cuestión es si reconstruye de forma incorrecta la incertidumbre que existía antes del resultado.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "cognitive-bias-outcome-bias",
+      "localizedSlug": "sesgo-de-resultado",
+      "localizedLabel": "Sesgo de resultado",
+      "aliases": ["outcome bias"],
+      "searchTerms": ["sesgo de resultado", "outcome bias español", "juzgar decisión por el resultado"],
+      "summary": "El sesgo de resultado consiste en juzgar la calidad de una decisión por su resultado final, en vez de por la información y el razonamiento disponibles cuando se tomó.",
+      "practicalQuestion": "¿Juzgaría esta decisión igual si el resultado hubiera sido diferente?",
+      "examples": [
+        "Se elogia una decisión arriesgada porque salió bien, aunque el proceso para tomarla fuera débil.",
+        "Se condena una buena decisión porque finalmente ocurrió un riesgo conocido.",
+        "Después de un proyecto, el equipo confunde la suerte del resultado con la calidad del método."
+      ],
+      "evidenceSummary": "El efecto está respaldado por trabajos experimentales sobre evaluación de decisiones y por replicaciones modernas.",
+      "boundary": "El sesgo de resultado no es el sesgo retrospectivo: el primero cambia cómo evaluamos la decisión; el segundo cambia cuánto creemos que el resultado era previsible.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "egocentric-bias-planning-fallacy",
+      "localizedSlug": "falacia-de-planificacion",
+      "localizedLabel": "Falacia de planificación",
+      "aliases": ["sesgo de planificación", "planning fallacy"],
+      "searchTerms": ["falacia de planificación", "planning fallacy español", "subestimar duración proyecto"],
+      "summary": "La falacia de planificación describe la tendencia a subestimar el tiempo o los recursos necesarios para un proyecto, sobre todo cuando se mira el plan actual y no suficientes casos comparables terminados.",
+      "practicalQuestion": "¿Cuánto tardaron proyectos realmente comparables?",
+      "examples": [
+        "Una migración detallada parece caber en seis semanas porque cada paso, tomado por separado, parece razonable.",
+        "Un equipo añade un pequeño margen, pero nunca mira la distribución real de plazos de proyectos similares.",
+        "Un plan optimista no cambia aunque la experiencia pasada muestre sobrecostes y retrasos repetidos."
+      ],
+      "evidenceSummary": "El fenómeno está bien documentado en estimaciones de proyectos. Usar una vista externa y clases de referencia es una respuesta práctica habitual, sin garantizar una previsión perfecta.",
+      "boundary": "Un retraso no demuestra por sí solo una falacia de planificación. Acontecimientos nuevos o cambios de alcance también pueden explicar la diferencia.",
+      "techniqueSlugs": ["reference-class-forecasting"]
+    },
+    {
+      "canonicalId": "logical-fallacy-escalation-of-commitment",
+      "localizedSlug": "escalada-del-compromiso",
+      "localizedLabel": "Escalada del compromiso",
+      "aliases": ["escalation of commitment", "escalada de compromiso"],
+      "searchTerms": ["escalada del compromiso", "coste hundido", "costo hundido", "seguir proyecto porque ya invertí"],
+      "summary": "La escalada del compromiso describe la continuación de una línea de acción o la aportación de más recursos pese a señales negativas, a menudo porque abandonar resulta difícil de justificar después de decisiones previas.",
+      "practicalQuestion": "Si este proyecto apareciera hoy sin su historia, ¿financiaría todavía el siguiente paso?",
+      "examples": [
+        "Un proyecto recibe más presupuesto principalmente porque ya ha costado mucho.",
+        "Un equipo protege una decisión pasada aunque los datos nuevos hayan cambiado la relación entre coste y valor.",
+        "Se mantiene una solución técnica para no reconocer que cambiar de dirección se ha vuelto preferible."
+      ],
+      "evidenceSummary": "La investigación sobre escalada del compromiso estudia la persistencia después de recibir información negativa. Los costes ya asumidos pueden contribuir, pero no son el único mecanismo.",
+      "boundary": "El efecto de costes hundidos y la escalada del compromiso están relacionados, pero no son idénticos. Continuar también puede ser racional si los costes futuros, el valor esperado o los costes de cambio lo justifican.",
+      "techniqueSlugs": ["predefined-update-criteria", "incremental-value-check", "reversible-test"]
+    },
+    {
+      "canonicalId": "truth-judgment-illusory-truth-effect",
+      "localizedSlug": "efecto-de-verdad-ilusoria",
+      "localizedLabel": "Efecto de verdad ilusoria",
+      "aliases": ["efecto de verdad", "illusory truth effect"],
+      "searchTerms": ["efecto de verdad ilusoria", "repetición hace parecer verdadera una afirmación", "illusory truth effect español"],
+      "summary": "Una afirmación repetida puede, en promedio, ser juzgada como más verdadera que una afirmación comparable vista por primera vez, aunque la repetición no aporte evidencia nueva.",
+      "practicalQuestion": "¿Esta afirmación me parece creíble porque la he verificado o sobre todo porque ya la he visto varias veces?",
+      "examples": [
+        "La misma estadística aparece en varios artículos que en realidad dependen de una sola fuente.",
+        "Una frase repetida en medios se vuelve familiar y termina pareciendo mejor establecida de lo que está.",
+        "Varias respuestas de IA repiten la misma afirmación sin aportar evidencia independiente."
+      ],
+      "evidenceSummary": "El efecto medio de la repetición sobre los juicios de verdad es robusto, aunque su magnitud varía según el contenido, el procedimiento y el contexto.",
+      "boundary": "La repetición no vuelve creíble cualquier afirmación ni sustituye el conocimiento previo. Tampoco demuestra que una afirmación sea falsa.",
+      "techniqueSlugs": ["source-trace"]
+    }
+  ]
+}
