@@ -21,6 +21,7 @@ const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character)
 
 let shortened = 0;
 let styled = 0;
+let brandOptimized = 0;
 for (const file of await walk(OUT)) {
   let html = await readFile(file, "utf8");
   let dirty = false;
@@ -29,6 +30,16 @@ for (const file of await walk(OUT)) {
     if (!html.includes("</head>")) throw new Error(`${file}: cannot attach Russian interface styles without </head>.`);
     html = html.replace("</head>", '<link rel="stylesheet" href="/ru.css"></head>');
     styled += 1;
+    dirty = true;
+  }
+
+  if (html.includes('class="brand"') && !html.includes('/assets/brand.webp')) {
+    const before = html;
+    html = html
+      .replaceAll('<img src="/assets/biases_icon.png" width="48" height="48" alt="">', '<picture><source srcset="/assets/brand.webp" type="image/webp"><img src="/assets/biases_icon.png" width="48" height="48" alt=""></picture>')
+      .replaceAll('<img src="/assets/biases_icon.png" width="40" height="40" alt="">', '<picture><source srcset="/assets/brand.webp" type="image/webp"><img src="/assets/biases_icon.png" width="40" height="40" alt=""></picture>');
+    if (html === before) throw new Error(`${file}: Russian brand markup could not be upgraded to the shared WebP source.`);
+    brandOptimized += 1;
     dirty = true;
   }
 
@@ -51,4 +62,4 @@ for (const file of await walk(OUT)) {
   if (dirty) await writeFile(file, html);
 }
 
-console.log(`Russian finalization attached interface styles to ${styled} page(s) and shortened ${shortened} overlong title(s).`);
+console.log(`Russian finalization attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, and shortened ${shortened} overlong title(s).`);
