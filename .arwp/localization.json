@@ -61,7 +61,7 @@
       "id": "agent-routing-llms",
       "kind": "machine-files",
       "parity": "routing-only",
-      "localePattern": "dist/{locale}/llms.txt",
+      "localePattern": "ai/llms.{locale}.txt",
       "requiredForRoles": ["routing-only"],
       "checks": ["declared-routing-surface", "no-human-search-publication"]
     }
