@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "entries": [
+    {
+      "canonicalSlug": "cognitive-bias-lens",
+      "name": "Lente de vieses cognitivos",
+      "summary": "Analise uma situação em busca de vieses cognitivos candidatos sem diagnosticar pessoas nem tratar um rótulo como causa comprovada.",
+      "useWhen": ["O usuário quer saber quais vieses podem estar influenciando uma decisão ou argumento.", "Uma explicação parece depender de uma única interpretação psicológica.", "É útil gerar hipóteses de viés e testes que possam diferenciá-las."],
+      "procedure": ["Reformule a situação de modo neutro e separe fatos observáveis de interpretações.", "Liste no máximo alguns vieses candidatos relevantes e explique por que cada um poderia se aplicar.", "Inclua pelo menos uma explicação alternativa não baseada em viés.", "Para cada candidato importante, proponha uma observação, comparação ou pergunta que poderia enfraquecer a hipótese.", "Indique limites de evidência e evite inferir intenção, inteligência, caráter ou diagnóstico."],
+      "output": ["Situação reformulada", "Vieses candidatos", "Explicações alternativas", "Checagens que podem diferenciar hipóteses", "Incertezas e limites"],
+      "guardrails": ["Trate vieses como hipóteses, não diagnósticos.", "Não atribua motivos internos sem evidência observável.", "Não use um rótulo de viés para encerrar uma discussão.", "Preserve o status de evidência do conhecimento canônico."]
+    },
+    {
+      "canonicalSlug": "bias-aware-decision-review",
+      "name": "Revisão de decisão sensível a vieses",
+      "summary": "Revise uma decisão importante separando objetivo, alternativas, evidência, incerteza, incentivos e possíveis vieses antes de recomendar próximos passos.",
+      "useWhen": ["O usuário precisa revisar uma decisão de trabalho, projeto, produto ou vida cotidiana.", "Há risco de ancoragem, confirmação, custo afundado ou excesso de confiança.", "É necessário desafiar premissas sem transformar a revisão em oposição genérica."],
+      "procedure": ["Defina a decisão, o objetivo, o horizonte e as alternativas reais.", "Separe custos passados de custos e benefícios futuros.", "Identifique premissas decisivas, evidências a favor e evidências contrárias.", "Use taxa-base, classe de referência ou estimativa independente quando aplicável.", "Aplique uma revisão contraditória e pergunte o que faria a recomendação mudar.", "Prefira teste pequeno e reversível quando o valor da informação for alto e a reversibilidade for real."],
+      "output": ["Decisão e objetivo", "Alternativas", "Premissas críticas", "Evidência e incerteza", "Riscos de viés", "Checagens práticas", "Próximo passo e condições de revisão"],
+      "guardrails": ["Não trate a presença possível de um viés como prova de que a escolha é errada.", "Não ignore restrições reais apenas porque parecem custos afundados.", "Diferencie qualidade do processo e resultado final.", "Em decisões de alto risco, recomende validação especializada quando necessária."]
+    },
+    {
+      "canonicalSlug": "evidence-evaluation",
+      "name": "Avaliação de evidências",
+      "summary": "Avalie a força de uma afirmação separando fonte, independência, método, relevância e incerteza.",
+      "useWhen": ["O usuário quer verificar uma afirmação, pesquisa, texto ou resposta de IA.", "Muitas fontes podem estar repetindo a mesma origem.", "Uma conclusão forte depende de evidência limitada, indireta ou controversa."],
+      "procedure": ["Formule a afirmação de maneira específica e verificável.", "Rastreie a afirmação até as fontes mais próximas da evidência original.", "Verifique se as fontes são independentes ou compartilham a mesma origem.", "Avalie desenho, amostra, medida, comparação, contexto e limitações relevantes.", "Separe resultado observado, interpretação e extrapolação.", "Declare o que a evidência sustenta, o que apenas sugere e o que permanece desconhecido."],
+      "output": ["Afirmação avaliada", "Fontes e independência", "Força e limitações da evidência", "Conclusões sustentadas", "Extrapolações não sustentadas", "Incertezas"],
+      "guardrails": ["Não invente fontes nem níveis de evidência.", "Quantidade de links não equivale a independência.", "Uma tradução revisada não aumenta a força da evidência canônica.", "Use linguagem proporcional à qualidade dos dados."]
+    },
+    {
+      "canonicalSlug": "decision-making-under-uncertainty",
+      "name": "Tomada de decisão sob incerteza",
+      "summary": "Estruture uma escolha quando probabilidades, resultados e informações são incompletos, sem converter incerteza em falsa precisão.",
+      "useWhen": ["Há várias alternativas com resultados incertos.", "Um número pontual está dominando uma decisão que deveria usar faixas.", "O usuário precisa decidir antes de ter informação completa."],
+      "procedure": ["Defina objetivo, alternativas e consequências relevantes.", "Use faixas, cenários ou probabilidades quando houver base razoável; não invente precisão.", "Procure taxas-base e classes de referência comparáveis.", "Identifique informação adicional que poderia mudar a decisão e seu custo.", "Considere reversibilidade, custo de atraso e opção de testar em pequena escala.", "Defina sinais para revisar a escolha depois."],
+      "output": ["Alternativas", "Incertezas principais", "Referências externas", "Trade-offs", "Valor de informação adicional", "Decisão ou próximo teste", "Critérios de atualização"],
+      "guardrails": ["Não produza probabilidades precisas sem base.", "Não confunda confiança verbal com evidência.", "Mantenha cenários plausíveis abertos quando os dados não os distinguem.", "Explique premissas que dirigem a recomendação."]
+    },
+    {
+      "canonicalSlug": "forecasting",
+      "name": "Previsões",
+      "summary": "Produza previsões auditáveis com classes de referência, faixas explícitas e critérios de atualização.",
+      "useWhen": ["O usuário quer estimar prazo, custo, demanda, probabilidade ou outro resultado futuro.", "A previsão está muito baseada no plano interno ou em um caso recente.", "Será importante aprender com o erro depois do resultado."],
+      "procedure": ["Defina exatamente o evento, métrica e horizonte da previsão.", "Busque casos comparáveis e uma distribuição de resultados quando disponível.", "Faça uma estimativa inicial antes de absorver âncoras fortes, se possível.", "Registre faixa, premissas e fatores que poderiam deslocar o resultado.", "Defina quando atualizar a previsão.", "Após o resultado, compare com o registro original para evitar retrospectiva."],
+      "output": ["Alvo e horizonte", "Classe de referência", "Faixa ou estimativa", "Premissas", "Riscos", "Critérios de atualização", "Plano de revisão"],
+      "guardrails": ["Não apresente uma faixa como garantia.", "Não escolha a classe de referência apenas porque produz o resultado desejado.", "Separe erro de processo e variância do resultado.", "Mantenha registro da previsão anterior ao desfecho."]
+    },
+    {
+      "canonicalSlug": "metacognition",
+      "name": "Metacognição",
+      "summary": "Examine o próprio processo de raciocínio, as premissas e as condições que deveriam mudar uma conclusão.",
+      "useWhen": ["O usuário quer desafiar suposições ou revisar como chegou a uma conclusão.", "Confiança subjetiva está sendo tratada como evidência.", "Uma revisão pós-resultado pode sofrer viés retrospectivo ou de resultado."],
+      "procedure": ["Separe observações, interpretações, previsões e preferências.", "Liste premissas necessárias para a conclusão atual.", "Pergunte quais premissas foram verificadas e quais apenas assumidas.", "Considere uma explicação rival e o que diferenciaria as duas.", "Compare a decisão com registros feitos antes do resultado, quando existirem.", "Defina uma condição concreta para atualizar o julgamento."],
+      "output": ["Raciocínio atual", "Premissas", "Pontos de confiança excessiva ou insuficiente", "Hipótese alternativa", "Teste discriminante", "Condição para mudar de ideia"],
+      "guardrails": ["Autorrevisão não garante objetividade.", "Não transforme dúvida produtiva em paralisia.", "Não use linguagem psicológica para desqualificar uma pessoa.", "Diferencie aprendizagem posterior do que era conhecível antes."]
+    },
+    {
+      "canonicalSlug": "information-verification",
+      "name": "Verificação de informações",
+      "summary": "Verifique afirmações rastreando origem, independência, correções e contexto antes de reutilizá-las.",
+      "useWhen": ["O usuário está revisando pesquisa, conteúdo, notícia ou texto gerado por IA.", "Uma informação aparece repetidamente e parece familiar.", "É importante saber se várias citações representam evidências independentes."],
+      "procedure": ["Isole as afirmações factuais que importam.", "Rastreie cada afirmação até a melhor fonte disponível que possa ser inspecionada.", "Identifique dependência entre fontes e citações circulares.", "Cheque data, escopo, população, definição e contexto.", "Procure correções, versões mais novas e evidência contraditória relevante.", "Marque cada afirmação como verificada, parcialmente verificada, não verificada ou em conflito, explicando o motivo."],
+      "output": ["Afirmações críticas", "Origem", "Independência", "Status de verificação", "Conflitos ou correções", "Lacunas restantes"],
+      "guardrails": ["Não trate uma fonte primária como automaticamente confiável.", "Não invente verificação quando não foi possível inspecionar a fonte.", "Diferencie ausência de evidência e evidência de ausência.", "Preserve links, datas e proveniência quando disponíveis."]
+    },
+    {
+      "canonicalSlug": "ai-assisted-reasoning",
+      "name": "Raciocínio assistido por IA",
+      "summary": "Use IA para ampliar hipóteses, testar argumentos e organizar evidências sem transformar a primeira resposta do modelo em autoridade.",
+      "useWhen": ["Um agente ou modelo participa de pesquisa, análise, decisão ou revisão de conteúdo.", "A primeira resposta pode ancorar o usuário ou agentes seguintes.", "O workflow precisa manter fatos, inferências e incertezas separados."],
+      "procedure": ["Defina a pergunta e, quando útil, registre uma estimativa ou hipótese antes de consultar o modelo.", "Peça alternativas plausíveis, contraevidências, riscos e condições que mudariam a resposta.", "Solicite que fatos, inferências, recomendações e incertezas sejam marcados separadamente.", "Verifique externamente afirmações decisivas e conte fontes independentes.", "Compare respostas de modelos ou prompts apenas como diversidade de raciocínio, não como evidência independente.", "Registre quais partes foram verificadas e quem mantém responsabilidade pela decisão."],
+      "output": ["Pergunta e contexto", "Hipóteses alternativas", "Afirmações verificáveis", "Evidência externa", "Incertezas", "Riscos de viés humano/IA", "Recomendação condicionada"],
+      "guardrails": ["Não trate concordância entre modelos como confirmação independente.", "Não permita que uma resposta fluente substitua fontes verificáveis.", "Não delegue decisões de alto impacto sem supervisão apropriada.", "Declare limitações do modelo e da evidência disponível."]
+    }
+  ]
+}
