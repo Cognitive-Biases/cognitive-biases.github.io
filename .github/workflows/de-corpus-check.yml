@@ -1,0 +1,19 @@
+name: German Corpus Parity
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  german-corpus-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify full German canonical coverage
+        run: node scripts/check-de-corpus-parity.mjs
