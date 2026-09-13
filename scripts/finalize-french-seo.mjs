@@ -28,6 +28,7 @@ async function walk(dir) {
 const files = await walk(ROOT);
 let previewUpdated = 0;
 let titlesShortened = 0;
+let trustLinksAdded = 0;
 for (const file of files) {
   let html = await readFile(file, "utf8");
   let changed = false;
@@ -53,6 +54,12 @@ for (const file of files) {
     }
   }
 
+  if (html.includes("</footer>") && !html.includes('href="/about/editorial/"')) {
+    html = html.replace("</footer>", '<p class="fine-print"><a href="/about/editorial/">Processus éditorial et qualité</a></p></footer>');
+    trustLinksAdded += 1;
+    changed = true;
+  }
+
   if (changed) await writeFile(file, html);
 }
 
@@ -66,4 +73,4 @@ if (missingClasses.length) {
   await writeFile(methodologyPath, methodology);
 }
 
-console.log(`French SEO finalizer: ${previewUpdated}/${files.length} page(s) updated with large-preview directives; ${titlesShortened} long French title(s) shortened; ${missingClasses.length} methodology evidence-class anchor(s) restored.`);
+console.log(`French SEO finalizer: ${previewUpdated}/${files.length} page(s) updated with large-preview directives; ${titlesShortened} long French title(s) shortened; ${trustLinksAdded} editorial-trust footer link(s) added; ${missingClasses.length} methodology evidence-class anchor(s) restored.`);
