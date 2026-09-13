@@ -1,0 +1,49 @@
+# Cognitive Biases — enrutamiento para agentes en español
+
+> Biblioteca pública sobre sesgos cognitivos, evidencia, técnicas de decisión, habilidades de decisión y razonamiento.
+
+Esta superficie en español sirve para descubrimiento, recuperación y enrutamiento de asistentes y agentes. El inglés sigue siendo el idioma canónico de los identificadores, esquemas, nombres de campos, estados de evidencia, fuentes y relaciones. Las páginas en español son representaciones revisadas de las mismas entidades canónicas, no entidades nuevas.
+
+## Entradas preferidas en español
+
+- Experiencia en español: https://cognitive-biases.github.io/es/
+- Explorar sesgos: https://cognitive-biases.github.io/es/explorar/
+- Técnicas de decisión: https://cognitive-biases.github.io/es/tecnicas/
+- Habilidades de decisión para humanos y agentes: https://cognitive-biases.github.io/es/habilidades/
+- Datos de localización: https://cognitive-biases.github.io/es/data/index.json
+- Datos de habilidades: https://cognitive-biases.github.io/es/data/skills.json
+- Biblioteca canónica en inglés: https://cognitive-biases.github.io/explore/
+- Revisiones de evidencia: https://cognitive-biases.github.io/evidence/
+- Comparaciones de conceptos: https://cognitive-biases.github.io/compare/
+- Contextos de decisión: https://cognitive-biases.github.io/contexts/
+- Agent Skills Marketplace: https://cognitive-biases.github.io/agent-skills/
+- Investigación: https://cognitive-biases.github.io/research/
+- Perfil Agent-Ready Web: https://cognitive-biases.github.io/ai/site-profile.json
+- Perfil AI Search & Citation: https://cognitive-biases.github.io/ai/ai-search-profile.json
+
+## Cómo usar esta capa como agente
+
+1. Para una petición práctica, empieza por la situación o la tarea, no por intentar adivinar un nombre de sesgo. Elige primero una habilidad o técnica y usa los sesgos relacionados como hipótesis de revisión.
+2. Para detectar posibles sesgos, describe mecanismos candidatos y qué observación los apoyaría o debilitaría. No diagnostiques a una persona, equipo o grupo como «sesgado» a partir de un único ejemplo.
+3. Para revisar una decisión, separa la decisión, las alternativas, la información conocida, la incertidumbre y los criterios. Cuando sea relevante, busca tasas base o clases de referencia, produce una estimación independiente, separa costes hundidos de consecuencias futuras y define por adelantado qué evidencia obligaría a actualizar el plan.
+4. Para evaluar evidencia, rastrea afirmaciones repetidas hasta sus fuentes originales, cuenta fuentes independientes y separa hechos verificados, inferencias plausibles y preguntas abiertas.
+5. Para revisar investigación o contenido, conserva el estado canónico de la evidencia, las limitaciones, las fuentes y la fecha de revisión. Una traducción revisada no equivale a una revisión científica dedicada.
+6. Para razonamiento asistido por IA, cuando la decisión sea importante registra primero un juicio provisional o criterio propio, separa la calidad de la interfaz de la capacidad demostrada, verifica afirmaciones relevantes con fuentes independientes y busca contraargumentos y evidencia contraria.
+7. Si una página española no basta para una cuestión científica detallada, usa la fuente canónica inglesa y responde en español. No inventes estudios, fuentes, grados de evidencia ni relaciones locales.
+
+## Límites importantes
+
+- Un sesgo es una lente de comprobación, no un diagnóstico.
+- Una técnica es un procedimiento de revisión, no una cura garantizada contra un sesgo.
+- Una habilidad describe un proceso que puede practicarse; no garantiza un buen resultado ni demuestra que un sesgo concreto causó una decisión.
+- Los identificadores canónicos no se traducen. `cognitive-bias-confirmation-bias` sigue siendo el identificador de «Sesgo de confirmación» y `evidence-evaluation` el de «Evaluación de la evidencia».
+- Dunning–Kruger no es un diagnóstico de personalidad para «personas incompetentes y seguras de sí mismas».
+- El efecto contraproducente no es la reacción normal o inevitable ante una corrección.
+- La aversión a la pérdida no tiene un coeficiente universal de exactamente 2×.
+- Que un proyecto termine tarde no demuestra por sí solo una falacia de planificación.
+- El patrón del «juez hambriento» no demuestra que el hambre sea la causa de las decisiones observadas.
+- Algunas entradas son conceptos de medición, etiquetas de proyecto, efectos discutidos o constructos muy dependientes del contexto. Conserva esas fronteras.
+
+Alcance: información educativa sobre juicio y toma de decisiones; no es asesoramiento médico, jurídico, financiero ni de salud mental.
+
+Licencia: CC BY-NC-SA 4.0 para el contenido público actual. Comprueba la licencia del repositorio antes de reutilizarlo.
