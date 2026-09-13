@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "locale": "fr",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "contextLabels": {
+    "checking-claims-misinformation": "Vérifier des affirmations et des informations trompeuses",
+    "ai-assisted-decisions": "Décisions assistées par IA",
+    "work-project-decisions": "Décisions de travail et de projet",
+    "forecasting-future-choices": "Prévisions et choix futurs",
+    "project-estimation-delivery": "Estimation et livraison de projet"
+  },
+  "entries": [
+    {
+      "canonicalSlug": "evidence-evaluation",
+      "localizedSlug": "evaluation-des-preuves",
+      "title": "Évaluation des preuves",
+      "aliases": ["Evidence evaluation", "évaluer une preuve", "vérifier la solidité d'une affirmation"],
+      "summary": "Évaluez si une affirmation mérite votre confiance avant que la répétition, la fluidité ou une préférence ne soient prises pour des preuves.",
+      "outcome": "Vous pouvez distinguer une affirmation convaincante des éléments qui devraient réellement faire évoluer votre jugement.",
+      "whenToUse": [
+        "Une équipe préfère déjà une explication et cherche surtout des éléments qui la soutiennent.",
+        "Une affirmation apparaît dans de nombreux endroits, mais ces contenus peuvent remonter à la même source.",
+        "Un exemple frappant prend plus de place que les données plus larges.",
+        "Une réponse d'IA paraît solide, alors que plusieurs affirmations importantes restent non vérifiées."
+      ],
+      "actions": [
+        "Écrivez ce qui affaiblirait votre conclusion préférée avant de chercher davantage d'arguments en sa faveur.",
+        "Remontez les affirmations répétées jusqu'à des sources réellement indépendantes.",
+        "Comparez les exemples frappants avec un taux de base, une classe de référence ou un échantillon plus large.",
+        "Séparez les faits vérifiés, les inférences plausibles et les questions encore ouvertes."
+      ],
+      "example": "Trois articles affirment qu'une méthode augmente fortement la productivité. Avant de compter trois confirmations, vous remontez aux sources et découvrez qu'ils citent tous la même petite étude. La quantité de liens a augmenté ; la quantité de preuves indépendantes, non.",
+      "boundary": "Cette compétence améliore l'examen d'une affirmation. Elle ne transforme pas des données faibles en certitude et ne remplace pas une expertise spécialisée lorsque l'enjeu l'exige."
+    },
+    {
+      "canonicalSlug": "decision-making-under-uncertainty",
+      "localizedSlug": "decider-sous-incertitude",
+      "title": "Décider sous incertitude",
+      "aliases": ["Decision making under uncertainty", "prise de décision sous incertitude", "décider sans certitude"],
+      "summary": "Prenez des décisions utiles lorsque le résultat reste incertain et qu'un chiffre, une histoire récente ou un investissement passé risque de tirer le jugement trop fortement.",
+      "outcome": "Vous pouvez choisir une action sans faire semblant que l'incertitude a disparu.",
+      "whenToUse": [
+        "Un délai, un budget ou une probabilité est discuté comme un chiffre unique et précis.",
+        "Une première estimation influence toutes les estimations suivantes.",
+        "Le dernier succès ou le dernier échec domine la décision suivante.",
+        "Une équipe continue surtout parce qu'elle a déjà beaucoup investi."
+      ],
+      "actions": [
+        "Commencez par une fourchette ou une classe de référence avant de négocier un chiffre précis.",
+        "Produisez une estimation indépendante avant de regarder un ancrage fort lorsque c'est possible.",
+        "Séparez ce qui est déjà dépensé du coût futur, de la valeur future et du coût d'opportunité de la prochaine étape.",
+        "Notez les hypothèses ou événements qui devraient déclencher une révision de la décision."
+      ],
+      "example": "Un projet est annoncé pour huit semaines parce que ce chiffre a été donné en premier. Vous regardez des projets comparables, obtenez plutôt une fourchette de dix à quatorze semaines, puis vous explicitez les conditions qui permettraient réellement de faire mieux.",
+      "boundary": "Une fourchette ne supprime pas l'incertitude. Cette compétence rend les hypothèses et les compromis plus visibles ; elle ne garantit ni une bonne prévision ni un bon résultat."
+    },
+    {
+      "canonicalSlug": "forecasting",
+      "localizedSlug": "faire-des-previsions",
+      "title": "Faire des prévisions",
+      "aliases": ["Forecasting", "prévision", "estimer ce qui va arriver"],
+      "summary": "Estimez ce qui peut arriver en utilisant des cas comparables, une incertitude explicite et des traces écrites avant de connaître le résultat.",
+      "outcome": "Vous pouvez produire des prévisions plus faciles à contester, à comparer et dont vous pourrez tirer des leçons après coup.",
+      "whenToUse": [
+        "Un délai de projet est construit uniquement à partir du plan interne.",
+        "Un sentiment actuel ou une préférence est projeté très loin dans le futur.",
+        "Un exemple récent et marquant sert presque à lui seul d'estimation de probabilité.",
+        "Après le résultat, tout le monde a l'impression que l'issue était évidente depuis le début."
+      ],
+      "actions": [
+        "Regardez des cas comparables déjà terminés avant d'affiner le plan du cas actuel.",
+        "Donnez une fourchette et indiquez ce qui pourrait déplacer le résultat vers chaque extrémité.",
+        "Enregistrez la prévision et ses hypothèses avant de connaître le résultat.",
+        "Évaluez ensuite la prévision à partir de cette trace originale, pas d'un souvenir reconstruit."
+      ],
+      "example": "Avant d'annoncer une date de livraison, vous comparez cinq projets proches, notez une fourchette de délais et définissez deux signaux qui vous obligeront à mettre à jour la prévision en cours de route.",
+      "boundary": "Une prévision reste une estimation. La qualité du processus peut être bonne même si un résultat particulier est mauvais, et un résultat chanceux ne prouve pas que la méthode était bonne."
+    },
+    {
+      "canonicalSlug": "metacognition",
+      "localizedSlug": "metacognition",
+      "title": "Métacognition",
+      "aliases": ["Metacognition", "revoir son raisonnement", "analyser comment une décision a été formée"],
+      "summary": "Examinez comment un jugement s'est formé, ce qui l'a influencé et ce qui devrait vous faire changer d'avis.",
+      "outcome": "Vous pouvez revoir votre raisonnement sans confondre confiance, résultat final et recul avec la qualité de la décision initiale.",
+      "whenToUse": [
+        "Un bon résultat est présenté comme la preuve que le processus de décision était bon.",
+        "Un mauvais résultat rend les signaux d'alerte beaucoup plus évidents qu'ils ne l'étaient réellement avant.",
+        "Vous testez surtout les arguments qui soutiennent déjà la réponse préférée.",
+        "Vous voulez apprendre d'une décision passée sans réécrire ce qui était connaissable au moment du choix."
+      ],
+      "actions": [
+        "Figez ce qui était réellement connu avant le résultat.",
+        "Évaluez la qualité du processus séparément du résultat obtenu.",
+        "Écrivez ce qui vous ferait changer d'avis avant de collecter davantage de preuves.",
+        "Comparez la revue avec la prévision, les notes ou les hypothèses enregistrées à l'époque."
+      ],
+      "example": "Une décision commerciale a finalement très bien fonctionné. Au lieu de conclure que le raisonnement était excellent, vous relisez les hypothèses écrites avant le choix et vérifiez quelles parties étaient solides, fragiles ou simplement chanceuses.",
+      "boundary": "La métacognition n'offre pas une vue parfaitement objective sur son propre raisonnement. Elle aide surtout lorsque des traces contemporaines existent et que les explications alternatives restent ouvertes."
+    },
+    {
+      "canonicalSlug": "information-verification",
+      "localizedSlug": "verification-de-l-information",
+      "title": "Vérification de l'information",
+      "aliases": ["Information verification", "vérification des informations", "vérifier une affirmation"],
+      "summary": "Vérifiez d'où vient une information, si les sources sont indépendantes et si une correction a réellement remplacé l'ancienne explication.",
+      "outcome": "Vous pouvez vérifier une affirmation importante sans traiter la répétition comme une confirmation indépendante.",
+      "whenToUse": [
+        "Une affirmation semble vraie surtout parce qu'elle est devenue familière.",
+        "Plusieurs résumés ou articles peuvent dépendre de la même source initiale.",
+        "Une correction existe, mais l'ancienne version continue d'influencer le raisonnement.",
+        "Une réponse générée répète une affirmation sans montrer clairement son origine."
+      ],
+      "actions": [
+        "Remontez l'affirmation jusqu'à la première source fiable ou primaire que vous pouvez réellement inspecter.",
+        "Comptez les sources indépendantes, pas les répétitions.",
+        "Après une correction, reformulez explicitement l'explication actuellement soutenue.",
+        "Distinguez les affirmations vérifiées, contestées, non vérifiées et encore inconnues."
+      ],
+      "example": "Une statistique circule dans plusieurs posts et newsletters. Vous remontez jusqu'au rapport original, constatez que le chiffre a été corrigé dans une version plus récente, puis utilisez la valeur corrigée au lieu de reproduire la version la plus visible.",
+      "boundary": "Une vérification peut rester incomplète lorsque les sources primaires ne sont pas accessibles. Dans ce cas, le bon résultat est parfois « non vérifié », pas une réponse plus confiante."
+    },
+    {
+      "canonicalSlug": "ai-assisted-reasoning",
+      "localizedSlug": "raisonnement-assiste-par-ia",
+      "title": "Raisonnement assisté par IA",
+      "aliases": ["AI-assisted reasoning", "raisonner avec une IA", "utiliser une IA pour décider"],
+      "summary": "Utilisez l'IA comme aide au raisonnement sans confondre fluidité, présentation humaine ou répétition générée avec une capacité démontrée et des preuves vérifiées.",
+      "outcome": "Vous pouvez utiliser une IA pour élargir le raisonnement tout en gardant les jugements importants indépendamment vérifiables.",
+      "whenToUse": [
+        "Une recommandation de chatbot influence une décision importante.",
+        "Le modèle fournit le premier chiffre, score ou délai de la discussion.",
+        "Une interface conversationnelle très naturelle donne au système une impression de compétence supérieure à ce qui a été testé.",
+        "Vous utilisez surtout l'IA pour renforcer une conclusion que vous préférez déjà."
+      ],
+      "actions": [
+        "Écrivez un jugement provisoire ou un critère de réussite avant de demander l'avis de l'IA lorsque la décision compte vraiment.",
+        "Séparez la qualité de l'interface de la capacité nécessaire pour la tâche.",
+        "Vérifiez les affirmations conséquentes avec une source indépendante plutôt qu'avec une autre réponse générée.",
+        "Demandez des contre-arguments, des preuves contraires et des explications alternatives avant de conclure."
+      ],
+      "example": "Une IA recommande un fournisseur et lui attribue un score élevé. Avant de reprendre ce classement, vous définissez vos propres critères, vérifiez les faits importants dans des sources indépendantes et demandez ce qui pourrait rendre la recommandation mauvaise.",
+      "boundary": "Cette compétence ne suppose ni que l'IA est fiable ni qu'elle ne l'est pas. Elle sépare ce que le système affirme de ce que vous pouvez vérifier et du rôle réel qu'il doit jouer dans la décision."
+    }
+  ]
+}
