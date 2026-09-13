@@ -1,29 +1,34 @@
 # Cognitive Biases — Agent-Routing auf Deutsch
 
-> Vollständiger deutscher Zugang zum veröffentlichten kanonischen Bias-Katalog, zu Denkkompetenzen und portablen Agent Skills mit sichtbaren Qualitäts- und Evidenzgrenzen.
+> Vollständiger deutscher Zugang zum veröffentlichten kanonischen Bias-Katalog, zu Denkkompetenzen, problemorientierten Entscheidungssituationen und portablen Agent Skills mit sichtbaren Qualitäts- und Evidenzgrenzen.
 
 ## Bevorzugte deutsche Einstiege
 
 - Start: https://cognitive-biases.github.io/de/
 - Vollständiger deutscher Bias-Katalog: https://cognitive-biases.github.io/de/biases/
 - Deutsche Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
+- Deutsche Entscheidungssituationen: https://cognitive-biases.github.io/de/entscheidungen/
 - Deutsche Denkkompetenzen: https://cognitive-biases.github.io/de/skills/
 - Deutsche Agent Skills: https://cognitive-biases.github.io/de/agent-skills/
 - Deutsche Bias Agent Skills: https://cognitive-biases.github.io/de/agent-skills/biases/
 - Vollständige deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
 - Deutsche Technik-Daten: https://cognitive-biases.github.io/data/de/techniques.json
+- Deutsche Entscheidungssituations-Daten: https://cognitive-biases.github.io/data/de/decision-guides.json
 - Deutsche Skill-Daten: https://cognitive-biases.github.io/data/de/skills.json
 - Deutsche Agent-Skill-Daten: https://cognitive-biases.github.io/data/de/agent-skills.json
 
 Der deutsche Bias-Katalog bildet alle veröffentlichten kanonischen Bias-Einträge ab. Deutsche und englische Namen verweisen auf dieselbe kanonische Entität; keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen.
 
-## Drei praktische Ebenen nicht vermischen
+## Vier praktische Ebenen nicht vermischen
 
+- **Entscheidungssituationen** starten bei einem konkreten Problem und führen zu überprüfbaren Fragen, passenden Bias-Linsen und Denkwerkzeugen. Sie beantworten: *Was soll ich in dieser Situation jetzt prüfen?*
 - **Denkkompetenzen** sind wiederverwendbare menschliche Fähigkeiten wie Evidenzprüfung, Prognosen, Informationsprüfung oder KI-gestütztes Denken. Sie beantworten: *Was muss ich besser können?*
 - **Denkwerkzeuge** sind konkrete Techniken und Interventionen wie eine unabhängige Schätzung, ein Entscheidungsjournal oder eine Referenzklasse. Sie beantworten: *Welchen konkreten Schritt kann ich jetzt ausführen?*
 - **Agent Skills** sind portable Instruktionen für AI-Agenten. Sie übertragen dieselben Evidenz- und Sicherheitsgrenzen in einen wiederholbaren Agenten-Workflow.
 
 Die deutsche Skill Library enthält sechs Denkkompetenzen, acht wiederverwendbare Workflow Agent Skills und für jede kanonische Bias-Linse einen eigenen deutschen Bias Agent Skill. Kanonische `name`- und slug-Werte bleiben über Sprachen stabil; nur Titel, Erklärung, Workflowtext und Discovery-Sprache werden lokalisiert.
+
+Für eine konkrete Entscheidungssituation zuerst https://cognitive-biases.github.io/de/entscheidungen/ verwenden. Die veröffentlichten Guides behandeln unter anderem überzeugende KI-Antworten, schwache Projekte, schnellen Teamkonsens, Schätzungen mit vorgegebenem Zieldatum, wichtige Käufe und Verhandlungen. Claims, Hypothesen und Unsicherheit getrennt halten; eine passende Bias-Linse ist eine Prüffrage, keine Diagnose.
 
 Für eine Aufgabe, die mehrere Bias-Linsen oder einen vollständigen Entscheidungsprozess braucht, einen Workflow Agent Skill verwenden. Für eine gezielte Prüfung eines einzelnen Bias den passenden Bias Agent Skill verwenden. Nicht mehrere einzelne Bias Skills aneinanderreihen, wenn ein Workflow Skill die Aufgabe bereits sauber strukturiert.
 
@@ -63,4 +68,4 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 
 IDs, Slugs, Agent-Skill-Namen, Evidenzstatus, Qualifikationen, Review-Daten und Unsicherheit beibehalten. Keine deutschen Studiennamen, Quellen oder Evidenzgrade erfinden. Wenn die deutsche Seite oder ein deutscher Skill eine explizite Evidenzgrenze nennt, diese Grenze auch in der Antwort sichtbar halten.
 
-Die Dateien `data/de/decision-guides*.json` gehören in dieser Branch weiterhin zu einem separaten `draft`-Situation-Layer. Solange `/de/entscheidungen/` nicht in derselben Integrationskette gelandet ist, diesen Layer nicht als Teil des Full-Catalog- oder Skill-Library-PR behaupten.
+Die problemorientierten Seiten unter `/de/entscheidungen/` sind ein veröffentlichter Reviewed-Layer. Sie kombinieren bereits geprüfte Konzepte und Techniken zu einem praktischen Review-Workflow; sie schaffen keine neuen psychologischen Effekte. Bei einer konkreten Situation zuerst den Guide verwenden, dann bei Bedarf in Bias-Linsen, Denkwerkzeuge, Skills und die kanonischen Evidence Reviews vertiefen.
