@@ -1,0 +1,71 @@
+{
+  "version": "0.1",
+  "canonicalLocale": "en",
+  "policy": "https://dkharlanau.github.io/agent-ready-web-profile/LOCALIZATION.md",
+  "fullHumanLocales": [
+    {
+      "code": "fr",
+      "status": "reviewed-human-interface",
+      "generatorScripts": ["scripts/generate-french-localization.mjs", "scripts/generate-french-skills.mjs"],
+      "checkScripts": ["scripts/check-french-localization.mjs", "scripts/check-french-skills.mjs"],
+      "requiredSourcePrefixes": ["data/", "scripts/", "skills/"],
+      "localizedSourcePrefixes": ["data/", "scripts/"],
+      "publishedPrefixes": ["dist/fr/"],
+      "machineReadable": ["dist/fr/llms.txt", "dist/fr/data/index.json"]
+    },
+    {
+      "code": "pt-BR",
+      "status": "reviewed-partial-human-interface",
+      "generatorScripts": ["scripts/generate-portuguese-localization.mjs"],
+      "checkScripts": ["scripts/check-portuguese-localization.mjs"],
+      "requiredSourcePrefixes": ["data/", "scripts/", "skills/"],
+      "localizedSourcePrefixes": ["data/", "scripts/"],
+      "publishedPrefixes": ["dist/pt-br/"],
+      "machineReadable": ["dist/pt-br/llms.txt", "dist/pt-br/data/index.json", "dist/pt-br/data/agent-skills.json"]
+    },
+    {
+      "code": "es",
+      "status": "reviewed-human-interface",
+      "generatorScripts": ["scripts/generate-spanish-localization.mjs", "scripts/generate-spanish-skills.mjs"],
+      "checkScripts": ["scripts/check-spanish-localization.mjs", "scripts/check-spanish-skills.mjs"],
+      "requiredSourcePrefixes": ["data/", "scripts/", "skills/"],
+      "localizedSourcePrefixes": ["data/", "scripts/"],
+      "publishedPrefixes": ["dist/es/"],
+      "machineReadable": ["dist/es/llms.txt", "dist/es/data/index.json"]
+    }
+  ],
+  "limitedLocales": [
+    {
+      "code": "de",
+      "role": "localized-agent-routing",
+      "requiredSurfaces": ["dist/de/llms.txt"]
+    },
+    {
+      "code": "ru",
+      "role": "localized-agent-routing",
+      "requiredSurfaces": ["dist/ru/llms.txt"]
+    }
+  ],
+  "impactRules": {
+    "watchedCanonicalPrefixes": [
+      "data/biases.json",
+      "data/techniques.json",
+      "data/decision-skills",
+      "data/skills",
+      "skills/",
+      "scripts/generate-skills.mjs",
+      "scripts/generate-bias-agent-skills.mjs",
+      "scripts/generate-decision-system.mjs",
+      "scripts/build.mjs",
+      "scripts/enhance",
+      "scripts/apply-seo-structured-data.mjs",
+      "scripts/update-resource-sitemap.mjs"
+    ],
+    "localeSignals": {
+      "fr": ["french", "-fr", "/fr/", "ui-fr", "pages-fr"],
+      "pt-BR": ["portuguese", "pt-br", "-pt", "ui-pt", "pages-pt"],
+      "es": ["spanish", "-es", "/es/", "ui-es", "pages-es"]
+    },
+    "exceptionFile": "data/localization-exceptions.json"
+  }
+}
