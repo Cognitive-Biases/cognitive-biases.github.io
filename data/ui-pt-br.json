@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "reviewedAt": "2026-09-13",
+  "siteName": "Cognitive Biases",
+  "skipToContent": "Pular para o conteúdo",
+  "navigation": {
+    "home": "Início",
+    "explore": "Explorar vieses",
+    "techniques": "Técnicas",
+    "skills": "Habilidades de decisão",
+    "agentSkills": "Habilidades para agentes de IA",
+    "english": "English",
+    "french": "Français",
+    "portuguese": "Português (Brasil)"
+  },
+  "labels": {
+    "evidence": "Evidências",
+    "practicalCheck": "Checagem prática",
+    "examples": "Exemplos",
+    "limits": "Limites e cuidados",
+    "techniques": "Técnicas úteis",
+    "englishTerm": "Termo em inglês",
+    "canonicalId": "ID canônico",
+    "reviewStatus": "Status da localização",
+    "reviewed": "Revisado",
+    "sourceRelease": "Versão-fonte",
+    "relatedBiases": "Vieses relacionados",
+    "whenToUse": "Quando usar",
+    "actions": "Como praticar",
+    "expectedOutcome": "Resultado esperado",
+    "machineReadable": "Dados legíveis por máquina"
+  },
+  "notices": {
+    "evidenceBoundary": "A tradução não altera a força da evidência. Status, fontes, limitações e proveniência científica continuam vindo da base canônica em inglês.",
+    "educational": "Conteúdo educacional sobre julgamento e tomada de decisão. Não é aconselhamento médico, jurídico, financeiro nem de saúde mental.",
+    "partialCatalog": "A versão em português publica apenas fichas de vieses que passaram por revisão editorial em pt-BR. O catálogo canônico em inglês é maior.",
+    "techniqueBoundary": "Uma técnica é uma forma estruturada de raciocinar, não uma garantia de decisão correta."
+  },
+  "actions": {
+    "openEnglish": "Abrir ficha canônica em inglês",
+    "browseAll": "Explorar vieses revisados em português",
+    "browseTechniques": "Ver técnicas práticas",
+    "browseSkills": "Praticar habilidades de decisão",
+    "browseAgentSkills": "Usar com agentes de IA",
+    "backToExplorer": "Voltar aos vieses",
+    "backToTechniques": "Voltar às técnicas",
+    "backToSkills": "Voltar às habilidades"
+  },
+  "search": {
+    "label": "Buscar",
+    "placeholder": "Busque por viés, situação ou termo em inglês",
+    "noResults": "Nenhum resultado revisado em pt-BR corresponde a esta busca. Consulte também o catálogo canônico em inglês."
+  }
+}
