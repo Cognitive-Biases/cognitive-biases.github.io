@@ -62,7 +62,7 @@
       "title": "Faire des prévisions",
       "aliases": ["Forecasting", "prévision", "estimer ce qui va arriver"],
       "summary": "Estimez ce qui peut arriver en utilisant des cas comparables, une incertitude explicite et des traces écrites avant de connaître le résultat.",
-      "outcome": "Vous pouvez produire des prévisions plus faciles à contester, à comparer et à apprendre après coup.",
+      "outcome": "Vous pouvez produire des prévisions plus faciles à contester, à comparer et dont vous pourrez tirer des leçons après coup.",
       "whenToUse": [
         "Un délai de projet est construit uniquement à partir du plan interne.",
         "Un sentiment actuel ou une préférence est projeté très loin dans le futur.",
@@ -102,7 +102,7 @@
     },
     {
       "canonicalSlug": "information-verification",
-      "localizedSlug": "verification-de-information",
+      "localizedSlug": "verification-de-l-information",
       "title": "Vérification de l'information",
       "aliases": ["Information verification", "vérification des informations", "vérifier une affirmation"],
       "summary": "Vérifiez d'où vient une information, si les sources sont indépendantes et si une correction a réellement remplacé l'ancienne explication.",
