@@ -18,7 +18,8 @@
         "Zähle unabhängige Quellen, nicht ähnlich klingende Antworten."
       ],
       "whyItHelps": "Der Ablauf trennt Antwort, Evidenz und Schlussfolgerung voneinander.",
-      "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert keinen Bias."
+      "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert keinen Bias.",
+      "techniqueSlugs": ["source-trace", "independent-estimate", "consider-the-opposite"]
     }
   ]
 }
