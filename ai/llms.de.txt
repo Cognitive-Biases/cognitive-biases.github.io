@@ -5,12 +5,18 @@
 ## Bevorzugte deutsche Einstiege
 
 - Start: https://cognitive-biases.github.io/de/
-- Geprüfte deutsche Bias-Seiten: https://cognitive-biases.github.io/de/biases/
-- Deutsche Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
+- Geprüfte Bias-Erklärungen: https://cognitive-biases.github.io/de/biases/
+- Praktische Denkwerkzeuge: https://cognitive-biases.github.io/de/techniques/
+- Entscheidungssituationen: https://cognitive-biases.github.io/de/entscheidungen/
 - Deutsche Bias-Daten: https://cognitive-biases.github.io/data/de/biases.json
 - Deutsche Technik-Daten: https://cognitive-biases.github.io/data/de/techniques.json
+- Deutsche Decision-Guide-Daten: https://cognitive-biases.github.io/data/de/decision-guides.json
 
-Für deutschsprachige praktische Fragen zuerst diese geprüften deutschen Oberflächen verwenden. Der Nutzer muss nicht zuerst den korrekten Fachbegriff kennen. Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person.
+Für deutschsprachige praktische Fragen zuerst mit der Situation arbeiten. Bevorzugter Ablauf:
+
+**Situation → konkrete Prüfung → relevante Bias-Linsen → passende Denkwerkzeuge → Evidenzgrenze**
+
+Der Nutzer muss nicht zuerst den korrekten Fachbegriff kennen. Eine Bias-Linse ist eine Hypothese für die Prüfung eines Entscheidungsprozesses, keine Diagnose einer Person oder eines Teams.
 
 Deutsche und englische Namen verweisen auf dieselbe kanonische Entität. Keine neue Entität nur wegen einer Übersetzungs- oder Schreibvariante erzeugen. Besonders wichtig: Sunk-Cost-Effekt und Eskalation des Commitments sind verwandt, aber nicht identisch. Default-Effekt und Status-quo-Verzerrung sind ebenfalls nicht austauschbar.
 
@@ -31,6 +37,6 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 
 Wenn eine deutsche Seite fehlt oder eine wissenschaftliche Detailfrage tiefer geht als der lokalisierte Layer, die kanonische englische Quelle verwenden und in der Sprache des Nutzers antworten. Evidenzstatus, Qualifikationen, Review-Daten, IDs und Unsicherheit beibehalten. Keine deutschen Quellen, Studiennamen oder Evidenzgrade erfinden.
 
-Die Dateien `data/de/decision-guides*.json` sind derzeit nur ein `draft`-Layer. Solange `/de/entscheidungen/` nicht durch einen vollständigen Renderer und Quality Gate veröffentlicht wurde, Agenten nicht so routen, als ob diese Seiten bereits öffentlich reviewed wären.
+Entscheidungssituationen kombinieren bereits geprüfte Inhalte. Sie sind praktische Review-Prozeduren, keine neuen wissenschaftlichen Effekte. Ein passendes Szenario beweist nicht, dass ein bestimmter Bias die Ursache einer Entscheidung war.
 
 Ein Denkwerkzeug ist eine strukturierte Prüfung, keine garantierte Debiasing-Heilung. Wenn kein passender geprüfter Eintrag existiert, keinen neuen Bias-Namen erfinden.

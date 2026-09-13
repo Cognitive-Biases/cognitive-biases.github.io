@@ -14,7 +14,7 @@ A German page should help a reader answer, in this order:
 4. Warum könnte diese Gegenprüfung helfen?
 5. Wo liegen die Grenzen des Effekts oder der Technik?
 
-Definitions explain the concept. Denkwerkzeuge change the next action.
+Definitions explain the concept. Denkwerkzeuge change the next action. Situation-first guides let readers start without knowing a bias name.
 
 ## Language style
 
@@ -22,8 +22,7 @@ Use contemporary German at roughly B2 reading level where the subject allows it.
 
 - Prefer short, direct sentences over long nominal constructions.
 - Use a semi-formal `du` voice on practical pages.
-- Avoid literal English syntax.
-- Avoid bureaucratic wording and marketing claims.
+- Avoid literal English syntax, bureaucratic wording and marketing claims.
 - Keep useful English terms when German readers commonly search for them, but do not make every heading bilingual.
 - Explain specialist terms on first use when a plain-language phrase improves understanding.
 - Never strengthen uncertainty in translation. `May`, `can`, `mixed`, `conditional` and similar boundaries must remain visible.
@@ -61,6 +60,8 @@ German bias entries keep the English canonical slug and add localized fields:
 
 German techniques preserve the canonical technique slug and canonical bias links. Translation may improve readability but must not silently change the technique's purpose, prerequisites or limitations.
 
+German decision guides live in `data/de/decision-guides*.json`. A reviewed guide contains a stable slug, natural problem-first title, situation, concrete checklist, explanation, explicit boundary, reviewed German bias links, canonical technique links and discovery-only search terms.
+
 ## Evidence boundary
 
 A German bias page may be published in the reviewed layer only when:
@@ -73,11 +74,13 @@ A German bias page may be published in the reviewed layer only when:
 
 Do not translate a broad popular definition when the canonical project has already narrowed or corrected it. Practical actions are checks, not guaranteed debiasing cures. A matching bias is a lens for inspecting a decision process, not proof that the bias caused one particular decision.
 
+A situation-first guide is a practical composition of reviewed concepts and techniques. It is not a new scientific effect. The scenario must not diagnose a person or team, and its checklist must not imply that following the steps guarantees an unbiased or correct decision.
+
 ## UX vocabulary
 
-The primary practical label is **Denkwerkzeug** in navigation and discovery. Individual pages use **Praktische Technik** as the content type.
+The primary practical label is **Denkwerkzeug** in navigation and discovery. Individual technique pages use **Praktische Technik** as the content type. Situation-first pages use **Entscheidungssituation** and **Situationen**.
 
-`Hack` is not banned, but it is not the default taxonomy label because it can suggest a quick universal fix. Use it only in editorial copy when the informal tone is useful and the limitation remains clear.
+`Hack` is not banned, but it is not the default taxonomy label because it can suggest a quick universal fix.
 
 Practical detail pages should expose these headings when applicable:
 
@@ -86,17 +89,29 @@ Practical detail pages should expose these headings when applicable:
 - Warum es helfen kann
 - Grenzen
 
+Situation-first pages use:
+
+- Die Situation
+- Prüfe das
+- Warum es helfen kann
+- Grenzen
+- Bias-Linsen
+- Denkwerkzeuge
+
 ## Search and entity resolution
 
 German search must match the primary German name, accepted German aliases, the English canonical name and useful discovery-only phrases. All variants resolve to one canonical concept page.
 
 For example, `Bestätigungsfehler`, `Bestätigungsverzerrung` and `Confirmation Bias` resolve to one entity. A search for `Sunk Cost` may help discover an escalation page, but it must not collapse Sunk Cost Effect and Escalation of Commitment into the same entity.
 
+Situation search starts from ordinary problem language such as `KI`, `Projekt`, `Team`, `Termin`, `Kauf` or `Verhandlung`, then routes into reviewed concepts and techniques.
+
 ## International SEO
 
 - German pages use stable `/de/` URLs and self-canonicals.
 - Detail pages receive reciprocal `de` / `en` hreflang only when a true English equivalent exists.
 - Partial collections must not claim a broader English collection as an equivalent alternate merely because the topics overlap.
+- Situation-first German guides do **not** declare English hreflang when the nearest English context is only related rather than materially equivalent. A visible English navigation link may still route to `/contexts/`.
 - No automatic browser-language redirect.
 - German metadata, Open Graph text, headings and structured data are localized.
 - The English canonical ID remains stable inside the data model.
@@ -105,11 +120,13 @@ For example, `Bestätigungsfehler`, `Bestätigungsverzerrung` and `Confirmation 
 
 Generated public data lives under `/data/de/` and is derived from the same canonical entity IDs as English.
 
-A consumer should be able to recover:
+Current reviewed outputs include:
 
-canonical slug → German label → English label → German aliases → German practical content → canonical evidence status → English canonical URL.
+- `/data/de/biases.json`
+- `/data/de/techniques.json`
+- `/data/de/decision-guides.json`
 
-This keeps one conceptual graph with multiple language representations instead of forking English and German knowledge.
+A consumer should be able to recover the canonical concept identity, German labels and aliases, practical content, evidence boundary and related reviewed techniques without inventing a second German taxonomy.
 
 ## Mobile and accessibility
 
@@ -153,21 +170,28 @@ Core and decision concepts include:
 - Projektionsbias
 - Hungry-Judge-Effekt
 
-All 11 canonical decision techniques are localized so a German user can move from recognition to action even while long-tail concept coverage remains incomplete.
+All 11 canonical decision techniques are localized.
 
 ## Situation-first layer
 
-Problem-first decision guides are a separate product layer from reviewed concept pages. Current staged data lives in `data/de/decision-guides*.json` and covers AI answers, weak projects, fast team consensus, fixed project deadlines, purchase decisions and negotiations.
+The reviewed `/de/entscheidungen/` layer provides six problem-first guides:
 
-These source packs intentionally remain `state: draft` until an end-to-end renderer, internal linking, machine-readable output and localization quality gate publish them together. Do not describe the staged records as public reviewed pages before that promotion.
+- convincing AI answers;
+- weak projects that are hard to stop;
+- teams that converge unusually quickly;
+- project estimates when a target date already exists;
+- important purchase decisions;
+- consequential negotiations.
 
-The intended route is:
+The product route is:
 
-`situation → concrete check → relevant reviewed bias lenses → relevant Denkwerkzeuge`
+`situation → concrete check → relevant reviewed bias lenses → relevant Denkwerkzeuge → evidence boundary`
 
-A situation guide may combine reviewed concepts and techniques, but it must not invent a new scientific claim, diagnose a person or team, or declare a related English context to be a reciprocal hreflang equivalent unless the pages are materially equivalent.
+The collection and every detail page are generated from reviewed `data/de/decision-guides*.json`, publish one merged `/data/de/decision-guides.json`, appear in the sitemap and are connected back from relevant German bias and technique pages.
 
-Implementation and promotion criteria are tracked in GitHub issue #151.
+These pages intentionally avoid false alternate-language claims. They may link visibly to the English contexts hub for deeper exploration, but only materially equivalent pages qualify for reciprocal hreflang.
+
+The implementation contract is tracked by GitHub issue #151.
 
 ## Next rollout criteria
 
