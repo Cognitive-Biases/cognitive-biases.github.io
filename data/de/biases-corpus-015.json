@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "localized-corpus",
+  "updatedAt": "2026-09-13",
+  "entries": [
+    {
+      "slug": "cognitive-bias-mere-urgency-effect",
+      "title": "Mere-Urgency-Effekt",
+      "englishTitle": "Mere Urgency Effect",
+      "category": "Cognitive Bias",
+      "aliases": ["Dringlichkeitseffekt", "Mere Urgency"],
+      "summary": "Beim Mere-Urgency-Effekt können Aufgaben allein wegen eines kurzen Zeitfensters dringlicher und handlungswürdiger wirken, selbst wenn eine andere Aufgabe objektiv wichtiger oder lohnender ist. Das bedeutet nicht, dass echte Deadlines ignoriert werden sollten.",
+      "trap": "Ein Countdown oder knappes Zeitfenster zieht Aufmerksamkeit auf eine Aufgabe mit geringerem Nutzen. Die gefühlte Dringlichkeit ersetzt dann die getrennte Bewertung von Wichtigkeit und tatsächlichen Folgen der Frist.",
+      "actions": [
+        "Bewerte Wichtigkeit und Dringlichkeit zunächst getrennt.",
+        "Frage, welche realen Folgen eintreten, wenn die Frist verstreicht.",
+        "Vergleiche den erwarteten Nutzen der dringenden Aufgabe mit der wichtigsten Alternative, bevor du umpriorisierst."
+      ],
+      "sourceStatus": "reviewed"
+    }
+  ]
+}
