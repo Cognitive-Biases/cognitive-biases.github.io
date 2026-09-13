@@ -1,0 +1,153 @@
+{
+  "version": "2026-09-13",
+  "sourceLocale": "en",
+  "localeRegistry": "data/locales.json",
+  "publicManifest": "ai/locales.json",
+  "sharedGuide": "docs/localization.md",
+  "locales": [
+    {
+      "code": "en",
+      "role": "canonical",
+      "status": "published",
+      "registryRole": "canonical",
+      "aiStatus": "canonical",
+      "surfaces": {
+        "humanInterface": "canonical",
+        "biasCatalogue": "canonical",
+        "techniques": "canonical",
+        "decisionSkills": "canonical",
+        "workflowAgentSkills": "canonical",
+        "accessibility": "canonical",
+        "search": "canonical",
+        "agentRouting": "complete"
+      },
+      "generatedPaths": ["dist/index.html", "dist/llms.txt"]
+    },
+    {
+      "code": "de",
+      "role": "agent-routing",
+      "status": "published-limited",
+      "registryRole": "reviewed-layer",
+      "aiStatus": "localized-agent-routing",
+      "surfaces": {
+        "humanInterface": "out-of-scope",
+        "biasCatalogue": "out-of-scope",
+        "techniques": "out-of-scope",
+        "decisionSkills": "out-of-scope",
+        "workflowAgentSkills": "out-of-scope",
+        "accessibility": "out-of-scope",
+        "search": "out-of-scope",
+        "agentRouting": "complete"
+      },
+      "generatedPaths": ["dist/de/llms.txt"]
+    },
+    {
+      "code": "ru",
+      "role": "agent-routing",
+      "status": "published-limited",
+      "registryRole": "reviewed-layer",
+      "aiStatus": "localized-agent-routing",
+      "surfaces": {
+        "humanInterface": "out-of-scope",
+        "biasCatalogue": "out-of-scope",
+        "techniques": "out-of-scope",
+        "decisionSkills": "out-of-scope",
+        "workflowAgentSkills": "out-of-scope",
+        "accessibility": "out-of-scope",
+        "search": "out-of-scope",
+        "agentRouting": "complete"
+      },
+      "generatedPaths": ["dist/ru/llms.txt"]
+    },
+    {
+      "code": "fr",
+      "role": "human-interface",
+      "status": "reviewed-full",
+      "registryRole": "reviewed-layer",
+      "aiStatus": "reviewed-human-interface",
+      "guide": "docs/localization-fr.md",
+      "glossary": "data/glossary-fr.json",
+      "checkerCommands": ["check:french", "check:french-skills"],
+      "surfaces": {
+        "humanInterface": "complete",
+        "biasCatalogue": "complete",
+        "techniques": "complete",
+        "decisionSkills": "complete",
+        "workflowAgentSkills": "out-of-scope",
+        "accessibility": "complete",
+        "search": "complete",
+        "agentRouting": "complete"
+      },
+      "generatedPaths": ["dist/fr/index.html", "dist/fr/llms.txt", "dist/fr/data/index.json", "dist/fr/skills/index.html"]
+    },
+    {
+      "code": "pt-BR",
+      "role": "human-interface",
+      "status": "reviewed-partial",
+      "registryRole": "reviewed-layer",
+      "aiStatus": "reviewed-partial-human-interface",
+      "guide": "docs/localization-pt-br.md",
+      "glossary": "data/glossary-pt-br.json",
+      "checkerCommands": ["check:portuguese"],
+      "surfaces": {
+        "humanInterface": "complete",
+        "biasCatalogue": "partial",
+        "techniques": "complete",
+        "decisionSkills": "complete",
+        "workflowAgentSkills": "complete",
+        "accessibility": "complete",
+        "search": "complete",
+        "agentRouting": "complete"
+      },
+      "fallback": {
+        "biasCatalogue": "missing-routes-stay-missing",
+        "silentEnglishBody": false
+      },
+      "generatedPaths": ["dist/pt-br/index.html", "dist/pt-br/llms.txt", "dist/pt-br/data/index.json", "dist/pt-br/habilidades/index.html", "dist/pt-br/agent-skills/index.html"]
+    }
+  ],
+  "aiGroups": {
+    "humanInterfaceLanguages": ["en", "fr", "pt-BR"],
+    "agentRoutingLanguages": ["en", "de", "ru", "fr", "pt-BR"],
+    "humanReviewedLanguages": ["fr", "pt-BR"]
+  },
+  "impactRules": [
+    {
+      "id": "bias-catalogue",
+      "paths": ["data/biases.json"],
+      "surface": "biasCatalogue",
+      "mode": "exact-checkers",
+      "locales": ["fr", "pt-BR"]
+    },
+    {
+      "id": "techniques",
+      "paths": ["data/techniques.json"],
+      "surface": "techniques",
+      "mode": "exact-checkers",
+      "locales": ["fr", "pt-BR"]
+    },
+    {
+      "id": "decision-skills",
+      "paths": ["data/skills/**"],
+      "surface": "decisionSkills",
+      "mode": "exact-checkers",
+      "locales": ["fr", "pt-BR"]
+    },
+    {
+      "id": "ui-and-templates",
+      "paths": ["index.html", "assets/**", "scripts/build-*.mjs"],
+      "surface": "humanInterface",
+      "mode": "review-required",
+      "locales": ["fr", "pt-BR"]
+    },
+    {
+      "id": "ai-agent-surfaces",
+      "paths": ["ai/**", "skills/**", "llms.txt"],
+      "surface": "agentRouting",
+      "mode": "review-required",
+      "locales": ["de", "ru", "fr", "pt-BR"]
+    }
+  ],
+  "exceptionsFile": "data/localization-exceptions.json",
+  "evidenceBoundary": "Passing localization checks proves only the checked repository/build/rendered contract, not indexing, ranking, citation, recommendation visibility or traffic."
+}
