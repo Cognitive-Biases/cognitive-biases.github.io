@@ -36,7 +36,7 @@ for (const entry of translations.entries || []) {
   if (entry.state !== "reviewed") fail(`${entry.canonicalId} is not reviewed`);
   for (const field of ["localizedLabel", "summary", "practicalQuestion", "boundary", "evidenceSummary"]) if (!String(entry[field] || "").trim()) fail(`${entry.canonicalId} missing ${field}`);
   if (!Array.isArray(entry.examples) || entry.examples.length < 2) fail(`${entry.canonicalId} needs at least two localized examples`);
-  if (/\b(?:TODO|TBD|lorem ipsum)\b/i.test(JSON.stringify(entry))) fail(`${entry.canonicalId} contains placeholder text`);
+  if (/\b(?:TODO|TBD)\b|lorem ipsum/.test(JSON.stringify(entry))) fail(`${entry.canonicalId} contains placeholder text`);
 }
 if ((translations.entries || []).length < 8) fail("initial reviewed bias core must contain at least eight entries");
 
