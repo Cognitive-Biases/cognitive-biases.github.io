@@ -1,3 +1,5 @@
 node_modules/
 dist/
+.arwp/localization-debt.generated.json
+.arwp-tool/
 .DS_Store
