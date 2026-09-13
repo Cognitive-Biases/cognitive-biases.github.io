@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "lookbackDays": 120,
+  "maxNewItems": 24,
+  "scoreThreshold": 6,
+  "tracks": [
+    "LLM sycophancy and agreement pressure",
+    "LLM cognitive bias experiments",
+    "LLM-as-a-judge position verbosity and evaluator bias",
+    "prompt order and context position sensitivity",
+    "RAG knowledge conflict and source susceptibility",
+    "AI summarization overclaim and evidence distortion",
+    "agent decision bias and evaluation reliability"
+  ],
+  "arxivQueries": [
+    "all:sycophancy AND (all:\"large language model\" OR all:LLM)",
+    "all:\"cognitive bias\" AND (all:\"large language model\" OR all:LLM)",
+    "all:\"LLM-as-a-judge\" AND (all:bias OR all:position OR all:verbosity)",
+    "all:\"position bias\" AND (all:\"large language model\" OR all:LLM)",
+    "all:\"knowledge conflict\" AND (all:RAG OR all:\"large language model\")",
+    "all:\"context position\" AND (all:\"large language model\" OR all:LLM)"
+  ],
+  "openAlexQueries": [
+    "large language model sycophancy",
+    "large language model cognitive bias anchoring framing",
+    "LLM as a judge position bias verbosity bias",
+    "large language model option order sensitivity",
+    "large language model long context position bias",
+    "large language model knowledge conflict RAG source",
+    "large language model scientific summarization overclaim sycophancy",
+    "AI agent decision evaluation bias"
+  ]
+}
