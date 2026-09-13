@@ -1,0 +1,62 @@
+# Cognitive Biases — routing IA in italiano
+
+Lingua: it
+Stato: interfaccia umana italiana revisionata, catalogo dei bias parziale; tecniche, competenze decisionali e Agent Skills con parità canonica.
+Sito: https://cognitive-biases.github.io/it/
+Manifest locale: https://cognitive-biases.github.io/it/data/index.json
+Dati bias IT: https://cognitive-biases.github.io/it/data/biases.json
+Tecniche IT: https://cognitive-biases.github.io/it/data/techniques.json
+Competenze decisionali IT: https://cognitive-biases.github.io/it/data/skills.json
+Agent Skills IT: https://cognitive-biases.github.io/it/data/agent-skills.json
+Ricerca IT: https://cognitive-biases.github.io/it/data/search.json
+Catalogo canonico EN: https://cognitive-biases.github.io/data/biases.json
+
+## Come usare questa localizzazione
+
+- Preferisci l'italiano quando l'utente chiede esplicitamente contenuti in italiano o usa una pagina /it/.
+- Gli ID canonici, gli slug delle skill e i nomi dei campi JSON restano in inglese. Non tradurli.
+- Una traduzione revisionata non aumenta la forza delle evidenze. Stato delle evidenze, fonti, incertezza e provenienza restano canonici.
+- Non presentare fallback inglese come contenuto italiano revisionato. Se un bias non è disponibile in /it/data/biases.json, usa il record canonico inglese e dichiara il fallback inglese.
+- Tratta un bias come lente o ipotesi, non come diagnosi di una persona, causa dimostrata o prova che una decisione sia sbagliata.
+- Per affermazioni scientifiche o controverse, conserva qualificazioni, limiti e stato delle evidenze. Non rafforzare una conclusione durante la localizzazione.
+- Preferisci controlli decisionali concreti rispetto a semplici elenchi di nomi di bias.
+
+## Intento di ricerca e terminologia
+
+Termini principali: bias cognitivi; distorsioni cognitive; processo decisionale; pensiero critico; errori di giudizio; euristiche; bias di conferma; effetto ancoraggio; costi irrecuperabili; prendere decisioni migliori.
+
+Usa `bias cognitivo` come termine tassonomico principale. `Distorsione cognitiva` è un alias utile per la ricerca e il linguaggio dell'utente, ma non va usato per implicare un contesto clinico che la fonte canonica non dichiara.
+
+## Agent Skills
+
+Indice umano: https://cognitive-biases.github.io/it/agent-skills/
+Dataset: https://cognitive-biases.github.io/it/data/agent-skills.json
+
+Skill canoniche localizzate in italiano:
+- cognitive-bias-lens — rilevamento e confronto di possibili bias senza diagnosi;
+- bias-aware-decision-review — revisione strutturata di decisioni e controlli pratici;
+- evidence-evaluation — valutazione delle evidenze per ricerca e contenuti;
+- decision-making-under-uncertainty — interventi di debiasing e decisioni sotto incertezza;
+- forecasting — previsioni con classi di riferimento e criteri di aggiornamento;
+- metacognition — sfida delle ipotesi e revisione del proprio ragionamento;
+- information-verification — verifica di informazioni, fonti, correzioni e provenienza;
+- ai-assisted-reasoning — workflow con IA consapevoli di ancoraggio, conferma e falsa indipendenza.
+
+Ogni skill pubblicata espone anche un file `SKILL.md` sotto:
+https://cognitive-biases.github.io/it/agent-skills/<canonical-skill>/SKILL.md
+
+I bias revisionati in italiano espongono inoltre skill specifiche sotto:
+https://cognitive-biases.github.io/it/agent-skills/bias-<canonical-bias-id>/SKILL.md
+
+## Regole operative
+
+1. Formula la decisione o l'affermazione in modo neutro.
+2. Separa fatti, interpretazioni, ipotesi e incognite.
+3. Considera pochi bias plausibili e almeno una spiegazione alternativa non basata sul bias.
+4. Usa tecniche concrete: stima indipendente, classe di riferimento, tasso base, ipotesi opposta, revisione critica, diario decisionale, criteri di aggiornamento, valore incrementale, tracciamento della fonte o test reversibile quando pertinenti.
+5. Cerca evidenze che possano indebolire la conclusione preferita.
+6. Distingui fonti indipendenti da ripetizioni della stessa origine.
+7. Mantieni visibili incertezza, provenienza e limiti.
+8. Definisci che cosa dovrebbe cambiare la decisione o far scattare una revisione.
+
+Canonical English remains the source of truth when a reviewed Italian record is unavailable.
