@@ -1,0 +1,28 @@
+name: German Skill Library Audit
+
+on:
+  pull_request:
+    paths:
+      - 'data/skills.json'
+      - 'data/agent-skills.json'
+      - 'data/de/skills.json'
+      - 'data/de/agent-skills.json'
+      - 'scripts/generate-de-skill-library.mjs'
+      - 'scripts/finalize-de-skill-library.mjs'
+      - 'scripts/check-de-skill-library.mjs'
+      - '.github/workflows/de-skill-library-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Audit German skill source parity and quality
+        run: node scripts/check-de-skill-library.mjs

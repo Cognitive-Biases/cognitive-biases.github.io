@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "entries": [
+    {
+      "slug": "logical-fallacy-zero",
+      "title": "Zero-Sum Bias",
+      "englishTitle": "Zero-sum bias",
+      "aliases": ["Nullsummenverzerrung", "Nullsummendenken"],
+      "searchTerms": ["dein Gewinn ist mein Verlust", "win lose", "fixer Kuchen", "Konkurrenz"],
+      "summary": "Menschen können eine Situation als Konkurrenz um einen festen Kuchen interpretieren, obwohl der Erfolg einer Seite den möglichen Erfolg der anderen nicht zwingend reduziert.",
+      "trap": "Wenn ein attraktives Gut knapp wirkt, wird leicht angenommen, dass mehr für eine Person automatisch weniger für eine andere bedeutet. Manchmal stimmt das; manchmal wird die Knappheit nur vorausgesetzt.",
+      "evidence": "Experimentelle Forschung zeigte Zero-Sum-Urteile sogar bei nicht rationierten Noten. Spätere Literatur untersucht breitere Zero-Sum-Beliefs in sozialen und organisatorischen Kontexten; diese verwandten Konstrukte sind nicht exakt identisch.",
+      "boundary": "Viele Situationen sind tatsächlich nullsummenartig. Feste Budgets, Rangplätze oder begrenzte Ressourcen können reale Konkurrenz erzeugen, deshalb beginnt die Prüfung bei der konkreten Payoff-Regel.",
+      "actions": ["Benenne die Ressource, die angeblich fest ist.", "Schreibe auf, ob der Gewinn einer Seite den Payoff der anderen mechanisch senkt.", "Prüfe, ob beide Seiten gleichzeitig gewinnen oder der Gesamtwert wachsen kann.", "Wenn keine feste Ressource benannt werden kann, untersuche, ob Konkurrenz nur angenommen wird."]
+    },
+    {
+      "slug": "availability-heuristic-anthropomorphism",
+      "title": "Anthropomorphisierung",
+      "englishTitle": "Anthropomorphism",
+      "aliases": ["Vermenschlichung", "Anthropomorphismus"],
+      "searchTerms": ["KI wirkt menschlich", "Chatbot versteht mich", "AI personality", "KI Vertrauen"],
+      "summary": "Menschen schreiben nichtmenschlichen Systemen leichter menschliche Eigenschaften, Absichten oder Verständnis zu, besonders wenn Interface und Sprache menschlich wirken.",
+      "trap": "Eine warme Stimme, Ich-Form oder flüssige Konversation kann den Eindruck von Verständnis und Verlässlichkeit verstärken, ohne die tatsächliche Fähigkeit für die konkrete Aufgabe zu belegen.",
+      "evidence": "Anthropomorphisierung ist als Attributionstendenz gut belegt und nicht automatisch ein Fehler. Forschung zu AI- und Robotik-Interfaces zeigt, dass menschliche Hinweise Erwartungen und Vertrauensurteile beeinflussen können; Richtung und Größe hängen vom Kontext ab.",
+      "boundary": "Menschliche Modelle können nützlich sein. Humanlike Design beweist aber weder Bewusstsein noch Genauigkeit, Absicht oder zuverlässiges Verständnis.",
+      "actions": ["Übersetze den menschlichen Eindruck in eine konkrete Fähigkeit, die du testen kannst.", "Trenne Interface-Qualität von Task-Performance.", "Prüfe wichtige Outputs gegen aufgabenspezifische Evidenz und dokumentierte Systemfähigkeiten.", "Behandle Wärme, Stimme oder Ich-Form nicht als Beleg für Genauigkeit."]
+    },
+    {
+      "slug": "cognitive-bias-impact-bias",
+      "title": "Impact Bias",
+      "englishTitle": "Impact bias",
+      "aliases": ["Auswirkungsverzerrung", "Erwartungsverzerrung"],
+      "searchTerms": ["zukünftige Gefühle überschätzen", "wie glücklich werde ich", "affective forecasting"],
+      "summary": "Menschen überschätzen häufig, wie intensiv oder wie lange ein zukünftiges Ereignis ihre Gefühle bestimmen wird, besonders wenn das Ereignis die Vorstellung dominiert.",
+      "trap": "Beim Blick in die Zukunft bekommt das große Ereignis die ganze Bühne. Ein normaler Alltag mit Arbeit, Schlaf und Routinen wird im mentalen Film kaum mitgerechnet.",
+      "evidence": "Affective-Forecasting-Forschung stützt Impact Bias in vielen Aufgaben, zeigt aber wichtige Nuancen nach Ereignis, Zeithorizont, Emotion und Messgröße. Focalism und unterschätzte Anpassung sind zwei bekannte Beiträge.",
+      "boundary": "Die Forschung sagt nicht, dass Menschen emotionale Folgen immer überschätzen oder große Ereignisse unwichtig sind. Prognosefehler variieren nach Situation.",
+      "actions": ["Beschreibe einen normalen Tag einige Monate nach dem Ereignis, nicht nur das Ereignis selbst.", "Schätze Intensität und Dauer der erwarteten Gefühle getrennt.", "Nutze Erfahrungen vergleichbarer Personen oder eigener früherer Ereignisse als Referenzklasse.", "Vergleiche spätere tatsächliche Erfahrung mit deiner ursprünglichen Prognose."]
+    },
+    {
+      "slug": "cognitive-bias-projection-bias",
+      "title": "Projektionsbias",
+      "englishTitle": "Projection bias",
+      "aliases": ["Projektionsfehler", "Projection Bias"],
+      "searchTerms": ["heutige Gefühle auf Zukunft projizieren", "future self", "aktuelle Stimmung Zukunft"],
+      "summary": "Aktuelle Vorlieben, Stimmung oder körperliche Zustände können zu stark auf die eigenen zukünftigen Präferenzen projiziert werden.",
+      "trap": "Der heutige Zustand ist sehr verfügbar und fühlt sich dauerhaft an. Dadurch wird unterschätzt, wie stark sich Geschmack, Energie oder Prioritäten später verändern können.",
+      "evidence": "Projection Bias ist besonders in intertemporalen Wahl- und Konsumkontexten gut belegt. Feld- und Experimentalbefunde zeigen, dass aktuelle Bedingungen Entscheidungen mit späteren Konsequenzen beeinflussen können, obwohl diese Bedingungen nicht bestehen bleiben.",
+      "boundary": "Der Begriff ist kein allgemeines Etikett für jede schlechte Zukunftsprognose. Seine direkte Evidenz liegt vor allem bei der Überprojektion aktueller Präferenzen und Zustände.",
+      "actions": ["Benenne den aktuellen Zustand, der die Prognose färben könnte: Müdigkeit, Hunger, Stimmung, Wetter oder Neuheit.", "Bewerte schwer reversible Entscheidungen in einem deutlich anderen Zustand noch einmal.", "Nutze frühere Veränderungen deiner eigenen Präferenzen als Referenzklasse.", "Trenne 'Was will ich jetzt?' von 'Was wird mein zukünftiges Ich wahrscheinlich brauchen?'."]
+    }
+  ]
+}

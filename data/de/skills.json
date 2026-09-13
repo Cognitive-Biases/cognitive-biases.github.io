@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed-localization",
+  "source": "data/skills.json",
+  "updatedAt": "2026-09-13",
+  "entries": [
+    {
+      "slug": "evidence-evaluation",
+      "title": "Evidenz prüfen",
+      "aliases": ["Evidenz bewerten", "Evidence Evaluation"],
+      "summary": "Prüfe, ob eine Behauptung wirklich Vertrauen verdient, bevor Wiederholung, flüssige Sprache oder die eigene Präferenz wie ein Beleg wirken.",
+      "outcome": "Du kannst eine überzeugend klingende Behauptung von der Evidenz trennen, die deine Einschätzung tatsächlich verändern sollte.",
+      "whenToUse": [
+        "Ein Team bevorzugt bereits eine Erklärung und sammelt vor allem Material, das dafür spricht.",
+        "Eine Behauptung taucht an vielen Stellen auf, könnte aber immer auf dieselbe ursprüngliche Quelle zurückgehen.",
+        "Ein lebhaftes Beispiel dominiert eine breitere Datenlage.",
+        "Eine KI-Antwort klingt plausibel, wichtige Tatsachenbehauptungen sind aber noch nicht unabhängig geprüft."
+      ],
+      "actions": [
+        "Schreibe vor der weiteren Recherche auf, welcher Befund den bevorzugten Schluss schwächen würde.",
+        "Verfolge wiederholte Aussagen bis zu tatsächlich unabhängigen Quellen zurück.",
+        "Vergleiche auffällige Beispiele mit einer Basisrate, Referenzklasse oder breiteren Stichprobe.",
+        "Halte bestätigte Fakten, plausible Schlussfolgerungen und offene Fragen getrennt."
+      ]
+    },
+    {
+      "slug": "decision-making-under-uncertainty",
+      "title": "Entscheidungen unter Unsicherheit",
+      "aliases": ["Decision Making Under Uncertainty"],
+      "summary": "Triff nützliche Entscheidungen, obwohl der Ausgang offen ist, und verhindere, dass eine einzelne Zahl, Geschichte oder ein jüngstes Ereignis dein Urteil zu stark zieht.",
+      "outcome": "Du kannst einen nächsten Schritt wählen, ohne so zu tun, als wäre die Unsicherheit verschwunden.",
+      "whenToUse": [
+        "Ein Termin, Budget, Wert oder eine Wahrscheinlichkeit wird als eine einzige präzise Zahl diskutiert.",
+        "Eine frühe Schätzung prägt alle späteren Schätzungen.",
+        "Der jüngste Erfolg oder Misserfolg dominiert die nächste Entscheidung.",
+        "Ein Team macht hauptsächlich weiter, weil bereits viel Zeit oder Geld investiert wurde."
+      ],
+      "actions": [
+        "Beginne mit einer Spanne oder passenden Referenzklasse, bevor du über eine einzelne Zahl verhandelst.",
+        "Erstelle nach Möglichkeit eine unabhängige Schätzung, bevor du einen starken externen Anker siehst.",
+        "Trenne bereits versunkene Kosten von zukünftigen Kosten, Nutzen und Opportunitätskosten.",
+        "Notiere Annahmen und Ereignisse, bei denen die Entscheidung erneut geprüft werden sollte."
+      ]
+    },
+    {
+      "slug": "forecasting",
+      "title": "Prognosen erstellen",
+      "aliases": ["Forecasting"],
+      "summary": "Schätze zukünftige Ergebnisse mit vergleichbaren Fällen, sichtbarer Unsicherheit und Aufzeichnungen, die entstehen, bevor das Ergebnis bekannt ist.",
+      "outcome": "Du kannst Prognosen erstellen, die sich später prüfen, vergleichen und zum Lernen nutzen lassen.",
+      "whenToUse": [
+        "Ein Projekttermin entsteht fast ausschließlich aus einem internen Ablaufplan.",
+        "Ein aktuelles Gefühl oder eine heutige Präferenz wird weit in die Zukunft projiziert.",
+        "Ein auffälliger jüngster Fall wird praktisch zur gesamten Wahrscheinlichkeitsschätzung.",
+        "Nach dem Ergebnis wirkt der Ausgang plötzlich so, als sei er schon vorher offensichtlich gewesen."
+      ],
+      "actions": [
+        "Prüfe ähnliche abgeschlossene Fälle, bevor du den aktuellen Plan immer detaillierter machst.",
+        "Nenne eine Spanne und die Faktoren, die das Ergebnis in Richtung der jeweiligen Grenze bewegen würden.",
+        "Speichere Prognose, Annahmen und Datenstand vor dem Ergebnis.",
+        "Bewerte die Prognose später anhand der ursprünglichen Aufzeichnung und nicht anhand rekonstruierter Erinnerung."
+      ]
+    },
+    {
+      "slug": "metacognition",
+      "title": "Eigenes Denken prüfen",
+      "aliases": ["Metakognition", "Metacognition"],
+      "summary": "Untersuche, wie ein Urteil entstanden ist, welche Einflüsse eine Rolle spielten und welche Information dich tatsächlich zum Umdenken bringen sollte.",
+      "outcome": "Du kannst die Qualität deines Entscheidungsprozesses getrennt von Sicherheit, Ergebnis und Rückschaufehler beurteilen.",
+      "whenToUse": [
+        "Ein gutes Ergebnis gilt im Nachhinein als Beweis dafür, dass der ursprüngliche Entscheidungsprozess gut war.",
+        "Nach einem schlechten Ergebnis erscheinen frühere Warnsignale plötzlich offensichtlich.",
+        "Ein Review prüft hauptsächlich Argumente, die zur bevorzugten Geschichte passen.",
+        "Du willst aus einer vergangenen Entscheidung lernen, ohne nachträglich umzuschreiben, was damals wirklich bekannt war."
+      ],
+      "actions": [
+        "Rekonstruiere zuerst, welche Informationen, Optionen und Grenzen zum Entscheidungszeitpunkt tatsächlich verfügbar waren.",
+        "Bewerte Prozessqualität und späteres Ergebnis getrennt.",
+        "Vergleiche ursprüngliche Sicherheit, Annahmen und Prognosen mit zeitnahen Aufzeichnungen, wenn es sie gibt.",
+        "Formuliere mindestens eine alternative Erklärung und eine konkrete Änderung für die nächste vergleichbare Entscheidung."
+      ]
+    },
+    {
+      "slug": "information-verification",
+      "title": "Informationen prüfen",
+      "aliases": ["Informationsprüfung", "Information Verification"],
+      "summary": "Prüfe Herkunft, Unabhängigkeit und Aktualität wichtiger Informationen und kontrolliere, ob eine Korrektur die alte Erklärung wirklich ersetzt hat.",
+      "outcome": "Du kannst unabhängige Bestätigung von bloßer Wiederholung derselben Ausgangsinformation unterscheiden.",
+      "whenToUse": [
+        "Eine Aussage fühlt sich wahr an, weil sie vertraut ist oder häufig wiederholt wurde.",
+        "Mehrere Artikel oder Zusammenfassungen könnten alle von derselben Primärquelle abhängen.",
+        "Eine Korrektur existiert, aber die ältere Erklärung prägt die Diskussion weiterhin.",
+        "Eine generierte Antwort macht folgenreiche Aussagen, ohne ihre Herkunft nachvollziehbar zu machen."
+      ],
+      "actions": [
+        "Zerlege einen langen Text zuerst in die Tatsachenbehauptungen, die für die Entscheidung wirklich wichtig sind.",
+        "Verfolge jede wichtige Behauptung zur frühesten belastbaren oder primären Quelle zurück, die du tatsächlich prüfen kannst.",
+        "Zähle unabhängige Evidenzstränge statt Links oder Wiederholungen.",
+        "Halte Korrekturen, Versionsunterschiede, offene Lücken und den aktuell unterstützten Stand sichtbar."
+      ]
+    },
+    {
+      "slug": "ai-assisted-reasoning",
+      "title": "KI-gestütztes Denken",
+      "aliases": ["Denken mit KI", "AI-assisted Reasoning"],
+      "summary": "Nutze KI, um dein Denken zu erweitern, ohne die erste generierte Antwort zum Anker zu machen, flüssigen Text mit Evidenz zu verwechseln oder das abschließende Urteil an das Modell abzugeben.",
+      "outcome": "Du kannst KI sinnvoll einsetzen und wichtige Schlussfolgerungen trotzdem unabhängig prüfbar halten.",
+      "whenToUse": [
+        "Eine Chatbot-Empfehlung beeinflusst eine wichtige Entscheidung.",
+        "Das Modell nennt als Erstes eine Zahl, Bewertung oder Schätzung und setzt damit möglicherweise einen Anker.",
+        "Ein sehr menschlich wirkender Dialog lässt das System kompetenter erscheinen, als seine getestete Leistung zeigt.",
+        "Du nutzt KI hauptsächlich, um eine bereits bevorzugte Schlussfolgerung zu stärken."
+      ],
+      "actions": [
+        "Halte bei wichtigen Entscheidungen nach Möglichkeit zuerst deine vorläufige Einschätzung oder Erfolgskriterien fest.",
+        "Trenne Ideen, Berechnungen, Tatsachenbehauptungen, Prognosen und Empfehlungen der KI, weil sie unterschiedliche Prüfungen brauchen.",
+        "Erzeuge eine glaubwürdige Gegenposition und frage, welcher Befund die bevorzugte Antwort widerlegen würde.",
+        "Prüfe folgenreiche Tatsachenbehauptungen an unabhängigen, einsehbaren Quellen statt nur mit einer zweiten generierten Antwort."
+      ]
+    }
+  ]
+}

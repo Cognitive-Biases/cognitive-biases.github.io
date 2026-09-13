@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "draft",
+  "updatedAt": "2026-09-13",
+  "editorialNote": "Staged situation-first content model. These records are not part of the public reviewed German surface until a renderer and localization quality gate publish them end to end. Source concept and technique IDs remain canonical.",
+  "guides": [
+    {
+      "slug": "ki-antwort-pruefen",
+      "title": "Wenn KI überzeugend klingt",
+      "category": "KI & Recherche",
+      "summary": "Ein flüssiger Text kann fertig wirken, bevor Quellen, Alternativen und Grenzen geprüft sind.",
+      "situation": "Du fragst ein System nach einer Empfehlung oder Studie. Die Antwort ist klar und bleibt auch nach Rückfragen ähnlich. Das fühlt sich wie Bestätigung an, obwohl die Antworten nicht unabhängig sein müssen.",
+      "checklist": ["Schreibe zuerst deine aktuelle Einschätzung oder einen eigenen Zahlenbereich auf.", "Zerlege die Antwort in prüfbare Kernaussagen und ordne wichtigen Aussagen eine Quelle zu.", "Öffne die Quellen und prüfe Population, Zeitraum, Messgröße und Stärke der Schlussfolgerung.", "Suche mindestens eine plausible Alternative, die nicht vom ersten Frame abhängt.", "Zähle unabhängige Quellen, nicht ähnlich klingende Antworten."],
+      "whyItHelps": "Der Ablauf trennt Antwort, Evidenz und Schlussfolgerung voneinander.",
+      "boundary": "Eine automatisierte Antwort kann richtig sein. Diese Seite beschreibt einen prüfbaren Workflow und diagnostiziert keinen Bias.",
+      "biasSlugs": ["cognitive-bias-anchoring-effect", "truth-judgment-illusory-truth-effect"],
+      "techniqueSlugs": ["source-trace", "independent-estimate", "consider-the-opposite"],
+      "searchTerms": ["KI prüfen", "KI Quellen", "AI research", "KI Empfehlung"]
+    },
+    {
+      "slug": "schlechtes-projekt-stoppen",
+      "title": "Wenn ein Projekt nicht funktioniert",
+      "category": "Arbeit & Projekte",
+      "summary": "Bereits investierte Monate sind kein eigener Grund für weitere Monate. Prüfe, ob der nächste Einsatz heute noch sinnvoll ist.",
+      "situation": "Ein Projekt hat viel Zeit gekostet, die Nutzung bleibt schwach und neue Probleme tauchen auf. Stoppen fühlt sich trotzdem wie Verschwendung an.",
+      "checklist": ["Markiere bereits verbrauchte Zeit und Kosten als nicht rückholbar.", "Bewerte nur den nächsten Schritt: zukünftige Kosten, erwarteter Nutzen, Unsicherheit und Alternativen.", "Frage, ob du denselben nächsten Schritt wählen würdest, wenn das Projekt heute ohne Vorgeschichte auf deinem Tisch läge.", "Definiere vor der nächsten Investition beobachtbare Stop- oder Update-Kriterien.", "Teste die wichtigste Unsicherheit mit einem kleinen reversiblen Schritt, wenn das möglich ist."],
+      "whyItHelps": "Die Prüfung trennt Vergangenheit und Zukunft und macht sichtbar, ob die nächste Investition einen eigenen Business Case hat.",
+      "boundary": "Nicht jedes fortgesetzte Projekt ist irrational. Wechselkosten, Lernkurven oder neue Informationen können Fortsetzung rechtfertigen.",
+      "biasSlugs": ["logical-fallacy-escalation-of-commitment", "cognitive-bias-sunk-cost-effect"],
+      "techniqueSlugs": ["incremental-value-check", "predefined-update-criteria", "reversible-test"],
+      "searchTerms": ["Projekt stoppen", "Sunk Cost Projekt", "Projekt abbrechen", "weiter investieren"]
+    },
+    {
+      "slug": "team-ist-sich-zu-schnell-einig",
+      "title": "Wenn sich das Team zu schnell einig ist",
+      "category": "Teams & Entscheidungen",
+      "summary": "Schneller Konsens kann echte Übereinstimmung bedeuten. Bei wichtigen Entscheidungen lohnt sich trotzdem eine unabhängige Gegenprüfung.",
+      "situation": "Nach zehn Minuten bevorzugen alle dieselbe Option. Danach dreht sich die Diskussion fast nur noch um die Umsetzung; niemand hat festgehalten, welche Evidenz gegen die Lieblingslösung sprechen würde.",
+      "checklist": ["Fixiere Ziel und Entscheidungskriterien vor der Detaildiskussion.", "Lass wichtige Beteiligte ihre erste Bewertung unabhängig notieren.", "Formuliere die stärkste plausible Alternative und frage, welche Daten eher für sie sprechen würden.", "Beauftrage eine Person oder ein kleines Red Team mit konkreten Failure Modes und fehlender Evidenz.", "Dokumentiere die stärkste verbleibende Unsicherheit und welche neue Evidenz die Entscheidung verändern würde."],
+      "whyItHelps": "Unabhängige Ersturteile und ein ernst gemeintes Gegenmodell bewahren Informationen, die nach einer frühen Gruppeneinigung leicht verschwinden.",
+      "boundary": "Konsens ist nicht automatisch verdächtig. Diese Seite diagnostiziert kein Groupthink; sie bietet einen robusteren Prüfprozess.",
+      "biasSlugs": ["cognitive-bias-confirmation-bias", "framing-effect-core"],
+      "techniqueSlugs": ["consider-the-opposite", "red-team-review", "predefined-criteria"],
+      "searchTerms": ["Team Konsens", "alle sind sich einig", "Red Team", "Entscheidung Meeting", "Gegenargument"]
+    },
+    {
+      "slug": "projekt-schaetzen-mit-zieldatum",
+      "title": "Wenn der Termin schon feststeht",
+      "category": "Projekte & Schätzungen",
+      "summary": "Ein gewünschtes Datum ist ein Planungsziel, aber nicht automatisch eine Prognose. Halte Ziel, Referenzklasse und Schätzung getrennt.",
+      "situation": "Ein Steering Committee erwartet zwölf Wochen. Das Team erstellt daraufhin einen Plan, der zwölf Wochen ergibt, obwohl ähnliche abgeschlossene Projekte länger brauchten.",
+      "checklist": ["Erstelle zuerst eine unabhängige Schätzung oder Spanne.", "Wähle eine nachvollziehbare Referenzklasse vergleichbarer abgeschlossener Projekte.", "Liste konkrete Unterschiede auf, die dieses Projekt zum schnellen oder langsamen Ende der Bandbreite verschieben.", "Zeige Business-Ziel und Prognose als zwei getrennte Zahlen.", "Definiere ein beobachtbares Ereignis, bei dem die Prognose aktualisiert wird, und bewahre die vorige Prognose auf."],
+      "whyItHelps": "Die Trennung verhindert, dass ein Ziel als empirische Vorhersage verkleidet wird, und macht notwendige Änderungen sichtbar.",
+      "boundary": "Ein spätes Projekt beweist weder Planning Fallacy noch Anchoring. Lieferfähigkeit hängt auch von Scope, Skills, Abhängigkeiten, Anreizen und Technik ab.",
+      "biasSlugs": ["egocentric-bias-planning-fallacy", "cognitive-bias-anchoring-effect"],
+      "techniqueSlugs": ["reference-class-forecasting", "independent-estimate", "predefined-update-criteria"],
+      "searchTerms": ["Projekt Schätzung", "Termin steht fest", "Deadline schätzen", "Planning Fallacy Projekt", "Referenzklasse"]
+    }
+  ]
+}

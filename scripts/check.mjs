@@ -87,3 +87,4 @@ for (const bias of biases) {
 
 const reviewedFamilyCount = canonicalBiases.filter((bias) => familyFor(bias)).length;
 console.log(`Static site check passed: ${biases.length} bias pages (${canonicalBiases.length} canonical), ${categories.length} category anchors, ${publishedFamilies.length} canonical family hubs, ${reviewedFamilyCount} canonical family mappings, structured data, and sitemap inventory/freshness policy verified.`);
+await import("./check-ru-localization.mjs");

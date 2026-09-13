@@ -1,5 +1,27 @@
 (() => {
   const STORAGE_KEY = 'cognitive-biases:saved-pages:v1';
+  const isRussian = document.documentElement.lang?.toLowerCase().startsWith('ru');
+  const copy = isRussian ? {
+    save: 'Сохранить',
+    saved: 'Сохранено',
+    copied: 'Ссылка скопирована.',
+    citationCopied: 'Цитата скопирована.',
+    shared: 'Отправлено.',
+    shareFallback: 'Системное меню недоступно. Ссылка скопирована.',
+    removed: 'Удалено из сохранённых страниц.',
+    savedHere: 'Сохранено в этом браузере.',
+    unavailable: 'Это действие недоступно в текущем браузере.'
+  } : {
+    save: 'Save',
+    saved: 'Saved',
+    copied: 'Canonical link copied.',
+    citationCopied: 'Citation copied.',
+    shared: 'Shared.',
+    shareFallback: 'Sharing is unavailable here; canonical link copied instead.',
+    removed: 'Removed from saved pages.',
+    savedHere: 'Saved in this browser.',
+    unavailable: 'This action is unavailable in the current browser.'
+  };
   const canonical = () => document.querySelector('link[rel="canonical"]')?.href || location.href.split('#')[0];
   const pageTitle = () => document.querySelector('h1')?.textContent?.trim() || document.title.replace(/\s*\|\s*Cognitive Biases\s*$/i, '');
   const feedback = (bar, message) => {
@@ -40,7 +62,7 @@
     if (!button) return;
     const saved = readSaved().includes(canonical());
     button.setAttribute('aria-pressed', String(saved));
-    button.textContent = saved ? 'Saved' : 'Save';
+    button.textContent = saved ? copy.saved : copy.save;
   };
   document.querySelectorAll('[data-page-utility]').forEach(syncSaveButton);
   document.addEventListener('click', async (event) => {
@@ -53,17 +75,17 @@
     try {
       if (action === 'copy') {
         await copyText(url);
-        feedback(bar, 'Canonical link copied.');
+        feedback(bar, copy.copied);
       } else if (action === 'cite') {
         await copyText(`[${title}](${url}) — Cognitive Biases`);
-        feedback(bar, 'Citation copied.');
+        feedback(bar, copy.citationCopied);
       } else if (action === 'share') {
         if (navigator.share) {
           await navigator.share({ title, url });
-          feedback(bar, 'Shared.');
+          feedback(bar, copy.shared);
         } else {
           await copyText(url);
-          feedback(bar, 'Sharing is unavailable here; canonical link copied instead.');
+          feedback(bar, copy.shareFallback);
         }
       } else if (action === 'save') {
         const saved = readSaved();
@@ -71,11 +93,11 @@
         const next = exists ? saved.filter((item) => item !== url) : [...saved, url];
         if (!writeSaved(next)) throw new Error('storage unavailable');
         syncSaveButton(bar);
-        feedback(bar, exists ? 'Removed from saved pages.' : 'Saved in this browser.');
+        feedback(bar, exists ? copy.removed : copy.savedHere);
       }
     } catch (error) {
       if (error?.name === 'AbortError') return;
-      feedback(bar, 'This action is unavailable in the current browser.');
+      feedback(bar, copy.unavailable);
     }
   });
 })();

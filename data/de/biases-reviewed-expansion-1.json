@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "editorialNote": "High-intent German expansion. Entries remain alternate-language representations of existing canonical concepts.",
+  "entries": [
+    {
+      "slug": "cognitive-bias-sunk-cost-effect",
+      "title": "Sunk-Cost-Effekt",
+      "englishTitle": "Sunk Cost Effect",
+      "aliases": ["Effekt der versunkenen Kosten"],
+      "searchTerms": ["versunkene Kosten", "sunk cost deutsch", "Versunkene-Kosten-Effekt"],
+      "summary": "Beim Sunk-Cost-Effekt beeinflussen bereits investierte, nicht mehr rückholbare Ressourcen die nächste Entscheidung, obwohl für die Wahl vor allem zukünftige Kosten, Nutzen und Alternativen relevant sein sollten.",
+      "trap": "Du willst weiter Geld, Zeit oder Aufmerksamkeit investieren, weil ein Abbruch die bisherigen Ausgaben sinnlos wirken lassen würde. Der vergangene Aufwand wird so zu einem Grund für neue Ausgaben.",
+      "evidence": "Der Sunk-Cost-Effekt ist insgesamt gut belegt. Eine meta-analytische Übersicht findet einen klaren Gesamteffekt, zeigt aber auch Unterschiede je nach Entscheidungstyp und Kontext. Der Effekt kann mit anderen Prozessen zusammenwirken und erklärt nicht jede Entscheidung zum Weitermachen.",
+      "boundary": "Weiterzumachen kann rational sein, wenn zukünftiger Nutzen, reale Wechselkosten, neue Informationen oder die Nähe zu einem wertvollen Abschluss dafür sprechen. Ignoriere irreversibel vergangene Kosten, nicht relevante Folgen, die noch vor dir liegen.",
+      "actions": [
+        "Schreibe bereits verlorene Zeit, Geld oder Aufwand in eine separate Zeile und markiere sie als nicht rückholbar.",
+        "Vergleiche ab heute nur die zukünftigen Kosten und Nutzen der realistischen Optionen.",
+        "Frage, was du wählen würdest, wenn eine andere Person die bisherigen Kosten getragen hätte.",
+        "Beziehe echte Wechselkosten und den zukünftigen Wert eines Abschlusses ausdrücklich ein, statt sie mit versunkenen Kosten zu vermischen."
+      ]
+    },
+    {
+      "slug": "prospect-theory-status-quo-bias",
+      "title": "Status-quo-Verzerrung",
+      "englishTitle": "Status Quo Bias",
+      "aliases": ["Tendenz zum Status quo"],
+      "searchTerms": ["status quo bias deutsch", "Veränderung vermeiden Denkfehler"],
+      "summary": "Bei der Status-quo-Verzerrung erhält die bestehende Option zusätzliches Gewicht, gerade weil sie bereits der aktuelle Zustand ist. Veränderung muss dann mehr rechtfertigen als bloßes Beibehalten.",
+      "trap": "Die aktuelle Lösung gewinnt den Vergleich, ohne nach denselben Kriterien geprüft zu werden wie neue Optionen. Aufwand, Risiko oder Unsicherheit des Wechsels sind sichtbar, während die laufenden Kosten des Status quo leicht unsichtbar bleiben.",
+      "evidence": "Klassische Experimente und weitere Forschung zeigen eine überproportionale Bevorzugung bestehender Optionen in verschiedenen Entscheidungssituationen. Der beobachtete Effekt kann jedoch von echten Wechselkosten, Verlustaversion, Gewohnheit, Defaults und Unsicherheit mitgeprägt werden.",
+      "boundary": "Den Status quo zu behalten ist nicht automatisch verzerrt. Lernen, Migration, Kündigung, Risiko oder andere Wechselkosten können real sein. Die sinnvolle Prüfung vergleicht beide Richtungen mit demselben Maßstab.",
+      "actions": [
+        "Bewerte die aktuelle Option so, als würdest du sie heute neu auswählen müssen.",
+        "Schreibe Kosten und Risiken des Bleibens genauso sichtbar auf wie die des Wechsels.",
+        "Vergleiche mindestens eine realistische Alternative nach vorher festgelegten Kriterien.",
+        "Trenne echte Wechselkosten von bloßer Vertrautheit mit der bestehenden Lösung."
+      ]
+    },
+    {
+      "slug": "framing-effect-core",
+      "title": "Framing-Effekt",
+      "englishTitle": "Framing Effect",
+      "aliases": ["Rahmungseffekt"],
+      "searchTerms": ["framing effekt psychologie", "framing effect deutsch", "Rahmung Entscheidung"],
+      "summary": "Beim Framing-Effekt können unterschiedliche Formulierungen derselben oder sehr ähnlicher Optionen Entscheidungen verändern. Besonders bekannt ist die Darstellung vergleichbarer Ergebnisse als Gewinn oder Verlust.",
+      "trap": "Du reagierst auf die sprachliche oder numerische Rahmung, ohne zu prüfen, ob sich die zugrunde liegenden Ergebnisse überhaupt unterscheiden. Ein positives oder negatives Frame kann dadurch wie neue Information wirken.",
+      "evidence": "Framing-Effekte sind gut untersucht, aber ihre Größe und Zuverlässigkeit hängen von Aufgabe, Formulierung und Population ab. Der Begriff sollte nicht als Erklärung für jede Wirkung von Sprache oder Medien verwendet werden.",
+      "boundary": "Zwei Frames sind nur dann ein sauberer Test, wenn die zugrunde liegenden Optionen tatsächlich vergleichbar sind. Unterschiedliche Formulierungen können auch echte Zusatzinformationen, Ziele oder Werte sichtbar machen.",
+      "actions": [
+        "Formuliere die gleiche Option einmal als Gewinn und einmal als Verlust.",
+        "Übersetze Prozentwerte, absolute Zahlen und Nenner ineinander, bevor du vergleichst.",
+        "Schreibe die endgültigen Ergebnisse in einer neutralen gemeinsamen Einheit auf.",
+        "Prüfe, ob der Frame nur Sprache verändert oder tatsächlich zusätzliche Information enthält."
+      ]
+    }
+  ]
+}

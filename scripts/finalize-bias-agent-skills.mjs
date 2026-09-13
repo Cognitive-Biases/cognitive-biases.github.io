@@ -90,3 +90,4 @@ for (let index = 0; index < canonicalBiases.length; index += 1) {
 }
 
 console.log(`Finalized Agent Skills marketplace copy and unique SEO metadata for ${canonicalBiases.length} Bias Skills.`);
+await import("./generate-ru-localization.mjs");

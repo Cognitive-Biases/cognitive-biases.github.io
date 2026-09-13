@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "description": "Praktische Entscheidungstechniken, die mit evidence-reviewed Bias-Linsen verknüpft sind. Sie sind strukturierte Prüfungen, keine garantierten Heilmittel gegen Denkfehler.",
+  "techniques": [
+    {
+      "slug": "consider-the-opposite",
+      "title": "Die Gegenhypothese prüfen",
+      "purpose": "Lass deine bevorzugte Erklärung gegen eine ernsthafte Alternative antreten.",
+      "whenToUse": "Wenn die Informationssuche immer stärker nur eine bevorzugte Schlussfolgerung stützt.",
+      "steps": [
+        "Schreibe deine aktuelle Schlussfolgerung in einem Satz auf.",
+        "Formuliere die stärkste plausible Alternative.",
+        "Notiere Belege, die wahrscheinlicher wären, wenn diese Alternative stimmt.",
+        "Suche oder frage nach diesen Belegen, bevor du die Entscheidung abschließt."
+      ],
+      "limitations": "Eine schwache Strohmann-Alternative bringt wenig. Die Gegenhypothese muss wirklich plausibel sein.",
+      "biases": ["cognitive-bias-confirmation-bias"]
+    },
+    {
+      "slug": "independent-estimate",
+      "title": "Unabhängig schätzen, bevor du den Anker siehst",
+      "purpose": "Erzeuge einen eigenen Bezugspunkt, bevor eine starke externe Zahl oder Empfehlung deine Schätzung prägt.",
+      "whenToUse": "Vor Schätzungen, Verhandlungen, KI-Empfehlungen oder Expertenprognosen, bei denen die erste Zahl zum Anker werden kann.",
+      "steps": [
+        "Blende die externe Schätzung nach Möglichkeit zunächst aus.",
+        "Notiere deine eigene Schätzung oder Spanne samt Annahmen.",
+        "Sieh dir erst danach die externe Zahl an.",
+        "Halte fest, warum sich deine Schätzung verändert hat, falls sie sich verändert."
+      ],
+      "limitations": "Auch unabhängige Schätzungen können schlecht sein. Nutze Referenzklassen und belastbare Daten, wenn sie verfügbar sind.",
+      "biases": ["cognitive-bias-anchoring-effect"]
+    },
+    {
+      "slug": "reference-class-forecasting",
+      "title": "Mit einer Referenzklasse prognostizieren",
+      "purpose": "Starte mit Ergebnissen vergleichbarer abgeschlossener Fälle, bevor du deinen internen Plan verfeinerst.",
+      "whenToUse": "Für Zeitpläne, Budgets, Adoptionsprognosen und andere wiederkehrende Vorhersagen.",
+      "steps": [
+        "Definiere genau, welche Größe oder Entscheidung du prognostizieren willst.",
+        "Finde eine sinnvolle Gruppe vergleichbarer abgeschlossener Fälle.",
+        "Nutze deren Verteilung als Baseline oder Spanne.",
+        "Passe die Baseline nur wegen konkreter Unterschiede an, die du mit Belegen begründen kannst."
+      ],
+      "limitations": "Eine schlechte Vergleichsgruppe kann in die Irre führen. Ähnlichkeit muss begründet werden, nicht nur behauptet.",
+      "biases": ["egocentric-bias-planning-fallacy", "heuristic-bias-availability-bias"]
+    },
+    {
+      "slug": "base-rate-check",
+      "title": "Basisrate prüfen",
+      "purpose": "Vergleiche einen auffälligen Einzelfall mit der breiteren Häufigkeit oder Verteilung, die für das Urteil relevant ist.",
+      "whenToUse": "Wenn eine einzelne Geschichte, ein aktuelles Ereignis oder ein Ausnahmefall zu viel Gewicht bekommt.",
+      "steps": [
+        "Formuliere das Ereignis oder Ergebnis, das du einschätzen willst.",
+        "Finde den passenden Nenner oder eine relevante Vergleichsgruppe.",
+        "Schätze zuerst die Basisrate, bevor du dich auf den Einzelfall konzentrierst.",
+        "Erkläre, welche fallbezogenen Belege stark genug sind, um von dieser Baseline abzuweichen."
+      ],
+      "limitations": "Basisraten können irrelevant sein, wenn die Vergleichsgruppe schlecht gewählt ist.",
+      "biases": ["heuristic-bias-availability-bias"]
+    },
+    {
+      "slug": "decision-journal",
+      "title": "Entscheidungsjournal",
+      "purpose": "Bewahre fest, was du vor dem Ergebnis wusstest, erwartet hast und für unsicher hieltest.",
+      "whenToUse": "Bei wichtigen Prognosen, Projektentscheidungen, Incident Reviews und wiederkehrenden professionellen Urteilen.",
+      "steps": [
+        "Notiere Entscheidung und Datum.",
+        "Halte Belege, Annahmen und Unsicherheit fest.",
+        "Schreibe auf, was die Entscheidung verändern würde.",
+        "Lies nach dem Ergebnis zuerst den ursprünglichen Eintrag, bevor du Lehren ziehst."
+      ],
+      "limitations": "Ein Journal verbessert Lernen nur, wenn es vor dem Ergebnis geschrieben und später wirklich wieder benutzt wird.",
+      "biases": ["cognitive-bias-hindsight-bias", "cognitive-bias-outcome-bias"]
+    },
+    {
+      "slug": "red-team-review",
+      "title": "Red-Team-Prüfung",
+      "purpose": "Gib dem stärksten Gegenargument genug Raum, um die bevorzugte Option ernsthaft herauszufordern.",
+      "whenToUse": "Vor Freigaben, Anbieterwahl, Roadmap-Commitments und wichtigen Gruppenentscheidungen.",
+      "steps": [
+        "Formuliere die bevorzugte Option und ihr stärkstes Argument.",
+        "Beauftrage eine Person oder Gruppe mit dem bestmöglichen Gegenfall.",
+        "Verlange konkrete Ausfallmodi und fehlende Belege statt allgemeiner Kritik.",
+        "Klärt die stärkste verbleibende Unsicherheit oder akzeptiert sie ausdrücklich vor der Freigabe."
+      ],
+      "limitations": "Eine ritualisierte Gegenprüfung kann zum Theater werden. Das Red Team braucht Zugang zu Belegen und die reale Möglichkeit, die Entscheidung zu verändern.",
+      "biases": ["cognitive-bias-confirmation-bias"]
+    },
+    {
+      "slug": "predefined-update-criteria",
+      "title": "Update-Kriterien vorher festlegen",
+      "purpose": "Entscheide im Voraus, welche neuen Belege eine Prognose oder Entscheidung verändern sollten.",
+      "whenToUse": "Wenn Teams spätere Informationen sonst so umdeuten könnten, dass ein öffentliches Commitment bestehen bleibt.",
+      "steps": [
+        "Schreibe die aktuelle Entscheidung oder Prognose auf.",
+        "Liste beobachtbare Belege, die sie stärken würden.",
+        "Liste beobachtbare Belege, die sie schwächen oder stoppen würden.",
+        "Setze einen Review-Zeitpunkt, bevor diese Belege eintreffen."
+      ],
+      "limitations": "Kriterien dürfen angepasst werden, wenn sich die Umgebung ändert. Änderungen sollten aber sichtbar dokumentiert und nicht still rückwirkend umgeschrieben werden.",
+      "biases": ["cognitive-bias-confirmation-bias", "logical-fallacy-escalation-of-commitment"]
+    },
+    {
+      "slug": "incremental-value-check",
+      "title": "Nur den zusätzlichen Nutzen prüfen",
+      "purpose": "Bewerte den nächsten Schritt nach zukünftigem Aufwand und Nutzen statt nach bereits verbrauchten Ressourcen.",
+      "whenToUse": "Wenn ein Projekt, Produkt oder Karriereweg vor allem weiterläuft, weil bereits viel investiert wurde.",
+      "steps": [
+        "Schreibe auf, was bereits investiert wurde, und markiere es als nicht rückholbar.",
+        "Schätze die zukünftigen Kosten des nächsten Schritts.",
+        "Schätze zukünftigen Nutzen und Unsicherheit des nächsten Schritts.",
+        "Frage, ob du diesen nächsten Schritt heute finanzieren würdest, wenn das Vorhaben keine Vorgeschichte hätte."
+      ],
+      "limitations": "Vergangene Investitionen können Hinweise auf Fähigkeiten oder Wechselkosten enthalten. Ignoriere versunkene Kosten, nicht relevante zukünftige Folgen.",
+      "biases": ["logical-fallacy-escalation-of-commitment"]
+    },
+    {
+      "slug": "predefined-criteria",
+      "title": "Entscheidungskriterien vorher festlegen",
+      "purpose": "Lege Vergleichsdimensionen fest, bevor eine bevorzugte Option die Kriterien unbemerkt verschiebt.",
+      "whenToUse": "Bei Einstellungen, Anbieterwahl, Produktpriorisierung, Karriereentscheidungen und Bewertungen.",
+      "steps": [
+        "Formuliere das Ziel der Entscheidung.",
+        "Wähle wenige Kriterien, bevor du Optionen bewertest.",
+        "Definiere, welche Belege zu welchem Kriterium gehören.",
+        "Bewerte alle ernsthaften Optionen nach denselben Kriterien, bevor du Ausnahmen hinzufügst."
+      ],
+      "limitations": "Kriterien können wichtige Informationen übersehen. Änderungen sind erlaubt, sollten aber mit Begründung dokumentiert werden.",
+      "biases": ["cognitive-bias-confirmation-bias", "cognitive-bias-anchoring-effect"]
+    },
+    {
+      "slug": "source-trace",
+      "title": "Zur Ursprungsquelle zurückgehen",
+      "purpose": "Trenne unabhängige Belege von Wiederholungen, Abschriften und generierten Zusammenfassungen.",
+      "whenToUse": "Wenn dieselbe Behauptung in vielen Artikeln, KI-Antworten oder internen Dokumenten auftaucht.",
+      "steps": [
+        "Schreibe die genaue Behauptung auf.",
+        "Verfolge jede wichtige Erwähnung bis zur frühesten prüfbaren Quelle zurück.",
+        "Gruppiere Kopien, die vom selben Ursprung abhängen.",
+        "Bewerte Vertrauen nach unabhängigen Belegen, nicht nach der Zahl der Wiederholungen."
+      ],
+      "limitations": "Die früheste Quelle ist nicht automatisch die beste. Qualität, Methode und spätere Korrekturen bleiben wichtig.",
+      "biases": ["truth-judgment-illusory-truth-effect", "memory-bias-continued-influence-effect"]
+    },
+    {
+      "slug": "reversible-test",
+      "title": "Kleinen, umkehrbaren Test machen",
+      "purpose": "Reduziere Unsicherheit, bevor du dich auf eine große und teuer rückgängig zu machende Entscheidung festlegst.",
+      "whenToUse": "Wenn sich eine Karriere-, Produkt- oder Betriebsentscheidung teilweise testen lässt, bevor du dich vollständig bindest.",
+      "steps": [
+        "Benenne die wichtigste Unsicherheit.",
+        "Entwirf die kleinste Handlung, die relevante Belege erzeugt.",
+        "Definiere vorher, welches Ergebnis die größere Entscheidung verändern würde.",
+        "Führe den Test durch und aktualisiere die Entscheidung nach der vorher festgelegten Regel."
+      ],
+      "limitations": "Ein kleiner Test bildet Bedingungen im großen Maßstab nicht immer ab. Behandle ihn als Beleg, nicht als Beweis.",
+      "biases": ["logical-fallacy-escalation-of-commitment", "cognitive-bias-confirmation-bias"]
+    }
+  ]
+}
