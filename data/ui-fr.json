@@ -1,0 +1,53 @@
+{
+  "locale": "fr",
+  "siteName": "Cognitive Biases",
+  "skipToContent": "Aller au contenu",
+  "nav": {
+    "home": "Accueil",
+    "explore": "Explorer",
+    "techniques": "Techniques",
+    "english": "English"
+  },
+  "actions": {
+    "readEntry": "Lire la fiche",
+    "openTechnique": "Voir la technique",
+    "browseTechniques": "Voir les techniques",
+    "browseBiases": "Explorer les biais",
+    "englishVersion": "Voir la version anglaise",
+    "fullEnglishLibrary": "Explorer toute la bibliothèque anglaise",
+    "backToExplore": "Retour à l'exploration"
+  },
+  "labels": {
+    "bias": "Biais / effet",
+    "technique": "Technique",
+    "englishTerm": "Terme anglais",
+    "inBrief": "En bref",
+    "whereItShows": "Où cela peut se voir",
+    "whatToDo": "Que faire ?",
+    "evidence": "Ce que les études permettent de dire",
+    "limits": "À garder en tête",
+    "whenToUse": "Quand l'utiliser",
+    "tryThis": "À essayer",
+    "example": "Exemple",
+    "whyItCanHelp": "Pourquoi cela peut aider",
+    "relatedBiases": "Biais liés",
+    "reviewedLayer": "Version française relue",
+    "canonicalEnglish": "Contenu canonique en anglais"
+  },
+  "search": {
+    "label": "Rechercher un biais ou un terme",
+    "placeholder": "Ex. biais de confirmation, anchoring effect…",
+    "empty": "Aucune fiche française ne correspond. Essayez le terme anglais ou consultez la bibliothèque complète en anglais.",
+    "countSingular": "fiche française",
+    "countPlural": "fiches françaises"
+  },
+  "notices": {
+    "reviewedSubset": "La version française privilégie des fiches relues plutôt qu'une traduction automatique de toute la bibliothèque.",
+    "techniqueBoundary": "Une technique structurée n'est pas un remède garanti. Son utilité dépend du contexte, des informations disponibles et de la façon dont elle est appliquée.",
+    "educational": "Informations pédagogiques sur le jugement et la décision. Ce site ne fournit pas de conseil médical, juridique, financier ou de santé mentale."
+  },
+  "footer": {
+    "tagline": "Des outils de décision fondés sur les preuves, avec leurs limites visibles.",
+    "maintainedBy": "Maintenu par Dzmitryi Kharlanau"
+  }
+}
