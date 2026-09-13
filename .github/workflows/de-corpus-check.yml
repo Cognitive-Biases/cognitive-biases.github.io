@@ -1,6 +1,8 @@
 name: German Corpus Parity
 
 on:
+  push:
+    branches: [deep-run/de-full-corpus]
   pull_request:
   workflow_dispatch:
 
