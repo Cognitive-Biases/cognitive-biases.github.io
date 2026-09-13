@@ -6,6 +6,7 @@ on:
       - 'data/biases.json'
       - 'data/de/**'
       - 'scripts/check-de-full-catalog.mjs'
+      - 'scripts/check-de-catalog-language.mjs'
       - '.github/workflows/de-full-catalog-audit.yml'
   workflow_dispatch:
 
@@ -22,3 +23,5 @@ jobs:
           node-version: 22
       - name: Audit German catalog parity
         run: node scripts/check-de-full-catalog.mjs
+      - name: Audit German language quality
+        run: node scripts/check-de-catalog-language.mjs
