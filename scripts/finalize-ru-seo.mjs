@@ -2,6 +2,7 @@ import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 await import("./generate-ru-reviewed-expansion.mjs");
+await import("./generate-ru-research.mjs");
 
 const OUT = join("dist", "ru");
 const PREVIEW = "max-snippet:-1, max-image-preview:large, max-video-preview:-1";
