@@ -4,6 +4,7 @@ import { join } from "node:path";
 await import("./generate-ru-reviewed-expansion.mjs");
 
 const OUT = join("dist", "ru");
+const PREVIEW = "max-snippet:-1, max-image-preview:large, max-video-preview:-1";
 
 async function walk(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -25,9 +26,32 @@ let shortened = 0;
 let styled = 0;
 let brandOptimized = 0;
 let trustLinked = 0;
+let previewAligned = 0;
 for (const file of await walk(OUT)) {
   let html = await readFile(file, "utf8");
   let dirty = false;
+
+  if (!html.includes("max-image-preview:large")) {
+    const robotsTag = html.match(/<meta\b[^>]*name=["']robots["'][^>]*>/i)?.[0]
+      || html.match(/<meta\b[^>]*content=["'][^"']*["'][^>]*name=["']robots["'][^>]*>/i)?.[0];
+    if (robotsTag) {
+      let nextTag;
+      if (/\bcontent=["'][^"']*["']/i.test(robotsTag)) {
+        nextTag = robotsTag.replace(/\bcontent=(["'])([^"']*)\1/i, (match, quote, content) => {
+          const normalized = String(content).trim().replace(/,\s*$/, "");
+          return `content=${quote}${normalized ? `${normalized}, ` : ""}${PREVIEW}${quote}`;
+        });
+      } else {
+        nextTag = robotsTag.replace(/\s*\/?\>$/, (ending) => ` content="${PREVIEW}"${ending}`);
+      }
+      html = html.replace(robotsTag, nextTag);
+    } else {
+      if (!html.includes("</head>")) throw new Error(`${file}: cannot attach search preview policy without </head>.`);
+      html = html.replace("</head>", `<meta name="robots" content="${PREVIEW}"></head>`);
+    }
+    previewAligned += 1;
+    dirty = true;
+  }
 
   if (!html.includes('href="/ru.css"')) {
     if (!html.includes("</head>")) throw new Error(`${file}: cannot attach Russian interface styles without </head>.`);
@@ -73,4 +97,4 @@ for (const file of await walk(OUT)) {
   if (dirty) await writeFile(file, html);
 }
 
-console.log(`Russian finalization attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, restored editorial-trust discovery on ${trustLinked} page(s), and shortened ${shortened} overlong title(s).`);
+console.log(`Russian finalization aligned search-preview policy on ${previewAligned} page(s), attached interface styles to ${styled} page(s), upgraded ${brandOptimized} page(s) to the shared WebP brand source, restored editorial-trust discovery on ${trustLinked} page(s), and shortened ${shortened} overlong title(s).`);
