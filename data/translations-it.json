@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "locale": "it",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "coverage": "curated-reviewed-subset",
+  "entries": [
+    {
+      "canonicalId": "cognitive-bias-confirmation-bias",
+      "localizedSlug": "bias-di-conferma",
+      "localizedLabel": "Bias di conferma",
+      "englishLabel": "Confirmation Bias",
+      "aliases": ["pregiudizio di conferma", "confirmation bias"],
+      "searchTerms": ["bias di conferma", "distorsioni cognitive", "cerco solo prove che confermano la mia idea", "come evitare il bias di conferma"],
+      "state": "reviewed",
+      "summary": "Il bias di conferma comprende diversi modi in cui una convinzione o un'ipotesi già presente può influenzare la ricerca, l'interpretazione, il ricordo o la valutazione delle informazioni.",
+      "practicalQuestion": "Quale evidenza mi farebbe davvero cambiare idea?",
+      "examples": [
+        "Al lavoro, un team cerca soprattutto i numeri che sostengono il piano che già preferisce.",
+        "In una ricerca, un'ipotesi viene testata senza stabilire prima che cosa conterebbe come evidenza contraria.",
+        "Con un sistema di IA, l'utente chiede molti argomenti a favore di una conclusione ma non mette alla prova spiegazioni concorrenti con lo stesso rigore."
+      ],
+      "evidenceSummary": "Il fenomeno è ben documentato, ma l'etichetta è ampia: meccanismi diversi di ricerca e interpretazione possono produrre effetti differenti a seconda del compito.",
+      "boundary": "Partire da casi compatibili con un'ipotesi non è sempre irrazionale. Il problema è più chiaro quando il test non riesce a distinguere spiegazioni plausibili o quando lo standard di prova cambia in base alla conclusione preferita.",
+      "techniqueSlugs": ["consider-the-opposite", "red-team-review", "predefined-update-criteria", "predefined-criteria", "reversible-test"]
+    },
+    {
+      "canonicalId": "cognitive-bias-anchoring-effect",
+      "localizedSlug": "effetto-ancoraggio",
+      "localizedLabel": "Effetto ancoraggio",
+      "englishLabel": "Anchoring Effect",
+      "aliases": ["bias di ancoraggio", "ancoraggio", "anchoring effect"],
+      "searchTerms": ["effetto ancoraggio", "bias di ancoraggio", "primo numero influenza la stima", "ancoraggio psicologia"],
+      "state": "reviewed",
+      "summary": "L'effetto ancoraggio descrive come un valore iniziale possa spostare una stima numerica successiva nella propria direzione, anche quando quel punto di partenza offre poche informazioni utili.",
+      "practicalQuestion": "Quale sarebbe la mia stima se non avessi visto questo numero?",
+      "examples": [
+        "In una negoziazione, il primo prezzo può spostare l'intervallo entro cui le offerte successive sembrano ragionevoli.",
+        "In un progetto, una data suggerita troppo presto può diventare il riferimento implicito per tutte le stime successive.",
+        "In una decisione assistita dall'IA, il primo punteggio o suggerimento può influenzare il giudizio umano che viene dopo."
+      ],
+      "evidenceSummary": "L'ancoraggio è ben sostenuto negli studi sul giudizio numerico. L'ampiezza dell'effetto varia con il tipo di ancora, il compito e il modo in cui il valore iniziale viene presentato.",
+      "boundary": "Non ogni numero funziona come ancora con la stessa forza. Un valore chiaramente casuale e irrilevante può incidere meno di un prezzo, un obiettivo o una stima percepiti come pertinenti.",
+      "techniqueSlugs": ["independent-estimate", "predefined-criteria"]
+    },
+    {
+      "canonicalId": "heuristic-bias-availability-bias",
+      "localizedSlug": "euristica-della-disponibilita",
+      "localizedLabel": "Euristica della disponibilità",
+      "englishLabel": "Availability Heuristic",
+      "aliases": ["bias di disponibilità", "availability heuristic", "availability bias"],
+      "searchTerms": ["euristica della disponibilità", "bias di disponibilità", "un caso recente sembra più probabile", "euristiche psicologia"],
+      "state": "reviewed",
+      "summary": "L'euristica della disponibilità usa la facilità con cui esempi o eventi vengono in mente come indizio per giudicare frequenza o probabilità.",
+      "practicalQuestion": "Questi esempi mi vengono in mente perché sono frequenti o perché sono recenti, vividi o molto ripetuti?",
+      "examples": [
+        "Dopo un incidente molto raccontato dai media, un rischio raro può sembrare improvvisamente molto più comune.",
+        "In un progetto, un guasto recente e memorabile diventa il riferimento per stimare tutti i casi successivi.",
+        "Una storia facile da ricordare può pesare più di un insieme di dati più ampio ma meno vivido."
+      ],
+      "evidenceSummary": "La disponibilità è un'euristica ben studiata, ma non è automaticamente un errore. Può fuorviare quando la facilità di richiamo dipende da fattori che non rappresentano la frequenza reale.",
+      "boundary": "Un caso molto evidente può talvolta segnalare un cambiamento reale. Prima di correggere il giudizio, controlla se sono cambiati anche i tassi base o altri dati pertinenti.",
+      "techniqueSlugs": ["reference-class-forecasting", "base-rate-check"]
+    },
+    {
+      "canonicalId": "cognitive-bias-hindsight-bias",
+      "localizedSlug": "bias-del-senno-di-poi",
+      "localizedLabel": "Bias del senno di poi",
+      "englishLabel": "Hindsight Bias",
+      "aliases": ["hindsight bias", "effetto lo sapevo già"],
+      "searchTerms": ["bias del senno di poi", "hindsight bias", "dopo sembrava ovvio", "lo sapevo già"],
+      "state": "reviewed",
+      "summary": "Dopo che il risultato è noto, il passato può apparire più prevedibile di quanto fosse davvero nel momento in cui si doveva decidere.",
+      "practicalQuestion": "Che cosa avevo davvero previsto prima di conoscere il risultato?",
+      "examples": [
+        "Dopo un ritardo, le cause del progetto sembrano ovvie anche se all'inizio erano incerte.",
+        "Dopo un movimento di mercato, una persona ricorda di essere stata molto più sicura della direzione di quanto avesse registrato allora.",
+        "Dopo una decisione negativa, segnali deboli sembrano retrospettivamente impossibili da ignorare."
+      ],
+      "evidenceSummary": "Il bias del senno di poi è robusto e studiato da decenni. Conoscere l'esito può cambiare la ricostruzione di ciò che sembrava prevedibile prima.",
+      "boundary": "Una buona spiegazione formulata dopo i fatti non è automaticamente distorta. La domanda è se riscrive l'incertezza che esisteva realmente prima dell'esito.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "cognitive-bias-outcome-bias",
+      "localizedSlug": "bias-del-risultato",
+      "localizedLabel": "Bias del risultato",
+      "englishLabel": "Outcome Bias",
+      "aliases": ["outcome bias"],
+      "searchTerms": ["bias del risultato", "giudicare una decisione dal risultato", "outcome bias"],
+      "state": "reviewed",
+      "summary": "Il bias del risultato compare quando la qualità di una decisione viene giudicata soprattutto dall'esito, invece che dalle informazioni e dal ragionamento disponibili al momento della scelta.",
+      "practicalQuestion": "Valuterei questa decisione nello stesso modo se il risultato fosse stato diverso?",
+      "examples": [
+        "Una decisione rischiosa viene elogiata perché ha funzionato, anche se il processo era debole.",
+        "Una buona decisione viene condannata perché si è materializzato un rischio che era stato riconosciuto correttamente.",
+        "Dopo un progetto, il team confonde la fortuna nell'esito con la qualità del metodo decisionale."
+      ],
+      "evidenceSummary": "L'effetto è sostenuto da studi sperimentali sulla valutazione delle decisioni e da repliche moderne.",
+      "boundary": "Il bias del risultato non coincide con il bias del senno di poi: il primo cambia il giudizio sulla qualità della decisione; il secondo cambia la percezione di quanto l'esito fosse prevedibile.",
+      "techniqueSlugs": ["decision-journal"]
+    },
+    {
+      "canonicalId": "egocentric-bias-planning-fallacy",
+      "localizedSlug": "fallacia-della-pianificazione",
+      "localizedLabel": "Fallacia della pianificazione",
+      "englishLabel": "Planning Fallacy",
+      "aliases": ["bias di pianificazione", "planning fallacy"],
+      "searchTerms": ["fallacia della pianificazione", "bias di pianificazione", "sottostimare tempi progetto", "perché i progetti ritardano"],
+      "state": "reviewed",
+      "summary": "La fallacia della pianificazione descrive la tendenza a sottostimare tempo o risorse necessari per un progetto, soprattutto quando si guarda troppo al piano corrente e troppo poco a casi comparabili già conclusi.",
+      "practicalQuestion": "Quanto tempo hanno richiesto progetti davvero comparabili?",
+      "examples": [
+        "Una migrazione sembra fattibile in sei settimane perché ogni singola attività, presa da sola, appare ragionevole.",
+        "Il team aggiunge un piccolo margine ma non guarda mai la distribuzione reale dei tempi di progetti simili.",
+        "Un piano ottimistico rimane invariato anche quando lo storico mostra ritardi ricorrenti."
+      ],
+      "evidenceSummary": "Il fenomeno è ben documentato nelle stime di progetto. L'uso di una prospettiva esterna e di classi di riferimento è una risposta pratica frequente, senza garantire previsioni perfette.",
+      "boundary": "Un ritardo non dimostra da solo la fallacia della pianificazione. Eventi nuovi, cambi di ambito e dipendenze esterne possono spiegare lo scostamento.",
+      "techniqueSlugs": ["reference-class-forecasting"]
+    },
+    {
+      "canonicalId": "logical-fallacy-escalation-of-commitment",
+      "localizedSlug": "escalation-dell-impegno",
+      "localizedLabel": "Escalation dell'impegno",
+      "englishLabel": "Escalation of Commitment",
+      "aliases": ["fallacia dei costi irrecuperabili", "costi sommersi", "sunk cost fallacy", "escalation of commitment"],
+      "searchTerms": ["costi irrecuperabili", "fallacia dei costi sommersi", "escalation dell'impegno", "continuare un progetto perché abbiamo già speso"],
+      "state": "reviewed",
+      "summary": "L'escalation dell'impegno descrive la prosecuzione di una linea d'azione o l'aggiunta di risorse nonostante segnali negativi, spesso perché abbandonare diventa più difficile da giustificare dopo le decisioni già prese.",
+      "practicalQuestion": "Se questo progetto arrivasse oggi senza tutto il suo passato, finanzierei comunque la prossima fase?",
+      "examples": [
+        "Un progetto riceve altro budget soprattutto perché è già costato molto.",
+        "Un team difende una decisione precedente anche dopo che nuovi dati hanno cambiato il rapporto tra costo e valore.",
+        "Una soluzione tecnica viene mantenuta per evitare di ammettere che cambiare direzione ora offre più valore atteso."
+      ],
+      "evidenceSummary": "La ricerca sull'escalation dell'impegno studia la persistenza dopo feedback negativi. I costi già sostenuti possono contribuire, ma non sono l'unico meccanismo rilevante.",
+      "boundary": "Fallacia dei costi irrecuperabili ed escalation dell'impegno sono vicine ma non identiche. Continuare può essere razionale quando costi futuri, valore atteso o costi di cambiamento giustificano la fase successiva.",
+      "techniqueSlugs": ["predefined-update-criteria", "incremental-value-check", "reversible-test"]
+    },
+    {
+      "canonicalId": "truth-judgment-illusory-truth-effect",
+      "localizedSlug": "effetto-di-verita-illusoria",
+      "localizedLabel": "Effetto di verità illusoria",
+      "englishLabel": "Illusory Truth Effect",
+      "aliases": ["effetto verità", "illusory truth effect"],
+      "searchTerms": ["effetto di verità illusoria", "ripetizione fa sembrare vera una frase", "illusory truth effect"],
+      "state": "reviewed",
+      "summary": "Un'affermazione ripetuta può, in media, essere giudicata più vera di un'affermazione comparabile vista per la prima volta, anche quando la ripetizione non aggiunge nuove evidenze.",
+      "practicalQuestion": "Questa affermazione mi sembra affidabile perché è stata verificata o soprattutto perché l'ho già vista molte volte?",
+      "examples": [
+        "La stessa statistica compare su molti siti, ma tutti risalgono alla stessa fonte.",
+        "Una frase ripetuta sui social diventa familiare e inizia a sembrare più consolidata di quanto sia davvero.",
+        "Più risposte di IA ripetono la stessa affermazione senza fornire evidenze indipendenti."
+      ],
+      "evidenceSummary": "L'effetto medio della ripetizione sui giudizi di verità è robusto, ma la sua ampiezza varia con il contenuto, la procedura e il contesto.",
+      "boundary": "La ripetizione non rende convincente ogni affermazione e non sostituisce la conoscenza pregressa. Inoltre non dimostra che un'affermazione sia falsa.",
+      "techniqueSlugs": ["source-trace"]
+    }
+  ]
+}
