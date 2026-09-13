@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "draft",
+  "updatedAt": "2026-09-13",
+  "editorialNote": "Staged situation-first content. Not part of the reviewed public German surface until an end-to-end renderer and quality gate publish it. Source concept and technique IDs remain canonical.",
+  "guides": [
+    {
+      "slug": "wichtige-verhandlung",
+      "title": "Vor einer wichtigen Verhandlung",
+      "category": "Verhandlung",
+      "summary": "Ein eigener Bereich mit Vergleichsdaten, Ziel und Alternativen schafft einen Referenzpunkt, bevor die erste externe Zahl fällt.",
+      "situation": "Die andere Seite nennt früh eine Zahl. Ohne vorbereiteten Bereich beginnt die Diskussion sofort bei diesem Wert und der restliche Vergleich kreist um ihn.",
+      "checklist": [
+        "Lege vor dem Gespräch Zielbereich, Untergrenze und beste realistische Alternative fest.",
+        "Notiere die Evidenz dahinter: Vergleichsfälle, Wert, Kosten, Bedingungen und wichtige Unsicherheiten.",
+        "Trenne Interessen von Positionen und prüfe mehrere mögliche Pakete.",
+        "Definiere vorab, welche neuen Fakten deinen Bereich verändern würden.",
+        "Wenn die erste Zahl fällt, rechne von deiner Evidenz neu statt automatisch von dieser Zahl aus weiter."
+      ],
+      "whyItHelps": "Eine unabhängige Vorbereitung macht sichtbar, warum du deinen Bereich änderst. Eine externe Zahl wird dadurch zu einem Datenpunkt statt zum Koordinatensystem der ganzen Verhandlung.",
+      "boundary": "Verhandlungen hängen auch von Alternativen, Informationen, Anreizen und Verhandlungsmacht ab. Bewegung in Richtung eines ersten Angebots beweist keinen Anchoring-Effekt.",
+      "biasSlugs": ["cognitive-bias-anchoring-effect", "framing-effect-core"],
+      "techniqueSlugs": ["independent-estimate", "predefined-criteria"],
+      "searchTerms": ["Verhandlung vorbereiten", "erste Zahl Verhandlung", "Preisanker", "Anker Verhandlung"]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "locale": "de",
+  "state": "reviewed",
+  "updatedAt": "2026-09-13",
+  "entries": [
+    {
+      "slug": "cognitive-bias-curse-of-knowledge",
+      "title": "Fluch des Wissens",
+      "englishTitle": "Curse of knowledge",
+      "aliases": ["Curse of Knowledge"],
+      "searchTerms": ["Experte erklärt Anfänger", "Wissen voraussetzen", "zu kompliziert erklären"],
+      "summary": "Wenn wir etwas gut kennen, fällt es schwerer einzuschätzen, was eine weniger informierte Person weiß oder versteht.",
+      "trap": "Was für dich selbstverständlich klingt, kann für einen Anfänger voller unsichtbarer Voraussetzungen sein. Eigene Vertrautheit wird leicht mit Klarheit verwechselt.",
+      "evidence": "Der Effekt wird in mehreren Perspektivübernahme- und Wissensaufgaben gestützt. Größe und Mechanismus hängen von der Aufgabe ab; Experten sind deshalb nicht grundsätzlich schlechte Lehrer.",
+      "boundary": "Nicht jede missverständliche Erklärung ist ein Curse-of-Knowledge-Effekt. Fachsprache, Struktur oder fehlende Beispiele können dieselbe Oberfläche erzeugen.",
+      "actions": ["Lass die andere Person den nächsten Schritt in eigenen Worten erklären oder ausführen.", "Prüfe Verständnis über beobachtbares Verhalten statt nur über die Frage 'Alles klar?'.", "Markiere Begriffe und Voraussetzungen, die du selbst nicht mehr bewusst erklären musst.", "Nutze Fehler und Rückfragen als Daten über die Perspektivlücke."]
+    },
+    {
+      "slug": "framing-effect-decoy-effect",
+      "title": "Decoy-Effekt",
+      "englishTitle": "Decoy effect",
+      "aliases": ["Köder-Effekt", "asymmetrischer Dominanzeffekt"],
+      "searchTerms": ["dritte Option", "Pricing drei Optionen", "Lockvogel Angebot"],
+      "summary": "Eine zusätzliche strategisch positionierte Option kann die Wahl zwischen den ursprünglichen Alternativen verschieben, obwohl sie selbst kaum attraktiv ist.",
+      "trap": "Eine dritte Option kann eine Zieloption plötzlich eindeutig besser aussehen lassen. Die neue Präferenz entsteht dann teilweise aus dem Vergleichsset.",
+      "evidence": "Der Decoy-Effekt ist gut dokumentiert, aber nicht garantiert. Stärke und Richtung hängen von Optionen, bestehenden Präferenzen und Studiendesign ab; Replikationen finden sowohl klare als auch schwache Ergebnisse.",
+      "boundary": "Nicht jede dritte Option ist ein Decoy. Beim klassischen Attraction Effect ist der Köder gegenüber der Zieloption asymmetrisch dominiert.",
+      "actions": ["Vergleiche die zwei ursprünglichen Optionen noch einmal ohne die dritte Option.", "Lege relevante Attribute vor dem Vergleich fest.", "Prüfe, ob die vermeintliche Decoy-Option tatsächlich von der Zieloption dominiert wird.", "Teste bei Pricing oder Produktdesign das vollständige Choice Set statt den Effekt vorauszusetzen."]
+    },
+    {
+      "slug": "framing-effect-default-effect",
+      "title": "Default-Effekt",
+      "englishTitle": "Default effect",
+      "aliases": ["Voreinstellungseffekt"],
+      "searchTerms": ["voreingestellte Option", "Opt-in Opt-out", "Default Option"],
+      "summary": "Eine voreingestellte Option wird häufig öfter gewählt als dieselbe Option ohne Voreinstellung, doch die Effektstärke variiert stark.",
+      "trap": "Die Nutzung eines Defaults kann wie eine starke Präferenz aussehen, obwohl Bequemlichkeit, Aufmerksamkeit oder Empfehlungssignale mitwirken.",
+      "evidence": "Meta-analytische Forschung stützt Default-Effekte im Durchschnitt, zeigt aber große Heterogenität bis hin zu kleinen oder umgekehrten Effekten. Es gibt keinen einzelnen Mechanismus für jeden Default-Effekt.",
+      "boundary": "Default-Effekt und Status-quo-Verzerrung sind verwandt, aber nicht identisch. Ein Interface-Default ist eine gesetzte Voreinstellung; ein Status quo kann auch ohne Interface bestehen.",
+      "actions": ["Mach wichtige Defaults sichtbar und leicht änderbar.", "Vergleiche einen Default mit aktiver Wahl, wenn das praktisch möglich ist.", "Miss nicht nur Auswahlraten, sondern ob die Wahl später den Zielen der Nutzer dient.", "Behandle einen Default als testbare Designentscheidung, nicht als universellen Verhaltenshebel."]
+    },
+    {
+      "slug": "cognitive-bias-mere-urgency-effect",
+      "title": "Mere-Urgency-Effekt",
+      "englishTitle": "Mere urgency effect",
+      "aliases": ["Mere Urgency Effect", "Dringlichkeitseffekt"],
+      "searchTerms": ["dringend statt wichtig", "Deadline zieht Aufmerksamkeit", "urgent important"],
+      "summary": "Kurze oder auffällige Zeitfenster können Aufmerksamkeit auf weniger wertvolle Aufgaben ziehen, selbst wenn die Dringlichkeit objektiv wenig zusätzliche Information enthält.",
+      "trap": "Etwas fühlt sich wichtig an, weil es jetzt erledigt werden muss. So kann Zeitknappheit selbst Wert bekommen und eine wichtigere Aufgabe verdrängen.",
+      "evidence": "Fünf ursprüngliche Experimente und eine große unabhängige Replikation stützen den Effekt in den untersuchten Task-Allocation-Paradigmen. Mit zusätzlichen Kontrollen wird der Effekt kleiner, bleibt aber nachweisbar.",
+      "boundary": "Echte Deadlines verändern Konsequenzen und sind relevante Information. Der Effekt betrifft Situationen, in denen Dringlichkeit vor allem das Gefühl des Sofort-Handelns verändert.",
+      "actions": ["Bewerte Wichtigkeit und Dringlichkeit getrennt, bevor du beginnst.", "Entferne Countdown- oder Deadline-Sprache mental und vergleiche die zugrunde liegenden Payoffs.", "Wenn eine Deadline echte Konsequenzen ändert, behandle sie ausdrücklich als Information.", "Schütze Zeit für die höherwertige Aufgabe, wenn die andere nur dringend aussieht."]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "locale": "de",
+  "state": "reviewed-localization",
+  "source": "data/agent-skills.json",
+  "updatedAt": "2026-09-13",
+  "skills": [
+    {
+      "name": "cognitive-bias-lens",
+      "title": "Cognitive-Bias-Linse",
+      "description": "Erkläre oder vergleiche eine benannte kognitive Verzerrung mit sichtbarer Evidenzgrenze. Nutze den Skill, wenn jemand wissen will, was ein Bias bedeutet, wie sich ähnliche Konzepte unterscheiden oder welche Rolle ein Muster in einer Entscheidung spielen könnte. Diagnostiziere keine Menschen und behandle ein Bias-Label nie als Kausalbeweis.",
+      "useWhen": [
+        "Ein Nutzer nennt einen Bias und braucht mehr als eine Wörterbuchdefinition.",
+        "Zwei Bias-Konzepte wirken ähnlich und müssen sauber getrennt werden.",
+        "Ein reales Entscheidungsproblem könnte zu einem bekannten Muster passen, aber Unsicherheit und Alternativerklärungen sollen sichtbar bleiben."
+      ],
+      "procedure": [
+        "Bestimme zuerst das kanonische Konzept. Wenn der Begriff mehrdeutig ist, halte die Mehrdeutigkeit sichtbar, statt still ein anderes Konzept zu wählen.",
+        "Erkläre das Muster in einfacher Sprache und trenne die Beschreibung von Aussagen darüber, wie stark oder universell der Effekt ist.",
+        "Gib ein realistisches Entscheidungsbeispiel und mindestens eine gewöhnliche Alternativerklärung, die kein Bias-Label benötigt.",
+        "Erkläre, welche Beobachtung die Bias-Linse relevanter und welche sie weniger relevant machen würde.",
+        "Wenn Quellenzugriff vorhanden ist, nutze bevorzugt die geprüfte Cognitive-Biases-Seite oder öffentliche Daten und bewahre Evidenzstatus und Einschränkungen.",
+        "Beende die Antwort mit einer konkreten Gegenprüfung, die vor der nächsten Handlung möglich ist."
+      ],
+      "output": ["Muster in einfacher Sprache", "Evidenzgrenze", "Wo es relevant sein kann", "Alternativerklärung", "Praktische Gegenprüfung", "Verwandte Konzepte, wenn hilfreich"],
+      "guardrails": [
+        "Diagnostiziere niemals eine Person mit einem Bias.",
+        "Leite aus einem Bias-Label keine Absicht, Intelligenz, Persönlichkeit oder psychische Verfassung ab.",
+        "Stelle einen ungeprüften, begrenzten oder umstrittenen Effekt nicht als gesicherte Wissenschaft dar.",
+        "Gib Unsicherheit oder keinen Treffer zurück, wenn das Konzept nicht zuverlässig identifiziert werden kann."
+      ]
+    },
+    {
+      "name": "bias-aware-decision-review",
+      "title": "Bias-bewusster Entscheidungsreview",
+      "description": "Prüfe eine wichtige Entscheidung auf plausible Bias-Risiken, ohne eine angeblich bias-freie Entscheidung zu versprechen. Trenne Fakten, Annahmen und Unbekanntes, wähle wenige plausible Linsen, fordere sie heraus und leite konkrete Prüfungen und nächste Schritte ab.",
+      "useWhen": [
+        "Ein Nutzer wählt zwischen Optionen, genehmigt einen Plan oder bindet relevante Ressourcen.",
+        "Ein Team möchte vor der Entscheidung einen strukturierten Review statt nachträglich eine Liste von Bias-Namen.",
+        "Eine Schätzung, Empfehlung oder KI-Antwort beeinflusst eine folgenreiche Entscheidung."
+      ],
+      "procedure": [
+        "Rahme die Entscheidung: Entscheidung, Optionen, verantwortliche Person, Frist, Tragweite und Umkehrbarkeit.",
+        "Trenne den aktuellen Informationsstand in beobachtete Fakten, Interpretationen, Annahmen und Unbekanntes.",
+        "Prüfe den Outside View mit vergleichbaren Fällen, Basisraten oder Referenzklassen, wenn sie relevant und verfügbar sind.",
+        "Wähle höchstens drei bis fünf plausible Bias-Linsen. Nenne für jede Linse das beobachtete Signal und eine Alternativerklärung ohne Bias.",
+        "Führe passende Gegenprüfungen durch: unabhängige Schätzung, widersprechende Evidenz, Gegenfaktum, Pre-Mortem, Stop-Regel oder reversibler Test.",
+        "Prüfe Robustheit: Bevorzuge eine Entscheidung, die auch dann noch sinnvoll ist, wenn eine wichtige Annahme falsch ist.",
+        "Dokumentiere, welcher Befund oder welches Ereignis einen erneuten Review auslösen soll."
+      ],
+      "output": ["Entscheidungsrahmen", "Fakten / Interpretationen / Annahmen / Unbekanntes", "Bias-Linsen mit Alternativerklärungen", "Gegenprüfungen", "Fehlende Evidenz", "Nächster Schritt und Review-Trigger"],
+      "guardrails": [
+        "Nutze Bias-Namen als Prüflinsen, nicht als Diagnosen oder Kausalbefunde.",
+        "Erzeuge keinen Bias-Score für Personen, Teams oder Entscheidungen.",
+        "Erzwinge keine Bias-Erklärung, wenn Anreize, fehlende Information oder reale Randbedingungen die Situation besser erklären.",
+        "Bei besonders folgenreichen Fachentscheidungen bleibt der Skill ein Bildungs- und Prüfwerkzeug; zuständige professionelle Beurteilung wird nicht ersetzt."
+      ]
+    },
+    {
+      "name": "evidence-evaluation",
+      "title": "Evidenz prüfen",
+      "description": "Prüfe, ob eine Behauptung Vertrauen verdient, bevor Wiederholung, flüssige Formulierung, lebhafte Beispiele oder Präferenz mit Evidenz verwechselt werden. Geeignet für Research, Vorschläge, Fact-Checks und wichtige KI-generierte Aussagen.",
+      "useWhen": [
+        "Ein Team bevorzugt bereits eine Erklärung und sammelt vor allem Material dafür.",
+        "Eine Behauptung erscheint an vielen Stellen, könnte aber aus einer einzigen Quelle stammen.",
+        "Ein auffälliges Beispiel verdrängt Basisraten oder breitere Daten.",
+        "Eine KI-Antwort klingt überzeugend, wichtige Aussagen sind aber nicht unabhängig geprüft."
+      ],
+      "procedure": [
+        "Formuliere die genaue Behauptung und welche Entscheidung sie verändern würde.",
+        "Trenne direkte Beobachtungen, Aussagen von Quellen, Schlussfolgerungen und Annahmen.",
+        "Verfolge wiederholte Behauptungen zu wirklich unabhängigen Quellen zurück, wenn Quellenzugriff verfügbar ist.",
+        "Schreibe vor weiterer bestätigender Recherche auf, welcher Befund die bevorzugte Schlussfolgerung schwächen würde.",
+        "Vergleiche lebhafte Beispiele mit Basisrate, Referenzklasse oder breiterer Stichprobe, wenn das sinnvoll ist.",
+        "Klassifiziere konservativ: für diesen Zweck gestützt, begrenzt, umstritten, ungeprüft oder unbekannt. Begründe die Einstufung."
+      ],
+      "output": ["Geprüfte Behauptung", "Stützende Evidenz", "Widerlegende Tests oder Evidenz", "Quellenunabhängigkeit / Provenienz", "Aktuelle Sicherheit und Grenzen", "Bedeutung für die Entscheidung"],
+      "guardrails": [
+        "Behandle viele Wiederholungen einer Quelle nicht als unabhängige Bestätigung.",
+        "Nutze eine zweite generierte Antwort nicht als unabhängige Verifikation einer KI-Aussage.",
+        "Erhöhe die Sicherheit nicht, weil eine Formulierung flüssig, vertraut oder häufig wiederholt ist.",
+        "Lass Unbekanntes sichtbar, statt Lücken mit plausibel klingendem Text zu füllen."
+      ]
+    },
+    {
+      "name": "decision-making-under-uncertainty",
+      "title": "Entscheidungen unter Unsicherheit",
+      "description": "Triff eine Entscheidung, ohne Unsicherheit wegzureden. Nutze Spannen, Referenzklassen, unabhängige Schätzungen, zukünftigen Wert und klare Review-Trigger, wenn Anker, jüngste Ereignisse oder versunkene Kosten das Urteil verzerren könnten.",
+      "useWhen": [
+        "Termin, Budget, Wahrscheinlichkeit oder Wert werden als eine einzige präzise Zahl behandelt.",
+        "Eine frühe Schätzung könnte spätere Zahlen verankern.",
+        "Der jüngste Erfolg oder Misserfolg dominiert die nächste Wahl.",
+        "Ein Team macht vor allem weiter, weil es bereits viel investiert hat."
+      ],
+      "procedure": [
+        "Definiere Entscheidung, Zeithorizont und die verbleibende Unsicherheit.",
+        "Erstelle nach Möglichkeit eine unabhängige Schätzung oder Spanne, bevor du einen starken externen Anker nutzt.",
+        "Prüfe vergleichbare Fälle oder eine Referenzklasse und notiere, wo der aktuelle Fall wirklich abweicht.",
+        "Trenne Sunk Costs von zukünftigen Kosten, zukünftigem Nutzen und Opportunitätskosten.",
+        "Identifiziere die entscheidenden Annahmen und teste mindestens ein ungünstiges Szenario.",
+        "Lege Schwelle, reversiblen Schritt oder Stop-Bedingung fest und dokumentiere den Zeitpunkt für einen erneuten Review."
+      ],
+      "output": ["Entscheidungs- und Unsicherheitsrahmen", "Spanne / Szenarien", "Referenzklassen-Check", "Anker- und Sunk-Cost-Checks", "Schlüsselannahmen", "Schwelle, nächster Schritt und Review-Trigger"],
+      "guardrails": [
+        "Erfinde keine präzisen Wahrscheinlichkeiten, wenn die Evidenz sie nicht trägt.",
+        "Behandle eine Spanne nicht so, als wäre Unsicherheit damit beseitigt.",
+        "Nutze bereits ausgegebene Ressourcen nicht allein als Grund für weitere Ausgaben.",
+        "Behaupte nicht, ein Bias habe die Entscheidung verursacht."
+      ]
+    },
+    {
+      "name": "forecasting",
+      "title": "Prognosen erstellen",
+      "description": "Erstelle Prognosen, die später angegriffen und verbessert werden können. Nutze Outside View, sichtbare Unsicherheit, vorab dokumentierte Annahmen und eine unveränderte Prognosehistorie statt Scheingenauigkeit und rekonstruierter Rückschau.",
+      "useWhen": [
+        "Ein Projekttermin oder Ergebnis wird fast nur aus dem aktuellen internen Plan abgeleitet.",
+        "Ein jüngster auffälliger Fall treibt die Wahrscheinlichkeitsschätzung.",
+        "Eine heutige Präferenz wird weit in die Zukunft projiziert.",
+        "Ein Team will aus Prognosen lernen, statt sie nachträglich aus Erinnerung zu rekonstruieren."
+      ],
+      "procedure": [
+        "Definiere genau, was prognostiziert wird, den Zeithorizont und eine beobachtbare Auflösungsregel.",
+        "Beginne mit vergleichbaren abgeschlossenen Fällen oder einer anderen begründbaren Outside-View-Referenz.",
+        "Gib eine Spanne oder Wahrscheinlichkeit an und nenne Faktoren, die das Ergebnis in beide Richtungen bewegen würden.",
+        "Speichere Annahmen, Datenstand und wichtige Unbekannte, bevor das Ergebnis bekannt ist.",
+        "Definiere Signale, die vor dem Endergebnis ein Update der Prognose auslösen sollten.",
+        "Vergleiche nach der Auflösung das Ergebnis mit der ursprünglichen Aufzeichnung und trenne Prognosequalität von Glück."
+      ],
+      "output": ["Prognosefrage und Auflösungsregel", "Outside-View-Referenz", "Schätzung / Spanne und Unsicherheit", "Annahmen und Update-Signale", "Zeitgestempelte Prognose", "Review nach Auflösung"],
+      "guardrails": [
+        "Verstecke schwache Evidenz nicht hinter präzisen Dezimalstellen.",
+        "Schreibe die ursprüngliche Prognose nach dem Ergebnis nicht um.",
+        "Behandle eine einzelne richtige Prognose nicht als Beweis für einen allgemein guten Prozess.",
+        "Halte sichtbar, wenn die Referenzklasse nur schlecht passt."
+      ]
+    },
+    {
+      "name": "metacognition",
+      "title": "Eigenes Denken prüfen",
+      "description": "Prüfe, wie ein Urteil entstanden ist, ohne Sicherheit, Ergebnis und Rückschau mit Entscheidungsqualität zu verwechseln. Nutze den Skill für Retrospektiven, Entscheidungsjournale und Lernen aus vergangenen Entscheidungen.",
+      "useWhen": [
+        "Ein gutes Ergebnis wird als Beweis für einen guten ursprünglichen Entscheidungsprozess behandelt.",
+        "Ein schlechtes Ergebnis lässt frühere Warnsignale im Rückblick offensichtlich erscheinen.",
+        "Ein Review testet hauptsächlich Argumente, die zur bevorzugten Geschichte passen.",
+        "Eine Person oder ein Team will aus einer Entscheidung lernen, ohne das damals verfügbare Wissen umzuschreiben."
+      ],
+      "procedure": [
+        "Rekonstruiere, welche Informationen, Optionen und Grenzen beim ursprünglichen Entscheidungszeitpunkt tatsächlich verfügbar waren.",
+        "Trenne die Qualität des Entscheidungsprozesses vom späteren Ergebnis.",
+        "Vergleiche ursprüngliche Sicherheit, Annahmen und Prognosen mit zeitnahen Aufzeichnungen, wenn sie existieren.",
+        "Erzeuge mindestens eine Alternativerklärung für das Ergebnis, einschließlich Glück, veränderter Umwelt und fehlender Information.",
+        "Bestimme, welcher Teil des Prozesses wiederholt, verändert oder künftig gemessen werden sollte.",
+        "Formuliere einen konkreten Review-Trigger oder ein Feld für das Entscheidungsjournal, das die nächste Retrospektive weniger erinnerungsabhängig macht."
+      ],
+      "output": ["Was damals bekannt sein konnte", "Entscheidungsprozess versus Ergebnis", "Ursprüngliche Annahmen / Sicherheit", "Alternativerklärungen", "Übertragbares Lernen", "Änderung für die nächste Entscheidung"],
+      "guardrails": [
+        "Bewerte die ursprüngliche Entscheidung nicht allein nach ihrem Ergebnis.",
+        "Behaupte ohne zeitnahe Evidenz nicht, Warnsignale seien offensichtlich gewesen.",
+        "Mache aus dem Review kein Persönlichkeitsurteil.",
+        "Trenne eine wiederholbare Prozesslektion von einer einmaligen Geschichte."
+      ]
+    },
+    {
+      "name": "information-verification",
+      "title": "Informationen prüfen",
+      "description": "Verifiziere wichtige Informationen über Provenienz, unabhängige Quellen, Korrekturhistorie und sichtbare Trennung von bestätigt, umstritten und unbekannt.",
+      "useWhen": [
+        "Eine Behauptung wirkt vor allem deshalb wahr, weil sie vertraut oder häufig wiederholt ist.",
+        "Mehrere Artikel oder Zusammenfassungen könnten von derselben ursprünglichen Quelle abhängen.",
+        "Eine Korrektur existiert, aber die ältere Erklärung beeinflusst die Diskussion weiterhin.",
+        "Eine generierte Antwort enthält folgenreiche Behauptungen ohne nachvollziehbare Provenienz."
+      ],
+      "procedure": [
+        "Extrahiere die folgenreichen Einzelbehauptungen, statt ein langes Dokument als Ganzes zu verifizieren.",
+        "Verfolge jede Behauptung zur frühesten belastbaren oder primären Quelle zurück, die du mit verfügbaren Werkzeugen tatsächlich prüfen kannst.",
+        "Kartiere die Quellenlinie und zähle unabhängige Evidenzstränge statt Links oder Wiederholungen.",
+        "Suche nach Korrekturen, späteren Updates, widersprechender Evidenz und Versions- oder Datumsunterschieden.",
+        "Formuliere nach einer Korrektur die aktuell gestützte Ersatz-Erklärung ausdrücklich neu.",
+        "Gib ein Claim-Ledger mit Status zurück: bestätigt, gestützt aber begrenzt, umstritten, ungeprüft oder unbekannt — jeweils mit Begründung."
+      ],
+      "output": ["Claim-Ledger", "Provenienz / Quellenlinie", "Unabhängige Bestätigungen, soweit bekannt", "Korrektur- und Versionshinweise", "Offene Prüflücken", "Worauf man sich aktuell stützen kann"],
+      "guardrails": [
+        "Nenne eine Behauptung nicht bestätigt, wenn die stützende Evidenz nicht geprüft werden kann.",
+        "Behandle mehrere Zusammenfassungen derselben Quelle nicht als unabhängige Bestätigung.",
+        "Lösche die Korrekturhistorie nicht, wenn sich eine Behauptung verändert.",
+        "Leite Wahrheit nicht aus Popularität, Wiederholung oder sicherer Sprache ab."
+      ]
+    },
+    {
+      "name": "ai-assisted-reasoning",
+      "title": "KI-gestütztes Denken",
+      "description": "Nutze KI zur Erweiterung des Denkens, ohne die erste generierte Antwort zum Anker zu machen, flüssige Ausgabe als Evidenz zu behandeln oder die abschließende Verantwortung auszulagern. Geeignet für wichtige Empfehlungen, Schätzungen und Research mit KI-Assistenten.",
+      "useWhen": [
+        "Eine Chatbot-Empfehlung beeinflusst eine wichtige Entscheidung.",
+        "Das Modell liefert die erste Zahl, Bewertung oder Schätzung in der Diskussion.",
+        "Ein polierter Dialog lässt das System kompetenter erscheinen, als tatsächlich getestet wurde.",
+        "Der Nutzer könnte KI hauptsächlich einsetzen, um eine bereits bevorzugte Schlussfolgerung zu stärken."
+      ],
+      "procedure": [
+        "Halte bei wichtigen Entscheidungen nach Möglichkeit zuerst die vorläufige menschliche Einschätzung, Erfolgskriterien oder unabhängige Schätzung fest.",
+        "Trenne den KI-Beitrag in Ideen, Berechnungen, Tatsachenbehauptungen, Prognosen und Empfehlungen; sie brauchen unterschiedliche Prüfungen.",
+        "Erzeuge eine glaubwürdige Gegenposition und frage, welcher Befund die bevorzugte Antwort falsch machen würde.",
+        "Prüfe folgenreiche Tatsachenbehauptungen an unabhängigen einsehbaren Quellen, wenn Werkzeuge verfügbar sind; verifiziere ein Modell nicht nur mit einer zweiten generierten Antwort.",
+        "Prüfe Anchoring, Automation Bias, anthropomorphes Übervertrauen, Confirmation Seeking und Wiederholungseffekte als mögliche Linsen, nicht als Diagnosen.",
+        "Gib die Entscheidung mit bestätigten Fakten, verbleibender Unsicherheit, Alternativen und der kleinsten nützlichen nächsten Prüfung an den Nutzer zurück."
+      ],
+      "output": ["Menschliche Ausgangseinschätzung / Kriterien", "Beitrag der KI", "Mögliche Bias-Linsen", "Unabhängige Prüfungen", "Gegenposition", "Verbleibende Unsicherheit und nächster Schritt"],
+      "guardrails": [
+        "Behandle sprachliche Flüssigkeit oder Modellsicherheit nicht als Beleg für faktische Zuverlässigkeit.",
+        "Lass die erste Zahl des Agenten nicht still zur Baseline werden, wenn eine unabhängige Schätzung möglich ist.",
+        "Behandle KI-Rat nicht als unabhängige Evidenz, nur weil ein anderes Modell zustimmt.",
+        "Die Verantwortung für folgenreiche Entscheidungen bleibt beim Nutzer oder der zuständigen entscheidungsverantwortlichen Person."
+      ]
+    }
+  ]
+}
