@@ -34,3 +34,27 @@ jobs:
 
       - name: Run canonical repository quality suite
         run: npm run check
+
+      - name: Project localization exceptions to ARWP Quality Debt
+        run: node scripts/project-arwp-localization-debt.mjs
+
+      - name: Checkout pinned Goose ARWP
+        uses: actions/checkout@v4
+        with:
+          repository: dkharlanau/agent-ready-web-profile
+          ref: 6a8168b854ed6f557f5906808a83eb67be9f42ea
+          path: .arwp-tool
+          persist-credentials: false
+
+      - name: Install Goose ARWP dependencies
+        run: npm ci --prefix .arwp-tool
+
+      - name: Run generic ARWP localization check
+        run: node .arwp-tool/bin/arwp.mjs localization check .arwp/localization.json --root=. --json > /tmp/arwp-localization-report.json
+
+      - name: Run generic ARWP localization impact gate
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          base="${BASE_REF:-main}"
+          node .arwp-tool/bin/arwp.mjs localization gate .arwp/localization.json --root=. --base="origin/${base}" --head=HEAD
