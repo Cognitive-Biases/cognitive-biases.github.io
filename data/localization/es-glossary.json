@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "locale": "es",
+  "canonicalLocale": "en",
+  "status": "editorial-baseline",
+  "terms": [
+    {"id":"cognitive-bias","source":"cognitive bias","preferred":"sesgo cognitivo","aliases":[],"note":"Preferred decision-science term."},
+    {"id":"anchoring-bias","source":"anchoring bias","preferred":"sesgo de anclaje","aliases":["efecto de anclaje"],"note":"Use the bias form for the named concept and the effect form for the phenomenon."},
+    {"id":"confirmation-bias","source":"confirmation bias","preferred":"sesgo de confirmación","aliases":[],"note":"Standard psychology term."},
+    {"id":"heuristic","source":"heuristic","preferred":"heurística","aliases":[],"note":"Explain it in plain language on first use for a broad audience."},
+    {"id":"decision-skill","source":"decision skill","preferred":"habilidad para tomar decisiones","aliases":["habilidad de toma de decisiones"],"note":"Prefer natural Spanish wording."},
+    {"id":"debiasing","source":"debiasing","preferred":"reducción de sesgos","aliases":["mitigación de sesgos"],"note":"Use transparent wording for general readers."},
+    {"id":"evidence","source":"evidence","preferred":"evidencia","aliases":["pruebas"],"note":"Use consistent research-context wording."},
+    {"id":"decision-check","source":"decision check","preferred":"revisión de decisión","aliases":["comprobación de decisión"],"note":"Choose the variant that best fits the action in the interface."}
+  ]
+}
