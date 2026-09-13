@@ -124,6 +124,7 @@ function enforceLocalizationImpact(changedFiles) {
     "data/localization-contract.json",
     "data/localization-exceptions.json",
     "scripts/check-localization-governance.mjs",
+    "skills/translation-review/SKILL.md",
     "ai/locales.json"
   ]);
   const substantive = watched.filter((path) => !governanceFiles.has(path));
@@ -146,7 +147,15 @@ function enforceLocalizationImpact(changedFiles) {
 }
 
 function isWatchedCanonicalChange(path) {
+  if (isLocaleOwnedChange(path)) return false;
   return (contract.impactRules.watchedCanonicalPrefixes || []).some((prefix) => path === prefix || path.startsWith(prefix));
+}
+
+function isLocaleOwnedChange(path) {
+  const lower = path.toLowerCase();
+  return Object.values(contract.impactRules.localeSignals || {})
+    .flat()
+    .some((signal) => lower.includes(String(signal).toLowerCase()));
 }
 
 function hasLocaleSignal(paths, code) {
