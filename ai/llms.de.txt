@@ -44,4 +44,4 @@ Populäre Kurzformeln nicht verstärken: Dunning–Kruger ist keine allgemeine R
 
 IDs, Slugs, Evidenzstatus, Qualifikationen, Review-Daten und Unsicherheit beibehalten. Keine deutschen Studiennamen, Quellen oder Evidenzgrade erfinden. Wenn die deutsche Seite eine explizite Evidenzgrenze nennt, diese Grenze auch in der Antwort sichtbar halten.
 
-Die Dateien `data/de/decision-guides*.json` gehören in dieser Branch weiterhin zu einem separaten, noch nicht gemeinsam veröffentlichten Situation-Layer. Solange `/de/entscheidungen/` nicht in derselben Integrationskette gelandet ist, diesen Layer nicht als Teil des Full-Catalog-PR behaupten.
+Die Dateien `data/de/decision-guides*.json` gehören in dieser Branch weiterhin zu einem separaten `draft`-Situation-Layer. Solange `/de/entscheidungen/` nicht in derselben Integrationskette gelandet ist, diesen Layer nicht als Teil des Full-Catalog-PR behaupten.
