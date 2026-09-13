@@ -1,6 +1,6 @@
 # Translation review
 
-Use this skill when adding or updating a German or Russian version of reviewed Cognitive Biases content.
+Use this skill when adding or updating a German, Russian, or French version of reviewed Cognitive Biases content.
 
 ## Goal
 
@@ -24,3 +24,5 @@ A translation must never be more certain than the canonical page.
 Do not translate source titles unless a source has an established translated title. Do not invent translated citations. Do not create a new evidence status for one language.
 
 If a clean natural translation conflicts with a literal translation, preserve the reviewed meaning and write naturally.
+
+For French human-facing pages, also follow `docs/localization-fr.md` for terminology, UX copy, aliases, fallbacks and SEO/AEO rules. Keep the canonical entity ID visible to machine-readable surfaces and use the English label only where it improves recognition or discovery.

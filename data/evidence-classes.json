@@ -28,6 +28,7 @@
   },
   "bySlug": {
     "confirmation-bias-backfire-effect": "mixed",
+    "confirmation-bias-congruence-bias": "domain-specific",
     "belief-perseverance-conservatism-bias": "established",
     "cognitive-bias-hindsight-bias": "established",
     "truth-judgment-illusory-truth-effect": "established",
@@ -51,6 +52,23 @@
     "attribution-bias-moral-luck": "established",
     "cognitive-bias-declinism": "supported",
     "cognitive-bias-systematic-bias": "concept",
-    "cognitive-bias-anchoring-effect": "established"
+    "cognitive-bias-anchoring-effect": "established",
+    "framing-effect-core": "established",
+    "framing-effect-decoy-effect": "supported",
+    "framing-effect-default-effect": "supported",
+    "prospect-theory-status-quo-bias": "established",
+    "prospect-theory-loss-aversion": "mixed",
+    "extension-neglect-less": "supported",
+    "cognitive-bias-mere-urgency-effect": "supported",
+    "logical-fallacy-zero": "supported",
+    "memory-bias-continued-influence-effect": "established",
+    "egocentric-bias-planning-fallacy": "established",
+    "cognitive-bias-sunk-cost-effect": "established",
+    "memory-bias-rosy-retrospection": "supported",
+    "memory-bias-fading-affect-bias": "supported",
+    "cognitive-bias-unit-bias": "supported",
+    "framing-effect-distinction-bias": "mixed",
+    "egocentric-bias-restraint-bias": "supported",
+    "framing-effect-denomination-effect": "supported"
   }
 }

@@ -1,0 +1,33 @@
+# Cognitive Biases — routage agent en français
+
+> Bibliothèque publique sur les biais cognitifs, les preuves, les techniques de décision et le raisonnement.
+
+Cette surface française sert à la découverte et au routage pour les assistants et les agents. L'anglais reste la langue canonique des identifiants, schémas, noms de champs, statuts de preuve, sources et relations. Tous les biais actuellement publiés disposent d'une fiche humaine en français sous `/fr/`.
+
+- Expérience française: https://cognitive-biases.github.io/fr/
+- Explorer tous les biais publiés en français: https://cognitive-biases.github.io/fr/explorer/
+- Techniques en français: https://cognitive-biases.github.io/fr/techniques/
+- Bibliothèque canonique anglaise: https://cognitive-biases.github.io/explore/
+- Revues des preuves: https://cognitive-biases.github.io/evidence/
+- Comparaisons de concepts: https://cognitive-biases.github.io/compare/
+- Contextes de décision: https://cognitive-biases.github.io/contexts/
+- Compétences de décision: https://cognitive-biases.github.io/skills/
+- Recherche: https://cognitive-biases.github.io/research/
+- Données publiques: https://cognitive-biases.github.io/data/
+- Données de localisation française: https://cognitive-biases.github.io/fr/data/index.json
+- Profil Agent-Ready Web: https://cognitive-biases.github.io/ai/site-profile.json
+- Profil AI Search & Citation: https://cognitive-biases.github.io/ai/ai-search-profile.json
+- Trust Center: https://cognitive-biases.github.io/trust/
+
+Règles d'interprétation :
+
+1. Un biais est une grille de vérification, pas un diagnostic.
+2. Une traduction française relue ne signifie pas automatiquement qu'une revue scientifique dédiée existe.
+3. Lorsqu'une revue de preuves canonique existe, conservez son statut, ses limites, ses sources et sa date. Lorsqu'elle n'existe pas, dites-le au lieu d'inventer un statut local.
+4. Une technique est une procédure de raisonnement, pas un remède garanti.
+5. Les identifiants canoniques ne sont jamais traduits. Par exemple `cognitive-bias-confirmation-bias` reste l'identifiant de l'entité dont le libellé français est « Biais de confirmation ».
+6. Certaines entrées du corpus sont des concepts de mesure, des labels de projet, des effets discutés ou des constructions très contextuelles. Ne les présentez pas comme des lois psychologiques universelles.
+
+Portée : informations pédagogiques sur le jugement et la décision ; pas de conseil médical, juridique, financier ou de santé mentale.
+
+Licence : CC BY-NC-SA 4.0 pour le contenu public actuel. Vérifiez la licence du dépôt avant réutilisation.

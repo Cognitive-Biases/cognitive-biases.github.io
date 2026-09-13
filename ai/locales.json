@@ -1,11 +1,11 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "status": "experimental-project-extension",
   "scope": "https://cognitive-biases.github.io/",
   "canonicalLanguage": "en",
   "fallbackLanguage": "en",
-  "humanInterfaceLanguages": ["en"],
-  "agentRoutingLanguages": ["en", "de", "ru"],
+  "humanInterfaceLanguages": ["en", "fr"],
+  "agentRoutingLanguages": ["en", "de", "ru", "fr"],
   "locales": [
     {
       "language": "en",
@@ -24,6 +24,14 @@
       "label": "Русский",
       "status": "localized-agent-routing",
       "llms": "https://cognitive-biases.github.io/ru/llms.txt"
+    },
+    {
+      "language": "fr",
+      "label": "Français",
+      "status": "reviewed-human-interface",
+      "llms": "https://cognitive-biases.github.io/fr/llms.txt",
+      "human": "https://cognitive-biases.github.io/fr/",
+      "data": "https://cognitive-biases.github.io/fr/data/index.json"
     }
   ],
   "selection": {
@@ -36,7 +44,8 @@
     "normativeTechnicalLanguage": "en",
     "translateDatasetIdentifiers": false,
     "translateJsonFieldNames": false,
-    "localizedSurfaceRole": "discovery-and-routing"
+    "localizedSurfaceRole": "status-dependent",
+    "humanReviewedLanguages": ["fr"]
   },
   "discovery": {
     "htmlRelation": "describedby",
