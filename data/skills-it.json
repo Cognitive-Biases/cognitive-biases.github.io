@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "locale": "it",
+  "canonicalLocale": "en",
+  "sourceRelease": "2026.08.18",
+  "reviewedAt": "2026-09-13",
+  "contextLabels": {
+    "checking-claims-misinformation": "Verifica delle affermazioni e disinformazione",
+    "ai-assisted-decisions": "Decisioni assistite dall'IA",
+    "work-project-decisions": "Decisioni di lavoro e di progetto",
+    "forecasting-future-choices": "Previsioni e scelte future",
+    "project-estimation-delivery": "Stima e consegna dei progetti"
+  },
+  "entries": [
+    {
+      "canonicalSlug": "evidence-evaluation",
+      "localizedSlug": "valutazione-delle-evidenze",
+      "title": "Valutazione delle evidenze",
+      "aliases": ["evidence evaluation", "valutare le evidenze", "verificare la forza di un'affermazione"],
+      "summary": "Valuta se un'affermazione merita fiducia prima di scambiare ripetizione, fluidità o preferenza per evidenza.",
+      "outcome": "Riesci a separare un'affermazione convincente dalle evidenze che dovrebbero davvero aggiornare il tuo giudizio.",
+      "whenToUse": ["Un team preferisce già una spiegazione e cerca soprattutto sostegno per essa.", "Molti testi ripetono la stessa affermazione ma possono dipendere dalla stessa fonte.", "Un esempio vivido pesa più di dati più ampi.", "Una risposta dell'IA sembra sicura, ma affermazioni importanti non sono ancora state verificate."],
+      "actions": ["Scrivi che cosa indebolirebbe la conclusione preferita prima di cercare altro sostegno.", "Risali alle fonti e distingui quelle realmente indipendenti.", "Confronta esempi memorabili con tassi base, classi di riferimento o campioni più ampi.", "Separa fatti verificati, inferenze plausibili e domande ancora aperte."],
+      "example": "Tre articoli affermano che un metodo aumenta molto la produttività. Risalendo alle fonti scopri che tutti citano lo stesso piccolo studio. Sono aumentati i link, non le evidenze indipendenti.",
+      "boundary": "La competenza migliora l'analisi di un'affermazione. Non trasforma dati deboli in certezza e non sostituisce competenze specialistiche quando il rischio le richiede."
+    },
+    {
+      "canonicalSlug": "decision-making-under-uncertainty",
+      "localizedSlug": "decisioni-sotto-incertezza",
+      "title": "Decisioni sotto incertezza",
+      "aliases": ["decision making under uncertainty", "decidere sotto incertezza", "decidere senza certezza"],
+      "summary": "Prendi decisioni utili quando il risultato resta incerto e un numero iniziale, una storia recente o un investimento passato rischiano di trascinare troppo il giudizio.",
+      "outcome": "Riesci a scegliere un'azione senza fingere che l'incertezza sia scomparsa.",
+      "whenToUse": ["Scadenza, budget o probabilità vengono discussi come un singolo numero preciso.", "La prima stima sta influenzando tutte le stime successive.", "L'ultimo successo o fallimento domina la decisione seguente.", "Il team continua soprattutto perché ha già investito molto."],
+      "actions": ["Parti da un intervallo o da una classe di riferimento prima di negoziare un numero preciso.", "Produci una stima indipendente prima di vedere un'ancora forte, quando possibile.", "Separa ciò che è già stato speso da costi futuri, valore futuro e costo opportunità della prossima fase.", "Registra le condizioni che dovrebbero far scattare una revisione della decisione."],
+      "example": "Un progetto è stato annunciato in otto settimane perché quel numero è apparso per primo. Controlli progetti comparabili, trovi un intervallo di dieci–quattordici settimane e rendi esplicite le condizioni che potrebbero davvero ridurre la durata.",
+      "boundary": "Un intervallo non elimina l'incertezza. Questa competenza rende più visibili ipotesi e trade-off; non garantisce una previsione né un risultato corretto."
+    },
+    {
+      "canonicalSlug": "forecasting",
+      "localizedSlug": "previsioni",
+      "title": "Previsioni",
+      "aliases": ["forecasting", "previsione", "stimare cosa succederà"],
+      "summary": "Stima risultati usando casi comparabili, incertezza esplicita e registrazioni fatte prima di conoscere l'esito.",
+      "outcome": "Produci previsioni più facili da contestare, confrontare e revisionare in seguito.",
+      "whenToUse": ["Una scadenza di progetto è costruita quasi solo dal piano interno.", "Uno stato d'animo attuale viene proiettato molto avanti nel futuro.", "Un caso recente e memorabile domina quasi tutta la stima di probabilità.", "Dopo l'esito, tutti sentono che la risposta fosse ovvia fin dall'inizio."],
+      "actions": ["Controlla casi comparabili già conclusi prima di rifinire il piano attuale.", "Fornisci un intervallo e descrivi che cosa potrebbe spostare il risultato verso ciascun estremo.", "Registra previsione e ipotesi prima dell'esito.", "Dopo, valuta la previsione dal registro originale e non da una memoria ricostruita."],
+      "example": "Prima di annunciare una data di consegna, confronti cinque progetti simili, registri un intervallo e definisci due segnali che obbligheranno ad aggiornare la previsione.",
+      "boundary": "Una previsione resta una stima. Un buon processo può produrre un esito negativo; un risultato fortunato non dimostra che il metodo fosse buono."
+    },
+    {
+      "canonicalSlug": "metacognition",
+      "localizedSlug": "metacognizione",
+      "title": "Metacognizione",
+      "aliases": ["metacognition", "rivedere il proprio ragionamento", "esaminare come si è formata una decisione"],
+      "summary": "Esamina come si è formato un giudizio, che cosa lo ha influenzato e quali condizioni dovrebbero farti cambiare idea.",
+      "outcome": "Riesci a rivedere il tuo ragionamento senza confondere fiducia, esito finale e senno di poi con la qualità della decisione iniziale.",
+      "whenToUse": ["Un buon risultato viene usato come prova che il processo fosse buono.", "Un risultato negativo fa sembrare i segnali d'allarme molto più ovvi di quanto fossero.", "Stai testando soprattutto argomenti che sostengono la risposta preferita.", "Vuoi imparare da una decisione passata senza riscrivere ciò che era conoscibile allora."],
+      "actions": ["Fissa ciò che era realmente noto prima dell'esito.", "Valuta la qualità del processo separatamente dal risultato.", "Scrivi che cosa ti farebbe cambiare idea prima di raccogliere altre evidenze.", "Confronta la revisione con previsioni, note o ipotesi registrate al momento."],
+      "example": "Una decisione commerciale ha avuto un ottimo esito. Invece di concludere che il ragionamento fosse eccellente, rileggi le ipotesi registrate prima della scelta e distingui ciò che era solido, fragile o semplicemente fortunato.",
+      "boundary": "La metacognizione non offre una visione perfettamente oggettiva del proprio pensiero. Funziona meglio con registrazioni contemporanee e spiegazioni alternative mantenute aperte."
+    },
+    {
+      "canonicalSlug": "information-verification",
+      "localizedSlug": "verifica-delle-informazioni",
+      "title": "Verifica delle informazioni",
+      "aliases": ["information verification", "verificare informazioni", "controllare un'affermazione"],
+      "summary": "Verifica da dove arriva un'informazione, se le fonti sono indipendenti e se una correzione ha davvero sostituito la spiegazione precedente.",
+      "outcome": "Riesci a verificare affermazioni importanti senza trattare la ripetizione come conferma indipendente.",
+      "whenToUse": ["Un'affermazione sembra vera soprattutto perché è diventata familiare.", "Diversi riassunti possono dipendere dalla stessa fonte originale.", "Esiste una correzione, ma la versione precedente continua a influenzare il ragionamento.", "Una risposta generata ripete un'affermazione senza mostrare chiaramente la sua origine."],
+      "actions": ["Risali all'affermazione fino alla fonte primaria o affidabile più vicina che puoi ispezionare.", "Conta fonti indipendenti, non ripetizioni.", "Dopo una correzione, formula esplicitamente la spiegazione attualmente sostenuta.", "Distingui ciò che è verificato, ciò che è inferenza e ciò che resta sconosciuto."],
+      "example": "Una statistica compare in sei post. Seguendo le citazioni scopri che tutti risalgono allo stesso rapporto. La tratti come una fonte, non come sei conferme.",
+      "boundary": "Raggiungere la fonte originale non garantisce che sia buona. La verifica deve comunque valutare metodo, contesto e forza delle evidenze."
+    },
+    {
+      "canonicalSlug": "ai-assisted-reasoning",
+      "localizedSlug": "ragionamento-assistito-da-ia",
+      "title": "Ragionamento assistito dall'IA",
+      "aliases": ["AI-assisted reasoning", "ragionamento con IA", "usare l'IA per decidere meglio"],
+      "summary": "Usa l'IA per ampliare alternative e test senza delegare giudizio, verifica dei fatti o responsabilità della decisione.",
+      "outcome": "Usi il modello come strumento di confronto e indagine, non come ancora automatica di autorità.",
+      "whenToUse": ["La prima risposta del modello sta diventando il punto di partenza di tutta l'analisi.", "Vuoi testare una raccomandazione contro ipotesi alternative.", "La risposta mescola fatti, inferenze e suggerimenti senza distinguerli.", "Un team sta per agire sulla base di una risposta non ancora verificata."],
+      "actions": ["Formula il problema e, quando possibile, una tua stima prima di chiedere una raccomandazione.", "Chiedi alternative plausibili, controevidenze e condizioni che cambierebbero la conclusione.", "Verifica esternamente le affermazioni fattuali che contano per la decisione.", "Registra che cosa proviene dal modello, che cosa è stato confermato e chi mantiene la responsabilità finale."],
+      "example": "Prima di accettare una raccomandazione di architettura, chiedi al modello tre alternative, i rischi di ciascuna e le evidenze che potrebbero invalidare l'opzione preferita; poi controlli le ipotesi tecniche nelle fonti pertinenti.",
+      "boundary": "Un modello può produrre una critica persuasiva ed essere comunque sbagliato. La diversità dei prompt non equivale all'indipendenza delle fonti e il modello non assume la responsabilità della decisione."
+    }
+  ]
+}

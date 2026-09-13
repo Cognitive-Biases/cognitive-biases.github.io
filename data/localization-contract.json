@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "canonicalLocale": "en",
   "policy": "https://dkharlanau.github.io/agent-ready-web-profile/LOCALIZATION.md",
   "glossaryPolicy": {
@@ -43,6 +43,18 @@
       "localizedSourcePrefixes": ["data/", "scripts/"],
       "publishedPrefixes": ["dist/es/"],
       "machineReadable": ["dist/es/llms.txt", "dist/es/data/index.json"]
+    },
+    {
+      "code": "it",
+      "status": "reviewed-partial-human-interface",
+      "glossary": "data/localization/it-glossary.json",
+      "freshnessStrategy": "canonical-release-version",
+      "generatorScripts": ["scripts/generate-italian-localization.mjs"],
+      "checkScripts": ["scripts/check-italian-localization.mjs"],
+      "requiredSourcePrefixes": ["data/", "scripts/", "skills/"],
+      "localizedSourcePrefixes": ["data/", "scripts/"],
+      "publishedPrefixes": ["dist/it/"],
+      "machineReadable": ["dist/it/llms.txt", "dist/it/data/index.json", "dist/it/data/agent-skills.json"]
     }
   ],
   "limitedLocales": [
@@ -75,7 +87,8 @@
     "localeSignals": {
       "fr": ["french", "-fr", "/fr/", "ui-fr", "pages-fr", "glossary-fr"],
       "pt-BR": ["portuguese", "pt-br", "-pt", "ui-pt", "pages-pt"],
-      "es": ["spanish", "-es", "/es/", "ui-es", "pages-es", "es-glossary"]
+      "es": ["spanish", "-es", "/es/", "ui-es", "pages-es", "es-glossary"],
+      "it": ["italian", "-it", "/it/", "ui-it", "pages-it", "it-glossary"]
     },
     "exceptionFile": "data/localization-exceptions.json"
   }
