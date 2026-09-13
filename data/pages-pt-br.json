@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "locale": "pt-BR",
+  "reviewedAt": "2026-09-13",
+  "home": {
+    "eyebrow": "Decida com mais clareza",
+    "title": "Identifique vieses. Teste suposições. Tome decisões melhores.",
+    "description": "Um guia prático sobre vieses cognitivos, heurísticas, pensamento crítico e tomada de decisão — com evidências, limites e checagens que você pode usar antes de decidir.",
+    "lede": "Conhecer o nome de um viés não basta. Entenda o mecanismo, veja o que as evidências realmente sustentam e aplique uma checagem prática antes de decidir.",
+    "journeys": [
+      {"title": "Eu conheço o viés", "text": "Procure pelo nome em português ou pelo termo em inglês e abra uma ficha revisada."},
+      {"title": "Tenho um problema concreto", "text": "Comece pela situação: confirmação, ancoragem, prazo, custo afundado, repetição ou incerteza."},
+      {"title": "Quero tomar decisões melhores", "text": "Use técnicas e habilidades de decisão para transformar conhecimento em uma checagem prática."},
+      {"title": "Quero usar com IA", "text": "Descubra Agent Skills em pt-BR para revisão de decisões, evidências, suposições e workflows assistidos por IA."}
+    ]
+  },
+  "explorer": {
+    "title": "Vieses cognitivos em português",
+    "description": "Explore fichas de vieses cognitivos revisadas em português do Brasil, com exemplos, evidências, limites e técnicas práticas.",
+    "intro": "Esta coleção cresce por revisão editorial, não por tradução automática em massa. Se uma ficha ainda não existe em pt-BR, use o catálogo canônico em inglês."
+  },
+  "techniques": {
+    "title": "Técnicas para tomar decisões melhores",
+    "description": "Checagens práticas para reduzir erros de julgamento: classes de referência, taxas-base, estimativas independentes, revisão contraditória e mais.",
+    "intro": "Reconhecer um viés é só o começo. Estas técnicas ajudam a testar uma decisão antes de agir."
+  },
+  "skills": {
+    "title": "Habilidades de decisão",
+    "description": "Pratique avaliação de evidências, decisão sob incerteza, previsões, metacognição, verificação de informações e raciocínio assistido por IA.",
+    "intro": "Habilidades são processos repetíveis. Elas não garantem um bom resultado, mas tornam o raciocínio mais explícito, testável e revisável."
+  },
+  "agentSkills": {
+    "title": "Habilidades para agentes de IA",
+    "description": "Instruções em português para agentes detectarem vieses candidatos, revisarem decisões, avaliarem evidências, desafiarem suposições e trabalharem com IA de forma mais crítica.",
+    "intro": "Os IDs e versões continuam canônicos em inglês. As instruções em pt-BR preservam as mesmas fronteiras de evidência e segurança."
+  }
+}
