@@ -30,6 +30,21 @@ A reviewed concept entry must include:
 
 Popular simplifications must be corrected when the evidence is narrower. Examples include Dunning–Kruger, the Backfire Effect, Hungry Judge Effect, Declinism, Loss Aversion and project-specific labels.
 
+## Reviewed research syntheses
+
+Russian research articles are curated localizations of canonical notes that already have a reviewed source status. They live in `data/ru/research-notes.json` and are published under `/ru/research/`.
+
+A Russian research synthesis must:
+
+- point to an existing canonical research-note slug;
+- inherit source provenance, publication date and review status from the canonical note rather than copying those fields by hand;
+- preserve distinctions such as peer-reviewed paper vs preprint;
+- keep uncertainty and negative or mixed findings visible;
+- explain the practical consequence without turning a research result into a universal rule;
+- link back to the canonical English synthesis and related reviewed Russian concepts when available.
+
+The Russian research index may cover only a high-value subset of the English Research collection. In that case the index must not claim `/research/` as an equivalent `hreflang` page. Individual translated research articles should use reciprocal language alternates because their semantic scope is equivalent.
+
 ## Terminology
 
 Prefer established Russian terminology when it is clear and natural. If no stable translation exists, use a descriptive Russian title and preserve the canonical English term as an alias. Do not invent an academic-sounding Russian term merely to avoid English.
