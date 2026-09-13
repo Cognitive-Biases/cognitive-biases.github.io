@@ -1,5 +1,4 @@
 import { access, readFile } from "node:fs/promises";
-import { dirname } from "node:path";
 
 const TODAY = new Date().toISOString().slice(0, 10);
 const errors = [];
@@ -62,13 +61,14 @@ for (const locale of profile.locales) {
   }
 }
 
-expect(pkg.scripts?.["check:french"], "package.json must keep the French localization checker");
+expect(pkg.scripts?.["check:french-localization"], "package.json must keep the French localization checker");
 expect(pkg.scripts?.["check:french-skills"], "package.json must keep the French Decision Skills checker");
-expect(pkg.scripts?.["check:portuguese"], "package.json must keep the Brazilian Portuguese checker");
+expect(pkg.scripts?.["check:portuguese-localization"], "package.json must keep the Brazilian Portuguese checker");
 expect(pkg.scripts?.["check:localization"], "package.json must expose check:localization");
-expect(pkg.scripts?.check?.includes("check:french"), "npm run check must keep check:french");
+expect(pkg.scripts?.["check:localization-impact"], "package.json must expose check:localization-impact");
+expect(pkg.scripts?.check?.includes("check:french-localization"), "npm run check must keep check:french-localization");
 expect(pkg.scripts?.check?.includes("check:french-skills"), "npm run check must keep check:french-skills");
-expect(pkg.scripts?.check?.includes("check:portuguese"), "npm run check must keep check:portuguese");
+expect(pkg.scripts?.check?.includes("check:portuguese-localization"), "npm run check must keep check:portuguese-localization");
 expect(pkg.scripts?.check?.includes("check:localization"), "npm run check must include the shared localization checker");
 expect(String(aiLocales.discovery?.policy || "").includes("agent-ready-web-profile/LOCALIZATION.md"), "AI locale manifest must point to the shared ARWP localization policy");
 
