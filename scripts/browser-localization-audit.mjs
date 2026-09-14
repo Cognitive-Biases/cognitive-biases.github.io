@@ -28,7 +28,7 @@ const consentExpected = {
 };
 const interactiveRoles = new Set(['button', 'link', 'textbox', 'searchbox', 'combobox', 'checkbox', 'radio', 'switch', 'menuitem', 'tab']);
 const report = {
-  version: '1.1',
+  version: '1.2',
   generatedAt: new Date().toISOString(),
   target: TARGET,
   baseUrl: BASE_URL.href,
@@ -58,7 +58,9 @@ try {
         locale: locale.code,
         colorScheme: 'light'
       });
-      await context.addInitScript((key) => localStorage.setItem(key, 'no'), CONSENT_KEY);
+      await context.addInitScript((key) => {
+        try { localStorage.setItem(key, 'no'); } catch {}
+      }, CONSENT_KEY);
       const page = await context.newPage();
       page.setDefaultTimeout(12_000);
       const stateDir = join(localeDir, viewport.name);
@@ -68,17 +70,12 @@ try {
       localeResult.states.push(home);
       if (!localeResult.representativeContentUrl && home.representativeContentUrl) localeResult.representativeContentUrl = home.representativeContentUrl;
 
-      if (viewport.name === 'mobile') {
-        localeResult.states.push(await stressLongStrings({ page, locale, stateDir }));
-      }
+      if (viewport.name === 'mobile') localeResult.states.push(await stressLongStrings({ page, locale, stateDir }));
 
       if (localeResult.representativeContentUrl) {
         const content = await auditPage({ page, context, locale, viewport, url: localeResult.representativeContentUrl, label: 'representative-content', stateDir, requireSwitcher: false });
         localeResult.states.push(content);
-        if (viewport.name === 'mobile') {
-          const controls = await exerciseControls({ page, context, locale, stateDir });
-          localeResult.states.push(controls);
-        }
+        if (viewport.name === 'mobile') localeResult.states.push(await exerciseControls({ page, context, locale, stateDir }));
       }
 
       await context.close();
@@ -108,8 +105,7 @@ async function auditConsentState(locale, localeDir) {
     try { await box.waitFor({ state: 'visible', timeout: 4_000 }); } catch {}
     if (await box.count() === 0 || !(await box.isVisible().catch(() => false))) {
       finding('blocker', locale.code, 'mobile', 'consent', 'analytics consent dialog did not appear for a fresh browser context');
-      result = { found: false };
-      return result;
+      return { found: false };
     }
     const observed = await box.evaluate((el) => ({
       ariaLabel: el.getAttribute('aria-label') || '',
@@ -119,12 +115,12 @@ async function auditConsentState(locale, localeDir) {
     const expected = consentExpected[locale.code] || consentExpected.en;
     if (observed.ariaLabel !== expected.label) finding('blocker', locale.code, 'mobile', 'consent', `consent accessible label is ${JSON.stringify(observed.ariaLabel)}, expected ${JSON.stringify(expected.label)}`);
     if (!observed.buttons.includes(expected.allow) || !observed.buttons.includes(expected.decline)) {
-      finding('blocker', locale.code, 'mobile', 'consent', `consent actions are not localized as expected`, { observed: observed.buttons, expected: [expected.allow, expected.decline] });
+      finding('blocker', locale.code, 'mobile', 'consent', 'consent actions are not localized as expected', { observed: observed.buttons, expected: [expected.allow, expected.decline] });
     }
     if (locale.code !== 'en' && /We use optional analytics|Analytics settings|\bAllow\b|\bDecline\b/.test(`${observed.ariaLabel} ${observed.text}`)) {
       finding('blocker', locale.code, 'mobile', 'consent', 'English analytics consent fallback is visible on a localized page', observed);
     }
-    await saveEvidence({ page, context, dir, stem: 'consent-mobile', screenshotFullPage: false });
+    await saveEvidence({ page, context, dir, stem: 'consent-mobile', preferFullPage: false });
     result = { found: true, ...observed };
   } finally {
     await context.close();
@@ -146,43 +142,27 @@ async function auditPage({ page, context, locale, viewport, url, label, stateDir
     viewportWidth: document.documentElement.clientWidth,
     scrollWidth: document.documentElement.scrollWidth
   }));
-  if (normalizeLocale(metadata.lang) !== normalizeLocale(locale.code)) {
-    finding('blocker', locale.code, viewport.name, label, `html lang is ${metadata.lang || 'missing'}, expected ${locale.code}`);
-  }
+  if (normalizeLocale(metadata.lang) !== normalizeLocale(locale.code)) finding('blocker', locale.code, viewport.name, label, `html lang is ${metadata.lang || 'missing'}, expected ${locale.code}`);
 
   const layout = await scanLayout(page);
-  if (layout.documentOverflowPx > 2) {
-    finding('blocker', locale.code, viewport.name, label, `horizontal document overflow ${layout.documentOverflowPx}px`, layout.actionableOffscreen.slice(0, 8));
-  }
-  if (layout.actionableOffscreen.length) {
-    finding('warning', locale.code, viewport.name, label, `${layout.actionableOffscreen.length} visible interactive/text element(s) extend outside the viewport`, layout.actionableOffscreen.slice(0, 8));
-  }
+  if (layout.documentOverflowPx > 2) finding('blocker', locale.code, viewport.name, label, `horizontal document overflow ${layout.documentOverflowPx}px`, layout.actionableOffscreen.slice(0, 8));
+  if (layout.actionableOffscreen.length) finding('warning', locale.code, viewport.name, label, `${layout.actionableOffscreen.length} visible interactive/text element(s) extend outside the viewport`, layout.actionableOffscreen.slice(0, 8));
 
   const switcher = requireSwitcher ? await inspectLocaleSwitcher(page, locale) : null;
   if (requireSwitcher && !switcher.found) finding('blocker', locale.code, viewport.name, label, 'visible locale switcher not found');
-  if (requireSwitcher && switcher.found && switcher.visibleLinks !== locales.length - 1) {
-    finding('blocker', locale.code, viewport.name, label, `locale switcher exposes ${switcher.visibleLinks} visible links, expected ${locales.length - 1}`);
-  }
-  if (requireSwitcher && switcher.found && switcher.activeLang !== normalizeLocale(locale.code)) {
-    finding('blocker', locale.code, viewport.name, label, `locale switcher active language is ${switcher.activeLang || 'missing'}, expected ${locale.code}`);
-  }
+  if (requireSwitcher && switcher.found && switcher.visibleLinks !== locales.length - 1) finding('blocker', locale.code, viewport.name, label, `locale switcher exposes ${switcher.visibleLinks} visible links, expected ${locales.length - 1}`);
+  if (requireSwitcher && switcher.found && switcher.activeLang !== normalizeLocale(locale.code)) finding('blocker', locale.code, viewport.name, label, `locale switcher active language is ${switcher.activeLang || 'missing'}, expected ${locale.code}`);
 
-  const focus = await keyboardFocusAudit(page, 45);
+  const focus = await keyboardFocusAudit(page, 45, join(stateDir, `${stem}-first-focus.webp`));
   if (!focus.sequence.length) finding('blocker', locale.code, viewport.name, label, 'Tab navigation produced no focusable target');
   const unsafe = focus.sequence.find((item) => !item.visible || item.offscreen || item.obscured);
   if (unsafe) finding('blocker', locale.code, viewport.name, label, `keyboard focus target is not safely perceivable at step ${unsafe.step}`, unsafe);
   const weak = focus.sequence.filter((item) => item.focusVisible && !item.styleDeltaVisible);
   if (weak.length) finding('warning', locale.code, viewport.name, label, `${weak.length} focus-visible target(s) have no detected visual-style delta`, weak.slice(0, 5));
 
-  await saveEvidence({ page, context, dir: stateDir, stem, screenshotFullPage: true });
+  await saveEvidence({ page, context, dir: stateDir, stem, preferFullPage: true });
   await writeFile(join(stateDir, `${stem}-focus.json`), `${JSON.stringify(focus, null, 2)}\n`);
   await writeFile(join(stateDir, `${stem}-layout.json`), `${JSON.stringify(layout, null, 2)}\n`);
-  if (focus.sequence.length) {
-    await resetFocus(page);
-    await page.keyboard.press('Tab');
-    await page.waitForTimeout(80);
-    await page.screenshot({ path: join(stateDir, `${stem}-first-focus.webp`), fullPage: false, type: 'webp', quality: 78, animations: 'disabled' });
-  }
 
   const axTree = await fullAxTree(context, page);
   const unnamed = (axTree.nodes || [])
@@ -192,18 +172,7 @@ async function auditPage({ page, context, locale, viewport, url, label, stateDir
   if (unnamed.length) finding('blocker', locale.code, viewport.name, label, `${unnamed.length} interactive accessibility-tree node(s) have no accessible name`, unnamed);
 
   const representativeContentUrl = label === 'home' ? await pickRepresentativeContentUrl(page) : null;
-  return {
-    type: label,
-    viewport: viewport.name,
-    url: page.url(),
-    status,
-    metadata,
-    layout,
-    switcher,
-    focusSummary: { steps: focus.sequence.length, weakVisualFocus: weak.length },
-    unnamedAxNodes: unnamed.length,
-    representativeContentUrl
-  };
+  return { type: label, viewport: viewport.name, url: page.url(), status, metadata, layout, switcher, focusSummary: { steps: focus.sequence.length, weakVisualFocus: weak.length }, unnamedAxNodes: unnamed.length, representativeContentUrl };
 }
 
 async function inspectLocaleSwitcher(page, locale) {
@@ -235,28 +204,23 @@ async function scanLayout(page) {
       const outside = rect.right > vw + 2 || rect.left < -2;
       if (!outside) continue;
       const interactive = el.matches('a[href],button,input,select,textarea,[role="button"],[role="link"],[tabindex]:not([tabindex="-1"])');
-      const meaningfulText = (el.children.length === 0 && (el.textContent || '').trim().length > 0);
+      const meaningfulText = el.children.length === 0 && (el.textContent || '').trim().length > 0;
       if (!interactive && !meaningfulText) continue;
-      actionableOffscreen.push({
-        tag: el.tagName.toLowerCase(),
-        id: el.id || null,
-        className: typeof el.className === 'string' ? el.className.slice(0, 140) : null,
-        text: (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 160),
-        rect: { left: round(rect.left), right: round(rect.right), width: round(rect.width) }
-      });
+      actionableOffscreen.push({ tag: el.tagName.toLowerCase(), id: el.id || null, className: typeof el.className === 'string' ? el.className.slice(0, 140) : null, text: (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 160), rect: { left: round(rect.left), right: round(rect.right), width: round(rect.width) } });
     }
     return { viewportWidth: vw, scrollWidth: sw, documentOverflowPx: Math.max(0, sw - vw), actionableOffscreen };
     function round(n) { return Math.round(n * 10) / 10; }
   });
 }
 
-async function keyboardFocusAudit(page, maxSteps) {
+async function keyboardFocusAudit(page, maxSteps, firstFocusPath) {
   await resetFocus(page);
   const sequence = [];
   const seen = new Set();
   for (let step = 1; step <= maxSteps; step += 1) {
     await page.keyboard.press('Tab');
     await page.waitForTimeout(35);
+    if (step === 1 && firstFocusPath) await page.screenshot({ path: firstFocusPath, fullPage: false, type: 'webp', quality: 78, animations: 'disabled' });
     const item = await page.evaluate((stepNumber) => {
       const el = document.activeElement;
       if (!(el instanceof HTMLElement) || el === document.body || el === document.documentElement) return null;
@@ -290,6 +254,7 @@ async function keyboardFocusAudit(page, maxSteps) {
         visible: rect.width > 0 && rect.height > 0 && style.visibility !== 'hidden' && style.display !== 'none',
         offscreen: rect.right < 0 || rect.left > innerWidth || rect.bottom < 0 || rect.top > innerHeight,
         obscured: Boolean(hit && hit !== el && !el.contains(hit) && !hit.contains(el)),
+        hitTarget: hit ? { tag: hit.tagName?.toLowerCase() || null, id: hit.id || null, className: typeof hit.className === 'string' ? hit.className.slice(0, 120) : null } : null,
         focusVisible: el.matches(':focus-visible'),
         styleDeltaVisible: delta || (style.outlineStyle !== 'none' && parseFloat(style.outlineWidth) > 0) || style.boxShadow !== 'none',
         rect: { left: round(rect.left), top: round(rect.top), right: round(rect.right), bottom: round(rect.bottom) }
@@ -327,7 +292,7 @@ async function exerciseControls({ page, context, locale, stateDir }) {
     await page.waitForTimeout(250);
     const layout = await scanLayout(page);
     if (layout.documentOverflowPx > 2) finding('blocker', locale.code, 'mobile', 'search-control', `search state creates ${layout.documentOverflowPx}px horizontal overflow`, layout.actionableOffscreen.slice(0, 8));
-    await saveEvidence({ page, context, dir: stateDir, stem: 'controls-search-mobile', screenshotFullPage: true });
+    await saveEvidence({ page, context, dir: stateDir, stem: 'controls-search-mobile', preferFullPage: true });
     result.search = true;
     result.searchQuery = query;
   }
@@ -340,7 +305,7 @@ async function exerciseControls({ page, context, locale, stateDir }) {
       await page.waitForTimeout(200);
       const layout = await scanLayout(page);
       if (layout.documentOverflowPx > 2) finding('blocker', locale.code, 'mobile', 'filter-control', `filter state creates ${layout.documentOverflowPx}px horizontal overflow`, layout.actionableOffscreen.slice(0, 8));
-      await saveEvidence({ page, context, dir: stateDir, stem: 'controls-filter-mobile', screenshotFullPage: true });
+      await saveEvidence({ page, context, dir: stateDir, stem: 'controls-filter-mobile', preferFullPage: true });
       result.select = true;
       result.selectedValue = options[0].value;
     }
@@ -375,24 +340,38 @@ async function stressLongStrings({ page, locale, stateDir }) {
     const parent = el.parentElement;
     if (!parent) return [];
     const style = getComputedStyle(parent);
-    if ((style.overflowX === 'hidden' || style.overflowX === 'clip') && parent.scrollWidth > parent.clientWidth + 2) {
-      return [{ tag: parent.tagName.toLowerCase(), text: (parent.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 180), clientWidth: parent.clientWidth, scrollWidth: parent.scrollWidth }];
-    }
+    if ((style.overflowX === 'hidden' || style.overflowX === 'clip') && parent.scrollWidth > parent.clientWidth + 2) return [{ tag: parent.tagName.toLowerCase(), text: (parent.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 180), clientWidth: parent.clientWidth, scrollWidth: parent.scrollWidth }];
     return [];
   }).slice(0, 30));
-  await page.screenshot({ path: join(stateDir, 'long-string-stress-mobile.webp'), fullPage: true, type: 'webp', quality: 72, animations: 'disabled' });
+  await captureScreenshots(page, stateDir, 'long-string-stress-mobile', true);
   await writeFile(join(stateDir, 'long-string-stress-mobile.html'), await page.content());
   if (layout.documentOverflowPx > 2) finding('warning', locale.code, 'mobile', 'long-string-stress', `expanded labels create ${layout.documentOverflowPx}px horizontal overflow`, layout.actionableOffscreen.slice(0, 10));
   if (clipped.length) finding('warning', locale.code, 'mobile', 'long-string-stress', `${clipped.length} expanded label(s) are clipped by overflow rules`, clipped.slice(0, 10));
   return { type: 'long-string-stress', viewport: 'mobile', touched, layout, clipped };
 }
 
-async function saveEvidence({ page, context, dir, stem, screenshotFullPage }) {
-  await page.screenshot({ path: join(dir, `${stem}.webp`), fullPage: screenshotFullPage, type: 'webp', quality: 74, animations: 'disabled' });
+async function saveEvidence({ page, context, dir, stem, preferFullPage }) {
+  await captureScreenshots(page, dir, stem, preferFullPage);
   await writeFile(join(dir, `${stem}.html`), await page.content());
   await writeFile(join(dir, `${stem}.aria.yml`), await page.ariaSnapshot({ boxes: true, mode: 'ai' }));
   const axTree = await fullAxTree(context, page);
   await writeFile(join(dir, `${stem}.ax.json`), `${JSON.stringify(axTree, null, 2)}\n`);
+}
+
+async function captureScreenshots(page, dir, stem, preferFullPage) {
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(30);
+  await page.screenshot({ path: join(dir, `${stem}.webp`), fullPage: false, type: 'webp', quality: 76, animations: 'disabled' });
+  if (!preferFullPage) return;
+  const height = await page.evaluate(() => Math.max(document.documentElement.scrollHeight, document.body?.scrollHeight || 0));
+  if (height <= 14000) {
+    await page.screenshot({ path: join(dir, `${stem}-full.webp`), fullPage: true, type: 'webp', quality: 70, animations: 'disabled' });
+  } else {
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await page.waitForTimeout(60);
+    await page.screenshot({ path: join(dir, `${stem}-bottom.webp`), fullPage: false, type: 'webp', quality: 76, animations: 'disabled' });
+    await page.evaluate(() => window.scrollTo(0, 0));
+  }
 }
 
 async function fullAxTree(context, page) {
@@ -455,6 +434,6 @@ function renderMarkdown(data) {
   ];
   if (!data.findings.length) lines.push('No findings.');
   for (const item of data.findings) lines.push(`- **${item.severity.toUpperCase()}** \`${item.locale}\` / \`${item.viewport}\` / \`${item.state}\`: ${item.message}`);
-  lines.push('', '## Evidence contract', '', 'Each locale captures the fresh consent state separately, then audits normal navigation with consent dismissed. Home and representative pages store screenshots, serialized DOM, Playwright ARIA snapshots, Chromium accessibility trees, keyboard focus sequences and layout scans. Mobile evidence also includes long-string expansion stress and search/filter states when present.');
+  lines.push('', '## Evidence contract', '', 'Each locale captures the fresh consent state separately, then audits normal navigation with consent dismissed. Home and representative pages store viewport screenshots (plus bounded full-page or bottom screenshots), serialized DOM, Playwright ARIA snapshots, Chromium accessibility trees, keyboard focus sequences and layout scans. Mobile evidence also includes long-string expansion stress and search/filter states when present.');
   return `${lines.join('\n')}\n`;
 }
