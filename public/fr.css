@@ -23,7 +23,7 @@
 .fr-evidence-state{display:inline-block;margin:.35rem 0 .9rem;padding:.32rem .58rem;border-radius:999px;background:#f1eee5;font-size:.9rem;font-weight:800}
 .fr-locale-note{margin:1rem 0;padding:1rem 1.1rem;border-radius:14px;background:#f5f2ea}
 .fr-locale-note p:last-child{margin-bottom:0}
-.fr-breadcrumbs{font-size:.92rem;margin:1rem 0 1.35rem}
+.fr-breadcrumbs{display:block;min-width:0;font-size:.92rem;line-height:1.5;margin:1rem 0 1.35rem;overflow-wrap:anywhere}
 .fr-breadcrumbs a{text-decoration-thickness:.08em;text-underline-offset:.18em}
 .fr-data-link{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;overflow-wrap:anywhere}
 @media (max-width:760px){.fr-hero-grid{grid-template-columns:1fr}.locale-bar{justify-content:flex-start}.fr-card,.fr-problem,.fr-note,.fr-search-panel{padding:1rem}}
