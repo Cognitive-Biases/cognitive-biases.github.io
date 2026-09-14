@@ -1,7 +1,6 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 
-const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
 const MAX_META = 155;
 const LOCALES = {
@@ -42,13 +41,11 @@ for (const [locale, config] of Object.entries(LOCALES)) {
       dirty = true;
     }
 
-    const metaTag = findMetaTag(html, "name", "description");
-    const current = metaTag ? decodeHtml(getAttribute(metaTag, "content")) : "";
+    const current = metaDescription(html);
     if (current) {
-      let improved = current;
-      if (current.length > MAX_META || endsWithStopword(current, stopwords, config.intl)) {
-        improved = smartShorten(current, stopwords, config.intl, MAX_META);
-      }
+      const improved = current.length > MAX_META || endsWithStopword(current, stopwords, config.intl)
+        ? smartShorten(current, stopwords, config.intl, MAX_META)
+        : current;
       if (improved && improved !== current) {
         html = replaceMetaContent(html, "name", "description", improved);
         html = replaceMetaContent(html, "property", "og:description", improved);
@@ -61,29 +58,27 @@ for (const [locale, config] of Object.entries(LOCALES)) {
   }
 }
 
-await repairFinalCanonicalDuplicates();
+await repairFinalDuplicates();
 console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${duplicateRepairs} collision repair(s), ${russianCopyChanged} Russian copy repair(s).`);
 
-async function repairFinalCanonicalDuplicates() {
+async function repairFinalDuplicates() {
   const files = await walkAnyHtml(OUT);
-  const nonLocalized = [];
+  const owners = new Map();
   const localized = [];
+
   for (const file of files) {
     const locale = localeForFile(file);
-    (locale ? localized : nonLocalized).push({ file, locale });
-  }
-
-  const owners = new Map();
-  for (const { file } of nonLocalized) {
+    if (locale) {
+      localized.push({ file, locale });
+      continue;
+    }
     const html = await readFile(file, "utf8");
-    if (!isIndexableSelfCanonical(html, file)) continue;
     const description = metaDescription(html);
     if (description) owners.set(searchQualityKey(description), file);
   }
 
   for (const { file, locale } of localized) {
     let html = await readFile(file, "utf8");
-    if (!isIndexableSelfCanonical(html, file)) continue;
     const description = metaDescription(html);
     if (!description) continue;
     let key = searchQualityKey(description);
@@ -102,7 +97,7 @@ async function repairFinalCanonicalDuplicates() {
       if (!owners.has(key)) break;
     }
     if (owners.has(key)) {
-      throw new Error(`Unable to keep final canonical meta description unique for ${file}; collides with ${owners.get(key)}.`);
+      throw new Error(`Unable to keep localized meta description unique for ${file}; collides with ${owners.get(key)}.`);
     }
 
     html = replaceMetaContent(html, "name", "description", improved);
@@ -142,30 +137,9 @@ function localeForFile(file) {
   return LOCALES[first] ? first : "";
 }
 
-function publicPath(file) {
-  const rel = relative(OUT, file).replaceAll("\\", "/");
-  if (rel === "index.html") return "/";
-  if (rel.endsWith("/index.html")) return `/${rel.slice(0, -"index.html".length)}`;
-  return `/${rel}`;
-}
-
-function isIndexableSelfCanonical(html, file) {
-  const robots = findMetaTag(html, "name", "robots");
-  if (robots && decodeHtml(getAttribute(robots, "content")).toLowerCase().includes("noindex")) return false;
-  const canonicalTag = findLinkTag(html, "canonical");
-  const canonical = canonicalTag ? normalizeUrl(getAttribute(canonicalTag, "href")) : "";
-  const own = normalizeUrl(`${SITE}${publicPath(file)}`);
-  return Boolean(canonical && canonical === own);
-}
-
 function findMetaTag(html, key, value) {
   const tags = html.match(/<meta\b[^>]*>/gi) || [];
   return tags.find((tag) => getAttribute(tag, key)?.toLowerCase() === value.toLowerCase()) || null;
-}
-
-function findLinkTag(html, relValue) {
-  const tags = html.match(/<link\b[^>]*>/gi) || [];
-  return tags.find((tag) => getAttribute(tag, "rel")?.toLowerCase() === relValue.toLowerCase()) || null;
 }
 
 function getAttribute(tag, name) {
@@ -242,17 +216,6 @@ function searchQualityDecode(value) {
 
 function searchQualityKey(value) {
   return searchQualityDecode(value).toLowerCase();
-}
-
-function normalizeUrl(value) {
-  try {
-    const parsed = new URL(value, SITE);
-    parsed.hash = "";
-    parsed.search = "";
-    return parsed.href;
-  } catch {
-    return "";
-  }
 }
 
 function decodeHtml(value) {
