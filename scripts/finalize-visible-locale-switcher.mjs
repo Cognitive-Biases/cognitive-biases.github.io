@@ -5,6 +5,15 @@ const OUT = "dist";
 const manifest = JSON.parse(await readFile("data/locales.json", "utf8"));
 const canonicalLocale = manifest.canonicalLocale || "en";
 const homes = [];
+const languageLabels = {
+  en: "Language",
+  de: "Sprache",
+  ru: "Язык",
+  fr: "Langue",
+  "pt-BR": "Idioma",
+  es: "Idioma",
+  it: "Lingua"
+};
 
 for (const locale of manifest.locales || []) {
   const route = locale.code === canonicalLocale ? "/" : locale.urlBase || `/${locale.code.toLowerCase()}/`;
@@ -17,23 +26,32 @@ for (const locale of manifest.locales || []) {
   }
 }
 
-const canonicalHome = homes.find((home) => home.code === canonicalLocale);
-if (!canonicalHome) throw new Error(`Canonical locale ${canonicalLocale} is missing from the generated locale graph.`);
+if (!homes.some((home) => home.code === canonicalLocale)) {
+  throw new Error(`Canonical locale ${canonicalLocale} is missing from the generated locale graph.`);
+}
 
-let html = await readFile(canonicalHome.file, "utf8");
-html = html.replace(/<(div|nav)\b[^>]*class=["'][^"']*\blocale-switch-bar\b[^"']*["'][^>]*>[\s\S]*?<\/\1>/gi, "");
+let updated = 0;
+for (const current of homes) {
+  let html = await readFile(current.file, "utf8");
+  html = html.replace(/<(div|nav)\b[^>]*class=["'][^"']*\blocale-switch-bar\b[^"']*["'][^>]*>[\s\S]*?<\/\1>/gi, "");
 
-const switcherItems = homes.map((home) => home.code === canonicalLocale
-  ? `<span aria-current="page" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</span>`
-  : `<a href="${escapeAttribute(home.route)}" hreflang="${escapeAttribute(home.code)}" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</a>`
-).join("");
-// Keep the long-standing French marker while centralizing the switcher. Existing
-// locale checks use it as the visible-discovery compatibility contract.
-const switcher = `<nav class="locale-switch-bar" data-locale-switch="fr" data-localization-graph-switcher="true" aria-label="Language">${switcherItems}</nav>`;
+  const switcherItems = homes.map((home) => home.code === current.code
+    ? `<span aria-current="page" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</span>`
+    : `<a href="${escapeAttribute(home.route)}" hreflang="${escapeAttribute(home.code)}" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</a>`
+  ).join("");
 
-if (!/<body(?:\s[^>]*)?>/i.test(html)) throw new Error("Cannot insert the visible locale switcher without <body>.");
-html = html.replace(/<body([^>]*)>/i, `<body$1>${switcher}`);
-await writeFile(canonicalHome.file, html);
+  // Keep the long-standing French marker while centralizing the public locale
+  // graph. Older compatibility checks still use the marker, while the full
+  // switcher is now intentionally present on every published locale home.
+  const switcher = `<nav class="locale-switch-bar" data-locale-switch="fr" data-localization-graph-switcher="true" aria-label="${escapeAttribute(languageLabels[current.code] || languageLabels.en)}">${switcherItems}</nav>`;
+
+  if (!/<body(?:\s[^>]*)?>/i.test(html)) {
+    throw new Error(`Cannot insert the visible locale switcher without <body>: ${current.code}`);
+  }
+  html = html.replace(/<body([^>]*)>/i, `<body$1>${switcher}`);
+  await writeFile(current.file, html);
+  updated += 1;
+}
 
 const cssPath = join(OUT, "styles.css");
 let css = await readFile(cssPath, "utf8");
@@ -45,7 +63,7 @@ if (rule.test(css)) {
 }
 await writeFile(cssPath, css);
 
-console.log(`Visible locale switcher finalized from manifest: ${homes.map((home) => home.code).join(", ")}.`);
+console.log(`Visible locale switcher finalized on ${updated} home page(s) from manifest: ${homes.map((home) => home.code).join(", ")}.`);
 
 function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
