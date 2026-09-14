@@ -18,7 +18,9 @@ async function htmlFiles(dir) {
 let scriptFixes = 0;
 for (const file of await htmlFiles(OUT)) {
   const source = await readFile(file, 'utf8');
-  if (!source.includes('class="nav-menu"') || /<script[^>]+src=["']\/app\.js["']/.test(source)) continue;
+  const hasMenuSurface = source.includes('class="nav-menu"');
+  const hasSearchSurface = /<input\b[^>]*(?:type=["']search["']|data-search\b|role=["']searchbox["'])/i.test(source);
+  if ((!hasMenuSurface && !hasSearchSurface) || /<script[^>]+src=["']\/app\.js["']/.test(source)) continue;
   const next = source.replace('</body>', '<script src="/app.js"></script>\n</body>');
   if (next !== source) {
     await writeFile(file, next, 'utf8');
@@ -55,4 +57,4 @@ try {
 } catch {}
 if (revision) await writeFile(join(OUT, 'deploy-revision.txt'), `${revision}\n`, 'utf8');
 
-console.log(`Finalized browser surface: app.js injected into ${scriptFixes} pages; shared app scope isolated; search live status enabled; deploy revision ${revision || 'unavailable'}.`);
+console.log(`Finalized browser surface: app.js injected into ${scriptFixes} menu/search pages; shared app scope isolated; search live status enabled; deploy revision ${revision || 'unavailable'}.`);
