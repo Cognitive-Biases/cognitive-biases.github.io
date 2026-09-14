@@ -55,6 +55,7 @@ for (const home of homes) {
     if (alternates.get(code) !== href) fail(`${home.code}: hreflang ${code} -> ${alternates.get(code) || "missing"}, expected ${href}`);
   }
 
+  validateVisibleLocaleSwitcher(home, html);
   validateJsonLd(home.code, html);
 
   const ai = aiByCode.get(home.code);
@@ -65,16 +66,14 @@ for (const home of homes) {
   if (ai.agentSkills) await validateMachineUrl(ai.agentSkills, `${home.code}: agentSkills`, true);
 }
 
-const rootHtml = await readFile(join(OUT, "index.html"), "utf8");
-if (!rootHtml.includes('data-localization-graph-switcher="true"')) fail("canonical home is missing manifest-driven visible locale switcher");
-const rootHrefs = (rootHtml.match(/<a\b[^>]*href=["'][^"']+["'][^>]*>/gi) || []).map((tag) => decodeHtml(getAttribute(tag, "href")));
-for (const home of homes.filter((item) => item.code !== canonicalLocale)) {
-  if (!rootHrefs.includes(home.route)) fail(`canonical home has no ordinary visible link to ${home.code} (${home.route})`);
-}
-
 const styles = await readFile(join(OUT, "styles.css"), "utf8");
 const switcherRule = styles.match(/\.locale-switch-bar\{([^}]*)\}/)?.[1] || "";
 if (!/flex-wrap\s*:\s*wrap/i.test(switcherRule)) fail("visible locale switcher is not mobile-wrap safe");
+
+const consent = await readFile(join(OUT, "assets", "analytics-consent.js"), "utf8");
+for (const marker of ["de:", "ru:", "fr:", '"pt-br":', "es:", "it:", 'data-analytics-consent']) {
+  if (!consent.includes(marker)) fail(`localized analytics consent contract is missing ${marker}`);
+}
 
 const sitemap = await readFile(join(OUT, "sitemap.xml"), "utf8");
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => decodeHtml(match[1]));
@@ -85,6 +84,25 @@ for (const home of homes) {
 }
 
 console.log(`Localization closure passed for ${homes.length} declared locale home(s): ${declaredCodes.join(", ")}.`);
+
+function validateVisibleLocaleSwitcher(home, html) {
+  const nav = (html.match(/<nav\b[^>]*data-localization-graph-switcher=["']true["'][^>]*>[\s\S]*?<\/nav>/i) || [])[0];
+  if (!nav) fail(`${home.code}: missing manifest-driven visible locale switcher`);
+  const ariaLabel = getAttribute(nav, "aria-label");
+  if (!ariaLabel.trim()) fail(`${home.code}: locale switcher has no accessible label`);
+
+  const active = (nav.match(/<span\b[^>]*aria-current=["']page["'][^>]*>/gi) || []);
+  if (active.length !== 1) fail(`${home.code}: locale switcher must have exactly one active item`);
+  const activeLang = normalizeLocale(getAttribute(active[0], "lang"));
+  if (activeLang !== normalizeLocale(home.code)) fail(`${home.code}: locale switcher active item is ${activeLang || "missing"}`);
+
+  const links = nav.match(/<a\b[^>]*href=["'][^"']+["'][^>]*>/gi) || [];
+  if (links.length !== homes.length - 1) fail(`${home.code}: locale switcher exposes ${links.length} links, expected ${homes.length - 1}`);
+  const hrefs = links.map((tag) => decodeHtml(getAttribute(tag, "href")));
+  for (const target of homes.filter((candidate) => candidate.code !== home.code)) {
+    if (!hrefs.includes(target.route)) fail(`${home.code}: locale switcher has no ordinary link to ${target.code} (${target.route})`);
+  }
+}
 
 async function requireFile(path, message) {
   try { await access(path); } catch { fail(message); }
