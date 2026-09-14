@@ -2,8 +2,8 @@
   "canonicalLocale": "en",
   "locales": [
     {"code": "en", "name": "English", "role": "canonical"},
-    {"code": "de", "name": "Deutsch", "role": "reviewed-layer"},
-    {"code": "ru", "name": "Русский", "role": "reviewed-layer"},
+    {"code": "de", "name": "Deutsch", "role": "reviewed-layer", "coverage": "reviewed-partial-human-layer"},
+    {"code": "ru", "name": "Русский", "role": "reviewed-layer", "coverage": "reviewed-partial-human-layer"},
     {"code": "fr", "name": "Français", "role": "reviewed-layer"},
     {"code": "pt-BR", "name": "Português (Brasil)", "role": "reviewed-layer", "urlBase": "/pt-br/", "coverage": "reviewed-partial-human-layer"},
     {"code": "es", "name": "Español", "role": "reviewed-layer"},
