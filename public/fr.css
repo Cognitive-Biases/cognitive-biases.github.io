@@ -6,6 +6,7 @@
 .fr-card-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .fr-problem-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .fr-card,.fr-problem,.fr-note,.fr-search-panel{border:1px solid rgba(16,22,34,.14);border-radius:18px;padding:1.2rem;background:#fff}
+.fr-problem{color:#101622}
 .fr-card h3,.fr-problem h3{margin-top:.3rem}
 .fr-card p,.fr-problem p{margin-bottom:.8rem}
 .fr-card a,.fr-problem a{font-weight:800}
