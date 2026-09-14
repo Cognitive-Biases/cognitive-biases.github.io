@@ -108,23 +108,45 @@ export async function persistEvidence(page, { outDir, locale, archetype, path, v
   const base = safeName(`${locale}__${archetype}__${path}__${viewport.name}`);
   const screenshotPath = join(outDir, 'screenshots', `${base}.png`);
   const domPath = join(outDir, 'dom', `${base}.html`);
-  const axPath = join(outDir, 'accessibility', `${base}.yml`);
+  const ariaPath = join(outDir, 'accessibility', `${base}.aria.yml`);
+  const rawAxPath = join(outDir, 'accessibility', `${base}.ax.json`);
   await mkdir(dirname(screenshotPath), { recursive: true });
   await mkdir(dirname(domPath), { recursive: true });
-  await mkdir(dirname(axPath), { recursive: true });
+  await mkdir(dirname(ariaPath), { recursive: true });
   await page.screenshot({ path: screenshotPath, fullPage: false, animations: 'disabled' });
   await writeFile(domPath, await page.content(), 'utf8');
-  let ax = '';
-  try { ax = await page.locator('body').ariaSnapshot({ timeout: 5000 }); }
+
+  let aria = '';
+  try { aria = await page.locator('body').ariaSnapshot({ timeout: 5000 }); }
   catch (error) {
-    ax = `# ariaSnapshot failed: ${String(error?.message || error)}\n`;
+    aria = `# ariaSnapshot failed: ${String(error?.message || error)}\n`;
     onFinding('medium', 'accessibility-snapshot-failed', locale, path, viewport.name, { message: String(error?.message || error) });
   }
-  await writeFile(axPath, ax, 'utf8');
+  await writeFile(ariaPath, aria, 'utf8');
+
+  let rawAx = { nodes: [] };
+  try {
+    const session = await page.context().newCDPSession(page);
+    rawAx = await session.send('Accessibility.getFullAXTree');
+    await session.detach();
+  } catch (error) {
+    onFinding('high', 'accessibility-tree-failed', locale, path, viewport.name, { message: String(error?.message || error) });
+  }
+  await writeFile(rawAxPath, `${JSON.stringify(rawAx, null, 2)}\n`, 'utf8');
+
   if (locale !== canonicalLocale) {
     const englishUi = /\b(Search|Menu|Close|Open|Next|Previous|Save|Share|Copy link|Cite|Filter|Clear|Reset|No results|Skip to content|Main navigation|Language|Show|Hide|Back|Read more|Current page)\b/;
-    const hits = ax.split('\n').filter((line) => englishUi.test(line) && !/English|Cognitive Biases|GitHub|DOI|AI|LLM/.test(line)).slice(0, 12);
+    const allowed = /English|Cognitive Biases|GitHub|DOI|AI|LLM|OpenAI/;
+    const hits = aria.split('\n').filter((line) => englishUi.test(line) && !allowed.test(line)).slice(0, 12);
     for (const line of hits) onFinding('high', 'accessible-name-english-leak', locale, path, viewport.name, { ariaSnapshotLine: line.trim().slice(0, 220) });
+    const rawHits = [];
+    for (const node of rawAx.nodes || []) {
+      const values = [node?.name?.value, node?.description?.value].filter((value) => typeof value === 'string');
+      for (const value of values) {
+        if (englishUi.test(value) && !allowed.test(value)) rawHits.push({ role: node?.role?.value || '', value: value.slice(0, 220) });
+      }
+    }
+    for (const hit of rawHits.slice(0, 12)) onFinding('high', 'accessible-name-english-leak', locale, path, viewport.name, { chromiumAx: hit });
   }
 }
 
@@ -133,23 +155,13 @@ export async function exerciseKeyboard(page, { outDir, locale, archetype, path, 
   await mkdir(focusDir, { recursive: true });
   let previous = '';
   let stuck = 0;
+  let lastState = null;
   for (let i = 0; i < 32; i += 1) {
     await page.keyboard.press('Tab');
-    const state = await page.evaluate(() => {
-      const el = document.activeElement;
-      if (!el || el === document.body || el === document.documentElement) return null;
-      const rect = el.getBoundingClientRect();
-      const style = getComputedStyle(el);
-      const label = (el.getAttribute('aria-label') || el.textContent || el.getAttribute('placeholder') || el.getAttribute('title') || '').replace(/\s+/g, ' ').trim();
-      const visibleFocus = (style.outlineStyle !== 'none' && parseFloat(style.outlineWidth) > 0) || style.boxShadow !== 'none';
-      const x = Math.min(innerWidth - 1, Math.max(0, rect.left + Math.min(rect.width / 2, 8)));
-      const y = Math.min(innerHeight - 1, Math.max(0, rect.top + Math.min(rect.height / 2, 8)));
-      const top = document.elementFromPoint(x, y);
-      const obscured = rect.width > 0 && rect.height > 0 && top && top !== el && !el.contains(top) && !top.contains(el);
-      return { tag: el.tagName.toLowerCase(), id: el.id || '', label: label.slice(0, 120), href: el.getAttribute('href') || '', rect: { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom }, visibleFocus, obscured };
-    });
+    const state = await readFocusedState(page);
     if (!state) continue;
-    const signature = `${state.tag}|${state.id}|${state.href}|${state.label}`;
+    lastState = state;
+    const signature = focusSignature(state);
     stuck = signature === previous ? stuck + 1 : 0;
     previous = signature;
     if (state.rect.right < 0 || state.rect.left > viewport.width || state.rect.bottom < 0 || state.rect.top > viewport.height) onFinding('high', 'focus-hidden', locale, path, viewport.name, state);
@@ -161,6 +173,18 @@ export async function exerciseKeyboard(page, { outDir, locale, archetype, path, 
     }
     if (stuck >= 2) { onFinding('high', 'focus-trap', locale, path, viewport.name, { signature }); break; }
   }
+
+  if (lastState) {
+    const beforeReverse = focusSignature(lastState);
+    const focusableCount = await page.locator('a[href]:visible,button:visible,input:visible,select:visible,textarea:visible,[tabindex]:visible').count().catch(() => 0);
+    await page.keyboard.press('Shift+Tab');
+    const reverse = await readFocusedState(page);
+    if (focusableCount > 1 && reverse && focusSignature(reverse) === beforeReverse) {
+      onFinding('medium', 'reverse-focus-static', locale, path, viewport.name, { signature: beforeReverse });
+    }
+    await page.keyboard.press('Tab').catch(() => {});
+  }
+
   const toggles = page.locator('button[aria-expanded][aria-controls]:visible');
   if (await toggles.count().catch(() => 0)) {
     const toggle = toggles.first();
@@ -169,18 +193,47 @@ export async function exerciseKeyboard(page, { outDir, locale, archetype, path, 
     await page.keyboard.press('Enter');
     await page.waitForTimeout(100);
     const after = await toggle.getAttribute('aria-expanded');
-    if (before === after || after !== 'true') onFinding('high', 'menu-focus-state', locale, path, viewport.name, { before, after });
+    if (before === after || after !== 'true') onFinding('high', 'menu-focus-state', locale, path, viewport.name, { input: 'Enter', before, after });
     if (after === 'true') {
       const expandedAx = await page.locator('body').ariaSnapshot().catch(() => '');
       await page.keyboard.press('Escape');
       await page.waitForTimeout(100);
       const closed = await toggle.getAttribute('aria-expanded');
       const activeIsToggle = await toggle.evaluate((el) => document.activeElement === el).catch(() => false);
-      if (closed !== 'false') onFinding('high', 'menu-focus-state', locale, path, viewport.name, { closed });
+      if (closed !== 'false') onFinding('high', 'menu-focus-state', locale, path, viewport.name, { input: 'Escape', closed });
       if (!activeIsToggle) onFinding('medium', 'menu-focus-return', locale, path, viewport.name, {});
       const closedAx = await page.locator('body').ariaSnapshot().catch(() => '');
       if (expandedAx && closedAx && expandedAx === closedAx) onFinding('medium', 'menu-accessibility-state-static', locale, path, viewport.name, {});
     }
+
+    await toggle.focus();
+    const beforeSpace = await toggle.getAttribute('aria-expanded');
+    await page.keyboard.press('Space');
+    await page.waitForTimeout(100);
+    const afterSpace = await toggle.getAttribute('aria-expanded');
+    if (beforeSpace === afterSpace) onFinding('medium', 'space-activation-static', locale, path, viewport.name, { before: beforeSpace, after: afterSpace });
+    if (afterSpace === 'true') await page.keyboard.press('Escape').catch(() => {});
+  }
+
+  const tabs = page.locator('[role="tab"]:visible');
+  if (await tabs.count().catch(() => 0) > 1) {
+    const first = tabs.first();
+    await first.focus();
+    const beforeArrow = focusSignature(await readFocusedState(page));
+    await page.keyboard.press('ArrowRight');
+    await page.waitForTimeout(50);
+    const afterArrow = focusSignature(await readFocusedState(page));
+    if (beforeArrow && afterArrow === beforeArrow) onFinding('medium', 'tab-arrow-navigation-static', locale, path, viewport.name, {});
+  }
+
+  const listboxOptions = page.locator('[role="listbox"] [role="option"]:visible');
+  if (await listboxOptions.count().catch(() => 0) > 1) {
+    await listboxOptions.first().focus();
+    const beforeArrow = focusSignature(await readFocusedState(page));
+    await page.keyboard.press('ArrowDown');
+    await page.waitForTimeout(50);
+    const afterArrow = focusSignature(await readFocusedState(page));
+    if (beforeArrow && afterArrow === beforeArrow) onFinding('medium', 'listbox-arrow-navigation-static', locale, path, viewport.name, {});
   }
 }
 
@@ -255,6 +308,26 @@ export function attachRuntimeCollectors(page, { baseUrl, locale, path, viewport,
     }
     page.off('console', onConsole); page.off('pageerror', onPageError); page.off('response', onResponse);
   };
+}
+
+async function readFocusedState(page) {
+  return page.evaluate(() => {
+    const el = document.activeElement;
+    if (!el || el === document.body || el === document.documentElement) return null;
+    const rect = el.getBoundingClientRect();
+    const style = getComputedStyle(el);
+    const label = (el.getAttribute('aria-label') || el.textContent || el.getAttribute('placeholder') || el.getAttribute('title') || '').replace(/\s+/g, ' ').trim();
+    const visibleFocus = (style.outlineStyle !== 'none' && parseFloat(style.outlineWidth) > 0) || style.boxShadow !== 'none';
+    const x = Math.min(innerWidth - 1, Math.max(0, rect.left + Math.min(rect.width / 2, 8)));
+    const y = Math.min(innerHeight - 1, Math.max(0, rect.top + Math.min(rect.height / 2, 8)));
+    const top = document.elementFromPoint(x, y);
+    const obscured = rect.width > 0 && rect.height > 0 && top && top !== el && !el.contains(top) && !top.contains(el);
+    return { tag: el.tagName.toLowerCase(), id: el.id || '', label: label.slice(0, 120), href: el.getAttribute('href') || '', rect: { left: rect.left, right: rect.right, top: rect.top, bottom: rect.bottom }, visibleFocus, obscured };
+  });
+}
+
+function focusSignature(state) {
+  return state ? `${state.tag}|${state.id}|${state.href}|${state.label}` : '';
 }
 
 async function readLiveRegions(page) {
