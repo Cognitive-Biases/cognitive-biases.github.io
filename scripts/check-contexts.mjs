@@ -38,7 +38,7 @@ for (const context of contexts.entries || []) {
     if (!bias) throw new Error(`${context.slug}: lens ${lens.slug} is not published.`);
     if (duplicateIds.has(bias.id)) throw new Error(`${context.slug}: lens ${lens.slug} is a duplicate alias.`);
     if (!reviewedSlugs.has(lens.slug)) throw new Error(`${context.slug}: lens ${lens.slug} is not evidence-reviewed.`);
-    if (!html.includes(`/biases/${lens.slug}/#evidence`) || !html.includes(`/tools/decision-audit/?bias=${lens.slug}`)) {
+    if (!html.includes(`/biases/${lens.slug}/#evidence`) || !html.includes(`/tools/decision-audit/#bias=${lens.slug}`)) {
       throw new Error(`${context.slug}: lens ${lens.slug} is missing evidence/audit links.`);
     }
     const biasHtml = await readFile(resolve("dist", "biases", lens.slug, "index.html"), "utf8");
@@ -53,4 +53,4 @@ for (const path of ["index.html", "explore/index.html", "contexts/index.html", "
   if (!html.includes('href="/contexts/"')) throw new Error(`${path}: primary navigation is missing Contexts.`);
 }
 
-console.log(`Context check passed: ${seenContexts.size} curated contexts, canonical evidence-reviewed lenses only, reciprocal links, Decision Audit routes, sitemap, schema, and navigation verified.`);
+console.log(`Context check passed: ${seenContexts.size} curated contexts, canonical evidence-reviewed lenses only, reciprocal links, Decision Audit fragment routes, sitemap, schema, and navigation verified.`);
