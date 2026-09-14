@@ -61,7 +61,7 @@ for (const required of ['class="evidence-review"', 'data-seo-schema="defined-ter
 const contextHtml = await readFile(resolve("dist", "contexts", CONTEXT, "index.html"), "utf8");
 if (!contextHtml.includes("Reviewing KPIs &amp; proxy metrics") || !contextHtml.includes(`/biases/${SLUG}/#evidence`)) throw new Error("KPI context page is missing its title or Surrogation evidence link.");
 for (const slug of [SLUG, ANCHORING, CONFIRMATION, OUTCOME]) {
-  if (!contextHtml.includes(`/tools/decision-audit/?bias=${slug}`)) throw new Error(`KPI context is missing Decision Audit route for ${slug}.`);
+  if (!contextHtml.includes(`/tools/decision-audit/#bias=${slug}`)) throw new Error(`KPI context is missing fragment-state Decision Audit route for ${slug}.`);
 }
 
 const comparisonHtml = await readFile(resolve("dist", "compare", COMPARISON, "index.html"), "utf8");
@@ -83,4 +83,4 @@ for (const url of [`${SITE}/biases/${SLUG}/`, `${SITE}/compare/${COMPARISON}/`, 
   if (!sitemap.includes(`<loc>${url}</loc>`)) throw new Error(`Sitemap is missing ${url}.`);
 }
 
-console.log("Surrogation cluster check passed: #123, evidence, proxy-vs-measurement distinction, KPI guide, family, research discovery, exports and sitemap are aligned.");
+console.log("Surrogation cluster check passed: #123, evidence, proxy-vs-measurement distinction, KPI guide, fragment-state Decision Audit routes, family, research discovery, exports and sitemap are aligned.");
