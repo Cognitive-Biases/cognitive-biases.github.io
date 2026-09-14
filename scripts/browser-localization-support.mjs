@@ -162,12 +162,10 @@ export async function exerciseKeyboard(page, { outDir, locale, archetype, path, 
   await mkdir(focusDir, { recursive: true });
   let previous = '';
   let stuck = 0;
-  let lastState = null;
   for (let i = 0; i < 32; i += 1) {
     await page.keyboard.press('Tab');
     const state = await readFocusedState(page);
     if (!state) continue;
-    lastState = state;
     const signature = focusSignature(state);
     stuck = signature === previous ? stuck + 1 : 0;
     previous = signature;
@@ -181,15 +179,35 @@ export async function exerciseKeyboard(page, { outDir, locale, archetype, path, 
     if (stuck >= 2) { onFinding('high', 'focus-trap', locale, path, viewport.name, { signature }); break; }
   }
 
-  if (lastState) {
-    const beforeReverse = focusSignature(lastState);
-    const focusableCount = await page.locator('a[href]:visible,button:visible,input:visible,select:visible,textarea:visible,[tabindex]:visible').count().catch(() => 0);
+  const reverseProbe = await page.evaluate(() => {
+    const selector = 'a[href],button,input,select,textarea,[tabindex]';
+    const candidates = [...document.querySelectorAll(selector)].filter((el) => {
+      if (el.hasAttribute('disabled') || Number(el.getAttribute('tabindex') || 0) < 0 || el.closest('[hidden],[inert],[aria-hidden="true"]')) return false;
+      const style = getComputedStyle(el);
+      const rect = el.getBoundingClientRect();
+      return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity || 1) !== 0
+        && rect.width > 0 && rect.height > 0 && rect.right > 0 && rect.left < innerWidth && rect.bottom > 0 && rect.top < innerHeight;
+    });
+    if (candidates.length < 2) return null;
+    const preferred = candidates.find((el) => el.hasAttribute('data-browser-reverse-probe'));
+    const neutral = candidates.filter((el) => !el.closest('[role="dialog"]'));
+    const target = preferred || neutral[1] || candidates[1];
+    if (!target) return null;
+    target.setAttribute('data-browser-reverse-probe-active', 'true');
+    target.focus();
+    const label = (target.getAttribute('aria-label') || target.textContent || target.getAttribute('placeholder') || target.getAttribute('title') || '').replace(/\s+/g, ' ').trim();
+    return { signature: `${target.tagName.toLowerCase()}|${target.id || ''}|${target.getAttribute('href') || ''}|${label.slice(0, 120)}` };
+  });
+  if (reverseProbe) {
     await page.keyboard.press('Shift+Tab');
-    const reverse = await readFocusedState(page);
-    if (focusableCount > 1 && reverse && focusSignature(reverse) === beforeReverse) {
-      onFinding('medium', 'reverse-focus-static', locale, path, viewport.name, { signature: beforeReverse });
-    }
-    await page.keyboard.press('Tab').catch(() => {});
+    const reverse = await page.evaluate(() => {
+      const target = document.querySelector('[data-browser-reverse-probe-active="true"]');
+      if (!target) return { same: false };
+      const same = document.activeElement === target;
+      target.removeAttribute('data-browser-reverse-probe-active');
+      return { same };
+    });
+    if (reverse.same) onFinding('medium', 'reverse-focus-static', locale, path, viewport.name, { signature: reverseProbe.signature });
   }
 
   const toggles = page.locator('button[aria-expanded][aria-controls]:visible');
