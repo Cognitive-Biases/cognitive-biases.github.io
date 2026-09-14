@@ -1,10 +1,19 @@
 {
-  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/6a8168b854ed6f557f5906808a83eb67be9f42ea/schema/localization-profile.schema.json",
+  "$schema": "https://raw.githubusercontent.com/dkharlanau/agent-ready-web-profile/790bb194f2dfd1400cb21752567e09f0055ca5d9/schema/localization-profile.schema.json",
   "version": "0.2",
   "site": "https://cognitive-biases.github.io/",
   "sourceLocale": "en",
   "defaultLocale": "en",
   "debtLedger": ".arwp/localization-debt.generated.json",
+  "searchGuidanceRegistry": "data/search-localization-policy.json",
+  "xDefaultPolicy": "source-locale",
+  "hreflangStrategy": {
+    "equivalenceGraph": "generated-from-data/locales.json-and-stable-page-equivalence",
+    "representations": ["html"],
+    "googleSpecificValidation": true,
+    "notes": "HTML is the intended Google hreflang representation. Sitemap remains canonical URL discovery and does not duplicate hreflang annotations."
+  },
+  "markets": [],
   "locales": [
     { "code": "en", "role": "canonical", "status": "published" },
     { "code": "fr", "role": "human-interface", "status": "reviewed-human-interface", "searchPublication": "full" },
@@ -19,6 +28,9 @@
       "id": "terminology-glossary",
       "kind": "manual",
       "parity": "semantic",
+      "surfaceClass": "product-specific-machine-contract",
+      "authority": "product-specific-contract",
+      "searchRequirement": "optional",
       "requiredForRoles": ["human-interface"],
       "checks": ["stable-concept-id-parity", "reviewed-terminology"]
     },
@@ -26,6 +38,9 @@
       "id": "ui-runtime",
       "kind": "manual",
       "parity": "adapted",
+      "surfaceClass": "accessibility-semantic-web",
+      "authority": "arwp-stronger-recommendation",
+      "searchRequirement": "not-applicable",
       "requiredForRoles": ["human-interface"],
       "checks": ["ui-copy", "runtime-states", "no-silent-fallback"]
     },
@@ -33,6 +48,9 @@
       "id": "structured-knowledge",
       "kind": "manual",
       "parity": "semantic",
+      "surfaceClass": "search-required",
+      "authority": "arwp-stronger-recommendation",
+      "searchRequirement": "required",
       "requiredForRoles": ["human-interface"],
       "checks": ["bias-library", "technique-library", "decision-skills", "source-release-freshness"]
     },
@@ -40,6 +58,9 @@
       "id": "accessibility",
       "kind": "manual",
       "parity": "adapted",
+      "surfaceClass": "accessibility-semantic-web",
+      "authority": "standards-requirement",
+      "searchRequirement": "not-applicable",
       "requiredForRoles": ["human-interface"],
       "checks": ["accessible-names", "alt-text", "validation-announcements", "narrow-layout"]
     },
@@ -47,20 +68,29 @@
       "id": "seo-search",
       "kind": "manual",
       "parity": "adapted",
+      "surfaceClass": "search-required",
+      "authority": "google-specific-requirement",
+      "searchRequirement": "required",
       "requiredForRoles": ["human-interface"],
-      "checks": ["html-lang", "self-canonical", "hreflang", "sitemap", "structured-data-language"]
+      "checks": ["html-lang", "self-canonical", "hreflang", "google-hreflang-eligibility", "sitemap", "structured-data-language"]
     },
     {
       "id": "human-ai-agent",
       "kind": "manual",
       "parity": "semantic",
+      "surfaceClass": "product-specific-machine-contract",
+      "authority": "product-specific-contract",
+      "searchRequirement": "not-applicable",
       "requiredForRoles": ["human-interface"],
-      "checks": ["localized-llms", "localized-data-index", "localized-agent-skills-where-declared"]
+      "checks": ["localized-llms-where-product-contract-declares-it", "localized-data-index", "localized-agent-skills-where-declared"]
     },
     {
       "id": "agent-routing-llms",
       "kind": "machine-files",
       "parity": "routing-only",
+      "surfaceClass": "optional-agent-interoperability",
+      "authority": "product-specific-contract",
+      "searchRequirement": "not-applicable",
       "localePattern": "dist/{locale}/llms.txt",
       "requiredForRoles": ["routing-only"],
       "checks": ["declared-routing-surface", "published-locale-routing"]
@@ -76,9 +106,9 @@
       "surfaces": ["structured-knowledge", "human-ai-agent"]
     },
     {
-      "paths": ["scripts/build.mjs", "scripts/enhance*", "scripts/apply-seo-structured-data.mjs", "scripts/update-resource-sitemap.mjs"],
+      "paths": ["scripts/build.mjs", "scripts/enhance*", "scripts/apply-seo-structured-data.mjs", "scripts/update-resource-sitemap.mjs", "data/search-localization-policy.json", "data/search-localization-debt.json"],
       "surfaces": ["ui-runtime", "accessibility", "seo-search", "human-ai-agent"]
     }
   ],
-  "evidenceBoundary": "ARWP verifies only the declared generic implementation surfaces. Cognitive Biases domain validators remain authoritative for language-specific library, glossary, freshness, UI, Search and human-locale machine-readable surfaces. The generic routing-only machine surface is reserved for locales whose role is routing-only. Partial-human status describes reviewed published coverage and must not be read as full semantic parity. A passing gate does not prove literary quality, cultural fit, deployed parity, indexing, ranking, AI citation/recommendation, traffic or conversion."
+  "evidenceBoundary": "ARWP verifies only the declared generic implementation surfaces. Cognitive Biases domain validators remain authoritative for language-specific library, glossary, freshness, UI, Search and human-locale machine-readable surfaces. Product llms.txt routing remains a separate agent interoperability contract and is not a Google Search requirement. Partial-human status describes reviewed published coverage and must not be read as full semantic parity. A passing gate does not prove literary quality, cultural fit, deployed parity, indexing, ranking, AI citation/recommendation, traffic or conversion."
 }
