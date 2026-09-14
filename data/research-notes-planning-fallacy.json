@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "updatedAt": "2026-08-18",
+  "entries": [
+    {
+      "slug": "planning-fallacy-why-the-outside-view-needs-good-data",
+      "title": "Planning Fallacy: why the outside view still needs good data",
+      "publishedAt": "2026-08-18",
+      "status": "reviewed synthesis",
+      "summary": "Using outcomes from comparable completed work is one of the strongest practical responses to optimistic planning, but reference-class forecasting is not a mechanical cure. The class, data, baseline and adjustment rules still need judgment and governance.",
+      "sections": [
+        {
+          "heading": "The planning fallacy starts with the current plan",
+          "paragraphs": [
+            "Buehler, Griffin and Ross found that people often predicted their own task completion times too optimistically even when they knew similar tasks had taken longer before. The detailed scenario for the current task received more weight than relevant past experience.",
+            "That does not mean every late project is a planning fallacy. Scope changes, dependencies, incentives, strategic underestimation, missing data and genuinely unusual events can also create overruns. The label is useful only after those possibilities are kept separate."
+          ]
+        },
+        {
+          "heading": "The outside view changes the starting point",
+          "paragraphs": [
+            "Reference-class reasoning starts from the observed outcomes of comparable completed work rather than from the preferred story of how the current plan will unfold. The current case is then adjusted only for differences that can be defended with evidence.",
+            "This is different from adding a fixed safety buffer. A universal multiplier ignores whether the historical class, uncertainty and current task are actually comparable."
+          ]
+        },
+        {
+          "heading": "Reference classes are not found automatically",
+          "paragraphs": [
+            "Recent reviews of reference-class forecasting find substantial promise, especially for project cost and schedule estimates, but also recurring implementation questions. Teams still have to decide which completed projects belong in the class, whether historical data are comparable and trustworthy, and how the current case should be adjusted.",
+            "A poor reference class can create false confidence with better-looking mathematics. The outside view works only when the outside data are relevant enough to deserve the name."
+          ]
+        },
+        {
+          "heading": "Anchoring can survive inside an outside-view process",
+          "paragraphs": [
+            "A separate anchoring problem can appear when a target date, budget, stakeholder request or first AI estimate is revealed before an independent estimate is formed. Experimental work shows that presented numbers can pull expected task-duration estimates toward the anchor.",
+            "This means a project can suffer from both patterns: the team may underuse the history of comparable work and also stay too close to an arbitrary starting number. Keeping the first number and the reference-class baseline separate makes the diagnosis clearer."
+          ]
+        },
+        {
+          "heading": "A useful estimation record survives the project",
+          "paragraphs": [
+            "Keep the initial estimate, the reference class, the adjustment logic, the forecast range and the final outcome. Without that record, each new project can become another supposedly unique exception and the organization never learns its own error distribution.",
+            "The aim is not perfect prediction. It is measurable calibration: estimates that become more informative because past errors are preserved instead of forgotten."
+          ]
+        }
+      ],
+      "sources": [
+        {"title":"Exploring the Planning Fallacy: Why People Underestimate Their Task Completion Times","year":1994,"type":"experimental studies","doi":"10.1037/0022-3514.67.3.366","url":"https://doi.org/10.1037/0022-3514.67.3.366"},
+        {"title":"The Planning Fallacy: Cognitive, Motivational, and Social Origins","year":2010,"type":"research review","doi":"10.1016/S0065-2601(10)43001-4","url":"https://doi.org/10.1016/S0065-2601(10)43001-4"},
+        {"title":"Reducing risks in megaprojects: The potential of reference class forecasting","year":2023,"type":"literature review of reference class forecasting","doi":"10.1016/j.plas.2023.100103","url":"https://doi.org/10.1016/j.plas.2023.100103"},
+        {"title":"Reference class forecasting: promises, problems, and a research agenda moving forward","year":2025,"type":"systematic literature review","doi":"10.1080/09537287.2025.2578708","url":"https://doi.org/10.1080/09537287.2025.2578708"},
+        {"title":"Anchors distort estimates of expected duration","year":2005,"type":"task-duration anchoring experiment","doi":"10.2466/pr0.96.2.253-256","url":"https://pubmed.ncbi.nlm.nih.gov/15941095/"}
+      ],
+      "related": ["egocentric-bias-planning-fallacy", "cognitive-bias-anchoring-effect"]
+    }
+  ]
+}
