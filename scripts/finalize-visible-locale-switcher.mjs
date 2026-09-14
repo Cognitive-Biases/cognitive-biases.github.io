@@ -27,7 +27,9 @@ const switcherItems = homes.map((home) => home.code === canonicalLocale
   ? `<span aria-current="page" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</span>`
   : `<a href="${escapeAttribute(home.route)}" hreflang="${escapeAttribute(home.code)}" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</a>`
 ).join("");
-const switcher = `<nav class="locale-switch-bar" data-localization-graph-switcher="true" aria-label="Language">${switcherItems}</nav>`;
+// Keep the long-standing French marker while centralizing the switcher. Existing
+// locale checks use it as the visible-discovery compatibility contract.
+const switcher = `<nav class="locale-switch-bar" data-locale-switch="fr" data-localization-graph-switcher="true" aria-label="Language">${switcherItems}</nav>`;
 
 if (!/<body(?:\s[^>]*)?>/i.test(html)) throw new Error("Cannot insert the visible locale switcher without <body>.");
 html = html.replace(/<body([^>]*)>/i, `<body$1>${switcher}`);
