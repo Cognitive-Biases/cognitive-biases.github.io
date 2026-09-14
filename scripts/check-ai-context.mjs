@@ -43,7 +43,7 @@ if (lensSlugs.includes(RETIRED_DUPLICATE_SLUG)) throw new Error("AI context stil
 
 const html = await readFile(resolve("dist", "biases", LEGACY_AUTOMATION_SLUG, "index.html"), "utf8");
 if (!html.includes('class="evidence-review"')) throw new Error("Automation Bias canonical page is missing evidence review rendering.");
-if (!html.includes(`/tools/decision-audit/?bias=${LEGACY_AUTOMATION_SLUG}`)) throw new Error("Automation Bias canonical page is missing Decision Audit route.");
+if (!html.includes(`/tools/decision-audit/#bias=${LEGACY_AUTOMATION_SLUG}`)) throw new Error("Automation Bias canonical page is missing fragment-state Decision Audit route.");
 if (!html.includes('/contexts/ai-assisted-decisions/')) throw new Error("Automation Bias canonical page is missing reciprocal AI context discovery.");
 if (html.includes(RETIRED_DUPLICATE_SLUG)) throw new Error("Automation Bias canonical page leaks the retired duplicate slug.");
 
@@ -51,4 +51,4 @@ const aiPage = await readFile(resolve("dist", "contexts", "ai-assisted-decisions
 if (!aiPage.includes(`/biases/${LEGACY_AUTOMATION_SLUG}/#evidence`)) throw new Error("AI context does not link the Automation Bias evidence section.");
 if (aiPage.includes(RETIRED_DUPLICATE_SLUG)) throw new Error("AI context rendered the retired duplicate Automation Bias slug.");
 
-console.log("AI context check passed: historical Automation Bias #51 remains the sole canonical record and is connected to evidence, taxonomy, Decision Audit, and AI context without duplicate #221.");
+console.log("AI context check passed: historical Automation Bias #51 remains the sole canonical record and is connected to evidence, taxonomy, fragment-state Decision Audit, and AI context without duplicate #221.");
