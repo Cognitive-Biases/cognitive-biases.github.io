@@ -1,0 +1,37 @@
+{
+  "version": "2026-09-14",
+  "search": {
+    "canonicalLocale": "en",
+    "localeRegistry": "data/locales.json",
+    "languageDetectionContract": "visible-content-first",
+    "htmlLangRole": "accessibility-browser-semantics",
+    "hreflang": {
+      "equivalenceGraph": "generated-from-locale-registry-and-stable-page-equivalence",
+      "representations": ["html"],
+      "googleSpecificValidation": true,
+      "xDefault": "canonical-home-or-canonical-equivalent"
+    },
+    "sitemap": {
+      "role": "canonical-url-discovery",
+      "hreflangAnnotations": false
+    },
+    "generativeAi": {
+      "googleContract": "normal-search-fundamentals",
+      "searchConsoleOwnerDataRequiredForMeasurement": true
+    }
+  },
+  "agentInteroperability": {
+    "llmsTxt": {
+      "surfaceClass": "optional-agent-interoperability",
+      "googleSearchRequirement": false,
+      "projectContract": true,
+      "manifest": "ai/locales.json",
+      "releaseGate": true
+    }
+  },
+  "structuredData": {
+    "googleFeatureClaimsMustBeCurrent": true,
+    "faqRichResultStatus": "removed-2026-05-07",
+    "allowFaqPageForNonGoogleSemanticUse": true
+  }
+}
