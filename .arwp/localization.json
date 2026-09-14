@@ -11,8 +11,8 @@
     { "code": "pt-BR", "role": "human-interface", "status": "reviewed-partial-human-interface" },
     { "code": "es", "role": "human-interface", "status": "reviewed-human-interface" },
     { "code": "it", "role": "human-interface", "status": "reviewed-partial-human-interface" },
-    { "code": "de", "role": "human-interface", "status": "reviewed-partial-human-interface" },
-    { "code": "ru", "role": "human-interface", "status": "reviewed-partial-human-interface" }
+    { "code": "de", "role": "routing-only", "status": "localized-agent-routing" },
+    { "code": "ru", "role": "routing-only", "status": "localized-agent-routing" }
   ],
   "surfaces": [
     {
