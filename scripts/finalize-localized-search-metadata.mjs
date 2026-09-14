@@ -1,6 +1,7 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { join, relative } from "node:path";
 
+const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
 const MAX_META = 155;
 const LOCALES = {
@@ -12,7 +13,6 @@ const LOCALES = {
   ru: { intl: "ru-RU", stopwords: ["и","или","с","со","для","по","на","в","во","из","от","до","о","об","без","под","над","при"] }
 };
 
-const seenDescriptions = new Map();
 let filesChecked = 0;
 let descriptionsChanged = 0;
 let duplicateRepairs = 0;
@@ -49,40 +49,70 @@ for (const [locale, config] of Object.entries(LOCALES)) {
       if (current.length > MAX_META || endsWithStopword(current, stopwords, config.intl)) {
         improved = smartShorten(current, stopwords, config.intl, MAX_META);
       }
-
-      let normalized = normalizeForCompare(improved);
-      if (normalized && seenDescriptions.has(normalized)) {
-        const label = pageLabel(html);
-        improved = makePageSpecific(current, label, stopwords, config.intl, MAX_META);
-        normalized = normalizeForCompare(improved);
-        duplicateRepairs += 1;
-      }
-
-      if (normalized && seenDescriptions.has(normalized)) {
-        const title = pageTitle(html);
-        improved = makePageSpecific(current, title, stopwords, config.intl, MAX_META);
-        normalized = normalizeForCompare(improved);
-      }
-
-      if (normalized && seenDescriptions.has(normalized)) {
-        throw new Error(`Unable to keep localized meta description unique for ${file}; collides with ${seenDescriptions.get(normalized)}.`);
-      }
-
       if (improved && improved !== current) {
         html = replaceMetaContent(html, "name", "description", improved);
         html = replaceMetaContent(html, "property", "og:description", improved);
         descriptionsChanged += 1;
         dirty = true;
       }
-
-      if (normalized) seenDescriptions.set(normalized, file);
     }
 
     if (dirty) await writeFile(file, html);
   }
 }
 
+await repairFinalCanonicalDuplicates();
 console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${duplicateRepairs} collision repair(s), ${russianCopyChanged} Russian copy repair(s).`);
+
+async function repairFinalCanonicalDuplicates() {
+  const files = await walkAnyHtml(OUT);
+  const nonLocalized = [];
+  const localized = [];
+  for (const file of files) {
+    const locale = localeForFile(file);
+    (locale ? localized : nonLocalized).push({ file, locale });
+  }
+
+  const owners = new Map();
+  for (const { file } of nonLocalized) {
+    const html = await readFile(file, "utf8");
+    if (!isIndexableSelfCanonical(html, file)) continue;
+    const description = metaDescription(html);
+    if (description) owners.set(searchQualityKey(description), file);
+  }
+
+  for (const { file, locale } of localized) {
+    let html = await readFile(file, "utf8");
+    if (!isIndexableSelfCanonical(html, file)) continue;
+    const description = metaDescription(html);
+    if (!description) continue;
+    let key = searchQualityKey(description);
+    if (!owners.has(key)) {
+      owners.set(key, file);
+      continue;
+    }
+
+    const config = LOCALES[locale];
+    const stopwords = new Set(config.stopwords);
+    const labels = [pageLabel(html), pageTitle(html)].filter(Boolean);
+    let improved = description;
+    for (const label of labels) {
+      improved = makePageSpecific(description, label, stopwords, config.intl, MAX_META);
+      key = searchQualityKey(improved);
+      if (!owners.has(key)) break;
+    }
+    if (owners.has(key)) {
+      throw new Error(`Unable to keep final canonical meta description unique for ${file}; collides with ${owners.get(key)}.`);
+    }
+
+    html = replaceMetaContent(html, "name", "description", improved);
+    html = replaceMetaContent(html, "property", "og:description", improved);
+    await writeFile(file, html);
+    owners.set(key, file);
+    descriptionsChanged += 1;
+    duplicateRepairs += 1;
+  }
+}
 
 async function walkHtml(dir) {
   const entries = (await readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name));
@@ -95,14 +125,57 @@ async function walkHtml(dir) {
   return files;
 }
 
+async function walkAnyHtml(dir) {
+  const entries = (await readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name));
+  const files = [];
+  for (const entry of entries) {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) files.push(...await walkAnyHtml(path));
+    else if (entry.isFile() && entry.name.endsWith(".html")) files.push(path);
+  }
+  return files;
+}
+
+function localeForFile(file) {
+  const rel = relative(OUT, file).replaceAll("\\", "/");
+  const first = rel.split("/")[0].toLowerCase();
+  return LOCALES[first] ? first : "";
+}
+
+function publicPath(file) {
+  const rel = relative(OUT, file).replaceAll("\\", "/");
+  if (rel === "index.html") return "/";
+  if (rel.endsWith("/index.html")) return `/${rel.slice(0, -"index.html".length)}`;
+  return `/${rel}`;
+}
+
+function isIndexableSelfCanonical(html, file) {
+  const robots = findMetaTag(html, "name", "robots");
+  if (robots && decodeHtml(getAttribute(robots, "content")).toLowerCase().includes("noindex")) return false;
+  const canonicalTag = findLinkTag(html, "canonical");
+  const canonical = canonicalTag ? normalizeUrl(getAttribute(canonicalTag, "href")) : "";
+  const own = normalizeUrl(`${SITE}${publicPath(file)}`);
+  return Boolean(canonical && canonical === own);
+}
+
 function findMetaTag(html, key, value) {
   const tags = html.match(/<meta\b[^>]*>/gi) || [];
   return tags.find((tag) => getAttribute(tag, key)?.toLowerCase() === value.toLowerCase()) || null;
 }
 
+function findLinkTag(html, relValue) {
+  const tags = html.match(/<link\b[^>]*>/gi) || [];
+  return tags.find((tag) => getAttribute(tag, "rel")?.toLowerCase() === relValue.toLowerCase()) || null;
+}
+
 function getAttribute(tag, name) {
   const match = tag.match(new RegExp(`\\b${name}\\s*=\\s*(["'])(.*?)\\1`, "i"));
   return match?.[2] || "";
+}
+
+function metaDescription(html) {
+  const tag = findMetaTag(html, "name", "description");
+  return tag ? searchQualityDecode(getAttribute(tag, "content")) : "";
 }
 
 function replaceMetaContent(html, key, value, content) {
@@ -156,11 +229,30 @@ function endsWithStopword(value, stopwords, intl) {
   return Boolean(terminal && stopwords.has(terminal));
 }
 
-function normalizeForCompare(value) {
-  return decodeHtml(String(value || ""))
+function searchQualityDecode(value) {
+  return String(value || "")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
     .replace(/\s+/g, " ")
-    .trim()
-    .toLocaleLowerCase();
+    .trim();
+}
+
+function searchQualityKey(value) {
+  return searchQualityDecode(value).toLowerCase();
+}
+
+function normalizeUrl(value) {
+  try {
+    const parsed = new URL(value, SITE);
+    parsed.hash = "";
+    parsed.search = "";
+    return parsed.href;
+  } catch {
+    return "";
+  }
 }
 
 function decodeHtml(value) {
