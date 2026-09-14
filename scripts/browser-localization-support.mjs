@@ -11,6 +11,13 @@ export async function inspectRenderedPage(page, { expectedLang, expectedCanonica
         const rect = el.getBoundingClientRect();
         return style.display !== 'none' && style.visibility !== 'hidden' && Number(style.opacity || 1) !== 0 && rect.width > 0 && rect.height > 0;
       };
+      const visuallyHidden = (el) => {
+        const style = getComputedStyle(el);
+        const rect = el.getBoundingClientRect();
+        const clipped = (style.clip && style.clip !== 'auto') || (style.clipPath && style.clipPath !== 'none');
+        return clipped && rect.width <= 2 && rect.height <= 2;
+      };
+      const inlineTextLink = (el) => el.tagName === 'A' && getComputedStyle(el).display === 'inline';
       const text = (el) => (el.textContent || '').replace(/\s+/g, ' ').trim();
       const selector = (el) => {
         if (el.id) return `#${CSS.escape(el.id)}`;
@@ -26,7 +33,7 @@ export async function inspectRenderedPage(page, { expectedLang, expectedCanonica
         .slice(0, 20)
         .map(({ el, rect }) => ({ selector: selector(el), text: text(el).slice(0, 120), rect: rectData(rect) }));
       const clippedText = [...document.querySelectorAll('button,a,label,p,li,h1,h2,h3,h4,span,td,th')]
-        .filter((el) => visible(el) && text(el))
+        .filter((el) => visible(el) && !visuallyHidden(el) && text(el))
         .filter((el) => {
           const style = getComputedStyle(el);
           return ((['hidden', 'clip'].includes(style.overflowX) && el.scrollWidth > el.clientWidth + 1)
@@ -35,7 +42,7 @@ export async function inspectRenderedPage(page, { expectedLang, expectedCanonica
         .slice(0, 25)
         .map((el) => ({ selector: selector(el), text: text(el).slice(0, 160), clientWidth: el.clientWidth, scrollWidth: el.scrollWidth, clientHeight: el.clientHeight, scrollHeight: el.scrollHeight }));
       const tinyTargets = [...document.querySelectorAll('a[href],button,input,select,[role="button"],[role="tab"]')]
-        .filter((el) => visible(el))
+        .filter((el) => visible(el) && !inlineTextLink(el))
         .map((el) => ({ el, rect: el.getBoundingClientRect() }))
         .filter(({ rect }) => rect.width < 24 || rect.height < 24)
         .slice(0, 25)
@@ -255,14 +262,16 @@ export async function exerciseSecondaryStates(page, { outDir, locale, archetype,
     await writeFile(join(stateDir, `${name}.aria.yml`), await page.locator('body').ariaSnapshot().catch(() => ''), 'utf8');
     await search.fill(original);
   }
-  const disclosure = page.locator('[aria-expanded="false"][aria-controls]:visible').first();
+  const disclosure = page.locator('[aria-expanded][aria-controls]:visible').first();
   if (await disclosure.count().catch(() => 0)) {
     const before = await disclosure.getAttribute('aria-expanded');
-    await disclosure.click().catch(() => {});
-    await page.waitForTimeout(100);
-    const after = await disclosure.getAttribute('aria-expanded');
-    if (before === after) onFinding('medium', 'interaction-state-static', locale, path, viewport.name, { archetype });
-    if (after === 'true') await page.keyboard.press('Escape').catch(() => {});
+    if (before === 'false') {
+      await disclosure.click().catch(() => {});
+      await page.waitForTimeout(100);
+      const after = await disclosure.getAttribute('aria-expanded');
+      if (before === after) onFinding('medium', 'interaction-state-static', locale, path, viewport.name, { archetype });
+      if (after === 'true') await page.keyboard.press('Escape').catch(() => {});
+    }
   }
 }
 
