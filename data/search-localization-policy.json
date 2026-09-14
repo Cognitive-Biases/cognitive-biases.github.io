@@ -1,5 +1,7 @@
 {
   "version": "2026-09-14",
+  "methodology": "https://dkharlanau.github.io/agent-ready-web-profile/SEARCH-LOCALIZATION-2026.md",
+  "debtLedger": "data/search-localization-debt.json",
   "search": {
     "canonicalLocale": "en",
     "localeRegistry": "data/locales.json",
