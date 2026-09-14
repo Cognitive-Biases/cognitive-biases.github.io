@@ -11,8 +11,8 @@
     { "code": "pt-BR", "role": "human-interface", "status": "reviewed-partial-human-interface" },
     { "code": "es", "role": "human-interface", "status": "reviewed-human-interface" },
     { "code": "it", "role": "human-interface", "status": "reviewed-partial-human-interface" },
-    { "code": "de", "role": "routing-only", "status": "localized-agent-routing" },
-    { "code": "ru", "role": "routing-only", "status": "localized-agent-routing" }
+    { "code": "de", "role": "human-interface", "status": "reviewed-partial-human-interface" },
+    { "code": "ru", "role": "human-interface", "status": "reviewed-partial-human-interface" }
   ],
   "surfaces": [
     {
@@ -61,7 +61,7 @@
       "id": "agent-routing-llms",
       "kind": "machine-files",
       "parity": "routing-only",
-      "localePattern": "ai/llms.{locale}.txt",
+      "localePattern": "dist/{locale}/llms.txt",
       "requiredForRoles": ["routing-only"],
       "checks": ["declared-routing-surface", "no-human-search-publication"]
     }
