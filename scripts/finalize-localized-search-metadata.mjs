@@ -15,6 +15,7 @@ const LOCALES = {
 let filesChecked = 0;
 let descriptionsChanged = 0;
 let duplicateRepairs = 0;
+let duplicateGroupsFound = 0;
 let russianCopyChanged = 0;
 
 for (const [locale, config] of Object.entries(LOCALES)) {
@@ -58,54 +59,68 @@ for (const [locale, config] of Object.entries(LOCALES)) {
   }
 }
 
-await repairFinalDuplicates();
-console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${duplicateRepairs} collision repair(s), ${russianCopyChanged} Russian copy repair(s).`);
+await repairDuplicateDescriptions();
+console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${duplicateGroupsFound} duplicate group(s) found, ${duplicateRepairs} collision repair(s), ${russianCopyChanged} Russian copy repair(s).`);
 
-async function repairFinalDuplicates() {
-  const files = await walkAnyHtml(OUT);
-  const owners = new Map();
-  const localized = [];
-
-  for (const file of files) {
-    const locale = localeForFile(file);
-    if (locale) {
-      localized.push({ file, locale });
-      continue;
-    }
+async function repairDuplicateDescriptions() {
+  const records = [];
+  for (const file of await walkAnyHtml(OUT)) {
     const html = await readFile(file, "utf8");
     const description = metaDescription(html);
-    if (description) owners.set(searchQualityKey(description), file);
+    if (!description) continue;
+    records.push({ file, locale: localeForFile(file), html, description, key: searchQualityKey(description) });
   }
 
-  for (const { file, locale } of localized) {
-    let html = await readFile(file, "utf8");
-    const description = metaDescription(html);
-    if (!description) continue;
-    let key = searchQualityKey(description);
-    if (!owners.has(key)) {
-      owners.set(key, file);
-      continue;
-    }
+  const groups = new Map();
+  for (const record of records) {
+    if (!groups.has(record.key)) groups.set(record.key, []);
+    groups.get(record.key).push(record);
+  }
 
-    const config = LOCALES[locale];
-    const stopwords = new Set(config.stopwords);
-    const labels = [pageLabel(html), pageTitle(html)].filter(Boolean);
-    let improved = description;
-    for (const label of labels) {
-      improved = makePageSpecific(description, label, stopwords, config.intl, MAX_META);
-      key = searchQualityKey(improved);
-      if (!owners.has(key)) break;
-    }
-    if (owners.has(key)) {
-      throw new Error(`Unable to keep localized meta description unique for ${file}; collides with ${owners.get(key)}.`);
-    }
+  const used = new Map();
+  for (const record of records) {
+    if (!used.has(record.key)) used.set(record.key, record.file);
+  }
 
-    html = replaceMetaContent(html, "name", "description", improved);
-    html = replaceMetaContent(html, "property", "og:description", improved);
-    await writeFile(file, html);
-    owners.set(key, file);
-    descriptionsChanged += 1;
-    duplicateRepairs += 1;
+  for (const group of groups.values()) {
+    if (group.length < 2 || !group.some((record) => record.locale)) continue;
+    duplicateGroupsFound += 1;
+
+    const protectedRecord = group.find((record) => !record.locale) || group[0];
+    const repairTargets = group.filter((record) => record !== protectedRecord && record.locale);
+
+    for (const record of repairTargets) {
+      const config = LOCALES[record.locale];
+      const stopwords = new Set(config.stopwords);
+      const labels = [pageLabel(record.html), pageTitle(record.html)].filter(Boolean);
+      let improved = "";
+
+      for (const label of labels) {
+        const candidate = makePageSpecific(record.description, label, stopwords, config.intl, MAX_META);
+        if (candidate && !used.has(searchQualityKey(candidate))) {
+          improved = candidate;
+          break;
+        }
+      }
+
+      if (!improved) {
+        const label = labels[0] || localizedRouteLabel(record.file);
+        const candidate = smartShorten(`${label}: ${record.description}`, stopwords, config.intl, MAX_META);
+        if (candidate && !used.has(searchQualityKey(candidate))) improved = candidate;
+      }
+
+      if (!improved) {
+        throw new Error(`Unable to make localized meta description unique for ${record.file}.`);
+      }
+
+      let html = record.html;
+      html = replaceMetaContent(html, "name", "description", improved);
+      html = replaceMetaContent(html, "property", "og:description", improved);
+      await writeFile(record.file, html);
+      used.set(searchQualityKey(improved), record.file);
+      descriptionsChanged += 1;
+      duplicateRepairs += 1;
+    }
   }
 }
 
@@ -135,6 +150,12 @@ function localeForFile(file) {
   const rel = relative(OUT, file).replaceAll("\\", "/");
   const first = rel.split("/")[0].toLowerCase();
   return LOCALES[first] ? first : "";
+}
+
+function localizedRouteLabel(file) {
+  const rel = relative(OUT, file).replaceAll("\\", "/").replace(/\/index\.html$/i, "");
+  const slug = rel.split("/").filter(Boolean).at(-1) || "page";
+  return slug.replaceAll("-", " ");
 }
 
 function findMetaTag(html, key, value) {
