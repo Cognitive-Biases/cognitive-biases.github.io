@@ -37,7 +37,7 @@ for (const member of MEMBERS) {
   const html = await readFile(resolve("dist", "biases", member.slug, "index.html"), "utf8");
   if (!html.includes(`href="/families/${FAMILY}/"`)) throw new Error(`${member.slug}: rendered page does not link retrospective family.`);
   if (!html.includes('class="evidence-review"')) throw new Error(`${member.slug}: rendered page lost evidence review.`);
-  if (!html.includes(`/tools/decision-audit/?bias=${member.slug}`)) throw new Error(`${member.slug}: Decision Audit route missing.`);
+  if (!html.includes(`/tools/decision-audit/#bias=${member.slug}`)) throw new Error(`${member.slug}: fragment-state Decision Audit route missing.`);
 }
 
 if (kinds.recordKindOverrides?.["140"] !== "phenomenon") throw new Error("Moral Luck must be typed as a phenomenon after review.");
@@ -52,7 +52,7 @@ for (const member of MEMBERS) {
 
 const workHtml = await readFile(resolve("dist", "contexts", "work-project-decisions", "index.html"), "utf8");
 if (!workHtml.includes('/biases/attribution-bias-moral-luck/#evidence')) throw new Error("Work context is missing Moral Luck evidence link.");
-if (!workHtml.includes('/tools/decision-audit/?bias=attribution-bias-moral-luck')) throw new Error("Work context is missing Moral Luck Decision Audit route.");
+if (!workHtml.includes('/tools/decision-audit/#bias=attribution-bias-moral-luck')) throw new Error("Work context is missing fragment-state Moral Luck Decision Audit route.");
 
 if (comparison.leftSlug !== "cognitive-bias-outcome-bias" || comparison.rightSlug !== "attribution-bias-moral-luck") {
   throw new Error("Outcome Bias vs Moral Luck comparison targets changed unexpectedly.");
@@ -70,4 +70,4 @@ for (const slug of ["cognitive-bias-outcome-bias", "attribution-bias-moral-luck"
   }
 }
 
-console.log("Retrospective evaluation check passed: Hindsight Bias, Outcome Bias, and Moral Luck are evidence-reviewed family members; Moral Luck is typed, work-context linked, and compared reciprocally with Outcome Bias.");
+console.log("Retrospective evaluation check passed: Hindsight Bias, Outcome Bias, and Moral Luck are evidence-reviewed family members; Moral Luck is typed, work-context linked, and compared reciprocally with Outcome Bias using fragment-state audit routes.");
