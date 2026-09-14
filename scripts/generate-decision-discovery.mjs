@@ -25,14 +25,23 @@ for (const situation of situationsData.situations) {
 
 const cards = (items) => items.map((item) => `<article class="application-card"><span>Decision situation</span><strong>${esc(item.title)}</strong><p>${esc(item.summary)}</p><a href="/situations/${item.slug}/">Review this situation →</a></article>`).join("");
 
+function insertBeforeMainEnd(html, section, label) {
+  const mainEnd = /<\/main\s*>/i;
+  if (!mainEnd.test(html)) throw new Error(`${label}: cannot add decision discovery because </main> is missing.`);
+  const next = html.replace(mainEnd, (closing) => `${section}${closing}`);
+  if (next === html || !next.includes(section)) throw new Error(`${label}: decision discovery insertion did not modify the page.`);
+  return next;
+}
+
 let linkedBiasPages = 0;
 for (const [biasSlug, situations] of situationByBias) {
   const path = join(OUT, "biases", biasSlug, "index.html");
   let html = await readFile(path, "utf8");
   if (html.includes('class="decision-application-links"')) continue;
   const section = `<section class="section decision-application-links"><p class="kicker">Use this lens</p><h2>Where this concept may matter in a real decision.</h2><div class="application-grid">${cards(situations.slice(0, 4))}</div></section>`;
-  html = html.replace("</main>", `${section}</main>`);
+  html = insertBeforeMainEnd(html, section, biasSlug);
   await writeFile(path, html);
+  if (!html.includes('class="decision-application-links"')) throw new Error(`${biasSlug}: decision application section was not persisted.`);
   linkedBiasPages += 1;
 }
 
@@ -44,8 +53,9 @@ for (const skill of skillsData.entries) {
   let html = await readFile(path, "utf8");
   if (html.includes('class="skill-situation-links"')) continue;
   const section = `<section class="section skill-situation-links"><p class="kicker">Practice in context</p><h2>Use this skill in a real decision.</h2><div class="application-grid">${cards(situations)}</div></section>`;
-  html = html.replace("</main>", `${section}</main>`);
+  html = insertBeforeMainEnd(html, section, skill.slug);
   await writeFile(path, html);
+  if (!html.includes('class="skill-situation-links"')) throw new Error(`${skill.slug}: skill situation section was not persisted.`);
   linkedSkillPages += 1;
 }
 
