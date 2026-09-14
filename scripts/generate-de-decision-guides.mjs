@@ -154,18 +154,19 @@ async function walkHtml(dir) {
 for (const file of await walkHtml(join(OUT, "de"))) {
   let html = await readFile(file, "utf8");
   let dirty = false;
-  if (!html.includes('href="/de/entscheidungen/"')) {
-    const navPattern = /(<a href="\/de\/techniques\/"[^>]*>Denkwerkzeuge<\/a>)/;
-    if (navPattern.test(html)) {
-      html = html.replace(navPattern, `$1<a href="/de/entscheidungen/">Situationen</a>`);
-      dirty = true;
-    }
-    const footerPattern = /(<a href="\/de\/techniques\/">Denkwerkzeuge<\/a>)/;
-    if (footerPattern.test(html)) {
-      html = html.replace(footerPattern, `$1<a href="/de/entscheidungen/">Situationen</a>`);
-      dirty = true;
-    }
-  }
+  const situationLink = '<a href="/de/entscheidungen/">Situationen</a>';
+  const navPattern = /(<a href="\/de\/techniques\/"[^>]*>Denkwerkzeuge<\/a>)/;
+  html = html.replace(/<header\b[\s\S]*?<\/header>/i, (headerHtml) => {
+    if (headerHtml.includes('href="/de/entscheidungen/"') || !navPattern.test(headerHtml)) return headerHtml;
+    dirty = true;
+    return headerHtml.replace(navPattern, `$1${situationLink}`);
+  });
+  const footerPattern = /(<a href="\/de\/techniques\/">Denkwerkzeuge<\/a>)/;
+  html = html.replace(/<footer\b[\s\S]*?<\/footer>/i, (footerHtml) => {
+    if (footerHtml.includes('href="/de/entscheidungen/"') || !footerPattern.test(footerHtml)) return footerHtml;
+    dirty = true;
+    return footerHtml.replace(footerPattern, `$1${situationLink}`);
+  });
   if (dirty) await writeFile(file, html);
 }
 
