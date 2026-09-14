@@ -43,6 +43,7 @@ jobs:
           node scripts/generate-404.mjs
           node scripts/finalize-public-metadata.mjs
           node scripts/finalize-search-appearance.mjs
+          node scripts/finalize-browser-surface.mjs
       - name: Install pinned browser runtime
         run: |
           npm install --no-save playwright@1.55.0
