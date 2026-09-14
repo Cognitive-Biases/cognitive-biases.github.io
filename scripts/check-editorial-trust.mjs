@@ -3,12 +3,15 @@ import { join } from "node:path";
 
 const OUT = "dist";
 const SITE = "https://cognitive-biases.github.io";
+const EXPECTED_MAINTAINER = "MetalHatsCats Team";
 const trust = JSON.parse(await readFile("data/project-trust.json", "utf8"));
 const citation = await readFile("CITATION.cff", "utf8");
+const zenodo = JSON.parse(await readFile(".zenodo.json", "utf8"));
 const errors = [];
 
-if (!trust.maintainer?.name || trust.maintainer.name !== "MetalHatsCats") errors.push("trust data: maintainer name missing or unexpected");
-if (!citation.includes('name: "MetalHatsCats"')) errors.push("CITATION.cff and trust maintainer are not aligned");
+if (!trust.maintainer?.name || trust.maintainer.name !== EXPECTED_MAINTAINER) errors.push("trust data: maintainer name missing or unexpected");
+if (!citation.includes(`name: "${EXPECTED_MAINTAINER}"`)) errors.push("CITATION.cff and trust maintainer are not aligned");
+if (!Array.isArray(zenodo.creators) || !zenodo.creators.some((creator) => creator?.name === EXPECTED_MAINTAINER)) errors.push(".zenodo.json and trust maintainer are not aligned");
 if (!Array.isArray(trust.workflow) || trust.workflow.length < 5) errors.push("trust data: editorial workflow is incomplete");
 if (!Array.isArray(trust.automation?.notAllowed) || !trust.automation.notAllowed.some((item) => item.includes("Automatically promote"))) errors.push("trust data: automation boundary is missing");
 
@@ -20,6 +23,8 @@ for (const path of ["about/editorial/index.html", "data/project-trust.json"]) {
 try {
   const page = await readFile(join(OUT, "about", "editorial", "index.html"), "utf8");
   for (const required of [trust.maintainer.name, "Evidence-reviewed", "Legacy / generated", "Automation and AI", "/methodology/", "/quality/", "/assets/brand.webp"]) if (!page.includes(required)) errors.push(`editorial page missing ${required}`);
+  if (!page.includes('"@type":"Organization"')) errors.push("editorial structured data must model the maintainer team as an Organization");
+  if (page.includes('"@type":"Person","name":"MetalHatsCats Team"')) errors.push("editorial structured data incorrectly models the maintainer team as a Person");
   const sitemap = await readFile(join(OUT, "sitemap.xml"), "utf8");
   if (!sitemap.includes(`${SITE}/about/editorial/`)) errors.push("sitemap missing editorial page");
 } catch (error) {
@@ -29,6 +34,9 @@ try {
 let footerPages = 0;
 let trustLinkedPages = 0;
 let oldBrandingPages = 0;
+let staleMaintainerPages = 0;
+let personalMaintainerLeakPages = 0;
+const personalMaintainerVariants = ["Dzmitryi Kharlanau", "Dmitry Kharlanau", "Дмитрий Харланов", "Дмитрий Ухарланов"];
 async function inspect(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name);
@@ -40,6 +48,8 @@ async function inspect(dir) {
         if (html.includes('href="/about/editorial/"')) trustLinkedPages += 1;
       }
       if (html.includes("Made by") && html.includes("MetalHatsCats")) oldBrandingPages += 1;
+      if (/Maintained by\s*<a[^>]*>MetalHatsCats<\/a>/.test(html)) staleMaintainerPages += 1;
+      if (personalMaintainerVariants.some((name) => html.includes(name))) personalMaintainerLeakPages += 1;
     }
   }
 }
@@ -47,10 +57,12 @@ await inspect(OUT);
 if (!footerPages) errors.push("no footer pages found");
 if (footerPages !== trustLinkedPages) errors.push(`editorial trust link missing from ${footerPages - trustLinkedPages} footer page(s)`);
 if (oldBrandingPages) errors.push(`legacy Made by MetalHatsCats credit remains on ${oldBrandingPages} page(s)`);
+if (staleMaintainerPages) errors.push(`stale Maintained by MetalHatsCats credit remains on ${staleMaintainerPages} page(s)`);
+if (personalMaintainerLeakPages) errors.push(`personal maintainer identity leaked into ${personalMaintainerLeakPages} public page(s)`);
 
 if (errors.length) {
   console.error("Editorial trust check failed:");
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`Editorial trust OK: ${trustLinkedPages}/${footerPages} footer pages link to the public review process.`);
+console.log(`Editorial trust OK: ${trustLinkedPages}/${footerPages} footer pages link to the public review process and credit ${EXPECTED_MAINTAINER}.`);
