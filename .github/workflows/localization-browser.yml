@@ -47,6 +47,8 @@ jobs:
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
+      - name: Prove false-green detectors
+        run: node scripts/browser-localization-fault-injection.mjs
       - name: Start local static server
         run: |
           node scripts/serve.mjs > /tmp/cognitive-biases-browser-server.log 2>&1 &
@@ -109,6 +111,8 @@ jobs:
         run: |
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
+      - name: Prove false-green detectors
+        run: node scripts/browser-localization-fault-injection.mjs
       - name: Verify deployed localization in Chromium
         env:
           TARGET_BASE_URL: https://cognitive-biases.github.io
