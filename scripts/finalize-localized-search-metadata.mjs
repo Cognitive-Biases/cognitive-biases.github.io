@@ -12,8 +12,10 @@ const LOCALES = {
   ru: { intl: "ru-RU", stopwords: ["и","или","с","со","для","по","на","в","во","из","от","до","о","об","без","под","над","при"] }
 };
 
+const seenDescriptions = new Map();
 let filesChecked = 0;
 let descriptionsChanged = 0;
+let duplicateRepairs = 0;
 let russianCopyChanged = 0;
 
 for (const [locale, config] of Object.entries(LOCALES)) {
@@ -41,26 +43,49 @@ for (const [locale, config] of Object.entries(LOCALES)) {
     }
 
     const metaTag = findMetaTag(html, "name", "description");
-    const current = metaTag ? getAttribute(metaTag, "content") : "";
-    if (current && endsWithStopword(current, stopwords, config.intl)) {
-      const source = bestSchemaDescription(html, current) || decodeHtml(current);
-      const improved = smartShorten(source, stopwords, config.intl, MAX_META);
-      if (improved && improved !== decodeHtml(current)) {
+    const current = metaTag ? decodeHtml(getAttribute(metaTag, "content")) : "";
+    if (current) {
+      let improved = current;
+      if (current.length > MAX_META || endsWithStopword(current, stopwords, config.intl)) {
+        improved = smartShorten(current, stopwords, config.intl, MAX_META);
+      }
+
+      let normalized = normalizeForCompare(improved);
+      if (normalized && seenDescriptions.has(normalized)) {
+        const label = pageLabel(html);
+        improved = makePageSpecific(current, label, stopwords, config.intl, MAX_META);
+        normalized = normalizeForCompare(improved);
+        duplicateRepairs += 1;
+      }
+
+      if (normalized && seenDescriptions.has(normalized)) {
+        const title = pageTitle(html);
+        improved = makePageSpecific(current, title, stopwords, config.intl, MAX_META);
+        normalized = normalizeForCompare(improved);
+      }
+
+      if (normalized && seenDescriptions.has(normalized)) {
+        throw new Error(`Unable to keep localized meta description unique for ${file}; collides with ${seenDescriptions.get(normalized)}.`);
+      }
+
+      if (improved && improved !== current) {
         html = replaceMetaContent(html, "name", "description", improved);
         html = replaceMetaContent(html, "property", "og:description", improved);
         descriptionsChanged += 1;
         dirty = true;
       }
+
+      if (normalized) seenDescriptions.set(normalized, file);
     }
 
     if (dirty) await writeFile(file, html);
   }
 }
 
-console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${russianCopyChanged} Russian copy repair(s).`);
+console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${duplicateRepairs} collision repair(s), ${russianCopyChanged} Russian copy repair(s).`);
 
 async function walkHtml(dir) {
-  const entries = await readdir(dir, { withFileTypes: true });
+  const entries = (await readdir(dir, { withFileTypes: true })).sort((a, b) => a.name.localeCompare(b.name));
   const files = [];
   for (const entry of entries) {
     const path = join(dir, entry.name);
@@ -89,33 +114,6 @@ function replaceMetaContent(html, key, value, content) {
   return html.replace(tag, next);
 }
 
-function bestSchemaDescription(html, current) {
-  const currentPlain = normalizeForCompare(decodeHtml(current));
-  const scripts = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
-  const candidates = [];
-  for (const match of scripts) {
-    try {
-      collectDescriptions(JSON.parse(match[1]), candidates);
-    } catch {
-      // A malformed JSON-LD block is handled by the canonical structured-data checks.
-    }
-  }
-  const prefix = currentPlain.slice(0, Math.min(48, currentPlain.length));
-  return candidates
-    .filter((value) => normalizeForCompare(value).startsWith(prefix) && value.length > decodeHtml(current).length)
-    .sort((a, b) => b.length - a.length)[0] || "";
-}
-
-function collectDescriptions(value, output) {
-  if (!value || typeof value !== "object") return;
-  if (typeof value.description === "string") output.push(value.description.replace(/\s+/g, " ").trim());
-  if (Array.isArray(value)) {
-    for (const item of value) collectDescriptions(item, output);
-    return;
-  }
-  for (const child of Object.values(value)) collectDescriptions(child, output);
-}
-
 function smartShorten(value, stopwords, intl, max) {
   const clean = decodeHtml(String(value || "")).replace(/\s+/g, " ").trim();
   if (!clean) return "";
@@ -128,8 +126,28 @@ function smartShorten(value, stopwords, intl, max) {
   while (endsWithStopword(clipped, stopwords, intl)) {
     clipped = clipped.replace(/\s+[\p{L}’'-]+$/u, "").replace(/[\s,;:–—-]+$/u, "").trim();
   }
-  if (!clipped) return clean.slice(0, max);
+  if (!clipped) return clean.slice(0, max).trim();
   return `${clipped}…`;
+}
+
+function makePageSpecific(source, label, stopwords, intl, max) {
+  const cleanLabel = String(label || "").replace(/\s+/g, " ").trim();
+  if (!cleanLabel) return smartShorten(source, stopwords, intl, max);
+  return smartShorten(`${cleanLabel}: ${source}`, stopwords, intl, max);
+}
+
+function pageLabel(html) {
+  const match = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i);
+  return match ? textContent(match[1]) : "";
+}
+
+function pageTitle(html) {
+  const match = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
+  return match ? textContent(match[1]).split(/\s+[|–—]\s+/)[0].trim() : "";
+}
+
+function textContent(value) {
+  return decodeHtml(String(value || "").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
 }
 
 function endsWithStopword(value, stopwords, intl) {
