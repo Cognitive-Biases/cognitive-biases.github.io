@@ -76,6 +76,8 @@ jobs:
         run: node scripts/inject-goose-proof-mark.mjs dist
       - name: Re-apply Image Discovery to the final artifact
         run: node scripts/apply-image-discovery.mjs
+      - name: Finalize browser surface
+        run: node scripts/finalize-browser-surface.mjs
       - name: Gate final Image Discovery surface
         run: node scripts/check-image-discovery.mjs
       - name: Gate final Internal Discovery & Distribution surface
