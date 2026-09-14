@@ -8,6 +8,7 @@ const ORIGIN = new URL(SITE).origin;
 const allowedHeadElements = new Set(["base", "link", "meta", "title", "style", "script", "noscript", "template"]);
 const hardIssues = [];
 const watches = [];
+const queryLinkDiagnostics = new Map();
 
 const decode = (value = "") => String(value)
   .replaceAll("&amp;", "&")
@@ -102,7 +103,15 @@ function inspectLinks(html, url) {
     if (target.origin !== ORIGIN) continue;
     const rel = String(a.rel || "").toLowerCase().split(/\s+/).filter(Boolean);
     if (rel.includes("nofollow")) hardIssues.push(`${url}: internal discovery link is nofollow -> ${target.href}`);
-    if (target.search) queryLinks += 1;
+    if (target.search) {
+      queryLinks += 1;
+      const keys = [...target.searchParams.keys()].sort().join(",") || "(none)";
+      const diagnosticKey = `${target.pathname}?{${keys}}`;
+      const current = queryLinkDiagnostics.get(diagnosticKey) || { count: 0, examples: [] };
+      current.count += 1;
+      if (current.examples.length < 3) current.examples.push(`${new URL(url).pathname} -> ${target.pathname}${target.search}`);
+      queryLinkDiagnostics.set(diagnosticKey, current);
+    }
   }
   return queryLinks;
 }
@@ -124,7 +133,15 @@ for (const url of urls) {
   if (declaredCanonical !== url) hardIssues.push(`${url}: critic observed non-self canonical ${declaredCanonical || "missing"}`);
 }
 
-if (queryLinkCount > 0) watches.push(`${queryLinkCount} same-origin query-bearing internal link(s) are discoverable; review TSC-04 crawl-state-space applicability.`);
+if (queryLinkCount > 0) {
+  watches.push(`${queryLinkCount} same-origin query-bearing internal link(s) are discoverable; review TSC-04 crawl-state-space applicability.`);
+  const ranked = [...queryLinkDiagnostics.entries()].sort((left, right) => right[1].count - left[1].count);
+  console.log(`TSC-04 query-link diagnostics (${ranked.length} pattern(s)):`);
+  for (const [pattern, detail] of ranked.slice(0, 20)) {
+    console.log(`- ${detail.count} × ${pattern}`);
+    for (const example of detail.examples) console.log(`  ${example}`);
+  }
+}
 if (paginationCount === 0) watches.push("TSC-03 pagination is not applicable to the current sitemap cohort.");
 else watches.push(`TSC-03 detected ${paginationCount} paginated canonical URL(s); existing self-canonical gate remains active.`);
 
