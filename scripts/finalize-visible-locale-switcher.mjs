@@ -1,0 +1,54 @@
+import { access, readFile, writeFile } from "node:fs/promises";
+import { join } from "node:path";
+
+const OUT = "dist";
+const manifest = JSON.parse(await readFile("data/locales.json", "utf8"));
+const canonicalLocale = manifest.canonicalLocale || "en";
+const homes = [];
+
+for (const locale of manifest.locales || []) {
+  const route = locale.code === canonicalLocale ? "/" : locale.urlBase || `/${locale.code.toLowerCase()}/`;
+  const file = route === "/" ? join(OUT, "index.html") : join(OUT, route.replace(/^\//, ""), "index.html");
+  try {
+    await access(file);
+    homes.push({ ...locale, route, file });
+  } catch {
+    throw new Error(`Declared published locale is missing a generated home page: ${locale.code} (${route})`);
+  }
+}
+
+const canonicalHome = homes.find((home) => home.code === canonicalLocale);
+if (!canonicalHome) throw new Error(`Canonical locale ${canonicalLocale} is missing from the generated locale graph.`);
+
+let html = await readFile(canonicalHome.file, "utf8");
+html = html.replace(/<(div|nav)\b[^>]*class=["'][^"']*\blocale-switch-bar\b[^"']*["'][^>]*>[\s\S]*?<\/\1>/gi, "");
+
+const switcherItems = homes.map((home) => home.code === canonicalLocale
+  ? `<span aria-current="page" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</span>`
+  : `<a href="${escapeAttribute(home.route)}" hreflang="${escapeAttribute(home.code)}" lang="${escapeAttribute(home.code)}">${escapeHtml(home.name || home.code)}</a>`
+).join("");
+const switcher = `<nav class="locale-switch-bar" data-localization-graph-switcher="true" aria-label="Language">${switcherItems}</nav>`;
+
+if (!/<body(?:\s[^>]*)?>/i.test(html)) throw new Error("Cannot insert the visible locale switcher without <body>.");
+html = html.replace(/<body([^>]*)>/i, `<body$1>${switcher}`);
+await writeFile(canonicalHome.file, html);
+
+const cssPath = join(OUT, "styles.css");
+let css = await readFile(cssPath, "utf8");
+const rule = /\.locale-switch-bar\{([^}]*)\}/;
+if (rule.test(css)) {
+  css = css.replace(rule, (match, body) => body.includes("flex-wrap:") ? match : `.locale-switch-bar{flex-wrap:wrap;${body}}`);
+} else {
+  css += `\n.locale-switch-bar{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.65rem;align-items:center;padding:.65rem max(1rem,calc((100vw - 1160px)/2));font-size:.9rem;background:#f5f2ea;border-bottom:1px solid rgba(16,22,34,.12)}.locale-switch-bar a{font-weight:900}.locale-switch-bar [aria-current="page"]{text-decoration:underline;text-underline-offset:.2em}\n`;
+}
+await writeFile(cssPath, css);
+
+console.log(`Visible locale switcher finalized from manifest: ${homes.map((home) => home.code).join(", ")}.`);
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value);
+}
