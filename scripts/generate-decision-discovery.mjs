@@ -3,7 +3,6 @@ import { join } from "node:path";
 
 const OUT = "dist";
 const situationsData = JSON.parse(await readFile("data/situations.json", "utf8"));
-const techniquesData = JSON.parse(await readFile("data/techniques.json", "utf8"));
 const skillsData = JSON.parse(await readFile("data/skills.json", "utf8"));
 
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (c) => ({
@@ -25,23 +24,33 @@ for (const situation of situationsData.situations) {
 
 const cards = (items) => items.map((item) => `<article class="application-card"><span>Decision situation</span><strong>${esc(item.title)}</strong><p>${esc(item.summary)}</p><a href="/situations/${item.slug}/">Review this situation →</a></article>`).join("");
 
-function insertBeforeMainEnd(html, section, label) {
-  const mainEnd = /<\/main\s*>/i;
-  if (!mainEnd.test(html)) throw new Error(`${label}: cannot add decision discovery because </main> is missing.`);
-  const next = html.replace(mainEnd, (closing) => `${section}${closing}`);
-  if (next === html || !next.includes(section)) throw new Error(`${label}: decision discovery insertion did not modify the page.`);
+function hasClass(html, className) {
+  return [...String(html).matchAll(/\bclass\s*=\s*(["'])(.*?)\1/gi)]
+    .some((match) => match[2].split(/\s+/).includes(className));
+}
+
+function insertBeforeMainEnd(html, section, markerClass, label) {
+  const match = /<\/main\s*>/i.exec(html);
+  if (!match || match.index == null) throw new Error(`${label}: cannot add decision discovery because </main> is missing.`);
+  const next = `${html.slice(0, match.index)}${section}${html.slice(match.index)}`;
+  if (next === html || !hasClass(next, markerClass)) throw new Error(`${label}: decision discovery insertion did not create .${markerClass}.`);
   return next;
+}
+
+async function writeAndVerify(path, html, markerClass, label) {
+  await writeFile(path, html, "utf8");
+  const persisted = await readFile(path, "utf8");
+  if (!hasClass(persisted, markerClass)) throw new Error(`${label}: .${markerClass} was not persisted.`);
 }
 
 let linkedBiasPages = 0;
 for (const [biasSlug, situations] of situationByBias) {
   const path = join(OUT, "biases", biasSlug, "index.html");
   let html = await readFile(path, "utf8");
-  if (html.includes('class="decision-application-links"')) continue;
+  if (hasClass(html, "decision-application-links")) continue;
   const section = `<section class="section decision-application-links"><p class="kicker">Use this lens</p><h2>Where this concept may matter in a real decision.</h2><div class="application-grid">${cards(situations.slice(0, 4))}</div></section>`;
-  html = insertBeforeMainEnd(html, section, biasSlug);
-  await writeFile(path, html);
-  if (!html.includes('class="decision-application-links"')) throw new Error(`${biasSlug}: decision application section was not persisted.`);
+  html = insertBeforeMainEnd(html, section, "decision-application-links", biasSlug);
+  await writeAndVerify(path, html, "decision-application-links", biasSlug);
   linkedBiasPages += 1;
 }
 
@@ -51,11 +60,10 @@ for (const skill of skillsData.entries) {
   if (!situations.length) continue;
   const path = join(OUT, "skills", skill.slug, "index.html");
   let html = await readFile(path, "utf8");
-  if (html.includes('class="skill-situation-links"')) continue;
+  if (hasClass(html, "skill-situation-links")) continue;
   const section = `<section class="section skill-situation-links"><p class="kicker">Practice in context</p><h2>Use this skill in a real decision.</h2><div class="application-grid">${cards(situations)}</div></section>`;
-  html = insertBeforeMainEnd(html, section, skill.slug);
-  await writeFile(path, html);
-  if (!html.includes('class="skill-situation-links"')) throw new Error(`${skill.slug}: skill situation section was not persisted.`);
+  html = insertBeforeMainEnd(html, section, "skill-situation-links", skill.slug);
+  await writeAndVerify(path, html, "skill-situation-links", skill.slug);
   linkedSkillPages += 1;
 }
 
@@ -70,6 +78,6 @@ const marker = "## Decision-first resources";
 if (!llms.includes(marker)) {
   llms = `${llms.trimEnd()}\n\n${marker}\n\n- Decision-first entry point: https://cognitive-biases.github.io/decide/\n- Situation-first guides: https://cognitive-biases.github.io/situations/\n- Practical decision techniques: https://cognitive-biases.github.io/techniques/\n- AI Decision Review contract: https://cognitive-biases.github.io/decide/for-agents/\n- Situation data: https://cognitive-biases.github.io/data/situations.json\n- Technique data: https://cognitive-biases.github.io/data/techniques.json\n- Decision Review examples: https://cognitive-biases.github.io/data/decision-review-examples.json\n- Decision Review JSON Schema: https://cognitive-biases.github.io/data/schemas/decision-review.schema.json\n- Editorial process and maintainer: https://cognitive-biases.github.io/about/editorial/\n- Project trust metadata: https://cognitive-biases.github.io/data/project-trust.json\n\nDecision-first interpretation rule: when a person describes a real decision, start from the closest supported situation instead of guessing a bias label. Keep observed facts, inferred reasoning risks and missing evidence separate. Treat bias records as candidate lenses or checking questions, not diagnoses of a person or team. Prefer a linked practical technique when it can change the next reasoning step. If no reviewed situation or concept fits the available evidence, return no match rather than inventing a label.\n`;
 }
-await writeFile(llmsPath, llms);
+await writeFile(llmsPath, llms, "utf8");
 
 console.log(`Decision discovery linked ${linkedBiasPages} bias page(s), ${linkedSkillPages} skill page(s), and published decision-first AI discovery.`);
