@@ -14,22 +14,24 @@ const LOCALES = {
   ru: { intl: "ru-RU", stopwords: ["и","или","с","со","для","по","на","в","во","из","от","до","о","об","без","под","над","при"] }
 };
 
-const arwp = JSON.parse(await readFile(".arwp/localization.json", "utf8"));
-const aiLocales = JSON.parse(await readFile("ai/locales.json", "utf8"));
-const contract = JSON.parse(await readFile("data/localization-contract.json", "utf8"));
-const localeManifest = JSON.parse(await readFile("data/locales.json", "utf8"));
-const dispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));
-const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((entry) => entry.published);
+const arwp = await readJson(".arwp/localization.json");
+const aiLocales = await readJson("ai/locales.json");
+const contract = await readJson("data/localization-contract.json");
+const localeManifest = await readJson("data/locales.json");
+const dispositions = await readJson("data/duplicate-dispositions.json");
+const biases = (await readJson("data/biases.json")).filter((entry) => entry.published);
 const byId = new Map(biases.map((entry) => [entry.id, entry]));
 const sitemap = await readFile(join(OUT, "sitemap.xml"), "utf8");
 
 const routing = arwp.surfaces?.find((surface) => surface.id === "agent-routing-llms");
 if (routing?.localePattern !== "dist/{locale}/llms.txt") {
-  fail(`ARWP routing surface must describe the final Pages artifact path; found ${routing?.localePattern || "missing"}.`);
+  fail(`ARWP routing-only surface must describe final artifact paths; found ${routing?.localePattern || "missing"}.`);
 }
-if (!routing?.requiredForRoles?.includes("human-interface")) {
-  fail("Localized llms routing must be required for published human-interface locales.");
+if (!routing?.requiredForRoles?.includes("routing-only") || routing.requiredForRoles.includes("human-interface")) {
+  fail("Generic agent-routing-llms must remain scoped to routing-only locales; human locale machine surfaces are domain-validated.");
 }
+
+await checkHumanLocaleLlms();
 
 for (const code of ["de", "ru"]) {
   const arwpLocale = arwp.locales?.find((entry) => entry.code === code);
@@ -61,12 +63,9 @@ if (!/\.fr-problem\s*\{[^}]*color\s*:\s*#101622/i.test(frCss)) {
 
 const localeFiles = new Map();
 for (const [locale, config] of Object.entries(LOCALES)) {
-  let files = [];
-  try {
-    files = await walkHtml(join(OUT, locale));
-  } catch {
-    continue;
-  }
+  const root = join(OUT, locale);
+  if (!(await exists(root))) continue;
+  const files = await walkHtml(root);
   localeFiles.set(locale, files);
   const stopwords = new Set(config.stopwords);
   for (const file of files) {
@@ -76,19 +75,7 @@ for (const [locale, config] of Object.entries(LOCALES)) {
     if (description && endsWithStopword(description, stopwords, config.intl)) {
       fail(`${file}: localized meta description ends with a dangling function word.`);
     }
-
-    if (locale === "de") {
-      const header = html.match(/<header\b[\s\S]*?<\/header>/i)?.[0] || "";
-      const footer = html.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0] || "";
-      if (header.includes('href="/de/techniques/"')) {
-        const count = (header.match(/href="\/de\/entscheidungen\/"/g) || []).length;
-        if (count !== 1) fail(`${file}: German header must contain exactly one Situationen link; found ${count}.`);
-      }
-      if (footer.includes('href="/de/techniques/"')) {
-        const count = (footer.match(/href="\/de\/entscheidungen\/"/g) || []).length;
-        if (count !== 1) fail(`${file}: German footer must contain exactly one Situationen link; found ${count}.`);
-      }
-    }
+    if (locale === "de") checkGermanNavigation(file, html);
   }
 }
 
@@ -102,9 +89,9 @@ try {
   fail("Russian homepage is missing.");
 }
 
-const evidenceClasses = JSON.parse(await readFile("data/evidence-classes.json", "utf8"));
+const evidenceClasses = await readJson("data/evidence-classes.json");
 try {
-  const publicRu = JSON.parse(await readFile(join(OUT, "data", "ru", "biases.json"), "utf8"));
+  const publicRu = await readJson(join(OUT, "data", "ru", "biases.json"));
   const expected = Object.keys(evidenceClasses.bySlug || {}).sort();
   const actual = (publicRu.entries || []).map((entry) => entry.slug).sort();
   if (expected.length !== actual.length || expected.some((slug, index) => slug !== actual[index])) {
@@ -122,34 +109,57 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log("Localization regression checks passed: routing path, partial-human DE/RU classification, main-push governance, French contrast, localized metadata, German navigation, Russian reviewed coverage/copy, reciprocal home hreflang and localized duplicate equivalence.");
+console.log("Localization regression checks passed: routing-role boundary, published human-locale llms surfaces, partial-human DE/RU classification, main-push governance, French contrast, localized metadata, German navigation, Russian reviewed coverage/copy, reciprocal home hreflang and localized duplicate equivalence.");
+
+async function checkHumanLocaleLlms() {
+  for (const locale of localeManifest.locales || []) {
+    if (locale.code === localeManifest.canonicalLocale) continue;
+    const route = locale.urlBase || `/${locale.code.toLowerCase()}/`;
+    const folder = route.replace(/^\//, "").replace(/\/$/, "");
+    const target = join(OUT, folder, "llms.txt");
+    if (!(await exists(target))) {
+      fail(`${locale.code}: published human locale is missing ${target}.`);
+      continue;
+    }
+    const content = await readFile(target, "utf8");
+    if (!content.trim() || !content.includes("Cognitive Biases")) fail(`${locale.code}: ${target} is empty or invalid.`);
+    const aiRecord = aiLocales.locales?.find((entry) => entry.language === locale.code);
+    const expectedUrl = `${SITE}${route}llms.txt`;
+    if (aiRecord?.llms !== expectedUrl) fail(`${locale.code}: AI manifest llms URL must match ${expectedUrl}; found ${aiRecord?.llms || "missing"}.`);
+  }
+}
+
+function checkGermanNavigation(file, html) {
+  const header = html.match(/<header\b[\s\S]*?<\/header>/i)?.[0] || "";
+  const footer = html.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0] || "";
+  if (header.includes('href="/de/techniques/"')) {
+    const count = (header.match(/href="\/de\/entscheidungen\/"/g) || []).length;
+    if (count !== 1) fail(`${file}: German header must contain exactly one Situationen link; found ${count}.`);
+  }
+  if (footer.includes('href="/de/techniques/"')) {
+    const count = (footer.match(/href="\/de\/entscheidungen\/"/g) || []).length;
+    if (count !== 1) fail(`${file}: German footer must contain exactly one Situationen link; found ${count}.`);
+  }
+}
 
 async function checkHomeHreflangGraph() {
   const homes = [];
   for (const locale of localeManifest.locales || []) {
     const route = locale.code === localeManifest.canonicalLocale ? "/" : locale.urlBase || `/${locale.code.toLowerCase()}/`;
     const file = route === "/" ? join(OUT, "index.html") : join(OUT, route.replace(/^\//, ""), "index.html");
-    try {
-      await access(file);
-      homes.push({ code: locale.code, route, file });
-    } catch {
-      // Only public homes belong to the published equivalence cluster.
-    }
+    if (await exists(file)) homes.push({ code: locale.code, route, file });
   }
   const expected = new Map(homes.map(({ code, route }) => [code.toLowerCase(), `${SITE}${route}`]));
   expected.set("x-default", `${SITE}/`);
   for (const home of homes) {
-    const html = await readFile(home.file, "utf8");
-    const actual = hreflangMap(html);
+    const actual = hreflangMap(await readFile(home.file, "utf8"));
     for (const [code, href] of expected) {
       const values = actual.get(code) || [];
       if (values.length !== 1 || values[0] !== href) {
         fail(`${home.route}: hreflang ${code} must appear exactly once and point to ${href}; found ${values.join(", ") || "missing"}.`);
       }
     }
-    for (const code of actual.keys()) {
-      if (!expected.has(code)) fail(`${home.route}: unexpected home hreflang ${code}; all home clusters must use the shared published-locale graph.`);
-    }
+    for (const code of actual.keys()) if (!expected.has(code)) fail(`${home.route}: unexpected home hreflang ${code}.`);
   }
 }
 
@@ -177,8 +187,7 @@ async function checkLocalizedDuplicateGraph() {
     const records = [];
     for (const file of files) {
       const html = await readFile(file, "utf8");
-      const en = alternateHref(html, "en");
-      const slug = englishBiasSlug(en);
+      const slug = englishBiasSlug(alternateHref(html, "en"));
       if (!slug) continue;
       records.push({ file, html, slug, canonical: canonicalHref(html), self: fileUrl(file) });
     }
@@ -192,30 +201,20 @@ async function checkLocalizedDuplicateGraph() {
         fail(`${locale}/${duplicate.slug}: localized duplicate exists without localized primary ${primary.slug}.`);
         continue;
       }
-      if (duplicateRecord.canonical !== primaryRecord.canonical) {
-        fail(`${locale}/${duplicate.slug}: localized alias canonical must point to localized primary ${primary.slug}.`);
-      }
-      if (alternateHref(duplicateRecord.html, "en") !== `${SITE}/biases/${primary.slug}/`) {
-        fail(`${locale}/${duplicate.slug}: English hreflang must target the reviewed primary English concept.`);
-      }
-      if (sitemap.includes(`<loc>${duplicateRecord.self}</loc>`)) {
-        fail(`${locale}/${duplicate.slug}: localized alias must be removed from the sitemap.`);
-      }
+      if (duplicateRecord.canonical !== primaryRecord.canonical) fail(`${locale}/${duplicate.slug}: localized alias canonical must point to localized primary ${primary.slug}.`);
+      if (alternateHref(duplicateRecord.html, "en") !== `${SITE}/biases/${primary.slug}/`) fail(`${locale}/${duplicate.slug}: English hreflang must target reviewed primary English concept.`);
+      if (sitemap.includes(`<loc>${duplicateRecord.self}</loc>`)) fail(`${locale}/${duplicate.slug}: localized alias must be removed from sitemap.`);
       const aliasPath = new URL(duplicateRecord.self).pathname;
       for (const record of records) {
-        if (record.file === duplicateRecord.file) continue;
-        if (record.html.includes(`href="${aliasPath}"`)) {
+        if (record.file !== duplicateRecord.file && record.html.includes(`href="${aliasPath}"`)) {
           fail(`${relative(OUT, record.file)}: internal discovery still links to localized alias ${aliasPath}.`);
           break;
         }
       }
-
       for (const separateId of group.separateIds || []) {
         const separate = byId.get(separateId);
         const separateRecord = separate ? bySlug.get(separate.slug) : null;
-        if (separateRecord && separateRecord.canonical !== separateRecord.self) {
-          fail(`${locale}/${separate.slug}: reviewed separate homonym must remain self-canonical.`);
-        }
+        if (separateRecord && separateRecord.canonical !== separateRecord.self) fail(`${locale}/${separate.slug}: reviewed separate homonym must remain self-canonical.`);
       }
     }
   }
@@ -223,22 +222,16 @@ async function checkLocalizedDuplicateGraph() {
 
 function runGovernanceFaultInjectionSelfTests() {
   const commentOnly = `// freshness sourceRelease !== release.releaseVersion\nconst ok = true;`;
-  if (hasExecutableFreshnessAssertion(stripJsComments(commentOnly))) {
-    fail("Fault-injection: a freshness assertion in a comment must not satisfy governance.");
-  }
+  if (hasExecutableFreshnessAssertion(stripJsComments(commentOnly))) fail("Fault-injection: freshness assertion in a comment must not satisfy governance.");
   const executable = `if (translations.sourceRelease !== release.releaseVersion) throw new Error('stale');`;
-  if (!hasExecutableFreshnessAssertion(stripJsComments(executable))) {
-    fail("Fault-injection: an executable sourceRelease comparison must satisfy freshness governance.");
-  }
+  if (!hasExecutableFreshnessAssertion(stripJsComments(executable))) fail("Fault-injection: executable sourceRelease comparison must satisfy freshness governance.");
   for (const code of ["de", "ru", "fr", "es", "pt-BR", "it"]) {
     const locale = [...(contract.fullHumanLocales || []), ...(contract.partialHumanLocales || [])].find((entry) => entry.code === code);
     if (!locale) {
       fail(`Fault-injection: ${code} is missing from human locale ownership.`);
       continue;
     }
-    if (isLocaleOwnedPath(`docs/harmless-${code.toLowerCase()}-mention.md`, locale)) {
-      fail(`Fault-injection: harmless filename mention must not count as a ${code} localization update.`);
-    }
+    if (isLocaleOwnedPath(`docs/harmless-${code.toLowerCase()}-mention.md`, locale)) fail(`Fault-injection: harmless filename mention must not count as a ${code} localization update.`);
   }
   const de = contract.partialHumanLocales?.find((entry) => entry.code === "de");
   const ru = contract.partialHumanLocales?.find((entry) => entry.code === "ru");
@@ -247,7 +240,6 @@ function runGovernanceFaultInjectionSelfTests() {
 }
 
 async function walkHtml(dir) {
-  await access(dir);
   const entries = await readdir(dir, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
@@ -310,9 +302,7 @@ function fileUrl(file) {
 }
 
 function stripJsComments(source) {
-  return String(source)
-    .replace(/\/\*[\s\S]*?\*\//g, " ")
-    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+  return String(source).replace(/\/\*[\s\S]*?\*\//g, " ").replace(/(^|[^:])\/\/.*$/gm, "$1");
 }
 
 function hasExecutableFreshnessAssertion(source) {
@@ -323,12 +313,9 @@ function hasExecutableFreshnessAssertion(source) {
 
 function isLocaleOwnedPath(path, locale) {
   const normalized = String(path).replaceAll("\\", "/").toLowerCase();
-  const explicit = [locale.glossary, ...(locale.generatorScripts || []), ...(locale.checkScripts || [])]
-    .filter(Boolean)
-    .map((item) => String(item).replaceAll("\\", "/").toLowerCase());
+  const explicit = [locale.glossary, ...(locale.generatorScripts || []), ...(locale.checkScripts || [])].filter(Boolean).map((item) => String(item).replaceAll("\\", "/").toLowerCase());
   if (explicit.includes(normalized)) return true;
-  const prefixes = (locale.localizedSourcePrefixes || [])
-    .map((item) => String(item).replaceAll("\\", "/").toLowerCase());
+  const prefixes = (locale.localizedSourcePrefixes || []).map((item) => String(item).replaceAll("\\", "/").toLowerCase());
   if (prefixes.some((prefix) => normalized === prefix.replace(/\/$/, "") || normalized.startsWith(prefix))) return true;
   const code = locale.code.toLowerCase();
   const urlCode = code === "pt-br" ? "pt-br" : code;
@@ -339,11 +326,13 @@ function isLocaleOwnedPath(path, locale) {
 }
 
 function decodeHtml(value) {
-  return String(value || "")
-    .replace(/&nbsp;/g, " ")
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;|&apos;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">");
+  return String(value || "").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+}
+
+async function readJson(path) {
+  return JSON.parse(await readFile(path, "utf8"));
+}
+
+async function exists(path) {
+  try { await access(path); return true; } catch { return false; }
 }
