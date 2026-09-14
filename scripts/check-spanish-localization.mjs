@@ -6,7 +6,7 @@ import { loadFrenchTranslations } from "./lib/french-translations.mjs";
 const SITE = "https://cognitive-biases.github.io";
 const TODAY = "2026-09-13";
 
-const [release, canonicalBiasesRaw, canonicalTechniquesDoc, localizedTechniques, frenchTechniquesDoc, ui, pages, locales, aiLocales] = await Promise.all([
+const [release, canonicalBiasesRaw, canonicalTechniquesDoc, localizedTechniques, frenchTechniquesDoc, ui, pages, locales, aiLocales, duplicateDispositions] = await Promise.all([
   readJson("data/release.json"),
   readJson("data/biases.json"),
   readJson("data/techniques.json"),
@@ -15,18 +15,22 @@ const [release, canonicalBiasesRaw, canonicalTechniquesDoc, localizedTechniques,
   readJson("data/ui-es.json"),
   readJson("data/pages-es.json"),
   readJson("data/locales.json"),
-  readJson("ai/locales.json")
+  readJson("ai/locales.json"),
+  readJson("data/duplicate-dispositions.json")
 ]);
 
 const canonicalBiases = Array.isArray(canonicalBiasesRaw) ? canonicalBiasesRaw : canonicalBiasesRaw.biases || [];
 const publishedBiases = canonicalBiases.filter((entry) => entry.published);
+const publishedById = new Map(publishedBiases.map((entry) => [entry.id, entry]));
 const translations = await loadSpanishTranslations({ canonicalBiases, releaseVersion: release.releaseVersion, today: TODAY });
+const translationByCanonical = new Map(translations.entries.map((entry) => [entry.canonicalId, entry]));
 const french = await loadFrenchTranslations({ canonicalBiases, releaseVersion: release.releaseVersion, today: TODAY });
 const frenchByCanonical = new Map(french.entries.map((entry) => [entry.canonicalId, entry]));
 const canonicalTechniques = canonicalTechniquesDoc.techniques || [];
 const canonicalTechniqueBySlug = new Map(canonicalTechniques.map((entry) => [entry.slug, entry]));
 const localizedTechniqueByCanonical = new Map(localizedTechniques.entries.map((entry) => [entry.canonicalSlug, entry]));
 const frenchTechniqueByCanonical = new Map((frenchTechniquesDoc.entries || []).map((entry) => [entry.canonicalSlug, entry]));
+const aliasPrimaryBySlug = buildAliasMap();
 
 const localeRecord = locales.locales?.find((entry) => entry.code === "es");
 if (!localeRecord || localeRecord.role !== "reviewed-layer") throw new Error("Spanish must be registered as a reviewed-layer locale.");
@@ -52,8 +56,6 @@ for (const entry of translations.entries) {
   if (!Array.isArray(entry.examples) || entry.examples.length < 1) throw new Error(`${entry.canonicalId}: add at least one Spanish example.`);
   if (!Array.isArray(entry.searchTerms) || entry.searchTerms.length < 3) throw new Error(`${entry.canonicalId}: add Spanish search/discovery terms.`);
 
-  // Check only authored Spanish copy. "todo" is a normal Spanish word, so editorial
-  // TODO/TBD markers must stay case-sensitive instead of being matched with /i.
   const authoredSpanish = [entry.localizedLabel, entry.summary, entry.practicalQuestion, entry.boundary, ...(entry.examples || [])].join(" ");
   if (/\b(?:TODO|TBD)\b/.test(authoredSpanish) || /\bplaceholder\b/i.test(authoredSpanish)) {
     throw new Error(`${entry.canonicalId}: Spanish record contains editorial placeholder text.`);
@@ -91,11 +93,7 @@ const expected = [
   { path: "/es/", en: "/", fr: "/fr/" },
   { path: "/es/explorar/", en: "/explore/", fr: "/fr/explorer/" },
   { path: "/es/tecnicas/", en: "/techniques/", fr: "/fr/techniques/" },
-  ...translations.entries.map((entry) => ({
-    path: `/es/sesgos/${entry.localizedSlug}/`,
-    en: `/biases/${entry.canonicalId}/`,
-    fr: `/fr/biais/${frenchByCanonical.get(entry.canonicalId).localizedSlug}/`
-  })),
+  ...translations.entries.map((entry) => biasRoute(entry)),
   ...localizedTechniques.entries.map((entry) => ({
     path: `/es/tecnicas/${entry.localizedSlug}/`,
     en: `/techniques/${entry.canonicalSlug}/`,
@@ -109,28 +107,35 @@ for (const item of expected) {
   const target = item.path === "/es/" ? "dist/es/index.html" : join("dist", item.path.replace(/^\//, ""), "index.html");
   await access(target);
   const html = await readFile(target, "utf8");
-  const canonical = `${SITE}${item.path}`;
-  const english = `${SITE}${item.en}`;
-  const frenchUrl = `${SITE}${item.fr}`;
+  const canonical = `${SITE}${item.canonicalPath || item.path}`;
+  const english = `${SITE}${item.canonicalEnglishPath || item.en}`;
+  const frenchUrl = `${SITE}${item.canonicalFrenchPath || item.fr}`;
 
   if (!html.includes('<html lang="es">')) throw new Error(`${item.path}: html lang must be es.`);
-  if (!html.includes(`<link rel="canonical" href="${canonical}">`)) throw new Error(`${item.path}: missing self canonical.`);
+  if (!html.includes(`<link rel="canonical" href="${canonical}">`)) throw new Error(`${item.path}: canonical must point to ${item.canonicalPath || item.path}.`);
   for (const [lang, value] of [["es", canonical], ["en", english], ["fr", frenchUrl], ["x-default", english]]) {
-    if (!html.includes(`hreflang="${lang}" href="${value}"`)) throw new Error(`${item.path}: missing ${lang} hreflang.`);
+    if (!html.includes(`hreflang="${lang}" href="${value}"`)) throw new Error(`${item.path}: missing or stale ${lang} hreflang.`);
   }
   if (!html.includes('"inLanguage":"es"')) throw new Error(`${item.path}: structured data must declare Spanish.`);
-  if (!sitemap.includes(`<loc>${canonical}</loc>`)) throw new Error(`${item.path}: sitemap missing Spanish URL.`);
-
-  const enTarget = item.en === "/" ? "dist/index.html" : join("dist", item.en.replace(/^\//, ""), "index.html");
-  const enHtml = await readFile(enTarget, "utf8");
-  if (!enHtml.includes(`hreflang="es" href="${canonical}"`) || !enHtml.includes(`href="${item.path}"`)) {
-    throw new Error(`${item.path}: English equivalent lacks reciprocal Spanish discovery.`);
+  const listed = sitemap.includes(`<loc>${SITE}${item.path}</loc>`);
+  if (item.isAlias) {
+    if (listed) throw new Error(`${item.path}: reviewed Spanish alias must not remain in sitemap.`);
+  } else if (!listed) {
+    throw new Error(`${item.path}: sitemap missing Spanish URL.`);
   }
 
-  const frTarget = item.fr === "/fr/" ? "dist/fr/index.html" : join("dist", item.fr.replace(/^\//, ""), "index.html");
-  const frHtml = await readFile(frTarget, "utf8");
-  if (!frHtml.includes(`hreflang="es" href="${canonical}"`) || !frHtml.includes(`href="${item.path}"`)) {
-    throw new Error(`${item.path}: French equivalent lacks reciprocal Spanish discovery.`);
+  if (!item.isAlias) {
+    const enTarget = item.en === "/" ? "dist/index.html" : join("dist", item.en.replace(/^\//, ""), "index.html");
+    const enHtml = await readFile(enTarget, "utf8");
+    if (!enHtml.includes(`hreflang="es" href="${canonical}"`) || !enHtml.includes(`href="${item.path}"`)) {
+      throw new Error(`${item.path}: English equivalent lacks reciprocal Spanish discovery.`);
+    }
+
+    const frTarget = item.fr === "/fr/" ? "dist/fr/index.html" : join("dist", item.fr.replace(/^\//, ""), "index.html");
+    const frHtml = await readFile(frTarget, "utf8");
+    if (!frHtml.includes(`hreflang="es" href="${canonical}"`) || !frHtml.includes(`href="${item.path}"`)) {
+      throw new Error(`${item.path}: French equivalent lacks reciprocal Spanish discovery.`);
+    }
   }
 }
 
@@ -148,7 +153,49 @@ for (const phrase of ["Un sesgo es una lente de comprobación", `${SITE}/es/tecn
   if (!llms.includes(phrase)) throw new Error(`Spanish agent routing is missing required guidance: ${phrase}`);
 }
 
-console.log(`Spanish localization OK: ${translations.entries.length}/${publishedBiases.length} published biases, ${localizedTechniques.entries.length}/${canonicalTechniques.length} techniques, reciprocal en/fr/es discovery and machine-readable routing.`);
+console.log(`Spanish localization OK: ${translations.entries.length}/${publishedBiases.length} published biases, ${localizedTechniques.entries.length}/${canonicalTechniques.length} techniques, reciprocal en/fr/es discovery, reviewed alias equivalence and machine-readable routing.`);
+
+function biasRoute(entry) {
+  const primarySlug = aliasPrimaryBySlug.get(entry.canonicalId);
+  if (!primarySlug) {
+    return {
+      path: `/es/sesgos/${entry.localizedSlug}/`,
+      en: `/biases/${entry.canonicalId}/`,
+      fr: `/fr/biais/${frenchByCanonical.get(entry.canonicalId).localizedSlug}/`
+    };
+  }
+  const primarySpanish = translationByCanonical.get(primarySlug);
+  const primaryFrench = frenchByCanonical.get(primarySlug);
+  if (!primarySpanish || !primaryFrench) throw new Error(`${entry.canonicalId}: reviewed duplicate primary ${primarySlug} is missing a Spanish/French counterpart.`);
+  return {
+    path: `/es/sesgos/${entry.localizedSlug}/`,
+    en: `/biases/${entry.canonicalId}/`,
+    fr: `/fr/biais/${frenchByCanonical.get(entry.canonicalId).localizedSlug}/`,
+    canonicalPath: `/es/sesgos/${primarySpanish.localizedSlug}/`,
+    canonicalEnglishPath: `/biases/${primarySlug}/`,
+    canonicalFrenchPath: `/fr/biais/${primaryFrench.localizedSlug}/`,
+    isAlias: true
+  };
+}
+
+function buildAliasMap() {
+  const map = new Map();
+  for (const group of duplicateDispositions.groups || []) {
+    const primary = publishedById.get(group.primaryId);
+    if (!primary) throw new Error(`${group.concept}: duplicate disposition primary ${group.primaryId} is missing.`);
+    const duplicateIds = new Set(group.duplicateIds || []);
+    for (const separateId of group.separateIds || []) {
+      if (duplicateIds.has(separateId)) throw new Error(`${group.concept}: ${separateId} cannot be both duplicate and separate.`);
+      if (!publishedById.has(separateId)) throw new Error(`${group.concept}: reviewed separate id ${separateId} is missing.`);
+    }
+    for (const duplicateId of duplicateIds) {
+      const duplicate = publishedById.get(duplicateId);
+      if (!duplicate) throw new Error(`${group.concept}: duplicate ${duplicateId} is missing.`);
+      map.set(duplicate.slug, primary.slug);
+    }
+  }
+  return map;
+}
 
 async function readJson(path) {
   return JSON.parse(await readFile(path, "utf8"));
