@@ -1,8 +1,75 @@
 import { readFile, writeFile } from "node:fs/promises";
 
 const identity = JSON.parse(await readFile("config/site-identity.json", "utf8"));
-const title = `Page not found | ${identity.siteName}`;
-const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta name="theme-color" content="#101622"><title>${title}</title><meta name="description" content="This Cognitive Biases page does not exist. Continue to the bias library, decision tools or research."><link rel="icon" type="image/png" href="${identity.faviconPath}"><link rel="stylesheet" href="/styles.css"></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/"><img src="/assets/brand.webp" width="48" height="48" alt=""><span>Cognitive<br>Biases</span></a><nav aria-label="Primary"><a href="/decide/">Decide</a><a href="/explore/">Explore</a><a href="/research/">Research</a><a class="nav-cta" href="/data/">Data</a></nav></header><main id="main"><section class="page-hero"><p class="eyebrow">404 · Page not found</p><h1>This route went missing.</h1><p class="lede">The page may have moved, been removed, or never existed. The useful parts of Cognitive Biases are still here.</p><p><a class="button" href="/explore/">Explore cognitive biases</a> <a class="button button--dark" href="/decide/">Use decision tools</a></p></section><section class="section"><p class="kicker">Continue from here</p><h2>Start with what you were trying to do.</h2><div class="feature-list"><article><strong>Learn a bias</strong><p><a href="/explore/">Browse the bias library</a> and evidence-linked explanations.</p></article><article><strong>Make a decision</strong><p><a href="/decide/">Start from a real decision</a> instead of guessing a bias label.</p></article><article><strong>Check the evidence</strong><p><a href="/research/">Read research notes</a>, methods and current evidence work.</p></article></div></section></main><footer class="site-footer"><div><a class="brand brand--footer" href="/"><img src="/assets/brand.webp" width="40" height="40" alt=""><span>Cognitive Biases</span></a><p>A public guide to cognitive biases, evidence and better decisions.</p></div><div class="footer-links"><a href="/explore/">Explore</a><a href="/methodology/">Methodology</a><a href="/quality/">Quality status</a><a href="/data/">Data</a></div><p class="fine-print">Maintained by ${identity.publisher.name}.</p></footer></body></html>`;
+const copy = {
+  en: {
+    base: "/", lang: "en", title: "Page not found", skip: "Skip to content", nav: "Primary navigation",
+    eyebrow: "404 · Page not found", heading: "This page was not found.",
+    lede: "The address may have changed, or the page may no longer exist. You can continue from the Cognitive Biases home page.",
+    home: "Go to the home page", english: "Browse the English library",
+    note: "A public guide to cognitive biases, evidence and better decisions."
+  },
+  de: {
+    base: "/de/", lang: "de", title: "Seite nicht gefunden", skip: "Zum Inhalt springen", nav: "Hauptnavigation",
+    eyebrow: "404 · Seite nicht gefunden", heading: "Diese Seite wurde nicht gefunden.",
+    lede: "Die Adresse hat sich möglicherweise geändert oder die Seite existiert nicht mehr. Du kannst auf der deutschen Startseite weitermachen.",
+    home: "Zur deutschen Startseite", english: "Englische Bibliothek öffnen",
+    note: "Ein öffentlicher Leitfaden zu kognitiven Verzerrungen, Evidenz und besseren Entscheidungen."
+  },
+  ru: {
+    base: "/ru/", lang: "ru", title: "Страница не найдена", skip: "Перейти к содержанию", nav: "Основная навигация",
+    eyebrow: "404 · Страница не найдена", heading: "Такой страницы нет.",
+    lede: "Адрес мог измениться, или страница больше не существует. Продолжить можно с русской главной страницы.",
+    home: "На русскую главную", english: "Открыть английскую библиотеку",
+    note: "Открытый справочник о когнитивных искажениях, доказательствах и более качественных решениях."
+  },
+  fr: {
+    base: "/fr/", lang: "fr", title: "Page introuvable", skip: "Aller au contenu", nav: "Navigation principale",
+    eyebrow: "404 · Page introuvable", heading: "Cette page est introuvable.",
+    lede: "L’adresse a peut-être changé ou la page n’existe plus. Vous pouvez continuer depuis l’accueil en français.",
+    home: "Retour à l’accueil en français", english: "Ouvrir la bibliothèque en anglais",
+    note: "Un guide public sur les biais cognitifs, les preuves et de meilleures décisions."
+  },
+  "pt-BR": {
+    base: "/pt-br/", lang: "pt-BR", title: "Página não encontrada", skip: "Ir para o conteúdo", nav: "Navegação principal",
+    eyebrow: "404 · Página não encontrada", heading: "Esta página não foi encontrada.",
+    lede: "O endereço pode ter mudado ou a página pode não existir mais. Você pode continuar pela página inicial em português.",
+    home: "Ir para a página inicial", english: "Abrir a biblioteca em inglês",
+    note: "Um guia público sobre vieses cognitivos, evidências e decisões melhores."
+  },
+  es: {
+    base: "/es/", lang: "es", title: "Página no encontrada", skip: "Ir al contenido", nav: "Navegación principal",
+    eyebrow: "404 · Página no encontrada", heading: "No encontramos esta página.",
+    lede: "La dirección puede haber cambiado o la página puede haber dejado de existir. Puedes continuar desde la página de inicio en español.",
+    home: "Ir al inicio en español", english: "Abrir la biblioteca en inglés",
+    note: "Una guía pública sobre sesgos cognitivos, evidencia y mejores decisiones."
+  },
+  it: {
+    base: "/it/", lang: "it", title: "Pagina non trovata", skip: "Vai al contenuto", nav: "Navigazione principale",
+    eyebrow: "404 · Pagina non trovata", heading: "Questa pagina non è stata trovata.",
+    lede: "L’indirizzo potrebbe essere cambiato oppure la pagina potrebbe non esistere più. Puoi continuare dalla home page in italiano.",
+    home: "Vai alla home in italiano", english: "Apri la raccolta in inglese",
+    note: "Una guida pubblica sui bias cognitivi, le evidenze e decisioni migliori."
+  }
+};
+
+const serialized = JSON.stringify(copy).replace(/</g, "\\u003c");
+const html = `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><meta name="theme-color" content="#101622">
+<title>Page not found | ${identity.siteName}</title>
+<meta name="description" content="This Cognitive Biases page does not exist. Continue from the localized home page or the English library.">
+<link rel="icon" type="image/png" href="${identity.faviconPath}"><link rel="stylesheet" href="/styles.css">
+<script>window.__CB_404_COPY=${serialized};(()=>{const p=location.pathname.toLowerCase();const entries=Object.entries(window.__CB_404_COPY).sort((a,b)=>b[1].base.length-a[1].base.length);const hit=entries.find(([,v])=>v.base!=="/"&&p.startsWith(v.base))||entries.find(([k])=>k==="en");window.__CB_404_LOCALE=hit[0];document.documentElement.lang=hit[1].lang;})();</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+<header class="site-header"><a class="brand" data-home-link href="/"><img src="/assets/brand.webp" width="48" height="48" alt=""><span>Cognitive<br>Biases</span></a><nav data-i18n-aria="nav" aria-label="Primary navigation"><a data-home-link data-i18n="home" href="/">Go to the home page</a><a href="/explore/" lang="en" data-i18n="english">Browse the English library</a></nav></header>
+<main id="main"><section class="page-hero"><p class="eyebrow" data-i18n="eyebrow">404 · Page not found</p><h1 data-i18n="heading">This page was not found.</h1><p class="lede" data-i18n="lede">The address may have changed, or the page may no longer exist. You can continue from the Cognitive Biases home page.</p><p><a class="button" data-home-link data-i18n="home" href="/">Go to the home page</a> <a class="button button--dark" href="/explore/" lang="en" data-i18n="english">Browse the English library</a></p></section></main>
+<footer class="site-footer"><div><a class="brand brand--footer" data-home-link href="/"><img src="/assets/brand.webp" width="40" height="40" alt=""><span>Cognitive Biases</span></a><p data-i18n="note">A public guide to cognitive biases, evidence and better decisions.</p></div><p class="fine-print">Maintained by ${identity.publisher.name}.</p></footer>
+<script>(()=>{const c=window.__CB_404_COPY[window.__CB_404_LOCALE]||window.__CB_404_COPY.en;document.title=c.title+" | ${identity.siteName}";const meta=document.querySelector('meta[name="description"]');if(meta)meta.content=c.lede;for(const el of document.querySelectorAll('[data-i18n]'))el.textContent=c[el.dataset.i18n]||el.textContent;for(const el of document.querySelectorAll('[data-i18n-aria]'))el.setAttribute('aria-label',c[el.dataset.i18nAria]||el.getAttribute('aria-label'));for(const el of document.querySelectorAll('[data-home-link]'))el.setAttribute('href',c.base);})();</script>
+</body></html>`;
 
 await writeFile("dist/404.html", html);
-console.log("Generated custom noindex GitHub Pages 404.html.");
+console.log("Generated locale-aware noindex GitHub Pages 404.html.");
