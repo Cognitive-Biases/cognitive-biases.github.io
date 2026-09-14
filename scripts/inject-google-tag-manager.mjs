@@ -14,3 +14,4 @@ async function walk(dir){
   }
 }
 await walk("dist");
+await import("./generate-editorial-trust.mjs");
