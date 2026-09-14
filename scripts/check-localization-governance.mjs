@@ -4,6 +4,7 @@ import { execFileSync } from "node:child_process";
 const contract = await readJson("data/localization-contract.json");
 const aiLocales = await readJson("ai/locales.json");
 const exceptions = await readJson(contract.impactRules.exceptionFile);
+const workflow = await readFile(".github/workflows/localization-governance.yml", "utf8");
 
 if (contract.canonicalLocale !== aiLocales.canonicalLanguage) {
   throw new Error(`Localization contract canonical locale ${contract.canonicalLocale} disagrees with ai/locales.json ${aiLocales.canonicalLanguage}.`);
@@ -11,29 +12,45 @@ if (contract.canonicalLocale !== aiLocales.canonicalLanguage) {
 if (contract.policy !== aiLocales.discovery?.policy) {
   throw new Error("Localization policy URL must match ai/locales.json discovery.policy.");
 }
+if (!/\n\s*push:\s*\n\s*branches:\s*\[main\]/m.test(workflow)) {
+  throw new Error("Localization governance workflow must run on pushes to main so the deployed SHA is gated.");
+}
 
-const fullCodes = contract.fullHumanLocales.map((locale) => locale.code);
+const fullHumanLocales = contract.fullHumanLocales || [];
+const partialHumanLocales = contract.partialHumanLocales || [];
+const humanLocales = [...fullHumanLocales, ...partialHumanLocales];
+const humanCodes = humanLocales.map((locale) => locale.code);
 const manifestHuman = aiLocales.humanInterfaceLanguages || [];
 const glossaries = [];
-for (const locale of contract.fullHumanLocales) {
+
+for (const locale of humanLocales) {
   const { code } = locale;
-  if (!manifestHuman.includes(code)) throw new Error(`${code}: full human locale missing from ai/locales.json humanInterfaceLanguages.`);
+  if (!manifestHuman.includes(code)) throw new Error(`${code}: human locale missing from ai/locales.json humanInterfaceLanguages.`);
   const record = aiLocales.locales?.find((entry) => entry.language === code);
   if (!record) throw new Error(`${code}: locale record missing from ai/locales.json.`);
+  if (locale.status && record.status !== locale.status) {
+    throw new Error(`${code}: localization contract status ${locale.status} disagrees with ai/locales.json ${record.status}.`);
+  }
+  if (!record.human) throw new Error(`${code}: human locale must expose a human entry URL in ai/locales.json.`);
 
-  for (const script of [...locale.generatorScripts, ...locale.checkScripts]) await access(script);
+  for (const script of [...(locale.generatorScripts || []), ...(locale.checkScripts || [])]) await access(script);
 
-  if (contract.glossaryPolicy?.requiredForHumanLocales) {
-    if (!locale.glossary) throw new Error(`${code}: full human locale must declare a versioned glossary.`);
+  const glossaryRequired = fullHumanLocales.includes(locale) && contract.glossaryPolicy?.requiredForHumanLocales;
+  if (glossaryRequired) {
+    if (!locale.glossary) throw new Error(`${code}: glossary-governed human locale must declare a versioned glossary.`);
     const glossary = await readJson(locale.glossary);
     validateGlossary(locale, glossary);
     glossaries.push({ code, glossary });
+  } else if (locale.glossary) {
+    const glossary = await readJson(locale.glossary);
+    validateGlossary(locale, glossary);
   }
 
   if (locale.freshnessStrategy === "canonical-release-version") {
-    const checkSources = await Promise.all(locale.checkScripts.map((path) => readFile(path, "utf8")));
-    if (!checkSources.some((source) => source.includes("sourceRelease"))) {
-      throw new Error(`${code}: canonical-release-version freshness strategy requires a checker that validates sourceRelease.`);
+    const checkSources = await Promise.all((locale.checkScripts || []).map((path) => readFile(path, "utf8")));
+    const executableSources = checkSources.map(stripJsComments);
+    if (!executableSources.some(hasExecutableFreshnessAssertion)) {
+      throw new Error(`${code}: canonical-release-version freshness strategy requires an executable checker comparison between sourceRelease and the canonical releaseVersion.`);
     }
   }
 }
@@ -45,6 +62,7 @@ for (const locale of contract.limitedLocales || []) {
   if (!record || record.status !== locale.role) {
     throw new Error(`${locale.code}: limited locale role must match ai/locales.json (${locale.role}).`);
   }
+  if (manifestHuman.includes(locale.code)) throw new Error(`${locale.code}: routing-only locale cannot also be declared as a human interface.`);
 }
 
 validateExceptions(exceptions.exceptions || []);
@@ -52,7 +70,7 @@ validateExceptions(exceptions.exceptions || []);
 const changedFiles = getChangedFiles();
 if (changedFiles.length) enforceLocalizationImpact(changedFiles);
 
-console.log(`Localization governance OK: ${fullCodes.length} human locales, ${glossaries.length} versioned glossaries, ${(contract.limitedLocales || []).length} limited locales${changedFiles.length ? `, ${changedFiles.length} changed files inspected` : ""}.`);
+console.log(`Localization governance OK: ${humanCodes.length} human locales (${fullHumanLocales.length} glossary-governed, ${partialHumanLocales.length} partial), ${glossaries.length} versioned glossaries, ${(contract.limitedLocales || []).length} routing-only locales${changedFiles.length ? `, ${changedFiles.length} changed files inspected` : ""}.`);
 
 function validateGlossary(locale, glossary) {
   if (glossary.locale !== locale.code || glossary.canonicalLocale !== contract.canonicalLocale) {
@@ -94,8 +112,8 @@ function validateExceptions(items) {
     }
     if (item.expiresOn < today) throw new Error(`${item.id}: localization exception expired on ${item.expiresOn}.`);
     for (const code of item.locales) {
-      if (!contract.fullHumanLocales.some((entry) => entry.code === code)) {
-        throw new Error(`${item.id}: unknown full-human locale ${code}.`);
+      if (!humanLocales.some((entry) => entry.code === code)) {
+        throw new Error(`${item.id}: unknown human locale ${code}.`);
       }
     }
   }
@@ -124,15 +142,18 @@ function enforceLocalizationImpact(changedFiles) {
     "data/localization-contract.json",
     "data/localization-exceptions.json",
     "scripts/check-localization-governance.mjs",
+    "scripts/check-localization-regressions.mjs",
     "skills/translation-review/SKILL.md",
-    "ai/locales.json"
+    "ai/locales.json",
+    ".arwp/localization.json",
+    ".github/workflows/localization-governance.yml"
   ]);
   const substantive = watched.filter((path) => !governanceFiles.has(path));
   if (!substantive.length) return;
 
   const activeExceptions = exceptions.exceptions || [];
   const missingLocales = [];
-  for (const locale of contract.fullHumanLocales) {
+  for (const locale of humanLocales) {
     if (hasLocaleSignal(changedFiles, locale.code)) continue;
     if (isExcepted(activeExceptions, locale.code, substantive)) continue;
     missingLocales.push(locale.code);
@@ -152,15 +173,53 @@ function isWatchedCanonicalChange(path) {
 }
 
 function isLocaleOwnedChange(path) {
-  const lower = path.toLowerCase();
-  return Object.values(contract.impactRules.localeSignals || {})
-    .flat()
-    .some((signal) => lower.includes(String(signal).toLowerCase()));
+  return humanLocales.some((locale) => isLocaleOwnedPath(path, locale));
 }
 
 function hasLocaleSignal(paths, code) {
-  const signals = contract.impactRules.localeSignals?.[code] || [];
-  return paths.some((path) => signals.some((signal) => path.toLowerCase().includes(signal.toLowerCase())));
+  const locale = humanLocales.find((entry) => entry.code === code);
+  return Boolean(locale && paths.some((path) => isLocaleOwnedPath(path, locale)));
+}
+
+function isLocaleOwnedPath(path, locale) {
+  const normalized = String(path).replaceAll("\\", "/").toLowerCase();
+  const explicit = [locale.glossary, ...(locale.generatorScripts || []), ...(locale.checkScripts || [])]
+    .filter(Boolean)
+    .map((item) => String(item).replaceAll("\\", "/").toLowerCase());
+  if (explicit.includes(normalized)) return true;
+
+  const prefixes = (locale.localizedSourcePrefixes || [])
+    .map((item) => String(item).replaceAll("\\", "/").toLowerCase());
+  if (prefixes.some((prefix) => normalized === prefix.replace(/\/$/, "") || normalized.startsWith(prefix))) return true;
+
+  const code = locale.code.toLowerCase();
+  const urlCode = code === "pt-br" ? "pt-br" : code;
+  if (normalized.startsWith(`data/${urlCode}/`) || normalized.startsWith(`public/${urlCode}.`) || normalized.includes(`/${urlCode}/`)) return true;
+  if (normalized.startsWith("data/") && (normalized.includes(`-${urlCode}.`) || normalized.includes(`-${urlCode}-`) || normalized.includes(`_${urlCode}.`))) return true;
+
+  const scriptMarkers = {
+    fr: ["french"],
+    es: ["spanish"],
+    it: ["italian"],
+    "pt-br": ["portuguese", "pt-br"],
+    de: ["german", "-de", "de-"],
+    ru: ["russian", "-ru", "ru-"]
+  }[code] || [code];
+  if (normalized.startsWith("scripts/") && scriptMarkers.some((marker) => normalized.includes(marker))) return true;
+
+  return false;
+}
+
+function stripJsComments(source) {
+  return String(source)
+    .replace(/\/\*[\s\S]*?\*\//g, " ")
+    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+}
+
+function hasExecutableFreshnessAssertion(source) {
+  const leftToRight = /\bsourceRelease\b[^\n;]{0,320}(?:===|!==|==|!=)[^\n;]{0,320}\b(?:releaseVersion|release\.releaseVersion)\b/;
+  const rightToLeft = /\b(?:releaseVersion|release\.releaseVersion)\b[^\n;]{0,320}(?:===|!==|==|!=)[^\n;]{0,320}\bsourceRelease\b/;
+  return leftToRight.test(source) || rightToLeft.test(source);
 }
 
 function isExcepted(items, code, changed) {
