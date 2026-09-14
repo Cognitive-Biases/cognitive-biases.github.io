@@ -82,7 +82,9 @@ jobs:
         run: node scripts/check-internal-discovery-distribution.mjs
       - name: Gate final Technical SEO Critic surface
         run: node scripts/check-technical-seo-critic.mjs
-      - name: Gate final localization closure surface
+      - name: Gate Search 2026 localization policy
+        run: node scripts/check-search-localization-policy.mjs
+      - name: Gate final localization product contract
         run: node scripts/check-localization-closure.mjs
       - name: Gate final public surface
         run: node scripts/check-final-public-surface.mjs
@@ -111,5 +113,5 @@ jobs:
         run: node scripts/check-live-image-discovery.mjs
       - name: Verify live Internal Discovery & Distribution surface
         run: node scripts/check-live-internal-discovery-distribution.mjs
-      - name: Verify live localization closure
+      - name: Verify live localization product contract
         run: node scripts/check-live-localization.mjs

@@ -1,9 +1,28 @@
 {
-  "version": "0.6",
+  "version": "0.7",
   "status": "experimental-project-extension",
   "scope": "https://cognitive-biases.github.io/",
   "canonicalLanguage": "en",
   "fallbackLanguage": "en",
+  "surfaceContracts": {
+    "llms": {
+      "surfaceClass": "optional-agent-interoperability",
+      "authority": "product-specific-contract",
+      "googleSearchRequirement": false,
+      "releaseGate": true,
+      "purpose": "Explicit routing/discovery for agents and services that intentionally consume the project llms.txt convention."
+    },
+    "localizedData": {
+      "surfaceClass": "product-specific-machine-contract",
+      "authority": "product-specific-contract",
+      "googleSearchRequirement": false
+    },
+    "agentSkills": {
+      "surfaceClass": "product-specific-machine-contract",
+      "authority": "product-specific-contract",
+      "googleSearchRequirement": false
+    }
+  },
   "humanInterfaceLanguages": ["en", "de", "ru", "fr", "pt-BR", "es", "it"],
   "agentRoutingLanguages": ["en", "de", "ru", "fr", "pt-BR", "es", "it"],
   "locales": [

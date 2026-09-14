@@ -40,11 +40,11 @@ jobs:
       - name: Project localization exceptions to ARWP Quality Debt
         run: node scripts/project-arwp-localization-debt.mjs
 
-      - name: Checkout pinned Goose ARWP
+      - name: Checkout pinned Goose ARWP Search 2026 localization contract
         uses: actions/checkout@v4
         with:
           repository: dkharlanau/agent-ready-web-profile
-          ref: 6a8168b854ed6f557f5906808a83eb67be9f42ea
+          ref: 790bb194f2dfd1400cb21752567e09f0055ca5d9
           path: .arwp-tool
           persist-credentials: false
 
