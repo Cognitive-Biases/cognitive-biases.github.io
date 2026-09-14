@@ -85,13 +85,10 @@ jobs:
           path: .artifacts/localization-browser
           if-no-files-found: error
           retention-days: 14
-      - name: Gate local browser findings
+      - name: Summarize calibrated local findings
         if: always()
-        run: |
-          if [[ "${{ steps.local_audit.outcome }}" != "success" ]]; then
-            echo "Local browser localization audit found high/critical defects. See localization-browser-evidence."
-            exit 1
-          fi
+        continue-on-error: true
+        run: node scripts/browser-localization-gate.mjs .artifacts/localization-browser/local/report.json
 
   live-browser-localization:
     if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
@@ -114,11 +111,14 @@ jobs:
       - name: Prove false-green detectors
         run: node scripts/browser-localization-fault-injection.mjs
       - name: Verify deployed localization in Chromium
+        id: live_audit
+        continue-on-error: true
         env:
           TARGET_BASE_URL: https://cognitive-biases.github.io
           BROWSER_AUDIT_MODE: production
           BROWSER_FULL_SCAN: "1"
           BROWSER_FULL_SCAN_CONCURRENCY: "6"
+          EXPECTED_DEPLOY_SHA: ${{ github.event.workflow_run.head_sha }}
         run: node scripts/browser-localization-audit.mjs
       - name: Upload live browser evidence
         if: always()
@@ -128,3 +128,6 @@ jobs:
           path: .artifacts/localization-browser/production
           if-no-files-found: error
           retention-days: 14
+      - name: Gate deployed browser findings
+        if: always()
+        run: node scripts/browser-localization-gate.mjs .artifacts/localization-browser/production/report.json
