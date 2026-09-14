@@ -68,6 +68,16 @@ if (rule.test(css)) {
 } else {
   css += `\n.locale-switch-bar{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.65rem;align-items:center;padding:.65rem max(1rem,calc((100vw - 1160px)/2));font-size:.9rem;background:#f5f2ea;border-bottom:1px solid rgba(16,22,34,.12)}.locale-switch-bar a{font-weight:900}.locale-switch-bar [aria-current="page"]{text-decoration:underline;text-underline-offset:.2em}\n`;
 }
+
+// The editorial English home normally overlays its transparent header on the
+// hero. Once a locale bar is inserted before that header, the absolute header
+// would cover the language links. Keep that header in normal flow only when it
+// immediately follows the locale switcher. This preserves the skip-link order,
+// makes every language link pointer-accessible, and avoids a fixed-height offset
+// that would break when the switcher wraps on narrow screens.
+const homeHeaderOverride = `.locale-switch-bar+.site-header--home{position:relative!important;inset:auto!important;height:auto!important;min-height:84px;background:var(--blue-deep)!important}`;
+if (!css.includes(homeHeaderOverride)) css += `\n${homeHeaderOverride}\n`;
+
 await writeFile(cssPath, css);
 
 console.log(`Visible locale switcher finalized on ${updated} home page(s) from manifest: ${homes.map((home) => home.code).join(", ")}.`);
