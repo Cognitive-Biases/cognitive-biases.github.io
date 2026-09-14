@@ -1,5 +1,5 @@
 import { access, readFile, readdir, writeFile } from "node:fs/promises";
-import { join, relative } from "node:path";
+import { join } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
@@ -18,7 +18,7 @@ for (const locale of localeManifest.locales || []) {
     await access(file);
     publishedHomes.push({ code: locale.code, route, file });
   } catch {
-    // A locale may be declared before a public home exists. Only published homes join the cluster.
+    // Declared locales join the public graph only after a real home page exists.
   }
 }
 
@@ -54,6 +54,7 @@ for (const group of dispositions.groups || []) {
 }
 
 const localizedPages = new Map();
+const localizedPagesByLowerCode = new Map();
 for (const home of publishedHomes.filter((entry) => entry.code !== localeManifest.canonicalLocale)) {
   const root = join(OUT, home.route.replace(/^\//, "").replace(/\/$/, ""));
   const files = await walkHtml(root);
@@ -67,48 +68,54 @@ for (const home of publishedHomes.filter((entry) => entry.code !== localeManifes
     if (!canonical) continue;
     records.push({ file, html, slug, canonical, route: new URL(canonical).pathname });
   }
-  localizedPages.set(home.code, records);
+  const value = { code: home.code, files, records, byEnglishSlug: new Map(records.map((record) => [record.slug, record])) };
+  localizedPages.set(home.code, value);
+  localizedPagesByLowerCode.set(home.code.toLowerCase(), value);
 }
 
 let localizedAliasesCanonicalized = 0;
+let localizedAliasAlternatesRewritten = 0;
 let internalAliasCardsRemoved = 0;
 let internalAliasLinksRewritten = 0;
 const localizedAliasUrls = new Set();
 
-for (const [localeCode, records] of localizedPages) {
-  const byEnglishSlug = new Map(records.map((record) => [record.slug, record]));
+for (const [localeCode, localeData] of localizedPages) {
   for (const { primary, duplicate } of aliasPairs) {
-    const primaryRecord = byEnglishSlug.get(primary.slug);
-    const duplicateRecord = byEnglishSlug.get(duplicate.slug);
+    const primaryRecord = localeData.byEnglishSlug.get(primary.slug);
+    const duplicateRecord = localeData.byEnglishSlug.get(duplicate.slug);
     if (!primaryRecord || !duplicateRecord) continue;
 
+    const aliasSelfUrl = duplicateRecord.canonical;
     let aliasHtml = duplicateRecord.html;
     aliasHtml = replaceLinkHref(aliasHtml, "canonical", null, primaryRecord.canonical);
     aliasHtml = replaceMetaContent(aliasHtml, "property", "og:url", primaryRecord.canonical);
-    aliasHtml = replaceAlternateHref(aliasHtml, localeCode, primaryRecord.canonical);
-    aliasHtml = replaceAlternateHref(aliasHtml, "en", `${SITE}/biases/${primary.slug}/`);
-    aliasHtml = replaceAlternateHref(aliasHtml, "x-default", `${SITE}/biases/${primary.slug}/`);
+    const rewritten = rewriteAliasAlternates(aliasHtml, primary.slug);
+    aliasHtml = rewritten.html;
+    localizedAliasAlternatesRewritten += rewritten.changed;
+
     if (aliasHtml !== duplicateRecord.html) {
       await writeFile(duplicateRecord.file, aliasHtml);
       duplicateRecord.html = aliasHtml;
+      duplicateRecord.canonical = primaryRecord.canonical;
       localizedAliasesCanonicalized += 1;
     }
-    localizedAliasUrls.add(duplicateRecord.canonical);
+    localizedAliasUrls.add(aliasSelfUrl);
 
-    for (const record of records) {
-      if (record.file === duplicateRecord.file) continue;
-      let html = await readFile(record.file, "utf8");
+    for (const file of localeData.files) {
+      if (file === duplicateRecord.file) continue;
+      const before = await readFile(file, "utf8");
+      let html = before;
       const withoutCards = removeArticlesContainingHref(html, duplicateRecord.route);
       if (withoutCards !== html) {
         internalAliasCardsRemoved += 1;
         html = withoutCards;
       }
-      const rewritten = html.replaceAll(`href="${duplicateRecord.route}"`, `href="${primaryRecord.route}"`);
-      if (rewritten !== html) {
+      const next = html.replaceAll(`href="${duplicateRecord.route}"`, `href="${primaryRecord.route}"`);
+      if (next !== html) {
         internalAliasLinksRewritten += 1;
-        html = rewritten;
+        html = next;
       }
-      if (html !== await readFile(record.file, "utf8")) await writeFile(record.file, html);
+      if (html !== before) await writeFile(file, html);
     }
   }
 }
@@ -124,7 +131,35 @@ for (const url of localizedAliasUrls) {
 }
 await writeFile(sitemapPath, sitemap);
 
-console.log(`Localization graph finalized: ${publishedHomes.length} home locale(s), ${homeClustersUpdated} home hreflang cluster update(s), ${localizedAliasesCanonicalized} localized alias canonical(s), ${localizedAliasSitemapUrlsRemoved} localized alias sitemap URL(s) removed, ${internalAliasCardsRemoved} internal alias card cleanup(s), ${internalAliasLinksRewritten} internal alias link rewrite(s).`);
+console.log(`Localization graph finalized: ${publishedHomes.length} home locale(s), ${homeClustersUpdated} home hreflang cluster update(s), ${localizedAliasesCanonicalized} localized alias canonical(s), ${localizedAliasAlternatesRewritten} alias hreflang rewrite(s), ${localizedAliasSitemapUrlsRemoved} localized alias sitemap URL(s) removed, ${internalAliasCardsRemoved} internal alias card cleanup(s), ${internalAliasLinksRewritten} internal alias link rewrite(s).`);
+
+function rewriteAliasAlternates(html, primarySlug) {
+  const tags = html.match(/<link\b[^>]*>/gi) || [];
+  let next = html;
+  let changed = 0;
+  for (const tag of tags) {
+    if (getAttribute(tag, "rel")?.toLowerCase() !== "alternate") continue;
+    const hreflang = getAttribute(tag, "hreflang");
+    if (!hreflang) continue;
+
+    let href = "";
+    const normalized = hreflang.toLowerCase();
+    if (normalized === "en" || normalized === "x-default") {
+      href = `${SITE}/biases/${primarySlug}/`;
+    } else {
+      const counterpart = localizedPagesByLowerCode.get(normalized)?.byEnglishSlug.get(primarySlug);
+      if (counterpart) href = counterpart.canonical;
+    }
+    if (!href) continue;
+
+    const nextTag = setAttribute(tag, "href", href);
+    if (nextTag !== tag) {
+      next = next.replace(tag, nextTag);
+      changed += 1;
+    }
+  }
+  return { html: next, changed };
+}
 
 async function walkHtml(dir) {
   let entries;
@@ -175,12 +210,7 @@ function replaceLinkHref(html, rel, hreflang, href) {
     return getAttribute(item, "hreflang")?.toLowerCase() === String(hreflang).toLowerCase();
   });
   if (!tag) return html;
-  const nextTag = setAttribute(tag, "href", href);
-  return html.replace(tag, nextTag);
-}
-
-function replaceAlternateHref(html, hreflang, href) {
-  return replaceLinkHref(html, "alternate", hreflang, href);
+  return html.replace(tag, setAttribute(tag, "href", href));
 }
 
 function replaceMetaContent(html, key, value, content) {
