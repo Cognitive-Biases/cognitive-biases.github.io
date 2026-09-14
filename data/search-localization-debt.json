@@ -1,0 +1,27 @@
+{
+  "version": "2026-09-14",
+  "entries": [
+    {
+      "id": "search-console-generative-ai-owner-data",
+      "state": "blocked-owner-data",
+      "reason": "The repository has read-only Search Console automation for indexing/search-appearance evidence, but the new dedicated Generative AI report and Search generative AI inclusion control are owner-facing surfaces and are not evidenced by the current checked-in/exported artifacts.",
+      "scope": "Google Search generative-AI measurement and inclusion setting",
+      "affectedLocales": ["en", "de", "ru", "fr", "pt-BR", "es", "it"],
+      "affectedSurface": "search-console-owner-data",
+      "nextAction": "In Search Console for https://cognitive-biases.github.io/, open Performance > Generative AI (Search) and Settings > Search generative AI. Export or record the current inclusion state plus page/country/device impression data where available, then attach a dated owner-data receipt without converting absence of impressions into a technical site failure.",
+      "reviewCondition": "When owner UI/export access is available or when Google documents an API/export surface that can be automated.",
+      "reviewBy": "2026-10-14"
+    },
+    {
+      "id": "browser-accessibility-tree-locales",
+      "state": "bounded-manual-verification",
+      "reason": "Current repository gates validate generated HTML, semantics and live HTTP surfaces, but this execution environment does not expose a browser accessibility-tree/screenshot inspection interface for all locale states.",
+      "scope": "Rendered visual, DOM and accessibility-tree verification for locale UX and browser-agent usability",
+      "affectedLocales": ["en", "de", "ru", "fr", "pt-BR", "es", "it"],
+      "affectedSurface": "browser-agent-accessibility",
+      "nextAction": "Run a browser review or Playwright/Chromium audit on every locale home plus representative bias/search/filter states at desktop and about 390px width. Capture screenshot, DOM and accessibility-tree evidence; verify language switcher, links/buttons, accessible names, focus order, long-string wrapping, overlays and keyboard use.",
+      "reviewCondition": "Before promoting any locale to a stronger/full human-interface quality status or after a navigation/component redesign.",
+      "reviewBy": "2026-10-14"
+    }
+  ]
+}
