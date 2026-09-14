@@ -25,7 +25,7 @@ const decode = (value = "") => String(value)
   .trim();
 const stripTags = (value = "") => decode(String(value).replace(/<[^>]+>/g, " "));
 const one = (html, pattern) => html.match(pattern)?.[1] || "";
-const attr = (tag, name) => tag.match(new RegExp(`\\b${name}=["']([^"']*)["']`, "i"))?.[1] || "";
+const attr = (tag, name) => tag.match(new RegExp(`\\b${name}\\s*=\\s*(["'])(.*?)\\1`, "i"))?.[2] || "";
 
 function publicPath(file) {
   const rel = relative(OUT, file).replaceAll("\\", "/");
