@@ -48,8 +48,8 @@ for (const review of eligibleReviews) {
   if (duplicateIds.has(bias.id)) throw new Error(`${review.slug}: Decision Audit lens targets duplicate alias.`);
   if (!audit.includes(`value="${review.slug}"`)) throw new Error(`${review.slug}: audit-eligible reviewed pattern is missing from Decision Audit selector.`);
   const biasHtml = await readFile(resolve("dist", "biases", review.slug, "index.html"), "utf8");
-  if (!biasHtml.includes(`/tools/decision-audit/?bias=${review.slug}`) || !biasHtml.includes('class="audit-cta"')) {
-    throw new Error(`${review.slug}: audit-eligible reviewed page is missing reciprocal Decision Audit CTA.`);
+  if (!biasHtml.includes(`/tools/decision-audit/#bias=${review.slug}`) || !biasHtml.includes('class="audit-cta"')) {
+    throw new Error(`${review.slug}: audit-eligible reviewed page is missing fragment-based reciprocal Decision Audit CTA.`);
   }
 }
 
@@ -58,7 +58,7 @@ for (const review of excludedReviews) {
   if (!bias) throw new Error(`${review.slug}: excluded evidence review has no published canonical page.`);
   if (audit.includes(`value="${review.slug}"`)) throw new Error(`${review.slug}: audit-ineligible reviewed concept still appears in Decision Audit selector.`);
   const biasHtml = await readFile(resolve("dist", "biases", review.slug, "index.html"), "utf8");
-  if (biasHtml.includes(`/tools/decision-audit/?bias=${review.slug}`) || biasHtml.includes('class="audit-cta"')) {
+  if (biasHtml.includes(`/tools/decision-audit/#bias=${review.slug}`) || biasHtml.includes(`/tools/decision-audit/?bias=${review.slug}`) || biasHtml.includes('class="audit-cta"')) {
     throw new Error(`${review.slug}: audit-ineligible reviewed concept still renders a Decision Audit CTA.`);
   }
   if (!biasHtml.includes('class="evidence-review"')) throw new Error(`${review.slug}: audit exclusion must not remove the evidence review itself.`);
@@ -74,6 +74,7 @@ for (const path of ["index.html", "explore/index.html", "evidence/index.html", "
 }
 
 if (!script.includes("navigator.clipboard.writeText") || !script.includes("localStorage.removeItem")) throw new Error("Decision Audit copy/reset behavior is incomplete.");
-if (!script.includes('new URLSearchParams(location.search).get("bias")')) throw new Error("Decision Audit bias preselection is missing.");
+if (!script.includes('new URLSearchParams(location.hash.replace(/^#/, "")).get("bias")')) throw new Error("Decision Audit fragment-based bias preselection is missing.");
+if (script.includes('new URLSearchParams(location.search).get("bias")')) throw new Error("Decision Audit still consumes crawlable query state for bias preselection.");
 
-console.log(`Decision Audit check passed: local-only state, ${eligibleReviews.length}/${reviews.length} evidence-reviewed entries eligible as lenses, ${excludedReviews.length} reviewed concepts excluded (${explicitSlugs.size} explicit product exclusions), reciprocal CTAs, sitemap, schema, navigation, copy/reset, and no network transport verified.`);
+console.log(`Decision Audit check passed: local-only state, ${eligibleReviews.length}/${reviews.length} evidence-reviewed entries eligible as lenses, ${excludedReviews.length} reviewed concepts excluded (${explicitSlugs.size} explicit product exclusions), fragment-state reciprocal CTAs, sitemap, schema, navigation, copy/reset, and no network transport verified.`);
