@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "canonicalLocale": "en",
   "policy": "https://dkharlanau.github.io/agent-ready-web-profile/LOCALIZATION.md",
   "glossaryPolicy": {
@@ -57,18 +57,45 @@
       "machineReadable": ["dist/it/llms.txt", "dist/it/data/index.json", "dist/it/data/agent-skills.json"]
     }
   ],
-  "limitedLocales": [
+  "partialHumanLocales": [
     {
       "code": "de",
-      "role": "localized-agent-routing",
-      "requiredSurfaces": ["dist/de/llms.txt"]
+      "status": "reviewed-partial-human-interface",
+      "coverage": "full-published-bias-catalog-with-reviewed-core-plus-techniques-decision-guides-decision-skills-and-agent-skills",
+      "generatorScripts": [
+        "scripts/generate-de-localization.mjs",
+        "scripts/generate-de-catalog-expansion.mjs",
+        "scripts/finalize-de-catalog-provenance.mjs",
+        "scripts/generate-de-decision-guides.mjs",
+        "scripts/generate-de-skill-library.mjs",
+        "scripts/finalize-de-skill-library.mjs"
+      ],
+      "checkScripts": [
+        "scripts/check-de-localization.mjs",
+        "scripts/check-de-full-catalog.mjs",
+        "scripts/check-de-full-catalog-public.mjs",
+        "scripts/check-de-skill-library.mjs"
+      ],
+      "localizedSourcePrefixes": ["data/de/", "scripts/generate-de", "scripts/finalize-de", "scripts/check-de"],
+      "publishedPrefixes": ["dist/de/"],
+      "machineReadable": ["dist/de/llms.txt"]
     },
     {
       "code": "ru",
-      "role": "localized-agent-routing",
-      "requiredSurfaces": ["dist/ru/llms.txt"]
+      "status": "reviewed-partial-human-interface",
+      "coverage": "43-reviewed-biases-plus-techniques-decision-skills-everyday-guides-and-reviewed-research-subset",
+      "generatorScripts": [
+        "scripts/finalize-ru-seo.mjs",
+        "scripts/generate-ru-reviewed-expansion.mjs",
+        "scripts/generate-ru-research.mjs"
+      ],
+      "checkScripts": ["scripts/check-ru-localization.mjs", "scripts/check-localization-regressions.mjs"],
+      "localizedSourcePrefixes": ["data/ru/", "scripts/generate-ru", "scripts/finalize-ru", "scripts/check-ru"],
+      "publishedPrefixes": ["dist/ru/", "dist/data/ru/"],
+      "machineReadable": ["dist/ru/llms.txt", "dist/data/ru/biases.json"]
     }
   ],
+  "limitedLocales": [],
   "impactRules": {
     "watchedCanonicalPrefixes": [
       "data/biases.json",
@@ -88,7 +115,9 @@
       "fr": ["french", "-fr", "/fr/", "ui-fr", "pages-fr", "glossary-fr"],
       "pt-BR": ["portuguese", "pt-br", "-pt", "ui-pt", "pages-pt"],
       "es": ["spanish", "-es", "/es/", "ui-es", "pages-es", "es-glossary"],
-      "it": ["italian", "-it", "/it/", "ui-it", "pages-it", "it-glossary"]
+      "it": ["italian", "-it", "/it/", "ui-it", "pages-it", "it-glossary"],
+      "de": ["german", "-de", "/de/", "data/de", "generate-de", "check-de", "finalize-de"],
+      "ru": ["russian", "-ru", "/ru/", "data/ru", "generate-ru", "check-ru", "finalize-ru"]
     },
     "exceptionFile": "data/localization-exceptions.json"
   }
