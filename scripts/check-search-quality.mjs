@@ -59,6 +59,14 @@ function normalizeUrl(url) {
     return "";
   }
 }
+function applicationStateFragment(target, targetPage) {
+  if (target.path !== "/tools/decision-audit/" || !target.hash.startsWith("#bias=")) return null;
+  const state = new URLSearchParams(target.hash.slice(1));
+  const bias = state.get("bias");
+  if (!bias || state.size !== 1 || !/^[a-z0-9-]+$/i.test(bias)) return { valid: false, reason: "malformed bias state" };
+  if (!targetPage?.html.includes(`value="${bias}"`)) return { valid: false, reason: `unknown Decision Audit bias ${bias}` };
+  return { valid: true, bias };
+}
 
 const files = await walk(OUT);
 const pages = [];
@@ -88,6 +96,7 @@ const warnings = [];
 const titleOwners = new Map();
 const descriptionOwners = new Map();
 const inbound = new Map();
+let applicationStateLinks = 0;
 
 for (const page of pages) inbound.set(normalizeUrl(page.url), 0);
 
@@ -146,6 +155,12 @@ for (const page of pages) {
     if (target.hash && target.path.endsWith("/")) {
       const targetPage = byUrl.get(targetUrl);
       if (targetPage) {
+        const stateFragment = applicationStateFragment(target, targetPage);
+        if (stateFragment) {
+          if (!stateFragment.valid) errors.push(`${page.path}: invalid application-state fragment ${href} (${stateFragment.reason}).`);
+          else applicationStateLinks += 1;
+          continue;
+        }
         const id = decodeURIComponent(target.hash.slice(1));
         const escaped = id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
         if (!new RegExp(`(?:id|name)=["']${escaped}["']`, "i").test(targetPage.html)) {
@@ -213,4 +228,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Search quality gate passed: ${pages.length} HTML files, ${titleOwners.size} unique canonical titles, ${descriptionOwners.size} unique canonical descriptions, valid JSON-LD, crawlable internal links, no sitemap orphans, and ${reviewedBlocks.length} reviewed prose blocks checked for near-duplication.`);
+console.log(`Search quality gate passed: ${pages.length} HTML files, ${titleOwners.size} unique canonical titles, ${descriptionOwners.size} unique canonical descriptions, valid JSON-LD, crawlable internal links, ${applicationStateLinks} validated application-state fragment link(s), no sitemap orphans, and ${reviewedBlocks.length} reviewed prose blocks checked for near-duplication.`);
