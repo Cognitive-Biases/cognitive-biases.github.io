@@ -48,7 +48,14 @@ for (const current of homes) {
   if (!/<body(?:\s[^>]*)?>/i.test(html)) {
     throw new Error(`Cannot insert the visible locale switcher without <body>: ${current.code}`);
   }
-  html = html.replace(/<body([^>]*)>/i, `<body$1>${switcher}`);
+
+  // The skip link must remain the first keyboard target. Insert the locale bar
+  // immediately after an existing skip link; only fall back to body-start when
+  // a page has no skip-link contract.
+  const skipLink = html.match(/<a\b[^>]*class=["'][^"']*\bskip\b[^"']*["'][^>]*>[\s\S]*?<\/a>/i)?.[0];
+  if (skipLink) html = html.replace(skipLink, `${skipLink}${switcher}`);
+  else html = html.replace(/<body([^>]*)>/i, `<body$1>${switcher}`);
+
   await writeFile(current.file, html);
   updated += 1;
 }
