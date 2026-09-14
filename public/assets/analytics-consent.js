@@ -90,13 +90,6 @@
     decline.textContent = text.decline;
     box.appendChild(decline);
 
-    box.addEventListener("keydown", function (event) {
-      if (event.key === "Tab" && event.shiftKey && document.activeElement === decline) {
-        event.preventDefault();
-        allow.focus();
-      }
-    });
-
     box.addEventListener("click", function (event) {
       if (event.target.matches("[data-analytics-yes]")) { localStorage.setItem(key, "yes"); box.remove(); load(); }
       if (event.target.matches("[data-analytics-no]")) { localStorage.setItem(key, "no"); box.remove(); }
