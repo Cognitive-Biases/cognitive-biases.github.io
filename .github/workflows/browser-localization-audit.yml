@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/browser-localization-audit.mjs'
       - '.github/workflows/browser-localization-audit.yml'
+      - 'public/**'
       - 'styles.css'
       - 'data/locales.json'
       - 'data/**localization**'
@@ -14,14 +15,18 @@ on:
       - 'templates/**'
       - '.arwp/**'
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy GitHub Pages"]
+    types: [completed]
 
 permissions:
   contents: read
 
 jobs:
   built-browser-audit:
+    if: github.event_name != 'workflow_run'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,11 +39,33 @@ jobs:
         run: npm ci
       - name: Build and run canonical quality gates
         run: npm run check
+      - name: Apply final deterministic Pages mutators
+        run: |
+          set -euo pipefail
+          node scripts/inject-google-tag-manager.mjs
+          node scripts/apply-arwp.mjs
+          node scripts/finalize-localized-ai-routing.mjs
+          node scripts/apply-growth-rollout.mjs
+          mkdir -p .owner-data/google-search
+          node scripts/publish-growth-owner-data.mjs .owner-data/google-search/google-indexing.json
+          node scripts/check-growth-rollout.mjs
+          node scripts/check-growth-owner-data.mjs
+          node scripts/generate-404.mjs
+          node scripts/finalize-public-metadata.mjs
+          node scripts/finalize-search-appearance.mjs
+          node scripts/inject-goose-proof-mark.mjs dist
+          node scripts/apply-image-discovery.mjs
+          node scripts/check-image-discovery.mjs
+          node scripts/check-internal-discovery-distribution.mjs
+          node scripts/check-technical-seo-critic.mjs
+          node scripts/check-search-localization-policy.mjs
+          node scripts/check-localization-closure.mjs
+          node scripts/check-final-public-surface.mjs
       - name: Install pinned Playwright runtime
         run: |
           npm install --no-save --ignore-scripts playwright@1.63.0
           npx playwright install --with-deps chromium
-      - name: Serve generated artifact
+      - name: Serve final generated artifact
         run: |
           python3 -m http.server 4173 --directory dist > /tmp/browser-audit-server.log 2>&1 &
           echo $! > /tmp/browser-audit-server.pid
@@ -48,7 +75,7 @@ jobs:
           done
           cat /tmp/browser-audit-server.log
           exit 1
-      - name: Audit generated artifact in Chromium
+      - name: Audit final generated artifact in Chromium
         env:
           BASE_URL: http://127.0.0.1:4173/
           AUDIT_TARGET: built
@@ -63,11 +90,17 @@ jobs:
           retention-days: 30
 
   live-browser-audit:
+    if: >-
+      github.event_name == 'pull_request' ||
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 18
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22
