@@ -8,6 +8,11 @@ const errors = [];
 const biasPages = new Map();
 const skillPages = new Map();
 
+function hasClass(html, className) {
+  return [...String(html).matchAll(/\bclass\s*=\s*(["'])(.*?)\1/gi)]
+    .some((match) => match[2].split(/\s+/).includes(className));
+}
+
 for (const situation of situationsData.situations) {
   for (const bias of situation.biases) {
     if (!biasPages.has(bias)) biasPages.set(bias, []);
@@ -22,7 +27,7 @@ for (const [bias, situations] of biasPages) {
   let html;
   try { html = await readFile(path, "utf8"); }
   catch { errors.push(`missing bias page for decision discovery: ${bias}`); continue; }
-  if (!html.includes('class="decision-application-links"')) errors.push(`${bias}: missing decision application section`);
+  if (!hasClass(html, "decision-application-links")) errors.push(`${bias}: missing decision application section`);
   for (const situation of situations.slice(0, 4)) {
     if (!html.includes(`/situations/${situation.slug}/`)) errors.push(`${bias}: missing situation link ${situation.slug}`);
   }
@@ -38,7 +43,7 @@ for (const [skill, situations] of skillPages) {
   let html;
   try { html = await readFile(path, "utf8"); }
   catch { errors.push(`missing skill page for decision discovery: ${skill}`); continue; }
-  if (!html.includes('class="skill-situation-links"')) errors.push(`${skill}: missing situation application section`);
+  if (!hasClass(html, "skill-situation-links")) errors.push(`${skill}: missing situation application section`);
   for (const situation of situations) {
     if (!html.includes(`/situations/${situation.slug}/`)) errors.push(`${skill}: missing situation link ${situation.slug}`);
   }
