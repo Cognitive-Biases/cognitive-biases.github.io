@@ -8,8 +8,12 @@ const ISO_3166_COMMON = new Set(`AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ
 
 const policy = JSON.parse(await readFile('data/search-localization-policy.json', 'utf8'));
 const manifest = JSON.parse(await readFile('data/locales.json', 'utf8'));
+const debt = JSON.parse(await readFile(policy.debtLedger, 'utf8'));
 const fail = (message) => { throw new Error(`search_localization_policy:${message}`); };
 
+if (policy.methodology !== 'https://dkharlanau.github.io/agent-ready-web-profile/SEARCH-LOCALIZATION-2026.md') {
+  fail('ARWP Search/localization methodology reference is missing or stale');
+}
 if (policy.agentInteroperability?.llmsTxt?.googleSearchRequirement !== false) {
   fail('llms.txt must not be classified as a Google Search requirement');
 }
@@ -31,6 +35,22 @@ if (policy.search?.sitemap?.hreflangAnnotations !== false) {
 }
 if (policy.structuredData?.faqRichResultStatus !== 'removed-2026-05-07') {
   fail('Google FAQ rich-result status is stale');
+}
+
+const today = Date.parse(`${new Date().toISOString().slice(0, 10)}T00:00:00Z`);
+const debtIds = new Set();
+for (const item of debt.entries || []) {
+  if (!item.id || debtIds.has(item.id)) fail(`duplicate or missing debt id ${item.id || '(missing)'}`);
+  debtIds.add(item.id);
+  if (!['blocked-owner-data', 'bounded-manual-verification'].includes(item.state)) fail(`${item.id}: unsupported debt state ${item.state}`);
+  if (!String(item.reason || '').trim()) fail(`${item.id}: missing reason`);
+  if (!String(item.nextAction || '').trim()) fail(`${item.id}: missing exact next action`);
+  if (!String(item.reviewCondition || '').trim()) fail(`${item.id}: missing review condition`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(item.reviewBy || '')) fail(`${item.id}: invalid reviewBy`);
+  if (Date.parse(`${item.reviewBy}T23:59:59Z`) < today) fail(`${item.id}: bounded debt review is overdue`);
+}
+for (const requiredDebt of ['search-console-generative-ai-owner-data', 'browser-accessibility-tree-locales']) {
+  if (!debtIds.has(requiredDebt)) fail(`missing bounded verification debt ${requiredDebt}`);
 }
 
 const localeCodes = (manifest.locales || []).map((locale) => locale.code);
@@ -57,7 +77,7 @@ for (const home of homes) {
 const sitemap = await readFile(join(OUT, 'sitemap.xml'), 'utf8');
 if (/<xhtml:link\b/i.test(sitemap)) fail('sitemap unexpectedly emits a second hreflang representation');
 
-console.log(`Search 2026 localization policy passed for ${localeCodes.length} locales; HTML owns hreflang equivalence and llms.txt remains a separate agent contract.`);
+console.log(`Search 2026 localization policy passed for ${localeCodes.length} locales; HTML owns hreflang equivalence, llms.txt is a separate agent contract, and ${debtIds.size} bounded verification debt item(s) remain explicit.`);
 
 function inspectGoogleHreflang(value) {
   const raw = String(value || '').trim();
