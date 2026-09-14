@@ -29,14 +29,6 @@ function knownDetectorNoise(finding) {
     if (/Next-in-Line|CogBias:|Cognitive Bias in Large Language Models/i.test(value)) return true;
   }
 
-  // exerciseSecondaryStates currently keeps a locator whose selector includes
-  // aria-expanded="false"; a successful expansion invalidates that locator and can
-  // produce this timeout even though the disclosure worked.
-  if (finding.type === 'navigation-failed') {
-    const message = String(details.message || '');
-    if (message.includes("[aria-expanded=\"false\"][aria-controls]:visible")) return true;
-  }
-
   // Tiny root deltas can be Chromium rounding at 320 px. Larger overflow stays blocking.
   if (finding.type === 'page-horizontal-overflow' && Number(details.overflowPx || 0) <= 8) return true;
 
