@@ -35,6 +35,10 @@ for (const entry of entries) {
   if (!html.includes(`hreflang="en" href="${SITE}/biases/${entry.slug}/"`)) fail(`${entry.slug}: English alternate missing.`);
   if (!html.includes(`hreflang="de" href="${SITE}/de/biases/${entry.slug}/"`)) fail(`${entry.slug}: German alternate missing.`);
   if (!html.includes('aria-label="Hauptnavigation"')) fail(`${entry.slug}: German navigation missing.`);
+  const header = html.match(/<header\b[\s\S]*?<\/header>/i)?.[0] || "";
+  const footer = html.match(/<footer\b[\s\S]*?<\/footer>/i)?.[0] || "";
+  if ((header.match(/href="\/de\/entscheidungen\/"/g) || []).length !== 1) fail(`${entry.slug}: header must contain exactly one Situationen link.`);
+  if ((footer.match(/href="\/de\/entscheidungen\/"/g) || []).length !== 1) fail(`${entry.slug}: footer must contain exactly one Situationen link.`);
   if (!html.includes("Was passiert?") || !html.includes("Probier das")) fail(`${entry.slug}: practical German structure missing.`);
   if (entry.localizationState === "evidence-reviewed") {
     reviewed += 1;
