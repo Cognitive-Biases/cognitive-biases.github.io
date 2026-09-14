@@ -43,6 +43,7 @@ jobs:
           node scripts/generate-404.mjs
           node scripts/finalize-public-metadata.mjs
           node scripts/finalize-search-appearance.mjs
+          node scripts/finalize-browser-surface.mjs
       - name: Install pinned browser runtime
         run: |
           npm install --no-save playwright@1.55.0
@@ -91,7 +92,11 @@ jobs:
         run: node scripts/browser-localization-gate.mjs .artifacts/localization-browser/local/report.json
 
   live-browser-localization:
-    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'
+    if: >-
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event != 'pull_request' &&
+      github.event.workflow_run.head_branch == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

@@ -15,19 +15,18 @@ function knownDetectorNoise(finding) {
   // Keep the evidence in the artifact, but do not make this heuristic alone a gate.
   if (finding.type === 'focus-obscured' && details.visibleFocus === true) return true;
 
-  // The AX English-leak heuristic currently token-matches proper names and paper titles.
-  // These are intentional English names, not untranslated UI controls.
   if (finding.type === 'accessible-name-english-leak') {
+    // Metadata <link title> values live in <head>; they are discovery metadata, not
+    // rendered or focusable localized UI accessible names.
+    if (details.selector === 'link' && details.attr === 'title' && details.value === 'AI Search & Citation Profile') return true;
+
+    // Chromium emits InlineTextBox nodes for visible prose fragments. They are content,
+    // not control accessible names, so the UI-name detector must not gate on them.
+    if (details.chromiumAx?.role === 'InlineTextBox') return true;
+
+    // Preserve explicit allowances for intentional English proper names and paper titles.
     const value = String(details.ariaSnapshotLine || details.chromiumAx?.value || '');
     if (/Next-in-Line|CogBias:|Cognitive Bias in Large Language Models/i.test(value)) return true;
-  }
-
-  // exerciseSecondaryStates currently keeps a locator whose selector includes
-  // aria-expanded="false"; a successful expansion invalidates that locator and can
-  // produce this timeout even though the disclosure worked.
-  if (finding.type === 'navigation-failed') {
-    const message = String(details.message || '');
-    if (message.includes("[aria-expanded=\"false\"][aria-controls]:visible")) return true;
   }
 
   // Tiny root deltas can be Chromium rounding at 320 px. Larger overflow stays blocking.
