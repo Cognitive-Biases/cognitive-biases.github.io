@@ -61,6 +61,7 @@ for (const [locale, config] of Object.entries(LOCALES)) {
 
 await repairDuplicateDescriptions();
 console.log(`Localized search metadata finalized: ${filesChecked} HTML files checked, ${descriptionsChanged} descriptions repaired, ${duplicateGroupsFound} duplicate group(s) found, ${duplicateRepairs} collision repair(s), ${russianCopyChanged} Russian copy repair(s).`);
+await import("./finalize-localization-graph.mjs");
 
 async function repairDuplicateDescriptions() {
   const records = [];
