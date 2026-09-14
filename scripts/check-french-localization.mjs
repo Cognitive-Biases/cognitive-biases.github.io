@@ -7,7 +7,7 @@ const OUT = "dist";
 const TODAY = "2026-09-13";
 const errors = [];
 
-const [techniqueTranslations, ui, pages, release, locales, aiLocales, biasesRaw, techniques, duplicateDispositions] = await Promise.all([
+const [techniqueTranslations, ui, pages, release, locales, aiLocales, biasesRaw, techniques] = await Promise.all([
   readJson("data/techniques-fr.json"),
   readJson("data/ui-fr.json"),
   readJson("data/pages-fr.json"),
@@ -15,25 +15,13 @@ const [techniqueTranslations, ui, pages, release, locales, aiLocales, biasesRaw,
   readJson("data/locales.json"),
   readJson("ai/locales.json"),
   readJson("data/biases.json"),
-  readJson("data/techniques.json"),
-  readJson("data/duplicate-dispositions.json")
+  readJson("data/techniques.json")
 ]);
 const biases = Array.isArray(biasesRaw) ? biasesRaw : biasesRaw.biases || [];
 const published = biases.filter((entry) => entry.published);
 const publishedBiases = new Set(published.map((entry) => entry.slug));
-const publishedById = new Map(published.map((entry) => [entry.id, entry]));
 const translations = await loadFrenchTranslations({ canonicalBiases: biases, releaseVersion: release.releaseVersion, today: TODAY });
-const translationByCanonical = new Map(translations.entries.map((entry) => [entry.canonicalId, entry]));
 const canonicalTechniques = new Set(techniques.techniques.map((entry) => entry.slug));
-const aliasPrimaryBySlug = new Map();
-for (const group of duplicateDispositions.groups || []) {
-  const primary = publishedById.get(group.primaryId);
-  if (!primary) continue;
-  for (const duplicateId of group.duplicateIds || []) {
-    const duplicate = publishedById.get(duplicateId);
-    if (duplicate) aliasPrimaryBySlug.set(duplicate.slug, primary.slug);
-  }
-}
 
 expect(locales.locales.some((entry) => entry.code === "fr" && entry.role === "reviewed-layer"), "data/locales.json must declare fr as reviewed-layer");
 expect(aiLocales.humanInterfaceLanguages.includes("fr"), "ai/locales.json must expose fr as a human interface language");
@@ -103,17 +91,7 @@ async function checkGeneratedOutput() {
     { path: "/fr/", englishPath: "/" },
     { path: "/fr/explorer/", englishPath: "/explore/" },
     { path: "/fr/techniques/", englishPath: "/techniques/" },
-    ...translations.entries.map((entry) => {
-      const primarySlug = aliasPrimaryBySlug.get(entry.canonicalId);
-      const primaryTranslation = primarySlug ? translationByCanonical.get(primarySlug) : null;
-      return {
-        path: `/fr/biais/${entry.localizedSlug}/`,
-        englishPath: `/biases/${entry.canonicalId}/`,
-        isAlias: Boolean(primarySlug && primaryTranslation),
-        canonicalPath: primaryTranslation ? `/fr/biais/${primaryTranslation.localizedSlug}/` : `/fr/biais/${entry.localizedSlug}/`,
-        canonicalEnglishPath: primarySlug ? `/biases/${primarySlug}/` : `/biases/${entry.canonicalId}/`
-      };
-    }),
+    ...translations.entries.map((entry) => ({ path: `/fr/biais/${entry.localizedSlug}/`, englishPath: `/biases/${entry.canonicalId}/` })),
     ...techniqueTranslations.entries.map((entry) => ({ path: `/fr/techniques/${entry.localizedSlug}/`, englishPath: `/techniques/${entry.canonicalSlug}/` }))
   ];
   for (const pair of expected) {
@@ -121,25 +99,21 @@ async function checkGeneratedOutput() {
     expect(await exists(target), `Generated French page is missing: ${pair.path}`);
     if (!await exists(target)) continue;
     const html = await readFile(target, "utf8");
-    const canonicalPath = pair.canonicalPath || pair.path;
-    const canonicalEnglishPath = pair.canonicalEnglishPath || pair.englishPath;
-    const frUrl = `${SITE}${canonicalPath}`;
-    const enUrl = `${SITE}${canonicalEnglishPath}`;
+    const frUrl = `${SITE}${pair.path}`;
+    const enUrl = `${SITE}${pair.englishPath}`;
     expect(html.includes('<html lang="fr">'), `${pair.path}: html lang must be fr`);
-    expect(html.includes(`<link rel="canonical" href="${frUrl}">`), `${pair.path}: canonical must point to ${canonicalPath}`);
-    expect(html.includes(`<link rel="alternate" hreflang="fr" href="${frUrl}">`), `${pair.path}: French hreflang must point to ${canonicalPath}`);
-    expect(html.includes(`<link rel="alternate" hreflang="en" href="${enUrl}">`), `${pair.path}: English hreflang must point to ${canonicalEnglishPath}`);
+    expect(html.includes(`<link rel="canonical" href="${frUrl}">`), `${pair.path}: self canonical is missing`);
+    expect(html.includes(`<link rel="alternate" hreflang="fr" href="${frUrl}">`), `${pair.path}: French hreflang is missing`);
+    expect(html.includes(`<link rel="alternate" hreflang="en" href="${enUrl}">`), `${pair.path}: English hreflang is missing`);
     expect(html.includes(`<link rel="alternate" hreflang="x-default" href="${enUrl}">`), `${pair.path}: x-default must point to canonical English`);
     expect(html.includes('"inLanguage":"fr"'), `${pair.path}: JSON-LD must expose inLanguage=fr`);
     expect(!html.includes('>Skip to content<'), `${pair.path}: English skip-link copy leaked into French UI`);
-    if (!pair.isAlias) {
-      const englishTarget = outputFile(pair.englishPath);
-      expect(await exists(englishTarget), `English equivalent is missing: ${pair.englishPath}`);
-      if (await exists(englishTarget)) {
-        const englishHtml = await readFile(englishTarget, "utf8");
-        expect(englishHtml.includes(`<link rel="alternate" hreflang="fr" href="${frUrl}">`), `${pair.englishPath}: reciprocal French hreflang is missing`);
-        expect(englishHtml.includes('data-locale-switch="fr"'), `${pair.englishPath}: visible French language switch is missing`);
-      }
+    const englishTarget = outputFile(pair.englishPath);
+    expect(await exists(englishTarget), `English equivalent is missing: ${pair.englishPath}`);
+    if (await exists(englishTarget)) {
+      const englishHtml = await readFile(englishTarget, "utf8");
+      expect(englishHtml.includes(`<link rel="alternate" hreflang="fr" href="${frUrl}">`), `${pair.englishPath}: reciprocal French hreflang is missing`);
+      expect(englishHtml.includes('data-locale-switch="fr"'), `${pair.englishPath}: visible French language switch is missing`);
     }
   }
   for (const entry of translations.entries) {
@@ -152,11 +126,7 @@ async function checkGeneratedOutput() {
     for (const label of [ui.labels.whenToUse, ui.labels.tryThis, ui.labels.example, ui.labels.whyItCanHelp, "Limites"]) expect(includesHtmlText(html, label), `${entry.canonicalSlug}: generated technique page is missing section ${label}`);
   }
   const sitemap = await readFile(join(OUT, "sitemap.xml"), "utf8");
-  for (const pair of expected) {
-    const listed = sitemap.includes(`<loc>${SITE}${pair.path}</loc>`);
-    if (pair.isAlias) expect(!listed, `Alias must not appear in sitemap: ${pair.path}`);
-    else expect(listed, `Sitemap is missing ${pair.path}`);
-  }
+  for (const pair of expected) expect(sitemap.includes(`<loc>${SITE}${pair.path}</loc>`), `Sitemap is missing ${pair.path}`);
   expect(await exists(join(OUT, "fr", "llms.txt")), "French llms.txt is missing");
   expect(await exists(join(OUT, "fr", "data", "index.json")), "French machine-readable locale manifest is missing");
   if (await exists(join(OUT, "fr", "data", "index.json"))) {
