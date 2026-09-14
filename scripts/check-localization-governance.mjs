@@ -32,8 +32,9 @@ for (const locale of contract.fullHumanLocales) {
 
   if (locale.freshnessStrategy === "canonical-release-version") {
     const checkSources = await Promise.all(locale.checkScripts.map((path) => readFile(path, "utf8")));
-    if (!checkSources.some((source) => source.includes("sourceRelease"))) {
-      throw new Error(`${code}: canonical-release-version freshness strategy requires a checker that validates sourceRelease.`);
+    const executableSources = checkSources.map(stripJsComments);
+    if (!executableSources.some(hasExecutableFreshnessAssertion)) {
+      throw new Error(`${code}: canonical-release-version freshness strategy requires an executable checker comparison between sourceRelease and the canonical releaseVersion.`);
     }
   }
 }
@@ -152,15 +153,47 @@ function isWatchedCanonicalChange(path) {
 }
 
 function isLocaleOwnedChange(path) {
-  const lower = path.toLowerCase();
-  return Object.values(contract.impactRules.localeSignals || {})
-    .flat()
-    .some((signal) => lower.includes(String(signal).toLowerCase()));
+  return contract.fullHumanLocales.some((locale) => isLocaleOwnedPath(path, locale));
 }
 
 function hasLocaleSignal(paths, code) {
-  const signals = contract.impactRules.localeSignals?.[code] || [];
-  return paths.some((path) => signals.some((signal) => path.toLowerCase().includes(signal.toLowerCase())));
+  const locale = contract.fullHumanLocales.find((entry) => entry.code === code);
+  return Boolean(locale && paths.some((path) => isLocaleOwnedPath(path, locale)));
+}
+
+function isLocaleOwnedPath(path, locale) {
+  const normalized = String(path).replaceAll("\\", "/").toLowerCase();
+  const explicit = [locale.glossary, ...(locale.generatorScripts || []), ...(locale.checkScripts || [])]
+    .filter(Boolean)
+    .map((item) => String(item).replaceAll("\\", "/").toLowerCase());
+  if (explicit.includes(normalized)) return true;
+
+  const code = locale.code.toLowerCase();
+  const urlCode = code === "pt-br" ? "pt-br" : code;
+  if (normalized.startsWith(`data/${urlCode}/`) || normalized.startsWith(`public/${urlCode}.`) || normalized.includes(`/${urlCode}/`)) return true;
+  if (normalized.startsWith("data/") && (normalized.includes(`-${urlCode}.`) || normalized.includes(`-${urlCode}-`) || normalized.includes(`_${urlCode}.`))) return true;
+
+  const scriptMarkers = {
+    fr: ["french"],
+    es: ["spanish"],
+    it: ["italian"],
+    "pt-br": ["portuguese", "pt-br"]
+  }[code] || [code];
+  if (normalized.startsWith("scripts/") && scriptMarkers.some((marker) => normalized.includes(marker))) return true;
+
+  return false;
+}
+
+function stripJsComments(source) {
+  return String(source)
+    .replace(/\/\*[\s\S]*?\*\//g, " ")
+    .replace(/(^|[^:])\/\/.*$/gm, "$1");
+}
+
+function hasExecutableFreshnessAssertion(source) {
+  const leftToRight = /\bsourceRelease\b[^\n;]{0,320}(?:===|!==|==|!=)[^\n;]{0,320}\b(?:releaseVersion|release\.releaseVersion)\b/;
+  const rightToLeft = /\b(?:releaseVersion|release\.releaseVersion)\b[^\n;]{0,320}(?:===|!==|==|!=)[^\n;]{0,320}\bsourceRelease\b/;
+  return leftToRight.test(source) || rightToLeft.test(source);
 }
 
 function isExcepted(items, code, changed) {
