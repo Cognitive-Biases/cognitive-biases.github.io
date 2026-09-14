@@ -1,0 +1,91 @@
+name: Browser localization evidence
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/browser-localization-audit.mjs'
+      - '.github/workflows/browser-localization-audit.yml'
+      - 'styles.css'
+      - 'data/locales.json'
+      - 'data/**localization**'
+      - 'scripts/**localization**'
+      - 'scripts/**locale**'
+      - 'templates/**'
+      - '.arwp/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  built-browser-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install project dependencies
+        run: npm ci
+      - name: Build and run canonical quality gates
+        run: npm run check
+      - name: Install pinned Playwright runtime
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.63.0
+          npx playwright install --with-deps chromium
+      - name: Serve generated artifact
+        run: |
+          python3 -m http.server 4173 --directory dist > /tmp/browser-audit-server.log 2>&1 &
+          echo $! > /tmp/browser-audit-server.pid
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/browser-audit-server.log
+          exit 1
+      - name: Audit generated artifact in Chromium
+        env:
+          BASE_URL: http://127.0.0.1:4173/
+          AUDIT_TARGET: built
+        run: node scripts/browser-localization-audit.mjs
+      - name: Upload built browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-localization-audit-built
+          path: artifacts/browser-localization-audit/built
+          if-no-files-found: error
+          retention-days: 30
+
+  live-browser-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install project dependencies
+        run: npm ci
+      - name: Install pinned Playwright runtime
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.63.0
+          npx playwright install --with-deps chromium
+      - name: Audit deployed production in Chromium
+        env:
+          BASE_URL: https://cognitive-biases.github.io/
+          AUDIT_TARGET: live
+        run: node scripts/browser-localization-audit.mjs
+      - name: Upload live browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-localization-audit-live
+          path: artifacts/browser-localization-audit/live
+          if-no-files-found: error
+          retention-days: 30
