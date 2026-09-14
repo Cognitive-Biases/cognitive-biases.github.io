@@ -17,6 +17,25 @@ const types = new Map([
   [".webp", "image/webp"],
 ]);
 
+async function sendFile(response, target, status = 200) {
+  const info = await stat(target);
+  response.writeHead(status, {
+    "content-length": info.size,
+    "content-type": types.get(extname(target).toLowerCase()) || "application/octet-stream",
+  });
+  createReadStream(target).pipe(response);
+}
+
+async function send404(response) {
+  const target = join(root, "404.html");
+  try {
+    await sendFile(response, target, 404);
+  } catch {
+    response.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
+    response.end("Not found\n");
+  }
+}
+
 const server = createServer(async (request, response) => {
   try {
     const pathname = decodeURIComponent(new URL(request.url || "/", "http://localhost").pathname);
@@ -28,21 +47,21 @@ const server = createServer(async (request, response) => {
     try {
       info = await stat(target);
     } catch {
-      response.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
-      response.end("Not found\n");
+      await send404(response);
       return;
     }
 
     if (info.isDirectory()) {
       target = join(target, "index.html");
-      info = await stat(target);
+      try {
+        await stat(target);
+      } catch {
+        await send404(response);
+        return;
+      }
     }
 
-    response.writeHead(200, {
-      "content-length": info.size,
-      "content-type": types.get(extname(target).toLowerCase()) || "application/octet-stream",
-    });
-    createReadStream(target).pipe(response);
+    await sendFile(response, target, 200);
   } catch {
     response.writeHead(400, { "content-type": "text/plain; charset=utf-8" });
     response.end("Bad request\n");
