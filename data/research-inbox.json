@@ -1,7 +1,70 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-05",
+  "updatedAt": "2026-09-15",
   "items": [
+    {
+      "id": "pubmed-42213113",
+      "discoveredAt": "2026-09-15",
+      "title": "Evaluating cognitive biases in AI-assisted mammography interpretation: a simulation reader study of explainable AI across radiologist experience levels.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42213113/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct",
+      "journal": "European radiology",
+      "doi": "10.1007/s00330-026-12666-6",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 7,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7212910677",
+      "discoveredAt": "2026-09-15",
+      "title": "A dual path cognitive behavioural model of artificial intelligence assisted decision making for environmentally sustainable behaviour",
+      "url": "https://doi.org/10.1007/s10791-026-10587-y",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-14",
+      "journal": "Discover Computing",
+      "doi": "10.1007/s10791-026-10587-y",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7207779393",
+      "discoveredAt": "2026-09-15",
+      "title": "The Role of Confirmation Bias in Criminal Proceedings: Insights from the Mór Bank Robbery",
+      "url": "https://doi.org/10.38146/bsz-ajia.2026.v74.i8.pp2273-2313",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-03",
+      "journal": "Belügyi Szemle",
+      "doi": "10.38146/bsz-ajia.2026.v74.i8.pp2273-2313",
+      "relatedConcepts": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 6,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
     {
       "id": "pubmed-42335861",
       "discoveredAt": "2026-09-05",
