@@ -45,11 +45,18 @@ if (appChanged) await writeFile(appPath, appSource, 'utf8');
 
 const stylesPath = join(OUT, 'styles.css');
 let styles = await readFile(stylesPath, 'utf8');
-const marker = '/* Browser-surface overflow hardening */';
-if (!styles.includes(marker)) {
-  styles += `\n${marker}\npre{max-width:100%;box-sizing:border-box;overflow-x:auto}\ncode{overflow-wrap:anywhere;word-break:break-word}\npre code{overflow-wrap:normal;word-break:normal}\n`;
-  await writeFile(stylesPath, styles, 'utf8');
+let stylesChanged = false;
+const overflowMarker = '/* Browser-surface overflow hardening */';
+if (!styles.includes(overflowMarker)) {
+  styles += `\n${overflowMarker}\npre{max-width:100%;box-sizing:border-box;overflow-x:auto}\ncode{overflow-wrap:anywhere;word-break:break-word}\npre code{overflow-wrap:normal;word-break:normal}\n`;
+  stylesChanged = true;
 }
+const targetSizeMarker = '/* Browser-surface target-size contract */';
+if (!styles.includes(targetSizeMarker)) {
+  styles += `\n${targetSizeMarker}\na[href],button,input,select,[role="button"],[role="tab"]{min-height:24px}\n`;
+  stylesChanged = true;
+}
+if (stylesChanged) await writeFile(stylesPath, styles, 'utf8');
 
 let revision = '';
 try {
@@ -57,4 +64,4 @@ try {
 } catch {}
 if (revision) await writeFile(join(OUT, 'deploy-revision.txt'), `${revision}\n`, 'utf8');
 
-console.log(`Finalized browser surface: app.js injected into ${scriptFixes} menu/search pages; shared app scope isolated; search live status enabled; deploy revision ${revision || 'unavailable'}.`);
+console.log(`Finalized browser surface: app.js injected into ${scriptFixes} menu/search pages; shared app scope isolated; search live status enabled; 24px target-size contract enabled; deploy revision ${revision || 'unavailable'}.`);

@@ -13,6 +13,7 @@ const required = new Set([
   'small-control-target',
   'sr-only-exempt',
   'inline-text-link-exempt',
+  'reverse-focus-navigation',
 ]);
 const observed = new Set();
 const outDir = '.artifacts/localization-browser/fault-injection';
@@ -35,6 +36,9 @@ body{margin:0}.overflow-probe{width:420px;height:1px}.no-focus:focus{outline:non
 <button class="tiny-control" aria-label="Klein"></button>
 <p>Dies ist ein <a href="#inline">Inline-Link</a> im Satz.</p>
 <h2 class="sr-only">Nur für Hilfstechnologien</h2>
+<a href="#reverse-before">Vorheriger Fokus</a>
+<button data-browser-reverse-probe>Rückwärtsfalle</button>
+<script>document.querySelector('[data-browser-reverse-probe]').addEventListener('keydown',function(event){if(event.key==='Tab'&&event.shiftKey)event.preventDefault()})</script>
 </body></html>`);
 
   const state = await inspectRenderedPage(page, { expectedLang: 'de', lightweight: false });
@@ -55,6 +59,7 @@ body{margin:0}.overflow-probe{width:420px;height:1px}.no-focus:focus{outline:non
     onFinding: (_severity, type, _locale, _path, _viewport, details) => {
       findings.push({ type, details });
       if (type === 'focus-indicator-weak') observed.add('focus-indicator');
+      if (type === 'reverse-focus-static') observed.add('reverse-focus-navigation');
     },
   });
 
