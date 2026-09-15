@@ -37,7 +37,7 @@ for (const member of MEMBERS) {
   const html = await readFile(resolve("dist", "biases", member.slug, "index.html"), "utf8");
   if (!html.includes(`href="/families/${FAMILY}/"`)) throw new Error(`${member.slug}: rendered page does not link future-state family.`);
   if (!html.includes('class="evidence-review"')) throw new Error(`${member.slug}: rendered page lost evidence review.`);
-  if (!html.includes(`/tools/decision-audit/?bias=${member.slug}`)) throw new Error(`${member.slug}: Decision Audit route missing.`);
+  if (!html.includes(`/tools/decision-audit/#bias=${member.slug}`)) throw new Error(`${member.slug}: fragment-state Decision Audit route missing.`);
   if (!html.includes('/contexts/forecasting-future-choices/')) throw new Error(`${member.slug}: reciprocal forecasting context link missing.`);
 }
 
@@ -55,4 +55,4 @@ for (const member of MEMBERS) {
   if (!forecastingHtml.includes(`/biases/${member.slug}/#evidence`)) throw new Error(`${member.slug}: forecasting context is missing evidence link.`);
 }
 
-console.log("Future-state family check passed: Hot–Cold Empathy Gap, Impact Bias, and Projection Bias are evidence-reviewed, family-linked, forecasting-context lenses with Decision Audit routes.");
+console.log("Future-state family check passed: Hot–Cold Empathy Gap, Impact Bias, and Projection Bias are evidence-reviewed, family-linked, forecasting-context lenses with fragment-state Decision Audit routes.");

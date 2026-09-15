@@ -70,7 +70,7 @@ for (const expected of [DECLINISM, FADING, ROSY]) {
   for (const required of ['class="evidence-review"', 'data-seo-schema="defined-term"', `/contexts/${CONTEXT}/`, `/research/${RESEARCH}/`]) {
     if (!html.includes(required)) throw new Error(`${expected.slug}: rendered page is missing ${required}.`);
   }
-  if (!html.includes(`/tools/decision-audit/?bias=${expected.slug}`)) throw new Error(`${expected.slug}: audit-eligible reviewed page lost its Decision Audit route.`);
+  if (!html.includes(`/tools/decision-audit/#bias=${expected.slug}`)) throw new Error(`${expected.slug}: audit-eligible reviewed page lost its fragment-state Decision Audit route.`);
 }
 const declinismHtml = await readFile(resolve("dist", "biases", DECLINISM.slug, "index.html"), "utf8");
 if (!declinismHtml.includes(`/compare/${COMPARISON}/`)) throw new Error("Declinism page is missing comparison discovery.");

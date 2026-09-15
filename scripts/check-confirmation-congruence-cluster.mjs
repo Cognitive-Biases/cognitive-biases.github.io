@@ -65,11 +65,11 @@ for (const expected of [CONFIRMATION, CONGRUENCE]) {
   for (const required of ['class="evidence-review"', 'data-seo-schema="defined-term"', `/contexts/${CONTEXT}/`, `/research/${RESEARCH}/`, `/compare/${COMPARISON}/`]) {
     if (!html.includes(required)) throw new Error(`${expected.slug}: rendered page is missing ${required}.`);
   }
-  if (!html.includes(`/tools/decision-audit/?bias=${expected.slug}`)) throw new Error(`${expected.slug}: reviewed page lost its Decision Audit route.`);
+  if (!html.includes(`/tools/decision-audit/#bias=${expected.slug}`)) throw new Error(`${expected.slug}: reviewed page lost its fragment-state Decision Audit route.`);
 }
 
 const contextHtml = await readFile(resolve("dist", "contexts", CONTEXT, "index.html"), "utf8");
-if (!contextHtml.includes(`/biases/${CONGRUENCE.slug}/#evidence`) || !contextHtml.includes(`/tools/decision-audit/?bias=${CONGRUENCE.slug}`)) throw new Error("Checking-claims page does not expose Congruence evidence and Audit route.");
+if (!contextHtml.includes(`/biases/${CONGRUENCE.slug}/#evidence`) || !contextHtml.includes(`/tools/decision-audit/#bias=${CONGRUENCE.slug}`)) throw new Error("Checking-claims page does not expose Congruence evidence and fragment-state Audit route.");
 const comparisonHtml = await readFile(resolve("dist", "compare", COMPARISON, "index.html"), "utf8");
 if (!comparisonHtml.includes(`/biases/${CONFIRMATION.slug}/#evidence`) || !comparisonHtml.includes(`/biases/${CONGRUENCE.slug}/#evidence`)) throw new Error("Confirmation/Congruence comparison does not link both evidence reviews.");
 const researchHtml = await readFile(resolve("dist", "research", RESEARCH, "index.html"), "utf8");

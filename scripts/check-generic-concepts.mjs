@@ -33,11 +33,11 @@ for (const expected of EXPECTED) {
   if (!html.includes('class="evidence-review"')) throw new Error(`${expected.slug}: evidence review not rendered.`);
   if (!html.includes(`class="kind-chip" data-kind="${expected.kind}"`)) throw new Error(`${expected.slug}: kind chip not rendered.`);
   if (expected.auditEligible) {
-    if (!audit.includes(`value="${expected.slug}"`) || !html.includes(`/tools/decision-audit/?bias=${expected.slug}`)) {
-      throw new Error(`${expected.slug}: audit-eligible concept is not connected to Decision Audit.`);
+    if (!audit.includes(`value="${expected.slug}"`) || !html.includes(`/tools/decision-audit/#bias=${expected.slug}`)) {
+      throw new Error(`${expected.slug}: audit-eligible concept is not connected to fragment-state Decision Audit.`);
     }
   } else {
-    if (audit.includes(`value="${expected.slug}"`) || html.includes(`/tools/decision-audit/?bias=${expected.slug}`) || html.includes('class="audit-cta"')) {
+    if (audit.includes(`value="${expected.slug}"`) || html.includes(`/tools/decision-audit/#bias=${expected.slug}`) || html.includes(`/tools/decision-audit/?bias=${expected.slug}`) || html.includes('class="audit-cta"')) {
       throw new Error(`${expected.slug}: audit-ineligible concept leaked into Decision Audit.`);
     }
   }
