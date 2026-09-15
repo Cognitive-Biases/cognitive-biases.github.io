@@ -75,6 +75,8 @@ if (digestSchema.$schema !== "https://json-schema.org/draft/2020-12/schema") thr
 if (digestSchema.$id !== `${SITE}/schemas/monthly-research-digests.schema.json`) throw new Error("Monthly digest schema ID is incorrect.");
 
 if (!robots.includes(`Sitemap: ${SITE}/sitemap.xml`)) throw new Error("robots.txt is missing the XML sitemap.");
-if (!robots.includes(`Sitemap: ${SITE}/research/feed.xml`)) throw new Error("robots.txt is missing the research Atom feed sitemap.");
+for (const line of robots.split(/\r?\n/)) {
+  if (/^Sitemap:/i.test(line.trim()) && /(?:feed|rss|atom)\.xml/i.test(line)) throw new Error(`robots.txt incorrectly declares a feed as a sitemap: ${line.trim()}`);
+}
 
-console.log(`SEO discovery hygiene passed: ${feedEntries} feed entries (${(digests.digests || []).length} monthly digest(s)), truthful Research lastmod values, ${biasBlocks.length} bias pages without fabricated lastmod, public digest data + schema, and no fabricated lastmod for undated resource pages.`);
+console.log(`SEO discovery hygiene passed: ${feedEntries} Atom compatibility entries (${(digests.digests || []).length} monthly digest(s)), truthful Research lastmod values, ${biasBlocks.length} bias pages without fabricated lastmod, public digest data + schema, and feed URLs kept separate from sitemap directives.`);

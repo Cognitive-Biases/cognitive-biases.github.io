@@ -134,10 +134,18 @@ const robotsTxt = await readFile(join(OUT, "robots.txt"), "utf8");
 if (!robotsTxt.includes(`Sitemap: ${SITE}sitemap.xml`)) fail("robots.txt does not advertise the canonical sitemap");
 try {
   await access(join(OUT, "research", "feed.xml"));
-  if (!robotsTxt.includes(`Sitemap: ${SITE}research/feed.xml`)) fail("robots.txt does not advertise the published research feed");
-} catch (error) {
-  if (!String(error?.message || "").startsWith("Final public surface gate:")) fail("research/feed.xml is expected but missing from the final artifact");
-  throw error;
+} catch {
+  fail("research/feed.xml Atom compatibility feed is expected but missing from the final artifact");
+}
+try {
+  await access(join(OUT, "feed.xml"));
+} catch {
+  fail("feed.xml RSS subscription feed is expected but missing from the final artifact");
+}
+for (const line of robotsTxt.split(/\r?\n/)) {
+  if (/^Sitemap:/i.test(line.trim()) && /(?:feed|rss|atom)\.xml/i.test(line)) {
+    fail(`robots.txt incorrectly declares a feed as a sitemap: ${line.trim()}`);
+  }
 }
 
 const errorHtml = await readFile(join(OUT, "404.html"), "utf8");
@@ -158,4 +166,4 @@ for (const guide of machineGuides) {
   if (/Educational mobile app \+ public reference/i.test(text)) fail(`${guide.file} contains legacy app-first positioning`);
 }
 
-console.log(`Final public surface gate passed: ${urls.length} canonical sitemap pages, one ${identity.siteName} WebSite identity, publisher ${identity.publisher.name}, ${faviconWidth}x${faviconHeight} favicon, truthful bias freshness, valid final JSON-LD, social image parity, robots/feed discovery, custom noindex 404, and no legacy mobile-app schema.`);
+console.log(`Final public surface gate passed: ${urls.length} canonical sitemap pages, one ${identity.siteName} WebSite identity, publisher ${identity.publisher.name}, ${faviconWidth}x${faviconHeight} favicon, truthful bias freshness, valid final JSON-LD, social image parity, canonical sitemap plus separate RSS/Atom feeds, custom noindex 404, and no legacy mobile-app schema.`);
