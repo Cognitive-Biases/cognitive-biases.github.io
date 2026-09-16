@@ -73,6 +73,11 @@ for (const entry of articlesDoc.entries || []) {
 
   if (!html.includes('class="long-form-article"')) {
     html = html.replace('<section class="evidence-review"', `${articleSection}<section class="evidence-review"`);
+  } else {
+    const start = html.indexOf('<section class="long-form-article" id="long-form">');
+    const end = html.indexOf('<section class="evidence-review"', start);
+    if (start < 0 || end < 0) throw new Error(`${entry.slug}: existing long-form article block could not be located for replacement.`);
+    html = html.slice(0, start) + articleSection + html.slice(end);
   }
 
   const pageUrl = `${SITE}/biases/${entry.slug}/`;
@@ -100,6 +105,10 @@ for (const entry of articlesDoc.entries || []) {
   };
   if (!html.includes(`${pageUrl}#long-form-article`)) {
     html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script></head>`);
+  } else {
+    const schemaRe = new RegExp(`<script type="application/ld\\+json">\\{"@context":"https://schema\\.org","@type":"Article","@id":"${pageUrl.replace(/[/.]/g, "\\$&")}#long-form-article"[\\s\\S]*?</script>`);
+    if (!schemaRe.test(html)) throw new Error(`${entry.slug}: existing long-form Article schema could not be located for replacement.`);
+    html = html.replace(schemaRe, `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>`);
   }
   await writeFile(pagePath, html);
 }

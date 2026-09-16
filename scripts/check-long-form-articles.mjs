@@ -86,8 +86,11 @@ for (const entry of articlesDoc.entries || []) {
   if (!html.includes(`${pageUrl}#long-form-article`) || !html.includes('"@type":"Article"')) {
     throw new Error(`${entry.slug}: long-form Article structured data is missing.`);
   }
-  if (!html.includes(entry.headline.replaceAll("&", "&amp;"))) throw new Error(`${entry.slug}: rendered headline is missing.`);
-  if (!html.includes("Evidence boundary") || !html.includes(entry.boundaryNote.replaceAll("&", "&amp;"))) {
+  const escapeHtml = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[character]);
+  if (!html.includes(escapeHtml(entry.headline))) throw new Error(`${entry.slug}: rendered headline is missing.`);
+  if (!html.includes("Evidence boundary") || !html.includes(escapeHtml(entry.boundaryNote))) {
     throw new Error(`${entry.slug}: rendered evidence boundary is missing.`);
   }
   if (!html.includes("current evidence-first model")) throw new Error(`${entry.slug}: migration provenance note is missing.`);
