@@ -2,53 +2,169 @@
   "slug": "cognitive-bias-projection-bias",
   "reviewedAt": "2026-09-16",
   "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-projection-bias",
-  "headline": "Projection Bias: when today's state writes tomorrow's contract",
-  "lede": "Projection bias is the tendency to assume that our future selves will want roughly what we want right now. It matters most when a temporary state — hunger, enthusiasm, exhaustion, a cold week — quietly shapes a commitment whose costs will arrive later, in a different state.",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-projection-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T13:08:10.381Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Future You Won’t Thank Present You For: Projection Bias, Up Close",
+  "lede": "You buy groceries after work, stomach grumbling, and come home with three rotisserie chickens, five pints of ice cream, and an ambitious stack of kale. On Monday, your fridge looks like a culinary TED talk. By Thursday, you’re grazing on cereal and pushing soggy kale around the shelf. In the quiet, your future self clears their throat: “We need to talk.”",
   "sections": [
     {
-      "heading": "What the pattern is and where it appears",
+      "heading": "What Is Projection Bias—and Why It Matters",
       "paragraphs": [
-        "Most people know, in the abstract, that their tastes change. Projection bias is not ignorance of that fact; it is underestimating how much the change will be. The person signing a two-year gym contract in a burst of January motivation does not believe motivation is eternal. They simply price the contract as if January motivation were close to the long-run average. The bias lives in the gap between 'I know I will change' and the much smaller change actually imagined.",
-        "The decisions most exposed to this pattern share a structure: they are made in one state and paid for in another. Long-term purchases, career commitments, dietary plans made right after lunch, subscriptions bought during a free trial week, leases signed while a city still feels novel. In each case the current state feels like evidence about the future, even when it is really just weather — literal or emotional — passing through."
+        "That sting? Projection bias—the habit of assuming your future self will want what you want right now. It’s one of the subtler mental tripwires because it feels like common sense. What else would future you want? You’re both you. Yet preferences shift with mood, energy, context, season, age, and experience. The you who promised early morning runs is not the you rolling out of bed in the cold dark at 5:30 a.m. Projection bias is the mental shortcut where you project your current preferences, emotions, or needs onto your future self. You assume tomorrow’s you will want the same things you want right now. Often you’re wrong, and the mistake ripples through your money, health, relationships, and work.",
+        "It matters because: It inflates plans and underestimates friction. You design a marathon training plan while buzzing on New Year optimism. February you is not amused; It burns cash. You subscribe, prepay, bulk-buy, and then don’t use what you bought; It eats time. You overcommit to future plans and then either cancel or grind through low-quality work; It strains relationships. You offer promises your future self can’t keep. In research, this shows up in funny and painful ways. Hungry people buy more food and different food than they do when full (Read & van Leeuwen, 1998). People in a warm room dramatically underestimate how much they’ll value a jacket later (Loewenstein et al., 2003). Forecasting emotions in general tends to err in direction and intensity (Gilbert & Wilson, 2000). Across contexts, we drag the present into the future like a clumsy copy-paste."
       ]
     },
     {
-      "heading": "Why the current state wins the forecast",
+      "heading": "Why We Fall For It",
       "paragraphs": [
-        "The mechanism, as the reviewed evidence describes it, is incomplete adjustment. Today's tastes, hunger, mood or circumstances provide a salient starting point for any prediction about the future. We adjust away from that anchor — we are not naive — but the adjustment tends to be too small. The present is vivid and free; the future self is an abstraction. Vivid beats abstract in most forecasting contests.",
-        "This is not purely a laboratory finding. Field evidence on catalog orders found that weather conditions on the day of an order influenced decisions whose consequences arrived much later, even though those conditions were never going to persist. An unusually cold day nudged people toward cold-weather purchases they later returned at higher rates. The shoppers were not irrational in a general sense; they were letting a transient state do work it had no business doing."
+        "Your brain bets on stability. It’s efficient to assume that your tastes and tolerance will remain consistent. Most days, that’s true enough: you still like coffee and dislike wet socks. But the devil lives in situational shifts. State dependence. Preferences change with immediate states—hunger, fatigue, stress, temperature, hormones. Present you in one state fails to adjust for future states. You design a quiet reading plan when you’re relaxed on Sunday and then ignore it Wednesday night after a brutal meeting; Empathy gap. We struggle to feel what a different state will feel like until we’re in it. It’s hard to imagine morning grogginess at 9 p.m. under warm lights and high resolve (Loewenstein, 1996);",
+        "Identity stickiness. We like to believe we’re consistent people. Changing preferences feels flaky, so we pretend they won’t change; Planning theater. Planning feels like progress. It gives a dopamine hit that tricks us into buying gym yearlies and online courses we’ll never open; Social mirroring. We adopt goals from others and then project those borrowed desires onto our future self. Future self disagrees. Awkward. Projection bias isn’t a character flaw. It’s a feature with side effects. The trick isn’t to squash it, but to respect how slippery the future is and design plans that flex."
       ]
     },
     {
-      "heading": "What the evidence supports, and what it does not",
+      "heading": "The Weekly Meal Plan That Forgot Weeknights",
       "paragraphs": [
-        "The evidence base is strongest in intertemporal choice and consumer settings: predicting what you will want to eat later, what you will use later, what you will enjoy later. There, the pattern of overprojecting current states onto future preferences is reasonably well established, through theory, incentivized experiments and field data. That is a solid but bounded foundation.",
-        "What the evidence does not support is using projection bias as a generic explanation for every wrong prediction anyone makes about their future self. A bad forecast can come from missing information, changing circumstances, or plain randomness, none of which is this bias. The reviewed evidence also does not license claims that people never learn, that preferences are arbitrary, or that every long commitment is a mistake. Sometimes the gym membership works out. The bias claim is narrower: current states systematically get too much weight in the forecast."
+        "Stories land better than warnings. Here are projections in the wild, and what actually helps. Nadia builds a beautiful plan: oatmeal breakfasts, leafy lunches, two new recipes during the week, and a Sunday stew. Monday goes great. Tuesday’s “Thai basil tofu” collides with back-to-back logistics hell, a commute delay, and a surprise homework meltdown. Future Nadia orders pizza.",
+        "The projection: Weekend Nadia planned for a calm cook, not a tired parent. She projected weekend energy into weekday evenings; The adjustment: Cook once, eat thrice. She batch-cooks the stew Sunday, preps a midweek sheet-pan dinner, and buys easy frozen dumplings. Tuesday’s plan becomes “heat, assemble, done.” Suddenly future Nadia doesn’t hate past Nadia."
       ]
     },
     {
-      "heading": "Do not confuse it with the hot-cold empathy gap",
+      "heading": "The Gym Year Pass That Hurt to Cancel",
       "paragraphs": [
-        "Projection bias is often mixed up with the hot-cold empathy gap, and the two are close relatives. The empathy gap concerns failing to appreciate how a different visceral state — pain, craving, fear, arousal — changes motivation and choice, either in your future self or in other people. Projection bias is the broader forecasting error of carrying today's tastes and states into tomorrow's preferences with too little correction.",
-        "The distinction matters because the checks differ slightly. For an empathy gap, the key question is whether a specific visceral state is doing the distorting: 'Am I calm now, predicting a decision I will make while tempted?' For projection bias, the question is wider: 'Which part of my current situation — mood, novelty, appetite, fatigue — am I quietly assuming will still be true in a year?' A related concept, impact bias, concerns overestimating how intense or long-lasting future emotions will be; that is about feelings after an event, not about preferences across time."
+        "Marcus tours a shiny gym in January. Motivated, he buys a full-year pass with add-ons. By March, he goes twice a week, hates the 20-minute drive, and avoids eye contact with the trainer. The projection: January Marcus believed March Marcus would choose the gym over the couch after long days.",
+        "He also assumed the commute wouldn’t matter; The adjustment: He tries a micro-bet—one month at a small gym five minutes away. He pairs it with a home kettlebell and a rule: “Ten minutes counts.” Usage goes up. Shame goes down. Future Marcus sends a thumbs-up gif."
       ]
     },
     {
-      "heading": "A compact example: the equipment bought in the wrong season",
+      "heading": "The “We’ll Use It!” Vacation Rental",
       "paragraphs": [
-        "Consider someone who, during an unusually harsh week in November, orders an expensive set of winter gear — premium jacket, heavy boots, the works. The purchase total is around a month's discretionary budget. By February the winter has been ordinary, the gear has been worn twice, and by spring it is competing for closet space with last year's optimism. Nothing about the shopper was foolish. The forecast was contaminated by the week it was made in.",
-        "A better procedure does not require ignoring the cold week; it may genuinely signal a need. It requires a second measurement. Wait until a normal week and re-ask the question. Check the reference class: how often did last year's winters actually demand this gear, and what happened to previous seasonal purchases? If the need survives a neutral state and a look at history, buy. If it only exists during the cold snap, the state was making the decision, not the person."
+        "Two friends split a beach house. They stock it with kayaks, board games, and a fancy espresso setup. They picture dawn paddles and deep chess tournaments. The wind howls. The espresso machine requires a YouTube degree. They nap and watch movies. The projection: They pictured ideal weather and high-energy mornings.",
+        "They forgot weather variability, travel fatigue, and that vacations often mean doing less; The adjustment: Next year, they book near walkable food. They rent kayaks on the one good-weather day. They bring a French press. The vacation fits the humans who actually show up, not the brochure versions."
+      ]
+    },
+    {
+      "heading": "The Team Roadmap and the Golden-Hour Promise",
+      "paragraphs": [
+        "A startup writes a bold Q2 roadmap on a Tuesday afternoon, post-caffeine, post-hype demo. By Friday mornings, the team moves like a slow printer and bugs leak in from every corner. Velocity charts don’t care about vibes. The projection: They planned in a high-energy context and assumed similar energy throughout. They also ignored operational overhead and bug gravity; The adjustment: The team assigns 20–30% capacity to maintenance, stacks deep work early in the week, and makes Fridays Slack-lite and bug-heavy. Roadmaps grow skeptically. Delivery improves.",
+        "During a perfect picnic, someone promises weekend hikes all summer. Clouds move in; pollen moves out; Netflix moves in. The projection: Golden-hour brains project their glow forward; The adjustment: They turn the promise into a conditional plan: “If the weekend forecast is clear Friday, we hike Sunday morning.” They also pick a backup: “If not, we do pancakes and a board game.” Less guilt, more pancakes."
+      ]
+    },
+    {
+      "heading": "The Spring-Fever Closet and the “Future Me Will Want This Course” Click",
+      "paragraphs": [
+        "Inspired by a bright spring day, you buy colorful clothes you never wear again. Come November, you’re back to black sweaters. The projection: Spring mood leaked into future seasons and settings; The adjustment: You build a capsule wardrobe that respects real life: work, weather, and laundry cadence. You test one bold item at a consignment shop before committing. Future You actually wears the clothes. Mid-article inspiration, you buy a 60-hour video course. By week two, your calendar’s full, and your attention’s toast. The course sits like a brick in your browser.",
+        "The projection: You assumed stable motivation and time availability. You also underestimated switching costs; The adjustment: You trial a 2-hour intro or audit the first module. You block a recurring 45-minute slot for two weeks before buying. If you keep showing up, you invest. If not, no harm, no brick."
+      ]
+    },
+    {
+      "heading": "The Founder’s Pricing Bet",
+      "paragraphs": [
+        "A founder sets annual-only pricing to “maximize commitment.” Churn drops on paper but support tickets explode and refunds spike after month three. The projection: The founder assumed long-term commitment reflects long-term value, ignoring that early-stage products often don’t fit evolving needs;",
+        "The adjustment: They add a monthly plan and a “pause” option. They allow easy downgrades. Retention improves because the pricing respects changing user states. These aren’t moral failures. They’re planning errors born from a human brain that compresses time and context. Good news: they’re fixable with a few simple moves."
+      ]
+    },
+    {
+      "heading": "Step 1: Name the State You’re In Now",
+      "paragraphs": [
+        "Most advice flattens into “be realistic,” which is like telling someone lost at sea to “swim toward land.” You need handles. Here’s a practical approach we’ve tested—in kitchens, sprints, and budget apps. Ask: What’s driving my choice right now? Am I hungry, tired, anxious, excited, lonely, euphoric, freezing, rushed?; Is the sun out? Did I just win something? Did I just scroll for an hour?",
+        "Write it down in one sentence. Anchoring the present state reduces its ghostly influence later. Example: “I’m buzzing from a promotion and three coffees.” Now you know why you’re trying to adopt four big habits and a dog."
+      ]
+    },
+    {
+      "heading": "Step 2: Simulate the Future State; Step 3: Shrink the Commitment",
+      "paragraphs": [
+        "Ask: When I’ll be using this later, what will that moment feel like? What day/time will this happen?; What competing demands usually exist then?; How does my energy feel in that slot historically? Use a quick memory search. If you plan 6 a.m. workouts, think back to your last three early mornings. If they were groggy chaos, believe them.",
+        "Default to the smallest reversible unit. Buy one month, not twelve; Take a 7-day trial without adding calendar debt; Cook one new recipe, not five; Ship a prototype to five users, not a whole product to the world. Scaling up is easy. Unwinding is a mess."
+      ]
+    },
+    {
+      "heading": "Step 4: Bundle With Helpful Context; Step 5: Precommit With Escape Hatches",
+      "paragraphs": [
+        "Design for the state, not the ideal. If mornings are weak, don’t schedule hard decisions before 10; If weeknights are chaotic, prep weekend meals or put dinner on autopilot; If you forget workouts, leave the kettlebell next to your coffee. Change the environment so that future you loses gracefully. Even on a bad day, a 10-minute fallback counts. Precommitment works—set friction that nudges you toward the plan—but keep an honest escape valve.",
+        "Put the class across the street, not across town; Put the gym clothes in the car; Place a refundable deadline on deliverables. Pair it with a “stop rule”: “If I skip twice in a row, I revisit the plan.” Future you feels respected, not trapped."
+      ]
+    },
+    {
+      "heading": "Step 6: Log Reality; Step 7: Put Future You in the Room",
+      "paragraphs": [
+        "Use a lightweight habit or time tracker. Not to shame yourself; to measure. Log what you did and how you felt; Notice when plans collide with real life; Adjust the plan next week using actual data. Reality beats motivation. Patterns surface, and you start planning for the person you are, not the avatar you imagine. Quick trick: write yourself a 3-sentence note from next Wednesday-you. “It’s 7 p.m., I’m wiped, and the house is loud. Please don’t make me cook a complex dinner. I’ll be grateful for leftovers.”; “It’s month three and the training plan is too heavy. Progress, not heroics.”",
+        "We’re surprisingly persuadable when our own words are waiting in the future. Tape it to your fridge. Stick it near your shopping tab. Paste it atop your project plan. It pays for itself in one avoided regret."
+      ]
+    },
+    {
+      "heading": "Calendars That Bully Us and Health That Overestimates Willpower",
+      "paragraphs": [
+        "Some places it hides so well we call it “normal.” You accept meetings two weeks out because “future me will be free.” You forget you already accepted other meetings two weeks out. Your week becomes Tetris with no straight piece. A calendar isn’t a promise; it’s a wish list without guardrails. Fix: Hold office hours. Batch meetings to certain days. Keep soft blocks around deep work. Decline first, negotiate second. Protect empty space like it’s budget.",
+        "You buy equipment that’s loud, bright, or complex. Future you will absolutely not drag that rower out after a long day. Fix: Default to frictionless. A yoga mat that lives on the floor beats a bike that lives in a closet. Ten-minute workouts beat ninety-minute odysseys."
+      ]
+    },
+    {
+      "heading": "Annual Deals, Weeknight Magic, and First Drafts That Smirk",
+      "paragraphs": [
+        "“Two months free if you pay annually!” Annuals look smart but transfer risk from the seller to you. Fix: Pay monthly unless you have a year of historical usage. If you do go annual, set a calendar reminder one month before renewal with a one-line prompt: “Am I still using this? Yes or cancel.” You picture patient, creative, screen-free evenings. Then homework, dishes, and the dog. Fix: Build two evening modes: “green” night (energy medium/high; do crafts, parks, games) and “yellow” night (energy low; do bath, stories, low-mess). Decide at 5 p.m. Future You will hug you.",
+        "You imagine a clean arc of productivity. Then the first draft smirks. Fix: Aim for five ugly drafts. Schedule messy passes and clean passes separately. Plan for stuck days. You are not a slow failure; you’re a normal writer."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Projection bias sits among a family of time-and-self confusions. Here’s how to tell siblings apart: Present bias: You prefer smaller, sooner rewards over larger, later ones. That’s the “eat donut now, salad later” tug. Projection bias is different—you mispredict future preferences, not just preferences over time; Affective forecasting errors: You misestimate how you’ll feel in the future and for how long (Gilbert & Wilson, 2000). Projection bias contributes when you assume you’ll feel later as you do now; Hot-cold empathy gap: In a “hot” state (aroused, angry, hungry), you can’t empathize with your “cold” state, and vice versa (Loewenstein, 1996).",
+        "Projection bias often rides this gap: cold you plans for cold you, hot you for hot you, and neither plans for the other; Planning fallacy: You underestimate how long tasks will take (Kahneman & Tversky, 1979). Projection bias can feed it if you project high-energy states into the future and ignore delays; Optimism bias: You expect things to turn out better than they do. Projection bias is narrower, focusing on your future preferences, not outcomes; False-consensus effect: You think others share your views more than they do. Different from projecting onto your own future self, but the mechanism rhymes: we use our current state as the template. They tend to travel together, especially in December and in app subscription pages."
+      ]
+    },
+    {
+      "heading": "Anti-Projection Habits for Food, Health, and Money",
+      "paragraphs": [
+        "Let’s get concrete. Here’s how to embed protection into areas that bleed time and money. Shop after a snack, not starving. If you must shop hungry, restrict to a list built when full; Precommit to “fallback meals” you actually eat. Scrambled eggs, frozen dumplings, tuna wraps—whatever your weekday self says yes to; Slice workout plans in half. If you do more, great. If not, you still did something; Treat health gadgets like pets. If you wouldn’t care for it every day, don’t adopt it.",
+        "When tempted by an annual plan, insert a 24-hour delay plus a usage check; Use a “subscription sunset” calendar: everything must be re-decided annually, no silent renewals; Buy experiences close to execution. Commit to next month’s concert, not next year’s retreat unless it’s a once-in-a-lifetime thing; Before buying a tool, rent or borrow the equivalent. If you reach for it repeatedly, then buy."
+      ]
+    },
+    {
+      "heading": "Anti-Projection Habits for Work and Learning",
+      "paragraphs": [
+        "Create a “reality budget” for time. If your sprint “fits exactly,” it’s overbooked. Add a 30% buffer; Book recurring personal time blocks as meetings with yourself, and treat them like you treat meetings with your boss; Roadmaps: commit to outcomes, not outputs. “Reduce onboarding time by 25%” beats “Ship three features.”; Use “minimum delightful” definitions. Ask, “What’s the smallest thing that would make a user smile?”",
+        "Pilot everything. Try an hour for free on YouTube before buying into a bootcamp; Decide on an end condition: “If I haven’t built a tiny project in two weeks, I stop.”; Pair learning with a live use case. Learning sticks when it solves a present need."
+      ]
+    },
+    {
+      "heading": "Habits for Relationships and Home, Plus Tiny Scripts",
+      "paragraphs": [
+        "Promise ranges, not absolutes. “Let’s aim for one date night every 2–3 weeks.”; Do a weekly state-of-the-union: ten minutes to ask, “How much social energy do we have this week?”; For events, RSVP “maybe” by default, and decide 48 hours prior. Don’t renovate with Pinterest tabs alone. Tape outlines on the floor, live with the mockup for a week. Notice where you stub toes; Buy one organizing bin, not twelve. See if the system survives laundry day. Words shape plans. Here are short scripts we’ve used to stop projection bias mid-click.",
+        "“Future me will be tired.” This sentence in your budget doc before any annual or big-ticket purchase; “What would make this succeed on my worst Wednesday?” Use this before committing to a plan; “Ten minutes counts.” The antidote to hero plans that collapse under their own weight; “Half as much, twice as often.” For workouts, writing, learning; “Trial before treaty.” No big commitments without a mini version. Put one on a sticky note. If you collect too many, you’ve built a museum of advice you don’t use. Keep two."
+      ]
+    },
+    {
+      "heading": "What the Research Adds (Sparingly, Promise)",
+      "paragraphs": [
+        "Shoppers who buy food while hungry choose more high-calorie items and in greater quantities (Read & van Leeuwen, 1998). You think you’re stocking for the week; you’re stocking for an appetite that won’t last; People asked to predict preferences in different states (e.g., warmth, hunger) fail to adjust sufficiently; they project their current state forward (Loewenstein et al., 2003); We overestimate the intensity and duration of our future feelings, a pattern called impact bias (Gilbert & Wilson, 2000).",
+        "Combine this with projection bias, and you buy bright gym clothes for a mood that lasts a day; Present bias from behavioral economics anchors our immediate-gratification tilt (O’Donoghue & Rabin, 1999). While distinct, it often shows up alongside projection errors—plans overvalue the now. Research doesn’t fix your Tuesday night, but it backs your intuition that the future is slipperier than your plans admit."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Be Kind to the Future Stranger You Are",
+      "paragraphs": [
+        "Future you is not a clone. They’re a stranger you love, like a cousin you haven’t met yet. They wake up with their own aches, a calendar you can’t see yet, and mood weather you can’t predict. When you plan like they’re you-now, you box them in. When you plan like they’re different, you give them a hand.",
+        "So make it small. Make it reversible. Leave the door ajar. Pre-cook the Tuesday meal. Buy the monthly plan. Try the 10-minute version. Leave future you a note and the good pen. Not to scold. To protect. To make Tuesday-you proud of Sunday-you. And to make your fridge less tragic."
       ]
     }
   ],
   "checklist": [
-    "Before a long commitment, write down the current state you are in: mood, energy, hunger, novelty, season.",
-    "Re-evaluate the same decision in a meaningfully different state — rested versus exhausted, busy versus calm — before signing.",
-    "Ask how your preferences on this topic have actually changed over the past five years, and use that as a reference class.",
-    "For purchases, check how often the relevant condition (weather, workload, motivation) has occurred in the past year rather than this week.",
-    "Add a waiting period to expensive or hard-to-reverse decisions made during an unusual state.",
-    "Prefer contracts and plans with exit options when your forecast depends on your current enthusiasm lasting.",
-    "After a commitment fails, check whether the error was state contamination or missing information before drawing a lesson."
+    "What state am I in right now?",
+    "When exactly will future me use this? What will compete for attention then?",
+    "What’s the smallest reversible version?",
+    "How can I make doing the right thing easiest in that future context?",
+    "What’s my stop rule if the plan fails twice?",
+    "Did I check a recent log of reality?",
+    "If this were for a friend like me, what would I advise?",
+    "Name your current state in one sentence",
+    "Imagine the exact future context: day, time, energy, conflicts",
+    "Choose the smallest reversible version of the decision",
+    "Design the environment so the right choice is the easy choice",
+    "Set a stop rule: if it fails twice, adjust or quit"
   ],
-  "boundaryNote": "Projection bias helps you inspect whether a temporary state is inflating a forecast of future preferences; it does not prove that any particular long-term commitment is wrong, that preferences are unstable, or that a failed prediction was caused by this bias rather than by new information or chance."
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"established in intertemporal preference prediction\": Projection bias describes a tendency to overproject current tastes or visceral states onto future preferences. People often understand that tastes will change but underestimate how much they will change. The construct is most directly supported in intertemporal choice and consumer settings; it should not be stretched into a generic explanation for every bad prediction about one's future self. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
 }
