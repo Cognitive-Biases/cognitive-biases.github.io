@@ -1,0 +1,104 @@
+{
+  "slug": "framing-effect-context-neglect-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-context-neglect-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/framing-effect-context-neglect-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:03:55.798Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When Apps Lose the Plot: Context Neglect Bias in Tech",
+  "lede": "On a late summer evening, Maya’s phone buzzed with an alert: “Air quality good. Go for a run!” She laced up and hit the park. Ten minutes in, her throat felt raw. A grass fire miles away had shifted smoke through her neighborhood. The “good” air quality came from a station across town, upwind. Maya’s app didn’t lie. It just ignored the context that mattered.",
+  "sections": [
+    {
+      "heading": "What Is Context Neglect Bias — When Technology Forgets About People and Why It Matters",
+      "paragraphs": [
+        "Context neglect bias is when a system or person makes a decision using a decontextualized snapshot—ignoring the surrounding conditions, history, constraints, and lived realities that give data meaning. Context neglect bias shows up when people or machines latch onto the most available, clean-looking signal and treat it like the whole truth. It’s not just a data problem. It’s a design mindset that assumes “what we can measure is what matters.” Think of an algorithm that predicts “risk” from arrest records, ignoring how policing intensity differs by neighborhood. Or a fitness plan that tells a new parent to “sleep 8 hours” without acknowledging 2 a.m. feedings. Or a route planner that proudly shaves 3 minutes off your commute by sending you through a dark alley.",
+        "Ignoring context breaks trust. It creates brittle systems that perform in the lab but collapse in real life. People feel blamed for “noncompliance” when the tool never fit their situation. And organizations chase metrics that look good on dashboards while reality quietly burns beneath them. Why it matters: People don’t live in averages. They live in constraints: money, time, culture, safety, disability, weather, grief; Context determines risk. The same action is wise in one setting and reckless in another; Context predicts adoption. Tools that don’t fit lives won’t stick, no matter how “optimized” they are.",
+        "Research backs this up. Human decisions rely on cues from environment and history, not isolated facts (Nisbett & Ross, 1980). Systems that ignore situated action often fail at the edges (Suchman, 1987). Even the classics of interface design argue for context-grounded feedback loops and affordances because people act based on the world they see, not the world we modeled (Norman, 2013). Context neglect isn’t only a cognitive bias. It’s a lifecycle bias: it creeps into how we define problems, collect data, design, test, deploy, and measure success."
+      ]
+    },
+    {
+      "heading": "1) A “Healthy Eating” App That Shames Shift Workers",
+      "paragraphs": [
+        "The fastest way to understand context neglect is to watch it bite. Here are concrete cases we’ve seen or studied, and what went wrong. The product brief: “Help users eat better with real-time calorie streaks and late-night eating alerts.” The app flags eating after 9 p.m. as “risky.” Sam works the night shift at a hospital. He eats dinner at midnight. The app shames him nightly. He disables notifications, then churns. The data scientists celebrate “notification effectiveness” because total snack intake dropped for a week. They never looked at churn or stress comments.",
+        "The context the app missed: circadian rhythm differences, shift schedules, on-the-go options in hospital cafeterias. A better design would adapt targets to schedules and offer constraints-aware suggestions (“Pack foods with protein that travel well; here’s a route past the only open grocery at 11 p.m.”)."
+      ]
+    },
+    {
+      "heading": "3) Google Flu Trends and the Blindness of Pure Signals",
+      "paragraphs": [
+        "A city deploys a flood sensor network and alerts residents when street-level water rises. Alerts say “Minor flooding; avoid low-lying intersections.” Basement apartments in that area sit two feet below street level. Pumps fail. Residents get trapped. The model used street elevation, not dwelling elevation, because that’s what was available in open data. A single community mapping session would have surfaced that half the block lives below the curb. A “minor flood” is not minor if your bed is lower than the sidewalk.",
+        "Google Flu Trends famously tried to predict flu prevalence from search queries. It worked for a bit, then overestimated flu trends badly (Lazer et al., 2014). Why? Media coverage changed search behavior. People searched without being sick. The system watched the signal, not the shifting social context. A blended model that combined clinical data, seasonality, and media context beat the “pure signal” approach. Lesson: behavior data is not ground truth; it’s behavior in context."
+      ]
+    },
+    {
+      "heading": "5) A Fitness Program That Mislabels Recovery",
+      "paragraphs": [
+        "In 2019, couples reported that Apple Card offered husbands much higher credit limits than wives, even when wives had higher credit scores. The model likely optimized on individual credit data while ignoring household finances and joint accounts. It also ignored the broader context of historical lending disparities. When people asked for explanations, they got “the algorithm made the decision.” That’s not an explanation. It’s a deflection. Context-aware lending would consider household structures, joint assets, and a review process that doesn’t require public outrage to trigger fairness checks.",
+        "Wearables estimate “recovery” from heart rate variability and sleep. A postpartum mom’s device marks her as “well recovered” because she hit 7 hours of fragmented sleep, plus a low resting heart rate. She pushes hard and injures her hip. The device ignored breastfeeding demands, hormonal changes, heavy lifting of a newborn, and interrupted sleep architecture. The fix is simple but rare: let users declare contexts (postpartum, illness, high heat, shift work) and adjust recommendations and confidence intervals accordingly."
+      ]
+    },
+    {
+      "heading": "7) Hiring Screens That Love Familiarity",
+      "paragraphs": [
+        "During a wildfire, map apps send drivers down “fastest” backroads that the system doesn’t know are blocked or fire-adjacent. In snowstorms, they route onto unplowed local streets because their traffic model thinks highways are “slow” but safer. The context gap is safety vs speed, local knowledge, and the time-lag of official closures. A context-aware system would bias toward known-maintained roads during severe weather, surface uncertainty, and ask local users for live validations with protective defaults. A firm uses a résumé screen trained on past “top performers.” Most of those came from a narrow set of schools. The model overweights those schools and certain buzzwords, underweights non-traditional pathways. Talented candidates with bootcamp backgrounds get buried.",
+        "The model doesn’t understand labor market context: cost of education, immigration history, caregiving gaps, regional opportunities. A better approach scores demonstrable skills, gives structured take-home tasks, and calibrates with blind reviews. It also tracks the actual on-the-job performance of hires from diverse pipelines to adjust weights."
+      ]
+    },
+    {
+      "heading": "9) Hospital Readmission Models With Missing Social Context",
+      "paragraphs": [
+        "A school district rolls out tablets and auto-graded homework. Completion rates drop in two neighborhoods. The team blames “engagement.” A parent points out: their building’s Wi‑Fi is spotty, and kids share beds with siblings. At-home “quiet time” is a luxury. Instead of pushing “focus tips,” the district deploys offline packets, opens evening study rooms, and shifts some grading to class time. Suddenly, completion climbs. The barrier wasn’t motivation. It was context: connectivity, space, and time. Hospitals use models to flag patients at risk of readmission. They’re accurate on clinical variables but overpredict for patients with strong family support and underpredict for those without transportation.",
+        "When case managers add two questions—“Do you live alone?” and “Do you have a ride to follow-up?”—and a field for structural risks (food insecurity, stairs at home), the model’s actionability doubles. Same math, richer context. A global app aggregates NPS comments in English. It misses the surge of nuanced complaints in Spanish and Hindi because auto-translation collapses tone and idiom. The team ships a redesign that plays well in North America and tanks in Mexico City.",
+        "When they add local language analysis and regional beta groups, the product rebounds. Context isn’t a “nice to have.” It’s a prerequisite for meaning. You can’t fix what you can’t see. Early warning signs help you catch context neglect before it becomes an outage or a headline."
+      ]
+    },
+    {
+      "heading": "Red Flags in the Room",
+      "paragraphs": [
+        "People say “the data shows” without clarifying where the data came from or who’s missing; Metrics focus on averages, not distributions. Heatmaps look clean; tails are ignored; Personas are demographic caricatures, not constraints and routines; Edge cases get labeled “corner cases” and punted to “v2.”; Explanations lean on “model confidence” instead of impact context; Teams design for “compliance” instead of adaptability; Usability tests run in office hours only, with high-bandwidth devices, in one language. If two or more of these show up, pause. You’re likely overfitting to your lab world.",
+        "1) Who’s missing from our data? Identify time, money, mobility, childcare, connectivity, privacy, cultural norms, safety. Are our defaults and flows workable under those constraints?. 2) What constraints shape real life? For each major action or recommendation, describe the worst credible outcome. If harm is asymmetric, add friction or safer defaults. 3) What’s the harm if we’re wrong? Name them. If we can’t measure them, can we ask? If we can’t ask, can we express uncertainty and offer choices?. 4) What signals can we’t measure that matter?",
+        "Combine quantitative logs with qualitative diaries, interviews, and field observation. Consider domain expertise and lived experience. 5) Are we blending sources and perspectives? Design for illness, travel, caregiving, disasters, seasonality. Support “declare context” modes. Adjust recommendations and warn on uncertainty. 6) Do we handle context shifts? Add lightweight feedback loops: “This wasn’t helpful,” “I’m in X situation,” “That’s not safe here.” Close the loop visibly. 7) Can users correct us? Track segmented outcomes. Watch variance, not just the mean. Monitor adoption and attrition by group. Look for silent failure.",
+        "8) Are our metrics context-aware? Provide human-readable reasons grounded in context, not just model internals. Offer alternate paths when explanations reveal mismatches. 9) How do we explain decisions? Assign a person or team to champion edge cases with a clear budget and roadmap. 10) Who owns the edges? Tape this list to your wall. It pays for itself with one prevented fiasco."
+      ]
+    },
+    {
+      "heading": "Design Patterns That Respect Context",
+      "paragraphs": [
+        "Keep these in your toolkit. They’re small but powerful. Declareable modes: “I’m traveling,” “Post-op,” “Night shift,” “Low bandwidth,” “Privacy-sensitive.” Use these modes to change defaults, thresholds, and tone; Soft constraints over hard nudges: Suggest and let users adapt. Offer ranges and confidence, not single-point prescriptions; Protective defaults in uncertainty: When input is partial, choose the safer path (e.g., route to main roads in storms); Localized language and examples: Use idioms and metaphors from the region. Examples should reflect local brands, routes, holidays, foods; Moments of reflection: Prompt teams to ask, “What would this look like to someone with X constraint?” Bake it into sprint rituals; Progressive disclosure: Don’t overwhelm, but make the knobs reachable for people with special contexts; Shadow testing on outliers: Before launch, secretly run the system on historical outlier cases and check for failures.",
+        "You don’t need a PhD to build context-aware products. You need habits. Keep a “context log.” After every research session, add one constraint you hadn’t considered; Do “day-in-the-life” shadowing quarterly. Engineers included. Watch people work around your design; Run “premortems.” Ask, “Six months from now, the project failed because we ignored what?” Write, then compare; Hold “edge case office hours.” Invite customer support and field teams to bring the thorniest cases; Reward context fixes in performance reviews. What you pay for is what you get."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Context neglect bias touches a whole family of biases and concepts. Distinguish them so you can pick the right tool. Availability bias: We overuse information that’s easy to recall. Context neglect often rides along—easy data crowds out relevant but harder context (Tversky & Kahneman, 1974); Ecological validity: Whether lab findings generalize to the real world. Context neglect thrives when ecological validity is low; Construct validity: Are you measuring what you think you’re measuring? If “engagement” is push notification taps, you’ve likely missed the construct; Sim2real gap: In robotics and RL, models trained in simulation fail in the messy world. Same story: missing context (Dulac-Arnold et al., 2021); Goodhart’s law: When a measure becomes a target, it stops being a good measure.",
+        "Averages become idols; context starves; Automation bias: People defer to automated outputs even when wrong, especially when context contradicts the screen (Cummings, 2004); Algorithmic fairness: Overlaps with context neglect. Models can be “fair” on paper yet harmful when they ignore local conditions, histories, and capabilities; Situated action: Actions make sense only in context (Suchman, 1987). Design that assumes idealized users misses real problem-solving in the wild; Affordances and signifiers: If a design signals the wrong action in a given context, people misstep (Norman, 2013). Think of a “push” door with a pull handle. You don’t need to memorize terms. Just remember the smell test: if your decision erases people’s situations, you’re courting failure."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Build for Lives, Not Just Logs",
+      "paragraphs": [
+        "Let’s be real. We work in tech because we like clean lines, elegant models, and progress bars that reach 100%. But people don’t live inside neat dashboards. They live in studio apartments with thin walls, on buses that don’t come, in heat waves and cramped schedules, in joy and in grief. Tools that forget this become sharp edges. Context neglect bias isn’t a villain to defeat once. It’s gravity. It pulls you back to the simplest story: the number you can easily count, the user who looks like you, the scenario that fits a demo. The antidote is steady, humble practice—asking what we’re missing, making room for difference, and building levers that let people correct us.",
+        "We built our Cognitive Biases app to make this practice easier. It’s a companion you can open before a roadmap review, a stand-up, or a model release. It reminds you to ask, “Who’s missing?” It nudges you to consider constraints, to add a declareable mode, to measure the tails, not just the mean. It won’t replace judgment. It will give yours more room to breathe. Build for lives. The logs will follow. From one team of cat-herding humans to another: the best products don’t guess less; they listen better. Keep context in the room."
+      ]
+    }
+  ],
+  "checklist": [
+    "List users we excluded by device, language, geography, schedule, disability, income. Write it down. Can we add at least one missing group now?",
+    "Identify missing users. Name at least one group you exclude today",
+    "List top constraints. Time, money, mobility, connectivity, caregiving, safety",
+    "Map harm. For each major action, describe worst credible outcomes",
+    "Add declareable modes. Travel, shift work, low bandwidth, privacy-sensitive",
+    "Add uncertainty behavior. Safer defaults when signals are weak",
+    "Blend research. Pair logs with at least five field observations",
+    "Segment metrics. Track variance by group; watch the tails",
+    "Build correction loops. “This isn’t helpful,” “I’m in X situation,” easy to send",
+    "Explain in human terms. Reasons tied to context, with alternatives",
+    "Assign edge ownership. A name, a budget, a date for fixes"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

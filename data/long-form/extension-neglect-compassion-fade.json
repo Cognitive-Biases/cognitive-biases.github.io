@@ -1,0 +1,131 @@
+{
+  "slug": "extension-neglect-compassion-fade",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/extension-neglect-compassion-fade",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/extension-neglect-compassion-fade/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:47:27.899Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The One Face That Breaks Your Heart: Understanding Compassion Fade",
+  "lede": "A text pops up in the family group chat: a photo of a small boy with a bright blue cast, a fundraiser link, and two sentences from your aunt—“This is my coworker’s son. Insurance fell through. Can we help?” You donate before you finish reading. Later that night you scroll past a headline: famine threatens millions. You blink, maybe sigh, and keep moving.",
+  "sections": [
+    {
+      "heading": "What is Compassion Fade – when one victim moves you more than a thousand and why it matters",
+      "paragraphs": [
+        "That tug toward the one face over the many has a name: compassion fade. One sentence definition: compassion fade is our tendency to feel and act more for a single, identifiable person than for large numbers of people in need, even when the stakes are far greater. Compassion fade describes a pattern you can spot in yourself: a single story stirs your empathy; statistics numb it. Researchers see it again and again. When people evaluate requests for help, donations tend to drop as the number of victims grows—a cruel twist that psychologists call the “arithmetic of compassion” (Slovic, 2007). It’s not that we don’t care. It’s that our emotional system scales poorly.",
+        "Here’s the uncomfortable core: we’re built to care in close-up. Our attention and emotions evolved in small groups where seeing a single person in trouble was common and handling disasters involving thousands was impossible. So we default to responding strongest when our mind can picture, name, or imagine one person. Add more victims, and something dulls. Our concern flattens when it should rise. This matters for three reasons: 1) It distorts fairness. The most shareable story—not the highest need—gets the help. This skews resources toward people who already have social visibility and away from those in quiet corners.",
+        "2) It weakens policy. Leaders and teams often underweight large-scale prevention because it lacks a photograph. The absence of a face becomes the absence of urgency. 3) It drains us. Faced with big numbers, many of us feel helpless, guilty, or cynical. That fatigue can turn into disengagement. We scroll past what we could, in fact, change. Compassion fade is not heartlessness. It’s a human default under overload. The goal isn’t to feel less; it’s to route your caring toward real impact, even when your emotions lag behind the math."
+      ]
+    },
+    {
+      "heading": "The pediatric ward",
+      "paragraphs": [
+        "A local GoFundMe tells the story of Raquel, a nurse whose apartment flooded. Photos show soggy boxes and a soaked sofa. The fundraiser hits its target in two days. Meanwhile, a regional flood affects 200,000 people. The relief fund’s message says “Your support saves families.” No faces. No names. You intend to donate later. You forget. The identifiable victim effect sits right there: clarity of one story beats the abstraction of many (Small & Loewenstein, 2003).",
+        "A hospital committee reviews two proposals. One upgrades a neonatal ICU incubator that went viral after a news clip. The other fixes staffing ratios across the hospital, preventing dozens of deaths a year. Donors and board members push for the incubator because parents wrote heartfelt letters. The staffing proposal dies quietly. Lives lost are invisible, so the moral pressure is weaker."
+      ]
+    },
+    {
+      "heading": "Product design at a tech company",
+      "paragraphs": [
+        "An elementary school holds a raffle to help a teacher with cancer. The community rallies. In the same meeting, the PTA votes down funding for a reading specialist who would raise literacy scores for 150 students. Both matter. Only one has a single name attached. Compassion fade quietly influences the vote.",
+        "A customer shares a tearful video after losing family photos due to a sync bug. The team drops everything to fix that edge case. Later, the data team shows that slow onboarding causes thousands to abandon the product daily. There’s no sorrowful video for friction. The team keeps prioritizing the vivid one-off over the vast, dull leak."
+      ]
+    },
+    {
+      "heading": "Personal life triage",
+      "paragraphs": [
+        "A wildfire destroys a small town. Reporters film families sifting ashes. Donations, blankets, and volunteers pour in. Months later, a separate policy to fund controlled burns across the state sits unfunded. Controlled burns lack a before-and-after human vignette, yet they would save more homes in the long run.",
+        "Your friend texts: breakup emergency, come over. You go. Meanwhile, your cousin has been quietly unemployed for months, slowly draining savings and spirit. No emergency text. No crisis tone. You keep meaning to check in. That small difference in salience directs your attention."
+      ]
+    },
+    {
+      "heading": "How to recognize and avoid compassion fade",
+      "paragraphs": [
+        "A viral clip shows a single muddy dog rescued from a culvert. Donations pour into the rescue organization. The municipal shelter down the street needs funds to increase spay-and-neuter capacity, which would prevent thousands of future stray animals. The flashy rescue wins the day; the boring prevention loses. None of these examples accuse anyone of wrongdoing. They reveal how attention and emotion—our care engines—throttle strangely under scale. The trick is to anticipate where they misfire. You can’t remove a human quirk. You can design around it. Here’s how we’ve seen it work in teams, families, and personal giving.",
+        "Notice when your feeling and the stakes diverge. Your gut surges for the single case. Your brain whispers: the numbers say otherwise. You feel urgency for one story, indifference for a statistic. Name it: “This is compassion fade.”; You notice your donation finger twitch for someone you can name, and stall for “200 families.” That’s the cue. Pause. The pause matters. It creates a seam where a better choice can fit."
+      ]
+    },
+    {
+      "heading": "Step 2: Make numbers human without losing scale",
+      "paragraphs": [
+        "We respond to people, not percentages. Don’t fight that; harness it responsibly. Pair faces with facts. Adding a representative story to a large-scale message raises giving, but keep the scale visible: “This is Ama. She represents one of 10,000 farmers receiving drought-resistant seeds this season.” Use vivid unit framing. Instead of “we provide 50,000 meals,” say “we provide a hot dinner for a child for $2;",
+        "last month we did that 50,000 times.” The unit hooks the heart; the count keeps the scope honest; Translate big numbers into local anchors: “Imagine your entire town without clean water. Now multiply by four.” Avoid the classic trap: one heartbreaking photo and silence about scale. That invites donors to believe the problem begins and ends with that person."
+      ]
+    },
+    {
+      "heading": "Step 3: Pre-commit while calm",
+      "paragraphs": [
+        "Make plans when your emotions are steady. Then follow them when a single story floods your feed. Set a fixed monthly budget for giving. Split it: a portion for evidence-based, high-impact causes; a portion for personal requests; Pre-pick charities based on impact evaluations or cost-effectiveness data you trust (e.g., independent charity evaluators). Keep the list handy.",
+        "When a crisis hits, you don’t have to start from scratch; Decide in advance how you respond to personal asks: “I’ll give to friends/family up to X per month, then I’ll redirect additional asks to my impact fund.” Pre-commitment keeps you generous without letting the last story you saw steer everything. Simple templates beat noble intentions. Put them on your phone. Use them."
+      ]
+    },
+    {
+      "heading": "Step 6: Protect your empathy, don’t smother it",
+      "paragraphs": [
+        "You can’t hand-craft justice every time. Use defaults. Payroll giving or automatic transfers to high-impact funds. Out of sight, still doing good; Team policies that prioritize prevention work. For example, in product triage: “After a viral customer issue, we block 20% time to address top quartile systemic problems by affected-user count.”; Organizational grant guidelines: reserve a fixed share for boring but high-ROI prevention. Defaults do the right thing when your attention wanders. Too much exposure to large numbers can provoke deliberate emotional blunting. People downregulate feelings to avoid feeling overwhelmed (Cameron & Payne, 2011). That can guard your mood but harm your choices.",
+        "Dose your news. Choose a window and a source. Don’t scroll endlessly through tragedies; Pair hard stories with concrete action. Do one small thing after a distressing article—donate # The One Face That Breaks Your Heart: Understanding Compassion Fade. The goal is sustainable empathy. Not sugar-coated, not scorched. Tape it to your desk. Stick it on your notes app. It’s a nudge against the current."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Biases travel in packs. Compassion fade overlaps with, but isn’t equal to, these: Identifiable victim effect: We help more when we can identify a victim—name, photo, or story—than when the victim is statistical (Small & Loewenstein, 2003; Kogut & Ritov, 2005). Compassion fade includes this, but adds the troubling twist: emotional response often declines as the number of victims rises. Scope insensitivity: People’s willingness to pay often doesn’t scale with the size of the benefit. Folks may pay similar amounts to save 2,000 or 200,000 birds (Fetherstonhaugh et al., 1997). Compassion fade is one way scope insensitivity shows up in moral contexts.",
+        "Psychic numbing: Emotional response drops as numbers grow, not because we know less, but because our feelings saturate (Slovic, 2007). It’s the emotional mechanism behind compassion fade. Empathy fatigue/compassion fatigue: Cumulative exhaustion from repeated exposure to suffering (Figley, 1995). It’s more about burnout over time than the per-decision decline tied to large numbers, but they can interact. Omission bias: We judge harmful actions as worse than harmful inactions. In prevention, inaction hides in plain sight. Compassion fade can feed omission bias by making “not doing the big preventive thing” feel less urgent.",
+        "Present bias: We overweight immediate emotions and underweight future effects. Big, slow benefits lose to sharp, present grief. Availability heuristic: We judge likelihood by what comes easily to mind. A viral story feels more common, which further skews attention. Distinguishing these helps you target the fix. If scope insensitivity is the driver, push harder on unit framing. If availability dominates, adjust your media diet. If fatigue is thickening, rest and reset your action loops."
+      ]
+    },
+    {
+      "heading": "The mechanics under the hood (brief and human-sized)",
+      "paragraphs": [
+        "Why does one face land harder than a thousand? A few threads: Our affective systems respond to individuals. Brain imaging shows stronger activity in reward and valuation circuits when people see single identified individuals compared to groups (Genevsky et al., 2013). Faces focus our attention and simulate closeness. We experience nonlinearity. Emotions aren’t calculators. The first victim feels like everything; the thousandth adds less. That’s functional in small groups, flawed at scale. We protect ourselves from overload. When suffering feels too large, people sometimes subconsciously dampen empathy to manage distress (Cameron & Payne, 2011). It helps us cope but shaves off concern where it’s most needed.",
+        "We need agency. Helplessness kills compassion. Clear, doable actions revive it. This is why “# The One Face That Breaks Your Heart: Understanding Compassion Fade. You don’t need a lab to see this. Sit with the feeling: the vivid one deserves help. So do the many. Design your habits to make room for both."
+      ]
+    },
+    {
+      "heading": "For personal giving",
+      "paragraphs": [
+        "Here are practical moves you can try this week. Write your giving split on paper: “Each month I give $X to high-impact causes, $Y to personal asks.” Stick it by your wallet. When a request arrives, you don’t negotiate from zero. Preload a “Yes and” response: “I’m glad you shared this. I can give $25 today. I also keep a monthly impact fund for the bigger picture. If you want, I’ll share the org I use.”.",
+        "Keep a short list of trusted charities with per-dollar impact estimates. Three is enough. When headlines hit, pick one and act. When you share a fund on social, include a scale line: “Nina’s story is one of thousands. If you’ve given here, consider matching to this prevention fund doing the upstream work.”."
+      ]
+    },
+    {
+      "heading": "For teams and organizations",
+      "paragraphs": [
+        "Create a “story+scale” communication template. Every case study must include the total scope and expected impact per dollar/time. Ban single-story slides without scale. In product triage, add a field: “Estimated users affected per week.” Require numerical estimates for prioritization, even if rough. Reward teams for shipping fixes that save the most users from pain, even when the pain lacks dramatic videos.",
+        "For CSR or philanthropy, commit a majority portion to boring prevention with measurable outcomes. Keep a discretionary pot for viral crises but cap it. Publish the split. Train spokespeople to say: “This family’s loss is real. It represents a pattern. Here’s the pattern and how we stop it.” Practice the sentence until it’s reflex."
+      ]
+    },
+    {
+      "heading": "For policy and advocacy",
+      "paragraphs": [
+        "Combine narrative with denominators. “Maria waited 14 hours at the ER. So did 1 in 7 patients this month. Here’s what $5 million in triage nurses does to that denominator.”. When you brief a decision-maker, include three versions of your ask: the individual story, the cohort impact, and the per-dollar change. Make it hard to ignore the scale. Frame prevention as visible wins. “This program keeps 3,000 families in their homes each winter.” If you can, follow up with short profiles six months later—prevented tragedies can still have faces.",
+        "Before donating to the latest viral case, spend 60 seconds asking: If I didn’t see this story, where would this money do the most good? If the answer differs, split the donation. Name your limits without hardening. “I can’t read this whole thread tonight. I’ll make a $20 recurring donation and step away.” Action, then boundary. Keep a joy file: stories of scale working. Vaccinations. Clean water projects. Crash barriers. Looking at wins refuels the part of you that believes large numbers can move."
+      ]
+    },
+    {
+      "heading": "Wrap-up: keep the one face, widen your circle",
+      "paragraphs": [
+        "Compassion fade isn’t a moral failure. It’s a warning label on the heart. The one face who breaks your heart should still break your heart. Keep that tenderness. Then add rails so your care runs farther than the one mile it naturally wants to travel.",
+        "If you start with a pause, ask about scale, and pre-commit to impact, you’ll do something rare: you’ll let a single story move you and still move toward the many. That’s the work. It’s worth it. If you want these prompts baked into your day, that’s exactly what our Cognitive Biases app is for—a quiet shoulder tap when your heart needs a hand from your head."
+      ]
+    }
+  ],
+  "checklist": [
+    "Ask three questions: Who benefits if I say yes? Who is missing from my view? If I multiply this by 1,000, does my choice still make sense?",
+    "Add “impact per dollar” to the conversation, even if it feels awkward. You can be warm and still ask, “What does $50 accomplish here compared to the alternatives?”",
+    "Pause when one story feels urgent",
+    "Ask: What’s the total scale? Who isn’t shown?",
+    "Convert big numbers into per-person or per-day units",
+    "Compare impact per dollar across options",
+    "Pre-commit a giving split: impact fund + personal appeals",
+    "Use defaults: automation, team policies, recurring donations",
+    "Reserve time and money for prevention work",
+    "After exposure to large-scale suffering, do one concrete action",
+    "Pause when a single story grabs you; name the bias",
+    "Ask three: Who’s unseen? What’s the scale? What’s impact per dollar?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

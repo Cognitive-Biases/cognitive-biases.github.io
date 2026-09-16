@@ -1,0 +1,157 @@
+{
+  "slug": "extension-neglect-base-rate-fallacy",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/extension-neglect-base-rate-fallacy",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/extension-neglect-base-rate-fallacy/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:46:15.034Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Base Rate Blind Spot: Why We Ignore Big-Picture Stats When a Story Feels True",
+  "lede": "A friend texts you: “Got a positive result on a rare-condition test. Terrified.” You step in with what you know: a positive result means they probably have it. Right?",
+  "sections": [
+    {
+      "heading": "What Is the Base Rate Fallacy and Why It Matters",
+      "paragraphs": [
+        "Hold that thought. If the condition is rare, the base rate is tiny. That tiny base rate pushes the probability down—even with a “good” test. When we ignore that bigger background number and fixate on a vivid result or detail in front of us, we fall into the base rate fallacy. One sentence definition: The base rate fallacy is the mistake of ignoring general statistics (base rates) when judging the probability of a specific case. You hear “90% accurate test” and think “90% chance it’s true.” That’s wrong in many real situations. Accuracy is not the same as probability of the condition given the result. For that, the base rate matters.",
+        "Base rate = how common something is in the population before you see any case-specific evidence. When base rates are low, even accurate tests or persuasive clues produce many false alarms. When base rates are high, false negatives become the bigger risk. Ignoring base rates warps your beliefs and decisions. Why it matters: Medical anxiety. People overestimate risk after screening tests, leading to unnecessary stress and sometimes harmful procedures (Casscells, 1978; Gigerenzer, 2002); Hiring errors. Managers overweight interview vibe and underweight base rates of job success for similar candidates (Meehl, 1954); Money leaks. Investors chase “special situations” and ignore base-rate odds of beating the market (Dawes, 1989); Legal misjudgments. Jurors and detectives overvalue dramatic evidence and undervalue base-rate probabilities of alternative explanations (Kahneman & Tversky, 1973); Safety blind spots. Teams fixate on the last incident and forget the base rate of near-misses and systemic causes.",
+        "We prefer a good story over a cold statistic. Stories stick. Statistics whisper. But big-picture numbers protect you from being fooled by a flashy data point. Here’s the key mental shift: Your belief after new evidence should start with the base rate and then update. Not the other way around."
+      ]
+    },
+    {
+      "heading": "1) The “Positive” Medical Test That Isn’t What It Seems",
+      "paragraphs": [
+        "Stories help us feel the bias in our bones. Let’s walk through a few—and actually do the math. A disease affects 1 in 1,000 people (0.1%). A test detects it correctly 95% of the time and has a 5% false positive rate. Your test comes back positive. What’s the chance you have the disease? Instinct says: “95%.” Let’s compute. Expected true positives out of 100,000 people:; 100 actually have the disease; Of these, 95 test positive (true positives); Expected false positives:; 99,900 healthy people; 5% of them test positive = 4,995 false positives.",
+        "True positives: 95; False positives: 4,995; Total positives: 5,090. So, among all positive tests: Probability you actually have the disease given a positive result = 95 / 5,090 ≈ 1.87%. That’s not 95%. It’s under 2%. The base rate (rarity) swamps the result. Doctors and med students get this wrong too. In a classic study, the majority misunderstood a similar setup, overestimating risk by a mile (Casscells, 1978). Risk communication improves if we use “natural frequencies” (counts rather than percentages), because our brains grasp “95 out of 5,090” better than “1.87%” (Gigerenzer, 2002).",
+        "Ask for the prevalence (base rate) for your age/sex/region; Ask for the test’s false positive rate; Request the “out of 1,000 people like me” numbers; Consider confirmatory testing. Screening is not diagnosis. What to do in real life:"
+      ]
+    },
+    {
+      "heading": "2) The Arresting Witness",
+      "paragraphs": [
+        "Only 1% of locals wear that distinctive yellow jacket; The eyewitness has an 80% chance to correctly identify jacket color at night. A robbery suspect fled in a yellow jacket on a rainy night. You know that: Police stop Pat, who’s wearing a yellow jacket. What’s the chance Pat is the robber? The jacket is rare. That seems damning. But the conditions (rainy, dark) are messy. An 80% accurate ID at night also means lots of mistakes across many people. 1% wear the jacket = 100 yellow-jacket wearers; 9,900 do not.",
+        "If 10,000 people live nearby: Among non-wearers, 20% might be misidentified under those conditions (assume the same mis-ID rate when the witness tries to identify “yellow”). That’s 1,980 false flags—already swamping the 100 true wearers. So a single yellow-jacket sighting isn’t strong proof. You need more evidence, and each piece should be weighed against how common it is in the population. Eyewitness testimony feels hot; base rates feel cold. Justice needs both."
+      ]
+    },
+    {
+      "heading": "3) The “Perfect-Fit” Job Candidate",
+      "paragraphs": [
+        "Linda is articulate, organized, and passionate about social issues. You read her résumé and think “nonprofit.” You mentally place her in a role before you ask basic questions. Now the base rate: In your pipeline, only 10% of applicants succeed in the role after six months. When you don’t use structured scoring and base-rate comparisons, success drops to 5%. When you do, it rises to 15%.",
+        "Story says: she’s a perfect fit; Base rate says: even promising candidates rarely succeed; Act accordingly: use structured interviews, job simulations, reference checks tied to clear criteria. Update from the base rate; don’t ignore it. Story vs. statistics: Clinical vs. actuarial judgment research shows that simple statistical rules often outperform gut feel, especially when outcomes are noisy (Meehl, 1954; Dawes, 1989)."
+      ]
+    },
+    {
+      "heading": "5) Security Alerts and False Positives",
+      "paragraphs": [
+        "You hear: “This founder is a visionary; product will be huge.” Your gut nods. But the base rate for seed-stage startups reaching product-market fit is low. The base rate for VC funds beating the market after fees is also low. A single shining anecdote doesn’t offset how many “visionaries” will fail. Base rates don’t say “never invest”; they say “size your bets, hedge, and diversify.” A fraud detection system flags transactions with 99% “sensitivity” and 95% “specificity.” Fraud itself is rare: 0.2% of transactions.",
+        "Fraudulent: 2,000. System catches 99% of them = 1,980 true positives; Legitimate: 998,000. With 5% false positive rate = 49,900 false positives. Out of 1,000,000 transactions: So positives are 1,980 true and 49,900 false. Only about 3.8% of alerts are real. If agents treat each alert as “probably fraud,” they’ll waste time and burn out. Tuning the threshold, using layered checks, and triaging by expected value beats chasing every ping."
+      ]
+    },
+    {
+      "heading": "7) The Office “Troublemaker”",
+      "paragraphs": [
+        "A post-marketing system flags unusual clusters after vaccination. Base rate of the adverse condition in the general population is 1 in 100,000 per month. Millions are vaccinated. You see dozens of reports. Panic? Maybe not. With big numbers, even rare background events will appear nearby by coincidence. You need to compare observed vs. expected counts adjusted for base rates, time windows, and reporting biases. Signal detection lives and dies by the base rate.",
+        "An engineer files three bug tickets in a week involving the same microservice. A manager thinks, “They’re careless.” But the base rate: that microservice throws twice as many defects as others. The engineer is just nearby when it runs hot. Specific detail: three tickets tied to one person; Base rate data: that service churns out many errors; Likely conclusion changes: look at the system, not just the person. Swap the lens:"
+      ]
+    },
+    {
+      "heading": "A Working Intuition: Start at the Base, Then Update",
+      "paragraphs": [
+        "A student hears: “Acceptance rate is 9%, but I’m way above average; my essay is unique.” Admissions offices know the base rate of admits among “way above average + unique essay.” It’s still lower than students expect. Personal narratives feel predictive. Base rates still hold power. You won’t carry a Bayesian calculator to the grocery store. You shouldn’t need to. You can build habits that make base rates show up in your head without fancy math.",
+        "Think of probability like a dimmer switch, not a light switch. The base rate sets the initial brightness. Evidence slides it up or down. Weak evidence barely nudges the switch. Strong evidence moves it more. Evidence that’s common in the general population moves it less than evidence that’s rare. Ask: “How common would this exact clue be if my hunch were wrong?” If it’s common, the clue doesn’t carry much weight. If it’s rare outside the hunch, it’s stronger."
+      ]
+    },
+    {
+      "heading": "Ask for the Right Numbers",
+      "paragraphs": [
+        "Replace percentages with “out of 1,000 people like this.” Many errors vanish when you do that (Gigerenzer, 2002). Don’t think: “Test is 95% sensitive, disease prevalence 0.1%.”; Do think: “Out of 1,000 people, 1 actually has it; 999 don’t. Test will catch 0.95 of the 1 and wrongly flag 5% of the 999 = about 50. Now it’s 0.95 real vs ~50 false. The positive isn’t persuasive alone.”.",
+        "If a claim smells certain, ask the boring questions. How common is the thing before the test or hint?; What’s the false positive rate?; How often do non-cases show the same signal?; What would I expect to see if my hunch were wrong?. When people can’t or won’t give base rates, that’s a warning flag."
+      ]
+    },
+    {
+      "heading": "Design Decisions That Respect Base Rates",
+      "paragraphs": [
+        "In medicine: Pair screening with clear follow-up protocols and risk communication. Show natural frequencies. Offer confirmatory tests; In hiring: Use structured interviews, scoring rubrics, and statistical baselines by role and level. Compare to historical success rates; In security/fraud: Calibrate thresholds to align alert volume with human capacity. Break ties with independent signals. Monitor precision and recall over time;",
+        "In product: When an experiment “wins,” check the base rate of false positives given your sample size and p-hacking risk. Replicate before rollout; In safety: Aggregate near-miss reports, not just accidents. If base rates of small failures rise, act before the big one arrives; In investing: Anchor on survival rates, loss distributions, and time horizons. Treat narratives as hypotheses, not proof."
+      ]
+    },
+    {
+      "heading": "Tools That Help",
+      "paragraphs": [
+        "Evidence is highly diagnostic and independent; Speed matters more than precision, and the cost of misses is high; You have strong, well-calibrated local knowledge that really changes the prior. The base rate is not a prison. Override it when: “Override” doesn’t mean “ignore.” It means “update a lot.” Spreadsheets with two-by-two tables (condition vs. test result); Plots of expected true vs. false positives at different thresholds; Briefs that include base rates by default (one page, plain language); Alerts that show precision (“4% of alerts are true this week”) next to counts; Simulations: sample from base rates to see outcome distributions.",
+        "Row headers: Condition present, condition absent; Column headers: Test positive, test negative; Fill in counts for a hypothetical 10,000 people using the base rate and error rates. Then compute the fraction of true among positives. If you’re not sure how to set this up, start with a simple table you can reuse:"
+      ]
+    },
+    {
+      "heading": "Conjunction Fallacy: Base Rate Fallacy",
+      "paragraphs": [
+        "Base rate fallacy doesn’t live alone. It hangs out with other mind tricks. We judge probability by similarity: “Looks like a librarian, so probably a librarian.” It feels right and ignores base rates. That’s the engine behind many base rate errors (Kahneman & Tversky, 1973). Confusing P(evidence|innocent) with P(innocent|evidence). “Only 1 in 1,000 would match this DNA profile by chance, so there’s a 0.",
+        "1% chance he’s innocent.” Not necessarily true without the base rate of potential matches and the size of the suspect pool. Believing specific, detailed stories are more likely than general ones. If “bank teller and activist” feels likelier than “bank teller,” you’re letting story strength beat basic probability—often tied to representativeness (Kahneman & Tversky, 1983)."
+      ]
+    },
+    {
+      "heading": "Ecological Validity and Reference Class",
+      "paragraphs": [
+        "We estimate likelihood by ease of recall. Dramatic news crowds out dull base rates. Plane crashes stick; safe landings don’t. That skews risk perception. In analytics, you can “find” patterns that reflect noise. Your model looks good on the training set but fails in the wild. The true base rate of real effects is small, so most “discoveries” won’t replicate unless you correct for multiple testing.",
+        "Base rates must match the reference class. The base rate for “all adults” may not apply to “women in their 60s” or “new users from Brazil.” Pick the right class or you’ll fix the wrong problem. Extreme results often drift back toward average on retest. If you interpret every extreme score as a stable trait and ignore the base rate of randomness, you’ll overreact to noise."
+      ]
+    },
+    {
+      "heading": "Recognizing the Fallacy in the Wild: Micro-Stories",
+      "paragraphs": [
+        "Short vignettes to sharpen your instincts. You get a credit card fraud alert on a big purchase. Instead of canceling the card immediately, you check: how often are alerts false? You scan your recent transactions, review merchant risk, and call the bank. You save an hour of pain and a week without a card; Your child’s school sends a “laptop misuse” note. You resist the knee-jerk reaction and ask: how often do these notes result from shared logins?",
+        "Turns out, often. The base rate of misattribution is high. You get the logs first; A coworker “missed” a meeting twice. You gather your lecture. Then you check: this calendar system auto-declined meetings on holiday weeks and didn’t resend invites. The base rate of no-shows with that bug is non-trivial. You fix the calendar, not the coworker; A tweet shows a shocking statistic. You ask for sample size, denominator, and comparison group. The poster has none. You move on."
+      ]
+    },
+    {
+      "heading": "Patterns That Push Us Into the Trap",
+      "paragraphs": [
+        "Knowing the emotional triggers makes it easier to catch yourself. Vividness beats numbers. A single story with a face and a name pulls hard; Urgency squeezes thought. Under time pressure, we reach for the most available explanation; Identity at stake. When a conclusion aligns with your tribe, you’re less likely to ask for base rates;",
+        "Overconfidence in precision. A “95% accurate” label sounds final. It isn’t; Cost asymmetry. If you pay heavily for misses, you may embrace too many false alarms—unless you adjust thresholds wisely. Counter these by slowing down a notch, asking one base-rate question, and writing down the “out of 1,000” numbers."
+      ]
+    },
+    {
+      "heading": "Quick Routine B: Hiring Signal from a Work Sample",
+      "paragraphs": [
+        "Let’s rehearse two quick thought routines. No formulas. Just counts. Prevalence: 1% (10 out of 1,000); Sensitivity: 90% (detects 9 of the 10); False positive rate: 10% (flags 99 of the 990 healthy). Setup: Positives: 9 true + 99 false = 108; Chance the positive is real: 9/108 ≈ 8.3%. Result: If that sounds low, consider confirmatory testing before you panic. Historically, 20% of candidates offered a role excel after six months; A strong work sample correlates with success: 70% of eventual top performers have strong samples, but so do 30% of non-top performers.",
+        "Setup: 200 top performers; 800 non-top; Strong sample: 140 of the top, 240 of the non-top = 380 strong; Probability of top performer given strong sample: 140/380 ≈ 36.8%. Out of 1,000 candidates: Strong, but not destiny. You still need structured interviews and references. And you’ve doubled your odds from 20% to ~37%—which tells you the work sample is useful but not all-powerful."
+      ]
+    },
+    {
+      "heading": "How Organizations Bake Base Rates Into Culture",
+      "paragraphs": [
+        "This isn’t just a personal habit. Teams can build guardrails. Decision memos must state the base rate for similar past decisions and outcomes; Dashboards show precision and recall of alerts, not just counts; Postmortems list the “expected base rate” of such failures compared to observed;",
+        "Research reviews include a replication likelihood estimate based on field base rates; Hiring packets include a table of predicted performance vs. base rates for the role; Policy changes include expected false positive and false negative counts per 10,000 cases. If your culture rewards “decisive” moves that ignore these steps, it rewards waste and regret."
+      ]
+    },
+    {
+      "heading": "A Note on Emotions",
+      "paragraphs": [
+        "Base rates can feel heartless. When your partner faces a scary test result, “The base rate is low” sounds dismissive. Feel first. Sit with them. Then walk through the numbers together, gently. Base rates aren’t cold; they’re compassionate. They reduce avoidable fear and help you choose the next step wisely.",
+        "“This is scary. Let’s look at what these numbers mean for people like you.”; “Plenty of positives are false with this test. Let’s ask for a confirmatory test before we spiral.”. You can pair empathy with clarity: That’s not minimizing. That’s caring."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Choose Clarity Over Panic",
+      "paragraphs": [
+        "The base rate fallacy sneaks in when a vivid detail feels louder than the quiet chorus of history. It promises certainty in a world that trades in odds. When you ask, “What’s the base rate?” you move from drama to decisions. You refuse to be whipsawed by the latest shiny data point. This isn’t about killing stories. It’s about giving your future self better ones—fewer unnecessary scares, smarter bets, calmer judgments. We built our Cognitive Biases app because small mental shifts like this change whole weeks of your life. Base rates help you sleep, save, hire, diagnose, and design with fewer regrets.",
+        "Slow down for one breath. Convert to “out of 1,000.” Check the table. Then act with both heart and numbers in the room. Casscells, W. (1978). Interpretation by physicians of clinical laboratory results; Dawes, R. (1989). Clinical vs. actuarial judgment and rules of thumb; Gigerenzer, G. (2002). Calculated risks and natural frequencies in risk communication; Kahneman, D., & Tversky, A. (1973). On the psychology of prediction; representativeness heuristic; Kahneman, D., & Tversky, A. (1983). Conjunction fallacy; Meehl, P. (1954). Clinical vs. statistical prediction."
+      ]
+    }
+  ],
+  "checklist": [
+    "What’s the base rate? Name the prevalence or historical frequency",
+    "If the hunch were false, how often would I see this same evidence?",
+    "If the hunch were true, how often would I see this evidence?",
+    "Convert to “out of 1,000” numbers. Write them down",
+    "Is the test or clue independent of other clues?",
+    "What’s the cost of false positives vs. false negatives here?",
+    "Am I overweighting a vivid story? Name the boring alternative",
+    "What happens if I wait for one more piece of discriminating evidence?",
+    "What decision rule would I want to use repeatedly over many cases?",
+    "If I’m still stuck, can I default to the base rate for now?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
