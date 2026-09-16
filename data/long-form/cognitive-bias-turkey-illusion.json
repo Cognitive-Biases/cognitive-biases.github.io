@@ -1,0 +1,146 @@
+{
+  "slug": "cognitive-bias-turkey-illusion",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-turkey-illusion",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-turkey-illusion/content.tsx",
+  "originalPublishedAt": "2025-09-01T15:17:09.339Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Turkey Illusion: Life Looks Stable—Right Up Until It Isn’t",
+  "lede": "On a sunny November morning, the turkey feels great. A thousand days of food. A thousand days of human kindness. Graph his happiness and it’s a neat arrow pointing up. He looks at the line and thinks, “Tomorrow will be like today, plus a bit better.” Then Thanksgiving arrives. The line doesn’t dip. It disappears.",
+  "sections": [
+    {
+      "heading": "What Is the Turkey Illusion and Why It Matters",
+      "paragraphs": [
+        "That’s the Turkey Illusion: we assume stability because recent experience has been stable, and we ignore the silent risk that could change the entire game in a day. The Turkey Illusion is a mental trap where we treat the past—especially the recent past—as proof that the future will behave the same way. We confuse a smooth trend with a safe reality. We keep feeding our assumptions without asking who’s holding the knife. This bias is about regime shifts. Things look stable until the regime changes—policy shifts, market breaks, a platform rule flips, a supply chain cracks, a heart valve fails. In complex systems, risk can be loading quietly while everything looks fine on the surface.",
+        "It’s how companies miss new competitors until they lose entire markets; It’s how families get wiped out by rare medical bills or one layoff; It’s how engineers design for the last failure and miss the next one; It’s how good people who did everything “right” still get blindsided. Why it matters: The system has long periods of calm followed by sudden shocks; You have limited visibility into hidden mechanisms (black-box platforms, opaque regulation, complex machinery); Feedback is positive and reinforcing (profits rise, metrics grow, your app stars climb) so you assume the direction is sustainable.",
+        "The Turkey Illusion thrives when: Taleb popularized this with Black Swan events: low-frequency, high-impact surprises that look obvious in hindsight, but non-obvious beforehand (Taleb, 2007). The turkey’s trend line is real. It’s just not the right line."
+      ]
+    },
+    {
+      "heading": "1) The Single-Platform Business",
+      "paragraphs": [
+        "A creative shop makes 95% of revenue from sponsored posts on a single social platform. The algorithm loves them. Every trend favors them. They hire, expand, sign a lease. Then the platform “prioritizes friends and family” and throttles branded reach. Overnight, their engagement falls by 70%. Their contracts vanish. The CEO tells the team, “We did nothing wrong.” True. But they let one invisible switch control the entire business.",
+        "Build distribution across channels, including owned ones (email list, community, website); Negotiate contracts with platform-agnostic deliverables; Model catastrophic scenario A: 60% reach drop. What’s the runway? What’s Plan B within two weeks?. What you could do differently:"
+      ]
+    },
+    {
+      "heading": "2) The Beautiful Availability Dashboard",
+      "paragraphs": [
+        "A SaaS company runs 18 months with 99.99% uptime. The CTO feels confident. Then an upstream cloud provider ships a silent change to the network fabric. Packet loss starts at 1% and slowly climbs. Dashboards don’t alert because thresholds were tuned to noise from past months.",
+        "After 12 hours, they hit a wall: cascading retries, saturated queues, stuck workers. Customers churn. Alert on rate of change, not just absolute thresholds; Run chaos tests quarterly on dependencies; Require “kill switches” to degrade features gracefully; Keep dependency maps living and visible.What you could do differently:"
+      ]
+    },
+    {
+      "heading": "3) The Paycheck That Always Arrives",
+      "paragraphs": [
+        "Two partners buy a house at the limit of their pre-approval. Both jobs look solid. Then one department gets “reorganized,” and the other partner’s firm freezes bonuses. A hospital bill lands. The buffer isn’t a buffer; it was “vacation next year.” Their budget assumed a world where paychecks arrive like the tide. But tides have storms.",
+        "Live on one income, save the other (even partially); Hold an emergency fund that isn’t invested in volatile assets; Practice a “budget fire drill” quarterly: cut to essentials for two weeks. What you could do differently:"
+      ]
+    },
+    {
+      "heading": "5) The Quiet Factory",
+      "paragraphs": [
+        "A runner eats the same foods, performs well, and concludes the diet suits her body. She ignores subtle markers: longer recovery, poor sleep, irritability. Then a stress fracture. What changed? Training load and bone stress rose incrementally; the diet met yesterday’s needs, not today’s. Track leading indicators: sleep quality, HRV, mood, recovery time; Schedule deload weeks and nutrition reassessment every training block; Add regular DEXA scans if training at high mileage or with historical eating restrictions. What you could do differently:",
+        "A plant has no major incident for five years. Management reads this as proof the safety program is great. In reality, near-miss reports fell because supervisors learned to “smooth” numbers. The system improved on paper until a dust explosion. Normal-looking metrics disguised rising risk. Reward near-miss reporting explicitly; Rotate safety officers between lines to avoid familiarity blindness; Track precursor indicators (housekeeping scores, PPE compliance, maintenance delays) that predict incidents (Perrow, 1984). What you could do differently:"
+      ]
+    },
+    {
+      "heading": "7) The Team That Never Missed a Sprint",
+      "paragraphs": [
+        "A fintech launches under a permissive interpretation of a regulation. Growth soars. Investors pile on. Then an enforcement action against a competitor shifts the tone. Banks recoil. Payment partners freeze. Compliance wasn’t a box; it was a weather system. Map your regulatory risk to “what if the strictest reading applies tomorrow?” Keep a pre-negotiated backup banking partner; Maintain cash that survives a six-month freeze in onboarding.",
+        "What you could do differently: Eight sprints in a row, the team “commits then delivers.” The manager assumes velocity is stable and signs a public ship date. But the past sprint cycle hid compounding tech debt. Story points lied. A dependency breaks; the date slips; leadership loses trust. Track time-to-merge, reopen rate, and defect density, not just points; Put buffer time into every milestone; Do a premortem: “It’s launch day and we missed. Why?”. What you could do differently:"
+      ]
+    },
+    {
+      "heading": "9) The Software Dependency That “Never Breaks”",
+      "paragraphs": [
+        "For 12 years, a bull market convinces a new investor that stocks always go up. He takes on margin, copies social media trades, laughs at diversification. Then volatility wakes up, his margin calls cascade, and he learns about sequence-of-returns risk the hard way. Use a barbell: keep a safe core, take risk at the edges (Taleb, 2007); Limit leveraged positions to amounts you can lose without forced selling; Predefine sell rules for drawdowns before you buy.",
+        "What you could do differently: A popular open-source library ships monthly. It’s rock solid—until a maintainer leaves and a new release slips in a breaking change with a subtle security hole. Automatic updates roll it everywhere. Pin versions and stage rollouts behind canaries; Sponsor maintainers; build a relationship so you hear changes early; Maintain a minimal internal fork for emergency patches. What you could do differently:"
+      ]
+    },
+    {
+      "heading": "10) The Peace That Looked Permanent",
+      "paragraphs": [
+        "Decades of calm in a region lead governments to shrink stockpiles, sell infrastructure capacity, and offload manufacturing. Then a geopolitical shock. Shipping lanes clog, energy prices spike, and industries learn that “efficiency” without resilience is a turkey on day 999. Hold strategic reserves; Maintain multiple suppliers in different geographies; Model “10x lead times” logistics and pre-plan slowdowns.",
+        "What you could do differently: Here’s the pattern: confidence grows because nothing bad happens—yet. The risk is quiet, so we treat it as nonexistent. When the shock hits, it doesn’t nibble your margins; it eats the whole model."
+      ]
+    },
+    {
+      "heading": "Hunt for Asymmetries",
+      "paragraphs": [
+        "You can’t predict every surprise, but you can design so surprises don’t sink you. Think like a cautious engineer and a scrappy street vendor at the same time: build guardrails, keep some cash, read the weather, and have another cart around the corner. Trends are not laws. Ask, “What causes this line?” If you can’t see the mechanism, your forecast is fragile; Identify hidden constraints: single suppliers, single platforms, one gatekeeper, one algorithm; Find cliffs, not just bumps. What would end the game entirely?.",
+        "Upside if this continues; Downside if it breaks. Write two numbers on your wall: If the downside is “we die,” you need a plan, even if the probability seems low. One-night events can erase a thousand comfortable days."
+      ]
+    },
+    {
+      "heading": "Stress Test and Rehearse",
+      "paragraphs": [
+        "Business: churn intentions, support ticket sentiment, contract renewal probability, upstream supplier capacity; Health: resting heart rate trend, HRV, sleep metrics, appetite changes, unusual fatigue; Engineering: rate-of-change alerts, queue growth under normal load, dependency health. Leading indicators beat lagging ones. Examples: Seek signals that twitch before the system screams.",
+        "Premortem: imagine it failed. Back-cast the causes (Klein, 2007); Reverse stress test: ask, “What conditions would make us insolvent?” Then see how plausible those conditions are; Fire drills: a two-hour drill beats a 200-page plan. Can your team execute failover at 2 a.m. without the hero engineer?."
+      ]
+    },
+    {
+      "heading": "Use Stop-Losses and Tripwires",
+      "paragraphs": [
+        "Very safe core (cash, reserves, low-risk operations); Small, experimental risks that can fail without killing you. Hold two things at once: Avoid the mushy middle where you’re exposed but not paid for it (Taleb, 2007). Distribution: multiple channels you own (email list), rent (platforms), and borrow (partners); Supply: at least two suppliers in different regions and logistics routes; People: no “single points of human failure.” Cross-train, document. Diversification is not owning 50 SaaS tools. It’s:",
+        "Set pre-commitments. If revenue dips by X% for Y weeks, cut discretionary spend by Z%. If heart rate exceeds X for Y days, cancel intense workouts. Make rules clear and visible before emotions do the steering. A tail risk isn’t a fairy tale. It’s where the damage lives. If an event could end you, don’t argue probabilities. Reduce exposure. Change the game so, when it happens, it hurts but doesn’t end you."
+      ]
+    },
+    {
+      "heading": "Translate for Stakeholders",
+      "paragraphs": [
+        "“If we spend $80k on redundancy, we reduce the chance of a $4M outage by half.”; “If we keep three months of runway in cash, we reduce layoff odds by 60% in a market shock.”. Pitch resilience with simple math: Decisions don’t change because people see truth; they change because people see the trade. Tape it somewhere you’ll actually see it. 1) Draw Your Fragility Map Grab a whiteboard. Put your goal in the middle (deliver product, stay healthy, maintain cash flow). Draw upstream and downstream dependencies. Label each node with: Circle anything with low probability but catastrophic impact. Those are your turkeys.",
+        "Algorithm change, account ban, legal interpretation, sudden illness, critical staff exit, supplier bankruptcy, database corruption. 2) Define Your Cliff Events Ask, “What one-day events could change the regime?” For each, write: prevention, detection, response. Keep the response step-by-step on one page. Business: percentage of revenue by top client, marketing CAC trend, NPS of top 20% customers; Health: weekly resting heart rate average, training load score, sleep hours; Tech: error budget burn rate, queue depth slopes, dependency version drift.",
+        "3) Build Leading Indicators Choose 3–5 signals you’ll watch weekly. For example: Set alarms on change rates, not only levels. Inventory: keep buffer stock for your most brittle components; Cash: three to six months of core costs that don’t go to zero in a drawdown; Time: don’t plan 40 hours of work into a 40-hour week. Protect a small slack buffer. 4) Right-Size Safety Margins Replace silent dependencies with explicit contracts (with SLAs); Reduce complexity where you can. Fewer moving parts mean fewer hidden failure modes; Train substitutes. If a task only one person can do, it’s a risk, not a skill.",
+        "5) Practice Fragile-to-Robust Moves What changed in the environment this month?; Which of our assumptions feels most brittle today?; What bet paid off because of luck, not skill?; Which problem are we not measuring yet, but should?. 6) Institutionalize a Monthly “Regime Check” Ask your team: 7) Small Bets, Fast Feedback Treat new channels and suppliers like experiments. Put a little skin in, gather data, and scale what works. Think garden, not statue: prune, plant, watch, repeat."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Normalcy Bias: We downplay the possibility of disaster because we haven’t seen it. The Turkey Illusion is a specific case: smooth past leads us to assume smooth future. Normalcy bias explains the denial part during a crisis; Survivorship Bias: We focus on the winners and assume their path is safe. The Turkey Illusion fixes our eyes on the trend without seeing the graveyard of trends that ended; Optimism Bias: We overestimate the good, underestimate the bad. The Turkey Illusion can be optimistic or just lazy: we assume the line continues because updating costs attention; Planning Fallacy: We think projects take less time than they do (Kahneman & Tversky, 1979). Different bias, but both say: your model of the future is rosier than reality;",
+        "Black Swan Events: Rare, high-impact events that are hard to predict (Taleb, 2007). The Turkey Illusion is how we get caught by them—by trusting the pre-swan calm; Lindy Effect: The longer something lasts, the longer it’s expected to last. It helps with durable things (books, heuristics), but misleads with fragile or regulated systems. A 100-year-old law is Lindy; a 100-day-old algorithm is not; Goodhart’s Law: When a measure becomes a target, it stops being a good measure. In safety and product, “stable metrics” can hide risk as people game the numbers; Regression to the Mean: Unusually good or bad runs tend to revert. A long smooth run might just be luck; don’t build your house on it."
+      ]
+    },
+    {
+      "heading": "B) You’re an Engineering Manager With Quiet Dashboards",
+      "paragraphs": [
+        "Your TikTok growth is electric. 80% of sales come from it. Sleepy Sunday morning, the app says “Account under review.” Put two other channels in motion: email capture on your site; a simple referral program with unique codes; Offer a small lead magnet to an email list. Collect at least 200 emails this week; Recruit one micro-influencer on another platform to test creative in a 7-day sprint.",
+        "What to do this week: Uptime looks perfect, on-call is boring, and you worry that boredom is a lie. Add rate-of-change alerts on error rates and queue length; Diagram your top three external dependencies; write down what happens if each goes dark for 24 hours; Pick one service and do a chaos hour. Pull a plug you can safely reinsert. What to do this week:"
+      ]
+    },
+    {
+      "heading": "D) You’re Training for a Race and Everything’s Fine",
+      "paragraphs": [
+        "Stability is precious and fragile. Freeze one optional expense for 30 days and move that amount into a separate savings account named “Emergency.”; List the three bills that would cause the most stress if you lost income. Call each provider to learn their hardship policies now, not later; Practice a “no-spend weekend” and see what feels hard. That friction shows you where to build alternatives.",
+        "What to do this week: Until it isn’t. Log your waking heart rate for seven days. If it’s up 10% and you feel lousy, cut intensity for three days; Book a 20-minute call with a sports nutritionist, not next year, this week; Plan a deload week on the calendar before you get forced into one by injury. What to do this week:"
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Build for the Day After Thanksgiving",
+      "paragraphs": [
+        "You slimmed inventory, optimized schedules, and got praise. Now you think about risk. Identify one critical input. Secure a second supplier, even at worse terms. Buy options on resilience; Add a one-page incident response plan for your top cliff event and rehearse it in 30 minutes; Create a “Resilience” line in your budget. Give it a number. Spend it on buffers. What to do this week: We love stable lines. They calm us. They justify our plans. But life is lumpy. The day after Thanksgiving comes for businesses, careers, health, and codebases. The goal isn’t to live afraid. It’s to live prepared enough that surprises become bruises, not obituaries.",
+        "Pick one cliff event. Name it. Create one tripwire. Add one buffer. Do one drill. You don’t need a bunker; you need a better Tuesday. Stability is earned, not assumed. Let’s earn it. Tape this near your desk. Read it when things feel calm—that’s when turkeys dream the biggest."
+      ]
+    }
+  ],
+  "checklist": [
+    "Map single points of failure (people, platforms, suppliers)",
+    "Define cliff events (what ends the game) and their early signals",
+    "Set rate-of-change alerts in your dashboards",
+    "Run a premortem and a reverse stress test each quarter",
+    "Build a barbell: safe core + small high-upside bets",
+    "Diversify channels you own vs. rent; grow an email list",
+    "Create tripwires: pre-committed actions for specific thresholds",
+    "Cross-train to remove key-person risk; document critical paths",
+    "Stage rollouts and use canaries for any critical change",
+    "Hold dry powder: cash, credit, or capacity reserved for shocks",
+    "Probability of disruption (gut estimate is fine)",
+    "Impact if disrupted (inconvenience vs. catastrophe)"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

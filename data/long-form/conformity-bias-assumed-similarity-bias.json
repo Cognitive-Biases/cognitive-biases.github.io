@@ -1,0 +1,130 @@
+{
+  "slug": "conformity-bias-assumed-similarity-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/conformity-bias-assumed-similarity-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/conformity-bias-assumed-similarity-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T13:42:49.526Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "“They Must Think Like Me” — The Trap of Assumed Similarity Bias",
+  "lede": "You tell a teammate, “Everyone hates long kickoff meetings,” and you watch them wince. Not because they disagree, but because you just assumed they felt about meetings the way you do. The next week, you push the team to cut the agenda in half. Post-launch, it turns out the junior folks were lost because the collective context got axed. The team drops a sprint to fix needless confusion. You didn’t have bad intentions. You simply pressed your preferences onto other minds and called it consensus.",
+  "sections": [
+    {
+      "heading": "What is Assumed Similarity Bias and why it matters",
+      "paragraphs": [
+        "Assumed Similarity Bias is our habit of believing others are more like us—more aligned with our ideas, preferences, and feelings—than they truly are. It feels warm and cooperative. It often backfires. At its core, Assumed Similarity Bias is projection. You use your own beliefs, preferences, or behavior as the baseline, then mirror it onto other people—coworkers, users, voters, your partner, your kid. You aren’t trying to erase differences; your brain just saves effort by substituting “me” for “them.”",
+        "Psychologists have charted flavors of this for decades. The false consensus effect shows we overestimate how common our own views are (Ross, Greene, & House, 1977). Projection bias, a cousin, makes us expect others’ future states to look like our current state (Loewenstein, O’Donoghue, & Rabin, 2003). Assumed similarity wraps those moves together and applies them across contexts: inside teams, in design choices, in negotiation, in hiring, in friendships. Why it matters: It creates invisible fractures. A product team of night owls assumes “no one wants morning notifications,” and they ship a default that irritates half their users; It dulls research. If you “already know” what customers need—because you would need that—you stop seeing what’s actually happening; It breeds polite silence. People who are unlike you withdraw when they sense their differences are unwelcome or invisible; It wastes time. Misreads lead to rework, re-education, or repair; It shrinks imagination. If the only mind you consult is yours, you build narrow things for narrow worlds.",
+        "Assumed Similarity Bias doesn’t mean we’re selfish. It means the fastest story our mind can write is “probably like me.” In fast-moving work, fast stories dominate. Our job is to slow them just enough to make room for truth."
+      ]
+    },
+    {
+      "heading": "The product that baffled its best users",
+      "paragraphs": [
+        "Stories make biases visible. It’s easier to catch a vibe than a definition. Here are cases we’ve met in teams and products, the places where “they’re like me” quietly steers the ship. A small analytics startup builds a dashboard for power users. The founders live in SQL. They assume their early adopters want raw tables with minimal guardrails because that’s how they like to work: fast, flexible, no training wheels. They launch a dazzling, dense dashboard. Within a month, support tickets spike.",
+        "Their largest customers are domain experts, not analysts. They want guardrails and friendly defaults. They don’t want to feel stupid for clicking the wrong tiny icon. Demos stall. The founders keep saying, “But this is how we do it,” as if that’s the baseline for all minds. They patch tooltips. Churn rises anyway. Reality: the “power” the team craved is the anxiety their users avoided. The assumed similarity was not a small error; it was the product’s spine."
+      ]
+    },
+    {
+      "heading": "The hiring panel that hired itself",
+      "paragraphs": [
+        "A hiring panel of three senior engineers screens candidates for a platform role. They agree that “owning the code” and “guarding the architecture” define excellence. In interviews, they glow when candidates talk about refactoring or standards, and they feel meh when candidates emphasize cross-functional empathy or onboarding.",
+        "Six months later, the team is heavy on brash code guardians and light on glue people. On-calls are fine; team glue is gone. Demos feel tense. New teammates bounce because nobody teaches. The panel didn’t try to exclude. They assumed the ideal candidate looks like them at their best day. They re-planted themselves and called it a team."
+      ]
+    },
+    {
+      "heading": "The meeting “efficiency” that erased context",
+      "paragraphs": [
+        "A fintech app replaces step-by-step forms with a single elegant scroller. It looks calm and modern. The team is all under 35 and can parse visual hierarchy by reflex. Post-launch, older users report “I can’t tell what’s tappable.” NPS drops among the 55+ segment. The design review notes repeat “it’s obvious” because it was obvious—to them. Obviousness is a mirage built from your past interfaces. When teams assume their pattern library lives in everyone’s head, they ship frustration with a soft glow.",
+        "A manager trims weekly standups from 30 minutes to 10. She hates long meetings and believes speed equals respect. Two quiet folks stop raising risks because they need a little time to find words. One mis-scope snowballs into two lost sprints. Short meetings weren’t the villain. Assumed similarity was. Efficiency on one axis (time) murdered efficiency on others (clarity, alignment, safety)."
+      ]
+    },
+    {
+      "heading": "The “universal” schedule that burned a teammate",
+      "paragraphs": [
+        "A founder assumes the investor across the table values control the way she does. She believes board seats will be the sticking point. She digs in there and gives ground on liquidation prefs. Turns out the investor cares most about downside protection and sees the board seat as symbolic. The founder defended the wrong hill because she mapped her motives onto the other side. Deal breakers were swapped in her head. A global team sets core hours “for collaboration.” The lead prefers early mornings, so the core block lands at 7–11 a.m. Pacific. The Berlin teammate becomes a ghost at dinner for months. Morale drops. He doesn’t complain because he doesn’t want to be “difficult.”",
+        "When the lead finally asks directly, she hears the real pattern: the teammate does his best work after 9 p.m. and needs quiet mornings for family. No one intended harm. The default was a mirror."
+      ]
+    },
+    {
+      "heading": "The classroom that misread silence",
+      "paragraphs": [
+        "A teacher asks, “Does this make sense?” Several students nod. Others look down. She assumes nods mean understanding and moves on. Later, a pile of wrong answers. The nods meant “I want to look like I get it,” not “I get it.” The teacher projected her own habit—speaking up when lost—onto students with a different survival strategy.",
+        "Assumed similarity doesn’t just steer products and teams. It explains dinner arguments, text misfires, and group chats that slowly die. The common thread: when we mistake our inner weather for the whole forecast, we predict badly."
+      ]
+    },
+    {
+      "heading": "Run a quick “Other-Mind Check” before decisions",
+      "paragraphs": [
+        "Assumed Similarity Bias thrives in speed, sameness, and silence. You won’t “solve” it with a definition. You’ll beat it with small frictions that surface difference early. Here are field-tested moves. Use them like seatbelts. Right before deciding, ask: “If someone with a different background or constraints were in this moment, what would they want, fear, or choose?”",
+        "Don’t guess forever. Write two lines. The act of naming a non-you perspective changes what you notice. Add a constraint: name a concrete person. “What would Sana—who uses Android on a spotty connection—see here?” The more specific, the better."
+      ]
+    },
+    {
+      "heading": "Eject “obvious” and “everyone” from your vocabulary",
+      "paragraphs": [
+        "We often package our wants as needs. “We need a dark theme” might be “I prefer dark theme at night.” If you name it as preference, you create room for others’ requirements. In design reviews, tag comments as P (preference) or R (requirement). Watch how the conversation softens and clarifies.",
+        "Strike phrases like “everyone knows,” “obviously,” “no one wants,” “users hate,” and “we all agree.” Replace with “I believe,” “our last test showed,” “in segment X,” or “three of five users.” Language shapes your map. Choose map words, not mirror words."
+      ]
+    },
+    {
+      "heading": "Scaffold disagreement and ask for weird",
+      "paragraphs": [
+        "Before shipping a change that rests on “people like X,” grab two people unlike you—different role, seniority, device, culture. Ask them to think aloud as they use the thing or hear the pitch. Ten minutes per person. Record or take notes. You’ll find at least one assumption to revise 80% of the time.",
+        "Invite divergence directly. Instead of “Any feedback?” ask, “Tell me one thing that could fail for someone unlike me.” Or try, “What’s one assumption I’m making because of my background?” You won’t get magic every time, but you’ll model that difference is welcome."
+      ]
+    },
+    {
+      "heading": "Design defaults that forgive, not assume",
+      "paragraphs": [
+        "If you’re making a claim about “most,” grab a base rate. Market share, device usage, accessibility stats. Your own usage is not a sample. You’re a sample of one with weird edges. Base rates save you from over-fitting your life (Kahneman & Tversky, 1973). When you log a decision, include: “Primary user stories,” “Non-goals,” and “Known non-us cases.” Force the team to say who this is for and who it’s not for. If your memo says “for everyone,” rewrite it. People are not everyone. “Everyone” is a stall.",
+        "Good defaults admit difference. If you don’t know a user’s preference, pick a forgiving default and make change cheap. For example, choose a notification default that alerts gently and make quieting or amplifying trivial. The move is not “choose perfectly.” It’s “reduce regret for being wrong.”"
+      ]
+    },
+    {
+      "heading": "Ask spectrum questions, not yes/no",
+      "paragraphs": [
+        "A single teammate waving their hand won’t beat the comfort of similarity. Ritual helps. Try “two up, one down” at the end of a review: two things you like, one thing you’d change for someone unlike you. Or a “premortem” where each member writes how the idea fails badly for a group they don’t belong to. Read out loud. Then decide.",
+        "In surveys, replace “Do you prefer X?” with “On a scale from ‘strongly prefer A’ to ‘strongly prefer B,’ where are you?” Or “In which situations would this be helpful versus confusing?” Spectrum answers reveal edges. Yes/no compresses difference into noise."
+      ]
+    },
+    {
+      "heading": "When in doubt, run a tiny experiment",
+      "paragraphs": [
+        "If a room is quiet, don’t assume consent. Ask by name. Offer async routes. Accept anonymous input for sensitive topics. People differ in power, safety, and style. Your comfort isn’t a thermometer for the room. Before committing, A/B test, pilot in one region, or trial with a small cohort.",
+        "If you’re confident in a similarity-based bet, this won’t hurt you. If you’re wrong, you’ll learn cheaply. Run time-boxed experiments and publish the result, especially when a decision rests on “people like me.” These moves won’t slow you down as much as rework will. They sharpen reality where your brain tries to round off corners."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Biases often overlap. Here’s how Assumed Similarity Bias bumps into neighbors and how to keep the lines clean. False consensus effect: Overestimating how many people share your beliefs or behaviors. It’s a classic lab finding and everyday hazard (Ross, Greene, & House, 1977). Assumed similarity includes this but also covers subtle projections about preferences and feelings inside teams; Projection bias: Expecting others (or your future self) to share your current state—hungry, stressed, motivated (Loewenstein, O’Donoghue, & Rabin, 2003). It’s more about states over time; assumed similarity is broader across people right now; Typical mind fallacy: The informal name for assuming “my mental processes are the default.” It’s internet-famous, not a formal theory, but it nails the vibe: “Because this is intuitive to me, it’s intuitive, period.”; Naïve realism: The belief that we see the world as it is, and those who disagree are biased, uninformed, or irrational (Ross & Ward, 1996). Assumed similarity often rides on naïve realism—if my take is reality, then others must share it; Ingroup homogeneity effect: Seeing members of your own group as more similar to each other than they really are. Sometimes we flip it: we assume our ingroup is normal and outgroups are “other,” but inside a team we also erase differences because sameness feels safe (Quattrone & Jones, 1980); Empathy gap: Misjudging other people’s feelings or our own in different emotional states. If you’re calm, you think the anxious person should “just think it through.” That’s assumed similarity on an emotional channel (Loewenstein, 1996); Availability heuristic: Mistaking what’s vivid for what’s common. Your own experiences are the most available, so they feel representative. Assumed similarity plugs into availability and magnifies it; Dunning–Kruger effect: Overestimating your knowledge when you lack skill. Not the same thing, but when you assume your way is universal and also overrate your understanding, the combo is chaos; Pluralistic ignorance: Everyone privately disagrees but publicly goes along because they think they’re the odd one out (Prentice & Miller, 1993). Assumed similarity feeds the illusion that “they all agree,” which keeps the silence going.",
+        "The practical difference: assumed similarity is the mental shortcut; these related ideas are the flavors and consequences. If you learn one habit—asking “who isn’t like me?”—you cut into many of them at once."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Assumed Similarity Bias",
+      "paragraphs": [
+        "Assumed Similarity Bias is charming. It feels like warmth and common ground: “We’re on the same page.” Sometimes you are. Often you’re not. And the cost of pretending you are is paid later—in rework, in quiet resentment, in churn, in “we should have known.” The fix isn’t cynicism. It’s curiosity sharpened into routine. Speak for yourself and ask for the rest. Run small tests. Name who this is for. Listen to the person who isn’t you. That’s not a lofty virtue. It’s a practical lever.",
+        "We’re building a Cognitive Biases app because we screw this up too—at the whiteboard, in DMs, with family plans on Sunday mornings. The app will nudge us with short exercises, tiny checklists, and “catch-it-in-the-act” prompts. Not to make us perfect. To make us a bit more awake right when the brain wants to coast. If you remember one line, let it be this: you are a fascinating dataset of one. Build and decide like you know that."
+      ]
+    }
+  ],
+  "checklist": [
+    "Before deciding, write one sentence from a non-you perspective",
+    "Tag your comments as preference (P) or requirement (R)",
+    "Ban “obvious,” “everyone,” and “no one” from decision talk",
+    "Get two users or teammates unlike you to try the thing for 10 minutes",
+    "Pull one base rate before claiming “most” or “usually.”",
+    "Name who it’s for and not for in the decision memo",
+    "Choose forgiving defaults and make changes easy",
+    "End reviews with “two up, one down” for a non-you group",
+    "Ask spectrum questions. Avoid yes/no on preferences",
+    "Treat silence as missing data, not agreement",
+    "Pilot risky assumptions with a small, time-boxed test",
+    "Write one “other-mind” sentence before each major decision"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
