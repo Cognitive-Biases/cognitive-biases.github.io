@@ -1,5 +1,9 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { runSearchResponseFixtures } from "./search-response-contract.mjs";
+
+// Exercise the live response parser without network access in normal npm check and final release CI.
+runSearchResponseFixtures();
 
 const OUT = "dist";
 const identity = JSON.parse(await readFile("config/site-identity.json", "utf8"));
