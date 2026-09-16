@@ -1,0 +1,151 @@
+{
+  "slug": "decision-making-action-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/decision-making-action-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/decision-making-action-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:35:35.260Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Action Bias: Why We Act Even When Waiting Is Better",
+  "lede": "We were in a crowded co-working space, four cups of coffee deep, watching a product dashboard that looked like a hospital monitor. Sign-ups dipped for two days. Panic spread. “Run a promo!” “Push a hotfix!” “Change onboarding!” We were halfway to launching a discount code before someone asked, “What actually changed?” Silence. Ten minutes later, we realized a tracking script had broken. The sign-ups were fine. We almost thrashed our team and product because doing something felt safer than sitting still.",
+  "sections": [
+    {
+      "heading": "What Is Action Bias and Why It Matters",
+      "paragraphs": [
+        "Action Bias is our tendency to prefer doing something—anything—over doing nothing, even when inaction is smarter. It feels like momentum and control. Sometimes it’s right. But often it costs money, energy, and options. Action Bias is the urge to act to reduce anxiety or uncertainty, regardless of whether acting improves outcomes. In other words: motion over wisdom. It burns resources by default. Action consumes time, cash, and goodwill; It hides the signal. Constant tinkering muddies your data, so you can’t tell what works; It feels righteous. You get praise for “taking initiative,” even if you make things worse; It scales badly. One person’s flurry becomes a team’s pattern, then a culture.",
+        "Why it matters: The classic evidence: penalty kicks. Goalkeepers dive left or right most of the time; staying in the center works surprisingly well, but looks foolish if a goal goes in. The data say “wait,” but the job says “move.” That’s Action Bias (Bar-Eli et al., 2007). Same story in investing: overtrading driven by the need to do something underperforms simple, low-activity strategies (Barber & Odean, 2000). If you’ve ever refreshed email before answering the one hard message, you’ve met this bias. If you’ve ever reorganized your desk instead of making a decision, you’ve fed it. Action Bias isn’t laziness’s opposite. It’s avoidance wearing a productivity costume."
+      ]
+    },
+    {
+      "heading": "1) The Startup “Fix” That Breaks the Data",
+      "paragraphs": [
+        "A marketplace sees a 12% drop in conversions over a long weekend. Slack catches fire. Someone flips the landing page hero, someone else tweaks the pricing grid, someone reroutes a funnel. By Tuesday, traffic normalizes. The team cheers and logs a dozen “wins.” Except there’s no way to know what helped. Was it seasonality? A payment provider blip? One good change? Now, future problems will take longer to diagnose because the baseline is gone. The real cost isn’t the weekend; it’s the loss of clarity.",
+        "The dip felt urgent and personal; Acting soothed the discomfort of uncertainty; The rush produced activity, not learning. How Action Bias played out: Freeze changes for 24 hours. Check upstream dependencies, analytics integrity, and seasonality patterns; Investigate the biggest, simplest explanation first (instrumentation, traffic sources); If you must act, change one thing at a time with a clear pre/post period. What would help:"
+      ]
+    },
+    {
+      "heading": "2) Hiring in a Hurry",
+      "paragraphs": [
+        "A team loses a key engineer. The backlog groans. Leadership posts a vague job ad, rushes interviews, and hires the least-bad candidate with the earliest start date. Six months later, the team is patching their patch. Two strong candidates passed because the process rewarded speed over fit. “An empty seat is worse than a warm body.”; Activity (interviews, offers) felt like progress; The team measured effort, not future drag.",
+        "How Action Bias played out: Slow is smooth, smooth is fast. Define must-haves as behaviors and outcomes, not buzzwords; Set a hiring bar and only lower it with explicit consent from the future you (a written “break-glass” exception); Fill the gap with scope cuts, contractors, or pairing rotations. Make not-hiring a plan, not a failure. What would help:"
+      ]
+    },
+    {
+      "heading": "3) Medicine: Overtreatment and the Fear of Doing Nothing",
+      "paragraphs": [
+        "A patient shows up with a viral cold, asking for antibiotics. The doctor knows antibiotics won’t help. But saying no risks a bad satisfaction score and an awkward talk. They prescribe anyway. The patient leaves happy. Antibiotic resistance grinds forward. Doing something looks caring; saying “wait” feels indifferent; Omission is judged harsher—even if it’s correct—than commission (Ritov & Baron, 1990); Systems reward visible intervention, not wise restraint.",
+        "Action Bias in clinics: Scripts for “active watchful waiting,” follow-up checkpoints, and symptomatic relief plans (Hallsworth et al., 2016); Decision support nudges: flag likely viral cases; prompt alternatives; Measure and celebrate “necessary non-action” as a clinical skill. What would help:"
+      ]
+    },
+    {
+      "heading": "4) Trading: The Click That Costs",
+      "paragraphs": [
+        "A retail investor watches a red morning. They sell off positions to stop the pain, then buy back higher in the afternoon. Commissions are cheap; regret is not. Over a year, the churn underperforms a simple index fund by a painful margin (Barber & Odean, 2000). Markets move; we mimic; Fear and FOMO drive button presses that feel like control; Feedback is noisy, so mistakes can masquerade as skill.",
+        "Action Bias on screens: Pre-commit to a simple ruleset: rebalance quarterly, ignore intraday moves, use automatic contributions; Add friction: a 24-hour buffer before discretionary trades; Focus on process metrics (adherence to rules), not day-to-day P&L. What would help:"
+      ]
+    },
+    {
+      "heading": "6) Product Roadmaps: The Feature Pile-On",
+      "paragraphs": [
+        "A startup has an outage. Twitter howls. The CEO rushes a long, defensive message. It satisfies her need to “own the narrative.” Customers read it as tone-deaf. Churn ticks up. A three-part template: acknowledge impact, state facts, set next update time. Ship small, ship steady; One sober editor with veto power in crises; A press kit for downtime, made on a calm day.",
+        "What would help: Revenue plateaus. Sales says the demos stall on “missing features.” The team slices the roadmap into confetti. Velocity spikes. Adoption doesn’t. Support tickets triple. Spend a week with non-users and churned customers. Map their actual jobs-to-be-done; Prototype one or two bets end-to-end. Test as narratives, not menus; Make “not building” a visible option with an expected ROI. What would help:"
+      ]
+    },
+    {
+      "heading": "8) Personal Work: The “Productive” To-Do List",
+      "paragraphs": [
+        "A leader senses misalignment. They pull the reorg lever. Boxes shift; roles blur; everyone waits. Performance dips because people stop doing the work to figure out who their new manager is. The original problem—unclear goals—remains. Clarify priorities and decision rights first. Try a pilot within one team; Time-bound experiments: “For the next six weeks, Team A owns X metric. Then we review.”; Reorg as the last resort, not the first reflex.",
+        "What would help: You finally face the hard phone call. You “prepare” by color-coding your notebook, reorganizing files, rewriting the task name. Two hours pass. Nothing important moved. A five-minute “move the stone” rule: begin with the smallest irreducible next step that changes state; If a task is scary, write the first sentence, dial and hang up after one ring, or book the calendar block; Reward starting, not polishing. What would help:"
+      ]
+    },
+    {
+      "heading": "Recognize and Avoid Action Bias",
+      "paragraphs": [
+        "Action Bias hides under urgency, busyness, and the comforting rattle of motion. You don’t beat it with slogans. You beat it with a handful of simple, repeatable moves. 1) Name the discomfort Is this truly time-sensitive? What happens if I wait 24–48 hours?. 2) Check the clock Could this be measurement error, seasonality, or a known external factor?. 3) Look for the simplest, biggest cause What outcome would count as “this worked”? What makes me stop and reassess?.",
+        "4) Define success and stop conditions before acting Can I run a small, low-cost, reversible test instead of a big change?. 5) Prefer reversible moves If I change multiple variables, will I learn anything? Can I isolate the effect?. 6) Change one thing at a time Require a peer review, a written hypothesis, or a short delay before shipping. 7) Add a friction bump What metric moves? Over what window? What variance counts as noise?.",
+        "8) Decide how you’ll measure learning If I take no action, what monitoring or safeguards keep us safe?. 9) Write the “do nothing” plan Share your plan and decision rules with the team to resist panic pivots. 10) Commit publicly Tape those ten to your monitor. We do."
+      ]
+    },
+    {
+      "heading": "Tools We Use (That You Can Steal)",
+      "paragraphs": [
+        "The 2-Hour Hold: In non-life-threatening issues, we wait two hours before any production change. Often, the blip resolves or the cause reveals itself; The One-Sentence Hypothesis: “We believe [change] will [impact] by [amount] in [timeframe] because [mechanism].” Pre-Mortem: Before acting, imagine it failed. List reasons. Mitigate the top two right now (Klein, 2007); Tripwires: “If error rate > 3% for > 30 min, roll back automatically.”",
+        "Clear, automatic boundaries curb ad hoc thrashing; “Not Doing” Column: Our Kanban includes a visible “Consciously Not Doing” list with dates and reasons. It gives inaction a home and a story; Red Team Review: A rotating teammate argues for waiting or for the smallest reversible move; Decision Logs: A running doc with date, situation, options, choice, hypothesis, and follow-up date. Memory is slippery; logs teach."
+      ]
+    },
+    {
+      "heading": "Conversations That Disarm Action Bias",
+      "paragraphs": [
+        "With your boss: “I can push a quick patch now, or we can hold two hours to verify it isn’t analytics. I’ve set alerts and a rollback. Which risk do you prefer?” With a customer: “We can ship a workaround today with risk A, or we can verify the root cause and ship tomorrow with 90% confidence.",
+        "I’ll update you at 5 pm.” With yourself: “I feel embarrassed and want to look busy. The smallest reversible move is X. I’ll schedule it for 3 pm after I check Y and Z.” These sentences reframe action as a choice between risks, not a default virtue."
+      ]
+    },
+    {
+      "heading": "Recognizing Action Bias in the Wild",
+      "paragraphs": [
+        "You find yourself convincing, not measuring. Lots of story; light on data; You change course mid-experiment because you’re uncomfortable waiting; You jump to solutions before a clear problem statement; Your calendar is packed, but work doesn’t compound; You frame inaction as negligence, not as a possible strategy. Patterns to watch for: Founders: You freight ideas into the roadmap as “emergencies.”",
+        "PMs: You rewrite specs mid-flight to appease a stakeholder’s anxiety; Engineers: You PR “fast fixes” without monitoring or rollback plans; Designers: You chase feedback with micro-tweaks instead of validating flows; Sales: You discount reflexively rather than qualify or reposition; Ops: You layer process on top of process instead of killing root causes. Role-specific tells: Ask: If I were new to this problem, what would I strip away?"
+      ]
+    },
+    {
+      "heading": "Action Bias vs. Its Cousins: What It’s Not (Quite)",
+      "paragraphs": [
+        "It helps to separate Action Bias from related ideas. This reduces mental fog when deciding whether to wait or move. Omission Bias: We judge harmful inaction more harshly than equally harmful action. It’s about moral judgment and blame (Ritov & Baron, 1990). Action Bias is about our personal urge to act to reduce discomfort; Status Quo Bias: We prefer things as they are (Samuelson & Zeckhauser, 1988). Action Bias is the opposite impulse: to change something because change feels better than stasis; Sunk Cost Fallacy: We continue because we already invested (Arkes & Blumer, 1985). Action Bias can push initial overreaction; sunk costs keep us on that wrong path; Overconfidence: We overestimate accuracy or skill. Overconfidence fuels Action Bias by making us think our interventions will help more than they do;",
+        "Law of the Instrument: “If all you have is a hammer, everything looks like a nail” (Maslow, 1966). Tool bias channels Action Bias into repeated, familiar interventions; Present Bias: We overweight immediate outcomes. Action Bias scratches an immediate itch; present bias makes the itch louder; Parkinson’s Law: Work expands to fill time. Action Bias makes us invent work to feel in control; Parkinson’s Law ensures it consumes the day; Rescue Fantasy: The belief a single heroic act will solve it all. Action Bias provides the cape. Knowing the difference helps you choose tactics. If you’re in sunk-cost territory, run a kill-criteria review. If you’re in Action Bias territory, add time and friction, and test small."
+      ]
+    },
+    {
+      "heading": "1) Write a Good “Do Nothing” Plan",
+      "paragraphs": [
+        "“Do nothing” doesn’t mean “ignore.” It means “monitor, prepare, and conserve.” Do nothing plan: Freeze changes for 24 hours. Track conversions, traffic quality, and payment provider status. Slack alert: “No changes unless X or Y triggers.” Prewrite a customer update in case it extends. Example: Conversion dip Do nothing plan: Sleep on it. Write the feedback. Ask for a second read from HR. Schedule the talk tomorrow morning. Prepare examples and a future plan.",
+        "Example: Performance review conflict Do nothing plan: Watch their landing page and ad spend. Set a seven-day check. Interview three customers. Run a positioning test next week if churn or sales calls flag it. Example: Click-bait competitor launches"
+      ]
+    },
+    {
+      "heading": "3) Create Decision Buckets",
+      "paragraphs": [
+        "Default to sandbox and feature flags. Make all changes reversible by design; Add “slow lanes” on your CI/CD for risky areas. If you must push, you still walk; Instrument your product and team. Good telemetry gives you patience because you see reality in real time; Reward patience publicly. Shout-out the engineer who chose to monitor overnight instead of hotfixing blind. Fire: Safety risk, data loss, legal.",
+        "Act inside 15 minutes with prewritten playbooks; Smoke: Performance quirks, conversion dips, flaky tests. Investigate first. Act within 24–48 hours with reversible changes; Weather: Trends, roadmap, hiring, strategy. Collect data on a set cadence. Decide weekly or monthly. Not all issues deserve the same cadence. Use three buckets: Labeling a situation lowers anxiety. It tells your system which script to run."
+      ]
+    },
+    {
+      "heading": "5) Build a Culture That Tolerates Good Waiting",
+      "paragraphs": [
+        "The antidote to flailing is small, honest tests with learning built in. Move one metric for a week. Write your threshold upfront; Limit variables and time windows; Decide before seeing results what will make you stop or double down. Hypothesis: “Adding an annual plan toggle default increases paid conversions by 2% over 14 days because it reduces choice friction.”; Play: Feature flag 50% of traffic. No other changes. Success > +1.5% with p≤0.05. Stop if support tickets reference pricing confusion > 10 cases/day.",
+        "Example: Pricing nudge Make it normal to say, “I don’t know yet—here’s how we’ll learn.”; Track “premature action” incidents like you track outages. Learn from them; Celebrate when someone saves the team from flailing. “Best Non-Action of the Month.”. What’s the job to be done? What problem are we solving, for whom?; What are the physics and constraints here?; What’s the smallest move that respects those constraints?.",
+        "Ask: Physics: Speed feels slow for three reasons—actual latency, perceived latency, or mismatch with task flow; Smallest move: Measure actual latency first. Then try skeleton screens or progressive loading. Don’t rebuild everything. Example: Broad user complaints about “slow” If you’re missing two or more, you’re likely in Action Bias territory."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: The Courage to Wait (And When to Move)",
+      "paragraphs": [
+        "The room was loud. Our graph looked sick. We wanted to fix it by touching everything. Waiting felt like cowardice. It wasn’t. It was the first brave thing. The second was putting alarms on the right numbers. The third was changing one thing only when we knew why. Action Bias whispers that moving equals caring, and stillness equals apathy. That’s a lie. Care can look like monitoring. Craft can look like patience. Leadership can look like not touching a live wire until you’ve cut the power.",
+        "Try this for a week: write your “do nothing” plan next to your “do something” plan. Pick the smallest reversible move. Put a review date on the calendar. Tell someone what you’re doing and why. See what you learn when you let space do some work. We’re baking this into our own habits as we build our Cognitive Biases app—little nudges to help you catch the moment your hand reaches for the wrong lever. The goal isn’t to stop you from acting. It’s to help you act like a scientist when your nerves want you to act like a gambler. Hold the line for two minutes. Then move one clear inch. Repeat."
+      ]
+    },
+    {
+      "heading": "References cited by the original article",
+      "paragraphs": [
+        "Arkes, H. R., & Blumer, C. (1985). The psychology of sunk cost; Barber, B. M., & Odean, T. (2000). Trading is hazardous to your wealth; Bar-Eli, M., Azar, O. H., Ritov, I., Keidar-Levin, Y., & Schein, G. (2007). Action bias among elite soccer goalkeepers; Hallsworth, M., et al. (2016).",
+        "Provision of social norm feedback to high prescribers of antibiotics in general practice; Klein, G. (2007). Performing a project premortem; Maslow, A. (1966). The Psychology of Science; Ritov, I., & Baron, J. (1990). Reluctance to vaccinate: Omission bias; Samuelson, W., & Zeckhauser, R. (1988). Status quo bias in decision making."
+      ]
+    }
+  ],
+  "checklist": [
+    "What feeling am I trying to escape? Uncertainty? Fear of blame? Boredom?",
+    "Define the problem in one sentence",
+    "Name the feeling driving the urge to act",
+    "Confirm it’s a Fire, Smoke, or Weather issue",
+    "Identify the likely biggest cause; test that first",
+    "Write a one-sentence hypothesis for the action",
+    "Choose the smallest reversible move",
+    "Set success, stop, and review times now",
+    "Add a friction bump (peer check or delay)",
+    "Write the “do nothing” plan and monitoring",
+    "Log the decision and share it"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

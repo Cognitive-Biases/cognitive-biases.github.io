@@ -1,0 +1,144 @@
+{
+  "slug": "conformity-bias-outgroup-favoritism",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/conformity-bias-outgroup-favoritism",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/conformity-bias-outgroup-favoritism/content.tsx",
+  "originalPublishedAt": "2025-09-01T15:26:55.899Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Other Team Looks Shinier: Outgroup Favoritism and Get Your Balance Back",
+  "lede": "We’re in a loud bar in a new city, weirdly watching two rival soccer clubs whose chants we barely know. Our friend Maya grew up a diehard fan of Club Red. She has the scarf, the old ticket stubs, the framed jersey. Tonight, though, she keeps praising Club Blue. “Their fans are classier,” she says. “They travel better, they sing in tune, their coach actually thinks.” We laugh at the exaggeration, but the tone is serious. During halftime, she admits she’s embarrassed by how her own fan base acts online. She’s not switching teams, she insists—she just doesn’t want to be associated with “that mess.”",
+  "sections": [
+    {
+      "heading": "What Is Outgroup Favoritism and Why It Matters",
+      "paragraphs": [
+        "We’ve heard versions of Maya’s confession from engineers comparing rival companies, artists comparing schools, and community organizers comparing cities. It’s a feeling with a name: Outgroup favoritism is the bias where we evaluate an outgroup more positively than our own group, sometimes by default, often in public, occasionally with zeal. Outgroup favoritism happens when the “other side” earns your automatic benefit of the doubt, while your side gets nitpicked or dismissed. That can look healthy from a distance. After all, less tribalism sounds good. But it’s not neutrality; it’s a tilt—one that hides costs.",
+        "There are a few forces behind the tilt: Status and prestige cues: High-status groups get halo effects. If the other group has more money, press, or historical wins, we may internalize their superiority and grade them kindly (Jost & Banaji, 1994); Distance makes flaws fuzzy: The closer you are to a group, the more you see the mess—the petty fights, the bad decisions, the loud uncle. With outsiders, you see highlight reels; Identity protection: Some of us push away our in-group flaws to protect our sense of self: “I’m not like them.” That can snowball into praising outsiders to signal taste and distance; Self-improvement fantasy: If the other group looks better, perhaps we can borrow some of their shine by aligning with them. That’s a quiet ladder we imagine climbing; Cultural and media framing: Coverage often paints dominant or “winning” groups as competent and benevolent, especially when their narratives sell (Tajfel & Turner, 1979; Brewer, 1999).",
+        "Why it matters: You underinvest in your own team: constant praise for outsiders drains energy and motivation from your group. Projects die by slow compliments to other people’s projects; You misjudge talent and risk: you might hire, adopt processes, or copy norms that don’t fit your context, just because they belong to the “better” group; You harm people like you: when the outgroup is defined by status, your bias becomes internalized bias—praising the high-status group while discounting your own contributions (Jost & Banaji, 1994); You pick brittle strategies: emulating a distant group means using solutions forged under different constraints. Shiny doesn’t equal sturdy. Outgroup favoritism isn’t always wrong. Sometimes the other group is better at something. The issue is the reflex—automatic, untested, and often louder than the facts."
+      ]
+    },
+    {
+      "heading": "The developer who praises “Silicon Valley brains”",
+      "paragraphs": [
+        "We collected stories and boiled them down. If one sounds like you, that’s okay. It sounded like us too. Rhea works at a growing software company in Austin. Every time the team hits a bug or a missed deadline, she sighs, “If this were a Bay Area shop, this would be solved in a day.” She devours success stories from big-name Valley companies, reposts their engineering blogs, and quietly demotes local colleagues in her mind. When asked, Rhea can’t name a single engineer at the other companies. She can list three times her own team wrote a migration plan that worked under pressure. Still, the “Valley team” in her head gets A+ grades for competence, while her team gets critiqued for speed, elegance, even indentation. The outgroup feels smart; her group feels sloppy.",
+        "This bias leads to a bad pattern. Rhea pushes for a rewrite “like BigCo did,” ignoring that BigCo had 200 SREs and a different traffic shape. Her team ships a brittle clone that burns out two seniors. Morale takes a hit. She blames “small town talent.”"
+      ]
+    },
+    {
+      "heading": "The NGO that quotes foreign reports",
+      "paragraphs": [
+        "A health nonprofit in Nairobi runs a successful pilot program reducing maternal mortality. Local data is strong; partner clinics love it. In board meetings, though, leaders keep citing a London think tank’s brief as the gold standard and treat local evidence as “anecdotal.” When a big grant opportunity appears, they rewrite their program to match the London model, introducing requirements their clinics can’t support.",
+        "The team’s lived knowledge gets sidelined “until it’s peer-reviewed abroad.” The program stumbles. A leader later admits, “If a UK org did it, we’d have trusted it sooner.” This is outgroup favoritism with a passport stamp. It can overlap with internalized colonial attitudes, where the foreign outgroup is granted automatic authority."
+      ]
+    },
+    {
+      "heading": "The team that discounts its own fans",
+      "paragraphs": [
+        "A Chicago collective of self-taught painters creates honest, gritty work. A few members start praising New York MFA programs and critique their own shows as “unsophisticated.” At meetings, decisions get delayed until someone can ask “an actual curator” from a famous institution. The group starts aping academy trends, losing their voice. Their audience—people who loved their earlier rawness—drifts. When someone suggests an experiment “that feels like us,” the reply is “That won’t win a residency.”",
+        "A small game studio grows a passionate Discord. Feedback is specific, loving, and at times blunt. The studio founders keep daydreaming about “when we hit Steam’s front page and get the real audience,” treating their current players as quaint. Updates shift toward features praised by industry pundits rather than by current players. The Discord cools. Launch day arrives; the “real audience” never materializes. The people who cared were already there."
+      ]
+    },
+    {
+      "heading": "The internalized bias that shrinks a student",
+      "paragraphs": [
+        "In a big family, Sam always praises his partner’s family as “communicates like adults,” while mocking his siblings as “dramatic.” He treats suggestions from his in-laws like wisdom and screens the same ideas if they come from his sister. Holiday planning becomes a mess: Sam resists any homegrown approach as “our family chaos,” favoring an imagined order in the other family that doesn’t exist at scale.",
+        "A first-generation college student, Ana, studies physics. She constantly praises “real mathematicians” from elite schools and calls her own department “a decent stepping stone.” She downplays her As, chalking them up to grade inflation, while attributing other schools’ success to genius. She stops applying for research spots she could win. This is outgroup favoritism fueled by status—an engine for self-sabotage. It’s not humility. It’s misplaced worship."
+      ]
+    },
+    {
+      "heading": "The startup that copies FAANG rituals",
+      "paragraphs": [
+        "An open-source project with a tight-knit community compares itself to a giant foundation-backed project. Contributors apologize: “We’re not like $BigProject.” They keep tagging issues as “good first issue” hoping to attract “real contributors” from the other community. They never notice their own fast review times, friendly mentorship, and surprisingly reliable release cycle. Eventually they defer to the other project’s design choices by rote, even when those choices break their own users’ workflows.",
+        "Three founders build an analytics tool. They idolize FAANG’s process: one-pagers, heavy RFCs, layered approvals. They adopt it whole, thinking “this is how serious companies work.” Six months later, decisions take weeks. The team spends more time formatting docs than talking to customers. Customers leave. The founders say, “We weren’t mature enough for process,” instead of “we borrowed a suit two sizes too big.” Outgroup favoritism here means treating a different organism’s immune system as your vitamin plan."
+      ]
+    },
+    {
+      "heading": "Step 1: Name your outgroup crush with specifics",
+      "paragraphs": [
+        "This part is the core. We’ll keep it concrete. The goal isn’t to swing to in-group chauvinism. The goal is balance: grounded respect for outsiders, earned confidence at home. Write the sentence: “I tend to assume [Group X] is better at [domains] than my group because [reasons].” Fill it out. Be embarrassingly specific.",
+        "If your reasons are vibes and headlines, that’s useful to know. If your reasons are measurable differences (funding, talent pool), you can work with those. Example: “I assume Bay Area engineers write better distributed systems because they’ve fought bigger fires.” That might be partly true. It points to a path: go where the fires are, or simulate heat."
+      ]
+    },
+    {
+      "heading": "Step 3: Separate prestige from fit",
+      "paragraphs": [
+        "List the messes you see inside your group: missed deadlines, bad actors, silent Slack channels. Then list what you know about the outgroup’s messes. If the second list is suspiciously short, you’re not seeing reality; you’re seeing a highlight reel. Countermove: read postmortems and glassdoor reviews of the outgroup. Talk to ex-members. Pain is everywhere. No need to gloat—just calibrate.",
+        "Ask: “Would their approach work under my constraints?” Name your constraints: headcount, budget, audience, regulation, culture. Then ask: “What do we know about the constraints that shaped the outgroup’s approach?” If you don’t know, do not import it wholesale. Example: a FAANG testing framework might require dozens of dedicated infra engineers. If you have two, the elegant framework becomes a time sink, not a standard."
+      ]
+    },
+    {
+      "heading": "Step 5: Flip the lens—admire your group from a distance",
+      "paragraphs": [
+        "Instead of a full copy, run a controlled trial: adopt one small practice from the outgroup for two weeks with clear measurement. Keep your own practice as a control. Compare real numbers. If the outgroup method wins under your constraints, keep it. If not, drop it without drama. Example: switch from your standups to the outgroup’s async check-ins for 10 workdays. Measure cycle time, bug counts, and mood. Decide by data, not self-image.",
+        "We all do our own group a disservice by zooming in on flaws. Try writing a “case study” about your group as if you were a journalist. Highlight wins, quote users, frame context. Don’t invent greatness; uncover it. This will feel weird. It will also unstick your thinking."
+      ]
+    },
+    {
+      "heading": "Step 8: Praise in proportion, disagrees in specifics",
+      "paragraphs": [
+        "Make it boring to worship prestige. Create a habit: when evaluating ideas or candidates, strip names, logos, and alma maters. Score on fit, evidence, and constraints. Make the rubric public. Boring wins. If your group keeps defaulting to “Ask the outgroup,” rotate who talks to them. Avoid a single translator who becomes your pipeline for legitimacy. Multiple bridges give you multiple perspectives and reduce the chance of star-struck copying.",
+        "When you admire an outgroup, say exactly what and why: “Their onboarding docs cut setup time by 60%—we measured.” Keep it dry, almost clinical. This builds credibility and protects you from global worship. When you critique your group, get specific and proportional: “We missed the release because we didn’t have a rollback script.” Then fix it. Don’t rebrand it as “We’re chaos gremlins.”"
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Humans smell status. It leaks via language, fashion, follower counts. Notice when envy, shame, or hunger shows up in your body. That’s the status-scent. Don’t scold it—name it: “I want to belong there.” Then ask, “What do I actually want? Skills? Community? Stability?” Take a step toward that thing without mythologizing the brand.",
+        "Create a win log: dates, what worked, who benefited, what you learned. When your brain starts chanting “other people are better,” open the log. This is not fluff. It’s radiation shielding. This bias doesn’t live alone. It borrows parts from other mental habits. Here’s how to tell them apart and where they overlap."
+      ]
+    },
+    {
+      "heading": "Internalized prejudice: Outgroup Favoritism",
+      "paragraphs": [
+        "This is the classic opposite: favoring your group at others’ expense. Most people expect this one. Outgroup favoritism surprises because we assume tribal brains always protect “us.” Research shows that lower-status groups sometimes display outgroup favoritism toward higher-status groups, especially when hierarchy feels legitimate (Mullen, Brown, & Smith, 1992; Jost & Banaji, 1994). You can swing between both depending on context.",
+        "When outgroup favoritism lines up with social hierarchies, it can become internalized prejudice: people from marginalized groups granting automatic competence or moral worth to dominant groups. That harms self-belief and group cohesion. It’s not a personal failing; it’s learned over time. Undoing it often requires community work, not just individual effort."
+      ]
+    },
+    {
+      "heading": "Self-deprecation: Outgroup Favoritism",
+      "paragraphs": [
+        "Humans copy successful people more than random people. It’s a useful heuristic: we learn from winners. Prestige bias becomes outgroup favoritism when prestige lives mostly in labels and distance instead of demonstrated fit and results (Henrich & Gil-White, 2001). The fix is the same: adjust for constraints and test locally. A cousin from general psychology: we think alternatives are better than current options. Outgroup favoritism is group-focused and identity-loaded. If your “greener grass” always belongs to another tribe, you might be in outgroup territory.",
+        "Being humble about your group can keep you curious. But when it becomes a reflex to trash your side publicly and praise the other side as default, you’re not being humble; you’re outsourcing dignity. Check if you give compliments to your own people with the same energy."
+      ]
+    },
+    {
+      "heading": "Make It Practical Today",
+      "paragraphs": [
+        "Impostor feelings often pair with outgroup favoritism. “Real scientists are in that lab.” “Real founders are in that accelerator.” The solution stacks: keep receipts of competence, normalize failure loops, widen your map of what success looks like (Clance & Imes, 1978). This is the tendency to defend the status quo even if it hurts your group (Jost & Banaji, 1994). Outgroup favoritism toward high-status groups can be a smoked-glass version of system justification: “They deserve to be on top; we should mimic them.” Question legitimacy signals, not just results.",
+        "We promised handholds. Here’s a short plan you can actually do between meetings. Draft the sentence: “I tend to assume [Group] is better at [X] because [Y].” Pin it where you’ll see it this week; Pick one outgroup practice you admire. Design a 10-day test. Define success metrics. Put a decision date on your calendar; Read an outgroup postmortem. Write three sentences about how their pain mirrors yours; Write a journalist-style paragraph about a recent win in your group. Share it with your team. No emojis, no fluff—facts and quotes; Build a blind-review step into one decision this week. Strip labels. Vote on fit and outcomes; Thank someone in your group for a specific behavior that saved time or reduced risk. Specific praise retrains your lens."
+      ]
+    },
+    {
+      "heading": "When It Goes Deeper: Identity and Pain",
+      "paragraphs": [
+        "Outgroup favoritism is not always a light switch you flip. If your bias is tied to safety—like believing policemen from another precinct will treat you better, or trusting doctors from certain hospitals over others because of history—that’s not just bias; that’s survival logic. When history is involved, balance isn’t “praise us more.”",
+        "It’s “build and demand trustworthy institutions here.” Use the tools above, yes, and also build coalitions, request data transparency, and change incentives. Don’t shoulder it alone. If you notice self-hate language (“People like me can’t…”) paired with outgroup worship, consider talking to a counselor or mentor who knows this terrain. Individual tools matter, and so does community."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Outgroup Favoritism",
+      "paragraphs": [
+        "We like to think the cure is loving our own group unconditionally. It isn’t. The cure is accurate admiration—respecting outsiders for what they actually do well, not what their brand signals, while respecting your group for what it actually does well, not what your shame whispers. Accuracy doesn’t sound epic. It builds teams that last. It catches you when the other team starts to sparkle, and you remember: shine is great; fit is everything. Outgroup favoritism usually starts as a flattering story about the world: somewhere else, someone is doing it right. That story can be a lantern. It can also blind you to the steady light you already carry.",
+        "You don’t have to smear your side to keep your eyes open. You can admire without kneeling, copy without cloning, and learn without erasing what’s true about you and yours. Start small: name the bias, run a test, keep receipts, and give your people precise praise. Be fair to the others. Be fair to yourself."
+      ]
+    }
+  ],
+  "checklist": [
+    "Did I just generalize “they’re better” without naming the skill or evidence?",
+    "Am I comparing their highlights to our bloopers?",
+    "Is prestige leaking into my judgment—logos, schools, zip codes?",
+    "Do I know their constraints and failures, or am I guessing?",
+    "Can I run a small test rather than a full copy?",
+    "Did I write down three things our group does well this month?",
+    "If the same idea came from “us,” would I trust it?",
+    "Am I avoiding responsibility by idealizing the outgroup?",
+    "What do I actually want that I’m projecting onto them?",
+    "What’s the smallest move I can make to get that, here or anywhere?",
+    "Name the outgroup and the exact trait you’re praising. Evidence or vibes?",
+    "List your group’s comparable wins this quarter. Read them aloud"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

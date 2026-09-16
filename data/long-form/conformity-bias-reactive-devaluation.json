@@ -1,0 +1,116 @@
+{
+  "slug": "conformity-bias-reactive-devaluation",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/conformity-bias-reactive-devaluation",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/conformity-bias-reactive-devaluation/content.tsx",
+  "originalPublishedAt": "2025-09-02T05:41:53.500Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Idea Isn’t the Enemy — Reactive Devaluation in Real Life",
+  "lede": "On Tuesday, we applauded Liam’s roadmap plan like it was a halftime miracle. On Thursday, Maya proposed the same plan with cleaner math and clearer milestones, and the room shifted: furrowed brows, folded arms, “not sure the timing works,” “let’s not rush,” “we tried something similar once.” Two days. Same plan. Different person. The energy flipped.",
+  "sections": [
+    {
+      "heading": "What Is Reactive Devaluation and Why It Matters",
+      "paragraphs": [
+        "That moment has a name: Reactive Devaluation — the tendency to judge an idea as worse simply because of who suggested it. We’ve seen it sink launches, ruin truce talks, and spark family feuds over dinner. Today, we’re unpacking how it works, how to catch it, and how to protect your team from torching good ideas just because the wrong person lit the match. Reactive devaluation is a fast, sneaky judgment: as soon as we notice who pitched the idea, we unconsciously shave points off its value. We’re not evaluating the proposal; we’re evaluating the proposer. And we often don’t notice we’re doing it.",
+        "Why it happens: Identity and tribes. We default to trusting “us” and discounting “them,” even inside one company: design vs. engineering, headquarters vs. satellite, your manager vs. that manager. The tribal brain runs hot and quiet (Tajfel & Turner, 1979); Negotiation logic. If the “other side” is offering it, we suspect it must favor them. We infer hidden costs, loopholes, or traps (Ross, 1991); Past experiences. One sour project with someone can shadow everything they suggest afterward. The horn effect colors the whole canvas (Thorndike, 1920); Ego and ownership. We protect our ideas like territory. When someone else proposes the same thing, our defenses kick in.",
+        "Why it matters: You leave value on the table. Good solutions die of the wrong author; You burn trust. People see their ideas judged before their content. They stop sharing; You slow learning. Teams need a culture that surfaces and tests ideas quickly. Reactive devaluation makes you slower, pettier, and more political; You misdiagnose problems. You think the proposal was weak; the real issue was the face attached to it. The worst part: it feels rational while it happens. You’ll have reasons, charts, and eyebrows. But if the same idea pitched by your favorite person gets a standing O, you’re not reasoning — you’re reacting."
+      ]
+    },
+    {
+      "heading": "1) The “Not Invented Here” Sprint",
+      "paragraphs": [
+        "A consumer app team needed to improve onboarding. Maya from Customer Support suggested cutting the sign-up flow to two screens and postponing profile setup to after the first success. Product said, “We need the profile for personalization,” and Engineering worried about data integrity. They ran a small test — conversion nudged 1%. Not impressive. Three weeks later, Jasper in Growth proposed a nearly identical change, with a sticky headline and an incentive. This time, the room leaned in. They ran a bigger test with better tracking. Conversion jumped 11%. Everyone cheered Jasper’s “fresh idea.”",
+        "What changed? The package, the person, and the willingness to test properly. Maya’s idea didn’t get the fair trial. The team devalued the proposal at the source and starved it of resources. Cost: two months lost, a teammate disheartened, and a story the team still tells as “Jasper’s bet.”"
+      ]
+    },
+    {
+      "heading": "2) The City Compromise That Died Twice",
+      "paragraphs": [
+        "A city council met over weekend traffic closures. A neighborhood group (perceived as anti-business) proposed a rotating schedule: two Saturdays closed each month for foot traffic; merchants could host sidewalk sales with reduced permit fees. Council balked. “They’re trying to box us in.” They shelved it.",
+        "Months later, the Chamber of Commerce floated the same schedule with a few tweaks. Applause. “Practical and data-driven.” The policy passed. Outcome might have been fine, but the first group learned their proposals won’t get fair play. In the next crisis, they disengaged. Civic energy shrank over one psychological tripwire."
+      ]
+    },
+    {
+      "heading": "4) Family Politics at the Dinner Table",
+      "paragraphs": [
+        "A startup landed in hot water over a tone-deaf ad. An intern wrote a calm, draft apology: name the mistake, apologize, outline changes, avoid weasel words. Leadership bristled. “We can’t sound weak.” They rewrote the message with a dozen qualifiers. The public roasted it. A week later, a PR agency proposed the same posture as the original draft. Leadership accepted it as “expert counsel.” It worked. The intern learned a message: “Your advice doesn’t count here.” That’s damage beyond one crisis.",
+        "Your uncle suggests swapping holiday gifts for a shared trip fund. You think, “Classic Uncle — always trying to save money.” You laugh it off. A week later, your sister suggests the exact plan in the group chat, framing it as “less stress, more memories.” The family loves it, and somehow it becomes “her idea.” Your uncle doesn’t bother proposing things next year. One tiny slice of family initiative dies."
+      ]
+    },
+    {
+      "heading": "6) The Sales Discount That Wasn’t “Strategic”",
+      "paragraphs": [
+        "Security insists on a short forced update window. Product pushes back: “This will tank DAU.” Months later, a breach rattles the company. A major partner demands the same update policy. Product agrees in one meeting. The idea didn’t improve; the source got scarier. An account manager proposes a temporary 15% discount targeted at churn-risk accounts. Finance calls it “race to the bottom.”",
+        "A quarter later, a board member recommends a “value-based pricing pilot” with a 10–20% range tied to retention experiments. Finance embraces it. The content was the same; the label and source weren’t. These are small stories. Together, they train a culture: “Who you are matters more than what you say.” That’s poison for teams that actually want to win."
+      ]
+    },
+    {
+      "heading": "Step 2: Steelman Before You Swing",
+      "paragraphs": [
+        "The antidote is boring and strong: make ideas legible, testable, and separable from the person. Build habits that force you to judge on content. Here’s how we’ve seen teams do it. When possible, anonymize. In design reviews, strip names off proposals. In early product docs, remove author line. Read them cold for five minutes before discussion. It won’t solve everything; it will expose surprising favorites. If you can’t anonymize, do a mental scrub: ask, “If someone I admire proposed this, how would I react? What would I praise first?”",
+        "Ask the proposer to summarize their idea in two sentences. Then someone else must steelman it: the clearest, strongest version, with the best-case conditions. Only after the team agrees that the steelman is accurate do critiques begin. This does two things: It forces comprehension before judgment; It gives the idea its best day in court."
+      ]
+    },
+    {
+      "heading": "Step 4: Check the Mirror With a Role Flip",
+      "paragraphs": [
+        "Agree on evaluation criteria ahead of time for a category of decisions: For growth experiments: lift, cost to run, time to learn, risk to brand; For security: risk reduction, blast radius, user impact, regulatory alignment; For civic proposals: cost, equity impact, feasibility, time to implement. Score the idea against criteria. Keep the proposer’s name out of the scoring. If the score is high and the team is lukewarm, ask why. The dissonance often reveals reactive devaluation.",
+        "Do the “If this came from X, would I feel differently?” check. Or even better, do a live role switch: ask a teammate with opposite history or status to pitch the same idea next week. If reactions change, you’re caught."
+      ]
+    },
+    {
+      "heading": "Step 6: Use Reverse Credit",
+      "paragraphs": [
+        "Nothing clears fog like data. Don’t argue endlessly. Pick the smallest test that teaches you something without hurting users or burning the team. A/B small: 10% traffic for 48 hours; Shadow pilot: 20 customers under NDA; Paper prototype: hallway test with eight people; Dry run: announce internally, run through ops fields without external blast. A fair test forces you to respect reality more than rank.",
+        "We’ve used this often: the proposer yields credit ahead of time. “If this works, I want the team to document it as a practice, not ‘my idea.’ If it fails, I’ll own the learning doc.” It softens status battles and encourages others to engage with the content."
+      ]
+    },
+    {
+      "heading": "Step 8: Precommit to the Decision Process",
+      "paragraphs": [
+        "When stakes are high (policy changes, brand shifts, platform migrations), appoint a red team to stress-test. Importantly: rotate who leads the red team so it’s not always the same skeptics. Their mandate is to test the strongest form of the idea, not the straw man. Keep their critique time-boxed and specific.",
+        "Write how you’ll decide before you see options. Examples: “We will choose the option that maximizes monthly retention uplift within a 3-week build limit.”; “We will choose the security control that reduces breach risk by 80% with less than 1% daily active friction.”. Precommitment narrows the playground for source-based bias."
+      ]
+    },
+    {
+      "heading": "Step 10: Close the Loop Publicly",
+      "paragraphs": [
+        "Make it a team habit to find three strengths before the first critique. Do it out loud. This builds muscle memory to see merit quickly, which reduces the instinct to attack based on the presenter. When you reject an idea, write a short note: “We evaluated A, B, C.",
+        "We chose B because criteria X, Y. A scored lower on Y. Thanks to [names] for honing the criteria.” Documenting this discourages cheap rejections and shows respect. It also makes it easier to revive good ideas later without ego fights. Print it. Put it on the wall. Put it in your meeting template."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "A few nearby mental habits and how they differ. Halo/Horn Effect: We let one trait (sharp or sour) spill over into all judgments about a person (Thorndike, 1920). Reactive devaluation is the downstream behavior: the glow or stink changes how we judge their proposals; Ingroup Bias: We favor “our” group over “theirs” (Tajfel & Turner, 1979). Reactive devaluation often follows from this — we discount outgroup ideas on sight; Reactance: We resist when we feel our freedom is threatened (Brehm, 1966). If someone tells us “you must,” we push back — even on good advice. Reactive devaluation can ride reactance: “Because you said it, I hate it.” Confirmation Bias: We search for evidence that fits our beliefs and ignore the rest (Klayman, 1995). With reactive devaluation, the “belief” may be about a person (“They’re reckless”), so we spot reckless angles and miss merits;",
+        "Ad Hominem and “Poisoning the Well”: Argument styles that attack the person or taint the source rather than the content. Reactive devaluation is the quiet, automatic version of the same mistake; Source Credibility Effects: We weigh arguments more when they come from an expert (Hovland & Weiss, 1951). The “discounting” side is reactive devaluation; the “boosting” side is the halo effect. Both can distort truth-finding; Naïve Realism: We believe we see the world as it is; those who disagree are biased or ill-informed (Ross & Ward, 1995). This mindset feeds reactive devaluation — “If they’re offering it, it must be skewed.” You can’t surgically remove one bias and leave the rest. But you can install processes that blunt their impact together. Tape this to your laptop. It pays for itself in one good saved idea."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Choose the Best Ideas, Not the Best Names",
+      "paragraphs": [
+        "We like to believe we’re meritocratic. But in the wild, meritocracy crumples fast. We judge the badge, the history, the team, the timing, the tone — everything but the content. Reactive devaluation is a quiet thief. It steals progress and gives teams a false sense of wisdom. The fix isn’t a pep talk about fairness. It’s a handful of habits that force ideas to stand alone: anonymize when you can, define criteria early, steelman, test small, and close the loop. It’s a culture that says, “We’ll give every good idea its day in court, and we’ll let reality rule.”",
+        "If you feel a twinge reading this, good. We did writing it. We’ve wasted weeks defending “who” when we could have learned “what.” We’ve lost voices we needed because we didn’t notice how fast we discounted them. We don’t want that for your team. Reactive devaluation in negotiation and conflict resolution (Ross, 1991); Social identity and ingroup bias (Tajfel & Turner, 1979); Halo/Horn effect origins (Thorndike, 1920); Naïve realism and everyday conflict (Ross & Ward, 1995); Psychological reactance (Brehm, 1966); Source credibility (Hovland & Weiss, 1951)."
+      ]
+    }
+  ],
+  "checklist": [
+    "Could my reaction be different if the proposer changed?",
+    "Did we agree on criteria before hearing options?",
+    "Have we steelmanned the idea?",
+    "Can we test this cheaply this week?",
+    "Is the source anonymizable? If yes, do it",
+    "Are we rewarding the content, not the author?",
+    "Did we note three strengths before critique?",
+    "Have we documented the decision and why?",
+    "Ask: Would I react differently if someone else suggested this?",
+    "Restate the idea in its strongest form before critiquing",
+    "Score against pre-agreed criteria; keep names out during scoring",
+    "Run the smallest fair test you can this week"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
