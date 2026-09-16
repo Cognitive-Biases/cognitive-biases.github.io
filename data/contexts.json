@@ -102,7 +102,8 @@
         "The system’s appearance, voice, avatar, or conversational style is shaping what you think it can understand or do.",
         "An early AI score, estimate, or suggested number is becoming the starting point for your own judgment.",
         "You are prompting an AI mainly to strengthen a conclusion you already prefer.",
-        "A claim has appeared in several AI outputs and is starting to feel true because it is familiar."
+        "A claim has appeared in several AI outputs and is starting to feel true because it is familiar.",
+        "A bias finding from one profession, dataset, or task is being treated as direct evidence for a different AI-assisted workflow."
       ],
       "workflow": [
         "Write a provisional judgment, success criterion, or uncertainty range before looking at AI advice when the decision is consequential.",
@@ -110,6 +111,7 @@
         "When the AI supplies a number, compare it with an independent estimate, base rate, or reference class instead of adjusting only from the model’s value.",
         "Ask for the strongest counterevidence or alternative explanation, then verify important claims against an independent source rather than another generated paraphrase.",
         "Treat repeated wording as repetition, not independent evidence; trace important claims back to primary or genuinely independent sources.",
+        "Check evidence distance before transferring a result: was the bias observed in this exact task, population and decision workflow, or only in a related domain?",
         "Record what changed after using AI, what was independently checked, and what trigger would make you reopen the decision."
       ],
       "lenses": [

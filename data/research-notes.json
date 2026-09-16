@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-18",
+  "updatedAt": "2026-09-05",
   "entries": [
     {
       "slug": "llm-cognitive-biases-what-recent-research-shows",
@@ -1419,6 +1419,146 @@
       ],
       "related": [
         "cognitive-bias-systematic-bias"
+      ]
+    },
+    {
+      "slug": "prior-scores-can-contaminate-ai-judges",
+      "title": "Prior scores can contaminate later AI judgments",
+      "publishedAt": "2026-09-05",
+      "status": "reviewed synthesis",
+      "summary": "A recent large LLM-as-a-judge study suggests that previous evaluation scores can shift later ratings even when the evaluated text is unchanged.",
+      "sections": [
+        {
+          "heading": "The simple question: is the second review independent?",
+          "paragraphs": [
+            "Many AI workflows evaluate the same answer more than once. A first model gives a score, a revision happens, and another judge scores again. It is easy to treat the second score as fresh evidence.",
+            "That assumption becomes weaker when the later judge can see the earlier score. The new evaluation may be responding to both the answer and the evaluation history."
+          ]
+        },
+        {
+          "heading": "What the recent study tested",
+          "paragraphs": [
+            "A 2026 study compared fixed texts under three prompt conditions: no evaluation metadata, revision framing without a score, and metadata that included a previous score. The text being judged stayed fixed, so the previous score did not add new evidence about quality.",
+            "Across eight tested models, the authors report systematic movement associated with the prior-score condition in the main analysis. They also report cases where this context blocked error corrections or changed correct categorical judgments."
+          ]
+        },
+        {
+          "heading": "What this does not prove",
+          "paragraphs": [
+            "The result is not a licence to say that every AI judge is anchored in every task. Models, prompt formats, scoring scales and domains can all change the effect.",
+            "It also does not establish that the internal mechanism is the same as human anchoring. The safer description is behavioural: under the tested conditions, evaluation history changed later model judgments."
+          ]
+        },
+        {
+          "heading": "A useful design check for real systems",
+          "paragraphs": [
+            "If a later review is supposed to be independent, hide the previous score and verdict during that pass. Then compare the blind result with a history-aware result instead of assuming that a warning such as ‘judge independently’ is enough.",
+            "This matters for content grading, agent self-review, quality gates and iterative scoring pipelines. Several review passes do not automatically equal several independent opinions."
+          ]
+        },
+        {
+          "heading": "What this changes in our project",
+          "paragraphs": [
+            "We added Evaluation History Contamination as an AI-era research track. It is a working label for a practical failure mode, not a new established cognitive bias.",
+            "We also published AI Judge History v1, a provider-neutral benchmark that holds the answer and rubric fixed while comparing blind, history-framing and prior-score conditions. The protocol is public before any Cognitive Biases result exists."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+          "year": 2026,
+          "type": "conference paper / arXiv record",
+          "url": "https://arxiv.org/abs/2608.25869"
+        },
+        {
+          "title": "Mediocrity is the key for LLM as a Judge Anchor Selection",
+          "year": 2026,
+          "type": "peer-reviewed conference paper",
+          "doi": "10.18653/v1/2026.acl-long.706",
+          "url": "https://aclanthology.org/2026.acl-long.706/"
+        }
+      ],
+      "related": [
+        "false-priors-automation-bias",
+        "cognitive-bias-anchoring-effect"
+      ]
+    },
+    {
+      "slug": "illusory-truth-where-repetition-stops-working",
+      "title": "Repetition can raise truth judgments — but not for every kind of statement",
+      "publishedAt": "2026-09-05",
+      "status": "reviewed synthesis",
+      "summary": "A large 2026 meta-analysis supports a reliable average illusory truth effect, while newer preregistered experiments show an important boundary: repeating social-political opinions did not meaningfully increase their truth ratings.",
+      "sections": [
+        {
+          "heading": "The broad effect is real, but the internet version is too simple",
+          "paragraphs": [
+            "A 2026 systematic review and meta-analysis combined 182 studies, 366 effect sizes and more than 31,000 participants. After correcting for small-study effects, repeated statements still received higher truth ratings than comparable new statements. The average effect was modest rather than overwhelming, and the results varied substantially across studies.",
+            "That supports the core Illusory Truth Effect. It does not support the stronger slogan that repeating any message will eventually make people believe it. Content, task design and the cues available during judgment can change the size of the effect."
+          ]
+        },
+        {
+          "heading": "Opinions are not just facts with softer wording",
+          "paragraphs": [
+            "A later 2026 paper tested social-political opinion statements in two preregistered experiments with 457 participants. Repetition did not reliably increase subjective truth judgments, and equivalence tests suggested that any effect was smaller than the researchers' predefined meaningful threshold in the tested conditions.",
+            "This is a useful boundary because many discussions of repetition move too easily from factual claims to values, preferences and political opinions. A statement such as a checkable statistic and a statement such as an evaluative political opinion do not necessarily use the same truth-judgment process."
+          ]
+        },
+        {
+          "heading": "Social media can still provide a strong repetition cue",
+          "paragraphs": [
+            "Another 2026 experiment used Instagram-like posts and found that repeated statements received higher truth and confidence ratings even when like counts were visible. That result shows that the classic effect can survive a richer interface with social endorsement cues.",
+            "Taken together, the studies give a more useful picture than either result alone. Repetition can matter in realistic-looking information environments, but the kind of statement being judged remains important."
+          ]
+        },
+        {
+          "heading": "The practical check is claim type plus source independence",
+          "paragraphs": [
+            "When something feels true because it is familiar, first ask what kind of statement it is. If it is a factual claim, trace the evidence and count independent sources rather than repeated appearances. If it is an opinion, do not automatically apply a factual truth-bias explanation; persuasion, identity, social norms or simple familiarity may be more relevant questions.",
+            "For AI-assisted research, the same rule matters twice. Several model answers can repeat one claim without adding independent evidence, and a bias label should not be transferred from factual statements to opinions merely because both are written as sentences."
+          ]
+        },
+        {
+          "heading": "What this changes in our library",
+          "paragraphs": [
+            "We changed the Illusory Truth Effect page from a broad 'repeated lies start to feel true' framing to a narrower claim about repeated truth judgments. The evidence status now keeps the robust average effect and the content boundary visible at the same time.",
+            "This is the kind of update the monthly research process is meant to produce: not another paper in a bibliography, but a more accurate rule for when the concept should and should not be used."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Systematic review and meta-analysis of the evidence for an illusory truth effect and its determinants",
+          "year": 2026,
+          "type": "systematic review and meta-analysis",
+          "doi": "10.1038/s41467-026-70041-x",
+          "url": "https://doi.org/10.1038/s41467-026-70041-x"
+        },
+        {
+          "title": "Limits of the illusory truth effect for social-political opinions: Evidence from two experiments and a mini meta-analysis",
+          "year": 2026,
+          "type": "two preregistered experiments and mini meta-analysis",
+          "doi": "10.1016/j.concog.2026.104119",
+          "url": "https://doi.org/10.1016/j.concog.2026.104119"
+        },
+        {
+          "title": "The robustness of repetition-based illusory truth and certainty effects in social media contexts",
+          "year": 2026,
+          "type": "peer-reviewed experiment",
+          "doi": "10.1038/s41598-026-61449-y",
+          "url": "https://doi.org/10.1038/s41598-026-61449-y"
+        },
+        {
+          "title": "The illusory truth effect: A review of how repetition increases belief in misinformation",
+          "year": 2024,
+          "type": "research review",
+          "doi": "10.1016/j.copsyc.2023.101736",
+          "url": "https://doi.org/10.1016/j.copsyc.2023.101736"
+        }
+      ],
+      "related": [
+        "truth-judgment-illusory-truth-effect"
       ]
     }
   ]
