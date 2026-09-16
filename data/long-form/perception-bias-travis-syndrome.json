@@ -1,0 +1,60 @@
+{
+  "slug": "perception-bias-travis-syndrome",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/perception-bias-travis-syndrome",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/perception-bias-travis-syndrome/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:20:00.000Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Travis Syndrome — Why the present feels bigger than history",
+  "lede": "During quarterly planning a teammate insisted, “We are living through the fastest shift in customer behavior in company history.” We pulled the archives and found the same assertion written in 2018, 2020, and 2022. The feeling was sincere. The facts were not. That is Travis Syndrome at work.",
+  "sections": [
+    {
+      "heading": "What the bias distorts",
+      "paragraphs": [
+        "Travis Syndrome is the perception bias that convinces us the current moment is uniquely significant. It compresses the past, inflates the present, and leaves the future as an afterthought. When decisions ride on that feeling, we overreact to noise and underinvest in long-range bets. This guide shows how to recognise the bias, where it hides, and the rituals that help teams keep a measured timeline even when the world feels like it is on fast-forward.",
+        "Travis Syndrome makes the present look singular. It tricks us into believing “this time is different” without evidence. Consequences include: Overweighting breaking news while ignoring historical baselines; Shortcutting due diligence because urgency feels existential; Declaring old playbooks obsolete even when they still work; Discounting long-term commitments in favour of reactive pivots. The result: teams chase novelty, burn out on constant reinvention, and never build the compounding advantages that only show up over longer arcs."
+      ]
+    },
+    {
+      "heading": "Personal finance and careers",
+      "paragraphs": [
+        "Mid-cycle headlines can convince leadership to scrap plans that were working. Without context, every dip feels like a cliff and every competitor launch feels unprecedented. The bias swaps discipline for whack-a-mole planning. Analysts call today’s politics uniquely polarised, yet similar rhetoric appears in archives from the 1960s, 1930s, even 1890s. Forgetting precedent weakens our ability to learn from how past societies navigated turbulence.",
+        "When markets swing, we convince ourselves that conventional advice no longer applies. We abandon diversified plans for impulsive moves because “this market has never existed before.” The bias erodes compounding by pushing us to reset each time the news cycle flares."
+      ]
+    },
+    {
+      "heading": "Why our perception compresses time",
+      "paragraphs": [
+        "Journalists and creators earn attention by framing events as historic firsts. The more narratives we consume, the more our internal barometer resets to “everything is the biggest ever.” We import the bias from our feeds straight into our decision meetings. Availability. Present events generate vivid stories, so they are easier to recall than quiet stretches of history; Identity. Believing we live in a pivotal era flatters our sense of meaning.",
+        "It is a narrative reward; Data overload. Real-time dashboards stream thousands of signals. Without time to contextualise them, our brains infer that pace equals importance; Loss of institutional memory. As teams churn, fewer people can say, “We tried this before.” The timeline resets with every restructure. Noticing these forces lets us design deliberate brakes that stretch the timeline back out."
+      ]
+    },
+    {
+      "heading": "Expand the timeline before acting",
+      "paragraphs": [
+        "You do not need a historian on staff. A handful of lightweight moves can give the present some much-needed context. Start every decision memo with a one-paragraph history of the metric, product, or behaviour; Plot at least two prior cycles or fiscal years on the same chart as today’s spike;",
+        "Call a “precedent huddle”: five minutes where teammates surface similar moments from your own archives or adjacent industries; Document the assumptions you are making about pace and novelty, then set a reminder to revisit them in 30 days; Add a future scenario column: What happens if the trend slows, reverses, or accelerates? Planning balances today with tomorrow."
+      ]
+    },
+    {
+      "heading": "Travis Syndrome vs. availability heuristic",
+      "paragraphs": [
+        "Recency bias is about weighting; Travis Syndrome is about narrative. You can use a statistically sound forecast and still believe “now is special.” Fight both by pairing quantitative backtests with qualitative historical cases. Present bias discounts future rewards in favour of immediate gratification. Travis Syndrome is about overstating the importance of current events. They can interact: when today feels monumental, we discount future investments because they seem less relevant. Availability is the mechanism—memories that come easily feel more likely. Travis Syndrome is the storyline we build from those memories: “Since I can recall so many dramatic examples, today must be historic.”",
+        "Assign an “archivist of the month” who surfaces one lesson from past launches or crises; Keep a living timeline on a wall or shared dashboard so history is visible, not buried in folders; Celebrate decisions where teams stayed the course and won. Novelty should not be the only behaviour rewarded; Host annual “pattern spotting” reviews where cross-functional leaders connect past cycles to present strategy. History does not slow innovation; it keeps it oriented. When you stretch the timeline, you trade whiplash for momentum."
+      ]
+    }
+  ],
+  "checklist": [
+    "Add a timeline lane to every decision doc: past baseline, present trigger, projected future",
+    "Require three historical analogues (internal or external) before approving a strategic pivot",
+    "Plot key metrics with at least two prior cycles before labeling a movement unprecedented",
+    "Review a log of previous “this changes everything” claims during quarterly retros",
+    "Time-box news monitoring so alerts do not displace deep work or long-term projects",
+    "Tag decisions made under urgency and revisit them after 30 days to note corrections"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

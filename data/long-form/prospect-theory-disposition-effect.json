@@ -1,0 +1,108 @@
+{
+  "slug": "prospect-theory-disposition-effect",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/prospect-theory-disposition-effect",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/prospect-theory-disposition-effect/content.tsx",
+  "originalPublishedAt": "2025-09-01T15:00:56.942Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Selling Roses, Watering Weeds: The Disposition Effect and Your Money",
+  "lede": "Lina bought two stocks on the same April afternoon. One drifted up 18% in three months. The other slid 22% and just kept sinking. She sold the winner because “you never go broke taking a profit” and held the loser because “it’ll bounce back; I just need to be patient.” By December, the winner kept running without her. The loser hovered like a gray cloud in her brokerage app, down 48% and “too painful to sell now.”",
+  "sections": [
+    {
+      "heading": "What is Disposition Effect – when you sell winners but cling to losers and why it matters",
+      "paragraphs": [
+        "That ache—selling winners too soon and clinging to losers—is the Disposition Effect. In one line: the Disposition Effect is our bias to realize gains quickly and ride losses too long. Taking profits too quickly on positions that have gone up (“locking in gains”), and; Delaying selling on positions that have gone down (“waiting to get back to even”). The Disposition Effect is the pattern of: Under the hood, Prospect Theory explains a lot of the behavior: losses hurt about twice as much as gains feel good, so we grasp for certainty in gains and gamble to avoid realizing losses (Kahneman & Tversky, 1979). Traders, individual investors, even professionals show this pattern (Shefrin & Statman, 1985; Odean, 1998).",
+        "Why it matters: It taxes returns. Selling winners early caps potential, while holding losers ties up capital that could go to better ideas. In large datasets, investors with stronger Disposition Effect underperform (Odean, 1998; Barber & Odean, 2000); It bloats risk. Portfolios end up concentrated in poor performers. You’re left with the weeds and fewer flowers; It wastes attention. Staring at a red position drains willpower. You watch instead of decide. That cognitive “rental fee” compounds; It distorts learning. When you refuse to realize a loss, you postpone feedback. You can’t update models if you won’t close the loop; It leaks into other decisions. You hang on to a bad vendor, a stale product feature, or an old plan because of sunk costs and hope. This isn’t a moral failing. It’s human. The trick is building a scaffolding that keeps you from doing something you’ll regret while your stomach is louder than your plan."
+      ]
+    },
+    {
+      "heading": "1) The portfolio with “orphans”",
+      "paragraphs": [
+        "Ravi buys five stocks. Two winners are up 25% and 12% in four months. Three are down 8–35%. He sells the 25% winner “to pay himself” and keeps the losers because “there’s good news coming next quarter.” A year later, his P&L is oddly flat.",
+        "The big winner doubled after he sold. The worst loser sat at –52% for months, occasionally popping 8% on rumors—a dopamine drip—then drifting lower. If Ravi had even done nothing—no selling winners—he’d likely be up. The act of protecting his gains and waiting on the losers did the damage."
+      ]
+    },
+    {
+      "heading": "3) Seed-stage equity and stubborn hope",
+      "paragraphs": [
+        "Sofia bought a popular tech stock at $80. It dropped to $56. She promised herself she’d sell at $80 “to be whole.” The stock never quite made it. It hit $73, fell to $60, climbed to $69. Years pass. In each rally, she refuses to sell because she’s anchored to $80. Meanwhile, other candidates pass her by. “Even” becomes a prison number. A founder keeps a product line that underperforms.",
+        "It consumes half the team’s energy. The founder brags about the early customer who loved it and waits for “one big partnership” to justify the sunk time. That partnership never lands. The cash runway shortens. The opportunity cost—features not shipped, segments not tested—costs more than the line ever might earn. When they finally sunset it, the team breathes. Momentum returns. The “loss” had been holding the company hostage."
+      ]
+    },
+    {
+      "heading": "5) The crypto stubbornness loop",
+      "paragraphs": [
+        "Alex flips houses. One property turns into a money pit. Instead of selling with a small loss, Alex doubles down: pricier countertops, designer lighting, “let’s make it the nicest on the block.” He keeps pushing the break-even price higher in his head. The market cools. Two other great deals pass by because cash is locked. He sells six months later at a bigger loss and misses the original two deals entirely. Maya buys a coin at $2.",
+        "50 on hype. It jumps to $3.20; she takes a small profit. It shoots to $8 without her. She buys a different coin at $5 that drops to $2.70. “It’s a good project,” she tells herself. She stalks the Discord, screenshots “catalyst” rumors, and refuses to sell. She scans for green candles to feel okay again. Months later, the bag is still red. The project could be good; her process wasn’t."
+      ]
+    },
+    {
+      "heading": "7) Personal life: the leaky subscription",
+      "paragraphs": [
+        "A portfolio manager at a mid-size fund has formal risk controls but no clear sell discipline. The team discusses sells more than buys. The portfolio gradually tilts toward and overweights long-term losers because they linger. Winners turn over quickly; losers become “research projects.” In performance review, the team sees it: attribution shows negative long tail from a few stuck names. They institute bracketed orders and unemotional exit rules. The problem shrinks.",
+        "You have a $69/month tool you barely use. “I’ll cancel after I export,” you tell yourself. You don’t export. Months pass. The wasted money isn’t catastrophic, but each month you feel a micro-shame spike. The avoidance isn’t about $69; it’s about admitting a bad call. That’s the Disposition Effect’s cousin in your everyday life."
+      ]
+    },
+    {
+      "heading": "Signs you’re under the spell",
+      "paragraphs": [
+        "The Disposition Effect hides behind stories we tell to feel better. Pull the mask off and you can build guardrails. You say “I’ll sell when it gets back to my entry.”; You feel physical relief when you sell a winner and physical dread when considering selling a loser; You re-research your losers more than your winners; You check losers more often at night, on weekends, or when you’re stressed; You celebrate green days as validation but see red days as “paper losses that don’t count.”; Your winners churn; your losers accumulate birthdays; You euphemize losers: “core holding,” “long-term thesis,” “high-conviction despite recent volatility.”; You move mental goalposts for losers but not for winners.",
+        "If you did not own this today, would you buy it at this price? If not, why keep it?; If this were up 20% instead of down 20%, would you sell it right now? Why?; If you couldn’t look at the purchase price, how would you decide?; If your friend described this position with no entry price, what would you advise?. If those questions make you squirm, good. That’s the bias talking."
+      ]
+    },
+    {
+      "heading": "Build a sell discipline before you buy",
+      "paragraphs": [
+        "Most people craft intricate buy screens and treat sells like breakups they never learned to have. Flip it. Define exits in advance. Before you buy, write: “I will sell if X thesis breaks; I will trim or add if Y happens.” Set time-based reviews. “If catalyst A doesn’t occur by Q3, reduce by half. If not by Q4, close.”",
+        "Use bracket orders thoughtfully. For short- to medium-term trades, consider a stop-loss and a take-profit bracket. Even a soft stop (alert) beats nothing; Rebalance regularly. Calendar-based or tolerance-based rebalancing forces trimming winners less emotionally and cutting losers that no longer fit; Decide lot selection ahead of time. Use specific-lot selling for taxes, not emotion. Know the wash-sale rules in your jurisdiction."
+      ]
+    },
+    {
+      "heading": "Environmental design: Disposition Effect",
+      "paragraphs": [
+        "Rename positions by thesis, not price. “Company X AI infra thesis” beats “my $27 bag.” It shifts attention from pain to logic; Chart without the P&L. Look at fundamentals, competitive updates, and risk. Hide entry price columns during review; Use “would I buy now?” as default. Force a fresh underwriting at current price, not your cost basis; Write a stop-out story. One paragraph: “What would a rational investor say about me holding this? What would they mock?”",
+        "Create a decision journal. For every new position, log thesis, expected drivers, invalidation points, and a review date. Two months later, you’ll thank past you; Use one-touch rules. “If thesis is invalidated, sell in first hour next session—no exceptions.” Reduce the wiggle room where fear lives; Layer alerts, not feelings. Alerts for thesis events, not price wiggles. “Customer churn above 6%” or “CEO departure,” not “down 3%.” Schedule uncomfortable reviews. Friday mornings: “Bag check.” You do it even when it’s raining."
+      ]
+    },
+    {
+      "heading": "Emotional hygiene: Disposition Effect",
+      "paragraphs": [
+        "Get an exit partner. You call each other out on wishful thinking. Swap screenshots of your exit criteria before you buy; Pre-commit publicly. In a small group, post your thesis and invalidation points. Accountability turns mush into decisions; Borrow someone else’s eyes. Ask a friend who doesn’t know your entry price to review your position. Make peace with imperfection. You will sell some winners too early and some losers too late.",
+        "Aim for a good batting average with fat-tail winners, not perfect timing; Reward process, not outcomes. Celebrate sticking to your exit plan even if price whipsaws after. Process is the only lever you truly control; Use losses as tuition. Write the “course title” you just paid for: “Don’t marry cyclicals without a cycle map.” Hang it where you decide. Tape that list next to your monitor. Use it when you don’t want to."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "The Disposition Effect sits in a crowd of biases. Knowing the cousins helps you spot the blend. Loss aversion. Losses hurt more than gains feel good, tilting us toward locking gains and avoiding realized losses (Kahneman & Tversky, 1979); Sunk cost fallacy. Past investments of money, time, or pride sway current choices, even when they should not. “I already spent so much; I can’t quit now.” Status quo bias. We prefer the current state over change. Holding the loser feels like “doing nothing,” which feels safer; Regret aversion. We avoid choices that could lead to regret. Selling a loser locks in pain;",
+        "selling a winner avoids future regret if it falls; Anchoring. We fixate on our entry price or a prior high. “I’ll sell at $50” becomes a spell; Endowment effect. We value what we own more than similar things we don’t. Our bag becomes “special.” Mental accounting. We segregate money into buckets. “House money” from a winner feels different, so we treat it loosely; Confirmation bias. We hunt for evidence that says “you were right all along.” These biases overlap in the wild. You don’t need to label them perfectly; you need safeguards that don’t care which one showed up."
+      ]
+    },
+    {
+      "heading": "A few notes for the nerds",
+      "paragraphs": [
+        "Selling winners and watering weeds is a quiet tax on your goals. It speaks in gentle excuses: “Just a little longer,” “It’ll bounce,” “Take the win.” Meanwhile, time moves, and opportunity costs swell. You can do this differently. Write your exits before you enter. Ask the hard question—would I buy this today?—and respect the answer. Cut faster, replant sooner, and let your winners grow tall. Pick process over pride. Treat each realized loss as an honest receipt for learning.",
+        "The Disposition Effect is robust in retail trading data: investors realize gains more readily than losses (Odean, 1998); Prospect Theory frames the preference for sure gains and risky losses (Kahneman & Tversky, 1979); Trading too much and selling winners early harms performance; a small subset of big winners often drives long-run returns (Barber & Odean, 2000); Price underreaction to news can be tied to the Disposition Effect among other frictions (Frazzini, 2006)."
+      ]
+    }
+  ],
+  "checklist": [
+    "Is the thesis intact? Name the two core drivers and whether they still hold",
+    "If I didn’t own this, would I buy it today? If no, why do I still hold it?",
+    "Is my hold/sell choice driven by getting back to even?",
+    "What is my specific exit rule and date for review?",
+    "What is the opportunity cost right now?",
+    "Has this loser consumed more research time than any winner?",
+    "If I sell now, what will I fund that is better?",
+    "Did I update facts or just feelings since last review?",
+    "Before you buy, write the thesis, key drivers, invalidation, and a review date",
+    "Hide your entry price column during reviews",
+    "Ask: “If I didn’t own this, would I buy it today?” Obey the answer",
+    "Use bracketed exits or alerts tied to thesis—not just price"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
