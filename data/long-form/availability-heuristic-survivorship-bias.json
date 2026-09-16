@@ -1,0 +1,137 @@
+{
+  "slug": "availability-heuristic-survivorship-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/availability-heuristic-survivorship-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/availability-heuristic-survivorship-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:33:42.111Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Survivorship Bias: Learning From the Planes That Didn’t Come Back",
+  "lede": "We once sat in a windowless room with a founder who swore he’d cracked the code to growth. “Just copy what the unicorns did,” he said, slapping a slide of sleek logos on the table. The advice felt clean. It was also dangerously wrong.",
+  "sections": [
+    {
+      "heading": "What Is Survivorship Bias — When You Only See the Winners and Why It Matters",
+      "paragraphs": [
+        "Here’s the short version: Survivorship bias is the mistake of focusing on people or things that made it through a selection process and overlooking those that didn’t. We judge the visible winners and forget the invisible losses, then draw bad conclusions. Survivorship bias happens when you draw conclusions from a sample that excludes failures. You study the startups that went public, the fitness influencers with abs, the funds that outperformed, the paintings in museums. You don’t see the corpse pile behind the camera. You don’t see the ghost portfolio.",
+        "The human brain prefers clean stories with intact protagonists. But when your data skips the fallen, your conclusions get skewed. You think a tactic works because everyone you can see used it. You forget that many who used it disappeared, and you can’t interview the dead. Overconfidence: You assume your odds are better than they are; Misallocated effort: You focus on polishing visible traits that don’t drive survival; Bad bet sizing: You risk more than you can afford because you underestimate variance; Hero worship: You imitate people whose success relied on context you don’t share.",
+        "This bias matters because it nudges us toward: In fields where we can’t see the failures — venture capital, medicine, investing, creative work — survivorship bias can set entire strategies on fire. The fix isn’t cynicism. It’s disciplined curiosity. Ask: what am I not seeing? Who didn’t make it here? What would their data say?"
+      ]
+    },
+    {
+      "heading": "The bullet-studded planes that were misleading everyone",
+      "paragraphs": [
+        "During World War II, engineers studied returning bombers to decide where to add armor. Wings and tails were riddled with bullet holes. The first instinct: reinforce those spots. Statistician Abraham Wald had a different lens. These planes made it home. The holes showed where a bomber could get hit and still survive.",
+        "The missing data were the planes that didn’t return. Reinforce the places without holes — the engines, the cockpit (Wald, 1943). When you only look at survivors, you protect the wrong parts. The lesson scales. Your product reviews, your available datasets, your visible competitors — all planes that made it back. Ask what never makes it to your desk."
+      ]
+    },
+    {
+      "heading": "The startup gospel based on a single S-curve",
+      "paragraphs": [
+        "Your feed is packed with people who dropped 30 pounds on the same plan. They became visible because they succeeded. People who tried the plan, lost nothing, or quit from exhaustion didn’t post a transformation. The algorithm filtered for success. The advice you see inherits that filter. Don’t confuse the highlight reel with probability. Practical move: when evaluating a method, ask for the denominator. How many tried, how many bailed, and how many kept results for a year? Abs are loud; attrition is quiet.",
+        "An executive team copies the hiring pattern of a company that blitzscaled: grow headcount by 10x, blitz marketing, fix later. They believe it’s a recipe. It might be a memoir. The winning company had cheap capital, a product with network effects, and a competitor that stumbled. Your company has none of those. Survivorship bias turns context-dependent choices into commandments. Better approach: look for ventures that tried the same playbook and died. Compare resource constraints, timing, margins, and defensibility. Don’t import a strategy that only works with tailwinds."
+      ]
+    },
+    {
+      "heading": "The fund manager with a perfect track record",
+      "paragraphs": [
+        "After a decade, you see a handful of funds that beat the market every year. They write letters; they look prophetic. But thousands of funds launched in the same time. Many closed. You can’t subscribe to those letters; they don’t exist.",
+        "What looks like skill could be a combination of variance and attrition. Nassim Taleb calls this silent evidence — the missing data that would falsify the story if you could hear it (Taleb, 2007). Practical move: screen funds by process and risk management, not return streaks alone. Ask for full distributions, not just winners."
+      ]
+    },
+    {
+      "heading": "The author who “wrote every day at 5 a.m.”",
+      "paragraphs": [
+        "Your top customers demand a complex dashboard. You ship it. NPS jumps for the loud users. Revenue per account goes up. You pat yourselves on the back. Two quarters later, the midmarket churns. They were the quiet majority. Survivorship bias tilted your roadmap toward visible power users. The rest slipped away. Fix: segment feedback by revenue, churn risk, and silent cohorts. Ask sales about deals you lost, not just deals you won. Your favorite writer wakes before dawn and writes 1,000 words.",
+        "You adopt the ritual, and it stinks. Does it mean discipline fails? No. It means rituals are filtered by visibility. For every morning monk, there’s a night owl whose craft didn’t fit the advice stage. You saw a lifestyle that came packaged with success; you didn’t see what the lifestyle replaced, or whether it mattered. Experimental move: keep your own data. Switch time slots for two weeks. Track quality and joy. Keep what works."
+      ]
+    },
+    {
+      "heading": "The hiring pattern that replicates itself",
+      "paragraphs": [
+        "You run a signup test. Variant B wins by 7% with 800 users. You roll it out. A month later, trial-to-paid conversion dips. Survivorship bias shows up in the selection criteria of your metric. You optimized who signed up, not who stuck. Your surviving sample — signups — excludes the folks who should have filtered out earlier. You preferred a bigger funnel to a better funnel. Reset: choose metrics that track the ultimate survival — retained customers, not clicks. Let bad leads die.",
+        "Top performers on your team came from a particular school. You start screening for that school. Your next cohort looks shiny; performance stagnates. Survivorship bias confuses correlation with selection. You see school logos in your winners because you hire more interns from there, mentor them harder, and give them better projects. Next you find what you seeded. Better move: define skills, run structured interviews, and measure performance by outcomes, not pedigree."
+      ]
+    },
+    {
+      "heading": "The artists in the museum",
+      "paragraphs": [
+        "People tell you your app should be simpler, like the leaders. You strip features. Adoption craters. That “simplicity” is a property of a mature product with network effects and years of invisible complexity hidden behind defaults. Survivorship bias sells you minimalism without showing you the scaffolding that made it possible. Counter: ask what invisible systems — caching, heuristics, onboarding funnels, partnerships — keep a simple surface alive. Don’t amputate bones.",
+        "We tour museums and assume the best art is what survived. We ignore lost works, prevented careers, and bias in who got wall space. Judgment becomes synonymous with visibility. Survivorship bias shapes culture as much as commerce. Antidote: seek the archives, the zines, the self-published work. Calibrate your taste against the unseen, not just the curated."
+      ]
+    },
+    {
+      "heading": "Step 1: Ask the denominator question",
+      "paragraphs": [
+        "Survivorship bias thrives on comfort. Winners are conveniently available; failures are inconvenient and, sometimes, embarrassing. The fix is a habit of pulling on threads until you find the missing pile. Who else took this path but didn’t get the outcome? Ask for the full sample. If you can’t get it, estimate it. Create a rough base rate before you commit.",
+        "Startups: how many funded in this sector last five years? What percentage died? What was the median time to death?; Diets: how many starters made it to week eight? To year one? What happened after the photo?; Sales tactics: out of 100 prospects approached this way, how many booked, closed, and renewed?. If you get pushback or shrugs, flag bias. You’re arguing with a ghost."
+      ]
+    },
+    {
+      "heading": "Step 3: Seek negative space and counterexamples",
+      "paragraphs": [
+        "Every story passed through filters: algorithms, editors, grants, survival conditions. List them. Ask how each filter might distort the sample. Platform algorithms surface engagement and novelty, not representative outcomes; Media favors narratives with clean arcs; Survivors have more time to talk about survival than non-survivors. Knowing the filter helps you reverse-engineer what you’re not seeing.",
+        "Make it a ritual to find three counterexamples to every success story. If someone scaled with outbound sales, find someone who tried and failed. If one founder built on freemium, find a founder who burned on support costs. You’re not hunting cynicism; you’re mapping the boundary of the playbook. Where possible, talk to people who left the game. Ex-employees, shuttered founders, ex-customers. They carry the missing data."
+      ]
+    },
+    {
+      "heading": "Step 5: Embrace base rates before personalization",
+      "paragraphs": [
+        "Survivorship bias elevates outcomes that are easy to celebrate — revenue spikes, virality, awards. Look for process resilience: risk budgeting, experiment cadence, defect rates, customer payback periods. Teams that manage tail risks and iterate sanely produce durable success. You can copy that. Write process checklists. Make them boring and non-optional. Base rates are the average outcomes for similar situations. They anchor expectations. Before you tailor to your unique situation, start with the base rate:",
+        "Seed-stage startups: what proportion reach Series A in your geography? What timelines?; Weight loss: what fraction of people maintain 10% loss at year two?; Funds: what percentage beat the benchmark after fees over 10 years?. Start with those odds. Then identify your edges that actually shift them. Unique is often code for “we don’t have data.”"
+      ]
+    },
+    {
+      "heading": "Step 7: Test decisions with downside-first thinking",
+      "paragraphs": [
+        "Build your own anti-bias alerts. Recruiting: track offer acceptance by source; measure new-hire performance distribution by cohort, not just top quartile; Product: monitor activation and week-8 retention, not just DAU; track what people stopped doing; Marketing: attribute spend to long-term LTV, not just first-touch CPA; watch lagging effects, not just immediate pops. If a metric makes only good news visible, build the corresponding bad-news metric.",
+        "Ask: if this goes sideways, how does it fail? Can we survive that failure? What pre-commitments reduce damage? This shifts energy from copying winners to protecting against known risks. Add stop-losses, pre-mortems, and decision-making timeouts. Good risk hygiene beats mimicking champions."
+      ]
+    },
+    {
+      "heading": "Selection bias: Survivorship Bias",
+      "paragraphs": [
+        "For every report, add one section: what we don’t know, who’s excluded, how selection might bias results, and what we’ll do to fill the gaps. This institutionalizes the habit of seeing invisibles. The irony: making uncertainty explicit builds trust and accelerates learning. Pin it. Use it. Teach it. We’ve baked versions of this into the Cognitive Biases app we’re building because repetition matters more than inspiration. Survivorship bias often travels with a few cousins. Knowing where it ends and others start sharpens your sense-making.",
+        "Selection bias happens when your sample isn’t representative because of how it was chosen. Survivorship bias is a specific flavor where failure excludes itself by disappearing. If you recruit users from your most active Slack channel, you select for enthusiasts. If you analyze only accounts that renewed, you select for survivors. Not all selection bias is survivorship bias, but all survivorship bias is selection bias."
+      ]
+    },
+    {
+      "heading": "Hindsight bias: Survivorship Bias",
+      "paragraphs": [
+        "Studies with positive results get published more often than null results. The file drawer problem hides failures and non-findings (Rosenthal, 1979). Meta-analyses try to correct for this, but the literature still skews. It’s survivorship bias in academia: ideas that “succeed” in getting published shape what we think is true. We judge frequency by ease of recall. Survivorship bias controls what’s available to recall: dramatic wins crowd out quiet losses. Just because you can name five celebrity entrepreneurs doesn’t make entrepreneurship a likely lottery. The heuristic rides on biased visibility.",
+        "After something happens, we believe we “knew it all along.” Survivorship bias supplies the hero story; hindsight bias smooths it into inevitability. Together, they turn random walks into prophetic narratives. Beware of post-hoc wisdom with clean edges."
+      ]
+    },
+    {
+      "heading": "Silent evidence: Survivorship Bias",
+      "paragraphs": [
+        "We ignore base rates when we focus on specific details about a case. Survivorship bias erases many cases entirely. Combine the two, and you get classic overconfidence: “This founder is a genius; base rates don’t apply.” They do. They always do. Even geniuses roll dice. We judge a decision by its result rather than its process. Survivorship bias makes good outcomes look causally tidy. Outcome bias then blesses the method. You start copying the stunt, not the safety gear.",
+        "Taleb’s phrase for the missing data you can’t see because it was filtered out by history (Taleb, 2007). Survivorship bias is a mechanic; silent evidence is the fog it creates. Ask for the skeletons. Design your plans as if they exist."
+      ]
+    },
+    {
+      "heading": "Wrap-Up — Keeping the Planes in View",
+      "paragraphs": [
+        "We once copied a landing page that crushed for a peer. Our variant spiked signups. Two months later, refunds climbed. We had tuned the funnel to attract the wrong people. Survivorship bias had smiled and waved us through. The cure wasn’t a new hack. It was humility and a change in view. Start by asking where the bullet holes aren’t. Invite the missing voices. Balance winner stories with graveyard data. Build dashboards that show bad news early. Learn from survivors, but verify with the dead.",
+        "This takes practice. It also takes tools. That’s why we’re building a Cognitive Biases app — to nudge ourselves and our teams to ask the denominator, check the base rate, and see the silent evidence when decisions matter. The goal isn’t to be perfect. It’s to stay in the game long enough to become wise. Keep your eyes on the runway, not just the planes that land. The rest of your strategy sits in the smoke you can’t see yet."
+      ]
+    }
+  ],
+  "checklist": [
+    "What’s the denominator?",
+    "What selection filters shaped what I’m seeing?",
+    "Who failed with the same playbook?",
+    "What’s the base rate for this bet?",
+    "Which metrics reflect survival, not just appearance?",
+    "How will this fail, and can we live with that?",
+    "What data am I missing, and how will I get it?",
+    "Define the denominator: write the total attempts or population you’re considering",
+    "List the filters: algorithm, gatekeepers, time, funding, survivability",
+    "Pull counterexamples: find at least two failed attempts with similar methods",
+    "Establish base rates: document average outcomes in your context",
+    "Align metrics to survival: retention, renewals, LTV, durability"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

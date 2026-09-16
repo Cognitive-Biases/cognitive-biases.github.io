@@ -1,0 +1,151 @@
+{
+  "slug": "cognitive-bias-non",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-non",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-non/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:54:49.009Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Hot-Stove Reflex: When One Bad Experience Makes You Dodge a Good Choice",
+  "lede": "You ordered oysters once, got sick, and swore them off for life. Or you tried a promising ad channel, lost $800 in a week, and shut it down—even though you only ran one headline on a rainy Tuesday. That reflex to yank your hand away after a burn is ancient and useful. But it also tricks us into avoiding options that would pay off if we gave them a fair second or third try.",
+  "sections": [
+    {
+      "heading": "What Is Non-Adaptive Choice Switching—and Why It Matters",
+      "paragraphs": [
+        "Non-Adaptive Choice Switching is when a single negative experience pushes you to abandon an option that, on average, would have been good for you. Non-Adaptive Choice Switching is not a formal Latin name; it’s a blunt description of a pattern: You try something; You have one bad outcome; You switch away; Your switch is premature because the option’s long-run payoff is actually positive. This can show up anywhere decisions involve uncertainty and learning: hiring, dating, investing, product launches, health choices, and daily habits. It matters because the world is noisy. Good choices often come with variance. If your sampling stops after one shock, you underestimate anything with ups and downs.",
+        "Psychology and decision science have a few cousins to this. The “hot-stove effect” describes how we learn to avoid options after pain, even when those options are beneficial on average (Denrell, 2007). Loss aversion makes the pain of a loss hit 2–3x harder than the joy of a gain (Kahneman & Tversky, 1979). Negativity bias makes bad events stickier in memory than good ones (Baumeister et al., 2001). Add them together, and you get a mind that’s excellent at staying alive but terrible at calibrating to noisy payoffs.",
+        "Why it matters in practical terms: You overlearn from flukes; You underexplore options with volatile rewards; You miss compounding benefits (skills, relationships, channels, products) because you never hit the steady-state payoff. You can’t debug what you can’t see. Once you name this reflex, you can set up guardrails to keep exploring when it’s worth it—and bail fast when it’s not."
+      ]
+    },
+    {
+      "heading": "The coffee shop with one burnt cup",
+      "paragraphs": [
+        "Stories stick faster than definitions. Here are lived-in examples with the smell of coffee and the sting of regret. Maya moved neighborhoods and found a cafe with proper beans and a dusty piano. Day one, the barista over-extracted her cappuccino. Bitter.",
+        "She walked past that cafe for six months, paid more elsewhere, and rolled her eyes at the piano. Then a friend dragged her back. Perfect shot. It became her daily spot. What happened: one noisy sample created a global rule. The expected value was good; variance + one try made it look bad."
+      ]
+    },
+    {
+      "heading": "Hiring bias from one bad hire",
+      "paragraphs": [
+        "A small ecommerce brand tested TikTok ads for five days, spent $800, and saw a 0.4x ROAS. “TikTok doesn’t work for us,” the founder said, and moved the budget to Google Search. A few months later a competitor scaled to 30% of their revenue… on TikTok. What happened: tiny sample, weak creative, poor targeting, no iteration, and no time for the algorithm to learn. The founder attributed failure to the channel and not the setup. This is the hot-stove effect with customer acquisition.",
+        "A manager hired a backend dev from “University X.” It went badly: missed deadlines and brittle code. The manager quietly downgraded all resumes from “University X.” Over the next two years, he filtered out three strong applicants who would have leveled up the team. What happened: availability and negativity bias plus a story that felt clean. No base rates. No calibration. The manager confused an anecdote with a trend."
+      ]
+    },
+    {
+      "heading": "Medical case: the side effect that scares off the cure",
+      "paragraphs": [
+        "Jules tried couples therapy. The therapist monologued for half the session and mispronounced Jules’s name twice. Jules concluded, “Therapy makes me feel worse.” They never tried again, even with different modalities or recommendations. The relationship coasted into the ditch. What happened: one-off provider experience generalized into “therapy is bad.” The modality’s average benefit got lost in variance of provider fit.",
+        "A patient took a statin, got muscle aches in week one, and stopped. He never tried a different statin, dose, or schedule. Two years later his lipid levels were worse. Some side effects subside; some meds have alternatives with similar benefits. One trial doesn’t equal the truth. What happened: survival brain + salience. The immediate pain overshadowed long-term benefit. A well-informed retry could have regained the upside."
+      ]
+    },
+    {
+      "heading": "Software library that “bit us once”",
+      "paragraphs": [
+        "She cooked once, the roast was underdone, and her guests teased her. She stopped inviting people for dinner for three years. She lost the joy and community that come from messy, normal meals. What happened: social loss aversion. She protected herself from future embarrassment and locked herself out of a meaningful practice. A team adopted a new queue library.",
+        "It crashed under load during a promotion. The team rolled back and swore off the library forever. Later they discovered the crash came from a misconfigured environment variable. The library was solid; their setup wasn’t. What happened: attribution error. They blamed the tool and avoided it, losing out on features and support that would have helped."
+      ]
+    },
+    {
+      "heading": "The investor who swore off “anything biotech”",
+      "paragraphs": [
+        "A beginner tried deadlifts with poor form, tweaked their back, and swore off compound lifts. They plateaued for a year. When a coach cleaned up their technique, their strength and mood improved. What happened: a painful sample pushed them away from the very thing that would have helped, if done correctly and progressively.",
+        "Bought a small-cap biotech, got slammed by a trial failure, and declared “biotech is a casino.” They avoided an ETF that diversified across dozens of names and captured the sector’s rebound. What happened: generalizing from a single, risky instance to an entire domain without adjusting the strategy (diversify, size bets, focus on approval-stage pipelines)."
+      ]
+    },
+    {
+      "heading": "The parent and the broccoli",
+      "paragraphs": [
+        "A kid tried broccoli once, steamed and unseasoned. Hated it. The parent stopped offering broccoli. Years pass. The kid later tries roasted broccoli with garlic and lemon and loves it. What happened: one prep method equals “broccoli” in the child’s model of the world. Variance in technique gets collapsed into “bad.”",
+        "If you find yourself nodding at one of these, it’s because the pattern is human, not a personal flaw. Our brain updates fast after pain. That kept us alive on the savannah. It costs us upside in a noisy, modern world."
+      ]
+    },
+    {
+      "heading": "Smells like hot metal: recognition cues",
+      "paragraphs": [
+        "You can catch this pattern early if you know what to look for. Practically, you need two moves: 1) Notice the “hot-stove” impulse. 2) Add structure so good options get a fair test. Here’s how. You feel a sharp “never again” urge after one bad experience; You retell the story of that one failure more than you revisit the data;",
+        "You’ve never defined what “good enough” would look like for the option; You can’t name two alternative explanations for the failure; You made a global rule (“no TikTok,” “no therapists,” “no deadlifts”) from a single local event. If two or more hit, pause. You’re probably switching too fast."
+      ]
+    },
+    {
+      "heading": "Add guardrails before you try",
+      "paragraphs": [
+        "It’s easier to avoid this bias if you set rules when you’re calm. Precommit to a sample size. Decide, “We’ll run three creative iterations for two weeks before judging the channel,” or “I’ll try two different therapists over four sessions each.” Define pass/fail metrics up front. “We’ll keep the channel if blended CAC < $80 by day 21,” or “I’ll keep the medication if side effects drop to mild by week two.”",
+        "Plan obvious variations. If there are knobs (dose, form, provider, creative, time of day), list them. Treat the first attempt as v0, not verdict. Hertwig and Erev call this the description–experience gap: people who sample experiences underweight rare events and overweight recent pain (Hertwig & Erev, 2009). Precommitment helps you get enough samples."
+      ]
+    },
+    {
+      "heading": "Layer in simple math without getting fancy",
+      "paragraphs": [
+        "Separate process from outcome. Was the process sound? If yes, then the option may be weaker than hoped. If no, fix the process first; Ask “base rate” questions. How often does this option work for others? With what variance? If you don’t know, find a benchmark; Look for fixable causes. Tighten scope, change provider, adjust dose, improve technique. If you can fix it cheaply, try again; Timebox a retry. “Two more tries, one adjustment each. If still bad, I quit.” You don’t need a PhD to think like a bandit algorithm. Variance hides truth.",
+        "Noisy options can look bad on a small sample. Give them more shots than low-variance options; Expected value beats one outcome. A choice with a 60% chance of +10 and 40% chance of −5 is positive even if you saw the −5 first; Exploration vs. exploitation. Allocate a fixed slice (e.g., 10–20%) of your time/budget to exploring alternatives. Exploit the best of the rest. If you’re technical, you can use upper confidence bounds or Thompson sampling. If you’re not, the “Rule of Three Tries” will get you 80% there."
+      ]
+    },
+    {
+      "heading": "Practical playbooks by domain",
+      "paragraphs": [
+        "Health: Talk to your clinician about alternatives before quitting. Try a lower dose, different molecule, or different schedule. Set a reassessment date. Log side effects; Fitness: Hire a coach for the first three sessions of any new lift. Start at embarrassingly light weights. Film your form; Hiring: Use structured interviews, peer code reviews, and work samples. Track outcomes. Don’t punish a university or past employer based on one hire; Marketing: Treat each channel like an experiment. Run multiple creatives, audiences, and hooks. Let the algo learn for a defined period. Kill slow bleeders, not noisy growers; Therapy: Try two therapists. Ask for a free 10–15 minute intro call. Switch modalities (CBT, ACT, EFT) before quitting therapy entirely; Product: Separate tech choice from configuration. Pilot with a low-stakes use case. Read the issues list. Talk to users of the tool; Social: Host simple, repeatable gatherings. Lower the stakes. Order pizza, don’t stage a Michelin night.",
+        "Team up with your future self. Write, “Risk: one bad result may cause us to ditch an option with positive expectation. Counter: precommit to 3 tries, measure X.” Stick this in the doc. When stress rises, you’ll have a rail to hold. We’ve built prompts in our Cognitive Biases app to nudge this: “How many trials have you run?” “What would a fair test look like?” It’s not magic. It’s scaffolding. Tape it to your monitor. Better yet, put it in your team’s template."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Clarity comes from contrasts. Here’s what this isn’t, and what it’s near. Loss aversion: You weigh losses more than gains (Kahneman & Tversky, 1979). This fuels Non-Adaptive Choice Switching, but the switching is the behavior. Loss aversion is the weight inside your head; Negativity bias: Bad experiences are stickier than good ones (Baumeister et al., 2001). Again, fuel for the fire; Availability heuristic: Vivid memories feel more probable (Tversky & Kahneman, 1973). If the one bad event is vivid, it overrules dull base rates; Hot-stove effect: The learning dynamic where we underexplore risky-but-good options after pain (Denrell, 2007). This is the closest sibling; Learned helplessness: After repeated uncontrollable failures, you stop trying (Seligman, 1972). Our topic can happen after one failure; helplessness usually needs repetition and a feeling of no control;",
+        "Gambler’s fallacy: Expecting a reversal after a streak. Different bias entirely; Sunk cost fallacy: Sticking with a bad option because you’ve invested already. Our bias is the mirror: quitting too early; Defensive decision-making: Choosing the option that protects you from blame rather than maximizes value. One bad outcome can push you into defensive mode. Recognize the shift; Survivorship bias: Only looking at successes to judge a process. Here, we may be doing the inverse—overweighting a visible failure; Adaptive switching: Sometimes quitting after a bad experience is good. If an option’s base rate is poor or the downside is catastrophic (e.g., severe allergic reaction), switching is protective. The key is to check whether the expected value is positive and if risks are manageable. Knowing the neighbors helps you pick the right tool for the right mess."
+      ]
+    },
+    {
+      "heading": "2) Run the first attempt small and clean",
+      "paragraphs": [
+        "You want something you can actually use Monday morning. Here’s the playbook with enough grain to matter. Write one page. Seriously. Goal: What good looks like (number, behavior, or feeling); Baseline: What you’re comparing against; Hypothesis: Why this could work; Metrics: Primary and guardrails (e.g., ROAS + customer complaints); Sample: How many tries, how long; Variations: Up to three; Kill/keep criteria: Exact numbers or conditions; Owner: Who decides at the end.",
+        "This is your contract with your future, stressed self. Keep confounds low. Don’t change four things at once; Monitor in real time for safety; Journal brief notes: what felt off, what you observed, where luck might be involved. You’re not collecting perfect data; you’re collecting signal you can act on."
+      ]
+    },
+    {
+      "heading": "4) Run the second and third attempts with intention",
+      "paragraphs": [
+        "What did we plan? What did we do?; What went as expected, what didn’t, and why?; What’s our best guess: variance, execution, or model error?; What’s the cheapest, highest-leverage change to try next?. If you can’t name a specific change, you might be done. If you can, you’ve got a second attempt.",
+        "Change one thing per attempt if possible; Stick to your timebox. Don’t stretch the test because you’re attached to the idea; Collect the same metrics. Don’t switch definitions midstream. By attempt three, patterns emerge. Keep or kill accordingly."
+      ]
+    },
+    {
+      "heading": "When You Should Switch Early",
+      "paragraphs": [
+        "Your brain remembers the pain. Your system should remember the truth. Keep a simple log: option, attempts, outcomes, decision, rationale; Review monthly or quarterly. Spot where you quit too early or stuck too long; Share “near-miss wins” in team meetings: successes that only showed up after iteration. We’ve added a “Near-Miss Wins” template to our Cognitive Biases app. It nudges you to credit persistence when it was rational, not just lucky. Bias talk isn’t a religion. There are real times to stop after one hit.",
+        "Catastrophic downside you can’t mitigate. Severe allergic reaction, financial ruin, irreversible harm; Legal/ethical red lines. If an option crosses them once, you don’t need three samples; Clear base rates that are terrible. If credible data says “this almost never works,” don’t be a hero. The rule isn’t “always try three times.” The rule is “match exploration to expected value and risk, and don’t let a single sting erase a good bet.”"
+      ]
+    },
+    {
+      "heading": "A Note on Feelings",
+      "paragraphs": [
+        "Individual habits live inside group norms. Watch for these tells: Postmortems that are stories, not data; Global bans after isolated incidents (“we don’t do X here” with no numbers); Budget lines that yo-yo between experiments with no retention; Silent, unexamined “never again” phrases in docs; No exploration budget; everything is urgent execution. Fix with small rituals: pre-briefs, timeboxed tests, decision logs, and a monthly “Graveyard Review” where you ask, “What did we kill too fast?” Bring one option back from the dead each quarter for a fair retrial.",
+        "Pain is persuasive. Your stomach clenches. Your hands sweat. Your mind loops the worst five seconds of the experience. Then you write a global rule to keep yourself safe. That’s your body doing its job. Offer it a bargain: “We will be safe. We’ll try again smaller, slower, and smarter. If it still hurts, we stop.” You don’t need to be fearless. You need to be fair. That fairness is how you build a career, a product, a relationship, and a life that doesn’t get derailed by flukes."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: The Courage to Try Again (When It’s Worth It)",
+      "paragraphs": [
+        "Non-Adaptive Choice Switching is a fancy way to say “I got burned once and now I act like that’s the whole truth.” It’s human. It’s protective. And it’s expensive when the option you abandoned would have paid you back if you’d stayed with it long enough to smooth out the noise. You don’t need heroism. You need a checklist, a timebox, and a clean second attempt. You need to spot when the hot stove is in your head, not under your hand.",
+        "One more try, with one smart change, might be the hinge moment. Kahneman, D., & Tversky, A. (1979). Prospect Theory; Baumeister, R. F., et al. (2001). Bad is stronger than good; Tversky, A., & Kahneman, D. (1973). Availability heuristic; Hertwig, R., & Erev, I. (2009). The description–experience gap; Denrell, J. (2007). Adaptive learning and risk taking: The hot-stove effect. References (light touch):"
+      ]
+    }
+  ],
+  "checklist": [
+    "Define the option’s goal and a clear pass/fail metric before starting",
+    "Precommit to a minimum number of trials or duration",
+    "List 2–3 variations you’ll try if the first attempt fails",
+    "Set an “exploration budget” (time/money) and stick to it",
+    "After a bad outcome, write a one-paragraph failure diagnosis: process vs. luck vs. setup",
+    "Check a base rate or benchmark from credible sources",
+    "If fixable causes exist, retry once. If not, quit",
+    "Review decisions monthly: did we quit early because of one bad sample?",
+    "Teach the language: “hot-stove,” “variance,” “expected value.”",
+    "Use a simple log (our app helps): date, attempt, outcome, decision, reason",
+    "Name the option and the goal",
+    "Set pass/fail metrics"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
