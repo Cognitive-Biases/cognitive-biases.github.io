@@ -24,13 +24,19 @@ The evidence review remains the source of truth for scientific claims. Long-form
 
 If a legacy article exists but the canonical bias is still unreviewed, keep the legacy material as migration inventory until an evidence review is complete. Page length is not a reason to publish unsupported claims.
 
-## Originality rule
+## Recovery rule (supersedes the earlier originality rule)
 
-The old Metalhatscats URL is provenance, not copy source.
+The old Metalhatscats article layer is this project's own original work. Recovery, not regeneration, is the default:
 
-Do not paste the old article body into the new site. Reconstruct the useful ideas from the current canonical record, evidence review, reviewed sources, comparisons, contexts and decision guides, then write new prose in the current B2 semi-formal editorial style.
+1. Recover the original article from the legacy monorepo (`metalhatscats/mhc`, `app/cognitive-biases/<slug>/content.tsx`, last good commit `df6bc6d3^`, deleted 2026-07-14 in `df6bc6d3` "Move Cognitive Biases to standalone site").
+2. Preserve its prose, stories, structure and voice. Edit minimally: remove obsolete MetalHatsCats app-promo sentences, fix extraction artifacts, and soften only the claims that conflict with the current evidence review.
+3. Generate new prose only when no usable original exists.
 
-This also prevents the two owned sites from competing with substantially identical text while old URLs and search caches are still visible.
+The live legacy URLs now permanent-redirect to this site (see `docs/migration-map.md`), so verbatim restoration does not create a competing duplicate-copy surface. Every restored entry records machine-readable provenance (`recoveredFrom`, `sourcePath`, `originalPublishedAt`, `originalUpdatedAt`, `recoveredAt`, `recoveryType`) and the rendered page carries a migration note plus an explicit evidence boundary.
+
+Three restoration types are tracked in the recovery inventory (`.artifacts/long-form-recovery/`, local only): `recovered-original`, `editorially-updated-original` (original plus minimal evidence fixes), and `newly-generated-replacement` (last resort, used only for biases the old site never covered: Anchoring Effect, Sunk Cost Effect, Framing Effect core).
+
+The full forensic inventory, extraction scripts and the root-cause report live under `.artifacts/long-form-recovery/` (git-ignored working area).
 
 ## Storage
 
@@ -90,6 +96,12 @@ This gate is intentionally a floor, not a target word count. It exists to preven
 - Outcome Bias
 
 These were selected because they have reviewed evidence, broad decision relevance and strong connections to existing everyday guides or decision tools.
+
+### Batch 2 — originals recovered 2026-09-16
+
+The original 2025 MetalHatsCats article corpus (216 articles, median ≈ 2,900 words) was recovered from the legacy monorepo and restored for every canonical bias that already has a current evidence review: 39 recovered originals plus the 3 previously reconstructed articles for concepts the old site never covered (Anchoring Effect, Sunk Cost Effect, Framing Effect core). Recovery provenance is recorded per entry; the forensic inventory lives in `.artifacts/long-form-recovery/`.
+
+Known source limitations: the legacy corpus itself contained a generator defect that replaced a small number of values mid-sentence with the page title (34 of 216 sources affected). Where the lost fragment was unrecoverable, the surrounding story-consistent wording was repaired conservatively and the article is marked as an editorially-updated original.
 
 ## Next batches
 
