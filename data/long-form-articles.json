@@ -1,0 +1,439 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-16",
+  "description": "Evidence-grounded long-form articles restored onto canonical bias pages. Narrative prose is rewritten for the current Cognitive Biases evidence model; legacy Metalhatscats URLs are provenance, not text to copy.",
+  "entries": [
+    {
+      "slug": "cognitive-bias-hindsight-bias",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-hindsight-bias",
+      "headline": "Hindsight Bias: how to review a decision without rewriting the past",
+      "lede": "Once the outcome is known, the past becomes easier to explain than it was to predict. Hindsight bias matters because that new sense of obviousness can distort postmortems, blame, forecasting and the lessons we carry into the next decision.",
+      "sections": [
+        {
+          "heading": "The problem is not remembering the outcome. It is forgetting the uncertainty.",
+          "paragraphs": [
+            "Imagine a product launch that misses its target. A week later the warning signs seem to line up perfectly: one customer hesitated, one metric softened, one engineer raised a concern. The story now feels clean. But before launch, those signals were mixed with other signals that pointed in different directions. The outcome did not create new evidence about what people knew at the time; it changed which evidence now feels important.",
+            "Hindsight bias is useful to think about as a reconstruction problem. We rarely store a complete copy of our earlier uncertainty. After the result arrives, memory is rebuilt with the ending already visible. Information that fits the ending can become easier to notice and explain, while competing possibilities lose weight. This does not mean every retrospective explanation is biased. It means that confidence after the event is not a reliable record of confidence before it."
+          ]
+        },
+        {
+          "heading": "Why this damages learning at work and in everyday decisions",
+          "paragraphs": [
+            "A weak retrospective can punish a good decision that had an unlucky result, or reward a poor decision that happened to work. In both cases the team learns the wrong lesson. The same pattern appears in investing, hiring, health decisions and personal planning. Once we know what happened, we can mistake the outcome for evidence that the original choice was obviously right or obviously wrong.",
+            "The practical cost is larger than an argument about who predicted what. If the past looks more predictable than it was, the future can start to look more predictable too. Forecasts become too narrow. People stop recording uncertainty because they expect the answer to become clear later. In teams, blame also becomes easier: 'you should have known' sounds reasonable when the reviewer is standing in the future with information the decision-maker did not have."
+          ]
+        },
+        {
+          "heading": "Reconstruct the decision from the information that existed then",
+          "paragraphs": [
+            "The strongest countermeasure is not a slogan about being humble. It is a record made before the outcome. For important decisions, keep the options considered, the key assumptions, a probability or range when one is meaningful, the evidence available at the time, and what would trigger a review. The record does not need to be long. Its job is to freeze the decision state before memory can edit it.",
+            "During a postmortem, start with that earlier record. Ask what was knowable, what was not knowable, and what was knowable but missed. Those are different categories. Unknown events call for resilience or contingency planning. Missed available evidence may call for a process change. A reasonable choice that lost under uncertainty may call for no correction at all. This separation turns a retrospective from a story contest into a learning exercise."
+          ]
+        },
+        {
+          "heading": "Keep hindsight bias separate from outcome bias",
+          "paragraphs": [
+            "Hindsight bias and outcome bias often appear together, but they are not the same question. Hindsight bias changes how predictable the event seems after we know the result. Outcome bias changes how we judge the quality of the earlier decision after we know whether it worked. A reviewer can show one without the other, and the fixes differ.",
+            "A useful review therefore has two passes. First, hide the outcome as much as possible and evaluate the process using only information available at the time. Second, reveal the outcome and use it to update models, assumptions and base rates. The result matters for learning, but it should not be smuggled into the first-pass judgment as if the decision-maker already knew it."
+          ]
+        },
+        {
+          "heading": "A compact example: the failed migration",
+          "paragraphs": [
+            "A team estimates that a system migration has a 70% chance of finishing before quarter end. They record two major risks: data quality and vendor access. The project finishes late because a third-party certificate process takes three weeks longer than expected. Afterward, someone says the delay was obvious because the vendor was slow in the past.",
+            "The useful review asks whether that specific certificate risk was available and material when the estimate was made. If it was documented but ignored, the team has a concrete process gap. If it was genuinely hidden, the lesson is different: add schedule contingency for external approvals, not 'be smarter next time.' The written forecast keeps the team from turning surprise into fake foresight."
+          ]
+        }
+      ],
+      "checklist": [
+        "Find the forecast, decision note or message created before the outcome.",
+        "Separate what was knowable then from what became visible only later.",
+        "List at least one plausible alternative outcome that existed at the time.",
+        "Judge decision quality before using the outcome to update the model.",
+        "Replace 'obvious' and 'should have known' with the specific evidence that was available.",
+        "Record one process change only when the review identifies a real information or reasoning gap.",
+        "Keep future forecasts probabilistic when the situation is genuinely uncertain."
+      ],
+      "boundaryNote": "Hindsight bias is not proof that a retrospective explanation is wrong. A post-event explanation can be accurate. The bias concern is whether outcome knowledge has made the earlier uncertainty look smaller than it really was."
+    },
+    {
+      "slug": "cognitive-bias-anchoring-effect",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-anchoring-effect",
+      "headline": "Anchoring Effect: when the first number becomes the center of the decision",
+      "lede": "A first price, estimate or target can pull later judgments toward it even when the starting value should carry little weight. Anchoring is well supported for numerical judgments, but its strength depends on where the anchor came from and how the task is structured.",
+      "sections": [
+        {
+          "heading": "The first number can become a reference before you have earned one",
+          "paragraphs": [
+            "A recruiter mentions a salary range. A seller posts a list price. An AI assistant estimates six weeks. A project sponsor says the budget is probably €200,000. Even when everyone knows the number is provisional, later discussion often starts by adjusting around it. The first value has quietly changed the coordinate system of the decision.",
+            "This is the practical shape of anchoring: an initial numerical value influences a later estimate. The research base is large, but the effect is not a magic force. Some anchors are stronger than others, and clearly irrelevant or cross-dimensional numbers can have smaller or null effects. That boundary matters because the useful question is not 'was there a number?' but 'did this starting value become evidence or a reference point without enough justification?'"
+          ]
+        },
+        {
+          "heading": "Why simple adjustment can still leave you too close",
+          "paragraphs": [
+            "One common response is to notice the anchor and then adjust away from it. That can help, but adjustment may stop too early. If a vendor starts at €100,000 and you immediately think €80,000, the negotiation still lives inside the vendor's frame. You may never ask what the service is worth relative to alternatives, internal build cost, switching cost and expected value.",
+            "Research also suggests that anchoring is not explained by one mechanism in every case. Self-generated anchors and externally supplied anchors can work differently. For practical decisions, that means the safest strategy is behavioral: create an independent estimate or reference class instead of relying on awareness to neutralize the first number."
+          ]
+        },
+        {
+          "heading": "Build an independent estimate before you negotiate with the anchor",
+          "paragraphs": [
+            "When the decision matters, estimate from another direction. For a project, look at completed comparable projects and build a range from actual durations. For a purchase, set a maximum based on your budget, alternatives and expected use. For hiring, define the compensation band before the candidate names a number. For forecasting, write your range before asking an AI system for its estimate.",
+            "If the anchor is already visible, do not pretend you can erase it. Create at least two independent reference points. Ask what base rate applies, what similar cases cost, and what assumptions would justify moving far from the first value. A range is often better than a single corrected number because it makes uncertainty visible and gives you room to test assumptions rather than merely negotiate around a point."
+          ]
+        },
+        {
+          "heading": "AI makes anchors cheap, fast and easy to overlook",
+          "paragraphs": [
+            "AI systems can produce plausible numbers before a person has done any independent estimation. That is useful for exploration, but it can also make the model's first answer the anchor for the rest of the session. A user may challenge the answer, ask for a revision and still remain near the original value because every later prompt is framed as an adjustment.",
+            "For high-impact estimates, reverse the order. First record your own range, reference cases and unknowns. Then ask the model for a separate estimate and compare assumptions. If the numbers differ, do not average them automatically. Investigate why. The disagreement is information only when the underlying assumptions can be inspected."
+          ]
+        },
+        {
+          "heading": "A compact example: the discounted jacket",
+          "paragraphs": [
+            "A jacket is shown first at €300 and then at €180. The reduction feels large, but that comparison answers only one question: how far is the sale price from the displayed anchor? It does not answer whether the jacket is worth €180 to you, whether a similar item costs €120 elsewhere, or whether you planned to buy one at all.",
+            "A better decision starts outside the sale frame. Decide what function you need, what alternatives exist and what price range fits your budget. The original price can still be useful evidence if it reflects a real market reference, but it should earn that role rather than receive it automatically because it appeared first."
+          ]
+        }
+      ],
+      "checklist": [
+        "Write an independent estimate or acceptable range before seeing a suggested number when possible.",
+        "Identify where the first number came from and whether it deserves evidential weight.",
+        "Compare with base rates, completed cases, market alternatives or another independent method.",
+        "Use ranges and assumptions instead of adjusting only from a single point.",
+        "Ask what evidence would justify a large move away from the initial value.",
+        "For AI-assisted estimates, record your view before requesting the model's number.",
+        "Measure whether the mitigation improves calibration rather than assuming awareness solved the problem."
+      ],
+      "boundaryNote": "Not every first number is an improper anchor. A starting value can be highly informative when it comes from a relevant base rate, contract, market price or measured constraint. The problem is unearned influence, not numerical information itself."
+    },
+    {
+      "slug": "cognitive-bias-confirmation-bias",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-confirmation-bias",
+      "headline": "Confirmation Bias: how a preferred explanation changes what counts as evidence",
+      "lede": "Confirmation bias is broader than 'reading things you agree with.' Existing beliefs can shape what we search for, which tests we choose, how we interpret mixed evidence and what we remember later. The practical goal is to make a belief genuinely testable.",
+      "sections": [
+        {
+          "heading": "More information does not help if every search points in the same direction",
+          "paragraphs": [
+            "Suppose you believe a new product feature is the reason conversion improved. You search analytics for supporting segments, ask happy users why they liked the release and collect comments that fit the story. The investigation can look rigorous because it contains many data points. Yet the process may never create a serious chance for the preferred explanation to fail.",
+            "Confirmation bias is an umbrella term for several related patterns. It can appear in information search, hypothesis testing, evidence interpretation and memory. That breadth is important. There is no single behavior that proves the bias, and a confirming test is not automatically irrational. The real question is whether the information strategy can distinguish your explanation from plausible alternatives."
+          ]
+        },
+        {
+          "heading": "Diagnostic evidence beats agreeable evidence",
+          "paragraphs": [
+            "A useful test asks what should happen if your preferred explanation is true and what should happen if a competing explanation is true. If both predict the same result, the result may feel supportive while adding little diagnostic value. This is why collecting another positive example can be much less useful than finding one observation that separates two explanations.",
+            "In product work, an increase after a release could come from the feature, seasonality, a marketing campaign or a change in traffic quality. In health, improvement after a supplement could reflect natural recovery or another treatment. In hiring, one strong interview answer could reflect skill, rehearsal or a familiar problem. Competing hypotheses make the test harder, but they also make the evidence more informative."
+          ]
+        },
+        {
+          "heading": "Define disconfirming evidence before you search",
+          "paragraphs": [
+            "Before opening a browser, dashboard or AI assistant, write down one or two observations that would reduce confidence in your current view. This small step matters because standards tend to move after evidence arrives. Without a pre-defined failure condition, weak supporting evidence can feel persuasive while strong contrary evidence gets explained away as an exception.",
+            "Then search deliberately for the strongest alternative, not the weakest opposing opinion. The goal is not to balance every claim with an arbitrary counterclaim. It is to make falsification possible. Use the same evidence standard on both sides: if an anecdote is too weak to disprove your belief, it is probably too weak to prove it as well."
+          ]
+        },
+        {
+          "heading": "AI can amplify confirmation without intending to",
+          "paragraphs": [
+            "A model will usually follow the frame of the question. Ask 'Why is this migration plan too risky?' and you may receive a coherent list of risks. Ask 'Why is this the right plan?' and you may receive an equally coherent list of advantages. Fluency makes both answers feel researched even when the prompt has selected the direction of search.",
+            "For consequential decisions, ask the model to separate evidence from argument. Request competing explanations, assumptions that would change the conclusion, and evidence that would discriminate among them. Better still, collect primary data or authoritative sources outside the model when the claim is important. AI can help structure falsification, but it should not be treated as independent evidence simply because it can argue both sides."
+          ]
+        },
+        {
+          "heading": "A compact example: the feature everyone already loves",
+          "paragraphs": [
+            "A team believes a redesign improved retention. They interview active users and hear positive comments. That is useful feedback, but active users are already a selected group. A better test also looks at users who left, cohorts before and after the change, acquisition mix and other changes released at the same time.",
+            "If the redesign hypothesis predicts a larger improvement in users who actually encountered the new flow, while a marketing explanation predicts improvement across both exposed and unexposed users, the data can distinguish the stories. Confirmation bias becomes less about personal stubbornness and more about whether the system has been designed to let the favorite explanation lose."
+          ]
+        }
+      ],
+      "checklist": [
+        "State the current hypothesis in one sentence.",
+        "Write at least one plausible competing explanation.",
+        "Define evidence that would reduce confidence before searching.",
+        "Prefer tests whose possible outcomes distinguish the competing explanations.",
+        "Apply the same evidence standard to supporting and opposing information.",
+        "Ask whether your sample excludes the cases most likely to challenge the story.",
+        "For AI-assisted research, request disconfirming evidence and verify important claims outside the model."
+      ],
+      "boundaryNote": "Seeking confirming evidence is not automatically irrational. Positive tests can be efficient in some environments. The concern is a search or interpretation process that protects the preferred explanation from meaningful competition."
+    },
+    {
+      "slug": "heuristic-bias-availability-bias",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/heuristic-bias-availability-bias",
+      "headline": "Availability Bias: when memorable examples stand in for the real rate",
+      "lede": "Vivid, recent or easy-to-recall examples can influence judgments of frequency and probability. Availability is a useful shortcut when recall tracks reality; it becomes misleading when memory is being driven by drama, repetition or selective exposure instead.",
+      "sections": [
+        {
+          "heading": "The example in your head is not the same thing as the denominator",
+          "paragraphs": [
+            "After several dramatic stories about an accident, the risk can feel higher even if the underlying rate has barely changed. The mind has fresh examples ready to retrieve, so the event feels common. Quiet non-events rarely receive headlines, notifications or memorable stories, which makes the mental sample very different from the full population.",
+            "The availability heuristic is not simply 'memory is bad.' Accessible examples can be informative. If you have repeatedly seen the same failure in a stable environment, easy recall may reflect a genuinely common problem. Bias appears when ease of recall is caused by something else: recency, emotion, repetition, media selection, personal experience or a search process that oversamples unusual cases."
+          ]
+        },
+        {
+          "heading": "Risk judgments are especially vulnerable to selective visibility",
+          "paragraphs": [
+            "News, incident channels and social feeds are built around events that happened, not the much larger number of ordinary cases where nothing notable occurred. That asymmetry can distort judgments about travel, security, health, investing and operational risk. The same issue appears inside companies: incident reviews are documented in detail, while successful routine runs disappear into the background.",
+            "A memorable incident should trigger investigation, not automatically a new probability estimate. Ask for the relevant denominator. How many flights, transactions, deployments or patients were exposed? Over what period? Has the rate changed, or did the event merely become more visible? The numerator is often emotionally available; the denominator usually has to be fetched deliberately."
+          ]
+        },
+        {
+          "heading": "Use a reference set that was not selected by memory",
+          "paragraphs": [
+            "When a decision depends on frequency, build a small reference set from records rather than recollection. Look at all comparable deployments, all recent projects, all candidates who passed the same stage, or a trusted external base rate. The sample does not have to be perfect to improve on a handful of vivid examples.",
+            "If formal data are unavailable, use structured sampling. Pick a fixed time window and review every case, not only the ones you remember. Ask another person to build an independent list. Search for ordinary counterexamples. These steps reduce the chance that the mental sample is being chosen by emotional intensity rather than relevance."
+          ]
+        },
+        {
+          "heading": "Repetition creates familiarity, but familiarity is not independent evidence",
+          "paragraphs": [
+            "Availability often interacts with repetition. A claim seen in a video, a newsletter, three reposts and an AI answer can feel well supported because it is easy to retrieve. Yet all five appearances may trace back to one source. The memory signal says 'I have encountered this often,' not 'independent evidence converges on this conclusion.'",
+            "For important claims, trace sources backward and count independent evidence. This also helps separate availability from the illusory truth effect. Availability concerns what comes readily to mind when making a judgment; illusory truth concerns how repetition can affect perceived truth. They can reinforce one another, but they are not the same process."
+          ]
+        },
+        {
+          "heading": "A compact example: the failed deployment everyone remembers",
+          "paragraphs": [
+            "A team had one painful deployment that caused a long outage. Months later, engineers estimate that the new release process is 'very risky' because the incident is still easy to picture. A log review shows that 146 comparable deployments happened in the same period, with three requiring rollback and only one producing a major outage.",
+            "The major incident still matters. It may reveal a failure mode worth fixing. But the decision should distinguish severity from frequency. The team can improve controls for that high-impact scenario while using the full deployment history to estimate how common it actually is. Memory supplies the alert; the dataset supplies the rate."
+          ]
+        }
+      ],
+      "checklist": [
+        "Name the vivid or recent examples currently driving the judgment.",
+        "Find the denominator or a comparable base rate before estimating frequency.",
+        "Use a fixed time window or complete reference set rather than recalled cases.",
+        "Separate severity from probability; a dramatic event can be rare and still important.",
+        "Trace repeated claims back to independent sources.",
+        "Ask whether media, incident logging or personal exposure selects unusual cases.",
+        "Re-estimate after adding ordinary counterexamples to the sample."
+      ],
+      "boundaryNote": "Availability is a heuristic, not automatically a bias. Easy recall can be useful when accessibility reflects true frequency. The diagnostic question is whether the reasons an example is memorable are relevant to the quantity you are trying to estimate."
+    },
+    {
+      "slug": "cognitive-bias-sunk-cost-effect",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-sunk-cost-effect",
+      "headline": "Sunk Cost Effect: why past investment keeps voting on the next decision",
+      "lede": "Money, time and effort that cannot be recovered can still influence what we choose next. The useful correction is not 'always quit.' It is to price the next step from today forward and keep genuinely future value separate from the emotional weight of what is already gone.",
+      "sections": [
+        {
+          "heading": "Past cost is real, but it is not always relevant to the next choice",
+          "paragraphs": [
+            "A team has spent eight months building a product. Adoption is weak. The next three months will cost another €200,000. In the meeting, someone says, 'We cannot stop now after everything we have invested.' The past investment is real and painful, but it cannot be recovered by continuing. The decision in front of the team is what to do with the next €200,000 and three months.",
+            "This is the core of the sunk cost effect: irrecoverable prior investments influence a later choice even though the relevant economic comparison should focus on future costs and benefits. The effect is well supported overall, but it does not make every continuation irrational. Switching costs, learning already achieved, contractual obligations and the value of completing nearly finished work can all affect future value."
+          ]
+        },
+        {
+          "heading": "Completion value and sunk cost can be confused",
+          "paragraphs": [
+            "Suppose a project is 95% complete and the final 5% will unlock a working system. Continuing may be sensible because the remaining investment buys something valuable. That is a future-benefit argument. It is different from saying the project deserves more money because 95% has already been spent.",
+            "This distinction is practical because 'we are almost done' can contain both ideas at once. Ask what the next increment buys. If the same future benefit could be reached more cheaply by another route, compare those routes. If completion creates no meaningful value, closeness to the finish line is not enough. The goal is to isolate the forward-looking case from the desire to make history feel worthwhile."
+          ]
+        },
+        {
+          "heading": "Reprice the decision as if it arrived today",
+          "paragraphs": [
+            "A strong review starts with a reset question: if this opportunity appeared on your desk today, with no emotional ownership of the past, would you invest the remaining resources? You should still include assets created so far if they affect the future. Code, contracts, customer relationships and knowledge may have current value. What you exclude is the need to justify resources that are already irrecoverable.",
+            "Then compare the best realistic alternative. Time and attention are also scarce, so a project can be expensive even when the next cash payment is small. What else could the team ship? What risk would disappear if the commitment ended? Which option has the highest expected value from today forward? Opportunity cost makes the next decision concrete."
+          ]
+        },
+        {
+          "heading": "Design exit criteria before the pain arrives",
+          "paragraphs": [
+            "Sunk costs become harder to ignore when the project is tied to identity, public promises or a visible budget. Precommitment helps because the decision rule is written while everyone is still relatively neutral. Define review dates, success thresholds and conditions that trigger a pause, pivot or stop. The criteria can be changed when new information genuinely changes the model, but changes should be explicit.",
+            "Independent review can also help. Someone who did not sponsor the original decision has less need to defend it. Ask that reviewer to evaluate only the next tranche of investment. This turns a large emotional question—'was the whole project a mistake?'—into a smaller operational question: 'is the next unit of resource still the best use of what we have?'"
+          ]
+        },
+        {
+          "heading": "A compact example: the annual software contract",
+          "paragraphs": [
+            "A company pays for an analytics platform that few employees use. Because the annual contract was expensive, leaders fund training, internal champions and extra integration work to 'get value from the investment.' Some of that follow-up may be sensible if adoption can realistically create future benefit. But the original license payment is already gone.",
+            "The review should compare the cost and expected benefit of the next adoption effort with alternatives such as a smaller tool, a migration or accepting that the original purchase was a loss. Continuing can win that comparison, but only because of the future case. Past spend can explain why the decision hurts; it should not decide what happens next."
+          ]
+        }
+      ],
+      "checklist": [
+        "Write irrecoverable past costs on a separate line from future costs.",
+        "State what the next increment of investment is expected to buy.",
+        "Compare continuation with the best realistic alternative use of money, time and attention.",
+        "Include current assets or completion value only when they affect future outcomes.",
+        "Ask whether you would fund the next step if the project arrived today.",
+        "Use pre-defined review dates and exit criteria for large commitments.",
+        "Have an independent reviewer assess the next tranche when ownership is emotionally strong."
+      ],
+      "boundaryNote": "A sunk cost is not a command to stop. Future value can justify continuation. The diagnostic error is allowing irrecoverable past investment to count as a reason for the next investment when it does not change future costs or benefits."
+    },
+    {
+      "slug": "logical-fallacy-escalation-of-commitment",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-escalation-of-commitment",
+      "headline": "Escalation of Commitment: how a failing course of action keeps attracting resources",
+      "lede": "Escalation of commitment is persistence or additional investment in a course of action despite negative feedback. Sunk costs can contribute, but personal responsibility, self-justification, project structure and organizational incentives can keep the escalation going too.",
+      "sections": [
+        {
+          "heading": "Escalation is a sequence, not a single bad decision",
+          "paragraphs": [
+            "A project misses its target. The sponsor adds two people. The next milestone slips, so the team expands the scope to make the release more attractive. Adoption remains weak, and another rescue plan appears. Each step can be defended in isolation. The pattern becomes visible only when the decisions are viewed as a sequence of additional commitments after negative information.",
+            "This is what separates escalation of commitment from a simple sunk-cost effect. Sunk cost asks whether past irrecoverable investment influences the choice. Escalation describes continued or increased commitment to a troubled path and can involve several mechanisms at once. A decision-maker who publicly chose the original plan may feel stronger pressure to defend it. An organization may reward persistence, hide exit options or make stopping administratively difficult."
+          ]
+        },
+        {
+          "heading": "Grit protects the goal; escalation protects the path",
+          "paragraphs": [
+            "Persistence is not the enemy. Many valuable projects look difficult before they work. The useful distinction is what remains fixed. Grit can stay committed to the outcome while changing tactics, scope or even the chosen solution. Escalation becomes dangerous when the specific path is protected while evidence about the goal is reinterpreted or ignored.",
+            "Ask whether the team can describe a credible condition under which it would stop, pause or switch. If every bad result creates a new reason to continue, the decision rule is no longer responsive to evidence. The issue is not optimism by itself; it is a process in which the preferred course has become difficult to falsify."
+          ]
+        },
+        {
+          "heading": "Make the next tranche a fresh decision",
+          "paragraphs": [
+            "Large commitments are easier to govern when they are broken into explicit tranches. At each gate, compare continue, change and stop options using current information. The default should not be 'continue unless someone proves disaster.' Each tranche should have to earn its place against realistic alternatives.",
+            "Separate decision rights when possible. The person who proposed the original investment can provide essential context, but an independent reviewer can reduce self-justification pressure. Give the reviewer permission to recommend a stop without treating that conclusion as an accusation about the earlier decision. The question is stewardship of future resources, not a trial about who was wrong."
+          ]
+        },
+        {
+          "heading": "Use precommitments, tripwires and evidence that can change the plan",
+          "paragraphs": [
+            "Before a project becomes painful, define the few metrics that would trigger a serious review. Choose measures tied to the intended outcome, not just activity. A release can be busy and still be failing. A tripwire might be a cost increase, a retention threshold, a missed regulatory milestone or a technical risk that remains unresolved after a fixed period.",
+            "Tripwires should open a decision, not automate a conclusion. New information may justify continuing. What matters is that negative feedback cannot be endlessly absorbed by changing the story. Record why a threshold changed and what new evidence supported the change. This protects adaptation without letting every target move whenever the current plan misses it."
+          ]
+        },
+        {
+          "heading": "A compact example: the vendor nobody wants to replace",
+          "paragraphs": [
+            "A company standardizes on a platform and adoption stalls. Instead of reassessing the fit, the sponsor funds training, incentives and custom integrations. Those actions may improve adoption, but each new investment should be evaluated on its own expected value. The original contract and the sponsor's reputation are not future benefits.",
+            "A clean review asks what users actually need now, what switching would cost, what the next adoption campaign is expected to achieve and what evidence would end the effort. If the current vendor still wins, continue. If another route wins, stopping is not proof that the original decision was foolish. It is evidence that the current decision process can update."
+          ]
+        }
+      ],
+      "checklist": [
+        "Review the sequence of commitments, not only the latest decision.",
+        "Define the goal separately from the current solution or path.",
+        "At each funding gate, compare continue, change and stop options.",
+        "Use exit criteria and tripwires agreed before the next bad result.",
+        "Give an independent reviewer authority to assess the next tranche.",
+        "Require explicit evidence when a missed threshold is changed.",
+        "Reward well-executed stops and pivots so persistence is not the only status signal."
+      ],
+      "boundaryNote": "Continuing after bad news is not automatically escalation. New information can make additional investment rational. The concern is a process where commitment grows because of prior ownership or investment while the forward-looking case weakens."
+    },
+    {
+      "slug": "prospect-theory-loss-aversion",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/prospect-theory-loss-aversion",
+      "headline": "Loss Aversion: why the reference point matters more than the slogan",
+      "lede": "Loss aversion describes choices in which losses receive greater subjective weight than comparable gains around a reference point. It is influential and widely studied, but the popular rule that 'losses hurt twice as much as gains feel good' is too simple to use as a universal fact.",
+      "sections": [
+        {
+          "heading": "A loss exists only relative to some reference point",
+          "paragraphs": [
+            "A salary change, investment result or negotiation outcome can feel like a gain or a loss depending on the comparison point. €90,000 may feel like a gain compared with last year's €80,000 salary and a loss compared with an expected €100,000 offer. The objective amount is the same; the reference point changes the psychological frame.",
+            "Prospect theory models choices around gains and losses relative to a reference point, with losses often receiving more weight. That framework has been highly influential. But current evidence does not support treating one fixed coefficient as a law of human behavior. Meta-analyses produce different average estimates, and later re-analyses show that task design and data structure can materially affect the apparent magnitude."
+          ]
+        },
+        {
+          "heading": "Do not import the 'twice as painful' number into every decision",
+          "paragraphs": [
+            "The familiar claim that a loss has roughly twice the psychological impact of an equal gain is memorable because it compresses a complex literature into one number. It can be a rough description of some datasets, but it should not be used as a plug-in constant for product design, policy, investing or negotiation without evidence from the relevant setting.",
+            "Observed loss-sensitive behavior can also interact with probability weighting, attention, ordering of options and how the reference point is constructed. If a decision changes when gains and losses are framed differently, that is worth investigating. It does not automatically reveal a stable personal coefficient that can be measured once and carried everywhere."
+          ]
+        },
+        {
+          "heading": "Make the reference point explicit before interpreting the preference",
+          "paragraphs": [
+            "For an important choice, write down what counts as the reference point and why. Is it the current state, an expectation, a contractual entitlement, a recent peak, a budget target or the best available alternative? Different reference points can create different descriptions of the same outcome. If the reference is unstable, the psychological label may be doing more work than the evidence.",
+            "Then re-express the options as absolute outcomes or matched changes where possible. Keep probabilities and time horizons consistent. Ask whether the preference survives when both options are described from another reasonable reference point. A preference that is stable across frames deserves more confidence than one that appears only under a single loss/gain description."
+          ]
+        },
+        {
+          "heading": "Keep loss aversion separate from sunk costs",
+          "paragraphs": [
+            "Loss aversion concerns how potential or realized outcomes are valued relative to a reference point. Sunk-cost reasoning concerns resources that are already irrecoverable influencing the next choice. They can interact—for example, a person may keep an investment because selling would realize a loss and because a great deal has already been invested—but the decision questions are different.",
+            "For sunk costs, remove past irrecoverable expenditure from the forward calculation. For loss aversion, inspect the reference point and compare matched gains and losses. Using the right distinction prevents a generic 'people hate losses' explanation from replacing the actual structure of the decision."
+          ]
+        },
+        {
+          "heading": "A compact example: refusing a better plan because it feels like giving something up",
+          "paragraphs": [
+            "A team can switch from a current software package to a cheaper alternative with similar capability. The new plan saves money, but it removes two features that are rarely used. The loss of those features feels more concrete than the monthly savings, so the current package keeps winning the discussion.",
+            "A better comparison starts with actual usage, total cost and the outcomes the team needs. Then describe both plans from more than one reference point: what is gained, what is lost and what the absolute end state looks like. If the current plan still wins, that may be a rational preference. The point is to make the reference frame visible enough that it does not decide silently."
+          ]
+        }
+      ],
+      "checklist": [
+        "State the reference point that makes an outcome a gain or a loss.",
+        "Compare matched gains and losses with the same probability and time horizon.",
+        "Re-express options as absolute outcomes when possible.",
+        "Check whether the preference survives another reasonable reference point.",
+        "Do not apply a universal 'losses count twice' coefficient without task-specific evidence.",
+        "Separate potential losses from irrecoverable sunk costs.",
+        "Use behavior in the actual context instead of assuming a stable personal loss-aversion trait."
+      ],
+      "boundaryNote": "Loss aversion is an influential descriptive idea, not a universal constant. Magnitude and even apparent presence can depend on task design, analysis and the reference point used."
+    },
+    {
+      "slug": "cognitive-bias-outcome-bias",
+      "reviewedAt": "2026-09-16",
+      "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-outcome-bias",
+      "headline": "Outcome Bias: how luck can rewrite the grade you give a decision",
+      "lede": "A good result can come from a weak decision process, and a bad result can follow a reasonable choice under uncertainty. Outcome bias appears when knowing the result changes how we judge the earlier decision even though the information available at the time is unchanged.",
+      "sections": [
+        {
+          "heading": "Results matter, but they answer a different question from decision quality",
+          "paragraphs": [
+            "A manager approves a risky launch with little evidence and it succeeds. The choice is praised as bold. Another manager follows a careful process, chooses the option with the best expected value and gets unlucky. The decision is criticized. If the review uses the result as the main grade, luck can become confused with skill.",
+            "Outcome bias does not mean outcomes should be ignored. Results are essential for updating models, measuring performance and learning about the world. The bias concern is temporal: information that became available after the decision is used as if it should have determined the original choice. That makes process quality difficult to evaluate."
+          ]
+        },
+        {
+          "heading": "Run the review twice: first without the result, then with it",
+          "paragraphs": [
+            "The cleanest practical method is a two-pass review. In the first pass, reconstruct the decision using only information available at the time. What options existed? What probabilities or ranges were reasonable? What constraints mattered? Was the evidence standard appropriate? This is the process grade.",
+            "In the second pass, bring the outcome back. Ask what the result teaches about assumptions, base rates, model quality and execution. This is the learning grade. Keeping the passes separate prevents the outcome from contaminating the first question while still using it fully for future improvement."
+          ]
+        },
+        {
+          "heading": "Repeated lucky wins can create dangerous confidence",
+          "paragraphs": [
+            "Outcome bias becomes especially costly when a weak process produces several good results. A team may conclude that an informal method is effective because the scoreboard looks good. In reality, the decisions may have been exposed to hidden risk that simply did not materialize yet. The same issue appears in trading, security, medicine and operational shortcuts.",
+            "Track process indicators that can be evaluated before the outcome: whether alternatives were considered, whether key assumptions were tested, whether risks were sized, whether a base rate was used and whether the decision matched the organization's rules. These do not guarantee success, but they make it possible to distinguish repeatable skill from a run of favorable outcomes."
+          ]
+        },
+        {
+          "heading": "Bad outcomes can contain useful information without proving the decision was bad",
+          "paragraphs": [
+            "A failed result should still trigger investigation. Perhaps the probability estimate was too optimistic, an important variable was omitted or execution differed from the plan. The mistake is jumping from 'this ended badly' to 'the earlier choice was obviously poor' without reconstructing the decision state.",
+            "This distinction protects accountability rather than weakening it. When reviewers identify the exact information or reasoning error, the organization can change a process. When blame is based only on the result, people learn to avoid visible risk, hide uncertainty or choose actions that are easy to defend after the fact."
+          ]
+        },
+        {
+          "heading": "A compact example: the deployment that succeeded despite a broken process",
+          "paragraphs": [
+            "A team skips a required rollback test because the release window is closing. The deployment succeeds. If the post-release review says 'no harm done,' the successful outcome has erased the process failure. The next release may not be as forgiving.",
+            "A process-aware review records that the control was skipped regardless of the result. At the same time, it avoids pretending the successful deployment was meaningless. The outcome can update the technical model, but it does not retroactively make the missing rollback test a good decision. Learning improves when process and result can both be discussed without forcing one to stand in for the other."
+          ]
+        }
+      ],
+      "checklist": [
+        "Evaluate the decision once using only information available at the time.",
+        "Record the process grade before discussing the outcome.",
+        "Then use the result to update assumptions, probabilities and execution lessons.",
+        "Track decision-process indicators that can be assessed before outcomes occur.",
+        "Look for lucky wins as well as unlucky losses.",
+        "Name the specific reasoning or information gap instead of using the result as proof.",
+        "Keep hindsight bias separate: predictability and decision quality are related but different questions."
+      ],
+      "boundaryNote": "Outcome bias is not a rule to ignore results. Outcomes are evidence for future learning. The diagnostic issue is whether the result is being used to judge what the decision-maker should have known before the result existed."
+    }
+  ]
+}
