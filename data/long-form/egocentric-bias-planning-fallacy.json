@@ -1,0 +1,145 @@
+{
+  "slug": "egocentric-bias-planning-fallacy",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/egocentric-bias-planning-fallacy",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/egocentric-bias-planning-fallacy/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:43:29.188Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Project That Ate Your Weekend: Planning Fallacy, Unpacked",
+  "lede": "You promised your partner the bathroom shelves would be up by Sunday. A simple afternoon job, right? A quick run to the hardware store, drill some holes, pop in anchors, and boom—organized towels, instant domestic hero. By Saturday evening, your drill battery is dead, the wall is hiding a metal stud exactly where the bracket must go, your measurement is off by 3 mm on the second shelf, the tile cracks, and the hardware store closed an hour ago. Sunday turns into “two more days,” which sneaks into “maybe next weekend.” Your partner is still nice. The towels still live in a basket.",
+  "sections": [
+    {
+      "heading": "What Is the Planning Fallacy and Why It Matters",
+      "paragraphs": [
+        "That’s the planning fallacy: we underestimate how long tasks will take, even when we’ve done similar tasks before and even when we know we tend to underestimate. The planning fallacy lives in the gap between the tidy story you tell about the future and the messy reality your tasks prefer. In your head, everything follows plan. No delays, no interruptions, no revisions, no missing tools, no “could you jump on a quick call?”",
+        "It’s not laziness or incompetence. It’s how our brains model the world. We look from the inside—our intention, our current motivation, the ideal path. We forget the outside stuff—the base rates, the rain, the server outage, the human who didn’t read the email, the code you’ll need to rewrite because v2 of the API behaves differently. A few points that explain the stickiness: We imagine the best-case path as “typical.” We don’t think it’s the best case. It just feels normal. Research shows people persistently underestimate completion times even after repeated experience (Buehler, 1994); We don’t learn as easily as we think. Even after we blow a deadline, we blame specifics—“this time the vendor was late”—instead of updating our general model of how long this kind of project takes (Kahneman & Tversky, 1979); We commit publicly. Once we tell someone “by Friday,” we anchor on that date and ignore disconfirming evidence. Optimism bias blends in too—we prefer a brighter forecast (Sharot, 2011); We plan linearly for non-linear problems. Work grows when touched: feedback asks for tweaks, small gaps reveal big rework, “five-minute fixes” multiply.",
+        "Why it matters: Personal stress. You steal from sleep and weekends to make promises whole; Team friction. Underestimates create cascading dependencies, missed handoffs, and weekend heroics nobody wanted; Money burn. Projects run long, budgets run dry. IT projects are notorious; many large projects overrun dramatically (Flyvbjerg & Budzier, 2011); Trust erosion. Stakeholders stop believing forecasts. That’s expensive. You don’t need perfection. You need fewer nasty surprises, better buffers, more reality in your estimates, and a system that remembers your past better than your brain does."
+      ]
+    },
+    {
+      "heading": "The Weekend “Tiny” Migration",
+      "paragraphs": [
+        "Let’s walk through some stories. You’ll recognize the beats. Sam’s team needs to move a small service from one cloud region to another. “Half a day,” Sam says. “We already containerized it.” They start Saturday at 9:00 a.m. Docker image builds fail on a minor OS difference. Someone reconfigures a base image. Health checks behave fine locally, but the load balancer in the target region requires different TLS ciphers. By noon, they’re debugging cert chains. They uncover a long-forgotten environment variable set in the old region through a console click—no code references, no IaC.",
+        "At 5:30 p.m., a dependent service rate-limits the new IP range. They file a ticket. The other team’s on-call responds by 8:00 p.m. The rollback works, but now Sunday is dedicated to postmortem and adding missing terraform. The “half day” became two full days and a Monday morning apology. The planning fallacy flavor: assumed “similar” equals “same”; ignored hidden dependencies and institutional memory in someone’s head; counted only the work they controlled, not the work they needed from other teams."
+      ]
+    },
+    {
+      "heading": "The “Quick” Deck for a Pitch",
+      "paragraphs": [
+        "Jules has a pitch Thursday. “I’ll just update last quarter’s deck,” she says. Two hours, max. She opens the deck Wednesday at 8:00 p.m. New data arrived that morning. The charts don’t match the narrative anymore. She asks analytics for a fresh cut; they reply in an hour. The new chart raises questions that need annotations. A VP suggests adding a customer story; Jules pings Customer Success. The story needs legal clearance.",
+        "By 1:30 a.m., she trims the deck to fit time constraints. By 2:00 a.m., her brain decides the intro slide feels flat. She tweaks phrasing until 3:00 a.m., then sleeps four hours, and the pitch still goes fine but at a personal cost. The planning fallacy flavor: “updating” is often rethinking plus fielding input; dependencies on other teams rarely fit your clock; small quality tweaks expand to hours at midnight."
+      ]
+    },
+    {
+      "heading": "The Renovation That Inhaled a Paycheck",
+      "paragraphs": [
+        "Two friends plan a budget kitchen refresh. “Paint the cabinets, new hardware. Two weekends.” They watch a YouTube video. How hard could it be? They remove doors. The hinges hide stripped screws. Paint doesn’t adhere because the prior owner used a glossy lacquer. They need to sand. The sander clogs; they buy new disks. Dust everywhere. They discover a slight warp in two doors.",
+        "The paint shows it. They buy filler, sand again, prime twice, and learn about cure times. They rush reassembly Sunday night. Doors stick. They rehang three doors—twice. Total: four weekends, extra supplies, and a new respect for people who do this daily. The planning fallacy flavor: underestimated prep time and cure time; assumed linear “do this, then that” with no rework; ignored learning curve and tool constraints."
+      ]
+    },
+    {
+      "heading": "The Feature That Looked Like 3 Story Points",
+      "paragraphs": [
+        "A developer estimates a “simple” export-to-CSV button. The API response size slows the app. They add streaming. CSV delimiter issues appear with embedded commas. They handle encoding. Then someone asks for Excel compatibility and a “one-click email to self” flow with attachment. Security flags potential PII in exports.",
+        "They add an approval gate. Support wants basic filters to reduce noise. “Three points” widens into two sprints. The planning fallacy flavor: hidden complexity surfaces only when hands touch code; adjacent requirements appear once people see progress; nonfunctional constraints (security, performance) expand scope."
+      ]
+    },
+    {
+      "heading": "Recognize and Avoid It",
+      "paragraphs": [
+        "Students told to estimate when they’ll finish their thesis typically predict earlier than actual completion. Even those who know about the planning fallacy don’t improve much without structure (Buehler, 1994). The planning fallacy flavor: vague tasks without clear endpoints absorb unlimited time; motivation fluctuates, and people forget to factor that into their plan.",
+        "If these feel like your calendar, good. You can’t fix what you don’t see. The next part gives you handles. You don’t have to become a pessimistic robot. You need friction against your optimism, and a system to remember base rates for you. Here’s what works in real teams."
+      ]
+    },
+    {
+      "heading": "Switch to the Outside View",
+      "paragraphs": [
+        "Inside view: “Here’s how I’ll do it this time.” Outside view: “How long did similar tasks take me or others, regardless of how?” Grab a few past instances. What was the actual time? Take the median. That’s your baseline. Don’t accept “but this time is different” unless you can point to specific changes you can quantify.",
+        "If your last three blog posts took 6, 8, and 11 hours, call it 8–11 hours for a new one, not 4 because you feel motivated today; In project land, this is “reference class forecasting” (Flyvbjerg, 2006). It’s boring. It saves lives and budgets."
+      ]
+    },
+    {
+      "heading": "Estimate as Ranges, Not Points",
+      "paragraphs": [
+        "Points lie. Ranges admit reality. Use two numbers: a 50% estimate and a 90% estimate. T50: If you did this 10 times, in 5 you’d beat this number; T90: In 9 out of 10, you’d finish by this number. If your T50 and T90 sit too close, you’re fooling yourself.",
+        "Most work has fat tails—rare problems blow up timelines. Optional but useful: three-point estimate (optimistic, most likely, pessimistic) and compute a weighted average. PERT uses (O + 4M + P)/6. Don’t get fancy; the point is to see the spread."
+      ]
+    },
+    {
+      "heading": "Break Work Small, Then Name Dependencies and Interruptions",
+      "paragraphs": [
+        "Don’t estimate “launch the feature.” Estimate “write migration script,” “update API contract,” “write docs,” “create metrics dashboard,” each fitting into a day or less. Smaller chunks reduce variance and reveal hidden tasks earlier. If a chunk still feels fuzzy, it’s not ready to estimate. Spike it—time-box a short exploration (90–120 minutes) to learn enough to estimate.",
+        "Write down what you need from others: approvals, data, reviews, deliveries. Ask them for their T50/T90, not their hope. If someone says “I’ll try for today,” translate to “likely tomorrow or later.” Also capture expected interruptions: standing meetings, childcare windows, support duties. Don’t pretend you’ll have eight straight hours. You won’t."
+      ]
+    },
+    {
+      "heading": "Place Buffers Deliberately, Then Pre-mortem the Plan",
+      "paragraphs": [
+        "Don’t sprinkle buffer everywhere and call it done. Place it: At integration points. Glue code and handoffs always cost more; Around unknowns. New tech? Add breathing room; In the calendar. Reserve slack days, not “soft hours” that get cannibalized by meetings. A good rule: if a task touches production, include a rollback and fix time. If a task depends on external approvals, add a waiting buffer and set a decision deadline.",
+        "Before starting, imagine the plan failed. You missed the deadline. Ask, “What most likely caused it?” List the top three reasons. Mitigate those specifically. Example: For the export feature, likely failures: security concerns late, performance bottleneck, Excel formatting edge cases. Mitigation: early security review; test on max dataset; decide Excel vs CSV scope up front. This moves risks from “surprises later” to “decisions now.”"
+      ]
+    },
+    {
+      "heading": "Track Estimates Against Actuals and Protect Focus Windows",
+      "paragraphs": [
+        "Don’t build a spreadsheet you’ll abandon. Use a simple habit: For significant tasks, jot estimate, and later jot actual; Tag by category: writing, coding, admin, design; Review weekly: where do you overrun? Adjust next week’s ranges. A tiny dataset beats memory. Over a month, you’ll see your bias in cold numbers. A notes app or a lightweight time tracker works fine for this.",
+        "Planning fallacy grows in fragmented attention. Make real focus blocks: Two 90-minute windows a day works wonders; Turn off inbox and chat. Put your phone in another room; Tell people you’re heads down. Put it on your status; End with a quick plan for the next block (“next action: write test for X”). Your estimates assume focus. If you can’t protect it, expand the estimates."
+      ]
+    },
+    {
+      "heading": "Report Ranges Honestly and Create Tripwires",
+      "paragraphs": [
+        "When you report timelines, don’t sell. Share T50/T90 and risks. Example: “T50: Wednesday EOD; T90: Friday noon. Risks: waiting on SSO test account; unknown performance under 10k rows. I’ll update daily by 3 p.m.”. Stakeholders can plan around this. You will sound more credible and get fewer “is it done yet?” pings. Set points where you re-evaluate and escalate decisions.",
+        "“If by Tuesday 1 p.m. the import still fails on data set B, we simplify scope to only support A for launch.”; “If legal doesn’t sign off by Thursday, we remove testimonials from the deck.”. Tripwires turn slipping time into clear choices instead of quiet panic. If you notice two or more, pause and add friction: outside view, range, dependencies."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "A few often swirl with planning fallacy. They’re cousins, not twins. Optimism bias: The general tendency to expect good outcomes. Planning fallacy is about time estimates specifically, but optimism bias fuels it (Sharot, 2011). Hofstadter’s Law: “It always takes longer than you expect, even when you take into account Hofstadter’s Law” (Hofstadter, 1979). It’s witty truth: we underestimate even when we know we underestimate. The fix is structural, not just mental notes. Murphy’s Law: “Anything that can go wrong, will.” That’s more fatalism than bias. The practical takeaway: plan for failure modes, not for perfection.",
+        "Parkinson’s Law: “Work expands to fill the time available.” This is about pacing and procrastination. You can both underestimate total time and then let the task swell to fill your last buffer day. Timeboxing and clear done criteria help. Scope creep: Requirements grow during execution. It’s not a cognitive bias, but it’s fuel for underestimation. Planning fallacy ignores the likelihood of scope growth. Student syndrome: Starting work late and rushing before the deadline. Even with a good estimate, if you start at the last minute, you still miss.",
+        "Sunk cost fallacy: Throwing more time at a bad plan because of past investment. It compounds estimation mistakes by refusing to cut scope or pivot. Illusion of control: Overstating how much you can influence external factors. Leads you to underweight dependencies and approvals. These often pile together. You reduce all of them by adopting the outside view, adding buffers, and writing down decisions."
+      ]
+    },
+    {
+      "heading": "Practical Moves You Can Use Today",
+      "paragraphs": [
+        "Here’s a compact game plan you can adopt this week. The 3 x 3 Rule: Before committing, force yourself to list three similar past tasks with actual times, three specific risks, and three dependencies. If you can’t, your estimate is fiction. The 50/90 Calendar Promise: For any meaningful deliverable, share T50 and T90. Put the T90 on the shared calendar as the committed date. Privately aim at T50. If you hit T50, great. If you drift, your promise was honest. The 1-Day Slice Rule: No task bigger than a day survives the plan. Split or spike until it fits.",
+        "The “Meet Reality Monday” Ritual: Every Monday, review last week’s estimates vs actuals for 10 minutes. Update any ongoing project timelines. Adjust buffers. No self-shame allowed; you’re building a model. The Tripwire Email: Include a tripwire in your kickoff note. “If X hasn’t happened by Y, I’ll propose Z.” Now it’s socialized and easier to act on. The Precommit Stop: When asked for a date in a meeting, say, “Let me check dependencies and give you T50/T90 by 3 p.m.” People respect clarity more than confident guesses.",
+        "The Uninterrupted Two: Book two daily 90-minute focus windows and defend them like a raccoon defends a shiny thing. Move meetings as needed. The Done Definition: Write a checklist for “done” before you start. It prevents late surprises (“oh right, we needed docs”). This is not about making you slower. It’s how you go from heroics to reliability."
+      ]
+    },
+    {
+      "heading": "Stories from the Other Side: What It Looks Like When It Works",
+      "paragraphs": [
+        "A product team we worked with used to promise “two-week” features that routinely took four. Morale dipped. They introduced T50/T90 on every story, required a pre-mortem for anything touching auth, and installed a “risk review” with security on day one. They also capsized their backlog into slices under one day. The first month, estimates were still shaky. By month two, their T90 dates became boring. Stakeholders eased up, and the team stopped coding on Saturdays.",
+        "A freelancer designer started tracking actuals for every deliverable and forced herself to ask for client content before designing. She switched to “two timelines”: one with client feedback in 24 hours, one with client feedback in three days. She explained the difference up front. Clients chose. Her weekends came back. A researcher turned their “I’ll write the paper in a week” pattern into a schedule: Monday outline, Tue/Wed draft methods/results, Thursday intro and related work, Friday polish and submit to co-author, with a T90 published two weeks out. They added a tripwire: if co-author feedback doesn’t arrive in 48 hours, they schedule a 15-minute call. Paper quality went up because the structure made room for thinking. These aren’t hacks; they’re small structure changes that fit real brain chemistry."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Bring More Truth Into Time",
+      "paragraphs": [
+        "The planning fallacy is stubborn. It’s the smile your brain wears when it looks at a blank calendar and forgets the dog, the inbox, the updates, the mess. You don’t need to crush optimism to fix it. You need to give optimism structure, and give reality a seat in the meeting. Start with simple moves: use the outside view, estimate ranges, break work small, name dependencies, add buffers with reasons, run a quick pre-mortem, track actuals lightly, and set tripwires. Protect your focus, and talk to people like adults. You’ll ship more, stress less, and your promises will sound—and be—true.",
+        "You deserve weekends that stay weekends. Let’s make time honest together. Buehler, R., Griffin, D., & Ross, M. (1994). Exploring the planning fallacy; Flyvbjerg, B. (2006). From Nobel Prize to project management: Reference class forecasting; Flyvbjerg, B., & Budzier, A. (2011). Why your IT project may be riskier than you think; Hofstadter, D. (1979). Gödel, Escher, Bach (Hofstadter’s Law); Kahneman, D., & Tversky, A. (1979). Intuitive predictions: Biases and corrective procedures; Sharot, T. (2011). The optimism bias."
+      ]
+    }
+  ],
+  "checklist": [
+    "You feel a strong “I’ll be quick” impulse",
+    "Your estimate is a single number, not a range",
+    "You haven’t checked how long similar tasks actually took",
+    "The plan assumes uninterrupted time",
+    "Dependencies on other people are “should be fine.”",
+    "You can’t name three plausible failure modes",
+    "You’re mixing “do the work” with “decide what the work is.”",
+    "You promise timing in a meeting without your calendar open",
+    "Did I look up actual times for at least three similar tasks?",
+    "Did I write a T50 and a T90 estimate?",
+    "Did I split work into day-sized chunks or smaller?",
+    "Did I list top three risks and top three dependencies?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"well-supported for time estimates; size and causes vary by context\": The planning fallacy is a well-documented tendency for people to predict their own task completion times too optimistically. The effect has been observed across different kinds of tasks, but it is not a rule that every plan will run late. Project overruns can also come from changing scope, dependencies, incentives, poor data, deliberate underestimation, or genuinely unusual events, so a late project should not automatically be diagnosed as a planning fallacy. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

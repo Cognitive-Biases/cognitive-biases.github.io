@@ -2,53 +2,112 @@
   "slug": "probability-bias-subadditivity-effect",
   "reviewedAt": "2026-09-16",
   "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/probability-bias-subadditivity-effect",
-  "headline": "Subadditivity Effect: why one big risk feels smaller than its parts",
-  "lede": "Ask someone for the chance of 'a delay' on a project and you get one number. Ask separately about vendor problems, staffing gaps and testing overruns, and the sum usually comes out larger. The subadditivity effect is that gap between a packed category and its unpacked parts — and it can quietly reshape forecasts, risk registers and insurance decisions.",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/probability-bias-subadditivity-effect/content.tsx",
+  "originalPublishedAt": "2025-09-02T05:53:56.075Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Puzzle of the Missing Probability: Why Wholes Feel Smaller Than Their Parts",
+  "lede": "You’re at an airport counter late at night, deciding whether to buy travel insurance. The clerk says, “Covers any reason.” You shrug. Then she adds, “Covers flight cancellations due to weather, mechanical failure, pilot strike, air traffic disruptions, and airport closures.” Suddenly it sounds safer to buy. Same policy. Same coverage. Different framing. Your sense of “how likely this is” just jumped because the risk got unpacked into pieces.",
   "sections": [
     {
-      "heading": "The same event, two descriptions, two probabilities",
+      "heading": "What is Subadditivity Effect – the whole seems less likely than the sum of its parts and why it matters",
       "paragraphs": [
-        "In probability theory, a compound event and the sum of its mutually exclusive parts must be equal. The chance of rain this weekend is the chance of rain on Saturday plus rain on Sunday, with no overlap counted twice. Human judgment does not always respect that rule. People often assign a smaller probability to the packed event than the total they give when the same event is split into explicit components.",
-        "A classic illustration is a medical or weather judgment. 'Death from natural causes' can receive a lower judged probability than the combined estimates for heart disease, cancer, stroke and other specific causes. Nothing about the world changed between the two questions. Only the description changed. That description sensitivity is the core of the effect, and it is why the pattern matters for anyone who produces or consumes forecasts."
+        "That jump has a name: the Subadditivity Effect. In plain terms: when we break an uncertain event into specific parts, we judge the whole event as less likely than the sum of its parts. Subadditivity lives in your mental calculator. When you hear “major city power outage,” your brain gives that a probability P. When you hear “power outage from heat wave,” plus “from cyberattack,” plus “from equipment failure,” your brain tends to assign numbers to each, and those numbers add up to more than P. That violates basic probability: the probability of the whole (any of these causes) should equal the sum of the probabilities of mutually exclusive parts. Yet we often overshoot when we unpack.",
+        "This isn’t random. It’s how human attention works. Unpacked details feel richer, more vivid, more supported. Psychologists call this Support Theory: unpacking events adds “support” that boosts perceived likelihood (Tversky & Koehler, 1994). Rottenstreich and Tversky extended this showing how emotion and vividness amplify it (1997). Fox and Tversky found that asking experts for component probabilities inflated total risk compared to asking for the overall risk (1998). If the world were just coin flips, this would be a cute curiosity. But we run projects, price products, buy insurance, prioritize features, budget health screenings, and write press releases. Subadditivity quietly distorts all of it.",
+        "Why it matters: You may overpay for “unpacked” protection. If a policy or pitch lists many specific bad things, your gut inflates the overall risk; You may overcommit resources. Breaking a problem into parts makes each one feel likely enough to plan for; the team ends up hedging against everything; You may be manipulated by framing. Marketers, lobbyists, even your well-meaning colleagues can steer your perceptions by decomposing or bundling risks; You may lose forecasting precision. Summed component probabilities that exceed the whole are a red flag for poor calibration. Subadditivity doesn’t make you foolish. It makes you human. But you can learn to see it, correct it, and even use it wisely when you need to teach or persuade without distorting reality."
       ]
     },
     {
-      "heading": "Why unpacking a category can raise its judged probability",
+      "heading": "The project manager’s “doom list”",
       "paragraphs": [
-        "The main theoretical account is support theory, developed by Amos Tversky and Derek Koehler in the 1990s. The idea is that a judged probability is not read directly from a stable internal belief. It is constructed from the support that comes to mind for the focal hypothesis relative to its alternatives. When a category is unpacked, each component becomes easier to imagine and evaluate, so the total judged support tends to grow.",
-        "This is not a claim that people cannot do arithmetic. Most people know that parts cannot exceed the whole when the whole is clearly visible. The problem is that the whole is often not clearly visible. A packed label such as 'project risk' hides the parts, and the parts are where the imagination works. Give each part its own line, and the mind finds fresh reasons to worry about each one."
+        "Stories beat definitions. Here are everyday scenes where subadditivity sneaks in. Sam runs a software launch. The team estimates a 20% chance of delay if asked directly. Then stakeholders push for a “risk breakdown.” They list causes with rough probabilities: vendor API change (12%), security review backlog (10%), last-mile bugs (15%), key engineer out sick (8%), data migration misfit (10%).",
+        "People nod solemnly. Add them and you’re at 55%—nearly triple the original. Some causes overlap. Some would never happen together. But each line item feels plausible on its own, so no one challenges the math. Budget gets padded, the launch slips “just in case,” and the company pays an invisible tax to a framing trick."
       ]
     },
     {
-      "heading": "The effect is real, but it is not a law",
+      "heading": "Buying insurance at the kiosk — and the medical screening frenzy",
       "paragraphs": [
-        "The evidence review for this concept rates it as established with boundary conditions. That phrase matters. Unpacking usually raises judged probability, but not always. Experiments on typical versus atypical unpacking have shown that when the listed components are unusual or hard to believe, the unpacked total can come out lower than the packed judgment — a reversal, sometimes called superadditivity.",
-        "Two common misunderstandings follow. First, the effect is not proof that breaking a risk down always gives a better estimate; a detailed list can be more persuasive without being more accurate. Second, it is not a license for manipulation. Using a dramatic breakdown to inflate a client's fear of a remote threat exploits the same mechanism the effect warns about. The honest use is consistency checking, not emotional engineering."
+        "Back to the airport. The clerk knows unpacking boosts sales. “Covers flight cancellations” versus “cancellations from weather, mechanical issues, crew availability, air traffic control, strike.” Same probability of “any cancellation.” The unpacked version feels more likely. People buy at higher rates.",
+        "A clinic promotes a new screening bundled with examples: detects early cancer, pre-cancerous lesions, inflammation suggestive of disease, and markers of infection. Patients rate the chance that “this test will detect something important” higher than when told simply “detects serious disease.” The chance didn’t change. The unpacking made vague danger feel tangible."
       ]
     },
     {
-      "heading": "Keep subadditivity separate from the availability heuristic",
+      "heading": "Election night forecasts and security audits that never end",
       "paragraphs": [
-        "Subadditivity is often confused with the availability heuristic, and the confusion is understandable because both involve what comes easily to mind. The difference is in the lever. Availability concerns how easily examples are retrieved from memory — a vivid plane crash makes flying feel dangerous. Subadditivity concerns how the question itself is carved up — the same risk feels different when it is described as one event versus several.",
-        "They can work together. If unpacking a category happens to surface vivid components, retrieval ease and description effects reinforce each other, and the estimate moves further. In a review, it is worth asking both questions separately: did the estimate change because the wording changed, and are the easily recalled examples actually representative? Different causes call for different corrections."
+        "A newsroom drafts two headlines: “Chance of upset victory: 25%” and “Chance of upset if urban turnout surges, if late-breaking scandal sticks, or if third-party vote splits.” Voters judge the second as more likely. The details feel like “reasons,” and reasons boost belief. An executive asks, “What’s the chance we face a serious breach this year?”",
+        "The CISO says 10–15%. A board member asks for detail. The breakdown: phishing credential theft, vuln exploit, vendor compromise, misconfiguration, insider negligence. Each gets a number, and the sum walks to 40%. They demand a quadrupled budget. The CISO spends the next quarter explaining overlap and realistic baselines. The board preferred vivid parts over a sober whole."
       ]
     },
     {
-      "heading": "A compact example: the 'small' chance of a late launch",
+      "heading": "Sports betting slips, disaster planning, and legal arguments",
       "paragraphs": [
-        "A product team is asked for the probability that a launch slips past its date. Thinking about it as one packed event, the lead says 20%. The number feels honest and reassuring. Then the team lists the mutually exclusive ways a slip could happen: a late external approval at about 10%, a staffing gap at about 8%, integration rework at about 9%, and everything else at about 5%. The components sum to roughly 32%.",
-        "Which number is right? The point of the exercise is not to crown the larger figure the winner. It is to notice that a twelve-point gap appeared from wording alone. The team should now reconcile the two: check whether some components were double-counted, whether the packed estimate quietly assumed away categories, and whether either number matches the base rate from past launches. After that reconciliation, the forecast is worth acting on. Before it, the forecast is mostly a mood."
+        "A bettor judges “Team A wins” as 60%. Then she lists paths: early lead and hold (30%), late comeback (25%), opponent injury and momentum swing (15%). Now she feels 70–75% confident and doubles her stake. She just paid a tax to subadditivity. Residents believe “major earthquake this decade” is 5%. Ask about “major quake or dangerous aftershocks causing damage” and collect numerically assessed components, you might get summed beliefs above 10–15%. Budget debates swing on these gut numbers, not on geophysics.",
+        "A prosecutor presents one narrative of guilt: 40% in jurors’ minds. Then she lays five separate strands: motive, means, opportunity, witness identification, trace evidence. Each strand feels like “some probability.” Jurors’ collective estimate rises, though the coherent whole didn’t change. Good defense attorneys rebuild it: “These strands aren’t independent. Don’t add them.”"
+      ]
+    },
+    {
+      "heading": "Product roadmaps and personal life decisions",
+      "paragraphs": [
+        "A founder says, “There’s a 30% chance this feature increases retention.” Investors ask for drivers. The founder lists: faster onboarding (15%), more delight in week one (12%), smoother reactivation (10%). Now retention “feels” likely because the pieces look likely. Money flows based on feeling, not base rates. You ask, “How likely is it that moving cities will make me happier?”",
+        "You think 40%. Then you list reasons: more sun (20%), shorter commute (15%), new friend circles (25%), better food (10%). Suddenly you feel 60–70% confident. Your creative brain sold you a story with details. The math didn’t change. If you spot the common shape—details making the sum feel larger than the whole—you can start correcting."
+      ]
+    },
+    {
+      "heading": "Start with the whole, then allocate",
+      "paragraphs": [
+        "Recognition first. Then tools. When you feel a probability rising while evidence only gets more granular, suspect subadditivity. Details are not data. Granularity is not gain. Subadditivity thrives when: You’re asked to estimate parts and then encouraged to add; The list contains vivid, concrete causes that carry emotion; Independence assumptions are unclear or false; You face accountability (“Explain your number”), so you unpack to sound thoughtful; You get incentives for thoroughness over accuracy. Okay, how to dodge it. When you must unpack, set the overall probability first—before listing parts. Then allocate portions of that whole to mutually exclusive components. The total stays anchored. Write it down and treat it as a budget.",
+        "Example: “Chance of launch delay: 20%.” Now split that 20% across exclusive causes: vendor issue 6%, security backlog 5%, late bugs 6%, illness 3%. Force them to sum to 20%. If you add a new cause, you must subtract from others. It hurts—which is good. It exposes trade-offs."
+      ]
+    },
+    {
+      "heading": "Normalize with a probability budget",
+      "paragraphs": [
+        "If you must partition, define components so they don’t overlap. “Vendor change” and “API deadline slip” may be the same event. Merge them or clarify boundaries. Ask: Could more than one of these happen in the same scenario? If yes, you’re double counting. Pull outside base rates first: historical delay rates, industry benchmarks, actuarial tables, prior-year incidents. Set your whole estimate with baserates, then adjust slightly with inside-view reasons. This keeps detail from hijacking the number. In forecasts, this is “outside view first.”",
+        "Create a visual “100-point” budget for the whole event. As you assign points to parts, enforce the cap. Spreadsheet conditional formatting works: cell turns red when total ≠ whole. Budgeting engages your sense of scarcity. Scarcity is the antidote to runaway sums."
+      ]
+    },
+    {
+      "heading": "Beware of “any of these” phrasing and ask calibration questions",
+      "paragraphs": [
+        "“Any of the following could cause a delay.” That phrase triggers subadditivity. Reframe to “Exactly one of the following” if you intend mutual exclusivity, or model combination probabilities explicitly if multiple can co-occur. Never just sum unless the parts are strictly exclusive.",
+        "If none of these parts happened, could the whole still happen? If yes, your decomposition isn’t exhaustive; Could two of these occur together? If yes, your parts aren’t exclusive; If I didn’t know these details, what probability would I give? That’s your anchor; What real-world frequency would this imply? Compare to baserates."
+      ]
+    },
+    {
+      "heading": "Flip the frame, track your hit rate, and separate persuasion from estimation",
+      "paragraphs": [
+        "Ask the same question in packed and unpacked forms to yourself or your team. If the unpacked sum exceeds the packed probability, you’ve found subadditivity. Reconcile by revising parts, not by inflating the whole. Create a simple probability hygiene checklist (see end). Include “No adding probabilities unless parts are exclusive” and “Start whole, then allocate.” Make it boring and routine. Boring beats bias. Keep a forecast log. For any binary event, record the probability you gave and whether it happened. Over time, check calibration: Did your “30%” events occur 30% of the time? If your component probabilities are more inflated than your whole-event probabilities, you’ve got a subadditivity signature.",
+        "In meetings, label when you’re persuading versus estimating. Unpacking is great for persuasion (“Here are five reasons”). Estimation needs discipline (“Here’s the whole-event number; parts are allocations”). Don’t cross the streams. Forecaster spreadsheets with sum-to-one constraints; Bayesian calculators that force priors and likelihoods."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Cognitive biases love company. Subadditivity hangs out with a few lookalikes. Conjunction Fallacy: People sometimes rate P(A and B) higher than P(A). That’s different, but cousins. Conjunction error overweights specific stories; subadditivity overweights unpacked components. The former violates P(A and B) ≤ P(A). The latter violates additivity when parts are exclusive. Availability Heuristic: Vivid, easily recalled examples feel more likely. Unpacking makes causes more available, which inflates part probabilities. Availability is the mechanism; subadditivity is the outcome.",
+        "Anchoring and Adjustment: You anchor on a number and adjust insufficiently. With subadditivity, you often anchor on 0 for each part, then adjust up repeatedly, never adjusting the whole down. You end up with an inflated sum. Overprecision: Narrow confidence intervals despite uncertainty. When unpacking, folks assign precise component numbers that look scientific. That polish hides the additive mistake. Base Rate Neglect: Ignoring general frequencies in favor of case specifics. Unpacking pulls attention to specifics, crowding out base rates and widening the additivity gap.",
+        "Support Theory: The formal underpinning. Decompose an event; perceived support increases; judged probability rises (Tversky & Koehler, 1994). If you like the math, start there. Planning Fallacy: Underestimating time and costs. Curiously, teams often overestimate risk when unpacked but still underestimate completion time. You can be subadditive on risks and optimistic on delivery at the same time. Humans are talented. Knowing the cousins helps you triangulate what’s going on in your head."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Don’t pay the unpacking tax",
+      "paragraphs": [
+        "You’re not broken because a list of reasons sways you. Your brain equates detail with truth. That shortcut usually works—until it touches probability math. Subadditivity is a friendly liar. It whispers, “These five plausible things mean the big thing is very likely.” It feels solvable—just buy the policy, add the buffer, say yes to everyone’s favorite mitigation. But you pay for that feeling with waste. You can do better with a few steady habits: start whole, allocate parts, enforce budgets, check base rates, and test packed versus unpacked. Make the boring math visible. Give your team a shared language to catch it in the moment: “Let’s not pay the unpacking tax.”",
+        "Because most of the time, you don’t need more courage—you need better defaults. Walk away with this: Details are for understanding; totals are for deciding. Don’t let the sum of the parts outvote the whole. References (for the curious): Tversky, A., & Koehler, D. (1994). Support theory: A nonextensional representation of subjective probability; Rottenstreich, Y., & Tversky, A. (1997). Unpacking, repacking, and anchoring: Advances in support theory; Fox, C., & Tversky, A. (1998). A belief-based account of decision under uncertainty."
       ]
     }
   ],
   "checklist": [
-    "Write the packed probability first, before anyone lists components.",
-    "Unpack the same event into mutually exclusive, collectively exhaustive possibilities and estimate each one.",
-    "Compare the packed estimate with the unpacked total and record the gap.",
-    "Check each component for overlap and double counting before trusting the sum.",
-    "Compare both totals against a base rate or reference class from similar past cases.",
-    "If the estimate swings with wording, fix the representation before acting on the number.",
-    "Never present an unpacked breakdown as more accurate only because it is more detailed."
+    "Start with the whole probability first. Write it down",
+    "Define parts to be mutually exclusive and collectively exhaustive",
+    "Allocate the whole across parts; enforce that sums match the whole",
+    "Anchor on base rates before adding inside-view reasons",
+    "Test both packed and unpacked framings; reconcile differences",
+    "Avoid summing unless exclusivity is guaranteed",
+    "Document assumptions (independence, overlap, data sources)",
+    "Review with a neutral “probability cop” who didn’t make the parts",
+    "Log forecasts, compare outcomes, recalibrate"
   ],
-  "boundaryNote": "The subadditivity effect helps you inspect how description changes a probability judgment. It does not prove that the unpacked estimate is more accurate, that a given breakdown is complete, or that anyone violated logic in the real world — only that the judgment moved with the wording."
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"established with boundary conditions\": People often give a larger total probability when an event is unpacked into separate possibilities than when the same event is judged as one packed category. The effect is not universal: how the possibilities are described and how typical they are can change or even reverse an unpacking effect. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
 }

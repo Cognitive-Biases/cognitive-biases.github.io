@@ -2,53 +2,132 @@
   "slug": "framing-effect-default-effect",
   "reviewedAt": "2026-09-16",
   "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-default-effect",
-  "headline": "Default Effect: what people really choose when doing nothing chooses for them",
-  "lede": "When one option is already selected, people take it more often — and designers, policymakers and product teams often read that uptake as proof of preference. The default effect is real and well documented, but its size varies greatly across contexts, and staying with a pre-selected option is not evidence that anyone strongly wanted it.",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/framing-effect-default-effect/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:00:54.420Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Power of the Pre-Set: How the Default Effect Quietly Runs Your Day",
+  "lede": "You didn’t choose your ringtone, your thermostat schedule, or half the settings in your phone. They just showed up. And most days, you live with them.",
   "sections": [
     {
-      "heading": "A default is the answer to 'what happens if I do nothing?'",
+      "heading": "What is Default Effect — when you stick with the pre-set option and why it matters",
       "paragraphs": [
-        "A default is the option or outcome that applies automatically when a person makes no active choice. A checkbox that is already ticked, a subscription that renews unless cancelled, a savings plan you join unless you opt out, a privacy setting that ships enabled — all of these are defaults. The pattern behind the default effect is simple: pre-selecting an option reliably increases how often people end up with it, compared with a version of the same choice where nothing is pre-selected.",
-        "This makes the default one of the quietest and most powerful parts of any form, policy or interface. Someone decided what 'doing nothing' means. That decision may be careful and user-serving, or it may serve the choice architect's goals, or it may be an accident of a settings page nobody reviewed. Either way, the default is a design decision — it just rarely looks like one from the user's side of the screen."
+        "A few winters ago, a friend of ours, Maria, moved into a new apartment. She loved the place—big windows, creaky floors, warm light at 4 pm—but her first electricity bill made her wince. She had unknowingly been “defaulted” into a pricey plan with variable rates. It wasn’t a scam. It was simply the option already selected when she created the account. She could have picked a cheaper one. She didn’t. She clicked “Continue.” That’s the Default Effect: most of us stick with the pre-set option, even when changing it would help us. This guide is our field note and toolbox. We want you to see it, name it, and use it for good.",
+        "The Default Effect is the tendency to accept the option presented as the default—whether that’s a checkbox pre-ticked, a plan pre-selected, a rule pre-written, or a slider set to “on.” We don’t always do it. But we do it often enough that designers, policy makers, and subscription companies rely on it. Why it matters: The default is invisible until it’s not. You don’t notice it when it matches your expectations. You only notice it when it bites—higher fees, unexpected emails, a privacy level you wouldn’t have chosen; Defaults scale choices at population level. Set a default once; it changes what thousands or millions of people do. Opt-out retirement enrollment dramatically raises participation (Madrian & Shea, 2001). Opt-in organ donation dramatically lowers it (Johnson & Goldstein, 2003); Your future self lives inside today’s default. The plan you “meant to revisit later” becomes your financial life, your health routine, your calendar noise, your data footprint. Defaults matter because they draw a path of least resistance. Most days, we walk it."
       ]
     },
     {
-      "heading": "Why defaults stick: three routes, not one mechanism",
+      "heading": "The retirement plan you didn’t “forget”—you followed the default",
       "paragraphs": [
-        "There is no single psychological mechanism behind every default effect, and the research points to several routes that can overlap. Changing the pre-selected option can require effort and attention: you have to notice the setting, understand the alternatives, and act. A default can also work as an implied recommendation — if the company, the government or the software picked this option, maybe they know something. Experiments on policy defaults show that people do partly read defaults this way.",
-        "A third route is that the pre-selected option can start to feel like the existing state, something already yours, so switching away feels like giving something up rather than choosing freely. Which route dominates depends on the decision and the interface. A buried checkbox on a mobile screen mostly exploits effort and inattention. A workplace pension default mostly carries the weight of an institutional endorsement. Treating every default effect as one mechanism leads to bad fixes, such as writing longer explanations when the real problem was friction."
+        "Let’s make this real. Defaults live in boring places. That’s where they do the most work. A mid-sized software company changed its 401(k) policy. New hires used to join the plan only if they filled a form (opt-in). Few did. Then HR flipped to automatic enrollment at 3% contribution, defaulting into a target-date fund unless employees picked something else. Participation soared within months.",
+        "But many people stuck with the 3% rate. Not because 3% was optimal—most planners recommend at least 10% for many workers—but because it was the default, and it felt endorsed. The firm raised the default rate to 6% later and set auto-escalation. People followed that too. The lesson: defaults don’t just change whether we act. They change how we act."
       ]
     },
     {
-      "heading": "The evidence is strong — and the variability is the point",
+      "heading": "Green energy sign-ups and airplane add-ons",
       "paragraphs": [
-        "Default effects are among the best-documented findings in choice research. A 2019 meta-analysis covering 58 studies found a substantial average effect of defaults on choice. That is the solid part of the story. The rest of the story is heterogeneity: the same meta-analysis found strong variation across studies, including settings with little effect and some with effects in the opposite direction. Later reviews of choice architecture confirm that results do not transfer automatically from one domain to another.",
-        "Two popular claims go beyond this evidence. The first is that a default is a universal behavioural lever that will work anywhere; the variability says otherwise, and the honest position is that a default is a design decision that needs testing in its real context. The second is that high uptake proves people strongly prefer the default. It does not. Uptake measures the combined pull of effort, endorsement and endowment on top of whatever preference existed. A 90% opt-in rate under one default and a 90% opt-out rate under the mirror-image default cannot both be read as what people truly want."
+        "A European town wanted more households on renewable energy plans. They didn’t launch a marketing blitz. They simply made green energy the pre-selected option during signup, still priced a bit higher, with a clear way to pick conventional energy. Enrollment in green plans jumped. Same menu, different default. People preferred the path already laid down (Dinner et al., 2011).",
+        "You’re booking a flight. Seat selection? Pre-selected “standard seat.” Travel insurance? Pre-checked “recommended.” Carbon offset? Sometimes checked, sometimes not. Your total price sneaks upward unless you actively deselect. You might not remember the toggles. You remember the sting at checkout. This is the Default Effect weaponized—nudging by inertia instead of persuasion."
       ]
     },
     {
-      "heading": "Default effect is not the same as status quo bias",
+      "heading": "Hospital order sets and cookie banners",
       "paragraphs": [
-        "The two are easy to confuse because both make one option unusually sticky. The separating question is: why is this option privileged? In a default effect, a form, policy, system or interface defines what happens under inaction — someone designed the automatic outcome. In status quo bias, the person already has, uses or occupies an option, and the current state itself gets extra weight, with no designer necessarily involved.",
-        "The distinction matters because the diagnostics differ. To test a default, compare the same choice under a different default or under active choice, keeping the options otherwise comparable. To test status quo bias, ask what the person would pick if none of the options were already current, then add genuine switching costs back in. Real situations often contain both: a long-time user keeps an old privacy configuration partly because the setup is familiar, and a new user accepts personalised ads partly because they ship enabled. Same screen, different forces, different remedies."
+        "Not all defaults are sneaky. In one hospital, surgeons and anesthesiologists created a post-op “order set” with evidence-based defaults: pain regimen dosing, mobility timelines, fall-risk checks. Clinicians could change anything, but the default made best practices the path of least resistance. Complications fell. Nurses were grateful. The care team had always wanted consistency; the default finally made it easy.",
+        "A website tells you “Accept All” or “Manage Preferences.” “Accept All” glows in vibrant color. The toggles under “Manage Preferences” default to on. You want privacy, but you need your train time, your recipe, your file. Click. Done. You leave more trace than you intended. The default wins when time is short and the button is big."
       ]
     },
     {
-      "heading": "A worked example: the pension enrolment screen",
+      "heading": "Notification zoos, printers and renewing subscriptions",
       "paragraphs": [
-        "An employer runs a retirement savings plan. Under the current design, new employees join only if they actively opt in, and after a year about 40% are enrolled. HR switches to automatic enrolment with the same opt-out freedom, and enrolment rises to roughly 85%. Leadership announces that employees clearly want the plan. That conclusion overreaches: the jump shows the default moved behaviour, but it does not separate genuine appetite for saving from effort, inattention and the implied endorsement of the employer.",
-        "A better reading starts by treating the default as a tested design, not a discovered preference. The team can check how many employees ever revisit their contribution rate, compare outcomes with an active-choice version at a small pilot site, and look at whether the default contribution level fits different salaries and obligations. If most people stay at a contribution rate that is too low for their situation, the default helped enrolment and quietly hurt saving — both things can be true at once. What to do differently next time: measure what happens after enrolment, not only enrolment, and report uptake alongside an active-choice benchmark rather than alone."
+        "How many notification types does your favorite app enable by default? Mentions, likes, comments, new features, promotions, “we miss you”—all on. You meant to tune them. Then a busy week happened. The default writes your attention schedule until you rewrite it. A university sets campus printers to double-sided by default. Students and staff can still choose single-sided, but most don’t. Paper use drops. No angry memos needed. The right default did the job.",
+        "You try a seven-day trial. The default: auto-renewal plus a “special annual plan.” Days fly. You pay for the year. You promise yourself to set reminders next time. You are too human for your calendar. Companies sell to that calendar."
+      ]
+    },
+    {
+      "heading": "Calendars, safety defaults and school privacy settings",
+      "paragraphs": [
+        "Scheduling tools default to 30-minute blocks, visible to anyone inside your org. New meeting? Default “Invite optional.” You end up with a mosaic of “short” meetings that are neither short nor optional. You didn’t create a chaotic calendar; your defaults did. A modern car defaults traction control to “on,” lane assist on, speed-limiter warnings set. You could disable them, but the car re-enables at every ignition. That’s a default with teeth. It’s paternalistic on purpose. You accept it, because the stakes justify it. A school rolls out a learning platform. Parental access is defaulted “on,” student-to-student messaging “off,” class directory visible to classmates only. Parents praise the safer baseline; teachers can loosen per class. The default prevents predictable harm without getting in the way of teaching.",
+        "There are a hundred more—forms that default to “Mr.”, medical portals that default to sharing with primary care, maps that default to toll roads or not. When in doubt, look for what the system did before you arrived. That’s the default. It’s not neutral. It’s a decision wearing camouflage."
+      ]
+    },
+    {
+      "heading": "For individuals: spot, pause, and set your own defaults",
+      "paragraphs": [
+        "You don’t need a PhD. You need a pencil and a habit: look for the option selected for you. Most of the Default Effect melts when you insist on seeing the pre-selection. Here’s how we work it, as people and as makers. Start with your most boring choices. That’s where the autopilot runs. Make the time cost obvious. If an interface offers “Change Settings (5 minutes), Continue (2 seconds),” you’ll choose speed. Name it out loud. If the stakes are high (money, privacy, health), give yourself the five minutes; Translate defaults into outcomes. “Auto-renew enabled” becomes “This will charge me $99 next year”;",
+        "Shift attention from color to choice. Many designs use color to signal “good” defaults. Practice ignoring it. Scan for “pre-checked” boxes and toggles. Treat them like “Are you sure?” prompts; Decide with a small ritual. When signing up for anything, ask two questions: “What is the default?” “Do I want it?” That’s under ten seconds, and it catches more than you think; Set beneficial defaults for yourself. Not all defaults are external. You can set a default grocery list, a default bedtime alarm, a default “no meetings on Fridays,” a default saving transfer right after payday. Make your own autopilot."
+      ]
+    },
+    {
+      "heading": "For teams and leaders: design defaults like you’ll answer for them",
+      "paragraphs": [
+        "Defaults are power. You don’t want a lawsuit or a conscience ache. You do want better behavior with less nagging. Pick defaults that reflect your users’ informed goals. If most people will choose a safer, cleaner, or more cost-effective option when informed, make that the default; Make divergence easy and visible. Ethical defaults never trap. Show the alternative clearly. No tiny gray links; Explain why the default exists.",
+        "A single sentence: “We set double-sided printing to save paper; you can change it below.” People appreciate the honesty; Avoid “dark defaults.” Auto-enrolling into marketing lists with a maze to opt out? Pre-checking expensive add-ons? It works short-term, erodes trust long-term; Test your defaults with people unlike you. New users, older adults, screen reader users, people with low bandwidth. If the default makes them feel tricked or stuck, it’s the wrong default or the wrong copy."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "The Default Effect overlaps with other mental shortcuts. They get mixed up. Here’s how to tell them apart without drowning in jargon. Status Quo Bias. This is the big sibling: a general preference for the current state of affairs (Samuelson & Zeckhauser, 1988). The Default Effect is one mechanism—when the “current state” has been pre-selected for you. If there’s no pre-selection, status quo bias still nudges you to keep things the same. Inertia. Less psychological, more mechanical. Inertia is “I don’t change because it’s effort.” The Default Effect uses inertia by making change costly in clicks, time, or attention. But inertia also shows up without defaults: you won’t switch banks because… inertia.",
+        "Loss Aversion. We feel losses more than gains (Kahneman & Tversky, 1979). Defaults lean on this by framing changes as “losing” something already given—like losing the “free trial” or “recommended” protection when you untick a box. Choice Overload. Too many options cause paralysis. A strong default narrows the choice and reduces overload. Without a default, you might leave the shelf empty-handed. With a default, you walk away with something—good or bad (Iyengar & Lepper, 2000).",
+        "Omission Bias. We judge harms from actions as worse than harms from inaction. Staying with the default feels like inaction, so if things go wrong, we feel less responsible. That makes defaults safer-feeling than they are. Endowment Effect. We overvalue what we “own.” A default can create a sense of ownership: “It’s the recommended plan; it’s mine now.” Switching away feels like giving up something. Anchoring. The default sets a reference point. A 3% retirement contribution anchors you low; moving to 10% feels “too high” even if it’s sensible. These effects don’t fight. They stack. That’s why defaults can be so powerful: they pull on multiple threads at once."
+      ]
+    },
+    {
+      "heading": "Money: opt-ins, opt-outs, and invisible fees",
+      "paragraphs": [
+        "A few places where a careful default flips from “annoying” to “life-changing.” Banking. New account pages often default overdraft protection “on,” sometimes with per-use fees. Decide whether you want the fee-forgiveness tradeoff. If you’re prone to close-call balances, consider leaving it off and setting alerts instead. Retirement. If your employer auto-enrolls you at a low rate, treat that number as a starting point, not a recommendation. Raise the default to your target within the first paycheck, and set auto-escalation yearly. If there’s a target-date fund as default, check fees. If you have a better low-cost index fund, switch.",
+        "Subscriptions. Hunt down auto-renew toggles right after sign-up. Put the renewal date in your calendar with the link to cancel in the event notes. If the product offers “annual by default,” ask whether monthly costs slightly more but saves you from inertia. Insurance. Airline “trip protection” defaults are infamous; they often provide minimal value at inflated cost. Decline unless you’ve read coverage. For real insurance, like renters or disability, the default is often “you never got around to it.” Here the Default Effect hurts by omission. Set a date, get quotes, decide once, and move on."
+      ]
+    },
+    {
+      "heading": "Health: forms, portals, and reminders",
+      "paragraphs": [
+        "Prescription auto-refills. Convenient, but sometimes keep filling meds you no longer need. Review the list. Keep auto-refill for long-term meds; turn it off for one-off prescriptions. Health portals. Many default to sharing lab results automatically with certain providers. If you care, check privacy settings, but remember that smoother info sharing often improves care. Fitness apps. They default notifications to keep you engaged, sometimes to nag you into unhealthy guilt loops. Keep the default reminders you actually respond to, like a gentle “walk now,” and turn off social pressure if it stresses you.",
+        "Organ donation. If your region is opt-in, your default is no donation. If you believe in donation, register now. If it’s opt-out and you have objections, honor them by opting out. You do not have to be a passenger to your jurisdiction’s default."
+      ]
+    },
+    {
+      "heading": "Work: meetings, tools, and attention",
+      "paragraphs": [
+        "Calendar defaults. Set default meeting length to 25 minutes, not 30. Make video off by default if bandwidth is scarce. Block “focus time” as a default recurring appointment. Collaboration tools. New channels and notifications often come “on.” Trim them. Keep mentions and direct messages; mute marketing announcements and “fun” channels if they drain you. Document sharing. Default to least privilege. Start with “comment only” for external partners unless collaboration requires more. Too open? You leak. Too closed? You stall. Defaults are balance knobs.",
+        "Recruitment. Application forms often default to “upload resume and also fill all fields.” Don’t be that team. Use parsing, or shorten forms. For interview panels, default to a diverse group; make exceptions intentional, not accidental. Thermostat schedules. The factory default can waste power. Set a simple schedule that fits your actual day. Parental controls. Start restrictive for new devices, loosen as your kid shows responsibility. Write down the rules. The default should be respectful, not punitive.",
+        "Password managers. Default to unique, long passwords and 2FA. Let the manager pick; the default should be “strong without thinking.” Media. Autoplay is designed to keep you hooked. Turn it off by default, and you’ll watch what you chose, not what was next."
+      ]
+    },
+    {
+      "heading": "As a maker: the ethics compass",
+      "paragraphs": [
+        "You own your defaults, whether you write them or inherit them. Write the “why” next to every default in your spec. If the why is “We make more money,” try again. “Users succeed faster without surprises” is better. “Improves safety, saves time” is best. Offer reversible defaults. A single toggle should undo the default. No “contact support to cancel.” Publish your default philosophy. “We default to privacy, clarity, and reversibility.” Then live it.",
+        "Measure success beyond conversion. Track opt-outs and complaints. If many people reverse your default, it’s wrong—or your copy is. Build helpers, not traps. After 30 days, nudge: “You’re on annual plan. Still useful?” After a year of zero logins, pause billing until confirmation. You’ll lose a little short-term revenue and gain something more expensive: trust."
+      ]
+    },
+    {
+      "heading": "Quick avoidance moves",
+      "paragraphs": [
+        "We promised a checklist earlier. Here’s the extended version to keep in your notes app. Use it when you sign up for anything or build anything. Take 90 seconds to customize onboarding. The return on those 90 seconds is usually massive; Turn off auto-renew and autopay for trials unless you’re sure you want them;",
+        "Set up inbox filters as your default. Fewer surprises, more control; Use a password manager to kill “default passwords.” Put critical renewal dates in your calendar immediately. If you make the moves routine, you stop fighting with defaults one by one. You become the person who sets them."
+      ]
+    },
+    {
+      "heading": "Wrap-up: set your own path of least resistance",
+      "paragraphs": [
+        "We love defaults when they catch us kindly. A chair pulled out before we sit. A light that clicks on at sunset. A calendar that guards our focus time. We bristle when defaults drive us into fees, spam, or noise. The Default Effect isn’t a villain. It’s a force. It flows where effort is lowest. You can drift with it, or you can move a few stones and change the current. Here’s what we’re asking you to do this week: Pick one subscription, one notification, and one money setting. Find the default. Change it if it doesn’t serve you; If you build things, pick one default you control. Rewrite it to favor your users. Add a one-sentence “why” beside it; Tell a friend what default you changed and why. Say it out loud. That one sentence will stick.",
+        "You already live with defaults. Now live with yours. References (selective and practical): Madrian, B., & Shea, D. (2001). The power of suggestion: Inertia in 401(k) participation and savings behavior; Johnson, E., & Goldstein, D. (2003). Do defaults save lives?; Dinner, I., Johnson, E., Goldstein, D., & Liu, K. (2011). Partitioning default effects: Why people choose not to choose; Samuelson, W., & Zeckhauser, R. (1988). Status quo bias in decision making; Kahneman, D., & Tversky, A. (1979). Prospect theory; Iyengar, S., & Lepper, M. (2000). When choice is demotivating."
       ]
     }
   ],
   "checklist": [
-    "Write down exactly what happens if the user does nothing, before discussing conversion or uptake.",
-    "Make the default visible on screen and make switching away take no more steps than staying.",
-    "Run a small comparison against an active-choice version of the same choice when the decision is consequential.",
-    "Report default uptake next to that active-choice benchmark, never as standalone proof of preference.",
-    "Check which mechanism dominates — effort, implied endorsement or endowment — before choosing a fix.",
-    "Measure downstream outcomes such as contribution levels, settings changed later or cancellations, not only initial uptake.",
-    "Re-test the default in the real context after any design change, since effect size varies across domains."
+    "Is any option pre-selected, pre-checked, or pre-filled?",
+    "If I do nothing, what happens next month or next year?",
+    "Does the default benefit me, or the provider, or both?",
+    "How easy is it to change? Can I do it now without losing my place?",
+    "If this default were reversed, would I be upset?",
+    "What would my future self thank me for?",
+    "If I’m designing this: can I explain the default to a skeptical friend in one sentence?",
+    "Would I feel fine if our default appeared on the front page of a newspaper with our name on it?"
   ],
-  "boundaryNote": "The default effect helps you inspect how choice architecture shapes behaviour: it shows that the pre-selected option gained an advantage from being pre-selected. It does not prove that people strongly prefer that option, that the default improved their welfare, or that an effect measured in one domain will appear at the same size in another."
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"well supported, highly context-dependent\": Pre-selecting an option often increases the chance that people choose it, but the size of the default effect varies greatly across domains and designs. A 2019 meta-analysis of 58 studies found a substantial average effect together with strong heterogeneity, including some studies with little or even reversed effects. Staying with a default should therefore not be treated as a direct measure of strong preference or as proof that the default improved welfare. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
 }
