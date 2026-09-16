@@ -1,0 +1,138 @@
+{
+  "slug": "logical-fallacy-plan-continuation-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-plan-continuation-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/logical-fallacy-plan-continuation-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:11:36.219Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Itch to Keep Going: How Plan Continuation Bias Trips Us Up (and What to Do Instead)",
+  "lede": "You’ve booked a weekend cabin. The forecast turns ugly. Your windshield wipers are struggling, the road signs blur, and your phone chirps with another severe weather alert. You’re only 40 minutes away. You mutter, “We’ve come this far,” and push on.",
+  "sections": [
+    {
+      "heading": "What Is Plan Continuation Bias and Why It Matters",
+      "paragraphs": [
+        "That moment—the press to keep going because that was the plan—is plan continuation bias. Definition: Plan continuation bias is the tendency to stick with a plan even when changing conditions signal that the plan no longer makes sense. We see it in cockpits and operating rooms, yes, but also in road trips, product launches, job hunts, and relationships. It’s the quiet urge behind “just one more mile,” “let’s ship anyway,” and “we’ve already invested so much.”",
+        "Plan continuation bias (PCB) goes by a friendlier nickname: “press-on-itis.” It pops up when you’ve set a goal, picked a route, and then the world changes—weather, timing, market, patient vitals, team morale—but your mental steering wheel locks. It’s not laziness or stubbornness. It’s how brains save energy. Once we commit, we compress uncertainty. We want to be the person who follows through. Plans become identity. And in hectic contexts—tight deadlines, fatigue, or social pressure—switching costs feel heavier than they are.",
+        "Even pros fall for it. Aviation researchers flagged PCB after analyzing accidents where crews pushed to land despite deteriorating conditions, ignoring feasible go-around options (Wiegmann & Goh, 2000). In medicine, studies link plan adherence to missed changes in patient status, especially under time pressure (Croskerry, 2009). In software, teams carry features over sprints “to stay on schedule,” then bleed time on hotfixes. PCB matters because it hides in good intentions. Keep going is usually admirable. But when the situation shifts, finishing the original plan isn’t perseverance—it’s inertia.",
+        "Tension between the original plan and new signals—and you resolve it by shrinking the signals instead of revising the plan; You explain away fresh data: “It’s probably fine.” “It’s just one spike.” “Users will figure it out.”; You phrase dissent as delay: “If we stop now, we’ll waste everything.”. What PCB feels like: You’ve invested a lot (sunk costs); You’re close to the finish line (goal-gradient effect); There’s social pressure to deliver (accountability); You’re tired or time-boxed (ego depletion); The alternative plans feel blurry (low optionality). PCB thrives when: The fix is not never finishing plans. It’s designing plans that expect change and make it easy—normal, even—to pivot when the world speaks up."
+      ]
+    },
+    {
+      "heading": "1) The Flight That Should Have Landed Later",
+      "paragraphs": [
+        "Stories beat theory. Here are true-to-life slices, stripped of sugar. A regional jet descends for landing. Winds shift. Rain thickens. The first officer suggests a go-around. The captain says they can make it—“we’re stabilized”—and continues. The aircraft lands long on a wet runway, brakes squeal, reverse thrust roars, and the plane stops uncomfortably late. No injuries, but a close call.",
+        "Investigators often find a familiar pattern: a clear, safe alternative existed—divert, hold, go around—yet the crew stuck to the original plan, especially near the end of a long flight with passengers waiting (Dismukes, 2006). The goal-gradient effect is potent: the runway is in sight; so is the end of a long day. Just finish. The lesson: make “go-around” the default if any major parameter is out of tolerance, not a failure to avoid. Treat change as designed-in, not exceptional."
+      ]
+    },
+    {
+      "heading": "2) The Release That Burned a Weekend",
+      "paragraphs": [
+        "A startup plans a Friday release. Late Thursday, a QA engineer spots a race condition that corrupts a small subset of user data under load. The patch exists, but integration tests need hours. A product manager says, “Our announcement is queued, and the VP told investors. We’ll monitor and hotfix if needed.” They ship. Friday night turns into a war room. Data inconsistencies ripple. Support tickets pile up. Monday’s all-hands tastes like dry copper. They did ship on time. They also shipped a mess.",
+        "The tell: “We’ll fix it live” was a euphemism for “We can’t afford to change the plan.” They could. They just didn’t assign the same weight to future cleanup as they did to present commitments."
+      ]
+    },
+    {
+      "heading": "4) The Hike That Turned Sideways",
+      "paragraphs": [
+        "An ER team admits a patient with suspected sepsis. The sepsis protocol starts antibiotics A and B. Thirty minutes later, the patient develops hives and wheezing—clear allergic response. The nurse suggests switching antibiotics. The resident hesitates: “Let’s complete the protocol and reassess.” The attending steps in, stops the drugs, administers epinephrine, and pivots to alternatives. Outcome: patient stabilizes. Protocols save lives, but professionals build “stop points” into them for a reason (Croskerry, 2009). Plan continuation bias shrinks your reading of new data. Good teams rehearse changing course quickly.",
+        "Two friends aim to summit before sunset. Clouds roll in, and a light hail starts. They check the map: the ridge gets exposed. A group passes them, still ascending. The two trade looks. One says, “It’s just a squall.” The other says nothing—they’ve been training for weeks. They continue, summit, and descend in the dark on slick rock, one sprained ankle later. PCB loves sunk training and proximity to goals. No villain, just a plan that became a costume that fit too tightly."
+      ]
+    },
+    {
+      "heading": "6) The Hiring Loop That Won’t Die",
+      "paragraphs": [
+        "Two people set a two-year wedding plan: save money, move in, set a date. Meanwhile, one starts to feel smaller. Conversations flatten. The calendar fills with to-dos instead of tenderness. They tell themselves, “It’s just stress. After we move, it’ll get better.” They keep checking boxes. They don’t check on the relationship. PCB can grow in the heart, too. Saying “let’s pause and talk” is a pivot. Sometimes, it’s the only good plan left.",
+        "A team designs a textbook hiring process: resume screen, recruiter call, take-home, panel, final round. Halfway, candidate signals misalignment on role scope. The team pushes through: “We’ve already invested time; let’s finish the loop.” They hire. Three months later, they part ways. Everyone wonders why the misalignment wasn’t a deal-breaker earlier. Plan continuation bias is expensive. Pausing felt awkward and “wasteful.” But finishing cost more."
+      ]
+    },
+    {
+      "heading": "Telltale Signs You’re Slipping",
+      "paragraphs": [
+        "You won’t delete plan continuation bias. You can grab the wheel sooner. That requires preparing for change while your head is clear, and building rituals that force your eyes to the road, not the rearview mirror. You notice new information but downplay it with language like “probably,” “just,” “temporary,” “edge case.” You feel an urge to hurry decisions near “the finish line.”",
+        "You measure progress only by proximity to the original plan, not by fit to current reality; Dissenters get labeled “negative” instead of “informative.” You treat options as unavailable because they’re inconvenient, not impossible; You keep saying “after X, it’ll get better” without specifying how or what you’ll measure. When you see one of these, call a “plan double-check.” Literally name it. Naming breaks the spell."
+      ]
+    },
+    {
+      "heading": "The Move: Pre-Commit to Flexibility",
+      "paragraphs": [
+        "Flexibility is cheapest when you buy it early. Build plans with explicit “change ports.” Decision gates. Insert clear points where you must re-evaluate with fresh data. “If error rate > 0.5%, we delay release.” “If wind > 25 knots tailwind on final, go around.” “If the customer enters procurement stasis, we stop active engagement after two weeks unless something concrete changes.” Tripwires. Write simple, easy-to-measure signals that force a pause. Not just “if risky,” but “if we slip past 2 p.",
+        "m., we reschedule for Monday.” Defaults. Set a default action for out-of-bounds conditions. In aviation, the go-around is the built-in default if stabilized approach criteria are not met. In code release, the default could be “if any P0 defect is open Thursday 5 p.m., slip the release.” Make the safe choice automatic; Option inventory. Maintain a short list of viable “plan Bs” you can activate quickly. Options you name beforehand become options you can actually take."
+      ]
+    },
+    {
+      "heading": "The Rituals: Pivot Without Drama",
+      "paragraphs": [
+        "Short pre-briefs. Before you start, take 3 minutes: “What could change? What will we do if it does? Who can call a stop?” Write it down. Frictionless; Mid-course check-in. Set a timer. When it buzzes, pause. Ask: “Would we start this plan today knowing what we now know?” If no, pivot. Don’t renegotiate the question. Answer it; Red-team role. Assign someone to argue for change or stopping.",
+        "Rotate the role. Give them air cover: “Red-team has veto power on safety and integrity.” N of 1 veto. Establish a standard that any single team member can call a safety stop. No discussion necessary. Resuming requires a formal check; Post-mortem practice. After you finish, ask, “Where did we cling?” and “What signal did we discount?” Rewrite the plan for next time."
+      ]
+    },
+    {
+      "heading": "Make Room for Emotion",
+      "paragraphs": [
+        "Replace “We’ve already invested so much” with “What’s the best choice from here?”; Replace “We don’t have time to change course” with “What’s the cost of not changing course?”; Replace “It’s probably fine” with “What evidence would convince a neutral observer?”; Replace “We’re almost there” with “Are conditions still valid?”; Replace “We promised” with “Do we still promise this outcome, not just this schedule?”. Language is a lever. Pull it.",
+        "PCB is as much about feelings as facts. You may feel embarrassed to admit conditions changed. You may fear disappointing your team or boss. Say it: “I’m attached to finishing. I’m worried about letting folks down.” That’s not weakness. That’s the pressure valve that keeps your plan flexible and your outcomes sane. Print it. Put it near your monitor, cockpit, or kitchen whiteboard."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Plan continuation bias sits in a messy family. Knowing the cousins helps you spot the right fix. Sunk cost fallacy: You keep going because you’ve already invested time, money, or pride. PCB often uses sunk costs as fuel. The fix is the same: decide based on future payoffs, not past costs (Arkes & Blumer, 1985); Escalation of commitment: You double down after receiving negative feedback, often to justify earlier choices. PCB can morph into escalation if you start adding resources to prop up the failing plan (Staw, 1976); Goal-gradient effect: You work harder as you near a goal, which can blind you to new risks. PCB loves the finish line buzz (Hull, 1932); Confirmation bias: You overweight evidence that supports your plan and discount evidence that contradicts it (Nickerson, 1998). PCB is the behavior; confirmation bias often supplies the evidence selection;",
+        "Loss aversion: You prefer avoiding loss to acquiring equivalent gain (Kahneman & Tversky, 1979). Pausing or pivoting feels like a loss, so you keep going—PCB in action; Status quo bias: You prefer the current path because change feels costly. PCB is status quo bias applied to an active plan under changing conditions; Optimism bias: You believe outcomes will skew positive for you. With PCB, optimism says “it’ll work out,” so you press on; Groupthink: The group suppresses dissent to maintain harmony. PCB gets teeth when the team avoids conflict to stay “aligned” (Janis, 1972); Overconfidence: You overestimate your ability to handle issues. PCB becomes “we can manage it” rather than “should we change it?” Each cousin suggests a tool: pre-mortems for optimism bias, dissent roles for groupthink, stop-loss rules for sunk costs. Together, they make a nice kit."
+      ]
+    },
+    {
+      "heading": "A Few Research Anchors Worth Knowing",
+      "paragraphs": [
+        "Wiegmann & Goh (2000) analyzed aviation incidents and identified plan continuation errors as a factor, especially near approach and landing phases. The finding: formal decision gates reduce accidents; Dismukes (2006) at NASA found that expectation bias and confirmation bias link with plan continuation, particularly under time pressure and fatigue; checklists and standard calls interrupt the slide;",
+        "Croskerry (2009) in clinical decision-making mapped how cognitive biases—sunk cost, anchoring, and PCB—contribute to diagnostic error; he recommends cognitive forcing strategies to pivot; Kahneman (2011) summarizes the mental economy behind shortcutting re-evaluation: we conserve cognitive energy by sticking to prior commitments; installing friction helps. You don’t need to cite these mid-decision. But it helps to know this is human, not personal failure."
+      ]
+    },
+    {
+      "heading": "Shipping Software: Plan Continuation Bias",
+      "paragraphs": [
+        "Let’s get painfully specific. We’ll write the moments you can steal. Scenario: Thursday 4:30 p.m. You find a bug that occasionally deletes attachments when uploaded in parallel. You planned to release Friday. Say: “We have a P0 data-loss bug. Our release rule is ‘no P0s at T-24h.’ Default is to slip.",
+        "Do we have a mitigation that reduces severity to P2 today?” If no: “We’ll announce a 72-hour slip. We protect user data first. We’ll post patch status at 10 a.m./3 p.m. daily.” After: Add a tripwire to your release checklist and a canary test. Script: Tiny policy that pays off: Pre-write your delay message. The friction is emotional, not technical."
+      ]
+    },
+    {
+      "heading": "Sales Cycle: Plan Continuation Bias",
+      "paragraphs": [
+        "Scenario: Weather deteriorates at noon. You’re behind schedule. Ask: “Would we start the summit now with this weather and time? No? Then we turn back to the last safe exit.”; If someone resists with “We’re so close”: respond, “Close is not a safety factor. Conditions are.”; After: Mark a turnaround time on your map before you start. Script: Tiny gear tweak that helps: A headlamp you commit to using by a set time regardless of progress.",
+        "Scenario: The buyer hasn’t scheduled procurement for 6 weeks, citing “internal priorities.” You’ve had four “next week” promises. Email: “To respect both our calendars, we’ll pause active prep until we get a confirmed procurement date. We’re here when you’re ready.”; Internal note: “Stop-loss reached. Free up team capacity.”. Script: Tiny habit: Assign a “pipeline stop-loss” date when you move an opp to “Commit.”"
+      ]
+    },
+    {
+      "heading": "Team Project: Plan Continuation Bias",
+      "paragraphs": [
+        "Scenario: You’re training through nagging knee pain. A physio flags a potential tear and prescribes rest. Ask yourself: “If I hadn’t paid for this race, would I run it? If the answer is no, I don’t run.”; Commit publicly to a friend: “I’m withdrawing to preserve long-term health.”. Script: Tiny reframe: Swap “Did I quit?” with “Did I protect what I value next month?” Scenario: Mid-quarter, two dependencies slip. Your plan’s central milestone is no longer reachable.",
+        "Team check: “New reality: Dep A and B slip five weeks. Our old plan can’t produce the promised outcome. Option A: re-scope to deliver a thin slice that solves X. Option B: pivot to Y which is unblocked. Which wins for customers?”; Decision rule: Vote, then record why you chose it and what would make you revisit. Script: Tiny doc: A one-page “Plan, Changes, Decision” log. Keep it boring and obvious. Use it. Share it. Reuse it."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Permission to Turn the Wheel",
+      "paragraphs": [
+        "We get it. Plans are warm blankets. They make messy worlds feel navigable. Sticking with a plan is part of how we finish marathons, degrees, and companies. But sometimes the bravest thing you can do is say: “The world changed. So will we.” Plan continuation bias isn’t a flaw to erase; it’s a pattern to notice. Install gates and tripwires. Give language to what you’re feeling. Measure progress by fit to reality, not distance from a promise you made to a past version of you.",
+        "When the weather shifts, you can still reach a beautiful place. It might not be the cabin you booked. It might be hot cocoa, a different trail, a nap and a new plan. All of those count as winning. Turn the wheel. We’ll ride shotgun."
+      ]
+    }
+  ],
+  "checklist": [
+    "What has changed since we made the plan? Name at least three changes",
+    "What assumption did we make that is now shaky?",
+    "If we weren’t already doing this, would we start it today?",
+    "What are our current options, ranked by safety and value?",
+    "What’s the smallest reversible step we can take next?",
+    "What signal would make us stop right now? Has it happened?",
+    "Who has veto power, and do they see all the data?",
+    "If we continue, what is the worst credible outcome? Are we willing to own it?",
+    "If we stop or pivot, what do we preserve? What do we actually lose?",
+    "What decision will we be proud of a week from now?",
+    "Pause. Name the bias: “We might be in plan continuation.”",
+    "Check assumptions: list 3 that have changed"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
