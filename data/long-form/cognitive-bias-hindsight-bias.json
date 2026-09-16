@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-hindsight-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-hindsight-bias",
+  "headline": "Hindsight Bias: how to review a decision without rewriting the past",
+  "lede": "Once the outcome is known, the past becomes easier to explain than it was to predict. Hindsight bias matters because that new sense of obviousness can distort postmortems, blame, forecasting and the lessons we carry into the next decision.",
+  "sections": [
+    {
+      "heading": "The problem is not remembering the outcome. It is forgetting the uncertainty.",
+      "paragraphs": [
+        "Imagine a product launch that misses its target. A week later the warning signs seem to line up perfectly: one customer hesitated, one metric softened, one engineer raised a concern. The story now feels clean. But before launch, those signals were mixed with other signals that pointed in different directions. The outcome did not create new evidence about what people knew at the time; it changed which evidence now feels important.",
+        "Hindsight bias is useful to think about as a reconstruction problem. We rarely store a complete copy of our earlier uncertainty. After the result arrives, memory is rebuilt with the ending already visible. Information that fits the ending can become easier to notice and explain, while competing possibilities lose weight. This does not mean every retrospective explanation is biased. It means that confidence after the event is not a reliable record of confidence before it."
+      ]
+    },
+    {
+      "heading": "Why this damages learning at work and in everyday decisions",
+      "paragraphs": [
+        "A weak retrospective can punish a good decision that had an unlucky result, or reward a poor decision that happened to work. In both cases the team learns the wrong lesson. The same pattern appears in investing, hiring, health decisions and personal planning. Once we know what happened, we can mistake the outcome for evidence that the original choice was obviously right or obviously wrong.",
+        "The practical cost is larger than an argument about who predicted what. If the past looks more predictable than it was, the future can start to look more predictable too. Forecasts become too narrow. People stop recording uncertainty because they expect the answer to become clear later. In teams, blame also becomes easier: 'you should have known' sounds reasonable when the reviewer is standing in the future with information the decision-maker did not have."
+      ]
+    },
+    {
+      "heading": "Reconstruct the decision from the information that existed then",
+      "paragraphs": [
+        "The strongest countermeasure is not a slogan about being humble. It is a record made before the outcome. For important decisions, keep the options considered, the key assumptions, a probability or range when one is meaningful, the evidence available at the time, and what would trigger a review. The record does not need to be long. Its job is to freeze the decision state before memory can edit it.",
+        "During a postmortem, start with that earlier record. Ask what was knowable, what was not knowable, and what was knowable but missed. Those are different categories. Unknown events call for resilience or contingency planning. Missed available evidence may call for a process change. A reasonable choice that lost under uncertainty may call for no correction at all. This separation turns a retrospective from a story contest into a learning exercise."
+      ]
+    },
+    {
+      "heading": "Keep hindsight bias separate from outcome bias",
+      "paragraphs": [
+        "Hindsight bias and outcome bias often appear together, but they are not the same question. Hindsight bias changes how predictable the event seems after we know the result. Outcome bias changes how we judge the quality of the earlier decision after we know whether it worked. A reviewer can show one without the other, and the fixes differ.",
+        "A useful review therefore has two passes. First, hide the outcome as much as possible and evaluate the process using only information available at the time. Second, reveal the outcome and use it to update models, assumptions and base rates. The result matters for learning, but it should not be smuggled into the first-pass judgment as if the decision-maker already knew it."
+      ]
+    },
+    {
+      "heading": "A compact example: the failed migration",
+      "paragraphs": [
+        "A team estimates that a system migration has a 70% chance of finishing before quarter end. They record two major risks: data quality and vendor access. The project finishes late because a third-party certificate process takes three weeks longer than expected. Afterward, someone says the delay was obvious because the vendor was slow in the past.",
+        "The useful review asks whether that specific certificate risk was available and material when the estimate was made. If it was documented but ignored, the team has a concrete process gap. If it was genuinely hidden, the lesson is different: add schedule contingency for external approvals, not 'be smarter next time.' The written forecast keeps the team from turning surprise into fake foresight."
+      ]
+    }
+  ],
+  "checklist": [
+    "Find the forecast, decision note or message created before the outcome.",
+    "Separate what was knowable then from what became visible only later.",
+    "List at least one plausible alternative outcome that existed at the time.",
+    "Judge decision quality before using the outcome to update the model.",
+    "Replace 'obvious' and 'should have known' with the specific evidence that was available.",
+    "Record one process change only when the review identifies a real information or reasoning gap.",
+    "Keep future forecasts probabilistic when the situation is genuinely uncertain."
+  ],
+  "boundaryNote": "Hindsight bias is not proof that a retrospective explanation is wrong. A post-event explanation can be accurate. The bias concern is whether outcome knowledge has made the earlier uncertainty look smaller than it really was."
+}

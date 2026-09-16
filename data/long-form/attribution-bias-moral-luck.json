@@ -1,0 +1,53 @@
+{
+  "slug": "attribution-bias-moral-luck",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/attribution-bias-moral-luck",
+  "headline": "Moral Luck: why the same choice earns different blame depending on the outcome",
+  "lede": "Two people can make the same negligent choice, yet only the unlucky one is treated as if they revealed a worse character. Resultant moral luck describes that gap, and it matters whenever a review, court case or team retrospective has to separate what someone decided from what fortune did with the decision.",
+  "sections": [
+    {
+      "heading": "Same choice, same risk, very different verdict",
+      "paragraphs": [
+        "The classic case is simple. Two drivers are equally tired, equally careless, and both take the same risky corner too fast. One arrives home safely. The other hits a pedestrian who happened to step into the road. Same intention, same information, same controllable behavior. Yet the second driver faces criminal charges, public anger and a heavier punishment than the first, who may face nothing at all.",
+        "Resultant moral luck names this asymmetry: judgments of blame, punishment or moral responsibility differ because an otherwise similar action produced a different outcome partly outside the agent's control. The phenomenon is not limited to dramatic accidents. Two managers can approve the same shortcut, two investors can take the same unhedged position, and the one whose outcome goes badly is judged as if their character or care was worse all along."
+      ]
+    },
+    {
+      "heading": "A real decision where the trap appears: the project review",
+      "paragraphs": [
+        "Imagine two team leads who each skip the same load test before a release. Team A ships and nothing breaks. Team B ships and a rare edge case takes the service down for two hours. In the retrospective, the second lead is described as reckless and their earlier confidence is rewritten as arrogance. The first lead is quietly praised for moving fast, even though both took the same bet on the same information.",
+        "This is the everyday cost of moral luck. If luck decides who looks like a villain, a team learns the wrong lesson. It may fire or sideline the unlucky lead while keeping the process that made both choices identical. The outcome deserves attention as data about consequences. It does not automatically deserve to become evidence that the person who caused harm was mentally worse than the person who did not."
+      ]
+    },
+    {
+      "heading": "What the evidence supports, and what it does not",
+      "paragraphs": [
+        "Experiments do show that outcome information shifts moral judgment. People assign more blame and heavier punishment when a negligent act causes harm than when the same act luckily does not. But the popular summary that 'people ignore intent' is stronger than the research. Mental states, causal responsibility, belief justification and negligence all move judgments too, and the kind of question asked matters: moral wrongness, blame and punishment do not always respond to outcomes in the same way.",
+        "One influential line of work found that when observers re-examine the agent's beliefs, a large part of the classic moral-luck asymmetry is explained by whether the agent's belief was justified, not by the bad result alone—though an independent outcome effect still remained. Other experiments have found a conscious version of the effect in investment contexts, where people rate the same unprofitable investment as less moral even when they know luck was involved. Moral judgment is doing several jobs at once, and the outcome leaks into more than one of them."
+      ]
+    },
+    {
+      "heading": "Common misunderstandings and the nearby bias it gets confused with",
+      "paragraphs": [
+        "The first misunderstanding is to treat moral luck as a blanket excuse: 'the outcome was luck, so nothing counts.' That overcorrects. The review evidence does not erase causal responsibility, negligence or unjustified beliefs. If someone ignored a risk they reasonably could have known about, the bad outcome is not the only thing on trial—the belief and the choice were already deficient before luck entered the picture.",
+        "The second misunderstanding is to merge moral luck with outcome bias. They travel together but answer different questions. Outcome bias changes how good or bad an earlier decision process looks once the result is known. Moral luck changes how much blame, praise, punishment or responsibility a person receives, and it additionally depends on intentions, beliefs, causal role and controllable risk. A review can be free of outcome bias about decision quality and still moralize the unlucky actor unfairly, or the reverse."
+      ]
+    },
+    {
+      "heading": "A worked example and how to check for it in practice",
+      "paragraphs": [
+        "Consider two fund managers who each put 15% of a portfolio into the same speculative supplier. In one fund the supplier survives; in the other it defaults after an unforeseeable regulatory shock, costing clients real money. The manager who lost is judged far less ethical in performance discussions, even by colleagues who can see that both made the same allocation from the same research. The judgment quietly rewrites the losing manager's earlier analysis as careless, although nothing about that analysis changed.",
+        "The practical countermeasure is to split the retrospective into separate questions before assigning anyone a verdict. What did the person intend? What did they reasonably believe at the time, given the information available? Which risks were under their control? And what outcome actually occurred? Then run the matched-case test: find or construct a comparison that differs only in the result. If the blame changes while intent, belief and controllable risk stay fixed, moral luck is doing part of the judging. Finally, use the outcome for learning—updating base rates, adding contingency—without treating it as retroactive proof about the person's state of mind."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write down the agent's intention, belief, controllable risk and actual outcome as four separate lines before assigning blame.",
+    "Construct one matched case that differs only in the outcome, then compare the blame given to both.",
+    "Check whether the agent's belief was justified with the information available at the time, not with information that arrived later.",
+    "Score wrongness, blame and punishment separately instead of collapsing them into one verdict.",
+    "Extract the outcome's lessons about risk and consequences before discussing the person's character.",
+    "Ask whether the same judgment would survive if luck had produced the other result."
+  ],
+  "boundaryNote": "Moral luck helps inspect whether a bad result is inflating blame, punishment or character judgments beyond what intent, belief and controllable risk justify. It does not prove that outcomes are irrelevant, that negligence is excusable, or that any particular person was blameless."
+}

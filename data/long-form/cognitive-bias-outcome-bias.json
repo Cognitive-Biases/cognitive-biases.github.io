@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-outcome-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-outcome-bias",
+  "headline": "Outcome Bias: how luck can rewrite the grade you give a decision",
+  "lede": "A good result can come from a weak decision process, and a bad result can follow a reasonable choice under uncertainty. Outcome bias appears when knowing the result changes how we judge the earlier decision even though the information available at the time is unchanged.",
+  "sections": [
+    {
+      "heading": "Results matter, but they answer a different question from decision quality",
+      "paragraphs": [
+        "A manager approves a risky launch with little evidence and it succeeds. The choice is praised as bold. Another manager follows a careful process, chooses the option with the best expected value and gets unlucky. The decision is criticized. If the review uses the result as the main grade, luck can become confused with skill.",
+        "Outcome bias does not mean outcomes should be ignored. Results are essential for updating models, measuring performance and learning about the world. The bias concern is temporal: information that became available after the decision is used as if it should have determined the original choice. That makes process quality difficult to evaluate."
+      ]
+    },
+    {
+      "heading": "Run the review twice: first without the result, then with it",
+      "paragraphs": [
+        "The cleanest practical method is a two-pass review. In the first pass, reconstruct the decision using only information available at the time. What options existed? What probabilities or ranges were reasonable? What constraints mattered? Was the evidence standard appropriate? This is the process grade.",
+        "In the second pass, bring the outcome back. Ask what the result teaches about assumptions, base rates, model quality and execution. This is the learning grade. Keeping the passes separate prevents the outcome from contaminating the first question while still using it fully for future improvement."
+      ]
+    },
+    {
+      "heading": "Repeated lucky wins can create dangerous confidence",
+      "paragraphs": [
+        "Outcome bias becomes especially costly when a weak process produces several good results. A team may conclude that an informal method is effective because the scoreboard looks good. In reality, the decisions may have been exposed to hidden risk that simply did not materialize yet. The same issue appears in trading, security, medicine and operational shortcuts.",
+        "Track process indicators that can be evaluated before the outcome: whether alternatives were considered, whether key assumptions were tested, whether risks were sized, whether a base rate was used and whether the decision matched the organization's rules. These do not guarantee success, but they make it possible to distinguish repeatable skill from a run of favorable outcomes."
+      ]
+    },
+    {
+      "heading": "Bad outcomes can contain useful information without proving the decision was bad",
+      "paragraphs": [
+        "A failed result should still trigger investigation. Perhaps the probability estimate was too optimistic, an important variable was omitted or execution differed from the plan. The mistake is jumping from 'this ended badly' to 'the earlier choice was obviously poor' without reconstructing the decision state.",
+        "This distinction protects accountability rather than weakening it. When reviewers identify the exact information or reasoning error, the organization can change a process. When blame is based only on the result, people learn to avoid visible risk, hide uncertainty or choose actions that are easy to defend after the fact."
+      ]
+    },
+    {
+      "heading": "A compact example: the deployment that succeeded despite a broken process",
+      "paragraphs": [
+        "A team skips a required rollback test because the release window is closing. The deployment succeeds. If the post-release review says 'no harm done,' the successful outcome has erased the process failure. The next release may not be as forgiving.",
+        "A process-aware review records that the control was skipped regardless of the result. At the same time, it avoids pretending the successful deployment was meaningless. The outcome can update the technical model, but it does not retroactively make the missing rollback test a good decision. Learning improves when process and result can both be discussed without forcing one to stand in for the other."
+      ]
+    }
+  ],
+  "checklist": [
+    "Evaluate the decision once using only information available at the time.",
+    "Record the process grade before discussing the outcome.",
+    "Then use the result to update assumptions, probabilities and execution lessons.",
+    "Track decision-process indicators that can be assessed before outcomes occur.",
+    "Look for lucky wins as well as unlucky losses.",
+    "Name the specific reasoning or information gap instead of using the result as proof.",
+    "Keep hindsight bias separate: predictability and decision quality are related but different questions."
+  ],
+  "boundaryNote": "Outcome bias is not a rule to ignore results. Outcomes are evidence for future learning. The diagnostic issue is whether the result is being used to judge what the decision-maker should have known before the result existed."
+}

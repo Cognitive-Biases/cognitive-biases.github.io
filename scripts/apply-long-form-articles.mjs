@@ -4,7 +4,16 @@ import { join } from "node:path";
 const SITE = "https://cognitive-biases.github.io";
 const OUT = "dist";
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
-const articlesDoc = JSON.parse(await readFile("data/long-form-articles.json", "utf8"));
+const longFormFiles = (await readdir("data/long-form"))
+  .filter((name) => /^[a-z0-9-]+\.json$/i.test(name))
+  .sort();
+const articlesDoc = {
+  entries: await Promise.all(longFormFiles.map(async (name) => {
+    const entry = JSON.parse(await readFile(join("data/long-form", name), "utf8"));
+    if (entry.slug !== name.replace(/\.json$/, "")) throw new Error(`${name}: file name must match the canonical slug ${entry.slug}.`);
+    return entry;
+  })),
+};
 const everydayDoc = JSON.parse(await readFile("data/everyday-guides.json", "utf8"));
 const siteIdentity = JSON.parse(await readFile("config/site-identity.json", "utf8"));
 const duplicateDispositions = JSON.parse(await readFile("data/duplicate-dispositions.json", "utf8"));

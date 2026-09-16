@@ -1,0 +1,54 @@
+{
+  "slug": "prospect-theory-loss-aversion",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/prospect-theory-loss-aversion",
+  "headline": "Loss Aversion: why the reference point matters more than the slogan",
+  "lede": "Loss aversion describes choices in which losses receive greater subjective weight than comparable gains around a reference point. It is influential and widely studied, but the popular rule that 'losses hurt twice as much as gains feel good' is too simple to use as a universal fact.",
+  "sections": [
+    {
+      "heading": "A loss exists only relative to some reference point",
+      "paragraphs": [
+        "A salary change, investment result or negotiation outcome can feel like a gain or a loss depending on the comparison point. €90,000 may feel like a gain compared with last year's €80,000 salary and a loss compared with an expected €100,000 offer. The objective amount is the same; the reference point changes the psychological frame.",
+        "Prospect theory models choices around gains and losses relative to a reference point, with losses often receiving more weight. That framework has been highly influential. But current evidence does not support treating one fixed coefficient as a law of human behavior. Meta-analyses produce different average estimates, and later re-analyses show that task design and data structure can materially affect the apparent magnitude."
+      ]
+    },
+    {
+      "heading": "Do not import the 'twice as painful' number into every decision",
+      "paragraphs": [
+        "The familiar claim that a loss has roughly twice the psychological impact of an equal gain is memorable because it compresses a complex literature into one number. It can be a rough description of some datasets, but it should not be used as a plug-in constant for product design, policy, investing or negotiation without evidence from the relevant setting.",
+        "Observed loss-sensitive behavior can also interact with probability weighting, attention, ordering of options and how the reference point is constructed. If a decision changes when gains and losses are framed differently, that is worth investigating. It does not automatically reveal a stable personal coefficient that can be measured once and carried everywhere."
+      ]
+    },
+    {
+      "heading": "Make the reference point explicit before interpreting the preference",
+      "paragraphs": [
+        "For an important choice, write down what counts as the reference point and why. Is it the current state, an expectation, a contractual entitlement, a recent peak, a budget target or the best available alternative? Different reference points can create different descriptions of the same outcome. If the reference is unstable, the psychological label may be doing more work than the evidence.",
+        "Then re-express the options as absolute outcomes or matched changes where possible. Keep probabilities and time horizons consistent. Ask whether the preference survives when both options are described from another reasonable reference point. A preference that is stable across frames deserves more confidence than one that appears only under a single loss/gain description."
+      ]
+    },
+    {
+      "heading": "Keep loss aversion separate from sunk costs",
+      "paragraphs": [
+        "Loss aversion concerns how potential or realized outcomes are valued relative to a reference point. Sunk-cost reasoning concerns resources that are already irrecoverable influencing the next choice. They can interact—for example, a person may keep an investment because selling would realize a loss and because a great deal has already been invested—but the decision questions are different.",
+        "For sunk costs, remove past irrecoverable expenditure from the forward calculation. For loss aversion, inspect the reference point and compare matched gains and losses. Using the right distinction prevents a generic 'people hate losses' explanation from replacing the actual structure of the decision."
+      ]
+    },
+    {
+      "heading": "A compact example: refusing a better plan because it feels like giving something up",
+      "paragraphs": [
+        "A team can switch from a current software package to a cheaper alternative with similar capability. The new plan saves money, but it removes two features that are rarely used. The loss of those features feels more concrete than the monthly savings, so the current package keeps winning the discussion.",
+        "A better comparison starts with actual usage, total cost and the outcomes the team needs. Then describe both plans from more than one reference point: what is gained, what is lost and what the absolute end state looks like. If the current plan still wins, that may be a rational preference. The point is to make the reference frame visible enough that it does not decide silently."
+      ]
+    }
+  ],
+  "checklist": [
+    "State the reference point that makes an outcome a gain or a loss.",
+    "Compare matched gains and losses with the same probability and time horizon.",
+    "Re-express options as absolute outcomes when possible.",
+    "Check whether the preference survives another reasonable reference point.",
+    "Do not apply a universal 'losses count twice' coefficient without task-specific evidence.",
+    "Separate potential losses from irrecoverable sunk costs.",
+    "Use behavior in the actual context instead of assuming a stable personal loss-aversion trait."
+  ],
+  "boundaryNote": "Loss aversion is an influential descriptive idea, not a universal constant. Magnitude and even apparent presence can depend on task design, analysis and the reference point used."
+}

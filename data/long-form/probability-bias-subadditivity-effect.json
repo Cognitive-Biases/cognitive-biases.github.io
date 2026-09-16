@@ -1,0 +1,54 @@
+{
+  "slug": "probability-bias-subadditivity-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/probability-bias-subadditivity-effect",
+  "headline": "Subadditivity Effect: why one big risk feels smaller than its parts",
+  "lede": "Ask someone for the chance of 'a delay' on a project and you get one number. Ask separately about vendor problems, staffing gaps and testing overruns, and the sum usually comes out larger. The subadditivity effect is that gap between a packed category and its unpacked parts — and it can quietly reshape forecasts, risk registers and insurance decisions.",
+  "sections": [
+    {
+      "heading": "The same event, two descriptions, two probabilities",
+      "paragraphs": [
+        "In probability theory, a compound event and the sum of its mutually exclusive parts must be equal. The chance of rain this weekend is the chance of rain on Saturday plus rain on Sunday, with no overlap counted twice. Human judgment does not always respect that rule. People often assign a smaller probability to the packed event than the total they give when the same event is split into explicit components.",
+        "A classic illustration is a medical or weather judgment. 'Death from natural causes' can receive a lower judged probability than the combined estimates for heart disease, cancer, stroke and other specific causes. Nothing about the world changed between the two questions. Only the description changed. That description sensitivity is the core of the effect, and it is why the pattern matters for anyone who produces or consumes forecasts."
+      ]
+    },
+    {
+      "heading": "Why unpacking a category can raise its judged probability",
+      "paragraphs": [
+        "The main theoretical account is support theory, developed by Amos Tversky and Derek Koehler in the 1990s. The idea is that a judged probability is not read directly from a stable internal belief. It is constructed from the support that comes to mind for the focal hypothesis relative to its alternatives. When a category is unpacked, each component becomes easier to imagine and evaluate, so the total judged support tends to grow.",
+        "This is not a claim that people cannot do arithmetic. Most people know that parts cannot exceed the whole when the whole is clearly visible. The problem is that the whole is often not clearly visible. A packed label such as 'project risk' hides the parts, and the parts are where the imagination works. Give each part its own line, and the mind finds fresh reasons to worry about each one."
+      ]
+    },
+    {
+      "heading": "The effect is real, but it is not a law",
+      "paragraphs": [
+        "The evidence review for this concept rates it as established with boundary conditions. That phrase matters. Unpacking usually raises judged probability, but not always. Experiments on typical versus atypical unpacking have shown that when the listed components are unusual or hard to believe, the unpacked total can come out lower than the packed judgment — a reversal, sometimes called superadditivity.",
+        "Two common misunderstandings follow. First, the effect is not proof that breaking a risk down always gives a better estimate; a detailed list can be more persuasive without being more accurate. Second, it is not a license for manipulation. Using a dramatic breakdown to inflate a client's fear of a remote threat exploits the same mechanism the effect warns about. The honest use is consistency checking, not emotional engineering."
+      ]
+    },
+    {
+      "heading": "Keep subadditivity separate from the availability heuristic",
+      "paragraphs": [
+        "Subadditivity is often confused with the availability heuristic, and the confusion is understandable because both involve what comes easily to mind. The difference is in the lever. Availability concerns how easily examples are retrieved from memory — a vivid plane crash makes flying feel dangerous. Subadditivity concerns how the question itself is carved up — the same risk feels different when it is described as one event versus several.",
+        "They can work together. If unpacking a category happens to surface vivid components, retrieval ease and description effects reinforce each other, and the estimate moves further. In a review, it is worth asking both questions separately: did the estimate change because the wording changed, and are the easily recalled examples actually representative? Different causes call for different corrections."
+      ]
+    },
+    {
+      "heading": "A compact example: the 'small' chance of a late launch",
+      "paragraphs": [
+        "A product team is asked for the probability that a launch slips past its date. Thinking about it as one packed event, the lead says 20%. The number feels honest and reassuring. Then the team lists the mutually exclusive ways a slip could happen: a late external approval at about 10%, a staffing gap at about 8%, integration rework at about 9%, and everything else at about 5%. The components sum to roughly 32%.",
+        "Which number is right? The point of the exercise is not to crown the larger figure the winner. It is to notice that a twelve-point gap appeared from wording alone. The team should now reconcile the two: check whether some components were double-counted, whether the packed estimate quietly assumed away categories, and whether either number matches the base rate from past launches. After that reconciliation, the forecast is worth acting on. Before it, the forecast is mostly a mood."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write the packed probability first, before anyone lists components.",
+    "Unpack the same event into mutually exclusive, collectively exhaustive possibilities and estimate each one.",
+    "Compare the packed estimate with the unpacked total and record the gap.",
+    "Check each component for overlap and double counting before trusting the sum.",
+    "Compare both totals against a base rate or reference class from similar past cases.",
+    "If the estimate swings with wording, fix the representation before acting on the number.",
+    "Never present an unpacked breakdown as more accurate only because it is more detailed."
+  ],
+  "boundaryNote": "The subadditivity effect helps you inspect how description changes a probability judgment. It does not prove that the unpacked estimate is more accurate, that a given breakdown is complete, or that anyone violated logic in the real world — only that the judgment moved with the wording."
+}

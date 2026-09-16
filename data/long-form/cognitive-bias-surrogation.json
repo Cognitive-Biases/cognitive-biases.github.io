@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-surrogation",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-surrogation",
+  "headline": "Surrogation: when the KPI quietly replaces the goal it was built to serve",
+  "lede": "Every serious strategy needs numbers, because goals like customer value, safety or learning cannot be read off a spreadsheet directly. Surrogation is what happens when one of those helpful numbers stops being a stand-in and starts being treated as the objective itself — a shift that can look like good management while quietly damaging the thing the measure was meant to track.",
+  "sections": [
+    {
+      "heading": "A measure is a representative, not the goal itself",
+      "paragraphs": [
+        "Strategic objectives are usually abstract: improve customer value, make the product safer, build a team that learns. None of these fit neatly in a cell, so organizations translate them into observable measures — response time, defect rate, test scores, engagement scores. That translation is necessary and often sensible. The problem appears later, when the discussion slides from 'the metric suggests the goal is improving' to 'the metric improved, so the goal improved.' The proxy has become the target.",
+        "Researchers in management accounting call this surrogation: a measure constructed to represent a strategic construct starts to be used as though it were the construct. The evidence here is real but specific. Experimental studies in strategic performance-measurement settings show that managers can lose sight of the underlying objective and make decisions as if the measure itself were what matters. This is not a blanket claim that all metrics corrupt all thinking. It is a documented failure mode of scorecard-style systems, and it should be claimed only in that kind of setting."
+      ]
+    },
+    {
+      "heading": "Why intelligent people fall for an obvious trick",
+      "paragraphs": [
+        "Surrogation is rarely caused by stupidity or bad faith. Measures are concrete, comparable and instantly available; constructs are fuzzy, slow and contestable. In a busy review meeting, 'tickets closed per day rose twelve percent' ends the discussion, while 'are customers actually better served?' starts one. The measure wins attention because it is legible, not because it is complete.",
+        "Incentives sharpen the slide. When pay, promotion or reputation is attached to a number, rational people reorganize their effort around it. The experimental literature also offers two useful moderators: in studied settings, managers who were involved in selecting the strategy, and those asked to explain their decisions in narrative form rather than only in numbers, showed less surrogation. Knowing the goal's story — not just its dashboard — seems to keep the construct alive in people's minds."
+      ]
+    },
+    {
+      "heading": "A worked example: the support team that got faster and worse",
+      "paragraphs": [
+        "A software company sets a strategic objective: customers should get problems solved with minimum friction. As a proxy, the support team tracks average handle time, starting at around nine minutes per ticket. A new incentive rewards shorter calls. Within two quarters, average handle time falls to about six minutes, the dashboard turns green, and the quarterly review celebrates 'faster service.'",
+        "Meanwhile, repeat contacts per customer rise from roughly one in six to roughly one in four, because agents now close complex tickets early instead of solving them. The metric genuinely improved; the objective arguably got worse. Nothing about the measurement was inaccurate — handle time was counted correctly. The failure was surrogation: the team and its reviewers treated handle time as service quality itself. A companion measure, such as the repeat-contact rate, plus a one-paragraph narrative from the team lead about what changed, would have exposed the divergence before the celebration."
+      ]
+    },
+    {
+      "heading": "Surrogation is not every complaint about metrics",
+      "paragraphs": [
+        "Popular culture hands us several neighboring labels: Goodhart's law, metric fixation, gaming, teaching to the test. They overlap with surrogation but are not identical to it. Goodhart-style gaming is usually about people deliberately exploiting a measure under pressure. Surrogation can happen with no gaming at all — sincere managers can simply forget that the number is a stand-in. Keeping the labels separate matters because the fixes differ: gaming calls for incentive redesign, while surrogation calls for reconnecting judgment to the construct.",
+        "It should also not be confused with systematic bias in measurement. Systematic bias means the measurement process itself deviates consistently from a reference — a dashboard that undercounts one support channel, for example. Surrogation can occur with a perfectly accurate measure, because the failure is in interpretation and decision, not in data collection. A team can even suffer both at once, which is why the diagnostic questions should be asked separately rather than merged into one vague suspicion that 'the numbers are off.'"
+      ]
+    },
+    {
+      "heading": "How to review a metric without throwing it away",
+      "paragraphs": [
+        "The remedy is not to abandon measurement — unmeasured goals drift toward slogans. The remedy is a review habit that keeps the construct in the room. Before discussing any important KPI, state the objective in plain language, then state what the measure captures and at least one important dimension it misses. Handle time captures speed; it misses resolution quality. Test scores capture sampled performance; they miss transfer to untested material. Writing this down once per metric is cheap insurance.",
+        "Then stress-test the proxy with one awkward question: what action could improve this number while making the real objective worse? If a plausible answer exists, the metric needs a guardrail — a companion measure, a periodic narrative explanation, or an explicit rule that the score is evidence about the goal, not the goal itself. Incentives deserve the same treatment. When a reward is tied to a number, assume effort will flow toward that number, and check the unmeasured dimensions on a schedule rather than after a scandal."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write the strategic objective in one plain sentence before opening the dashboard.",
+    "For each important KPI, name one dimension of the goal it does not capture.",
+    "Ask what action could raise the number while making the objective worse.",
+    "Add a companion measure that would move if the proxy diverged from the goal.",
+    "Require a short written narrative for major decisions driven mainly by a metric.",
+    "Involve the people who review a scorecard in the strategy behind it, not just the numbers.",
+    "Check whether a suspicious metric is misinterpreted, mismeasured, or gamed — and fix the right one."
+  ],
+  "boundaryNote": "Surrogation helps inspect whether a performance measure is quietly replacing the strategic objective it was built to represent. It does not prove that metrics are useless, that a rising number is always hollow, or that every bad outcome near a KPI was caused by surrogation; the evidence base comes mainly from experimental strategic performance-measurement settings, and each real case still needs its own check of whether the proxy actually diverged from the goal."
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "framing-effect-core",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-core",
+  "headline": "Framing Effect: when the same facts lead to different choices",
+  "lede": "A decision can change when the underlying facts stay exactly the same and only the description moves. The framing effect matters because important choices about risk, money, health and products are often settled by whoever wrote the sentence, not by whoever understood the numbers.",
+  "sections": [
+    {
+      "heading": "The same choice, wearing two descriptions",
+      "paragraphs": [
+        "The framing effect is the tendency for a judgment or choice to shift when equivalent information is presented in different ways. The classic demonstration is risky choice: an outcome described as lives saved can produce a different preference than the mathematically identical outcome described as lives lost. The numbers did not change. The preference did.",
+        "This is not a claim that people are bad at arithmetic. It is a claim that description is part of the decision input. A plan with a 90% success rate and a plan with a 10% failure rate contain the same information, yet they can feel like different plans. When the feeling changes the choice, the frame is doing real work in the decision, whether anyone intended it or not."
+      ]
+    },
+    {
+      "heading": "A decision where the frame does the work",
+      "paragraphs": [
+        "Consider a team comparing two vendors for a support contract. Vendor A is described as resolving 85% of tickets within one business day. Vendor B is described as leaving 15% of tickets waiting longer than a day. If those are the same performance figures, a preference that flips between the two descriptions is a framing effect, not a discovery about quality.",
+        "The same pattern appears in treatment information described through survival or mortality language, in pricing pages where equivalent features are worded differently across tiers, and in AI assistants that summarize identical evidence as expected gains or expected losses. In each case the practical question is the same: did the facts change my choice, or did the wording?"
+      ]
+    },
+    {
+      "heading": "Why a description can move a preference",
+      "paragraphs": [
+        "Research does not offer one single mechanism for every framing task, and it is safer not to pretend otherwise. In risky choice, explanations involve reference points, the positive or negative gist of a description, and how the outcome is mentally represented. A gain frame and a loss frame can invite different comparisons even when the final states are identical.",
+        "Because the mechanisms differ across tasks, a strong general slogan like 'people always prefer positive wording' goes beyond the evidence. The defensible claim is narrower and more useful: descriptions that preserve the underlying decision information can still change judgments, and the size and direction of that change depend on the task and how the options are represented."
+      ]
+    },
+    {
+      "heading": "What the evidence supports, and what it does not",
+      "paragraphs": [
+        "Framing research covers several distinct paradigms, and they are not equally established. Risky-choice framing, where equivalent outcomes are presented as gains or losses, has substantial evidence: a classic meta-analysis found a reliable small-to-moderate average effect with strong variation across study designs, and later reviews and large replications find the effect persisting even when option descriptions are matched and complete.",
+        "Attribute framing, such as describing meat as 75% lean versus 25% fat, also has supporting evidence. Goal or message framing, which concerns whether an appeal emphasizes the benefits of acting or the costs of not acting, is less consistently established. So 'the framing effect' is not one uniform force. Treating every wording difference as the same well-proven phenomenon overstates what the literature actually shows."
+      ]
+    },
+    {
+      "heading": "Framing is not anchoring",
+      "paragraphs": [
+        "Framing is often confused with anchoring, because both show that presentation shapes judgment. The difference is in what was manipulated. Framing changes how equivalent information is described; anchoring introduces a starting number that pulls a later estimate toward it. A preference that flips between gain and loss wording is framing. An estimate that stays near an initial figure someone mentioned is anchoring.",
+        "The two can share an interface, so test them separately. A report can present outcomes in a loss frame and open with a reference number. Rewrite the frame while holding the numbers fixed, then change or remove the starting number while holding the frame fixed. If only the wording moved the choice, framing is the closer lens. If the estimate tracked the first number, anchoring is."
+      ]
+    },
+    {
+      "heading": "A compact example: the reframed rollout",
+      "paragraphs": [
+        "A team must choose between shipping a feature in stages or in one release. The staged plan is presented as giving an 80% chance of hitting the quarter's targets; the single release is presented as carrying a 20% chance of missing them. Stated that way, the staged plan wins easily. When someone notices the descriptions may be equivalent and rewrites both options with the same outcomes, probabilities and dates, the discussion restarts on actual trade-offs: rollback cost, review capacity and customer exposure.",
+        "The fix next time is procedural rather than heroic. Before the decision meeting, one person rewrites each option in neutral quantities and produces both a gain and a loss version using identical figures. If the room's preference survives both frames, that preference earns more confidence. If it flips, the team has learned that the frame was deciding, and the real disagreements can finally be argued directly."
+      ]
+    }
+  ],
+  "checklist": [
+    "Rewrite each option in neutral quantities before comparing them.",
+    "Produce both a gain-frame and a loss-frame version using identical numbers.",
+    "Check that outcomes, probabilities and time horizons match exactly across the two descriptions.",
+    "Record the choice before and after reframing when the decision is important enough to justify it.",
+    "Remove or replace any starting number shown before the estimate and test for anchoring separately.",
+    "Ask who chose the wording and request the complete underlying information.",
+    "Treat a preference that flips across frames as a question to investigate, not proof that one version is the objective truth."
+  ],
+  "boundaryNote": "The framing effect helps inspect whether a description alone moved a judgment or choice. It does not prove that one wording is the objective truth, that the writer intended to manipulate, or that every wording difference produces a reliable effect. Evidence is strongest for risky-choice framing and weaker or less consistent for other paradigms."
+}

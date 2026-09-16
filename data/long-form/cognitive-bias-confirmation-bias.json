@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-confirmation-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-confirmation-bias",
+  "headline": "Confirmation Bias: how a preferred explanation changes what counts as evidence",
+  "lede": "Confirmation bias is broader than 'reading things you agree with.' Existing beliefs can shape what we search for, which tests we choose, how we interpret mixed evidence and what we remember later. The practical goal is to make a belief genuinely testable.",
+  "sections": [
+    {
+      "heading": "More information does not help if every search points in the same direction",
+      "paragraphs": [
+        "Suppose you believe a new product feature is the reason conversion improved. You search analytics for supporting segments, ask happy users why they liked the release and collect comments that fit the story. The investigation can look rigorous because it contains many data points. Yet the process may never create a serious chance for the preferred explanation to fail.",
+        "Confirmation bias is an umbrella term for several related patterns. It can appear in information search, hypothesis testing, evidence interpretation and memory. That breadth is important. There is no single behavior that proves the bias, and a confirming test is not automatically irrational. The real question is whether the information strategy can distinguish your explanation from plausible alternatives."
+      ]
+    },
+    {
+      "heading": "Diagnostic evidence beats agreeable evidence",
+      "paragraphs": [
+        "A useful test asks what should happen if your preferred explanation is true and what should happen if a competing explanation is true. If both predict the same result, the result may feel supportive while adding little diagnostic value. This is why collecting another positive example can be much less useful than finding one observation that separates two explanations.",
+        "In product work, an increase after a release could come from the feature, seasonality, a marketing campaign or a change in traffic quality. In health, improvement after a supplement could reflect natural recovery or another treatment. In hiring, one strong interview answer could reflect skill, rehearsal or a familiar problem. Competing hypotheses make the test harder, but they also make the evidence more informative."
+      ]
+    },
+    {
+      "heading": "Define disconfirming evidence before you search",
+      "paragraphs": [
+        "Before opening a browser, dashboard or AI assistant, write down one or two observations that would reduce confidence in your current view. This small step matters because standards tend to move after evidence arrives. Without a pre-defined failure condition, weak supporting evidence can feel persuasive while strong contrary evidence gets explained away as an exception.",
+        "Then search deliberately for the strongest alternative, not the weakest opposing opinion. The goal is not to balance every claim with an arbitrary counterclaim. It is to make falsification possible. Use the same evidence standard on both sides: if an anecdote is too weak to disprove your belief, it is probably too weak to prove it as well."
+      ]
+    },
+    {
+      "heading": "AI can amplify confirmation without intending to",
+      "paragraphs": [
+        "A model will usually follow the frame of the question. Ask 'Why is this migration plan too risky?' and you may receive a coherent list of risks. Ask 'Why is this the right plan?' and you may receive an equally coherent list of advantages. Fluency makes both answers feel researched even when the prompt has selected the direction of search.",
+        "For consequential decisions, ask the model to separate evidence from argument. Request competing explanations, assumptions that would change the conclusion, and evidence that would discriminate among them. Better still, collect primary data or authoritative sources outside the model when the claim is important. AI can help structure falsification, but it should not be treated as independent evidence simply because it can argue both sides."
+      ]
+    },
+    {
+      "heading": "A compact example: the feature everyone already loves",
+      "paragraphs": [
+        "A team believes a redesign improved retention. They interview active users and hear positive comments. That is useful feedback, but active users are already a selected group. A better test also looks at users who left, cohorts before and after the change, acquisition mix and other changes released at the same time.",
+        "If the redesign hypothesis predicts a larger improvement in users who actually encountered the new flow, while a marketing explanation predicts improvement across both exposed and unexposed users, the data can distinguish the stories. Confirmation bias becomes less about personal stubbornness and more about whether the system has been designed to let the favorite explanation lose."
+      ]
+    }
+  ],
+  "checklist": [
+    "State the current hypothesis in one sentence.",
+    "Write at least one plausible competing explanation.",
+    "Define evidence that would reduce confidence before searching.",
+    "Prefer tests whose possible outcomes distinguish the competing explanations.",
+    "Apply the same evidence standard to supporting and opposing information.",
+    "Ask whether your sample excludes the cases most likely to challenge the story.",
+    "For AI-assisted research, request disconfirming evidence and verify important claims outside the model."
+  ],
+  "boundaryNote": "Seeking confirming evidence is not automatically irrational. Positive tests can be efficient in some environments. The concern is a search or interpretation process that protects the preferred explanation from meaningful competition."
+}

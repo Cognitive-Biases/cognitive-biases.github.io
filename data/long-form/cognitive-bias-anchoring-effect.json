@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-anchoring-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-anchoring-effect",
+  "headline": "Anchoring Effect: when the first number becomes the center of the decision",
+  "lede": "A first price, estimate or target can pull later judgments toward it even when the starting value should carry little weight. Anchoring is well supported for numerical judgments, but its strength depends on where the anchor came from and how the task is structured.",
+  "sections": [
+    {
+      "heading": "The first number can become a reference before you have earned one",
+      "paragraphs": [
+        "A recruiter mentions a salary range. A seller posts a list price. An AI assistant estimates six weeks. A project sponsor says the budget is probably €200,000. Even when everyone knows the number is provisional, later discussion often starts by adjusting around it. The first value has quietly changed the coordinate system of the decision.",
+        "This is the practical shape of anchoring: an initial numerical value influences a later estimate. The research base is large, but the effect is not a magic force. Some anchors are stronger than others, and clearly irrelevant or cross-dimensional numbers can have smaller or null effects. That boundary matters because the useful question is not 'was there a number?' but 'did this starting value become evidence or a reference point without enough justification?'"
+      ]
+    },
+    {
+      "heading": "Why simple adjustment can still leave you too close",
+      "paragraphs": [
+        "One common response is to notice the anchor and then adjust away from it. That can help, but adjustment may stop too early. If a vendor starts at €100,000 and you immediately think €80,000, the negotiation still lives inside the vendor's frame. You may never ask what the service is worth relative to alternatives, internal build cost, switching cost and expected value.",
+        "Research also suggests that anchoring is not explained by one mechanism in every case. Self-generated anchors and externally supplied anchors can work differently. For practical decisions, that means the safest strategy is behavioral: create an independent estimate or reference class instead of relying on awareness to neutralize the first number."
+      ]
+    },
+    {
+      "heading": "Build an independent estimate before you negotiate with the anchor",
+      "paragraphs": [
+        "When the decision matters, estimate from another direction. For a project, look at completed comparable projects and build a range from actual durations. For a purchase, set a maximum based on your budget, alternatives and expected use. For hiring, define the compensation band before the candidate names a number. For forecasting, write your range before asking an AI system for its estimate.",
+        "If the anchor is already visible, do not pretend you can erase it. Create at least two independent reference points. Ask what base rate applies, what similar cases cost, and what assumptions would justify moving far from the first value. A range is often better than a single corrected number because it makes uncertainty visible and gives you room to test assumptions rather than merely negotiate around a point."
+      ]
+    },
+    {
+      "heading": "AI makes anchors cheap, fast and easy to overlook",
+      "paragraphs": [
+        "AI systems can produce plausible numbers before a person has done any independent estimation. That is useful for exploration, but it can also make the model's first answer the anchor for the rest of the session. A user may challenge the answer, ask for a revision and still remain near the original value because every later prompt is framed as an adjustment.",
+        "For high-impact estimates, reverse the order. First record your own range, reference cases and unknowns. Then ask the model for a separate estimate and compare assumptions. If the numbers differ, do not average them automatically. Investigate why. The disagreement is information only when the underlying assumptions can be inspected."
+      ]
+    },
+    {
+      "heading": "A compact example: the discounted jacket",
+      "paragraphs": [
+        "A jacket is shown first at €300 and then at €180. The reduction feels large, but that comparison answers only one question: how far is the sale price from the displayed anchor? It does not answer whether the jacket is worth €180 to you, whether a similar item costs €120 elsewhere, or whether you planned to buy one at all.",
+        "A better decision starts outside the sale frame. Decide what function you need, what alternatives exist and what price range fits your budget. The original price can still be useful evidence if it reflects a real market reference, but it should earn that role rather than receive it automatically because it appeared first."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write an independent estimate or acceptable range before seeing a suggested number when possible.",
+    "Identify where the first number came from and whether it deserves evidential weight.",
+    "Compare with base rates, completed cases, market alternatives or another independent method.",
+    "Use ranges and assumptions instead of adjusting only from a single point.",
+    "Ask what evidence would justify a large move away from the initial value.",
+    "For AI-assisted estimates, record your view before requesting the model's number.",
+    "Measure whether the mitigation improves calibration rather than assuming awareness solved the problem."
+  ],
+  "boundaryNote": "Not every first number is an improper anchor. A starting value can be highly informative when it comes from a relevant base rate, contract, market price or measured constraint. The problem is unearned influence, not numerical information itself."
+}

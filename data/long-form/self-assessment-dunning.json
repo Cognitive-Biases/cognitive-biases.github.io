@@ -1,0 +1,54 @@
+{
+  "slug": "self-assessment-dunning",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/self-assessment-dunning",
+  "headline": "Dunning–Kruger Effect: how to check whether confidence and performance actually match",
+  "lede": "The Dunning–Kruger effect describes a gap between how well people perform and how well they think they performed, especially among lower performers in specific tasks. It matters whenever you rely on self-assessment to decide whether you are ready: for an exam, a promotion case, a new responsibility or a skill you practice alone.",
+  "sections": [
+    {
+      "heading": "What the original studies actually showed",
+      "paragraphs": [
+        "In 1999, David Dunning and Justin Kruger asked university students to complete tests of humor, logical reasoning and grammar, then estimate how well they had done. In those tasks, participants in the bottom quarter of scores tended to place themselves far above their actual position, often guessing they were above average. Higher performers were closer to the truth, and sometimes slightly underestimated themselves.",
+        "This is a finding about calibration: the fit between a measured result and a self-assessment in a particular task. It is not a law that the least skilled person in any room is always the most confident. The original studies used specific tests with specific samples, and the strength of the pattern varied across tasks. Keeping that scope in mind is the first protection against misusing the idea."
+      ]
+    },
+    {
+      "heading": "Why skill and self-assessment can drift apart",
+      "paragraphs": [
+        "The original explanation is sometimes called a double burden. The same knowledge you use to produce a good answer is also the knowledge you use to judge whether an answer is good. If that knowledge is missing, you can be wrong and unable to see that you are wrong, because the errors are invisible to exactly the person who made them. A beginner in chess does not merely play weak moves; they also lack the tools to recognize why the moves were weak.",
+        "There is a second, quieter contributor: statistics. Self-assessment scores and test scores are both noisy measures, so some apparent overconfidence at the bottom comes from regression to the mean and from the general tendency of most people to rate themselves above average. The curves in the famous graphs are shaped partly by measurement, not only by psychology. Both explanations can be true at once, and the honest reading keeps them separate."
+      ]
+    },
+    {
+      "heading": "What the criticism changes and what it does not",
+      "paragraphs": [
+        "Methodological work in 2020 showed that the standard way of plotting the data—splitting people into quartiles and averaging their self-estimates—can manufacture a Dunning–Kruger-looking pattern even from random data. That critique deflated some of the drama. A 2023 reanalysis using more appropriate methods still found a real, but small, effect in intelligence data. The fairest summary: the effect is supported, but it is smaller and narrower than the internet version.",
+        "So the popular story needs editing in both directions. There is no good evidence that experts systematically underestimate themselves as a rule, and no evidence that confidence alone diagnoses incompetence. What remains useful is the narrower claim: in some tasks, lower performers are more miscalibrated than higher performers, and self-assessment without external feedback is a weak instrument. That narrower claim is still worth taking seriously, because self-assessment is how most people decide they are ready."
+      ]
+    },
+    {
+      "heading": "Do not confuse it with the curse of knowledge",
+      "paragraphs": [
+        "The Dunning–Kruger effect is often discussed alongside the curse of knowledge, but the two answer different questions. The curse of knowledge is about estimating what another person knows after you already know it: the expert who assumes a step is obvious because it is obvious to them. Dunning–Kruger research is about judging your own performance against your own self-assessment.",
+        "The diagnostic question is whose knowledge is being judged. If a senior engineer writes a setup guide that leaves out a prerequisite only veterans know, that is a perspective-taking problem. If a new engineer predicts a near-perfect score on a deployment exercise and scores far lower, that is a self-calibration problem. The fixes differ too: the first calls for asking the other person to paraphrase or perform the task, the second for comparing predictions with objective results."
+      ]
+    },
+    {
+      "heading": "A compact example: calibrating a real work skill",
+      "paragraphs": [
+        "An analyst preparing for a data-certification exam takes a 40-question practice test. Before seeing the result, she writes down her prediction: about 34 correct, because the material felt familiar. The actual score is 26. That single gap of eight questions does not prove a bias—one test is one measurement—but it is a data point worth keeping rather than explaining away.",
+        "She repeats the routine weekly for two months: prediction first, score second, no peeking. Early on, her predictions run five to eight points above her results. As she studies the questions she got wrong, both numbers move: scores rise, and the gap narrows to about two points. The narrowing gap is the useful signal. It shows feedback is improving not just her skill but her knowledge of her own skill, which is the part that self-assessment alone could not fix."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write down your predicted score or result before any test, review or feedback arrives.",
+    "Compare each prediction with an objective measure, not with how the attempt felt.",
+    "Track calibration across several attempts instead of judging from one good or bad result.",
+    "Check whether feedback moves both your performance and your confidence over time.",
+    "Get an external check, such as a test, rubric or qualified reviewer, for skills that carry real consequences.",
+    "Ask whose knowledge you are judging before reaching for a label: your own performance or someone else's understanding.",
+    "Never use 'Dunning–Kruger' as a diagnosis of a person you disagree with; test the claim, not the personality."
+  ],
+  "boundaryNote": "The Dunning–Kruger effect helps you inspect the gap between measured performance and self-assessment in a specific task. It does not prove that confident people are incompetent, that experts underestimate themselves, or that anyone who disagrees with you must lack skill."
+}

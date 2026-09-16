@@ -1,0 +1,54 @@
+{
+  "slug": "confirmation-bias-congruence-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/confirmation-bias-congruence-bias",
+  "headline": "Congruence Bias: when a positive test result is weaker evidence than it looks",
+  "lede": "Congruence bias is the habit of choosing a test that is likely to say 'yes' if your favored explanation is true, without checking whether rival explanations would predict the same result. It matters whenever you design an experiment, troubleshoot a failure, or evaluate a claim, because a test that cannot separate hypotheses produces expensive-looking evidence with low information value.",
+  "sections": [
+    {
+      "heading": "The failure is in the choice of test, not in the answer it gives",
+      "paragraphs": [
+        "Suppose an engineer believes a memory leak in one service is causing a production slowdown. She runs a test that restarts the service and watches whether memory use climbs again. It does. The result matches her hypothesis, and the ticket is closed. But a second plausible cause, such as an oversized cache in the framework, would have produced exactly the same climb. The test was congruent with her explanation; it was not diagnostic between explanations.",
+        "That is congruence bias in a single move. The classic research describes people overvaluing tests that are likely to return a positive result when the leading hypothesis is true, even when other available tests would separate the competing hypotheses better. The test is not fabricated and the result is not ignored. The problem is upstream: the question was shaped so that several different explanations could all pass it, which means passing it tells you much less than the clean 'yes' suggests."
+      ]
+    },
+    {
+      "heading": "Why smart people keep choosing non-diagnostic tests",
+      "paragraphs": [
+        "Baron, Beattie and Hershey identified the pattern in hypothesis-testing experiments: people tend to prefer observations whose expected positive outcome matches the hypothesis they already favor. Part of the draw is efficiency. Testing the cases your hypothesis predicts feels direct, cheap and fast. Part is motivational. A test designed around the favored explanation has a good chance of delivering a satisfying result, and satisfying results are pleasant to report.",
+        "There is also a structural reason. Most of us are never taught to ask what a rival hypothesis predicts. We ask, 'If I am right, what should I see?' and stop there. The missing second question is, 'If I am wrong in this specific way, what would I see?' Without that comparison, a test can look rigorous simply because it has a clear expected outcome. Clarity of prediction is not the same as diagnostic power."
+      ]
+    },
+    {
+      "heading": "A positive test strategy is not automatically a mistake",
+      "paragraphs": [
+        "The most common misunderstanding is that congruence bias means any search for confirming evidence is irrational. That is too strong, and the evidence does not support it. Klayman and Ha showed that a positive test strategy, sampling the cases a hypothesis predicts, can be genuinely informative depending on the environment. In some situations, likely cases are exactly where the discriminating information lives.",
+        "The useful claim is narrower and more practical: a positive test is weak evidence when alternative explanations predict the same outcome. So the question is never 'did you look for confirmation?' It is 'could this test have told the explanations apart?' If yes, a positive result carries weight. If no, the result mainly tells you that your hypothesis is still in the running, along with everything else that predicted the same thing. That is a much smaller victory than it feels like."
+      ]
+    },
+    {
+      "heading": "Keep congruence bias separate from confirmation bias",
+      "paragraphs": [
+        "Confirmation bias is the broad umbrella: searching for, interpreting, weighting and remembering evidence in ways that favor an existing belief. Congruence bias is one narrow member of that family. It concerns a specific moment, the selection or design of a hypothesis test, and a specific flaw, choosing a test whose likely result fits the favored explanation but does not discriminate against rivals.",
+        "The distinction matters because the countermeasures differ. For the broad problem, you predefine what evidence would change your mind and apply the same standard to supporting and challenging findings. For congruence bias specifically, you list at least one plausible alternative before choosing the test, then predict the outcome under both explanations. If the predictions are identical, pick a different test. Diagnosing the wrong layer leads to the wrong fix, which is its own quiet form of the same problem."
+      ]
+    },
+    {
+      "heading": "A compact example: the feature that 'customers love'",
+      "paragraphs": [
+        "A product team ships a new dashboard widget and wants to know whether customers value it. They survey 200 active users and 64% say they like it. The team reads this as validation and expands the feature. But several rival explanations predict the same number: users like novelty in the first weeks, respondents who opened the survey are more engaged than the average customer, and 'like' in a survey is cheap compared with daily behavior.",
+        "A more diagnostic design would separate those explanations before the survey goes out. Compare the new widget against the old view for a randomly assigned group over four weeks, and measure repeat use rather than stated liking. If engaged usage holds only in the novelty window, or only among already-heavy users, the favored explanation weakens. The lesson for next time is procedural, not attitudinal: name the rivals first, then choose the observation where the explanations disagree. The survey was not wrong to run; it was just never going to answer the question the team was asking."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write the favored hypothesis and at least one plausible alternative before choosing any test.",
+    "Predict the likely result under each explanation and mark where the predictions differ.",
+    "Replace or redesign any test whose expected outcome is the same under rival explanations.",
+    "Ask what the result would rule out, not only what it would be consistent with.",
+    "Check whether the sample or comparison group could produce the same result for a different reason, such as novelty, selection or price.",
+    "After a positive result, record which alternative explanations it actually eliminated.",
+    "Do not abandon positive tests wholesale; check their diagnostic value in the specific environment first."
+  ],
+  "boundaryNote": "Congruence bias helps inspect how a test was chosen and whether its outcome can separate competing explanations. It does not prove a positive result is wrong, that the favored hypothesis is false, or that searching for confirming evidence is always a reasoning error."
+}

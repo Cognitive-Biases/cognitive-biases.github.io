@@ -1,0 +1,54 @@
+{
+  "slug": "truth-judgment-illusory-truth-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/truth-judgment-illusory-truth-effect",
+  "headline": "Illusory Truth Effect: when repetition starts to feel like evidence",
+  "lede": "A statement you have heard several times tends to feel more true than an identical statement you are hearing for the first time. That small shift in feeling matters because decisions about news, vendors, health claims and team strategy are often built on whatever currently feels established.",
+  "sections": [
+    {
+      "heading": "Repetition can change how true a statement feels",
+      "paragraphs": [
+        "The illusory truth effect is the tendency to judge repeated statements as more true than comparable new statements. The classic laboratory finding dates back to 1977: participants rated statements they had seen in an earlier session as more likely to be true, even though the earlier session gave them no evidence about accuracy at all. Exposure alone was enough to move the judgment.",
+        "The trap is easiest to see in a real decision. A product team evaluating a vendor hears the same claim in a sales deck, a webinar, a case study and an analyst blog post. By the fourth encounter, 'companies like yours see results within one quarter' feels like settled knowledge. But all four mentions may trace back to a single page the vendor published. The team has one source wearing four costumes."
+      ]
+    },
+    {
+      "heading": "Why familiarity can masquerade as evidence",
+      "paragraphs": [
+        "The research literature offers several contributing mechanisms rather than one required explanation. Familiar statements are easier to process, and that fluency can be mistaken for a sign of truth. Memory cues and source-related cues can also play a role: a statement that rings a bell may get credit for confirmation it never actually received. Different experiments may recruit different mixes of these processes.",
+        "It is worth being precise about what the effect is and is not. On average, repetition shifts truth ratings upward; it does not reliably flip disbelief into conviction, and falling for it is not a sign of low intelligence. The effect is a nudge in felt credibility that becomes dangerous mainly when nobody counts how many independent sources actually stand behind the familiar claim."
+      ]
+    },
+    {
+      "heading": "What the evidence supports and where it stops",
+      "paragraphs": [
+        "A 2026 systematic review and meta-analysis covering 182 studies, 366 effect sizes and more than 31,000 participants found a reliable corrected average effect: repeated claims do receive higher truth ratings than comparable new claims. At the same time, the results varied substantially across studies, so the honest summary is a robust average effect with real boundary conditions, not a universal law of repetition.",
+        "One boundary deserves attention before applying the label everywhere. A later 2026 paper with two preregistered experiments found little or no meaningful repetition effect for social-political opinion statements. The useful claim is therefore narrower than 'repeat anything and people will believe it.' Checkable factual statements fit the classic literature well; evaluative opinions involve additional processes such as persuasion, identity and social norms."
+      ]
+    },
+    {
+      "heading": "Keep it separate from the availability heuristic",
+      "paragraphs": [
+        "The illusory truth effect is often confused with the availability heuristic, and the distinction is practical. Availability concerns judgments of frequency or probability: an event feels more common because examples come to mind easily, whether or not anything was repeated. Illusory truth concerns the judged truth of a specific statement, and the defining comparison is repeated information against comparable new information.",
+        "A quick diagnostic is to ask what actually changed. If a vivid plane-crash story makes air travel feel more dangerous, availability is the closer lens. If a claim about the crash feels more believable the fourth time you read it, illusory truth is the closer lens. Both can occur together, so check the frequency judgment and the truth judgment separately instead of reaching for one label."
+      ]
+    },
+    {
+      "heading": "A worked example and what to do differently",
+      "paragraphs": [
+        "A team is deciding whether to automate an internal workflow. The key claim on the table is that automation cuts processing time by about forty percent. It appeared in the vendor's deck, an analyst blog citing that deck, a podcast interview with the vendor's founder, and an AI-generated summary that paraphrased the blog. Exposure count: four. Independent source count: one, a vendor survey with an undisclosed sample.",
+        "The corrective habit is to keep a two-column note for claims that carry a decision: times encountered on one side, independent sources with checkable evidence on the other. When the columns diverge, ask the source for primary data or run a small pilot instead of debating how true the claim feels. And keep the symmetry in mind: repetition is not evidence that a statement is true, but it is not evidence that the statement is false either."
+      ]
+    }
+  ],
+  "checklist": [
+    "Count independent sources for the claim, not the number of times you have encountered it.",
+    "Trace the claim back to the earliest original source before treating it as established.",
+    "Label the statement as checkable fact or evaluative opinion before judging how repetition may affect it.",
+    "Write down what evidence would confirm or disconfirm the claim before doing another search.",
+    "Search once for the strongest case against the repeated claim, not only for more copies of it.",
+    "In a team decision, ask each person where they first heard the key claim and what evidence came with it.",
+    "For a high-stakes factual claim, request primary data or run a small test instead of relying on how familiar the claim feels."
+  ],
+  "boundaryNote": "The illusory truth effect helps inspect whether familiarity is being mistaken for evidence behind a factual claim. It does not prove the claim is false, does not prove repetition caused your own belief, and current evidence does not show the same effect for social-political opinions."
+}

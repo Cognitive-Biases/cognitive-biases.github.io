@@ -32,6 +32,18 @@ Do not paste the old article body into the new site. Reconstruct the useful idea
 
 This also prevents the two owned sites from competing with substantially identical text while old URLs and search caches are still visible.
 
+## Storage
+
+Each long-form article lives in its own file:
+
+```text
+data/long-form/<canonical-slug>.json
+```
+
+The file name must match the entry's `slug`. `scripts/apply-long-form-articles.mjs` and `scripts/check-long-form-articles.mjs` load every `data/long-form/*.json` file in deterministic sorted order, so articles can be added, reviewed and regenerated independently without a single shared document becoming a merge bottleneck.
+
+`scripts/inventory-legacy-long-form.mjs` maintains the machine-readable migration roadmap under `.artifacts/long-form-migration/` (local working artifact, not published). Because the live legacy URLs now redirect to this site (see `docs/migration-map.md`), the inventory probes the Wayback Machine for historical snapshots of each legacy article.
+
 ## Page structure
 
 The long-form layer should normally provide:

@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-sunk-cost-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-sunk-cost-effect",
+  "headline": "Sunk Cost Effect: why past investment keeps voting on the next decision",
+  "lede": "Money, time and effort that cannot be recovered can still influence what we choose next. The useful correction is not 'always quit.' It is to price the next step from today forward and keep genuinely future value separate from the emotional weight of what is already gone.",
+  "sections": [
+    {
+      "heading": "Past cost is real, but it is not always relevant to the next choice",
+      "paragraphs": [
+        "A team has spent eight months building a product. Adoption is weak. The next three months will cost another €200,000. In the meeting, someone says, 'We cannot stop now after everything we have invested.' The past investment is real and painful, but it cannot be recovered by continuing. The decision in front of the team is what to do with the next €200,000 and three months.",
+        "This is the core of the sunk cost effect: irrecoverable prior investments influence a later choice even though the relevant economic comparison should focus on future costs and benefits. The effect is well supported overall, but it does not make every continuation irrational. Switching costs, learning already achieved, contractual obligations and the value of completing nearly finished work can all affect future value."
+      ]
+    },
+    {
+      "heading": "Completion value and sunk cost can be confused",
+      "paragraphs": [
+        "Suppose a project is 95% complete and the final 5% will unlock a working system. Continuing may be sensible because the remaining investment buys something valuable. That is a future-benefit argument. It is different from saying the project deserves more money because 95% has already been spent.",
+        "This distinction is practical because 'we are almost done' can contain both ideas at once. Ask what the next increment buys. If the same future benefit could be reached more cheaply by another route, compare those routes. If completion creates no meaningful value, closeness to the finish line is not enough. The goal is to isolate the forward-looking case from the desire to make history feel worthwhile."
+      ]
+    },
+    {
+      "heading": "Reprice the decision as if it arrived today",
+      "paragraphs": [
+        "A strong review starts with a reset question: if this opportunity appeared on your desk today, with no emotional ownership of the past, would you invest the remaining resources? You should still include assets created so far if they affect the future. Code, contracts, customer relationships and knowledge may have current value. What you exclude is the need to justify resources that are already irrecoverable.",
+        "Then compare the best realistic alternative. Time and attention are also scarce, so a project can be expensive even when the next cash payment is small. What else could the team ship? What risk would disappear if the commitment ended? Which option has the highest expected value from today forward? Opportunity cost makes the next decision concrete."
+      ]
+    },
+    {
+      "heading": "Design exit criteria before the pain arrives",
+      "paragraphs": [
+        "Sunk costs become harder to ignore when the project is tied to identity, public promises or a visible budget. Precommitment helps because the decision rule is written while everyone is still relatively neutral. Define review dates, success thresholds and conditions that trigger a pause, pivot or stop. The criteria can be changed when new information genuinely changes the model, but changes should be explicit.",
+        "Independent review can also help. Someone who did not sponsor the original decision has less need to defend it. Ask that reviewer to evaluate only the next tranche of investment. This turns a large emotional question—'was the whole project a mistake?'—into a smaller operational question: 'is the next unit of resource still the best use of what we have?'"
+      ]
+    },
+    {
+      "heading": "A compact example: the annual software contract",
+      "paragraphs": [
+        "A company pays for an analytics platform that few employees use. Because the annual contract was expensive, leaders fund training, internal champions and extra integration work to 'get value from the investment.' Some of that follow-up may be sensible if adoption can realistically create future benefit. But the original license payment is already gone.",
+        "The review should compare the cost and expected benefit of the next adoption effort with alternatives such as a smaller tool, a migration or accepting that the original purchase was a loss. Continuing can win that comparison, but only because of the future case. Past spend can explain why the decision hurts; it should not decide what happens next."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write irrecoverable past costs on a separate line from future costs.",
+    "State what the next increment of investment is expected to buy.",
+    "Compare continuation with the best realistic alternative use of money, time and attention.",
+    "Include current assets or completion value only when they affect future outcomes.",
+    "Ask whether you would fund the next step if the project arrived today.",
+    "Use pre-defined review dates and exit criteria for large commitments.",
+    "Have an independent reviewer assess the next tranche when ownership is emotionally strong."
+  ],
+  "boundaryNote": "A sunk cost is not a command to stop. Future value can justify continuation. The diagnostic error is allowing irrecoverable past investment to count as a reason for the next investment when it does not change future costs or benefits."
+}

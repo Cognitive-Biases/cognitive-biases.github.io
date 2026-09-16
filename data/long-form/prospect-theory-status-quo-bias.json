@@ -1,0 +1,53 @@
+{
+  "slug": "prospect-theory-status-quo-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/prospect-theory-status-quo-bias",
+  "headline": "Status Quo Bias: why the current option wins reviews it never entered",
+  "lede": "Status quo bias is the tendency to give the current option extra weight simply because it is already in place. It matters whenever a provider, plan, workflow or allocation survives a review not because it won the comparison, but because it never really had to compete.",
+  "sections": [
+    {
+      "heading": "The current option starts with an advantage it did not earn",
+      "paragraphs": [
+        "When several options are on the table and one of them is already yours, the comparison is not symmetrical. The current bank, software system, insurance plan or team workflow arrives with a head start: switching it requires a fresh decision, attention and effort, while keeping it requires nothing at all. Status quo bias is the extra preference the existing option collects from that position alone.",
+        "The evidence for this pattern is well established. Classic experiments and field observations found that people stay with status quo options far more often than a neutral comparison would predict, and the effect is broader than interface defaults. A current provider or a familiar process can be the status quo even when no form, screen or policy pre-selects it. Nobody designed the advantage; it comes from being there first."
+      ]
+    },
+    {
+      "heading": "Why the status quo becomes sticky",
+      "paragraphs": [
+        "No single mechanism explains the whole pattern, and the evidence review behind this article lists several that can contribute. One is reference dependence combined with loss aversion: once the current state becomes the reference point, giving something up registers as a loss, while the alternative's advantages register as mere gains. Another is attention. Experimental work shows that a status quo can shape which alternatives people even look at, so the comparison is partial before it begins.",
+        "Uncertainty, cognitive effort and psychological commitment add to the pile. Switching means predicting how an unfamiliar option will perform, doing setup work and owning a fresh choice that could go wrong. Staying means none of that. These forces are easy to underestimate because they feel like prudence from the inside. Sometimes they are prudence. The problem is that they operate even when they are not."
+      ]
+    },
+    {
+      "heading": "Staying is not automatically a mistake",
+      "paragraphs": [
+        "The most common misunderstanding runs in both directions. One version says that anyone who keeps the current option is biased. That is wrong: switching has real financial, practical, learning and uncertainty costs, and staying can be the rational choice once those are counted honestly. The other version says that high persistence proves strong preference. That is also wrong: persistence can reflect bias, genuine switching costs, uncertainty, or a current option that is actually better. The observed behavior alone cannot tell you which.",
+        "A second misunderstanding is treating status quo bias as a personal flaw to be ashamed of. It is better read as a structural feature of how choices are presented to us: the option that is already in place quietly defines the starting point of every review. The fix is not more willpower. It is a comparison procedure that puts the current option back on the same starting line as its competitors."
+      ]
+    },
+    {
+      "heading": "Status quo bias is not the same as a default",
+      "paragraphs": [
+        "These two are often confused because both make one option unusually sticky. The difference is in what creates the privilege. A default is what happens if nobody actively chooses: a form ships with a box pre-ticked, a retirement plan auto-enrolls at a set contribution rate. Someone designed that. Status quo bias is broader: a long-time user keeping an old privacy configuration, or a team keeping its current software through a migration review, faces no designed pre-selection at all. The current state itself is doing the work.",
+        "The diagnostic differs too. For a default, compare uptake with a different default or an active-choice condition while keeping the options otherwise the same. For status quo bias, ask what would be chosen today if none of the options were already in place, then add genuine switching costs back into the comparison. A 2019 meta-analysis of default effects treats the status quo as one channel among several, which is a useful reminder that the labels overlap in practice but answer different questions."
+      ]
+    },
+    {
+      "heading": "A compact example: the software renewal that kept winning",
+      "paragraphs": [
+        "A team of twelve pays about €4,800 a year for a project tool they have used for four years. A competitor now offers similar capability for roughly €3,000, and two rivals are credible. Every annual review ends the same way: renewal. The discussion always starts from 'should we leave?' rather than 'which tool should we use?', so the competitor's missing integration with one rarely used report outweighs the €1,800 saving in every meeting.",
+        "The fix is to rerun the review as a fresh choice. The team lists what each option costs, what migration would actually take (two working days, some retraining, one broken report), and what each tool does better. Then they ask: if we had no tool today, which would we pick? If the honest answer is still the incumbent, renewing is a decision, not a drift. If the answer is the competitor, the only thing standing between the team and €1,800 a year was the fact that the incumbent got there first."
+      ]
+    }
+  ],
+  "checklist": [
+    "Rewrite the review question as a fresh choice: 'which option would we pick today if none were already in place?'",
+    "List real switching costs (money, setup time, retraining, downtime) separately from familiarity and decision effort.",
+    "Compare the current option and the realistic alternatives against the same written criteria.",
+    "Check which alternatives actually received attention during the last review, and add any that were never seriously examined.",
+    "Describe what each option gains and what it loses, so the current state is not silently treated as the reference point.",
+    "If staying still wins after the comparison, record the reasons so next year's review starts from evidence rather than habit."
+  ],
+  "boundaryNote": "Status quo bias helps inspect whether the current option is receiving unearned weight in a comparison. It does not prove that staying is wrong: persistence can reflect genuine switching costs, real uncertainty or a current option that is simply better, and only a like-for-like comparison can separate those cases."
+}

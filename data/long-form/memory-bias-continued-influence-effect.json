@@ -1,0 +1,54 @@
+{
+  "slug": "memory-bias-continued-influence-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/memory-bias-continued-influence-effect",
+  "headline": "Continued Influence Effect: why a correction helps but rarely erases the trace",
+  "lede": "People can hear a clear correction, accept it, and still reason as if part of the old story were true. The continued influence effect matters because incident reviews, news judgments and workplace decisions are often built on information that was officially withdrawn but never fully removed from the explanation.",
+  "sections": [
+    {
+      "heading": "A correction can work and still leave a residue",
+      "paragraphs": [
+        "The continued influence effect describes a specific pattern: false or outdated information keeps shaping later reasoning even after a person has been told it is wrong. The key detail is that both things can be true at once. The correction usually reduces reliance on the false claim, and the false claim can still leave a measurable trace in how people explain events, answer related questions or judge new evidence.",
+        "Think of an early news report that blamed a warehouse fire on faulty wiring. Investigators later rule that out and identify a different cause. Readers who saw both versions rarely revert to a blank slate. When asked why such fires spread, many still mention electrical problems, even while agreeing the wiring was cleared in this case. The old information lost its official status but kept a working role in the mental story."
+      ]
+    },
+    {
+      "heading": "Why the old information keeps working",
+      "paragraphs": [
+        "Current research does not point to one single mechanism behind every continued-influence result. Reviews describe it as a family of updating and retrieval problems. Once the false claim filled an explanatory gap, it became part of a coherent mental model. Removing one piece leaves a hole, and minds dislike holes. The correction says what is not true; it does not automatically rebuild what is.",
+        "Other contributing accounts include retrieval competition between the original claim and the correction, simple familiarity from having heard the claim first or more often, and source memory failures where a person remembers the content but forgets it was retracted. The practical implication is modest but important: a bare denial is usually weaker than a correction that also supplies a credible alternative explanation when one exists."
+      ]
+    },
+    {
+      "heading": "What the evidence supports, and what it does not",
+      "paragraphs": [
+        "The persistence of misinformation after correction is well established across reviews and meta-analyses. What the evidence does not support is the stronger popular claim that corrections are pointless or usually make things worse. On average, corrections help. Detailed corrections, repetition and alternative explanations tend to help more. Current evidence also gives little reason to avoid a correction merely because it repeats the false claim.",
+        "There is no proven formula that removes the residue completely. Effects vary with the topic, the audience, the credibility of the source and whether the false claim explained something important. So the honest reading is bounded: expect corrections to reduce reliance on misinformation, not to erase it, and verify the reduction by measuring the same belief or inference again when the distinction actually matters."
+      ]
+    },
+    {
+      "heading": "Do not confuse continued influence with a backfire effect",
+      "paragraphs": [
+        "The most common overreach is to label any incomplete updating as a backfire effect. They are different findings. Continued influence means the false information still has some effect after correction. A backfire effect requires the stronger result: belief in the corrected false claim actually increases because of the correction. That outcome is rarer and is not the default reading of continued-influence research.",
+        "Disagreement, distrust of the correcting source and stubborn repetition of the old story are also not proof of backfire. A person can resist a correction for social or political reasons while the correction still reduced their reliance on the specific false detail. Before using the dramatic label, check whether the targeted false belief itself became stronger. If you did not measure it before and after, you do not know."
+      ]
+    },
+    {
+      "heading": "A compact example: the incident review that will not let go",
+      "paragraphs": [
+        "A payments team suffers a two-hour outage. In the first hour, an engineer suggests a recent database migration is the cause, and that explanation spreads through the incident channel. By the next day, logs show the migration was innocent; an expired certificate on a third-party service is the real cause. The team leads announce the correction in the review meeting.",
+        "Two weeks later, planning documents for the next quarter still propose extra review gates for every database change, justified by the outage. Nobody believes the migration caused this incident, but its shadow is steering the fix. A better review names the correction explicitly, repeats it where the old claim appeared, and asks whether each proposed safeguard follows from the certificate failure or from the retracted migration story. Some safeguards may survive on other merits; the point is they should not ride in on a correction that already happened."
+      ]
+    }
+  ],
+  "checklist": [
+    "State the correction plainly: what is now known, and which earlier claim is withdrawn.",
+    "When the false claim explained an event, provide the best supported alternative explanation if one exists.",
+    "Repeat the correction in the same channels and documents where the original claim spread.",
+    "After a correction, re-ask the same judgment or inference question and compare the answers.",
+    "Check new proposals for hidden dependence on retracted information before approving them.",
+    "Measure belief in the false claim before and after before calling anything a backfire effect.",
+    "Keep important corrections easy to find instead of buried in a single meeting or message."
+  ],
+  "boundaryNote": "The continued influence effect helps inspect whether corrected information still shapes a judgment; it does not prove that corrections fail, that people reject them, or that any specific residual belief is wrong."
+}

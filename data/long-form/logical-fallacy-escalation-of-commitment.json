@@ -1,0 +1,54 @@
+{
+  "slug": "logical-fallacy-escalation-of-commitment",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-escalation-of-commitment",
+  "headline": "Escalation of Commitment: how a failing course of action keeps attracting resources",
+  "lede": "Escalation of commitment is persistence or additional investment in a course of action despite negative feedback. Sunk costs can contribute, but personal responsibility, self-justification, project structure and organizational incentives can keep the escalation going too.",
+  "sections": [
+    {
+      "heading": "Escalation is a sequence, not a single bad decision",
+      "paragraphs": [
+        "A project misses its target. The sponsor adds two people. The next milestone slips, so the team expands the scope to make the release more attractive. Adoption remains weak, and another rescue plan appears. Each step can be defended in isolation. The pattern becomes visible only when the decisions are viewed as a sequence of additional commitments after negative information.",
+        "This is what separates escalation of commitment from a simple sunk-cost effect. Sunk cost asks whether past irrecoverable investment influences the choice. Escalation describes continued or increased commitment to a troubled path and can involve several mechanisms at once. A decision-maker who publicly chose the original plan may feel stronger pressure to defend it. An organization may reward persistence, hide exit options or make stopping administratively difficult."
+      ]
+    },
+    {
+      "heading": "Grit protects the goal; escalation protects the path",
+      "paragraphs": [
+        "Persistence is not the enemy. Many valuable projects look difficult before they work. The useful distinction is what remains fixed. Grit can stay committed to the outcome while changing tactics, scope or even the chosen solution. Escalation becomes dangerous when the specific path is protected while evidence about the goal is reinterpreted or ignored.",
+        "Ask whether the team can describe a credible condition under which it would stop, pause or switch. If every bad result creates a new reason to continue, the decision rule is no longer responsive to evidence. The issue is not optimism by itself; it is a process in which the preferred course has become difficult to falsify."
+      ]
+    },
+    {
+      "heading": "Make the next tranche a fresh decision",
+      "paragraphs": [
+        "Large commitments are easier to govern when they are broken into explicit tranches. At each gate, compare continue, change and stop options using current information. The default should not be 'continue unless someone proves disaster.' Each tranche should have to earn its place against realistic alternatives.",
+        "Separate decision rights when possible. The person who proposed the original investment can provide essential context, but an independent reviewer can reduce self-justification pressure. Give the reviewer permission to recommend a stop without treating that conclusion as an accusation about the earlier decision. The question is stewardship of future resources, not a trial about who was wrong."
+      ]
+    },
+    {
+      "heading": "Use precommitments, tripwires and evidence that can change the plan",
+      "paragraphs": [
+        "Before a project becomes painful, define the few metrics that would trigger a serious review. Choose measures tied to the intended outcome, not just activity. A release can be busy and still be failing. A tripwire might be a cost increase, a retention threshold, a missed regulatory milestone or a technical risk that remains unresolved after a fixed period.",
+        "Tripwires should open a decision, not automate a conclusion. New information may justify continuing. What matters is that negative feedback cannot be endlessly absorbed by changing the story. Record why a threshold changed and what new evidence supported the change. This protects adaptation without letting every target move whenever the current plan misses it."
+      ]
+    },
+    {
+      "heading": "A compact example: the vendor nobody wants to replace",
+      "paragraphs": [
+        "A company standardizes on a platform and adoption stalls. Instead of reassessing the fit, the sponsor funds training, incentives and custom integrations. Those actions may improve adoption, but each new investment should be evaluated on its own expected value. The original contract and the sponsor's reputation are not future benefits.",
+        "A clean review asks what users actually need now, what switching would cost, what the next adoption campaign is expected to achieve and what evidence would end the effort. If the current vendor still wins, continue. If another route wins, stopping is not proof that the original decision was foolish. It is evidence that the current decision process can update."
+      ]
+    }
+  ],
+  "checklist": [
+    "Review the sequence of commitments, not only the latest decision.",
+    "Define the goal separately from the current solution or path.",
+    "At each funding gate, compare continue, change and stop options.",
+    "Use exit criteria and tripwires agreed before the next bad result.",
+    "Give an independent reviewer authority to assess the next tranche.",
+    "Require explicit evidence when a missed threshold is changed.",
+    "Reward well-executed stops and pivots so persistence is not the only status signal."
+  ],
+  "boundaryNote": "Continuing after bad news is not automatically escalation. New information can make additional investment rational. The concern is a process where commitment grows because of prior ownership or investment while the forward-looking case weakens."
+}

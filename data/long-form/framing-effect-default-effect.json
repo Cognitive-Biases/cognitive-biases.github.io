@@ -1,0 +1,54 @@
+{
+  "slug": "framing-effect-default-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-default-effect",
+  "headline": "Default Effect: what people really choose when doing nothing chooses for them",
+  "lede": "When one option is already selected, people take it more often — and designers, policymakers and product teams often read that uptake as proof of preference. The default effect is real and well documented, but its size varies greatly across contexts, and staying with a pre-selected option is not evidence that anyone strongly wanted it.",
+  "sections": [
+    {
+      "heading": "A default is the answer to 'what happens if I do nothing?'",
+      "paragraphs": [
+        "A default is the option or outcome that applies automatically when a person makes no active choice. A checkbox that is already ticked, a subscription that renews unless cancelled, a savings plan you join unless you opt out, a privacy setting that ships enabled — all of these are defaults. The pattern behind the default effect is simple: pre-selecting an option reliably increases how often people end up with it, compared with a version of the same choice where nothing is pre-selected.",
+        "This makes the default one of the quietest and most powerful parts of any form, policy or interface. Someone decided what 'doing nothing' means. That decision may be careful and user-serving, or it may serve the choice architect's goals, or it may be an accident of a settings page nobody reviewed. Either way, the default is a design decision — it just rarely looks like one from the user's side of the screen."
+      ]
+    },
+    {
+      "heading": "Why defaults stick: three routes, not one mechanism",
+      "paragraphs": [
+        "There is no single psychological mechanism behind every default effect, and the research points to several routes that can overlap. Changing the pre-selected option can require effort and attention: you have to notice the setting, understand the alternatives, and act. A default can also work as an implied recommendation — if the company, the government or the software picked this option, maybe they know something. Experiments on policy defaults show that people do partly read defaults this way.",
+        "A third route is that the pre-selected option can start to feel like the existing state, something already yours, so switching away feels like giving something up rather than choosing freely. Which route dominates depends on the decision and the interface. A buried checkbox on a mobile screen mostly exploits effort and inattention. A workplace pension default mostly carries the weight of an institutional endorsement. Treating every default effect as one mechanism leads to bad fixes, such as writing longer explanations when the real problem was friction."
+      ]
+    },
+    {
+      "heading": "The evidence is strong — and the variability is the point",
+      "paragraphs": [
+        "Default effects are among the best-documented findings in choice research. A 2019 meta-analysis covering 58 studies found a substantial average effect of defaults on choice. That is the solid part of the story. The rest of the story is heterogeneity: the same meta-analysis found strong variation across studies, including settings with little effect and some with effects in the opposite direction. Later reviews of choice architecture confirm that results do not transfer automatically from one domain to another.",
+        "Two popular claims go beyond this evidence. The first is that a default is a universal behavioural lever that will work anywhere; the variability says otherwise, and the honest position is that a default is a design decision that needs testing in its real context. The second is that high uptake proves people strongly prefer the default. It does not. Uptake measures the combined pull of effort, endorsement and endowment on top of whatever preference existed. A 90% opt-in rate under one default and a 90% opt-out rate under the mirror-image default cannot both be read as what people truly want."
+      ]
+    },
+    {
+      "heading": "Default effect is not the same as status quo bias",
+      "paragraphs": [
+        "The two are easy to confuse because both make one option unusually sticky. The separating question is: why is this option privileged? In a default effect, a form, policy, system or interface defines what happens under inaction — someone designed the automatic outcome. In status quo bias, the person already has, uses or occupies an option, and the current state itself gets extra weight, with no designer necessarily involved.",
+        "The distinction matters because the diagnostics differ. To test a default, compare the same choice under a different default or under active choice, keeping the options otherwise comparable. To test status quo bias, ask what the person would pick if none of the options were already current, then add genuine switching costs back in. Real situations often contain both: a long-time user keeps an old privacy configuration partly because the setup is familiar, and a new user accepts personalised ads partly because they ship enabled. Same screen, different forces, different remedies."
+      ]
+    },
+    {
+      "heading": "A worked example: the pension enrolment screen",
+      "paragraphs": [
+        "An employer runs a retirement savings plan. Under the current design, new employees join only if they actively opt in, and after a year about 40% are enrolled. HR switches to automatic enrolment with the same opt-out freedom, and enrolment rises to roughly 85%. Leadership announces that employees clearly want the plan. That conclusion overreaches: the jump shows the default moved behaviour, but it does not separate genuine appetite for saving from effort, inattention and the implied endorsement of the employer.",
+        "A better reading starts by treating the default as a tested design, not a discovered preference. The team can check how many employees ever revisit their contribution rate, compare outcomes with an active-choice version at a small pilot site, and look at whether the default contribution level fits different salaries and obligations. If most people stay at a contribution rate that is too low for their situation, the default helped enrolment and quietly hurt saving — both things can be true at once. What to do differently next time: measure what happens after enrolment, not only enrolment, and report uptake alongside an active-choice benchmark rather than alone."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write down exactly what happens if the user does nothing, before discussing conversion or uptake.",
+    "Make the default visible on screen and make switching away take no more steps than staying.",
+    "Run a small comparison against an active-choice version of the same choice when the decision is consequential.",
+    "Report default uptake next to that active-choice benchmark, never as standalone proof of preference.",
+    "Check which mechanism dominates — effort, implied endorsement or endowment — before choosing a fix.",
+    "Measure downstream outcomes such as contribution levels, settings changed later or cancellations, not only initial uptake.",
+    "Re-test the default in the real context after any design change, since effect size varies across domains."
+  ],
+  "boundaryNote": "The default effect helps you inspect how choice architecture shapes behaviour: it shows that the pre-selected option gained an advantage from being pre-selected. It does not prove that people strongly prefer that option, that the default improved their welfare, or that an effect measured in one domain will appear at the same size in another."
+}

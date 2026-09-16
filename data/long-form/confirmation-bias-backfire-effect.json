@@ -1,0 +1,54 @@
+{
+  "slug": "confirmation-bias-backfire-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/confirmation-bias-backfire-effect",
+  "headline": "Backfire Effect: the rare case where a correction can strengthen a false belief",
+  "lede": "The backfire effect is often described as a law of human stubbornness: show someone the facts and they will believe the false claim even harder. The real decision problem is different. If you overestimate backfire, you stop correcting misinformation that a clear correction would usually improve; if you ignore it, you may misread a failed correction as proof that belief moved in the wrong direction.",
+  "sections": [
+    {
+      "heading": "Backfire is a measured outcome, not a mood",
+      "paragraphs": [
+        "A backfire effect means something specific: after a correction, belief in the false claim that was corrected becomes stronger than it was before. It is not the same as anger, argument, eye-rolling, or a refusal to concede in the moment. A person can defend a belief loudly and still update it quietly a week later. Without a before-and-after measure of the same belief, there is no way to tell the difference.",
+        "This distinction matters because the word travels fast. A team that labels every heated disagreement as backfire learns the wrong lesson: that facts are useless. The concept earns its name only when the targeted factual belief actually increased after the correction. Everything else—distaste for the source, bruised identity, a correction nobody understood—is a separate problem with a separate fix."
+      ]
+    },
+    {
+      "heading": "What the current evidence actually supports",
+      "paragraphs": [
+        "Recent reviews of correction research tell a calmer story than the popular version. Corrections usually improve factual accuracy, including in contested political settings. A true backfire—where the correction makes the targeted false belief stronger—appears to be uncommon, and results are sensitive to how the study is designed and how belief is measured. The broad claim that facts normally make false beliefs stronger is not supported by the current evidence base.",
+        "That does not mean corrections always work or that resistance is imaginary. Identity, prior attitudes, and trust in the source shape how a correction lands, and the benefit of a correction can fade over time. But the default expectation should not be fear. Withholding a clear, well-sourced correction because 'it will only backfire' applies a rare outcome as if it were a rule, and leaves the false belief comfortably uncorrected."
+      ]
+    },
+    {
+      "heading": "Why a correction can fail without backfiring",
+      "paragraphs": [
+        "Several mechanisms can make a correction ineffective, and none of them require belief to increase. The correction may come from a source the audience does not trust, so it is discounted on arrival. It may repeat the false claim so vividly that the familiar version stays fluent. It may threaten identity, so the person defends the position publicly even while privately revising it. Failure to persuade is a flat line; backfire is a line that goes the wrong way.",
+        "Corrected misinformation can also keep influencing later reasoning even after belief in it has fallen—a pattern known as the continued influence effect. Someone may no longer endorse the false claim yet still use its causal story when explaining an event. That persistence is worth treating seriously, but calling it backfire confuses two different outcomes and pushes you toward the wrong remedy."
+      ]
+    },
+    {
+      "heading": "Keep it separate from confirmation bias",
+      "paragraphs": [
+        "The backfire effect is most often confused with its parent concept, confirmation bias. Confirmation bias is the broad tendency to search for, interpret, and remember evidence in ways that fit existing beliefs. It is a description of how information is processed. Backfire is one narrow, measurable outcome: a correction that leaves the targeted false belief stronger. Selective reading is confirmation bias; a correction that makes the false belief grow is backfire; ordinary resistance is neither, or both, depending on what is measured.",
+        "The practical difference is what you change. If the problem is confirmation bias, work on the search and evaluation process: what evidence was sought, what was ignored, what would change the conclusion. If the problem is a failed correction, work on the message: clarity, a credible source, an alternative explanation that fills the gap the false claim was filling. Reserving 'backfire' for the measured case keeps those two repair jobs from collapsing into one vague complaint about stubborn people."
+      ]
+    },
+    {
+      "heading": "A worked example: the team that stopped correcting",
+      "paragraphs": [
+        "A compliance team sends a monthly note correcting a recurring misunderstanding about an approval rule. After one tense meeting where two senior staff push back hard, the team concludes the note 'backfired' and stops sending it. Six months later the misunderstanding has spread to new joiners, because the only version anyone hears is the wrong one repeated in hallway conversations.",
+        "A better response would have been to measure the actual belief rather than the temperature of the meeting. For example, a short anonymous pulse before and after the correction—asking staff to rate how confident they are in the incorrect version of the rule—would show whether the belief moved. If confidence in the false version falls from most people to a minority, the correction worked despite the argument. If it genuinely rises, the team has evidence of a real backfire and a reason to change source, framing, or messenger. Skipping the correction on a hunch is the one option guaranteed to help the false belief."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write down the exact false claim being corrected before you correct it.",
+    "Record confidence in that claim before the correction when the distinction matters.",
+    "Deliver the correction clearly, from a source the audience has a reason to trust.",
+    "Offer a credible alternative explanation to fill the gap the false claim was filling.",
+    "Afterward, measure belief in the same claim rather than measuring anger or argument.",
+    "Check the belief again later, because correction effects can fade over time.",
+    "Label the result as backfire only if belief in the corrected false claim increased."
+  ],
+  "boundaryNote": "The backfire effect helps you inspect whether a specific correction strengthened the specific belief it targeted. It does not prove that facts are useless, that a stubborn person updated nothing, or that disagreement equals belief growth. Current evidence suggests true backfire is uncommon, so absence of backfire says nothing about whether attitudes or behaviour changed."
+}

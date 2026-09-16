@@ -1,0 +1,54 @@
+{
+  "slug": "heuristic-bias-availability-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/heuristic-bias-availability-bias",
+  "headline": "Availability Bias: when memorable examples stand in for the real rate",
+  "lede": "Vivid, recent or easy-to-recall examples can influence judgments of frequency and probability. Availability is a useful shortcut when recall tracks reality; it becomes misleading when memory is being driven by drama, repetition or selective exposure instead.",
+  "sections": [
+    {
+      "heading": "The example in your head is not the same thing as the denominator",
+      "paragraphs": [
+        "After several dramatic stories about an accident, the risk can feel higher even if the underlying rate has barely changed. The mind has fresh examples ready to retrieve, so the event feels common. Quiet non-events rarely receive headlines, notifications or memorable stories, which makes the mental sample very different from the full population.",
+        "The availability heuristic is not simply 'memory is bad.' Accessible examples can be informative. If you have repeatedly seen the same failure in a stable environment, easy recall may reflect a genuinely common problem. Bias appears when ease of recall is caused by something else: recency, emotion, repetition, media selection, personal experience or a search process that oversamples unusual cases."
+      ]
+    },
+    {
+      "heading": "Risk judgments are especially vulnerable to selective visibility",
+      "paragraphs": [
+        "News, incident channels and social feeds are built around events that happened, not the much larger number of ordinary cases where nothing notable occurred. That asymmetry can distort judgments about travel, security, health, investing and operational risk. The same issue appears inside companies: incident reviews are documented in detail, while successful routine runs disappear into the background.",
+        "A memorable incident should trigger investigation, not automatically a new probability estimate. Ask for the relevant denominator. How many flights, transactions, deployments or patients were exposed? Over what period? Has the rate changed, or did the event merely become more visible? The numerator is often emotionally available; the denominator usually has to be fetched deliberately."
+      ]
+    },
+    {
+      "heading": "Use a reference set that was not selected by memory",
+      "paragraphs": [
+        "When a decision depends on frequency, build a small reference set from records rather than recollection. Look at all comparable deployments, all recent projects, all candidates who passed the same stage, or a trusted external base rate. The sample does not have to be perfect to improve on a handful of vivid examples.",
+        "If formal data are unavailable, use structured sampling. Pick a fixed time window and review every case, not only the ones you remember. Ask another person to build an independent list. Search for ordinary counterexamples. These steps reduce the chance that the mental sample is being chosen by emotional intensity rather than relevance."
+      ]
+    },
+    {
+      "heading": "Repetition creates familiarity, but familiarity is not independent evidence",
+      "paragraphs": [
+        "Availability often interacts with repetition. A claim seen in a video, a newsletter, three reposts and an AI answer can feel well supported because it is easy to retrieve. Yet all five appearances may trace back to one source. The memory signal says 'I have encountered this often,' not 'independent evidence converges on this conclusion.'",
+        "For important claims, trace sources backward and count independent evidence. This also helps separate availability from the illusory truth effect. Availability concerns what comes readily to mind when making a judgment; illusory truth concerns how repetition can affect perceived truth. They can reinforce one another, but they are not the same process."
+      ]
+    },
+    {
+      "heading": "A compact example: the failed deployment everyone remembers",
+      "paragraphs": [
+        "A team had one painful deployment that caused a long outage. Months later, engineers estimate that the new release process is 'very risky' because the incident is still easy to picture. A log review shows that 146 comparable deployments happened in the same period, with three requiring rollback and only one producing a major outage.",
+        "The major incident still matters. It may reveal a failure mode worth fixing. But the decision should distinguish severity from frequency. The team can improve controls for that high-impact scenario while using the full deployment history to estimate how common it actually is. Memory supplies the alert; the dataset supplies the rate."
+      ]
+    }
+  ],
+  "checklist": [
+    "Name the vivid or recent examples currently driving the judgment.",
+    "Find the denominator or a comparable base rate before estimating frequency.",
+    "Use a fixed time window or complete reference set rather than recalled cases.",
+    "Separate severity from probability; a dramatic event can be rare and still important.",
+    "Trace repeated claims back to independent sources.",
+    "Ask whether media, incident logging or personal exposure selects unusual cases.",
+    "Re-estimate after adding ordinary counterexamples to the sample."
+  ],
+  "boundaryNote": "Availability is a heuristic, not automatically a bias. Easy recall can be useful when accessibility reflects true frequency. The diagnostic question is whether the reasons an example is memorable are relevant to the quantity you are trying to estimate."
+}

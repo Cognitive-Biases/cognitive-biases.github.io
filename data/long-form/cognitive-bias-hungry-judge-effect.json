@@ -1,0 +1,54 @@
+{
+  "slug": "cognitive-bias-hungry-judge-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-hungry-judge-effect",
+  "headline": "Hungry Judge Effect: a famous parole study with an uncertain cause",
+  "lede": "In 2011, a study of parole-board decisions reported that favorable rulings were most common at the start of a session and right after food breaks. The story became famous as proof that hungry judges rule more harshly. The evidence is more fragile than the story, and the real lesson concerns how we audit repeated high-stakes decisions.",
+  "sections": [
+    {
+      "heading": "What the parole study actually found",
+      "paragraphs": [
+        "Researchers examined more than a thousand parole rulings made by experienced judges across full decision days. The reported pattern was striking: the share of favorable decisions started at roughly two-thirds at the beginning of each session, declined as the session went on, and jumped back up after a break during which the judges ate. The graph looked like hunger written into the law.",
+        "Two features of the design matter more than the graph. First, this was an observational study. Nobody randomly assigned judges to be hungry or fed, and nobody measured hunger, blood glucose, fatigue or mood. Second, the breaks combined several things at once: food, rest, a change of posture and a pause in the work. The study recorded a pattern in decision order, not a controlled test of any one cause."
+      ]
+    },
+    {
+      "heading": "Why the hunger story went beyond the data",
+      "paragraphs": [
+        "The original authors were careful to note the limits: eating and resting happened together, and mental states were not measured. They discussed depleted mental resources as one plausible interpretation, not as a demonstrated mechanism. The popular retelling dropped that caution. 'Justice depends on what the judge had for breakfast' is a better headline than 'decision outcomes were associated with position within sessions.'",
+        "This is a common failure mode in how findings travel. An association between two things that moved together—time since break and favorable rulings—became a causal claim about one thing that was never isolated. Food, rest, time of day, session length and case sequence were entangled in the same variable. A correlation across an entangled bundle cannot tell you which strand did the work, or whether any single strand did."
+      ]
+    },
+    {
+      "heading": "The ordering dispute and the simulation challenge",
+      "paragraphs": [
+        "The causal reading was disputed from the start. A 2011 critique argued that cases were not randomly ordered around breaks: represented and unrepresented prisoners, prison groupings and attorney scheduling could place easier or harder cases in particular positions. If favorable cases cluster early for administrative reasons, the declining line needs no hunger to exist. The original authors replied with further analyses intended to show the pattern survived these checks.",
+        "Later simulation work added another caution. When favorable cases tend to take longer, and sessions stop before time-consuming cases, a large order pattern can emerge even for a hypothetical perfectly consistent decision-maker. That does not prove the original pattern was an artifact. It does show that the dramatic shape of the famous graph should not be read as the size of a physiological effect, because part of that shape can be produced by scheduling alone."
+      ]
+    },
+    {
+      "heading": "Often confused with decision fatigue",
+      "paragraphs": [
+        "The hungry judge story is usually folded into a broader claim about decision fatigue or ego depletion: the idea that making many choices drains a mental resource and later choices become harsher, lazier or more impulsive. These are related ideas but different claims. Decision fatigue is a general hypothesis about repeated choice; the hungry judge effect is one observational dataset that was used as a vivid illustration of it.",
+        "Both claims deserve the same discipline. The broader depletion literature has itself faced serious replication and interpretation problems, so citing the parole study as settled proof of depletion stacks one uncertain claim on top of another. The honest summary is narrow: in one setting, outcomes varied with session position and break structure; the mechanism—hunger, rest, ordering or something else—remains unidentified."
+      ]
+    },
+    {
+      "heading": "How to audit your own repeated decisions",
+      "paragraphs": [
+        "The operational lesson survives the scientific dispute, and it is broader than lunch. Anywhere the same kind of high-stakes decision is repeated in sequence—hiring panels, loan approvals, medical triage, code review, grant scoring—the position of a case in the queue should ideally carry no information about its outcome. If it does, something in the process deserves a look, whether or not hunger is involved.",
+        "Imagine a hiring committee that interviews twelve candidates in two blocks of six. At review, nine of the twelve advancing candidates come from the first three interview slots. That is a signal worth investigating, not a verdict. Check whether strong candidates were scheduled early, whether later interviews ran shorter, whether the panel took a real break, and whether rubric scoring drifted over the day. If you genuinely suspect a hunger effect, measure hunger directly or vary meals independently of rest—using the clock as a stand-in for a stomach just repeats the original study's weakness."
+      ]
+    }
+  ],
+  "checklist": [
+    "Record the sequence position of every case in a repeated decision session before outcomes are reviewed.",
+    "Log break timing, session length and decision duration separately instead of treating 'time since break' as one variable.",
+    "Check whether case difficulty, representation or scheduling rules cluster certain cases early or late in the queue.",
+    "If a break effect appears, test rest, food, sequence and workload as competing explanations before naming one cause.",
+    "When hunger is the hypothesis, measure hunger directly or manipulate meals independently from rest breaks.",
+    "Rotate or randomize case order where the process allows it, so position cannot silently sort cases by difficulty.",
+    "Describe the finding as an association with session position unless the mechanism was actually isolated."
+  ],
+  "boundaryNote": "The hungry judge effect helps you inspect whether repeated decisions depend on order, breaks or workload; it does not prove that hunger caused any specific ruling, that judges are irrational, or that a snack will fix a biased process."
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "cognitive-bias-curse-of-knowledge",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-curse-of-knowledge",
+  "headline": "Curse of Knowledge: why expertise makes other people's ignorance hard to see",
+  "lede": "Once you know something, it becomes difficult to imagine not knowing it. The curse of knowledge is the tendency for your own knowledge to contaminate judgments about what a less-informed person knows, notices or understands — and it quietly damages teaching, documentation, handoffs and every explanation you judge by how clear it feels to you.",
+  "sections": [
+    {
+      "heading": "The pattern: your knowledge leaks into your model of others",
+      "paragraphs": [
+        "Imagine a senior engineer writing a setup guide for new hires. She tests it herself, it works perfectly, and she rates it as clear. Three weeks later, the new hires are stuck on step two, because the guide never mentions that a certain tool must be installed first. Everyone on her old team already knew that. Her own fluency made the missing assumption invisible.",
+        "This is the curse of knowledge in its everyday form: knowing more makes it harder to estimate what a less-informed person knows or understands. The classic evidence comes from perspective-taking tasks. In one influential set of experiments from 1989, people who were given extra information in an economic setting could not fully ignore it when predicting how less-informed participants would behave. Their own knowledge acted like a weight on the judgment. Importantly, the finding is not that experts are unable to teach beginners. It is that knowledge can bias the estimate of another person's perspective unless that gap is made explicit."
+      ]
+    },
+    {
+      "heading": "Why it happens: no single mechanism explains every case",
+      "paragraphs": [
+        "Researchers have proposed several mechanisms, and the honest summary is that different tasks probably involve different ones. One is anchoring: you start from what you know and adjust too little toward the other person's position. Another is suppression failure: once information is in your head, actively ignoring it is effortful and often incomplete. A third is missing diagnostic cues: the expert simply does not notice which parts of a situation carry information for a beginner and which parts are silent.",
+        "A 2017 line of experiments added a subtler possibility. People can misjudge how common a piece of knowledge is among their peers partly because familiar information feels fluent, and that fluency gets misattributed to everyone — even in conditions where the judge lacked the knowledge themselves. In plain terms: 'this feels obvious to me' is a feeling produced by your own processing, not a measurement of the other person's mind. Treating it as a measurement is the core mistake.",
+        "Because no single mechanism covers every version of the effect, be suspicious of any one-line explanation. The effect is supported across several perspective-taking tasks, but its size and its exact cause depend on the task, the information and the people involved."
+      ]
+    },
+    {
+      "heading": "What the evidence does and does not support",
+      "paragraphs": [
+        "The supported claim is bounded: when you hold information that another person lacks, your judgments about their knowledge, predictions or understanding can be distorted in the direction of what you know. This has been shown in economic judgment tasks and interpersonal perspective-taking experiments. There is also evidence that the bias can be reduced. A 2021 study found that feedback about the other person's perspective — a narrative description of what they actually saw and knew — improved later perspective-taking more than a simple accuracy score telling people whether they were right or wrong.",
+        "The evidence does not support the dramatic version of the claim. It does not show that experts always fail to communicate, that knowledge is a general handicap, or that the effect has a fixed size you can apply to your own situation. It also does not prove that a confusing document was confusing because of this bias. A bad explanation can just be a bad explanation. The bias is a candidate cause worth inspecting, not a diagnosis that applies automatically whenever a novice struggles."
+      ]
+    },
+    {
+      "heading": "Do not confuse it with the Dunning-Kruger effect",
+      "paragraphs": [
+        "These two ideas are often mixed up because both live near the topic of expertise, but they answer different questions. The curse of knowledge is about estimating another person's knowledge after you already know something. Dunning-Kruger research is about calibration: the relationship between a person's own performance and their self-assessment of that performance.",
+        "The quickest check is to ask whose knowledge is being judged. If a senior engineer overestimates how clear her guide will be to a new hire, that is a perspective-taking problem — the curse of knowledge. If the new hire rates his own mastery far higher than an objective test supports, that is a self-assessment question. The fixes differ too. For the first, collect evidence from the less-informed person's actual explanation or action. For the second, record predicted performance before feedback and compare it with an objective result. Neither label is a personality diagnosis; both depend on the task and the measurement."
+      ]
+    },
+    {
+      "heading": "A worked example: the onboarding guide that tested clear",
+      "paragraphs": [
+        "A team lead writes a deployment runbook for a handoff to another team. It has twelve steps. She asks a colleague who has run deployments for two years to review it, and he confirms it is clear. Confident, she schedules the handoff. In the first session, the receiving team stalls at step three — an environment variable the runbook never mentions — and again at step seven, where 'the usual check' assumes knowledge of an incident from last year. Out of five engineers, only one finishes the runbook without asking for help.",
+        "The correction is not to make the author humbler. It is to change the test. In the next handoff, she asks three members of the receiving team to work through the runbook without hints, thinking aloud, and she writes down exactly where their actions diverge from the document. The gaps become concrete: two unstated prerequisites and one reference to decision history nobody outside her team had. She adds the prerequisites, links the incident record, and the next cohort finishes with far fewer questions. Her own sense of clarity never entered the measurement — the readers' behavior did."
+      ]
+    }
+  ],
+  "checklist": [
+    "Before sending an explanation, list the prerequisites and hidden assumptions it relies on.",
+    "Ask a real target reader to paraphrase the idea or perform the next step without help.",
+    "Record where the reader's prediction or action differs from yours, and treat each gap as evidence about what the explanation missed.",
+    "Do not rate clarity by how easy the material feels to you or to another expert.",
+    "Give feedback that describes the other person's perspective — what they saw and assumed — rather than only a right-or-wrong score.",
+    "State the decision history and terminology explicitly when handing work to a team that did not live through it.",
+    "Recheck understanding after revision by watching a new reader work, not by asking 'is that clear now?'"
+  ],
+  "boundaryNote": "The curse of knowledge helps you inspect why your estimate of another person's understanding may be inflated by what you know. It does not prove that experts cannot teach, that every failed explanation was caused by this bias, or that the effect has a fixed size in your situation; that depends on the task, the information and the people involved."
+}

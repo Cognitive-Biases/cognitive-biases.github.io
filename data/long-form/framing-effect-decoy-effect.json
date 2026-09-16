@@ -1,0 +1,53 @@
+{
+  "slug": "framing-effect-decoy-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-decoy-effect",
+  "headline": "Decoy Effect: when the third option quietly picks your favorite",
+  "lede": "The decoy effect appears when adding an inferior option changes which of the original options people prefer, even though almost nobody picks the new option itself. It is well documented, but it is not a magic pricing trick: its size and direction depend on the choice set, so the practical job is to detect the decoy and re-run the comparison without it.",
+  "sections": [
+    {
+      "heading": "An option nobody wants can still change the choice",
+      "paragraphs": [
+        "In the classic setup, you are choosing between two options that trade off two attributes, for example price and quality. Then a third option appears that is clearly worse than one of them on the important attributes, but not clearly worse than the other. This extra option is called a decoy. In many experiments, adding it increases the choice share of the option it sits next to, because that option now has an easy victory: it beats the decoy on every relevant dimension.",
+        "The strange part is that the decoy usually does not need to be chosen to do this work. Its job is to change the comparison, not to win. The features of the two original options have not changed at all. What changed is the menu around them, and the menu has made one option easier to justify. If your preference between A and B flips only because a third option C arrived, the menu is participating in the decision."
+      ]
+    },
+    {
+      "heading": "Why the effect can happen, according to the evidence",
+      "paragraphs": [
+        "Researchers have proposed several mechanisms: contrast between attribute trade-offs, shifts in relative value, and the simple fact that an option that clearly beats a nearby rival is easier to defend. Ease of justification matters because many real choices must later be explained to a manager, a partner or ourselves. 'It dominates the mid-tier plan' sounds like a reason, even when the mid-tier plan was designed to lose.",
+        "A 2024 integrative review concludes that there is still no consensus on a single underlying mechanism, and it separates the attraction effect from related but different context effects such as the compromise effect and phantom decoys. That distinction matters in practice: not every three-tier menu is one phenomenon. The review supports treating 'an extra option changed the comparison' as a family of effects, not one reliable lever with one explanation."
+      ]
+    },
+    {
+      "heading": "What the evidence supports, and what it does not",
+      "paragraphs": [
+        "The decoy effect is well documented as a family of context effects, including preregistered replications. It is real enough to take seriously when you design or read a pricing table, a product lineup or a recommendation list. Foundational work on tradeoff contrast and extremeness aversion, and later experimental replications, confirm that choice sets can move preferences between unchanged options.",
+        "The evidence does not support the stronger marketing claim that adding a decoy reliably boosts sales of the target. The effect is not guaranteed: its size depends on the geometry of the options, prior preferences and task design, and some preregistered replications have found weak or null results. So 'we added a middle plan, therefore demand for the premium plan will rise' is a hypothesis to test with the full choice set, not a law to apply."
+      ]
+    },
+    {
+      "heading": "Keep the decoy separate from the default",
+      "paragraphs": [
+        "The decoy effect is often confused with the default effect, because both can change choices without changing the product itself. They work through different structures. A decoy changes the comparison between options by adding another alternative. A default changes what happens when the person does nothing. The diagnostic question is simple: what changed, the choice set or the automatic outcome?",
+        "The checks differ too. For a suspected decoy, compare the original options before and after the extra one is added, and check whether the extra option is inferior to one alternative but not the other. For a default, identify exactly what happens under inaction and, where possible, compare with a different default or an active choice. A three-tier page can carry both at once, so do not attribute the whole result to one effect."
+      ]
+    },
+    {
+      "heading": "A worked example: the project management plans",
+      "paragraphs": [
+        "A team is choosing between a Basic plan at about €15 per user per month and a Pro plan at about €30 with the reporting features they actually need. The team is split: the price difference feels hard to justify. The vendor then adds a mid-tier plan at €27 with weaker reporting than Pro. Almost nobody on the team wants the mid-tier plan, but the discussion shifts. Pro now 'only costs €3 more' than the option next to it, and the split dissolves.",
+        "The check is not to ban the mid-tier plan from existence. It is to re-run the comparison between Basic and Pro without it: what do the reporting features deliver, and is that worth roughly double the price per user? If Pro still wins on the attributes that matter, fine. If the preference collapses once the decoy is removed, the menu was deciding, and the team should choose on cost against need instead of on contrast."
+      ]
+    }
+  ],
+  "checklist": [
+    "List the original options before the extra option appeared, and note their attributes.",
+    "Check whether the suspected decoy is worse than one option on the attributes that matter, but not worse than the other.",
+    "Remove the suspected decoy on paper and state your preference between the remaining options again.",
+    "Score the remaining options on the attributes tied to your actual goal, not on the contrast the menu creates.",
+    "Identify what happens if you do nothing, to rule out a default effect hiding in the same choice.",
+    "When designing a pricing table, test the full choice set instead of assuming a three-tier layout will reliably create the effect."
+  ],
+  "boundaryNote": "The decoy effect helps you inspect whether an added option is steering a comparison between unchanged alternatives. It does not prove manipulation, does not guarantee a sales lift, and does not mean every three-tier menu contains a working decoy; the effect is well documented but context-dependent."
+}
