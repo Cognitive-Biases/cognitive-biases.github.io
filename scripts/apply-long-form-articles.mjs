@@ -47,11 +47,13 @@ for (const entry of articlesDoc.entries || []) {
   if (!bias) throw new Error(`${entry.slug}: long-form article does not match a published bias.`);
   if (duplicateIds.has(bias.id)) throw new Error(`${entry.slug}: long-form article must target a canonical record.`);
   const review = reviewBySlug.get(entry.slug);
-  if (!review) throw new Error(`${entry.slug}: long-form article requires an evidence review.`);
+  if (!review && entry.reviewStatus !== "unreviewed-legacy") throw new Error(`${entry.slug}: long-form article requires an evidence review.`);
+  if (review && entry.reviewStatus === "unreviewed-legacy") throw new Error(`${entry.slug}: entry is marked unreviewed-legacy but an evidence review exists.`);
 
   const pagePath = join(OUT, "biases", entry.slug, "index.html");
   let html = await readFile(pagePath, "utf8");
-  if (!html.includes('class="evidence-review"')) throw new Error(`${entry.slug}: evidence review must be rendered before long-form article.`);
+  if (review && !html.includes('class="evidence-review"')) throw new Error(`${entry.slug}: evidence review must be rendered before long-form article.`);
+  if (!review && !html.includes('<section class="related')) throw new Error(`${entry.slug}: unreviewed canonical page is missing the related-section anchor for long-form insertion.`);
 
   const sectionIds = entry.sections.map((section, index) => `${slugify(section.heading) || `section-${index + 1}`}-${index + 1}`);
   const toc = entry.sections
@@ -69,13 +71,19 @@ for (const entry of articlesDoc.entries || []) {
 
   const wordCount = wordsIn([entry.lede, ...entry.sections.flatMap((section) => section.paragraphs), ...entry.checklist, entry.boundaryNote].join(" "));
   const readingMinutes = Math.max(3, Math.ceil(wordCount / 220));
-  const articleSection = `<section class="long-form-article" id="long-form"><div class="long-form-article__head"><div><p class="kicker">Long-form guide</p><h2>${escapeHtml(entry.headline)}</h2></div><p class="long-form-article__meta">${wordCount.toLocaleString("en-US")} words · about ${readingMinutes} min</p></div><p class="long-form-article__lede">${escapeHtml(entry.lede)}</p><nav class="long-form-article__toc" aria-label="On this guide"><strong>On this guide</strong><ol>${toc}</ol></nav>${articleSections}<section class="long-form-article__check"><h3>Decision checklist</h3><ul>${checklist}</ul></section><aside class="long-form-article__boundary"><strong>Evidence boundary</strong><p>${escapeHtml(entry.boundaryNote)}</p></aside>${relatedGuidesSection}<p class="long-form-article__migration">Restored from the earlier MetalHatsCats long-form layer and rewritten for the current evidence-first model. The evidence review and reviewed sources below remain the source of truth for scientific claims.</p></section>`;
+  const migrationNote = review
+    ? "Restored from the earlier MetalHatsCats long-form layer and rewritten for the current evidence-first model. The evidence review and reviewed sources below remain the source of truth for scientific claims."
+    : "Restored from the earlier MetalHatsCats long-form layer. This concept does not yet have a current evidence review, so treat this article as the restored 2025 original rather than a reviewed scientific claim.";
+  const articleSection = `<section class="long-form-article" id="long-form"><div class="long-form-article__head"><div><p class="kicker">Long-form guide</p><h2>${escapeHtml(entry.headline)}</h2></div><p class="long-form-article__meta">${wordCount.toLocaleString("en-US")} words · about ${readingMinutes} min</p></div><p class="long-form-article__lede">${escapeHtml(entry.lede)}</p><nav class="long-form-article__toc" aria-label="On this guide"><strong>On this guide</strong><ol>${toc}</ol></nav>${articleSections}<section class="long-form-article__check"><h3>Decision checklist</h3><ul>${checklist}</ul></section><aside class="long-form-article__boundary"><strong>Evidence boundary</strong><p>${escapeHtml(entry.boundaryNote)}</p></aside>${relatedGuidesSection}<p class="long-form-article__migration">${migrationNote}</p></section>`;
 
+  const insertionAnchor = review
+    ? '<section class="evidence-review"'
+    : (html.includes('<section class="related legacy-related"') ? '<section class="related legacy-related"' : '<section class="related"');
   if (!html.includes('class="long-form-article"')) {
-    html = html.replace('<section class="evidence-review"', `${articleSection}<section class="evidence-review"`);
+    html = html.replace(insertionAnchor, `${articleSection}${insertionAnchor}`);
   } else {
     const start = html.indexOf('<section class="long-form-article" id="long-form">');
-    const end = html.indexOf('<section class="evidence-review"', start);
+    const end = html.indexOf(insertionAnchor, start);
     if (start < 0 || end < 0) throw new Error(`${entry.slug}: existing long-form article block could not be located for replacement.`);
     html = html.slice(0, start) + articleSection + html.slice(end);
   }
@@ -100,9 +108,9 @@ for (const entry of articlesDoc.entries || []) {
     timeRequired: `PT${readingMinutes}M`,
     author: publisher,
     publisher,
-    citation: review.sources.map((source) => source.url),
     isBasedOn: entry.legacySourceUrl,
   };
+  if (review) articleSchema.citation = review.sources.map((source) => source.url);
   if (!html.includes(`${pageUrl}#long-form-article`)) {
     html = html.replace("</head>", `<script type="application/ld+json">${JSON.stringify(articleSchema)}</script></head>`);
   } else {

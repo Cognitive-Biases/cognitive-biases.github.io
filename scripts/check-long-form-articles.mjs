@@ -73,16 +73,20 @@ for (const entry of articlesDoc.entries || []) {
   if (wordCount < MIN_WORDS) throw new Error(`${entry.slug}: ${wordCount} words is below the ${MIN_WORDS}-word long-form floor.`);
 
   const review = reviewBySlug.get(entry.slug);
-  if (!review) throw new Error(`${entry.slug}: long-form article requires an evidence review.`);
-  if (!Array.isArray(review.sources) || review.sources.length < 2) throw new Error(`${entry.slug}: evidence review is missing the minimum source set.`);
+  if (!review && entry.reviewStatus !== "unreviewed-legacy") throw new Error(`${entry.slug}: long-form article requires an evidence review.`);
+  if (review && entry.reviewStatus === "unreviewed-legacy") throw new Error(`${entry.slug}: entry is marked unreviewed-legacy but an evidence review exists.`);
+  if (review && (!Array.isArray(review.sources) || review.sources.length < 2)) throw new Error(`${entry.slug}: evidence review is missing the minimum source set.`);
+  if (!review && !(entry.boundaryNote || "").includes("does not yet have a current evidence review")) {
+    throw new Error(`${entry.slug}: unreviewed-legacy entry must state that no current evidence review exists.`);
+  }
 
   const html = await readFile(resolve("dist", "biases", entry.slug, "index.html"), "utf8");
   const pageUrl = `${SITE}/biases/${entry.slug}/`;
   const articleIndex = html.indexOf('class="long-form-article"');
   const evidenceIndex = html.indexOf('class="evidence-review"');
   if (articleIndex < 0 || !html.includes('id="long-form"')) throw new Error(`${entry.slug}: rendered long-form article is missing.`);
-  if (evidenceIndex < 0) throw new Error(`${entry.slug}: rendered evidence review is missing.`);
-  if (articleIndex > evidenceIndex) throw new Error(`${entry.slug}: long-form article must appear before the evidence review.`);
+  if (review && evidenceIndex < 0) throw new Error(`${entry.slug}: rendered evidence review is missing.`);
+  if (review && articleIndex > evidenceIndex) throw new Error(`${entry.slug}: long-form article must appear before the evidence review.`);
   if (!html.includes(`${pageUrl}#long-form-article`) || !html.includes('"@type":"Article"')) {
     throw new Error(`${entry.slug}: long-form Article structured data is missing.`);
   }
@@ -93,8 +97,9 @@ for (const entry of articlesDoc.entries || []) {
   if (!html.includes("Evidence boundary") || !html.includes(escapeHtml(entry.boundaryNote))) {
     throw new Error(`${entry.slug}: rendered evidence boundary is missing.`);
   }
-  if (!html.includes("current evidence-first model")) throw new Error(`${entry.slug}: migration provenance note is missing.`);
-  for (const source of review.sources) {
+  if (review && !html.includes("current evidence-first model")) throw new Error(`${entry.slug}: migration provenance note is missing.`);
+  if (!review && !html.includes("does not yet have a current evidence review")) throw new Error(`${entry.slug}: unreviewed migration provenance note is missing.`);
+  for (const source of review?.sources || []) {
     if (!html.includes(source.url)) throw new Error(`${entry.slug}: current evidence source is missing from rendered page: ${source.url}`);
   }
   for (const guideSlug of guideSlugsByBias.get(entry.slug) || []) {

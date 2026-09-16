@@ -18,11 +18,9 @@ Do not create a second SEO article URL for the same bias. The short definition r
 
 ## Evidence rule
 
-A bias may receive a long-form article only when it already has a current evidence review.
+Where a current evidence review exists, it remains the source of truth for scientific claims. Long-form prose may explain and apply that reviewed meaning, but it must not silently strengthen the claim, remove limitations or invent a mechanism.
 
-The evidence review remains the source of truth for scientific claims. Long-form prose may explain and apply that reviewed meaning, but it must not silently strengthen the claim, remove limitations or invent a mechanism.
-
-If a legacy article exists but the canonical bias is still unreviewed, keep the legacy material as migration inventory until an evidence review is complete. Page length is not a reason to publish unsupported claims.
+By owner decision (2026-09-16), recovered original articles may also be restored for canonical biases that do **not** yet have an evidence review. These entries are marked `reviewStatus: "unreviewed-legacy"`, render an explicit notice that no current evidence review exists, and their evidence boundary tells the reader to treat the text as the restored 2025 original pending review. When an evidence review is later published for such a concept, `scripts/check-long-form-articles.mjs` fails until the entry's `reviewStatus` is flipped and its claims are reconciled with the review — the gate makes the debt visible instead of silent.
 
 ## Recovery rule (supersedes the earlier originality rule)
 
