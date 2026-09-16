@@ -1,0 +1,153 @@
+{
+  "slug": "cognitive-bias-outcome-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-outcome-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-outcome-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T15:12:39.033Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Dice, the Doctor, and the Deal: Making Peace with Outcome Bias",
+  "lede": "If you’ve ever called yourself an idiot after a bad result—or a genius after a lucky break—pull up a chair. A surgeon chooses a risky procedure with a 70% survival rate; the patient dies. A PM greenlights a bold feature; it flops. An investor buys a cheap index fund; the market soars. In each case, the crowd judges the decision by what happened, not by what the decision-maker knew at the time. It feels fair. It isn’t.",
+  "sections": [
+    {
+      "heading": "What is Outcome Bias – when you judge a decision by its result, not its quality and why it matters",
+      "paragraphs": [
+        "Outcome bias is the habit of judging a decision by its result instead of by the quality of the decision process at the time it was made. Outcome bias makes us overrate lucky decisions and underrate wise ones. We look at the scoreboard and skip the film review. Here’s the trap: life is messy. There’s uncertainty, incomplete information, and luck in nearly everything that matters—hiring, product bets, medical treatments, investing, even parenting. If you judge the choice only by what followed, you blur the difference between skill and chance. That pushes you toward timid or flashy choices not because they’re good, but because they look safe or heroic after the fact.",
+        "A classic study shows how seductive this bias is. Participants judged a doctor more harshly when a patient died—even when they knew the doctor’s choice had the best expected outcome given the data at the time (Baron & Hershey, 1988). The death pointed their judgment like a magnet. Why it matters: It skews incentives. People hedge, hide, or delay good, calculated risks because they fear being punished if luck runs cold; It kills learning. Teams scrap good processes after a bad break, and copy lucky outliers without understanding why they “worked.”; It fuels blame and hero worship. We punish competent people for bad luck and anoint lucky ones as prophets; It erodes trust. When folks sense that results alone drive judgment, they optimize for optics. Process quality decays. Put simply: if you want better results over time, judge decisions by their decision quality, not their last score. Ironically, that’s the surest way to improve the scoreboard."
+      ]
+    },
+    {
+      "heading": "1) The ICU Choice",
+      "paragraphs": [
+        "Let’s get concrete. Each of these stories has the same shape: a good or bad result bends our judgment in ways we wouldn’t endorse if we rewound the tape. An ICU team faces a patient with septic shock. Two options: Option A: Aggressive treatment. Survival chance ~60% with significant complications; fast decision needed; Option B: Conservative treatment. Survival chance ~45%; buys time for more data; risk of organ failure rises. They choose Option A. The patient dies. At the debrief, the attending gets grilled.",
+        "The family’s grief hangs in the air; hindsight fills in certainty. “If only you had waited.” But the decision was consistent with the hospital’s protocol and the best available evidence for patients with similar profiles. If the patient had lived, the same decision would be praised as “decisive” and “textbook.” The outcome hijacks the evaluation. The next time, the team hesitates—just a bit—to avoid the same pain. That hesitation, nudged by outcome bias, can cost a life."
+      ]
+    },
+    {
+      "heading": "2) The Product Bet",
+      "paragraphs": [
+        "A consumer app is stagnating. The PM proposes a bold “Lite” version for low-end Android devices in emerging markets. The team puts four weeks into a lean pilot; the launch tanks. Active users rise 2% instead of the 10% goal. Twitter heckles. Leadership cancels the Lite roadmap.",
+        "Six months later, a competitor ships a similar Lite, but with a referral mechanic and a WhatsApp-focused share flow. They snag 8% growth. The first team’s process—hypothesis, cheap experiment, data—was sound. But the flop poisoned the well. Outcome bias shouted louder than the blueprint of learning."
+      ]
+    },
+    {
+      "heading": "3) The Firefighter and the Door",
+      "paragraphs": [
+        "A firefighter must open a door in a burning apartment. The choice: kick it or breach with a tool. Kicking saves seconds but risks a flashover if conditions are wrong. Given the smoke pattern, training points to using the tool. The firefighter kicks anyway and rescues a child within seconds. Everyone celebrates “instinct.”",
+        "A week later, another firefighter copies the move in slightly different conditions. The room flashes; they barely escape. Review shows the first rescue was luck; the second was predictable trouble. Outcome bias turned a risky move into “best practice” for seven days."
+      ]
+    },
+    {
+      "heading": "4) The Poker Hand; 5) The Hire",
+      "paragraphs": [
+        "You call an all-in with a strong but not dominant hand, getting 2:1 pot odds. Math says it’s correct. You lose—he had the one combo that beats you. The table sneers. “Donkey call.” You feel dumb. That feeling is outcome bias wearing a smug grin. In poker, as in life, the right play can lose. You grade the hand by expected value (EV), not by what happened once. Good players review the logic; bad players review only the pain.",
+        "You hire a promising engineer. Great references, strong skills, kind communicator. Three months in, a sudden family crisis upends their availability; performance drops. The project suffers. A leader says, “We should have known.” Really? Based on what signal? If you lie to yourself that the dip was predictable, next time you might over-index on “always available” candidates and overlook excellent people who need flexibility. You’d be optimizing for optics, not outcomes."
+      ]
+    },
+    {
+      "heading": "6) The Investment; 7) The Parent and the Playground",
+      "paragraphs": [
+        "You buy a diversified index fund after building a simple plan: low fees, wide exposure, long horizon. Two years later, tech stocks triple; your friend’s concentrated AI bet dwarfs your returns. You feel dull. You almost abandon the plan. Outcome bias compares your prudent process to someone else’s lucky spin. It tries to push you into higher variance after witnessing a win you didn’t get to own.",
+        "Two parents allow different risks. One lets their kid climb a slightly too-high structure; the kid slips, scrapes an elbow, cries loudly. Other parents glare. The first parent reconsiders every future risk. Another parent forbids any climbing; their kid avoids scrapes but also misses developing balance and courage. Each parent’s results sculpt community judgment more than the underlying goal: raising resilient kids safely. The first parent’s decision may have been thoughtful; the outcome masks it."
+      ]
+    },
+    {
+      "heading": "8) The “Hero” at Work; How to Recognize and Avoid It",
+      "paragraphs": [
+        "A teammate repeatedly cuts corners across sprints, then pulls a weekend “save” before the release. Leadership hails the hero. The process that caused the mess gets ignored because the outcome (shipped!) feels good. Next quarter? More mess. The heroic optics become the standard. Outcome bias feeds a cultural loop of burnout and bad debt.",
+        "You don’t cure outcome bias by ignoring results. Results still matter. You cure it by separating your decision review (process) from your performance review (outcomes), and by building habits that anchor your judgment in the information set available at the time."
+      ]
+    },
+    {
+      "heading": "Step 1: Freeze the frame—before the result",
+      "paragraphs": [
+        "Create a simple, low-friction decision record. Two timestamps: Before making the decision, write your key assumptions, alternatives considered, base rates, risks, and reasons; After the result, review the record. What did you know then? What changed? What did luck do? Even a 5-minute note in a shared doc beats memory. Memory warps with hindsight (Fischhoff, 1975). What to capture: The objective: What were you optimizing? Over what time horizon?;",
+        "Options: What did you consider and why did each get rejected?; Base rates: What usually happens in similar cases?; Expected value: What were the payoffs and probabilities as you saw them?; Risks and kill criteria: What would make you stop, pivot, or exit?; Constraints: Budget, time, talent, ethics, dependencies; Decision owner and reviewers: Who decided and who advised? You don’t need a formal template. A bulleted note in your team’s channel works."
+      ]
+    },
+    {
+      "heading": "Step 2: Score the process, then the result",
+      "paragraphs": [
+        "Hold two reviews: Process Review (before outcome, or blind to outcome if possible). Did we use good information? Did we seek disconfirming evidence? Did we consider alternatives? Did we use base rates? Did we define kill criteria? Did we stress-test assumptions?; Outcome Review (after outcome). What happened?",
+        "How did variance and luck contribute? Did we hit the wrong tail or the right tail? If you must do one meeting, order matters: process first, outcome second. Ask, “Would we make the same decision if we could roll the dice again with the same info?”"
+      ]
+    },
+    {
+      "heading": "Step 3: Build structural guardrails",
+      "paragraphs": [
+        "Decision journals. Personal or team-level notebooks for material decisions. Revisit quarterly; Pre-mortems. Imagine the decision failed spectacularly. List reasons. Adjust now (Klein, 2007); Red teams or friendly skeptics. Assign someone to argue against the preferred choice; Base rate libraries. Maintain a small, shared set of reference class outcomes. “What happens 60% of the time in launches like this?”",
+        "Blameless postmortems. Focus on system factors and process quality, not individual flogging. Document action items that guard against the same failure mode; Scoring forecasts. Track your probability estimates with Brier scores. Calibrate judgment over time; Kill switches and tripwires. Predefine conditions to stop a project before sunk costs take over."
+      ]
+    },
+    {
+      "heading": "Step 4: Craft Better Incentives and Language; Step 5: Train Your Gut with Reps",
+      "paragraphs": [
+        "Praise process in public. When someone makes a thoughtful, bold bet that fails, thank them for the rigor. Name the learning; Penalize reckless wins. Don’t let lucky breaks become standards; Separate “luck weather” from “skill climate.” Acknowledge short-term variance. Reward long-term process adherence and steady improvement; Use time-of-decision language. “Given what we knew on April 12, the 65% EV favored Option B.” Outcome bias isn’t a belief; it’s a reflex. To alter it, you need reps.",
+        "Quick drills. Once a week, pick one decision, write a 3-bullet pre-commit, and revisit a month later; Read decision logs from others. Borrow patterns. Swap with a peer; Guess the base rate first. Before searching specifics, write your prior. Then update. This isn’t about being perfect; it’s about making the honest, slightly-better call more often. Pin this. Use it. Tweak it."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Outcome bias overlaps with a few familiar troublemakers. Untangling them helps. Hindsight Bias: After something happens, we feel like we “knew it all along” and overestimate predictability (Fischhoff, 1975). Outcome bias uses that feeling to judge the decision harshly or kindly. Hindsight says, “I knew it”; outcome bias says, “So your decision was dumb/smart.”; Survivorship Bias: We learn from winners that stick around, ignoring the many similar failures we don’t see. Outcome bias rides along when we judge the “winning” decision as superior without seeing the full base rate.",
+        "Confirmation Bias: We look for evidence that supports our initial belief. After an outcome, we selectively collect facts aligning with the result and call the decision good or bad. Self-Serving Bias: We attribute wins to skill and losses to bad luck—when it’s our decision. Outcome bias applies in both directions, for self and others, often reversed: we blame others for bad results, credit ourselves for good ones. Fundamental Attribution Error: We over-attribute others’ outcomes to their character and underweight situation. “She’s incompetent because the project failed,” ignoring constraints and randomness.",
+        "Moral Luck: We judge moral blame or praise based on outcomes outside the agent’s control (Nagel, 1979). Outcome bias is the cognitive engine behind moral luck in everyday settings. Escalation of Commitment: After investing in a decision, we throw good money after bad to avoid admitting a poor choice. Outcome bias can trigger escalation (“It worked once; keep going!” or “One bad result—double down to get even!”). Resulting (Poker Term): Popularized by poker players, “resulting” is the practical vernacular for outcome bias in decision evaluation (Duke, 2018). If you hang out with players, call it that. The distinctions are less important than the remedy: anchor reviews in what you knew then, not what you feel now."
+      ]
+    },
+    {
+      "heading": "For Product Teams; For Engineering",
+      "paragraphs": [
+        "You don’t need a chief decision officer or a fancy framework. Use small, durable habits. Decision doc lite. One page per significant bet: problem, options, base rates, success metrics, kill criteria, decision owner, date. Takes 20 minutes; Pilot, don’t ponder. Run smaller experiments with clear learning goals. Put the learning objective on top of the doc; Two-stage retro. First, read the pre-launch decision doc aloud. Second, discuss outcome. End with two changes: one process tweak, one metric tweak.",
+        "Incident postmortems. Timeline first, blame last. Rate which guardrails worked. Add one control; remove one weak ritual; Risk budget. Agree on the acceptable level of rollbacks/escapes per quarter. If you hit it, slow down deliberately; if you’re far below, you might be too conservative; Hero stories audit. Once a quarter, write down three “hero” saves. How many were preventable? Reward the prevention, not the rescue."
+      ]
+    },
+    {
+      "heading": "For Leadership; For Sales and Marketing",
+      "paragraphs": [
+        "Quarterly decision review. Pick five major decisions regardless of outcomes. Grade process quality. Adjust incentives based on these grades; Do not anchor comp to one big win or loss. Use multi-metric, multi-quarter evaluation; Publish “favorite failure” memos. Highlight good bets that didn’t pay—explain why you’d make them again.",
+        "Pre-commit segments and messaging tests. Don’t change your hypothesis after the results. If you do, mark the pivot; Score calls on process: discovery quality, alignment checks, next step clarity. Wins/losses fluctuate; process quality is coachable; Celebrate “smart passes.” Walking away from a bad-fit deal is a decision too."
+      ]
+    },
+    {
+      "heading": "For Investors and Finance; For Health and Safety",
+      "paragraphs": [
+        "Investment checklist. Thesis, catalysts, base rate of similar companies, risk factors, valuation range, exit plan; Position sizing by EV and conviction, not by recency. Adjust on thesis change, not on price moves alone; Track forecast accuracy. Compare your 60/40s to reality. Calibrate over ego.",
+        "Normalize “right decision, bad outcome.” Say it out loud. Document it. Use morbidity and mortality conferences to practice; Protocol over vibes. When deviating, write a brief rationale. Review later without shame; Near-miss reviews. Treat avoided disasters as seriously as disasters. Good outcomes can hide bad processes."
+      ]
+    },
+    {
+      "heading": "For Parenting and Personal Life; A Short Tour of the Research",
+      "paragraphs": [
+        "Household decisions doc. Sounds odd. Works wonders. For recurring issues (bedtime, screen time, diet, chores), define goals, principles, and a review cadence. Adjust with evidence, not last-night meltdown; Micro pre-mortem for one risky thing per week. “If this camping trip goes sideways, why?” Pack accordingly; Teach kids the difference between choices and luck. Celebrate the process—effort, planning, kindness—over just the outcome. People judge decisions more harshly when unlucky outcomes occur, even if the decision maximizes expected utility (Baron & Hershey, 1988). Translation: don’t trust your after-the-fact feeling.",
+        "Hindsight bias makes past events feel predictable, which then fuels outcome-based judgments (Fischhoff, 1975). Translation: your brain edits the tape. Pre-mortems improve detection of risks by switching mindset from advocacy to analysis (Klein, 2007). Translation: imagine failure first; catch blind spots. You don’t need to memorize citations; you need to build a simple routine that respects their insights."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Decide Well, Live With the Roll",
+      "paragraphs": [
+        "There’s a version of you who trusts the work. The you who can say, “We made the best call we could. It didn’t land. We learned. Next rep.” That version of you is tougher than regret and louder than applause. That version doesn’t hide from outcomes; they just won’t let outcomes blind them to the quality of the choice. Outcome bias tries to make every day a referendum on yesterday’s luck.",
+        "You can say no. Freeze the frame before you decide. Write three lines. Review them when the dust settles. Praise your past self for doing the work—or forgive them and upgrade the process. We want fewer sham heroes and fewer secret scapegoats. We want you to get more reps with the right moves. Decide well. Live with the roll. Come back smarter."
+      ]
+    },
+    {
+      "heading": "One more story to keep",
+      "paragraphs": [
+        "A chess coach asks a student why they pushed a pawn that opened their king. “Because I won the game,” the student says. The coach smiles. “You won in spite of that move, not because of it.”",
+        "The coach isn’t cold. The coach wants the student to keep winning after the luck runs out. You are the coach of your future self. Be kind. Be strict. Judge your moves by their logic, then learn from whatever the board gives back. Use this for big bets. Use a lighter version for small ones. Keep the habit, not the ceremony."
+      ]
+    }
+  ],
+  "checklist": [
+    "Before deciding, did we write a brief stating our objective, options, and expected value?",
+    "Did we consult base rates from similar cases?",
+    "Did someone argue the other side?",
+    "Did we define kill criteria and timebox?",
+    "After the outcome, did we review the process first?",
+    "Did we separate luck from skill using counterfactuals?",
+    "Did we avoid changing standards just because of a win or loss?",
+    "Did we log the lesson in a place future-us will actually find?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"replicated\": Outcome bias occurs when knowledge of a result changes how people evaluate the quality of a decision even when the information available at the time of the decision is held constant. Outcomes can still be relevant for learning, so the error is not 'never look at results'; it is using luck or hindsight as if it had been available to the original decision-maker. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

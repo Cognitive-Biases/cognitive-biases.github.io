@@ -1,0 +1,60 @@
+{
+  "slug": "apophenia-illusory-correlation",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/apophenia-illusory-correlation",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/apophenia-illusory-correlation/content.ts",
+  "originalPublishedAt": "2025-09-01T10:45:00.000Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Illusory Correlation — When coincidence feels causal",
+  "lede": "On Monday our trial conversions jumped 18%. By Tuesday the team chat was certain: the new onboarding video did it. By Thursday the lift evaporated, but the story stuck. We had etched a link where none existed and almost rerouted the roadmap around it.",
+  "sections": [
+    {
+      "heading": "What the bias does",
+      "paragraphs": [
+        "Illusory correlation is that reflex. Two events happen together and we assume cause-and-effect. The brain loves tidy explanations more than messy variance, so it sneaks a narrative in before the data can object. This page is a practical field guide: what the bias is, where it hides, and the rituals that keep your analysis grounded when coincidence shows up wearing a lab coat. Illusory correlation makes unrelated variables feel connected. It thrives on small samples, selective attention, and emotionally charged observations.",
+        "Why it matters: You waste cycles engineering fixes for issues that were random noise; You reinforce stereotypes because vivid anecdotes beat silent statistics; You bet on strategies that never had a causal lever, so they fail quietly; You stop exploring alternative hypotheses once the tidy story lands. In product analytics, medicine, investing, or hiring, the result is the same: we overfit our decisions to moments that were never signal."
+      ]
+    },
+    {
+      "heading": "Market moves and narrative fallacies",
+      "paragraphs": [
+        "A handful of disappointing interviews with candidates from a single bootcamp can solidify into a myth about the entire program. The sample is tiny, and the interviews likely shared the same rushed interviewer. Yet the perceived link spreads through the org, narrowing the funnel. A spike in tickets lands the same week you shipped an experiment.",
+        "You assume causality, roll back the feature, and only later notice that seasonality hits the same week every year. The correlation was temporal, not causal. A stock rallies after a charismatic founder interview. Commentators connect the two because stories travel faster than macro data. In reality, index rebalancing or currency shifts were the driver."
+      ]
+    },
+    {
+      "heading": "Why our minds buy the story",
+      "paragraphs": [
+        "A cold eases a day after drinking ginger tea. The relief feels like proof. Without a control, you forget that most colds resolve on the same cadence regardless of tea. Availability. Vivid pairings are easier to recall, so we overweight them compared to dull counterexamples; Selective sampling. We often only observe the cases that confirm the link (e.g.",
+        ", only published research, only escalated tickets); Emotional load. When events feel important, we search harder for meaning, which nudges us to accept the first plausible association; Time pressure. Teams under deadlines prefer a satisfying explanation to an honest \"we do not know yet.\" Knowing these drivers makes it easier to design counter-moves: slow down, expand the sample, and invite dissenting data."
+      ]
+    },
+    {
+      "heading": "Run a correlation sanity check",
+      "paragraphs": [
+        "Before you reorganize a roadmap, run this quick gauntlet. It takes under thirty minutes once you practice it, and it protects you from expensive mirages. Write the observed correlation in plain language. \"When X happens, Y seems to rise.\" Log the base rates for X and Y across the last relevant time window; Search for cases where X happened without Y and where Y happened without X;",
+        "Check for gating factors: did a filter, migration, or data gap change who shows up in the metric?; List at least three alternative hypotheses and the evidence you would expect if they were true; Decide what minimal extra data or experiment would convert uncertainty into confidence. When you document this sequence, you create reusable artifacts for the next spike. Patterns emerge in the process, not the chart."
+      ]
+    },
+    {
+      "heading": "Illusory correlation vs. Texas sharpshooter",
+      "paragraphs": [
+        "Clustering illusion says random streaks look meaningful. Illusory correlation says two variables move together so there must be a link. The first is about patterns inside one variable; the second is about relationships between variables. Together they create the deadliest combo: a random clump paired with a quick story. Confirmation bias filters incoming data once you have a belief. Illusory correlation manufactures the belief in the first place. When you train teams to demand mechanisms, you starve both biases.",
+        "The Texas sharpshooter paints the target after shooting the barn. Illusory correlation notices nearby bullet holes and assumes the shooter aimed there. Both love tidy targets, but illusory correlation thrives on co-movement while the sharpshooter thrives on selective boundaries. Make every weekly metrics review start with \"What else could explain this?\"; Track a \"null wins\" board where teams earn credit for proving a pattern was random; Teach fast experiments: geo holdouts, staged rollouts, instrumented toggles; Share postmortems when correlation misled you. Shame thrives in secrecy; learning thrives in daylight. Your goal is not to eliminate intuition. It is to give intuition a friction-filled runway so only real causality gets to take off."
+      ]
+    }
+  ],
+  "checklist": [
+    "Capture base rates before you discuss any spike or dip",
+    "Note sample sizes and selection filters on every chart screenshot",
+    "Keep a shared doc of recent false alarms and what revealed them",
+    "Assign a rotating skeptic to propose at least two counter-hypotheses",
+    "Pause big bets until you can name a plausible mechanism, not just a correlation",
+    "Schedule a monthly audit of dashboards for hidden filters or cohort biases"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

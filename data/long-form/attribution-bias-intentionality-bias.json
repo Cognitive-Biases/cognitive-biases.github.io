@@ -1,0 +1,136 @@
+{
+  "slug": "attribution-bias-intentionality-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/attribution-bias-intentionality-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/attribution-bias-intentionality-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T15:22:20.274Z",
+  "originalUpdatedAt": "2025-09-02T13:23:48.341Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The World Isn’t A Puppet Show: Making Peace With Intentionality Bias",
+  "lede": "I used to think the guy in the silver hatchback was out to get me. Morning commute, right lane ending, me in the middle. He drifted in without blinking, then braked hard. In my head: another petty tyrant savoring the power of a fender-bender. I scowled, swore, and carried that hot coal to work. Later that week, I ran into him at a coffee shop. He’d just gotten a call about his kid’s asthma attack during that same drive. He wasn’t aiming for me. He wasn’t even thinking about me. He was just frightened and distracted.",
+  "sections": [
+    {
+      "heading": "What Is Intentionality Bias — and Why It Matters",
+      "paragraphs": [
+        "That moment hurt my pride, then rewired something. Most of what feels personal isn’t. Most of what looks deliberate isn’t. Our brains prefer the story where someone meant it. That preference has a name. Intentionality bias is our tendency to assume that events and behaviors are purposeful and deliberate, even when they’re accidental or caused by situational factors. Intentionality bias is the mental short-cut that fills gaps with intention. Someone bumps your shoulder. The meeting invite “accidentally” leaves you out. A product update breaks a workflow. Your brain writes a motive: rude, political, malicious, careless on purpose. This fast narrative glues together perception and emotion.",
+        "Psychologists have been mapping this reflex for decades. We tend to see purposeful agency even in randomness—think faces in clouds, rigged slot machines, or a “market attack” after a normal dip. We also lean toward deliberate explanations for ambiguous actions, especially when the outcome is bad (Rosset, 2008). It’s not moral failure; it’s an ancient feature. When in doubt, assume intention—because in the savanna, misreading a rustle as wind was costlier than assuming it was a predator. Why it matters: It strains relationships by turning ordinary friction into perceived betrayal; It fuels conflict at work by attributing motive where there’s only mess; It clouds judgment in hiring, performance reviews, and customer support; It invites outrage—online mobs often run on intentionality gasoline; It drains energy. Fighting ghosts is exhausting. When we loosen intentionality bias, we feel lighter. Better decisions. Fewer grudges. More bandwidth for what actually matters."
+      ]
+    },
+    {
+      "heading": "The “Snub” That Wasn’t",
+      "paragraphs": [
+        "Stories beat theory. Here are places where intentionality bias shows up, with alternatives that fit the facts better. Tanya waves at her neighbor, Mo, who doesn’t wave back. Heat rushes her face. He’s ignoring me. Did I do something? She avoids him for a week.",
+        "The next Saturday, he shows up with an apology and a pair of earplugs. He’s training for a marathon with new noise-cancelling buds. He literally didn’t hear her. Perception limits: headphones, poor eyesight, stress; Divided attention: kids, traffic, dog running, groceries.Alternate explanations that often fit:"
+      ]
+    },
+    {
+      "heading": "The Broken Feature and the Conspiracy",
+      "paragraphs": [
+        "Ravi presents a prototype. His colleague, Dana, peppers him with tough questions. Ravi thinks: she’s trying to sink my work. He shuts down and leaves fuming. Later he learns Dana is the team’s “blunt friend.” She interrogates everything because she hates sunk costs and regrets letting weak prototypes survive. No personal vendetta, just a learned habit. It can still be annoying, but intention isn’t sabotage. Role norms: some people see “critique mode” as a job duty; Personality styles: direct vs. diplomatic isn’t intent to harm.",
+        "Better frame: A SaaS company releases an update. It disables exporting unless you upgrade. Twitter lights up with “They broke it on purpose to force us.” Inside the company, the truth: a refactor changed a permissions flag; QA didn’t test that path; no one noticed until users shouted. The team hotfixes it in a day. Were there monetization debates? Sure. But concluding “malice” from “bug” is often a leap. Ask for a timeline. Bugs cluster around deploys. Greed leaves clearer trails; Check the base rate: most regressions are… regressions.Good practice:"
+      ]
+    },
+    {
+      "heading": "Parenting: The “Defiance”",
+      "paragraphs": [
+        "Jess texts her partner: “Got home.” No exclamation, no heart. Cold, right? Her partner spirals: Are they mad at me? Two hours later Jess explains: dead phone, low battery, typing fast in the dark. The content didn’t change; the imagined intention did. Default to neutral when signal is low: text strips tone like bleach. Useful nudge: Sam tells his eight-year-old to put away Legos.",
+        "The kid continues building, “ignoring” him. Sam feels disrespected and raises his voice. The child startles and cries. That night, Sam learns the kid hyperfocuses when excited. He literally doesn’t register speech. What looked like defiance was attention tunneling, a common trait in children (and adults) during flow. Capability not intention: If they can’t, it’s not “won’t.”. Alternate angle:"
+      ]
+    },
+    {
+      "heading": "Medicine: The “Ignored Symptoms”",
+      "paragraphs": [
+        "In a playoff game, a forward elbows a defender; the defender falls hard. Twitter calls it a dirty hit. Slow-motion shows a tiny shove before the elbow, and the forward tries to protect themselves mid-air. We mistake outcomes for intention—the worse the outcome, the more likely we infer malice (Knobe, 2003). Would you judge the same play as harshly if nobody got hurt?.",
+        "Check: A patient emails their doctor about alarming symptoms and gets a curt reply with a standard appointment slot. The patient feels dismissed. Inside the clinic: inboxes are flooded; triage protocols force canned responses to catch true emergencies and keep the day moving. It’s not that the doctor doesn’t care; they’re trapped in a system with narrow options. Systems generate behaviors. Constraints can masquerade as cruelty.Consider:"
+      ]
+    },
+    {
+      "heading": "Customer Support: The “Script Robot”",
+      "paragraphs": [
+        "A student explains a nation’s economic crash as the result of a shadowy group’s plan. It feels clean: someone intended it. The professor opens data: trade shocks, drought, policy lags, banking exposure. Complex causes beat mastermind plots most of the time (Heider, 1958; Kahneman, 2011). Big effects don’t need big intentions. Scale of outcome ≠ scale of intention. Sanity check: You submit a bug report.",
+        "The agent replies with a script: “Please clear cache.” You roll your eyes. Do they think I’m stupid? The agent’s screen flashes: “Use Tier 1 triage flow.” If they skip steps, they get penalized. The intention isn’t to insult you; it’s to keep the queue moving and avoid missing simple fixes. Incentives drive behavior more reliably than motives.Decode:"
+      ]
+    },
+    {
+      "heading": "Notice The Flash, Name It Out Loud",
+      "paragraphs": [
+        "You share good news. Your friend says, “Nice,” and changes the subject. You stew: jealous, unsupportive. Three days later they apologize. They were dealing with a parent’s health scare and didn’t have words. Your brain wrote intention because silence feels like a blank wall. Blank walls are rarely about us. People are busy surviving their day. Hold this: You can’t amputate a bias. You can notice it and build friction around it. Here’s how to put handles on an invisible habit.",
+        "First, catch the spark. It usually arrives as a feeling: heat in the chest, narrowed vision, a quick label like “rude,” “lazy,” “vindictive.” When you feel that snap, say (or think): I’m guessing intention. It sounds corny. It works. The naming gives you a half-second of slack. Micro-script to keep around:"
+      ]
+    },
+    {
+      "heading": "Check Capability, Motive, Opportunity",
+      "paragraphs": [
+        "Boring is your friend. Before you land on malice, list three dull explanations. Headphones. Deadlines. Latency. Old ticket routing. The child is hungry. The coworker misread the doc. If a dull story explains the facts, don’t upgrade to villainy. Trick: pretend you are a detective with a quota for mundane answers.",
+        "You don’t get paid for dramatic ones. If you’re going to infer intention, at least run it through an old triad: capability, motive, opportunity. If you think Dana sabotaged your deck: Most of our petty villains fail somewhere in that chain."
+      ]
+    },
+    {
+      "heading": "Look For Constraints And Incentives",
+      "paragraphs": [
+        "Bad outcomes nudge us to assume bad intent. A dropped ball that costs the game feels like treachery. Write this on a sticky note: outcome ≠ intent. One exercise: retell the event replacing “on purpose” with “it happened.” Watch your mood change. You can still address impact without guessing motive: “The effect was X. Next time, let’s do Y.”",
+        "People act like their environment lets them act. Systems bias action. Before you moralize, ask: If the system nudges people to do a thing, they will do the thing. Fix the pipes before blaming the water."
+      ]
+    },
+    {
+      "heading": "Ask Instead Of Accuse",
+      "paragraphs": [
+        "Most intention leaps happen in hot cognition. If your heart rate is up, your attribution accuracy is down. Take 90 seconds. Water. Walk. Draft a message but don’t send it. If it still feels like a plot after breathing, proceed. Most fires die in oxygen.",
+        "When you can, replace “Why did you do that?” with “What was going on for you?” or “Can you walk me through what happened on your side?” This keeps the conversation in facts and reduces the odds of defensive stories ping-ponging. Tight phrasing that helps:"
+      ]
+    },
+    {
+      "heading": "Borrow Another Brain",
+      "paragraphs": [
+        "What’s the base rate for this being intentional in your environment? In code, most bugs are boring. In hospitals, missed calls are common during shift changes. In classrooms, “talking back” spikes before lunch. Let averages calm your narrative. If 90% of similar events had non-malicious causes, bet on the 90%.",
+        "Your friend or colleague isn’t inside your story. Ask, “If you just saw X and Y, what would you think?” If they don’t land where you did, either they’re missing context or you’re inside an intention tunnel. Either way, you gain more angles."
+      ]
+    },
+    {
+      "heading": "Fundamental Attribution Error",
+      "paragraphs": [
+        "Teams can beat intentionality bias by design: We all have sore spots: authority, rejection, slowness, noise, critique, late replies. Map yours. When a trigger fires, your odds of guessing intention spike. If critique always feels like attack, pre-label those days: “I’m in porcupine mode.” Share with teammates if you can. Print it. Stick it near your screen. Use it when you feel your story harden. Intentionality bias doesn’t float alone. It swims with nearby cousins. Knowing the neighborhood helps you spot overlaps and differences.",
+        "We over-attribute others’ behavior to their character (lazy, rude) and under-attribute to situational factors (tired, rushed). Intentionality bias lives inside this: assuming someone is “a saboteur” versus “missed context due to back-to-back meetings” (Ross, 1977; Gilbert & Malone, 1995). If you find yourself labeling the person instead of the situation, this is your sign."
+      ]
+    },
+    {
+      "heading": "The Knobe Effect (Side-Effect Effect)",
+      "paragraphs": [
+        "Common in conflict and some developmental contexts, hostile attribution bias is the tendency to see ambiguous actions as hostile. It focuses on hostility specifically, while intentionality bias is broader. A door closing can be “deliberate disrespect” (hostile) versus “deliberate, but not hostile” (e.g., private call). Overlap: both over-read intention in ambiguity.",
+        "People judge side effects as intentional when they are harmful, but not when they’re helpful (Knobe, 2003). A CEO implements a plan that helps profits but harms the environment. Many say the harm was “intentional” even if the CEO doesn’t care either way. Our moral judgments contaminate intention attributions."
+      ]
+    },
+    {
+      "heading": "Illusion Of Control",
+      "paragraphs": [
+        "We expect big effects to have big causes—often intentional ones. Plane crash? Must be sabotage, not three tiny screws. It fuels conspiracy thinking. Reality loves small, boring causes aggregating. Once you guess someone’s intention, you notice every scrap that supports it and ignore what doesn’t. Every delayed reply becomes “they don’t care.”",
+        "This magnifies intentionality bias into a worldview. “They’re out to get me” becomes a filter, not a hypothesis. We overestimate control—our own and others’. If we assume people control every outcome, we’ll infer intention where randomness rules. It feels safer to believe someone’s driving, even if no one is."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Give People The Dignity Of Complexity",
+      "paragraphs": [
+        "We judge decisions by outcomes rather than the quality of the decision at the time. When outcomes go south, we rewrite the past as “they must have intended it.” It tightens the knot. The antidote across these: slow down, name the move, ask for the boring story, and let new data change your mind. When I think back to the silver hatchback, I’m embarrassed. Not because I felt angry—anger is human—but because I was so certain. Certainty feels like safety until it burns the bridge you need later. Most days, people aren’t trying to hurt us. They’re juggling. They’re hungry. They’re scared. They’re late.",
+        "Give people the dignity of complexity. Ask once before you accuse. Design your team for fewer dark corners. Keep a list of boring explanations in your pocket. You’ll waste less energy, and the conflicts that truly require your spine will stand out."
+      ]
+    }
+  ],
+  "checklist": [
+    "“I’m telling a story about motive.”",
+    "“What else could explain this?”",
+    "Capability",
+    "Motive",
+    "Opportunity",
+    "List constraints",
+    "List incentives",
+    "“I might be off. Here’s how it landed…”",
+    "“What constraints were you under?”",
+    "Single source of truth",
+    "Default public channels",
+    "Ask constraints before blame"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

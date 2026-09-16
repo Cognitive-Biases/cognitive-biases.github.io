@@ -1,0 +1,131 @@
+{
+  "slug": "extension-neglect-conjunction-fallacy",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/extension-neglect-conjunction-fallacy",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/extension-neglect-conjunction-fallacy/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:46:20.454Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Seductive Specific: Why the Conjunction Fallacy Trips Smart People",
+  "lede": "You’re in a meeting. Someone says, “Our best customers next quarter will be first-time parents who live in cities and use iPhones and have recently bought an air purifier.” Heads nod. The picture feels crisp. You can see that person scrolling at 1 a.m., bleary-eyed and grateful for your product. You go all in.",
+  "sections": [
+    {
+      "heading": "What Is the Conjunction Fallacy and Why It Matters",
+      "paragraphs": [
+        "But there’s a catch: the more specific the story, the less probable it is. That’s the conjunction fallacy—the mistake of judging a specific, detailed scenario as more likely than a broader one. The conjunction fallacy happens when we think A and B together are more likely than A alone. In probability, that can’t be true. The probability of A and B together is always less than or equal to the probability of A alone. P(A ∧ B) ≤ P(A). Always.",
+        "Yet humans love rich stories. We don’t compute likelihoods in our heads; we reach for mental images. Specific descriptions feel realistic because they evoke scene, character, motive. And our brains confuse vividness with likelihood. The most famous example is the “Linda problem” (Tversky & Kahneman, 1983). Linda is described as bright, outspoken, and concerned with social justice. People judge “Linda is a bank teller and active in the feminist movement” as more likely than “Linda is a bank teller.” The rich persona matches the stereotype, so it feels more probable—even though the “bank teller” group includes all bank tellers, both activists and not.",
+        "This matters because many real-world bets are made on the basis of stories: In hiring, we mistake a vibrant persona for a likely outcome; In product, we overweight edge-case customer narratives and underweight broad patterns; In medicine, we anchor on compelling symptom clusters and miss simpler causes; In investing, we buy into detailed theses that feel right and ignore base rates; In security, we chase cinematic breaches and miss commonplace failures. The conjunction fallacy burns time, money, and trust. It breeds overconfidence. It prefers a juicy theory over a plain fact. If you make decisions with stakes—a product roadmap, a diagnosis, a budget—you must disarm it."
+      ]
+    },
+    {
+      "heading": "1) Hiring: The Irresistible Persona",
+      "paragraphs": [
+        "Let’s ground this with cases you can taste. You’re hiring a data scientist. A candidate’s portfolio screams curiosity. They’ve spoken at activist tech meetups and built social-good dashboards. In the debrief, someone says, “She’ll likely be a top performer and our best advocate for ethical AI.” Heads nod. But what’s more likely? A) She’ll be a top performer at your company; B) She’ll be a top performer and your best advocate for ethical AI. B feels right because the details fit her vibe. But B is a subset of A. If she’s a top performer, that includes all kinds of personality arcs, including ones where she’s quiet about ethics. The conjunction fallacy nudges you to overspecify the future.",
+        "The risk: you evaluate candidates for stories, not for probabilities. You might pass over someone less cinematic but more broadly competent. Try instead: evaluate A—the base outcome—separately from any conjunctions. Score performance likelihood on its own. Score advocacy on its own. Combine only after."
+      ]
+    },
+    {
+      "heading": "2) Medicine: The Compelling Cluster",
+      "paragraphs": [
+        "A 34-year-old runner shows up with fatigue, joint pain, and a bullseye rash that’s already faded. A doctor says, “This is almost certainly Lyme disease and early-stage myocarditis.” The story sings: outdoor athlete, classic rash, cardiac symptoms. But two statements compete: A) Lyme disease; B) Lyme disease and early-stage myocarditis.",
+        "B is more specific, which makes it less probable. Lyme alone may explain most symptoms. Myocarditis raises the bite of the narrative without raising the odds. The risk: overtreatment, anxiety, and misallocation of tests. The safer thinking is staged: first test for Lyme; only if positive and cardiac markers warrant, investigate myocarditis."
+      ]
+    },
+    {
+      "heading": "3) Product: The Niche Funnel Trap",
+      "paragraphs": [
+        "Your team crafts a portrait: “The sweet spot is remote workers who subscribe to three productivity apps, prefer dark mode, and track habits with a paper notebook.” You build features for them. But which is more likely? A) Remote workers who might buy your product; B) Remote workers who use three productivity apps, prefer dark mode, and track with paper.",
+        "B sounds like your tribe. It’s also a thinner slice. Marketing built around B may hit hard for a few, then stall. You burned cycles polishing a narrow funnel because the persona felt alive. Better path: validate the broader segment’s response before chiseling features for the niche."
+      ]
+    },
+    {
+      "heading": "5) Sports Betting: Parlay Fever",
+      "paragraphs": [
+        "A CISO prepares for “APT-level attackers leveraging zero-days after spear-phishing the CFO during travel.” Possible, sure. But which is more likely? A) A breach due to compromised credentials; B) A breach due to compromised credentials via spear-phishing of the CFO during travel. The vivid B invites a movie scene. A is boring but common. Most breaches come from plain mechanisms: reused passwords, misconfigured S3 buckets, unpatched services. Priority should follow probability. Fix default misconfigurations first. Then build targeted defenses. Your friend bets a five-leg parlay: “This striker scores, the team wins by 2+, and two specific players get yellow cards.” The ticket glows with specificity. The payout seduces.",
+        "But each added condition lowers the probability. Parlays are conjunctions. Bookmakers love them because they bundle many low-likelihood events. The bettor loves them because the narrative is cinematic. If you must bet, ask: would I still like this if it was only “team wins”? If the answer is no, you’re probably paying for a story."
+      ]
+    },
+    {
+      "heading": "7) Startup Forecasting: The Fundraising Story",
+      "paragraphs": [
+        "A prosecutor paints: “The defendant argued with the victim, left angry, returned after cooling off, and used a concealed weapon bought the day prior.” Specific. Coherent. The jury nods. Yet the conjunction effect looms. Each detail must be proven. Failure at any link breaks the chain. The broader hypothesis (“defendant and victim argued; a weapon was used”) is more probable than the fully specified arc. Defense counsel can use this: separate probabilities so the jury sees how stacked specifics erode overall likelihood.",
+        "Founders pitch: “We’ll hit 20% month-over-month growth and become the category leader among Gen Z creators doing UGC for sustainable DTC brands.” You can feel the people in that sentence. But the broader claim—“we’ll hit 20% MoM growth”—is more likely than “we’ll hit 20% MoM growth in this specific micro-segment.” The niche may be a wedge, but anchoring on it can blind you to larger markets or alternative customers who are easier to win."
+      ]
+    },
+    {
+      "heading": "9) Personal Decisions: The Love Letter to Fate",
+      "paragraphs": [
+        "You interview six power users and craft “Alek,” a Linux-using designer who hates notifications and loves keyboard shortcuts. The team starts building micro-automation. You ship speed, precision, a sandbox. Adoption lags. Turns out many potential users aren’t Alek. They’re less technical, and they care about “works on my old laptop” more than “modal editing.” You fell in love with a conjunction: “users who need your tool and behave like Alek.” The first part may be true. The second narrows too soon.",
+        "“Alex will be a supportive partner, and we’ll move to the coast and co-found a studio and have summers in Portugal.” That’s beautiful. It’s also a stack of conjunctive hopes. The correct move is not to kill hope—it’s to notice which commitments you’re actually betting on now, and which ones are optional future branches. Decisions work better when you lock the general premise (“this person treats me well”) and postpone the conjunctive specifics (“co-found a studio”) until evidence arrives."
+      ]
+    },
+    {
+      "heading": "Why We Keep Falling for It",
+      "paragraphs": [
+        "Your system crashed. The postmortem says: “A memleak triggered when a container restarted during a deploy window because a particular feature flag interacted with legacy schema.” Plausible and heroic. Sometimes the cause is that weird. Often, it’s “we didn’t have a canary and we merged on Friday.” Be careful not to weave a fancy conjunction when a plain one explains the data. Three big forces pull us into this trap. 1) Representativeness beats math. We match stories to stereotypes. If the description fits the template (activist bank teller), our brains bump up the perceived probability. This is the representativeness heuristic (Tversky & Kahneman, 1983).",
+        "2) Vividness feels like truth. Rich detail engages emotion and memory. It makes outcomes feel less abstract. That warmth is informationally empty; it doesn’t raise the odds. 3) Search satisficing. When a story “clicks,” we stop searching. We don’t ask, “What simpler, broader hypothesis explains this just as well?” We hug the first satisfying conjunction. These tendencies help us navigate messy life. They also misprice risk."
+      ]
+    },
+    {
+      "heading": "A Small, Practical Workflow",
+      "paragraphs": [
+        "You don’t need to become a spreadsheet monk. You need a handful of habits. Use this checklist when a story sings too sweet. Here’s how we run it in real decisions: 1) Write the general claim A on a sticky note. 2) List every extra condition you’re tempted to add: B, C, D. 3) Estimate broad odds of A using past data or base rates. 4) For each condition, estimate conditional odds: P(B|A), P(C|A∧B). 5) Multiply rough numbers to check scale. 0.4 × 0.5 × 0.6 ≈ 12%. If your plan depends on that chain, reconsider. 6) Decide what you can decouple. Can you win with A alone first? Stage the rest.",
+        "We do this in under ten minutes. It saves weeks. Lead with the broad claim. Details arrive as possibilities, not requirements; Present alternative narratives of equal plausibility to dilute overcommitment to one; Put probabilities next to stories. Even rough ranges calm the lure of detail; Timebox your specificity. “We’ll assume B for two weeks while we test A.”."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "It helps to see neighboring pitfalls. They often travel together. Representativeness heuristic: We judge probability by similarity to a stereotype (Tversky & Kahneman, 1983). Conjunction fallacy is often a byproduct: the story fits the type, so the conjunction feels more likely. Base-rate neglect: We ignore how common a general event is. “Startups fail” is a strong base rate. Adding specifics (“a visionary founder with X background”) doesn’t erase it. Narrative fallacy: We prefer coherent stories over messy realities (Taleb, 2007). Conjunctions make stories coherent; they also make them fragile.",
+        "Planning fallacy: We underestimate time and resources. Conjunction chains—“we’ll finish A and B and C”—amplify that bias. Overfitting: In data science, adding parameters improves fit on training data and often hurts generalization. Specificity seduces in the same way: more factors make the model look right. It also makes it brittle. Disjunction neglect: The mirror mistake where people underweight that at least one of many events will occur. Conjunctions shrink odds; disjunctions expand them. We misprice both.",
+        "Occam’s razor (parsimony): Prefer simpler explanations when all else is equal. Simple models allocate probability mass sensibly. Complex narratives overconcentrate it. Conjunction vs. conditionals: “If A then B” is logical implication, not probability. People confuse “B given A feels likely” with “A and B are more likely than A.”."
+      ]
+    },
+    {
+      "heading": "A Few More Examples with Numbers (So You Can Feel It)",
+      "paragraphs": [
+        "Sometimes numbers cure magic. Hiring: You think 40% of mid-level hires are “top performers” at your company. You think 50% of top performers become visible advocates for ethics at work. P(top performer ∧ ethics advocate) ≈ 0.4 × 0.5 = 0.20 = 20%. It’s fine to want both; it’s a stretch to plan as if both are the likely outcome. Product segment: Suppose 30% of remote workers might try your product. Of those, 25% use three productivity apps. And 50% of that group prefers dark mode. P(A ∧ B ∧ C) ≈ 0.3 × 0.25 × 0.5 = 3.75%. That can be a viable niche, but don’t mistake it for the main road.",
+        "Incident chains: If any link fails, the chain fails. If three conditions must all happen, with probabilities 0.9, 0.8, and 0.7, your conjunction is 0.9 × 0.8 × 0.7 ≈ 50%. Not bad, but not “almost certain.”. You don’t need exact numbers. Just check the scale. Conjunctions shrink odds every time."
+      ]
+    },
+    {
+      "heading": "Recognizing the Language of Conjunction",
+      "paragraphs": [
+        "Language gives the game away. When you hear these, alarms should chirp: “and” doing heavy lifting: “will be high-growth and premium and community-led.”; Piled qualifiers: “urban, eco-conscious, early-adopter.”; Chained verbs: “will discover, then refer, then upsell.”; Story scaffolding: “after cooling off, he returned and…”; Lists that feel tidy: “the five traits of our core buyer.”.",
+        "To defang it, rewrite: “Our buyer is…” → “Our buyer might be… and we’ll test which traits actually predict purchase.”; “This attacker will…” → “The attacker could… and the most common path is…”; “We are building for…” → “We are starting with… and we’ll validate whether the other traits matter.”."
+      ]
+    },
+    {
+      "heading": "How We Use This at Work",
+      "paragraphs": [
+        "We keep two short rituals. A broad, boring hypothesis; A detailed, favorite story; A different broad hypothesis that also fits. 1) Scenario cards. For any decision, we write three cards: We ask: which card gets most of our resources this week? Usually the broad one wins. We give the favorite story a small, timeboxed test.",
+        "“P(signups increase next month) = 40–60% if we ship A alone.”; “P(signups increase next month ∧ we attract only iOS designers) = 10–20%.”. 2) Probability brackets. We force ourselves to assign ranges: The act of writing both brings humility. It also surfaces whether we’re secretly betting on a conjunction."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Love Your Stories, Bet on Reality",
+      "paragraphs": [
+        "People who build things need stories. Stories are how we rally teams, pull all-nighters, and ship. But stories are not probabilities. The conjunction fallacy sneaks in when we confuse a clear picture with a likely outcome. The fix isn’t to go gray and joyless. Keep your vividness. Just separate your bets. Start broad. Win the general case. Layer specifics only when evidence shows they actually raise your odds. We built our Cognitive Biases app because we kept catching ourselves in traps like this. The app nudges you at the moment of decision: “Are you betting on A… or A and B… and C?” It’s a gentle tap on the shoulder. You do the thinking; it keeps the guardrails up.",
+        "You can do this on a napkin. You can do it with a team. Next time you hear a deliciously specific plan, smile. Enjoy it. Then ask the simple, quiet question: which is more likely—A, or A and B? Choose the broad bet first. You’ll sleep better. You’ll ship better. You’ll tell even better stories later—because they’ll be true."
+      ]
+    }
+  ],
+  "checklist": [
+    "Ask the naked question: “Which is more likely: A or A and B?”",
+    "Strip adjectives and roles. Replace “the eco-conscious iPhone-using parent in Brooklyn” with “a potential customer.”",
+    "Separate evaluation: score each claim independently before combining",
+    "Check base rates. “How often does A happen in the wild?” If you don’t know, pause",
+    "Sketch a quick set diagram. Circle of A, smaller circle of A∧B inside. If you’re betting on the small circle, have a reason",
+    "Turn it into a bet. “Would I stake # The Seductive Specific: Why the Conjunction Fallacy Trips Smart People",
+    "Generate alternative broad hypotheses: two other general explanations that could fit",
+    "Reverse the test. Try to falsify B. If one detail fails, your whole conjunction collapses",
+    "Consider forecasts in brackets: “P(A) = ?, P(B|A) = ?.” Multiply to sanity-check",
+    "Sleep on it. If the specificity is intoxicating now, it will still be tasty tomorrow",
+    "Rewrite the claim as A vs. A and B. Circle which you’re actually betting on",
+    "Remove adjectives; state the plain version first"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

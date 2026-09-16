@@ -1,0 +1,172 @@
+{
+  "slug": "false-priors-gender-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/false-priors-gender-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/false-priors-gender-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:55:20.946Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When Gender Wears the Name Tag: How Expectations Bend Around Us",
+  "lede": "On my first week at a new job, I walked into a status meeting balancing two coffees and a laptop that was trying very hard to overheat. I handed the second coffee to the project lead. A teammate thanked me and asked if I’d remembered the printer paper too. The room laughed in that “we’re all friends here” way. I laughed too, even though I hadn’t been the one ordering supplies. It took months for that joke to fade, weeks before I noticed I was taking more notes than asking more questions, and years before I had language for what happened: a quiet, sticky expectation attached to my gender.",
+  "sections": [
+    {
+      "heading": "What Is Gender Bias—When Gender Shapes Expectations and Why It Matters",
+      "paragraphs": [
+        "Gender bias is when gender shapes expectations and decisions—often unconsciously—in ways that misalign with reality and limit options for individuals or groups. Gender bias happens when gender becomes a shortcut for guessing competence, preferences, or roles. Instead of seeing the person, the brain reaches for a stereotype: who looks like a leader, who’s “better with people,” who “handles details,” who’s “aggressive” versus “assertive.” These shortcuts can be implicit (you don’t notice them) or explicit (you think they’re true).",
+        "The brain loves shortcuts. They speed up decisions. They also sustain patterns that make no sense if you look closely. Bias appears in hiring, pay, medical care, education, sports commentary, and conversations at dinner tables—often as small, plausibly-deniable moments that stack up into different lives. It wastes talent. People get steered away from opportunities they could excel in; It distorts feedback. Many women get less actionable critique and more personality notes, which stalls growth; It drains trust. Teams perform worse when the rules are fuzzy and not evenly applied; It sneaks into products. We bake it into tools, policies, and algorithms—then scale it; It teaches kids early. They internalize “who does what,” and the world shrinks before they start.",
+        "Why it matters: The research looks like a mirror we might not enjoy but need anyway. Scientists sent identical résumés to professors; when the name was “John,” he was rated as more competent and offered a higher salary than “Jennifer” (Moss-Racusin, 2012). Evaluators penalize mothers compared to non-mothers with otherwise identical CVs—a motherhood penalty—while fathers often get a small bonus (Correll, 2007). Women who negotiate are liked less and punished more for it than men who do the same (Bowles, 2007). None of these studies are destiny; they’re signals that our mental autopilot isn’t neutral."
+      ]
+    },
+    {
+      "heading": "The Interview Panel with Different Ears",
+      "paragraphs": [
+        "Stories help because bias is sneaky. It takes the shape of the room it’s in. Here are scenes we’ve seen up close or heard from people who trusted us enough to tell the truth. Two candidates, same portfolio. Sam, a man, and Lee, a woman. During Sam’s interview, the panel leans forward. A senior engineer says, “Walk us through your decision tree.” Sam draws boxes and arrows on the whiteboard. Someone whispers “strong communicator.” Lee enters. Same question, same diagram depth. Someone says, “I wish she’d been more concise,” and notes “overprepped.” Later, the panel agrees both are qualified. They say Sam would “stretch.” They say Lee is “ready, but maybe better for a different team culture.” The offer goes to Sam.",
+        "When they review notes, adjectives tell the story. Sam got words like “innovative,” “confident.” Lee got “polished,” “organized,” “nice.” Not a crime. Not even obvious. But those words steer who gets investment and who gets maintenance work. This pattern shows up in letters of recommendation too—women are more often described with communal traits and fewer standout achievements (Trix & Psenka, 2003)."
+      ]
+    },
+    {
+      "heading": "Performance Review Weather",
+      "paragraphs": [
+        "Jordan leads a project; it hits metrics early. In the review, their manager says, “You were great at keeping the team aligned—people person.” Jordan asks for scope expansion. Manager says, “Let’s see how you handle a stretch technical initiative next cycle.” Jordan has already delivered one. Meanwhile, a peer gets that stretch because he “thinks big.” Jordan starts to doubt what “counts.”",
+        "Look at the shape of the praise: communal traits (“kept the team aligned”) often stick more to women; agentic traits (“thinks big,” “drives outcomes”) stick more to men. The traits become lanes. The lanes become ceilings."
+      ]
+    },
+    {
+      "heading": "Classroom Hand-Raises: Gender Bias",
+      "paragraphs": [
+        "Ana goes to urgent care with chest pain and nausea. The provider asks about stress, sleep, and diet. She’s sent home with antacids. Two days later, Ana is back—this time to the ER with a heart attack. Women get misdiagnosed and undertreated for cardiac symptoms more often, and their pain is less likely to be taken seriously (Samulowitz, 2018). The body doesn’t care about our stereotypes. Our triage does.",
+        "A middle school teacher tries to call evenly, but the boys get more floor time. They interrupt more; the teacher unconsciously rewards energy as engagement. A girl who loves math stops raising her hand. She says she “likes art better.” It’s not that she can’t do math—it’s that she sees who is seen doing it (Sadker & Sadker, 1994)."
+      ]
+    },
+    {
+      "heading": "Product Design with a Blur",
+      "paragraphs": [
+        "In a cross-functional meeting, three women and seven men. Who ends up taking notes, scheduling follow-ups, and reminding everyone of deadlines? It’s often the women. Not because they love calendar invites. Because someone asks, or they volunteer to be helpful, and that “someone” keeps being them. The work is necessary, invisible, and doesn’t earn promotions.",
+        "A health app ships with a period tracker tucked three taps deep under “Other.” Another app misgenders users because it only offers two gender options and uses one to predict interests. A voice assistant hears male voices more reliably than female ones in noisy rooms. None of these are on-purpose insults. They’re teams designing from their own center-of-gravity. The center was not everyone."
+      ]
+    },
+    {
+      "heading": "Sports Commentary, or How We Talk About Winners",
+      "paragraphs": [
+        "Mina negotiates an offer. She’s calm, data-driven, firm. The recruiter marks her as “high-maintenance” and says the hiring manager had “culture concerns.” A man who pushes harder is seen as “driven.” The research on this is consistent: women who advocate for themselves can trigger social penalties that men avoid (Bowles, 2007). Some recruiters privately coach women to “soften their ask,” as if the penalty is a personal style problem and not a bias problem.",
+        "A star sprinter gives a post-race interview. The broadcaster calls her “gracious,” “humble,” “a role model.” Her male counterpart gets words like “dominant,” “fearless,” “tactical genius.” Both are true; the asymmetry begrudges her the power frame and tags her with a personality frame. Language is currency."
+      ]
+    },
+    {
+      "heading": "The Domestic Spreadsheet",
+      "paragraphs": [
+        "Two partners work full-time. One still handles the dentist appointments, the friend birthday gifts, the laundry, the school emails, the groceries, and knowing that the dog needs a vaccination next Tuesday. They don’t “help”; they manage. The mental load is real. It isn’t about who washes a dish today; it’s about who notices a dish needs washing, plans when it happens, and carries the discomfort till it’s done.",
+        "Bias is not always a villain. Sometimes it’s a gentle nudge that pushes people into grooves that were cut before they were born. You can’t fix what you can’t see. You also don’t need to convene a task force for everything. A handful of habits catch most of the leak."
+      ]
+    },
+    {
+      "heading": "Recognize: Patterns, Not Just Moments",
+      "paragraphs": [
+        "Listen for adjectives. If men are “strategic” and women are “supportive,” pause. Ask for examples that justify the words; Watch airtime. Who speaks, interrupts, gets interrupted, and who acts as bridge-builder?; Track who does glue work (notes, organizing, onboarding, remembering birthdays). Rotate it; Audit your pipeline. Do posted roles attract one kind of applicant?",
+        "Where do candidates drop out? If they vanish after the panel interview, the panel might be the filter; Look at promotion narratives. Are you giving stretch assignments before the promotion to some, and requiring proof afterward from others?; In medicine, notice default diagnosis trees: who gets “stress” and who gets a scan?."
+      ]
+    },
+    {
+      "heading": "Avoid: Design the Process So It’s Harder to Drift",
+      "paragraphs": [
+        "Use rubrics. Decide success criteria before you meet the humans. Score against those, not vibes; Debias language. Swap “culture fit” for “behavioral evidence.” Replace “leadership presence” with the specific behaviors that make up presence—clear decisions, follow-through, clarity under pressure; Structure interviews. Ask the same questions, in the same order, with the same scoring scale. This helps candidates and interviewers alike; Calibrate in writing. Share anonymized examples of what “meets” and “exceeds” look like. People are wildly inconsistent until you align them; Rotate visibility.",
+        "Assign presentations, demos, and high-stakes meetings rotationally so the same faces aren’t always public; Limit “emergency favors.” When you ask the same person to save the day, you cement a role. Spread the asks and reward the saves; Use data, not just feelings. If your salary bands are tight, publish them internally. If your pay equity analysis shows gaps, close them and say you did; Design defaults. In parental leave, make it opt-out rather than opt-in. In meetings, make a rotating notetaker default."
+      ]
+    },
+    {
+      "heading": "Scripts That Work in Real Rooms",
+      "paragraphs": [
+        "In a meeting: “Let’s hear Mei finish. Then Jason.” Use names. Use sequence. Don’t scold; steer; When credit drifts: “Good call. I think that was Fatima’s idea—can you say more, Fatima?” Do it the first time, not the tenth; In a review: “I keep writing ‘great team player’ for Priya. What impact did she drive? Let’s tie to outcomes.” Ask for nouns and verbs, not vibes;",
+        "During hiring: “Before we talk, score your rubric for each candidate. We’ll discuss discrepancies only after we’ve recorded individual scores.” This slows halo effects; When the “helpful” work lands on the same people: “We’re rotating action items monthly. I’ll take May. Who’s got June?” In healthcare: “I’m concerned this could be X. What tests rule that out? What symptoms would change your plan?” Put your concern on the table. Ask for the decision tree."
+      ]
+    },
+    {
+      "heading": "What to Measure (And What to Stop Ignoring)",
+      "paragraphs": [
+        "Name assumptions out loud. “We’re assuming travel is a blocker for caregivers. Let’s ask instead of guessing.”; Close the loop. “We said we’d rotate facilitators. Did we? Who’s next?”; Buffer interruptions. “Hold on—Alex was in the middle of a point.”; Ask for evidence both ways. “We’ve listed why he’s ready. What evidence suggests she isn’t? Or vice versa.”; Separate style from substance. “He’s quiet in standups. His code velocity is top quartile. What is the problem we’re solving?”.",
+        "Hiring: Onsite-to-offer rates by gender. Time-in-pipeline. Reasons for rejection; Performance: Distribution of ratings by gender across levels. Words used in written feedback—analyze for patterns; Pay: Comp bands and actual pay by gender, adjusted for role, level, tenure; Opportunity: Who presents, leads launches, gets “special projects.”; Exit: Why people leave. Pattern over time beats one bad story. Keep metrics simple. Share them. Act on them. Repeat."
+      ]
+    },
+    {
+      "heading": "Implicit Bias: Gender Bias",
+      "paragraphs": [
+        "Labels blur. Here’s how to keep them straight enough to be useful. Sexism is a belief or system that devalues people based on sex or gender, often openly. Gender bias is the drift in expectations and decisions due to gender, often unconscious. Sexism says “women can’t be engineers.” Bias says “he seems more natural for backend; she seems great with clients.” Both harm. One is louder.",
+        "Implicit bias is the associations you carry without endorsing them. Your mouth says “women can lead”; your gut tenses when a woman interrupts a man. Tools like the Implicit Association Test probe this. Don’t fetishize it; it’s a signal, not a sentence."
+      ]
+    },
+    {
+      "heading": "Role Congruity Theory",
+      "paragraphs": [
+        "Stereotype threat is when you fear confirming a negative stereotype about your group, and that fear saps performance. A woman reminded that “women are worse at math” can underperform on math tasks, even if she’s skilled (Steele, 1997). It’s not about belief; it’s about anxiety hijacking attention.",
+        "This theory says people evaluate someone more positively when their behavior fits the gender role expectations: women communal, men agentic (Eagly & Karau, 2002). A woman who leads firmly faces backlash not because of the firmness but the mismatch. Knowing the theory helps you explain the “double bind” without blaming the person caught in it."
+      ]
+    },
+    {
+      "heading": "Intersectionality: Gender Bias",
+      "paragraphs": [
+        "It’s the “women are better at caring” flavor of bias that sounds like a compliment but limits choices. “Let’s not send her on this tough travel schedule; she has kids.” Sounds kind. Removes agency. It’s still sexism, just with a smile. This is the habit of treating the male experience as the default human experience. Crash test dummies modeled on average male bodies. Medical research that underrepresents women. Design that assumes average male hand size. The default isn’t neutral if it excludes.",
+        "Gender bias intersects with race, class, sexuality, age, disability, and more. A policy that helps white women may not help Black women the same way. A Latina engineer and a white engineer can face different flavors of “she doesn’t look like an engineer.” Intersectionality reminds us to check whose experience we’re optimizing."
+      ]
+    },
+    {
+      "heading": "Job Descriptions: Gender Bias",
+      "paragraphs": [
+        "These are cognitive biases that amplify gender bias. Confirmation bias makes us remember examples that fit our stereotype (“The last two female PMs were detail-focused”) and forget counterexamples. The availability heuristic makes dramatic stories feel like common truths (“My friend’s team tried a woman lead and it was a mess”). Both need guardrails. Let’s go granular. This is where most articles cut to platitudes. We won’t.",
+        "If your posting says “rockstar ninja” and “must crush,” expect fewer women to apply. It’s not that women can’t rock or crush. It’s that language telegraphs culture. Use clear verbs: design, implement, lead, improve. Include salary bands. Include flexibility details. Add: “Don’t meet every single bullet? Apply anyway.” That sentence changes who throws their hat in."
+      ]
+    },
+    {
+      "heading": "Interviews: Gender Bias",
+      "paragraphs": [
+        "Don’t close a shortlist until it’s actually short and representative. “We didn’t find many women” means you didn’t widen sources. Widen sources: alumni groups, open-source contributors, conferences, mentoring networks. Ask current employees for two referrals from outside their usual demographic. Provide time and recognition for doing this, or they won’t. Move from “tell me about yourself” to problem-centered prompts.",
+        "Share the prompt ahead of time so you test solution quality, not seat-of-pants speed. Take notes in a shared doc. Afterward, capture feedback before group discussion to reduce anchoring. When someone says, “I just didn’t vibe,” ask, “What evidence did you look for that you didn’t find?” If they repeat “vibe,” discard the feedback."
+      ]
+    },
+    {
+      "heading": "Promotions: Gender Bias",
+      "paragraphs": [
+        "Train managers to write evidence-based feedback. Give them a table of problematic phrases and better alternatives: “Too aggressive” → “Interrupted three times in last week’s meeting; recommended waiting until the presenter finishes.”; “Lacks presence” → “Slides had four fonts; data unclear; audience asked for clarification twice; recommend template and dry run.”; “Great team player” → “Onboarded three engineers in Q2; created runbook; cut ramp time by two weeks.”.",
+        "Force calibration to be about work samples, not just opinions. Define ladders that include both impact and scope. Include the “glue work” and give it weight. If it matters to the business, it must matter to advancement. Track who gets nominated and who actually gets promoted. If women are consistently “almost there,” ask what’s missing and whether that “missing” is equally required of promoted men."
+      ]
+    },
+    {
+      "heading": "Pay Equity: Gender Bias",
+      "paragraphs": [
+        "Assign roles: facilitator, notetaker, timekeeper, decision-owner. Rotate them. Put names in the agenda. End with clear owners and dates. Send notes promptly. If someone interrupted, the facilitator fixes it. If the same person dominates, timebox and round-robin. Bias hates structure. Structure is boring. That’s fine. Boring and fair beats electric and unfair.",
+        "Run a simple regression: pay as a function of level, role, location, tenure. Look at residuals by gender. If gaps exist, fix them without requiring people to ask. Publish the fact of the fix internally. Commit to annual checks. If you “can’t afford” to fix, you are saying the quiet part out loud."
+      ]
+    },
+    {
+      "heading": "Healthcare Settings: Gender Bias",
+      "paragraphs": [
+        "Offer gender-neutral leave. Require managers to plan for coverage without punishing those who take it. Celebrate men who take full leave. Normalize flexible hours for everyone. Bias grows in environments where only women “disappear” for family and men are “fully dedicated.” Build the opposite: a culture where people are whole, and the work still gets done. Clinicians: Use structured diagnostic checklists for high-variance symptoms (e.g., chest pain, abdominal pain). Ask standardized pain scales. Document differentials. Patients: Bring notes, timelines, and specific questions. Ask what would change the diagnosis and when to escalate. Bias makes clinicians overconfident in their first read; structure protects both sides.",
+        "Include diverse users early. Not at the “usability polish” stage—at the “what problem are we solving” stage. Run pilot tests with varied environments (lighting, noise, device type). Check voice and image models for performance gaps by gender presentation and pitch ranges. If your product interprets people, assume bias unless you’ve measured and corrected it. Tape it to your monitor. It works."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: The Names We Wear and the Rooms We Build",
+      "paragraphs": [
+        "Bias is old and intimate. It lives in the nicknames, the compliments, the questions we ask and don’t ask. It isn’t only the cartoon villain who yells about keeping women out. It’s more often a room where the thermostat is set for one body, and everyone else brings a sweater. Changing rooms is unromantic work: rubrics, rotations, checklists, awkward sentences like “Let’s let her finish.”",
+        "But the payoff is gorgeous. People lift their heads. Ideas come from unexpected corners. Promotions stop feeling like storytelling and start feeling like math. Careers open. Families breathe. Health outcomes improve. It’s not theory. It’s Tuesday at 2 p.m., and the meeting runs better. That’s the work. It’s not flashy. It wins."
+      ]
+    }
+  ],
+  "checklist": [
+    "Before decisions: write criteria. After decisions: check if you used them",
+    "In feedback: swap adjectives for examples",
+    "In meetings: rotate speaking order and roles; track airtime for a month",
+    "In hiring: structured questions, blind scoring, delay “culture” talk until after evidence review",
+    "In promotions: nominate by evidence; disclose ladder expectations; weigh glue work",
+    "In pay: run equity analysis annually; fix gaps proactively",
+    "In policies: make parental leave gender-neutral and opt-out",
+    "In products: test with users across genders; measure model performance disparities",
+    "In daily talk: credit ideas to their owners; buffer interruptions; ask quiet folks in",
+    "In your head: when you feel “vibes,” name the evidence you’re missing",
+    "Define success before you see candidates or reviews",
+    "Use structured interviews and score independently"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

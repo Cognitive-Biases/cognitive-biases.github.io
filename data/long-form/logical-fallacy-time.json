@@ -1,0 +1,167 @@
+{
+  "slug": "logical-fallacy-time",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-time",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/logical-fallacy-time/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:15:02.028Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When Faster Feels Longer: The Time‑Saving Bias and How It Trips You Up",
+  "lede": "We were crawling behind a snowplow on a two‑lane road, late to a friend’s birthday. Someone in the car asked, “If traffic clears and we go from 30 to 40 mph, how much time will we save?” My friend answered, “Not much. But if we get on the highway and push from 70 to 80, we’ll claw back real time.” It felt true. It was wrong. The biggest time savings usually come from speeding up the slow parts, not the fast ones.",
+  "sections": [
+    {
+      "heading": "What is Time‑Saving Bias — when speed tricks your sense of time and why it matters",
+      "paragraphs": [
+        "Time‑saving bias is the systematic mistake of overestimating the time saved by increasing high speeds and underestimating the time saved by increasing low speeds. Your sense of time bends when speed changes. Time‑saving bias pops up whenever you evaluate how much time you’ll save by going faster. The math of time and speed is simple: time = distance / speed. But our brains tend to substitute an easier story: “More speed equals more time saved, and gains at high speed matter most.” That intuitive story is false.",
+        "The real relationship is curved, not straight. When you’re slow, each bump in speed chops a lot of time. When you’re already fast, each bump barely shaves anything. Going from 30 to 40 mph saves a lot per mile; Going from 70 to 80 mph hardly saves anything per mile. Researchers have tested this again and again. People reliably overvalue changes at the high end and undervalue changes at the low end, even when they’re shown the numbers (Svenson, 2008). The bias shows up in driving, in medical decision‑making, in logistics, and in how managers rank process improvements.",
+        "Why it matters: Safety and risk: Drivers justify dangerous speeding because the “saved time” feels big; it isn’t; Cost and ROI: Teams pour resources into already‑fast processes because the gains sound flashy. The returns are tiny; Design and operations: Hospitals add staff to fast stations while bottlenecks jam elsewhere; Personal life: You think you should “crush your emails faster” when the real win is fixing the slow calendar scheduling that steals hours. Time‑saving bias nudges you to pick the wrong battles. If you’ve ever spent a week “optimizing” something that barely moved your schedule, you’ve met it."
+      ]
+    },
+    {
+      "heading": "The afternoon drive: 30 → 40 vs. 70 → 80",
+      "paragraphs": [
+        "Stories stick better than formulas. Here are a handful from daily life and work. Scan for the ones that itch. Two roads, same 60‑mile trip. City road: You’re stuck around 30 mph for a long stretch. If the road clears and you can go 40 mph instead, your time goes from 120 minutes to 90 minutes.",
+        "You just saved 30 minutes; Highway: You’re already at 70 mph. You push to 80 mph and your time goes from about 51.4 minutes to 45 minutes. You saved 6.4 minutes. Most people guess the second change saves more time. It feels bolder. It’s not."
+      ]
+    },
+    {
+      "heading": "Software makes it weird: optimize the hot path, not the already‑fast",
+      "paragraphs": [
+        "A popular café runs three stations: 1) Order taking (fast) 2) Payment (fast) 3) Drink making (slow) A manager proposes hiring one more person. Time‑saving bias whispers, “Speed up payment; it’s already smooth, we’ll get guests out even faster.” The right move is to put that person on the drink station. Speeding up the slowest step yields the biggest time savings because everyone waits on it. This is the beating heart of process improvement: attack bottlenecks first. Your app’s load time is 2 seconds. Profiling shows:",
+        "1.2 s in the database query; 0.6 s in image decoding; 0.2 s in logging. Someone wants to rewrite logging in Rust to cut it to zero. Feels satisfying. But a heroic logging rewrite saves at most 0.2 s. If you cut the database time in half, you save 0.6 s—triple the benefit. Time‑saving bias hides the big win because your attention drifts to what’s already snappy and easy to tweak. Don’t. Optimize the time hog."
+      ]
+    },
+    {
+      "heading": "The moving walkway illusion",
+      "paragraphs": [
+        "You want to finish a 5K on a treadmill. Going from 6.0 mph to 7.0 mph sounds like a massive shave. It helps, but if you spend five minutes at 3.0 mph during warmup and cooldown, tightening those slow minutes—say, walking at 4.0 instead of 3.0—buys more time than nudging peak speed higher. Fix the slow bits. Airports have long moving walkways.",
+        "Some people step off the walkway and walk beside it because they think they can pass the crowd and save tons of time. If the walkway is slow, speeding your walking pace a lot yields meaningful time back. If the walkway is already fairly fast relative to your stride, doubling your walking speed beside it won’t shave much. It depends on the baseline speed. Without doing the math, your brain picks the dramatic choice—step off and hustle—regardless of whether it helps."
+      ]
+    },
+    {
+      "heading": "Printing and file transfers",
+      "paragraphs": [
+        "Two printers: Office A prints at 15 pages/min; Office B prints at 55 pages/min. You have a 60‑page report. Upgrading Office A to 20 ppm saves 10 minutes down to 3 minutes; actually, check the math: At 15 ppm, 60 pages takes 4 minutes. At 20 ppm, it takes 3 minutes. You save 1 minute; Upgrading Office B from 55 to 60 ppm for the same 60 pages saves about 13 seconds.",
+        "Your purchasing team might get excited about “the fastest printer” for the already‑fast office. The real win is bumping the slow office. File transfers are the same. Going from 1 MB/s to 2 MB/s halves the time. Going from 50 to 55 MB/s barely tickles the clock."
+      ]
+    },
+    {
+      "heading": "Telemedicine scheduling: an administrative case",
+      "paragraphs": [
+        "A clinic has three stages: Patient intake form online (average 8 minutes, but variable); Insurance verification (average 3 minutes); Physician call (average 15 minutes). Patients wait days for slots. A consultant suggests “improving doctor speed” with better note templates. That might shave 1–2 minutes per visit.",
+        "Meanwhile, intake forms choke the schedule because patients fumble the portal. Fixing the portal and adding a human verification step for stuck forms could cut 4–5 minutes per patient end‑to‑end, opening dozens more daily slots. Time‑saving bias distracts leaders with shiny doctor tools and misses the slow, messy intake bottleneck."
+      ]
+    },
+    {
+      "heading": "Highway maintenance window: the wrong lane",
+      "paragraphs": [
+        "You spend 90 minutes on email, 20 minutes on scheduling back‑and‑forth, and think, “If I could blast through email faster, I’d reclaim my day.” Reality: cutting email time by 20% saves 18 minutes. Fixing scheduling with an auto‑book link or a pre‑set meeting block might kill the entire 20‑minute thrash, plus reduce later rescheduling. Work on the slow parts of your day, even if they feel less exciting than an inbox zero sprint. A city plans night work. They have budget to improve one lane:",
+        "Lane A carries 1,200 cars/hour at 60 mph; Lane B carries 500 cars/hour at 20 mph due to merging. Engineers propose “smart speed signage” on Lane A to nudge drivers to 65 mph. It sounds like a big citywide gain. But poking 20 mph up to 30 mph in Lane B saves each car way more per mile and reduces merging shockwaves. One lane matters far more because it’s the slow flow that sets the whole corridor’s delay pattern."
+      ]
+    },
+    {
+      "heading": "Project sprints: speeding a fast team",
+      "paragraphs": [
+        "A chain wants to be “the fastest burger in town.” They buy a top‑end fryer that cuts cook time from 2:00 to 1:50 per batch. Meanwhile, the drive‑thru mic glitches at random, adding 30–60 seconds of repeated orders. Fixing the mic saves more time per customer than the elite fryer. But the fryer demo wowed the execs. That’s time‑saving bias in a hairnet. A software org has three squads:",
+        "API squad: frequently waiting on specs (idle → bursts); Frontend squad: cranking, always busy; QA: slow, understaffed, backlogged. Leadership buys the frontend team a hot new component library that promises 15% faster dev velocity. They deploy it with fanfare. Velocity reports improve slightly. Releases are still late because QA remains the bottleneck. The only move that would have unlocked time was staff and tooling for QA. The bias hid the real lever."
+      ]
+    },
+    {
+      "heading": "How to recognize and avoid the trap",
+      "paragraphs": [
+        "You host guests in 2 weeks. Your house has: A faucet that takes 5 minutes to coax warm water; A closet door that sticks, costing seconds; A vacuum with a clogged hose that doubles cleaning time. You feel good replacing the closet rollers and buying a new dusting wand.",
+        "Still, you’re late for the party with damp hands. Attack the slow faucet or the clogged vacuum hose first. These “boring” fixes save your evening. You can outsmart time‑saving bias with three habits: switch to “inverse speed” thinking, chase bottlenecks, and estimate with a blunt, honest rule of thumb."
+      ]
+    },
+    {
+      "heading": "Habit 1: Think in time, not speed",
+      "paragraphs": [
+        "Speed sounds sexy. Time is what you actually live. When options involve changing speed, translate to time: For a fixed distance: time = distance / speed; For a fixed task: time = work / rate. You don’t need precise math. You need to notice the curve. Gains at low speeds are big; gains at high speeds are small. Quick anchor examples for your head: At 30 mph, a +10 mph change saves about 20 minutes per 60 miles; At 60 mph, the same +10 saves about 10 minutes per 60 miles; At 120 mph, +10 saves about 2.5 minutes per 60 miles.",
+        "If you don’t remember anything else: doubling speed halves the time; little bumps at the high end barely move the clock. Borrow a page from the Theory of Constraints: the system moves as fast as the slowest part. That’s often a queue, a handoff, or a setup step. Before you polish a fast step, ask: Where do people wait?; What work piles up?; What step feels chaotic?. Fix that. Then measure again. Repeat. This is unglamorous. It’s where the real time comes from."
+      ]
+    },
+    {
+      "heading": "Habit 3: Use a blunt rule of thumb",
+      "paragraphs": [
+        "When choosing between speed upgrades, estimate the time saved with a one‑liner. You can do it in your head: Fixed distance: time saved ≈ distance × (1/old speed − 1/new speed); Fixed workload: time saved ≈ work × (1/old rate − 1/new rate). You don’t need decimals. Round. Compare options. Example: 120 miles. 40 → 50 mph vs. 70 → 80 mph.",
+        "40 → 50: 120 × (1/40 − 1/50) = 120 × (0.025) = 3 minutes per mile? Careful. Let’s keep it simple:; 40 mph: 3 hours; 50 mph: 2.4 hours; Time saved: 36 minutes; 70 → 80:; 70 mph: ~1.71 hours (1:42:51); 80 mph: 1.5 hours; Time saved: ~12 minutes. Even rough math shows the low‑speed bump wins big."
+      ]
+    },
+    {
+      "heading": "Habit 5: Look for hidden slow zones",
+      "paragraphs": [
+        "Spot phrases like “It’s already great; imagine it even faster!” Those sell you negligible minutes. “Shave 5% from a 3‑minute step” saves 9 seconds; “Shave 20% from a 30‑minute step” saves 6 minutes. Resist the shiny upgrade on the fast step until you’ve squeezed the slow step.",
+        "It’s not all speedometers. Watch for: Setup times: opening files, heating ovens, building containers; Handoffs: approvals, signatures, lawyer reviews; Mode switches: commuting between apps or rooms; First‑mile/last‑mile friction: logging in, finding links, unlocking doors. Improving these often yields more time than maxing out mid‑stream speed."
+      ]
+    },
+    {
+      "heading": "A small calculator you can keep in your head",
+      "paragraphs": [
+        "In driving, the bias gets dangerous. If the time saved is tiny and the risk is big, don’t do it. If you must speed up, do it where the baseline is low (rural 30 → 40), not where it’s already high (75 → 85). Better yet, leave earlier and keep your license. Here’s a mental recipe that’s good enough: For distance: at 60 mph, each mile is 1 minute. Use this as a yardstick; For work: identify the longest step; estimate it.",
+        "1) Anchor the baseline time. From 30 → 40 mph, each mile drops from 2 minutes to 1.5 minutes: 30 seconds saved per mile; From 70 → 80 mph, each mile drops from ~0.86 minutes to 0.75 minutes: ~7 seconds saved per mile. 2) Compare proportionally. 3) Multiply by how many miles or units matter. This avoids exact math and kills the illusion. Ola Svenson showed that people systematically misjudge time savings from speed increases, especially overvaluing high‑speed changes and undervaluing low‑speed changes (Svenson, 2008). Follow‑ups replicated the pattern in driving and healthcare contexts, where misjudgments can push risky choices or poor resource allocation (Svenson & Salo, 2010). The fix isn’t lecturing people with formulas; it’s giving them quick estimation tools and nudges to focus on slow steps."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Time‑saving bias isn’t alone. It hangs out with cousins that feel similar. Planning fallacy: You underestimate how long a task will take, even if you’ve done it before. Time‑saving bias is about misjudging the payoff from changing speed or rate. They can stack: “We’ll finish faster than last time, and this new tool will make us even faster.” Law of diminishing returns: Additional effort yields smaller gains. That’s a general pattern. Time‑saving bias is specific: “More speed at high speed saves less time than more speed at low speed.” Speed‑accuracy trade‑off: Faster work often reduces accuracy. Time‑saving bias can blind you to the fact that your “faster” choice doesn’t even save much time, while it hurts quality;",
+        "Present bias: You prefer immediate gains over later ones. Pair it with time‑saving bias and you’ll sprint where it feels good now rather than where it pays later; Optimizer’s curse: The option that looks best ex‑ante is systematically overestimated. If your estimates ignore the curved time‑speed relation, your “best” upgrade is probably overvalued; Exponential growth bias: People misjudge compounding. Different domain, same theme: linear intuition clashing with non‑linear reality; Unit confusion: Swapping mph, kph, minutes per mile, or seconds per unit can flip your intuition. The cure is to reframe consistently as time per unit of distance or work. Knowing the neighbors helps you recognize the neighborhood: slippery intuitions around non‑linear change. Copy this into your notes. Use it before your next “speed” decision."
+      ]
+    },
+    {
+      "heading": "How to recognize and avoid it in the wild: a practical walkthrough",
+      "paragraphs": [
+        "Let’s run a concrete, repeatable process you can use tomorrow. Example: Intake → Triage → Service → Payment → Follow‑up; Stay simple. You don’t need swimlanes. 1) Map the flow in three to five steps. Use your phone’s stopwatch. Grab five samples. Average. Note variance. 2) Time each step for a handful of real cases. Circle the step with the most minutes per item or the longest queue. 3) Identify the slowest step by minutes, not gut feel.",
+        "Remove a field, add a template, pre‑stage materials, pre‑approve common cases. 4) Brainstorm changes that directly cut minutes for that step. “If we remove this field, we save ~30 seconds per case.” “If we pre‑stage, we save ~2 minutes per job.”. 5) Estimate time saved with round numbers. Two weeks, one team, one location. Measure again. 6) Run a small, time‑boxed test. If Option A saves 200 minutes/day for # When Faster Feels Longer: The Time‑Saving Bias and How It Trips You Up.",
+        "7) Compare cost per minute saved. Your bottleneck moved. Repeat the loop. 8) Lock the win, then re‑measure the whole flow. When you do this, you’ll feel the bias tugging you toward flashier improvements. Smile, thank it for its opinion, and go where the minutes live."
+      ]
+    },
+    {
+      "heading": "Extra examples with quick math you can steal",
+      "paragraphs": [
+        "Commute choice:; Surface streets: 12 miles at 30 mph = 24 minutes; Highway: 18 miles at 65 mph = ~16.6 minutes, plus 5 minutes of ramps/lights = ~21.6 minutes; Your friend swears the highway is faster because the speed is higher. It’s not, once you add actual time. E‑commerce packing:; Picking items: 7 minutes/order; Packing: 2 minutes; Labeling: 1 minute; Someone proposes a faster label printer that halves labeling time. You save 0.5 minutes/order. Meanwhile, changing the picklist layout could cut picking by 2 minutes. Focus on picking.",
+        "Coding build times:; Full build: 10 minutes; Incremental build: 1 minute; A developer wants to shave 20% off incremental builds (12 seconds). Instead, caching dependencies to reduce full builds by 30% saves 3 minutes when CI runs and for clean builds. Much bigger payoff. Customer support:; Triage bot suggests answers: reduces queue. But if escalations wait 2 days because of a manual approval, automating approvals for common cases saves days, not seconds.",
+        "Household chores:; Laundry: 40‑minute wash, 50‑minute dry, 15‑minute fold. A new dryer that’s 20% faster saves 10 minutes. But pre‑sorting clothes before washing might prevent re‑washes and save 40 minutes. Choose the boring hero."
+      ]
+    },
+    {
+      "heading": "When the bias fools your calendar",
+      "paragraphs": [
+        "This one hurts. You add a “focus hour” and crank your typing speed. You feel efficient. Meanwhile: 15 minutes vanish settling into focus after a meeting; 10 minutes evaporate switching apps and hunting links; 20 minutes of back‑and‑forth just to schedule a check‑in. Faster typing doesn’t save you much. What saves you time:",
+        "Protect a 90‑minute uninterrupted block and stack meetings together; Use a scheduling link to kill email ping‑pong; Keep a “Today” doc with all links you need. Your calendar has slow zones. Find them. They’re not the zones you think."
+      ]
+    },
+    {
+      "heading": "Blueprint: A one‑page team policy to fight time‑saving bias",
+      "paragraphs": [
+        "Time per mile shrinks a lot when you start slow. It shrinks a little when you’re already fast. That’s why: 20 → 30 mph saves more time than 60 → 70 mph over the same distance; Halving time requires doubling speed; Small speed bumps at high speed are not worth risky behavior. Keep this mental picture: the “time saved” curve is steep at low speeds and flat at high speeds. If your choice lives on the flat part, look elsewhere. Try this policy for a quarter.",
+        "Every proposal must estimate absolute time saved per unit and per day/week; We prioritize improvements by “minutes saved per dollar” and “minutes saved per risk unit.” We fix the current bottleneck first. We measure the bottleneck monthly; We avoid optimizing steps that are less than 10% of total time unless it’s for safety or quality; We publish before/after timings for changes. You’ll make different decisions within two weeks. People will bring better proposals. The bias loses its grip when numbers hit the table."
+      ]
+    },
+    {
+      "heading": "Wrap‑up: choose the slow road to get there faster",
+      "paragraphs": [
+        "Time‑saving bias flatters our need to feel fast. It whispers that pushing harder at the top end is heroic. The truth is humbler: big wins hide in slow corners. In the stuck valve. In the messy form. In the clumsy handoff. We waste hours chasing little thrills and leave the real time lying on the floor.",
+        "Stop letting “fast” seduce you. Ask, “Where does the time really go?” Fix that first. Be the person who ignores the shiny 80 → 90 and instead takes 20 → 30 from painful to decent. You’ll get home earlier, ship smarter, and breathe easier."
+      ]
+    }
+  ],
+  "checklist": [
+    "Translate speed to time. Ask, “How many minutes will this actually save?”",
+    "Prioritize slow steps. Find the bottleneck with the longest wait, queue, or duration",
+    "Use the per‑unit trick. Estimate minutes per mile (or per item), not mph",
+    "Compare options on time saved, not percent faster",
+    "Beware “already fast” upgrades. They usually save pennies of time",
+    "Consider risk. Don’t trade safety for tiny time gains",
+    "Measure before/after. Time the baseline. Time the change. Decide with data",
+    "Fix setup and handoff friction first",
+    "Re‑check after changes. The bottleneck moves; your next best move changes too",
+    "Teach the rule. Make your team recite: “Big wins come from fixing slow stuff.”",
+    "Write options in minutes saved, not “% faster.”",
+    "Fix the slowest step first; re‑measure after"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

@@ -1,0 +1,132 @@
+{
+  "slug": "memory-bias-egocentric-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/memory-bias-egocentric-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/memory-bias-egocentric-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:08:50.049Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Your Golden Past Was a Funhouse Mirror: Egocentric Bias and the “Better Back Then” Trap",
+  "lede": "I used to tell a tidy story about my first startup. We were scrappy. We shipped fast. The team was magic. Every stand-up felt like an indie concert in a garage that just happened to print money. Then one night I opened an old notebook from that year. The pages were mostly bug lists, delays, and “we’re out of runway” math. The “magic team” was three talented people oscillating between burnout and stubborn hope. We were not legends. We were lucky, persistent, and frequently wrong.",
+  "sections": [
+    {
+      "heading": "What is Egocentric Bias – when your past seems better than it really was and why it matters",
+      "paragraphs": [
+        "That gap between how it felt in my memory and what the record showed? That’s egocentric bias getting handsy with my past. One sentence definition: egocentric bias is our tendency to see ourselves as the center of events and overestimate our role, competence, and correctness—especially when we look back, which can make our past seem better than it really was (Ross & Sicoly, 1979; Wilson & Ross, 2001). Egocentric bias is a family habit, not a single tic. We default to our own vantage point because it’s the most available, vivid, and emotionally loaded perspective. In the present, that makes sense. In the past, it makes trouble.",
+        "You remember the version of events where your actions explained more than they did, your intentions were clearer than they were, and your choices led the dance. Over time, we also tend to revise memories to protect a coherent, favorable self-image (Greenwald, 1980). The result: the “me” at the center of your past often becomes slightly wiser, kinder, and braver than you actually were, and the scenes around them look brighter. Two pieces of glue hold this together:",
+        "Self-as-hero framing. We estimate our contribution to shared outcomes as larger than others would estimate (Ross & Sicoly, 1979). We also attribute successes to our skill and failures to external conditions—classic self-serving bias co-signing the story; Memory reconstruction. Memory is not a file system. It’s a living draft. Each time we recall an event, we pull scraps and rebuild them to fit current beliefs and goals (Wilson & Ross, 2001). If today-you wants to feel like past-you made good calls, your memory obliges.",
+        "Why does this matter? Because decisions lean on memory. You will reuse your “proven playbook,” set budgets, pick partners, and forecast risk using a shaded rearview. If the past looks cleaner than it was, you will: Overcommit to fragile plans because “this worked before.”; Repeat avoidable mistakes you’ve airbrushed away; Discount teammates’ contributions and erode trust; Miss signals that your environment changed and your old skills don’t map. This bias doesn’t make you a bad person. It makes you a human narrator who wants a gripping story with you at the center. We just need better editing."
+      ]
+    },
+    {
+      "heading": "The group project that “only happened because of me”",
+      "paragraphs": [
+        "Stories move the bias out of theory and into your hands. Here are moments where we’ve seen egocentric bias make the past sparkle. In a product launch debrief, Lena says the campaign landed because she “pushed through the blockers.” Her memory serves up strong images: late-night Figma mocks, assertive emails, the adrenaline rush. She barely remembers Oscar’s unglamorous QA that caught the billing bug. She doesn’t recall that the CTO negotiated scope with legal for two weeks. When the team divvies credit in their heads, Lena’s share quietly inflates.",
+        "This is textbook: people recall their own contributions because those moments are easier to access and explain, while others’ work is less visible (Ross & Sicoly, 1979). Multiply that across a team, and the private credit pie adds up to 200%. Consequence: resentment. Oscar leaves in Q3. Next launch, bugs slip through, Lena burns out doing “everything,” and leadership sees “unreliable delivery.” The root wasn’t talent. It was distorted memory poisoning how the team distributes praise and responsibility."
+      ]
+    },
+    {
+      "heading": "The relationship that “was perfect until it wasn’t”",
+      "paragraphs": [
+        "After a breakup, Amira remembers museum dates, inside jokes, and the time he waited outside her exam with coffee. Her camera roll supports the montage. The nights she cried about another canceled plan? They’re fuzzier. She can recite the three best days. She struggles to list the five recurring tensions.",
+        "This is egocentric bias feeding into rosy retrospection—the tendency to remember past experiences more positively than we felt at the time. The scenes that star “me feeling loved” have stronger hooks. Pain becomes context; joy becomes plot. Consequence: Amira holds current partners to a fantasy standard based on edited footage. She ends promising relationships because they don’t match a past that never existed as a whole."
+      ]
+    },
+    {
+      "heading": "The founder who thinks the early team “just moved faster”",
+      "paragraphs": [
+        "Sahil claims his first startup sprinted because “we shipped every day without process.” He forgets the seven fires those choices sparked: a data migration that cost a week, a compliance scare, a customer churn spike from UI confusion. His memory of “speed” is the visceral thrill of unchecked momentum.",
+        "Years later, he bans process at his new company. They move fast into the same ditch. Consequence: process becomes a villain. He misses that “speed” wasn’t the lack of process; it was small scope, low user count, and sheer novelty. He worships a mask of speed and ignores the body."
+      ]
+    },
+    {
+      "heading": "The engineer who “saw it coming”",
+      "paragraphs": [
+        "Miguel recalls a magical eight-week training block where he “finally got strong.” He pulls the routine from memory and hammer it again. This time he gets injured. Old logs show the “magic” block coincided with more sleep, a lighter work schedule, and lower life stress. Two rest days per week, too. The program didn’t change him—context did. Consequence: he attributes success to the visible, controllable piece (workouts) and omits the boring factors that carried the freight (recovery, stress load). He enshrines the wrong lever.",
+        "After an outage, Priya says she “always knew the architecture was fragile.” She remembers mentioning it in passing and the anxiety she felt whenever a spike hit. She can’t produce a ticket, doc, or email where she called the risks explicitly. Her feeling becomes “I said so,” which becomes “you didn’t listen,” which becomes social fuel. Consequence: the team fights ghosts. They treat unvoiced anxiety as “documented warnings” and miss the habit they actually need: writing risks and proposed mitigations clearly, with owners and dates."
+      ]
+    },
+    {
+      "heading": "The investor riding on “I called that rally”",
+      "paragraphs": [
+        "Days with small kids are noisy and tangible. When they get older, you remember sunny park afternoons and forget the slow, exhausting hours between naps. The photographs you kept bias toward “smiles near trees,” not “laundry on couch at 11 p.m.” Time felt constrained then too; you just didn’t photograph the feeling. Consequence: you blame today’s schedule or phone for “stealing time.” You miss a deeper truth: space for joy required a plan then and needs one now.",
+        "Jeremiah remembers telling three friends to buy a battered stock before a rally. He forgets the five other predictions he whispered that fizzled. He recalls the one bold email with a confident subject line. He ignores the long DM where he hedged every sentence. He now views himself as a contrarian who “trusts his gut.” Consequence: he sizes positions too large on “instinct” and ignores base rates. Survivorship and egocentric bias throw a party in his P&L."
+      ]
+    },
+    {
+      "heading": "How to recognize/avoid it",
+      "paragraphs": [
+        "Maya raves about Lisbon. Her memory bubbles with sardines on a sidewalk and gold evening light. Lost in translation: hours of jetlag, two cramped Airbnbs, and one fight about laundry. She recommends the city to everyone, then downplays their valid feedback because “you must not have found the right spots.” Consequence: her advice misfires. She pushes people into copy-paste trips, not tailored itineraries. She trusts the trailer, not the film.",
+        "You can’t cure egocentric bias. You can build rails so it doesn’t reroute your life. Think less “change my brain” and more “change my environment.” These moves work because they anchor your stories to artifacts, not vibes."
+      ]
+    },
+    {
+      "heading": "Keep raw records, not polished narratives",
+      "paragraphs": [
+        "Log decisions in the moment. One paragraph, one timestamp, one reason, one alternative you considered. Use a notes app you actually open. Tag with project names so you can find them later; Save the messy draft. Screenshots, whiteboard photos, back-of-envelope math—keep them.",
+        "Future-you needs receipts, not a memoir; Journal weekly, not daily. Daily is brittle. Weekly entries capture patterns without turning into homework. Resist prose. Bullets and numbers are fine. When you revisit a decision, pair memory with artifacts. Look for mismatches. Lean toward the artifacts when you’re uncertain."
+      ]
+    },
+    {
+      "heading": "Post-mortems with numbers, not vibes",
+      "paragraphs": [
+        "When finishing a project, privately estimate the fraction of outcome each teammate drove, including non-glamorous work. Write your pie. Then ask two colleagues to do the same, especially those outside your role. Compare pies. The gaps show where your view is egocentric or blind. If you lead, make a ritual of naming invisible work in retros: the legal thread that saved time, the QA checklist that prevented a fire. Use names and specifics. It recalibrates whose actions you remember.",
+        "After launches, trips, races, and relationships-with-a-lowercase-r, do a quick after-action review: What did we intend? What happened?; What surprised us?; What will we do differently next time?; What one metric measures “better” here?. Pick a metric before you start next time. For a product launch: activation rate, not “team energy.” For a vacation: average hours outside per day, not “the vibe.” Vibes matter, but they lie easily. Numbers build a spine you can hang emotions on."
+      ]
+    },
+    {
+      "heading": "Externalize the other people’s view",
+      "paragraphs": [
+        "Write a “future me” note before major efforts. Example: “Six weeks from now, if this feels like a win, it will be because: A) we ship the two critical features; B) our early cohort uses them weekly; C) we didn’t burn out. It will not be because we got 3,000 upvotes or a viral meme.” Put it on your desk. When the six weeks end, compare your current feelings with the precommit. You’ll catch the drag of ego toward the shiniest story.",
+        "Ask a peer to write a three-sentence summary of your contribution after a project. Do the same for them. Swap. The deltas are data; In conflicts, write your best steelman of the other person’s position. Not your parody. Their strongest case. Share it. The act forces your mind to widen the frame so your role shrinks to scale. This is less about “being fair” and more about training your memory to hold multiple angles."
+      ]
+    },
+    {
+      "heading": "Separate story time from decision time",
+      "paragraphs": [
+        "Before declaring your past plan “reliable,” look up base rates. If your “perfect sprint” hit 30 story points, check your trailing median across ten sprints. If your “magic diet” dropped 10 pounds in two months, see what happened over the next six. If an investment “always works,” pull five years of performance. Base rates puncture myth. They replace “I’m a lucky outlier” with “I’m standing on a curve.” Humans need stories. Tell them at dinner. Do not let a good story decide headcount. At work, put stories in a sandbox labeled “narrative.” Decisions then run through a structured gate:",
+        "What options are on the table?; What evidence supports each?; What costs and reversibility?; What would change our mind?. If the room drifts back to “Remember when we…,” move it forward with “What would make this different now?”"
+      ]
+    },
+    {
+      "heading": "Let photos be photos, not verdicts",
+      "paragraphs": [
+        "Memories feel truest when they align with today’s mood. If a conversation flips your view of the past, wait 24 hours and revisit the artifacts. Don’t rush to update your long-term story while you’re flooded with relief or shame. Slow down. Let the chemicals drain. Then edit. Every group has the historian—the person who remembers boring details. Keep them close. When you argue “it was better back then,” they’ll say, “We also spent two months on rework.” Make space for that. It’s not negativity. It’s ballast.",
+        "Photos bias toward bright surfaces. Your favorite album will not show the weather of your life. When planning the future, ask: what did those pictures not capture? Who took the photo? What did they not photograph? Add those blanks to your plan."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "It’s easy to mix egocentric bias with neighbors. The edges matter because the fixes differ. Rosy retrospection: remembering past events more positively than felt in the moment. This overlaps with egocentric bias when your past features you as the satisfied hero. Rosy is about valence; egocentric is about center of gravity. Self-serving bias: attributing successes to internal causes and failures to external ones. It feeds egocentric recall. You remember the win as skill and the loss as “market conditions.” Together they make the past glow with your competence.",
+        "Hindsight bias: after learning outcomes, believing you “knew it all along.” It rewires memory to match results (Fischhoff, 1975). Egocentric bias adds the self-flavor: “I always said we should do X,” even if you said nothing. Consistency bias: reshaping memories to align with your current beliefs and identity (Conway & Pleydell-Pearce, 2000). If you see yourself as decisive now, you remember past you as more decisive than you were. Availability bias: giving weight to what pops into mind easily. Your own actions are vivid. Others’ work hides. Availability fuels egocentric over-credit.",
+        "Spotlight effect: overestimating how much others notice you in the present (Gilovich et al., 2000). Egocentric bias is the long-term version—your memory focuses on you later too. Fundamental attribution error: over-attributing others’ behavior to disposition rather than situation. Egocentric bias pairs with it; you grant yourself context, deny others context, then enshrine that story. Knowing which puzzle piece you’re holding makes your response cleaner. If it’s hindsight, surface hypotheses you wrote before the outcome. If it’s rosy retrospection, revisit the boring parts."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Egocentric Bias",
+      "paragraphs": [
+        "There’s a tender, human reason egocentric bias survives. You want to believe your life has a throughline, that you were the pilot more than the passenger, that the best parts are yours to claim. And some of that’s true. You did act. You did persist. You did help. But the rest of it—luck, timing, other people’s invisible labor, the stubborn complexity of the world—belongs in your story too. It doesn’t make your part smaller. It makes your story honest.",
+        "When you put the receipts next to the myth, two things happen. First, you make fewer dumb bets. Second, strangely, your pride grows stronger. “I got here with help. I changed my mind. I learned.” That pride holds when the next chapter is messy. We’re building a Cognitive Biases app to make this kind of honesty easier: quick prompts after decisions, simple credit pies, fast base-rate checks. Tools you’ll actually use when your brain is busy and your ego wants a hug. Until then, use the checklist, keep the boring logs, and invite the historian friend to lunch. The past was good. It was also complicated. Let it be both. If you try even half of this, your future self will start trusting you. And that’s the quiet upgrade egocentric bias can’t fake."
+      ]
+    }
+  ],
+  "checklist": [
+    "Before a big effort, define “what success means” in one sentence and one metric",
+    "Log major decisions with reasons and alternatives. Keep screenshots and drafts",
+    "After a project, write your credit pie; compare it with two others’ pies",
+    "Do a post-mortem: intent, result, surprises, one change next time",
+    "Check base rates: compare your “magic moment” to the longer average",
+    "Ask one peer to summarize your contribution; summarize theirs; swap",
+    "Sleep on any big storyline change. Revisit with artifacts in the morning",
+    "Separate narrative talk from decision gates: options, evidence, costs",
+    "Name invisible work in public. Make it normal to praise boring wins",
+    "Keep weekly journals short and honest. Glorify nothing. Note stress, help, luck",
+    "Define success in one sentence and one metric before you start",
+    "Log major decisions with reason and alternatives; save drafts and screenshots"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

@@ -1,0 +1,87 @@
+{
+  "slug": "cognitive-bias-omission-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-omission-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-omission-bias/content.ts",
+  "originalPublishedAt": "2025-09-01T12:57:05.593Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Omission Bias: Why Doing Nothing Feels Safer Than Acting",
+  "lede": "A friend once told us about the day she almost gave her daughter a measles vaccine and then didn’t. It wasn’t anti-vax stuff. She trusted the science. But the nurse mentioned a small chance of a fever after the shot. My friend pictured herself buckling her child into the car seat later, feverish and miserable, because she had “chosen” the shot. She felt the heaviness of that responsibility in her hands and walked out holding the consent form unsigned. Nothing happened that day. It felt like the safer choice. A year later a measles outbreak hit the neighboring town.",
+  "sections": [
+    {
+      "heading": "What is Omission Bias and why it matters",
+      "paragraphs": [
+        "Omission bias is our tendency to judge harmful actions as worse than harmful inactions, even when the outcomes are equally bad or worse. It sneaks in when doing nothing feels morally cleaner or less risky than doing something, and it silently tilts our decisions. Omission bias makes inaction feel safer, wiser, and more moral than taking action that might backfire. It’s why we’ll accept the risk of a future problem rather than accept responsibility for a decision that could go wrong today. Researchers have shown we judge harm from action more harshly than identical harm from inaction.",
+        "It matters because: Inaction has costs. We just don’t get receipts for them. Inaction feels less blameworthy. If the status quo goes bad, it feels like fate. The world rewards adaption, not neutrality. Most of us don’t wake up thinking, “I will avoid action today.” We simply feel a tug to wait for more data, to decide after the next milestone, to hold off until we are sure-sure. Omission bias isn’t just procrastination. It’s a moral tilt."
+      ]
+    },
+    {
+      "heading": "2) The product manager and the deprecated API",
+      "paragraphs": [
+        "A parent sees two risks: side effects now, disease later. Action creates tangible responsibility: “If my kid has a fever, it’s because I chose the shot.” Inaction splits responsibility with the world: “If they get sick, that’s because disease exists.” The nurse reframes the choice as vaccine risk versus disease risk. The parent sets a rule in advance: “We vaccinate on schedule unless medical advice says otherwise.”",
+        "A PM knows they should migrate off a legacy API, but there’s a nonzero chance of breaking flows during the cutover. So they push it a sprint. And another. Six months later, the vendor sunsets the API and the team scrambles with weekend fire drills. Breaking something through your own change is a visible sin of commission. Keeping a shaky dependency feels like merely “not doing harm.”"
+      ]
+    },
+    {
+      "heading": "5) The couple putting off a hard conversation",
+      "paragraphs": [
+        "A new investor waits for the perfect entry. Markets dip, spike, dip. They never buy. Two years pass. They feel safe, because “I didn’t lose money.” They also didn’t gain. Losses from action hurt more than missed gains. Automatic monthly investments move the decision upstream and reduce regret spikes.",
+        "A B2B company keeps a little-used legacy feature because removing it might create noise. Inaction creates drag, but action creates visible conflict, so the drag wins by default. Choosing to have the conversation could cause an argument now. Not choosing just leaks pressure quietly. The leak doesn’t scream, so it wins."
+      ]
+    },
+    {
+      "heading": "10) The founder who won’t pivot",
+      "paragraphs": [
+        "A critical patch requires planned downtime. Ops fears user complaints, so they push it to the next window. Two weeks later a breach uses the unpatched exploit. “We didn’t cause an outage” feels safer than “we caused a patch outage.” The breach costs are probabilistic and later; patch downtime is certain and now.",
+        "A town models increasing flood risk but stalls deciding on a barrier that might be an eyesore and cost millions. Each sunny day feels like they chose well. One storm dumps a decade of rain. Metrics flatten. Customers use the product for one small feature, not the core vision. A pivot means admitting the old plan isn’t working. So they “optimize” the landing page for three more months."
+      ]
+    },
+    {
+      "heading": "4) Precommit while you’re calm",
+      "paragraphs": [
+        "Omission bias hides inside your words: “Let’s wait until we’re sure.” “The risk is low; why poke the bear?” “We can revisit later.” Look for that special relief that comes from not having to sign your name yet. Write both options as actions. Put numbers on the invisible costs. Ask: “If the current situation were not the default, would I choose it today?”",
+        "Action: small chance of small pain now; lowers big risk later. Inaction: no pain now; higher chance of big pain later. “We patch critical vulnerabilities within 72 hours.” “We sunset features with <1% usage after 90 days, with two announcements.” “We invest 10% of income monthly, regardless of headlines.”"
+      ]
+    },
+    {
+      "heading": "9) Ask the empty-chair question",
+      "paragraphs": [
+        "Roll change to 5% of users and rollback on clear thresholds. Have the hard conversation in a fixed time block with an escape hatch. Premortem: “It’s six months later, we acted, and it went badly. Why?” Then flip it and ask how inaction failed. “Elena will decide on TLS migration by Sept 15 after consulting DevOps and Legal.”",
+        "“We choose deliberate action and accept learning pain.” “We make the cost of inaction visible and share responsibility for it.” Imagine the future user, customer, or partner who benefits if you act. Ask what they lose if you do not."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Alongside tech debt, add an action-debt column for decisions delayed with accrued cost. Review it monthly. Stick this list on the wall next to your roadmap. Or your fridge. Or your mirror. **Status quo bias:** prefers the current state because it is the current state. **Loss aversion:** losses hurt more than equivalent gains feel good.",
+        "**Regret aversion:** we avoid choices that could lead to regret. **Procrastination:** delay due to effort or discomfort. **Analysis paralysis:** endless research as a shield against responsibility. We call these the stillness syndicate. The cure is not reckless motion. It is honest motion: giving action and inaction equal lighting on the stage."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Choose your future, not your alibi",
+      "paragraphs": [
+        "We’ve all felt the clean relief of choosing not to choose. No messy side effects today. No angry emails. No awkward talk. But the world keeps moving whether we move or not. And the cost of holding still usually arrives with interest. Omission bias isn’t evil; it’s our desire not to cause harm. That desire needs a chaperone: the truth that harm also happens from holes we leave unfilled, bugs we don’t patch, and words we don’t say.",
+        "We’re building a Cognitive Biases app to make this easier in real time, to surface the “do nothing” tug, put numbers and narratives around both paths, and nudge you toward the choice you’ll respect in a month."
+      ]
+    }
+  ],
+  "checklist": [
+    "Run a pilot in one unit with metrics, voice-of-nurse, and voice-of-patient evidence before broader rollout",
+    "Have leadership state plainly that maintaining the status quo is a decision and ask for its outcomes next month",
+    "Write the “don’t act” choice as a dated, costed plan",
+    "Ask: “If this weren’t the default, would I choose it today?”",
+    "Estimate both harms: caused-by-action vs. allowed-by-inaction",
+    "Decide reversibility; run a small reversible test if possible",
+    "Premortem both paths: action fails because… and inaction fails because…",
+    "Precommit to rules where you can: patch times, investment schedules, deprecations",
+    "Assign a single owner and a deadline; log slippages",
+    "Put a name in the empty chair and argue their case",
+    "Review your action debt every month",
+    "When you feel relief from waiting, write why and re-evaluate tomorrow"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

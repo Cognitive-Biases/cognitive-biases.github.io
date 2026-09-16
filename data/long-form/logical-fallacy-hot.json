@@ -1,0 +1,161 @@
+{
+  "slug": "logical-fallacy-hot",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-hot",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/logical-fallacy-hot/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:58:13.085Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Streak That Wasn’t: Navigating the Hot‑Hand Fallacy Without Killing Your Momentum",
+  "lede": "Picture the last time you felt invincible. Maybe you hit five three-pointers in a row at the park. Maybe you closed three deals in a single afternoon, or pushed a trading app and watched green candles stack like Lego. For a few hours, you glowed. You called for the ball, pitched bigger, doubled down. It felt like something shifted in your favor. You were “hot.”",
+  "sections": [
+    {
+      "heading": "What Is the Hot‑Hand Fallacy and Why It Matters",
+      "paragraphs": [
+        "The hot-hand fallacy is the belief that a recent win increases your chances of winning again, even when each attempt is statistically independent. It feels true. It’s often wrong. And when it’s wrong, it’s expensive. The hot-hand fallacy happens when you treat a streak as proof that the next attempt is more likely to succeed, even if the underlying odds haven’t changed. You hit three shots; you feel the fourth is “due.” You ship two updates people love; you believe the third will win by gravity. You forget the independence of events.",
+        "You overbet when you should size steady; You change tactics midgame based on vibes, not data; You mistake noise for skill and build processes around it; You end up with outcomes that don’t match your actual edge. Where this bites: The fallacy got famous in basketball. A classic paper studied whether NBA players actually shot better after a streak and concluded the “hot hand” was mostly an illusion (Gilovich, Vallone, & Tversky, 1985). Later work found small, real hot-hand effects once you correct statistical quirks and account for defense adjusting to hot shooters (Miller & Sanjurjo, 2018). Translation: you might get a tiny bump sometimes, but it’s smaller and rarer than it feels, and opponents react.",
+        "In sales, “I’m hot” can push you to skip discovery, offer steep discounts, or bulldoze objections you’d usually handle carefully; In product, “our last two launches crushed” leads to sloppy validation and rushed bets; In trading, “I can’t miss this market” invites leverage, concentration, and a swift reality check; In personal life, “three great dates in a row” leads to blind spots with the fourth. Why it matters for normal people:",
+        "The problem isn’t momentum. Momentum is real at the system level: you learn, your team syncs, your reputation spreads. The problem is confusing momentum (a gradual shift in the underlying odds) with streaks (random clusters in short runs). If your odds truly improved because of skill, information, or conditions, great. If you assume they did because you’re “hot,” expect a tax."
+      ]
+    },
+    {
+      "heading": "1) Pick‑Up Ball: “Keep Feeding Me”",
+      "paragraphs": [
+        "Let’s walk through where the hot-hand fallacy dupes smart people. Each story shows the same trap: confounding skill, process, and luck. Leo’s a decent shooter. One Saturday, he drops four in a row. Teammates start yelling, “He’s hot!” Leo starts pulling from deeper, off-balance, guarded—shots he skips when cold. His percentage drops. After the game, he says, “I cooled off.” Maybe. More likely, he took worse shots because the streak told him the hoop got larger.",
+        "What changed the odds? Shot selection and defensive pressure. Not the universe rewarding a feeling. Practical fix: “If I hit two, I still take only open looks within range.” Heat can change confidence, not geometry."
+      ]
+    },
+    {
+      "heading": "2) Sales: Three Yeses, One Big Discount",
+      "paragraphs": [
+        "Ana closes three mid-market deals by listening hard and mapping value to real pains. Her fourth prospect is enterprise. She says, “We’re on a roll,” then rushes discovery, pushes a pitch deck, and tosses in a 25% discount to “keep momentum.” The deal drags. Procurement smells haste. She loses the margin and the deal.",
+        "What changed the odds? She stopped doing the thing that made wins likely. The streak seduced her into a different process. Practical fix: “Win streak = slow down, use the checklist harder.” If you ran the playbook that produced wins, stick to it. Don’t discount to keep a “streak” alive."
+      ]
+    },
+    {
+      "heading": "3) Trading: The Leverage Creep",
+      "paragraphs": [
+        "Jay caught three excellent swing trades. Now he’s “seeing the market.” He bumps position size by 3x on a similar setup. A macro headline drops; the trade gaps against him. Stop loss triggered, weekly gains gone in one hour. His entries weren’t special; the market gifted volatility. He interpreted heat as edge.",
+        "What changed the odds? Nothing. But Jay changed his bet size as if the odds moved. Practical fix: Pre-commit to position sizing rules tied to setup quality and risk, not recent P&L. The best traders pre-size when calm and follow it when hot."
+      ]
+    },
+    {
+      "heading": "5) Poker: The Heat Mask",
+      "paragraphs": [
+        "A small team releases two features users love. They feel untouchable. Next, they cram three bold changes into a single release, skip A/B testing—“we already know what users want”—and push on Friday afternoon. Monday’s churn looks like a cliff. Unlike the last two, the new changes moved core workflows. What changed the odds? Complexity and exposure increased; testing decreased. They treated applause as certainty. Practical fix: Keep the scaffolding: small releases, clear success metrics, rollback plan. Confidence should make you boring, not reckless.",
+        "Tara wins four medium pots. She feels flow, starts three-betting lighter, and calls a thin river because “I’m running good.” The table adjusts, isolates her, and value-owns her confidence. She blames a cooler. The hand review shows marginal lines she’d rarely take while “cold.” What changed the odds? Opponents adapted; she drifted from ranges. Practical fix: Let heat raise your focus, not your VPIP. Review hands after wins, not just losses."
+      ]
+    },
+    {
+      "heading": "7) Creative Work: The Viral Trap",
+      "paragraphs": [
+        "A hiring manager interviews three stellar candidates in a row. She starts assuming the pipeline’s quality has shifted. Confirmation bias kicks in. By candidate four, she’s skipping reference checks and rushing to offer. The hire flames out in month two. The supposed “streak” was a lucky clump in a mixed pool. What changed the odds? The rigor dropped. Practical fix: Weight the process, not the vibe. Keep rubrics and structured interviews sacrosanct, especially in hot runs. A creator posts two videos that go viral. They feel the platform gods blessed them. Next, they crank output, cut corners, and chase trends that aren’t theirs. Two months later, the audience evaporates. The first hits aligned with timing, quality, and luck. They mistook luck and taste fit for universal demand.",
+        "What changed the odds? They changed their process to serve the streak rather than the audience. Practical fix: Go back to the brief: who is this for, what problem does it solve, what is non-negotiable quality? Let data inform, not dictate."
+      ]
+    },
+    {
+      "heading": "9) Fundraising: The Pattern Mirage",
+      "paragraphs": [
+        "Jon had three lovely dates. On the fourth, he assumes a click; he shares more than he’d planned because “this is going well.” The other person recoils at the pace. He misread warmth as inevitability. What changed the odds? His behavior shifted in response to a perceived streak. Practical fix: Respect pacing and consent. Streaks don’t replace signals.",
+        "A founder gets quick positive responses from two angels. She assumes the round will “run itself,” forwards a loose deck, and stops calibrating her pitch by investor type. A lead VC passes with, “Interesting, but light on revenue path.” The opening energy wasn’t proof of a changed universe. Practical fix: Track objections, refine, and segment investors. Treat each meeting as new, learn by cohort, not by streak."
+      ]
+    },
+    {
+      "heading": "Recognize: Signs You’re About to Over‑Weight a Streak",
+      "paragraphs": [
+        "You don’t need to sterilize your instincts. You need guardrails so heat sharpens your focus instead of tilting your decisions. Your language shifts to inevitability: “Can’t miss,” “It’s our time,” “We’re on fire.” You relax the very steps that created the wins; You escalate stakes faster than your information improved;",
+        "You attribute success to “flow” or “luck turning” more than to specific causes; You stop asking, “What would I do if I were cold?” You seek confirmation of your streak and avoid base rates; You feel urgency to act before the magic fades; You change targets mid-run (harder shots, bigger accounts) without recalculating odds."
+      ]
+    },
+    {
+      "heading": "Avoid: Practices That Keep You Grounded Without Killing Drive",
+      "paragraphs": [
+        "Separate process from outcomes. Track whether you followed your playbook, not just whether you scored; Pre-commit rules. Write them when calm; follow them when hot; Size to risk, not to mood. Increase stake only when objective edge increases; Check base rates. Ask: “Has our underlying probability really changed? Why?” Demand a causal story. Confidence is allowed only if you can name mechanisms and evidence;",
+        "Use small experiments. Hot streak? Great. Test one notch up, not three; Put a skeptical friend in the loop. Ask them to poke holes; Cool down after big wins. Schedule a pause, not a victory lap into risk; Rehearse the downside. Before you act on heat, list what breaks if this is normal variance. Stick this on your wall. Check the boxes before you feed the heat."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "The hot-hand fallacy overlaps with cousins. Knowing the neighbors helps you choose the right antidote. Gambler’s fallacy: The belief that after a run of reds, black is “due.” It’s the mirror image. Hot-hand says, “Win implies win.” Gambler’s fallacy says, “Loss implies win.” Both ignore independence. Regression to the mean: Extreme results tend to drift back toward average over time. People on streaks often revert because luck evens out, not because anything “cooled.” A top salesperson’s monster month gets followed by a normal one. That’s not a hex; it’s math.",
+        "Law of small numbers: We expect small samples to reflect the long-run average too well. In reality, small samples cluster. Streaks happen more than your gut expects (Tversky & Kahneman, 1971). Outcome bias: Judging a decision by its result rather than its process. A bad shot that goes in during a “hot” run feels smart. It might be noise. You still want to judge the choice, not the bounce. Survivorship bias: We hear success stories from streaks, not the thousands of equal attempts that didn’t go anywhere. The mythology of “we were unstoppable” erases the misses.",
+        "Confirmation bias: You notice hits during your “hot” window and forget misses. You build a story to fit the glow. Momentum effects: Sometimes the odds do change. In sports, fatigue and defense adjustments matter; in business, learning, brand, and network effects can increase your base rate. The mistake is assuming every streak signals increased odds."
+      ]
+    },
+    {
+      "heading": "A Practical Way to Think About Heat",
+      "paragraphs": [
+        "Let’s keep it simple: There are only three reasons the next attempt is more likely to succeed. Example: Competitors raised prices; your offer stayed put; Evidence: Market data, competitor moves, policy shifts. 1) The environment changed in your favor. Example: You found a repeatable pitch that resonated with the same ICP; Evidence: Recorded calls, conversion metrics for a consistent segment.",
+        "2) Your skill or information improved and applies to the next attempt. Example: You started screening prospects better; you’re taking open looks. 3) You controlled exposure better (e.g., easier shots, better leads). If you can’t point to one of those with evidence, assume the base odds stayed the same, and the streak is a clump in noise. Act accordingly."
+      ]
+    },
+    {
+      "heading": "1) Build from Base Rates",
+      "paragraphs": [
+        "Heat‑proof doesn’t mean joyless. It means you let confidence lift your execution, not your risk of ruin. Write down the baseline odds for your repeated decisions. Sales: “Discovery-to-close is 22% for ICP A, 8% for ICP B.” Product: “Feature surprise-and-delight rate is 1 in 4 under our current process.”",
+        "Trading: “Setup X wins 48% with 1.8R expectancy.” Hiring: “Panel hire rate is 6% per applicant.” Update these quarterly with data. When you feel hot, check whether your segment, process, or criteria match the base rate. If not, stop."
+      ]
+    },
+    {
+      "heading": "3) Size Bets to Survive",
+      "paragraphs": [
+        "Before you play, write “if/then” rules. If I hit 2 shots, I still only shoot open 3s within my range; If I close 3 deals in a week, I will not change discount policy or skip discovery; If I have 3 winning trades, I won’t increase size unless my written edge checklist improves; If two features pop, I still run A/B tests and staged rollouts. Put the rules where you can’t ignore them: on your monitor, in your CRM, in your broker’s “order confirm” checklist.",
+        "Treat each decision like a bet. Don’t let streaks choose your stake. Use fixed-fraction or Kelly-inspired sizing to avoid blowups. If you don’t know your edge, err small; Pre-define a “max heat bump”: the most you’ll ever increase after wins, contingent on quality metrics; Create circuit breakers: timeouts after big wins or losses. “No new trades for 2 hours.” “No offers same day after an early yes.”."
+      ]
+    },
+    {
+      "heading": "5) Instrument Your Process",
+      "paragraphs": [
+        "Hot you thinks you’re special. Cold you keeps you safe. Write a letter from “cold you” to “hot you.” Include lines like: “You feel invincible. Here are the three mistakes you make when you feel this way.”; Store it where you’ll see it right before a decision: a pre-meeting checklist, a pre-shot cue, a pre-trade dialog. You can’t manage what you don’t measure.",
+        "Track process metrics: discovery questions asked, code review passes, shot quality, sizing vs plan, number of experiments per release; Tag outcomes with conditions: opponent strength, market regime, customer segment; Review streaks with a simple rubric: Did base rates change? Did process adherence change? Did exposure change? Or was this luck?."
+      ]
+    },
+    {
+      "heading": "7) Plan for Opponent Adaptation",
+      "paragraphs": [
+        "Give confidence a job that helps instead of hurts. Channel heat into effort: more reps, more discovery, more learning—same risk; Use “confidence credits” for preparation, not bigger leaps: deeper research, better mocks, more practice shots; Celebrate the streak by investing in foundations (documentation, refactors, playbooks), not by swinging harder.",
+        "In competitive contexts, your “hot” draws countermeasures. Sports: expect tighter coverage; adjust by moving, screening, or passing more; Sales: procurement hardens; prepare with ROI cases and legal ready; Markets: alpha decays; expect slippage and crowding; rotate or throttle. Preview the counter. Don’t act surprised when it arrives."
+      ]
+    },
+    {
+      "heading": "Evidence Without the Math Headache",
+      "paragraphs": [
+        "The lore: “Hot hands are myths.” The update: “Small hot-hand effects may exist, but they’re modest and often offset by adjustments.” The classic: Gilovich et al. studied basketball shot sequences and argued that streaks didn’t translate into higher next-shot success; people overread random clusters (1985); The correction: Miller & Sanjurjo showed that the earlier methods understated hot-hand effects due to a statistical bias in how runs are sampled; once corrected, a small effect appears (2018); The nuance: Even if a player becomes slightly more accurate while “hot,” opponents adapt, shot difficulty rises, and the net effect can vanish in outcomes. Also, humans overweight small effects emotionally.",
+        "You don’t need to resolve the academic debate to act wisely. Behaviorally, it’s safer to assume the streak alone doesn’t move your odds enough to justify big deviations. If you can show a causal mechanism and evidence, allow a measured bump."
+      ]
+    },
+    {
+      "heading": "The Feel of Heat: Why It’s So Convincing",
+      "paragraphs": [
+        "Confidence reduces hesitation. Your timing improves. That can boost performance briefly; Arousal narrows focus; you ride adrenaline. You execute cleaner basics without overthinking; Confirmation bias highlights your hits and blurs misses; Humans hate randomness. We prefer stories. “I’m hot” is a comforting narrative. Hot feels real because: Keep the parts that help—confidence, focus. Strip the superstition.",
+        "Practical cue: use a “green light routine” when you notice heat. For athletes: breathe, cue word (“feet”), one-sentence reminder (“Good shots only”). For sales: “Ask, listen, summarize,” then pitch. For coding: “Run tests, PR, review.” Turn heat into presence, not permission."
+      ]
+    },
+    {
+      "heading": "A Day With and Without Hot‑Hand Discipline",
+      "paragraphs": [
+        "Two short scripts. 9:05 AM: You finish a strong demo. You immediately DM the next prospect, cut the discovery short, and pitch hard. You feel efficient; 10:30 AM: You offer a discount to “keep it moving.” They say they need buy-in. You get ghosted; 1:00 PM: You alter the deck because the last two prospects “loved slides.” The third hates being pitched to; 4:00 PM: You’ve had three “hot” calls, one deal closed, two chances dimmed, and a bigger pipeline risk because you drifted.",
+        "Without discipline: 9:05 AM: Strong demo. You log what worked. You mark the segment; 9:15 AM: You take a 10-minute reset. You pull up your discovery checklist; 9:30 AM: New prospect. You run the same questions. You spot a blocker early, decide not to discount, schedule a technical call; 1:00 PM: You allocate 30 minutes to prep a tailored deck for tomorrow’s same-segment meeting; 4:00 PM: You’ve got one close, one qualified deal moved to the next stage, and no shortcuts taken.",
+        "With discipline: The difference is boring. Boring compounds. Streaks feel like magic. They aren’t. They’re a mix of focus, confidence, and randomness, with a sprinkle of real learning if you’re paying attention. Let them lift your craft, not your risk. When you feel hot, play your best version of the same game: better selection, tighter process, calmer sizing. Keep shooting. Just pick your shots on purpose."
+      ]
+    }
+  ],
+  "checklist": [
+    "Did I change my process because I’m “hot”? If yes, why?",
+    "What base rate am I assuming for the next attempt? Source?",
+    "Has my edge increased due to skill, information, or environment? Evidence?",
+    "What would “cold me” do here? What would “cold me” forbid here?",
+    "Is my bet size tied to setup quality and risk, not recent outcomes?",
+    "What are two signs I’m fooling myself? Did I spot any?",
+    "If I’m wrong, what’s my loss? Can I live with it? How will I exit?",
+    "Who reviewed this? What did they disagree with?",
+    "What one small test can validate my “I’m hot” hypothesis?",
+    "Did I log this decision and the reason so I can learn later?",
+    "Name the base rate for this decision",
+    "State what changed—skill, information, or environment—and show evidence"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

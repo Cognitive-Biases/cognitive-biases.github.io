@@ -1,0 +1,164 @@
+{
+  "slug": "extension-neglect-insensitivity-to-sample-size",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/extension-neglect-insensitivity-to-sample-size",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/extension-neglect-insensitivity-to-sample-size/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:47:59.509Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Small Numbers, Big Trouble: Insensitivity to Sample Size",
+  "lede": "We were in a cramped conference room with a tray of stale muffins and an A/B test that looked like a win. Version B had doubled sign-ups by lunch. Someone joked we should ship it before dessert. By 4 p.m., the “win” was gone. By morning, Version B was worse. We hadn’t discovered a breakthrough. We’d discovered a tiny sample.",
+  "sections": [
+    {
+      "heading": "What Is Insensitivity to Sample Size — When Small Samples Mislead You and Why It Matters",
+      "paragraphs": [
+        "Insensitivity to sample size is the habit of trusting a small sample to tell you what’s true about a big world. Small samples swing wildly; we treat them like steady truth. They aren’t. Insensitivity to sample size means you believe a result because it happened in your sample, without considering whether your sample is large enough to be reliable. If you flip a coin 10 times and get 7 heads, that feels persuasive. Flip it 1,000 times and get 700 heads? Now we’re listening. But our brains struggle to apply that intuition when the coin is a hiring decision, a clinical trial, a new sales script, or the “growth hack” your friend swears by after trying it twice.",
+        "Why it matters: Small samples exaggerate differences. They produce fools’ gold: “huge improvements,” “dramatic declines,” or “breakthroughs” that disappear with more data; Small samples underrepresent edge cases. You miss risks and rare events that dominate outcomes; Small samples tempt you to stop early when the result matches your hopes, and keep going when it doesn’t. That’s a recipe for believing your wishes. This isn’t about perfectionism. It’s about reducing expensive whiplash. You can still move fast. You just need to notice the size of the puddle before you jump. A classic line of research calls this the “law of small numbers”: people expect small samples to look like large ones (Tversky & Kahneman, 1971). Reality doesn’t oblige."
+      ]
+    },
+    {
+      "heading": "The A/B test that “won before lunch”",
+      "paragraphs": [
+        "Stories land harder than formulas. Here are a few that keep showing up in our work and yours. Two hospitals. One large, one small. Which one is more likely to have a day where over 60% of births are boys? Most people say “about the same.” The small hospital wins by a mile. With fewer births, its daily percentages bounce around. The large hospital averages out. The lesson: volatility shrinks as sample size grows. Small places swing. Big places yawn. We’ve all done it. You run a test. The first 200 visitors show Version B “up 35%.” The Slack channel lights up. Someone drafts a blog post. By 6,000 visitors, the lift is 1%. By 20,000, there’s no difference.",
+        "The lesson: early spikes often come from randomness. Don’t bless kings before the votes are counted. Rule of thumb we use: ignore the first day’s curve unless the effect is massive and your traffic is high. If the result flips directions once or twice, you’re staring at noise."
+      ]
+    },
+    {
+      "heading": "The lucky investor",
+      "paragraphs": [
+        "A rep tries a new script for five calls and closes three deals. High fives. Everyone switches. Two weeks later, close rate drops. Turns out the three buyers were renewals already leaning yes. The new script hurt cold leads. The lesson: “Three for five” doesn’t beat a year of mixed pipeline reality.",
+        "Your friend sends a spreadsheet with a new strategy backtested over the last four weeks. It beat the market by 18%. They’re sure they’re onto something. They aren’t. Four data points is a vibe, not reality. Even a year of daily returns can lie if conditions are weird. The lesson: if your backtest fits a tiny window, it probably fits noise."
+      ]
+    },
+    {
+      "heading": "Fitness progress — and the scale that haunts you",
+      "paragraphs": [
+        "Your team interviews four candidates. The second one is funny and confident. Everyone loves them. You hire. Three months later, missed deadlines pile up. You realize you looked at personality in a small, noisy sample and ignored the base rate: interview charm is weakly predictive of job performance unless you measure work samples (Schmidt & Hunter, 1998). The lesson: small, subjective samples mislead; standardized, larger “samples” of behavior help.",
+        "You weigh yourself twice a day. Up two pounds by evening. Panic. Down three by morning. Joy. After a week, no trend. Body weight ping-pongs with water and food. If you’re tracking progress, use weekly averages, not single measurements. The lesson: small samples of time magnify noise. Smooth them."
+      ]
+    },
+    {
+      "heading": "The wildfire stat blunder",
+      "paragraphs": [
+        "In 2006, a study with 18 participants showed a dramatic effect for a new intervention. Media bit. Clinics followed. Later replications with hundreds of participants found a much smaller effect, sometimes none. It wasn’t fraud. It was small sample drama (Ioannidis, 2005; Button et al., 2013). The lesson: small studies can spark hypotheses; they rarely settle debates.",
+        "An analyst looked at the first week of the fire season and declared a record-breaking year. Local weather shifted, crews adapted, and it ended below average. Early, small samples capture transient conditions. They don’t promise the whole season. The lesson: wait for the middle of the movie before you rate it. We’re practical people. Here’s how we audit our own thinking and make insensitivity to sample size less expensive."
+      ]
+    },
+    {
+      "heading": "A pocket rule you can do on a napkin",
+      "paragraphs": [
+        "For yes/no outcomes (click/no click, buy/no buy), the maximum standard error of a percentage is about 0.5 divided by the square root of n; A fast 95% margin-of-error rule: 1 divided by the square root of n. If n=100, 1/√100 = 0.1 ≈ 10 percentage points. If n=10,000, 1/√10,000 = 0.01 ≈ 1 percentage point.",
+        "If your observed “lift” is inside that margin, treat it as noise until the sample grows. Example: Your baseline conversion is 5%. You see 7% in the variant after 400 visitors. 1/√400 = 0.05 = 5 percentage points. Your 2-point lift sits well inside ±5. Don’t celebrate yet."
+      ]
+    },
+    {
+      "heading": "Look for flip-flops",
+      "paragraphs": [
+        "Precommitment saves you from cherry-picking. Before the experiment, pick: The effect size worth acting on. Not “smallest detectable” — the smallest that actually changes your decision; The sample size needed to detect that effect with decent power (80% is common); The stop rule. No peeking until you hit it, unless you’re using a sequential method designed for peeking. There are calculators for this. Use one once, then write your numbers on a sticky note.",
+        "A nasty tell: the trend changes direction as new data arrives. Up, then down, then up. That’s noise. Robust effects keep their sign as n grows. They may shrink toward the mean, but they don’t pinball. We keep a little graph in our dashboards: cumulative effect size over time. If it looks like a seismograph, we slow down."
+      ]
+    },
+    {
+      "heading": "Use base rates and variance",
+      "paragraphs": [
+        "This question forces you to imagine noise. If zero effect would often produce what you’re seeing (with your sample size), your result is fragile. If zero would rarely produce this result, you’re on to something. You can simulate this. Flip a virtual coin 1,000 times in batches of 100. Chart the percentage of heads after each batch. You’ll see wild swings early and gentle waves later. That’s your intuition training.",
+        "If you expect 10% of users to click, and you got 15% from a sample of 50, you feel pumped. But expected variation matters. The expected number of clicks is 5; the standard deviation is roughly √(n p (1-p)). Plug it in: √(50 × 0.1 × 0.9) ≈ √4.5 ≈ 2.1 clicks. 15% is 7.5 clicks — you can’t have half a click, but around 7 or 8. That’s about 1–1.5 standard deviations above expectation. Not shocking. Not “ship it.” Thinking in “how surprising is this?” terms reduces overreaction."
+      ]
+    },
+    {
+      "heading": "Segment last, not first",
+      "paragraphs": [
+        "Single-point outcomes (one interview, one call, one sprint) are low-sample traps. Gather multiple behaviors: try multiple calls, ask multiple interview questions scored against rubrics, run multiple sprints. Each added observation shrinks the sway of luck. We love “we did X in Helsinki last month and churn dropped.” Helsinki had 18 customers. Don’t generalize from Helsinki. Replicate it in Madrid and Sydney. Don’t let the word “natural” launder “small.”",
+        "If your overall sample is 2,000 but you segment into 12 audiences, some segments will show dramatic swings by chance. Segment after you see a genuine overall effect, or pre-register which segments matter most. Otherwise, the smallest slice will shout the loudest."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Plot cumulative averages. Plot rolling 7-day averages. Plot raw counts next to percentages. If a 100% improvement is based on going from 1 to 2 events, your chart should make you blush. Pilots that test feasibility: can we even run this process? Small is fine; Qualitative research: you’re learning language, pain points, not estimating population proportions;",
+        "Safety checks: if you see severe adverse events early, you stop regardless of sample size. Know the job. Don’t use a teaspoon to measure a river. Tape that near your monitor. We did. Biases travel in packs. Here are neighbors you might mix up with insensitivity to sample size."
+      ]
+    },
+    {
+      "heading": "Regression to the mean",
+      "paragraphs": [
+        "This is the formal name in psychology: people expect small samples to resemble the population closely (Tversky & Kahneman, 1971). It’s not a law — it’s a mistake. Small samples imitate the population poorly; they’re noisy caricatures. You fit a model or story too tightly to a limited dataset, capturing noise as if it were signal. Overfitting can happen with big data too, but it’s especially seductive with small data because every wiggle looks meaningful. Solution: hold-out data, cross-validation, and brutal simplicity.",
+        "Extreme performances usually move closer to average on the next try. With small samples, extremes pop up more often, so regression surprises you more. You attribute the change to your intervention. It was gravity. Recognize “we were unusually bad last week” as a cue."
+      ]
+    },
+    {
+      "heading": "P-hacking and multiple comparisons",
+      "paragraphs": [
+        "You see the handful of successes and not the mountain of failures. It’s a sampling problem: the sample you see is not representative. Related, but different: insensitivity to sample size concerns the instability of small samples even when they’re representative. Among many competitors, the winner often overestimates true ability because the most extreme result wins.",
+        "Small samples increase the extremes, worsening the curse. Beware contests decided by tiny numbers of trials. You try many analyses until one “works.” With small n, you’ll find something. That “something” will vanish in replication. Guardrails: pre-registration, correction for multiple testing, and a habit of skepticism."
+      ]
+    },
+    {
+      "heading": "For experiments: Insensitivity to Sample Size",
+      "paragraphs": [
+        "Vivid, recent examples dominate your judgment. A salesperson closes two big deals after switching tactics; those stories become the narrative. That’s availability plus tiny sample. Fight it with dashboards and baselines. We like to anchor habits to real workflows. Here’s how we’ve wired this into our week. Predefine the effect size that changes your roadmap. Write it down. “We only care if signup rate improves by 20% or more.”",
+        "Use a calculator once. Save the sample size you need to detect that change at 80% power. Put it in the experiment brief; Don’t check outcomes until halfway to the sample size unless using a sequential plan; Use sequential analysis tools if you must peek: they adjust thresholds to keep error rates in check; After running, do a back-of-envelope margin-of-error test. If your “lift” is inside it, call it inconclusive and move on."
+      ]
+    },
+    {
+      "heading": "For hiring: Insensitivity to Sample Size",
+      "paragraphs": [
+        "Show cumulative effect plots and rolling averages prominently; Show denominators next to percentages everywhere. “+50%” next to “from 2 to 3” is a different beast from “from 2,000 to 3,000.” Flag small samples visually — gray out segments below a threshold. We use 200 as a default for proportion metrics; adjust to your stakes.",
+        "Replace one “gut interview” with a work sample test scored by two reviewers. You’ll multiply your sample of relevant behavior; Run structured interviews with the same questions and rubrics across candidates. That’s how you turn four subjective samples into a larger, comparable pool; Make debriefs blind to others’ ratings until everyone submits. Prevent early small-sample opinions from anchoring the group."
+      ]
+    },
+    {
+      "heading": "For research reading",
+      "paragraphs": [
+        "Tag feedback with source and segment. Don’t let one enterprise client noise dominate your roadmap for SMBs; Collect a “top five frustrations” weekly and look for repeats across weeks. One week is a small sample; three weeks shows shape; Use interleaved trials: ship the change to 10% of traffic randomly, watch for two weeks, then expand. Skim the methods before the abstract. How many participants? What was the variance? Were results replicated?; Prefer meta-analyses and pre-registered, high-powered studies when possible. Be curious about small pilot results, but slow to revise beliefs; Ask, “Would I bet a month’s roadmap on this finding?” If not, don’t bet it on your users either.",
+        "Don’t judge a restaurant by one dish at 9:45 p.m. after a kitchen rush; Don’t judge a new habit by your first two days. Give it two weeks; judge the trend; Don’t judge a person by one meeting. People have variance, too. We built our own reminders into, yes, our Cognitive Biases app. It nudges us with little rules like “1/√n” and “flip-flops = noise,” right when we’re about to pounce on a shiny early result."
+      ]
+    },
+    {
+      "heading": "A Few Calculations Without Tears",
+      "paragraphs": [
+        "If you’re allergic to math, skip this. If not, here’s a friendly way to calibrate your gut. Proportions (clicks, wins): standard error is √[p(1−p)/n]. Max at p=0.5, so ≤ 0.5/√n. Rough 95% margin ≈ 1/√n. So:; n=100: margin ≈ 10 percentage points; n=400: margin ≈ 5 points; n=2,500: margin ≈ 2 points; n=10,000: margin ≈ 1 point. Means (averages like revenue per user): margin depends on standard deviation (σ). Margin ≈ 2σ/√n. If σ is twice the mean, you need more data. If σ is small, you need less. Translate to action: high-variance metrics demand bigger n.",
+        "Expected extreme days: small n yields more “weird days.” If you manage a small team, expect lumpy stats. Build schedules and expectations that absorb that lumpiness. Keep those in your notebook. Even better, bake them into your dashboards."
+      ]
+    },
+    {
+      "heading": "The Human Side: Why Our Brains Love Small Samples",
+      "paragraphs": [
+        "We’re wired for storytelling. Stories need little data. “I tried this, it worked” is a complete story. “We need 10,000 observations” sounds like stalling. We’re also wired for speed. Early signals feel like opportunities. Waiting feels like losing. On top of that: Representativeness heuristic makes us expect samples to mirror populations closely (Kahneman, 2011);",
+        "Confirmation bias makes us stop when the small sample confirms what we hoped; Outcome bias makes us judge the process by the result, even if the result was luck. Empathy helps. Your brain is trying to help you act in a noisy world. Give it tools: checklists, stop rules, denominators."
+      ]
+    },
+    {
+      "heading": "When Speed Matters More Than Certainty",
+      "paragraphs": [
+        "Sometimes you do need to act on small samples. A competitor launches, a security incident hits, a campaign window closes. Here’s how to move without lying to yourself. Note uncertainty out loud. “We’re making a call with thin ice under us.” It sets expectations; Prefer reversible decisions.",
+        "Ship a small toggle, not a sweeping refactor; Hedge. Split traffic, phase rollouts, set tripwires to revert; Collect data immediately after acting. Turn a small-sample bet into a rapid larger-sample learning loop. We’ve never regretted writing “we might be wrong” into the plan. We’ve often regretted pretending we couldn’t be."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Treat Small Samples Like First Drafts",
+      "paragraphs": [
+        "We love the feeling of finding signal. It’s addictive. But small samples aren’t oracles. They’re first drafts — messy, promising, unreliable. Respect what they are, and you can move fast without breaking your trust in your own data. If you remember one thing, make it this: use 1/√n as your reality check. If your exciting “lift” sits inside that margin, it’s probably noise. If it survives that and keeps its sign as n grows, lean in.",
+        "We’re building a Cognitive Biases app because we need these reminders ourselves — on the days when Version B looks like magic and the muffins taste like cardboard. We want them in your pocket, too, so small samples don’t make big fools of us. Take the checklist below. Pin it. Use it. Then get back to building, testing, and learning — with eyes wide open."
+      ]
+    }
+  ],
+  "checklist": [
+    "What decision will this data inform?",
+    "What minimum effect size would change that decision?",
+    "What sample size do I need to detect that effect reliably?",
+    "What is my stop rule? Am I peeking?",
+    "Is the effect stable as the sample grows, or flipping?",
+    "Are segments pre-specified, or am I fishing?",
+    "Does the result survive a simple margin-of-error check? (1/√n)",
+    "Am I reacting to a story or to a trend?",
+    "If the true effect were zero, would this result be common?",
+    "Can I replicate once more, fast, before I lock in?",
+    "Define the minimum effect size that would change your decision",
+    "Calculate the sample size required to detect that effect (or use 1/√n as a quick margin-of-error check)"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

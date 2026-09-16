@@ -1,0 +1,124 @@
+{
+  "slug": "cognitive-bias-proportionality-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-proportionality-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-proportionality-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T13:09:37.618Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When the Outcome Feels Too Big for the Cause: Proportionality Bias in Real Life",
+  "lede": "A few summers ago, our team’s servers went dark for ten tense minutes. Sales pages died. Support chat died. Our pulse spiked. We whispered “DDoS” and “nation-state actor” like we were in a thriller. One of us jogged to the broom closet where the networking gear lives. The culprit? A cleaning crew had unplugged the router to charge a vacuum.",
+  "sections": [
+    {
+      "heading": "What is Proportionality Bias and Why It Matters",
+      "paragraphs": [
+        "We laughed, but only after the adrenaline faded. Our heads had sprinted to a blockbuster explanation because the event felt big. Ten minutes without oxygen. It must be an attack. That jump is the heartbeat of proportionality bias. Proportionality bias is the tendency to believe that big events must have big, intentional, or complex causes. We build this belief into our daily stories without noticing. We write big villains into small failures. We stack conspiracies where chance would do. And we pay for it—in time, money, trust, and sometimes health.",
+        "Our brains are neat freaks. We love symmetry between cause and effect. If the effect is large, the cause should be too. If the story is dramatic, the villain should be grand. It feels wrong—almost rude—to say, “A tiny thing nudged the world.” Under the hood, the brain is doing pattern-matching and meaning-making. We compress reality into narratives that fit. Proportionality is a comforting rule: no mismatch, no loose ends. Research on causal judgment finds that people prefer causes that “match” the magnitude and moral weight of effects, even when small or accidental causes are more likely (Lagnado et al., 2007). This preference bleeds into conspiracy thinking: the bigger the event, the more people infer intentional, coordinated causes (Brotherton & French, 2014; van Prooijen & van Vugt, 2018).",
+        "Why it matters: Speed vs accuracy trade-off: Proportionality bias speeds up storytelling and slows down diagnosis. You act fast on the wrong story; Overspending on big fixes: You throw time and money at heroic solutions to problems caused by small frictions; Misplaced blame: You accuse people or systems when random variance or mild drift explains the outcome; Learned helplessness: If only “massive” moves can solve problems, you ignore small, compounding actions that actually work; Missed early warnings: Tiny causes today can snowball. If you look only for big culprits, you ignore weak signals. Complex systems—markets, organizations, biology—are full of nonlinear, multiplicative processes. In them, small causes routinely produce outsized effects. That’s not rare; that’s normal. Proportionality bias asks for a world that doesn’t exist."
+      ]
+    },
+    {
+      "heading": "1) The Spreadsheet That Sank a Quarter",
+      "paragraphs": [
+        "Let’s make this concrete. We’ll keep the stories varied and practical. A product team sees a 17% drop in conversions. Slack lights up with theories: a competitor’s dark ads, Google’s secret algo change, a viral thread roasting the brand. The VP spins up a crisis task force. Two hours later, an analyst finds a formatting error in a spreadsheet that feeds prices to the site.",
+        "An extra zero on shipping to Canada. Canadian customers saw “Shipping: # When the Outcome Feels Too Big for the Cause: Proportionality Bias in Real Life Cause: a trivial typo. Effect: a quarter dips. Fix: a five-minute patch and a new guardrail on price files. The big-task-force energy was natural. It was also waste."
+      ]
+    },
+    {
+      "heading": "3) The “Epic” Marketing Rebrand",
+      "paragraphs": [
+        "A couple fights about everything for a month. One partner whispers “We’re fundamentally incompatible.” Therapy? Breakup? Cat custody? A friend asks, “What changed lately?” Answer: one person moved from night shift to day shift. Sleep is wrecked, meals are chaos. They fix the basics—sleep, food, 30-minute daily walk—and feel human again. The “huge, deep incompatibility” was a circadian torpedo. Still real, but smaller and fixable.",
+        "A startup’s growth stalls. The team decides the brand is stale. They hire a top agency, rebuild the website, and rewrite positioning. Months pass. A new PM later discovers that the free trial’s confirmation emails were landing in spam for certain domains. Trialers never got login links. One DNS setting. Flip, test, fix. Growth resumes. The rebrand helped polish. It didn’t fix the pipe."
+      ]
+    },
+    {
+      "heading": "5) The Cyberattack That Wasn’t",
+      "paragraphs": [
+        "A runner wakes up with heart palpitations and thinks “heart disease.” He books cardiology appointments and worries for weeks. Tests come back clean. His doctor asks about caffeine and stress. He’s been drinking triple espressos and sleeping five hours. Titrating caffeine and fixing sleep solves the palpitations. Big effect (scary) created by small, cumulative causes (stimulant + sleep debt). The worry was understandable. The cure was boring.",
+        "A fintech company sees unusual traffic spikes, server CPU maxing out, and failed logins. Security spins up. Minutes later, an engineer finds a misconfigured health check flooding endpoints. Not an attack. A YAML slip. They patch and add a rule: prod configs require two approvals. Heroic incident response for a tiny config mistake."
+      ]
+    },
+    {
+      "heading": "7) The Investment Story",
+      "paragraphs": [
+        "A teacher watches class morale drop after a curriculum change. She assumes the new material is too hard. She schedules parent meetings and tutoring. A student mentions “headaches after lunch.” The class got new LED lights. The brightness was set to max. They dim the lights and add natural light breaks. Morale and attention recover. The curriculum wasn’t the villain.",
+        "An investor sees a startup fail and writes an essay about “macro headwinds and predatory incumbents.” Postmortem reveals the founders didn’t talk to customers in month three when usage dipped. Churn was fixable with onboarding tweaks. They told a big story. The small causes were awkward and human—easy to ignore."
+      ]
+    },
+    {
+      "heading": "9) The Public Scare",
+      "paragraphs": [
+        "A pitcher’s velocity drops by 3 mph. Fans and commentators speculate about secret injuries and chemistry problems. The team’s biomechanist finds a subtle ankle mobility issue preventing proper hip rotation. Six weeks of targeted mobility and it’s back. Not vibes. Ankles. A blackout hits a city.",
+        "Rumors of cyber warfare trend. The official explanation—an overloaded transformer tripped after a heatwave—feels too simple. Investigations later find exactly that: heat stress, deferred maintenance, one component failing in a cascade. Small physical causes creating big, visible effects are common in infrastructure. They just feel unsatisfying."
+      ]
+    },
+    {
+      "heading": "Step 1: Name the Reflex",
+      "paragraphs": [
+        "A manager wakes up dreading work. He decides he needs a new career. A mentor asks him to log his days. It’s 42 meetings a week with no work blocks, plus late-night Slack. They remove three recurring meetings, move two decisions to docs, and set do-not-disturb windows. Two weeks later, dread eases. Not a purpose crisis. A calendar diet. These aren’t cherry-picked. Swap domains and you’ll keep finding them. Our heads make blockbuster movies. Reality runs in small gears.",
+        "When a big event happens, say out loud: “My brain wants a big cause.” Saying it shifts your posture from hunter to investigator. It slows the story machine. Use a short trigger phrase: “Boring first.” Write it on your incident templates, postmortem docs, and decision memos. Put it in Slack emoji if that helps. Ritual beats memory."
+      ]
+    },
+    {
+      "heading": "Step 3: Check the Boring Stuff First",
+      "paragraphs": [
+        "Big effects rarely happen all at once. They’re usually aggregates. Break the effect into components. Revenue dip? Split by channel, geography, device, SKU, and time of day; Health symptom? Note time, context, foods, sleep, stress, recent changes; Outage? Map user flows, endpoints, and external dependencies. Decomposition often reveals which small gears moved. You replace “mystery” with “oh, 73% of the drop is mobile Safari in Canada on the new checkout.” Set a “boring-first” checklist you always run. Don’t skip it even when the event screams for drama.",
+        "What changed in the last 24–72 hours? Even tiny deploys or setting tweaks; Are the inputs alive? Credentials, DNS, email deliverability, certificates, limits, cron jobs, scheduled tasks; Are there known noisy metrics? Distinguish expected variance from anomalies; Have we merged data buckets that hide segments?. In medicine, this is “common things are common.” In ops, it’s “check the cable before calling the hackers.”"
+      ]
+    },
+    {
+      "heading": "Step 5: Use Base Rates and Prior Probabilities",
+      "paragraphs": [
+        "Draw a quick causal scaffold on paper. Put the effect at the right. Draw three to five arrows from small contributors on the left. Label each with weak-to-moderate weight. Ask: If each nudged 2–5%, would that add up? This beats trying to find The One True Cause. You’ll often find three modest factors that multiply into a big outcome. You can solve each with simple actions. Ask: How often do small accidents explain big events in this domain? What’s the base rate for each candidate cause?",
+        "Website outages are more often misconfigurations than cyberattacks; Health issues in 30-year-olds are more often lifestyle than rare diseases; Sudden sales dips are more often tracking, channel mix, or seasonal noise than a deep brand problem. Base rates are boring, which is why they work. Bring them into the room (Tversky & Kahneman, 1973)."
+      ]
+    },
+    {
+      "heading": "Step 7: Experiment With Minimal Interventions",
+      "paragraphs": [
+        "Big effects can come from small causes crossing a threshold or aligning in time. Technical systems: memory leaks, rate limits, cache expiry, clock skew; Biology: cumulative stress, nutrient deficits, sleep debt, hydration; Social systems: policy changes with delayed adoption, compounding confusion. Ask: Could this be a threshold? Could small inputs have accumulated? This keeps you from assuming a single dramatic cause.",
+        "Instead of a sweeping fix, test a minimal change and measure outcomes. Add one onboarding email before you rebuild the funnel; Change one packaging line before you redo manufacturing; Adjust one practice session before you redesign training. You’ll learn whether small fixes move the needle. Often they do. If not, you escalate with evidence."
+      ]
+    },
+    {
+      "heading": "Step 9: Write Two Memos: “Big Cause” and “Small Causes”",
+      "paragraphs": [
+        "Tell a peer who wasn’t there. Ask them to poke holes. Outsiders have less need for a dramatic narrative. They’re more likely to ask, “Did someone bump a cable?” Build a culture where “boring-first” wins praise. Reward the engineer who finds the dumb config mistake. Reward the teammate who asks about sleep before sending someone into an existential spiral. Force yourself to write both. Memo A: the grand explanation. If true, what evidence would exist? What would you see?; Memo B: a list of three to five small causes that would also explain the effect. What evidence would exist for each?.",
+        "Then look for evidence that would disprove each memo. This beats confirmation hunting. It’s not academic busywork. It will save you days. Since small errors can cause big messes, protect against them. Checksums and validations on data inputs; Visual diffs on config changes; Feature flags and staged rollouts; Naming conventions that prevent dangerous defaults; Habit stacks: sleep, food, water, movement. You’re not being paranoid. You’re respecting the asymmetry between small causes and big effects. Tape this list to your monitor. Put it in your incident runbooks. Even better, put it in your calendar for the moments you tend to spin up big stories."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Proportionality bias often travels with other mental habits. Knowing the neighbors helps you separate them. Availability heuristic: We overestimate causes that come to mind quickly (Tversky & Kahneman, 1973). If you’ve seen a movie about hackers, that cause comes up first in outages. Availability fuels proportionality bias by spotlighting dramatic causes. Narrative fallacy: We prefer neat stories that connect dots. Big stories provide closure. Proportionality bias is one engine of the narrative fallacy—matching size to size makes stories feel “right” even when they’re wrong.",
+        "Conspiracy thinking: The larger the event, the stronger the pull toward intentional, coordinated causes (Brotherton & French, 2014). Proportionality bias adds gravity to the belief that “randomness can’t possibly explain this.”. Fundamental attribution error: We over-attribute outcomes to people’s dispositions rather than situations. When a big foul-up happens, we may blame a person’s character instead of a small process slip. Proportionality bias cranks the volume: big mistake, bad person. Hindsight bias: After learning the outcome, it feels inevitable. Your brain upgrades small hints into a big, obvious cause. Proportionality bias rides shotgun: because the effect was big, the “obvious cause” must have been big too.",
+        "Ockham’s Razor vs oversimplification: Ockham says “don’t multiply entities.” It’s not “choose the biggest cause.” The simplest explanation is often several small, common factors rather than one grand one. That’s still simple—just not cinematic. Just-world hypothesis: We want outcomes to fit moral balances. Big tragedies “deserve” big reasons. Proportionality bias uses moral weight to justify causal weight. That nudge feels fair; it isn’t evidence. These aren’t duplicates. They’re neighboring filters on the same camera. Each can distort your picture in a slightly different way."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Make Peace With Small Causes",
+      "paragraphs": [
+        "Proportionality bias makes life feel cinematic. It pushes us toward dramatic villains and heroic fixes. That’s intoxicating. It’s also expensive. We spent hours in an imaginary cyber battle because a vacuum cleaner needed a charge. That’s funny in hindsight and painful in budget. Here’s a more useful worldview: small causes do big work all the time. They add, multiply, cross thresholds, and cascade. If we learn to look for them first, we fix faster, blame less, and build systems that are kinder to humans.",
+        "Try this today: Pick one area where you feel stuck—a stubborn bug, a stalled habit, a tense relationship; Break the outcome into components; Write two memos: the big-cause story and the small-causes bundle; Run one minimal intervention for a week. Measure. Small moves. Long horizons. That’s the game. References (select): Lagnado et al., 2007; Tversky & Kahneman, 1973; Brotherton & French, 2014; van Prooijen & van Vugt, 2018."
+      ]
+    }
+  ],
+  "checklist": [
+    "Say “Boring first” out loud. Then actually check cables, configs, credentials, and recent small changes",
+    "Break the effect into components. Segment by time, place, channel, device, or subgroup",
+    "Write two memos: one big-cause story, one small-causes bundle. List disconfirming evidence for each",
+    "Check base rates. Ask what usually explains this type of event in this domain",
+    "Test minimal interventions before you overhaul. Ship small, measure, iterate",
+    "Ask an outsider. Invite someone with no sunk costs to review your story",
+    "Build guardrails for small errors: validations, double-approvals, and staging",
+    "Track thresholds and lags. Consider cumulative and nonlinear effects",
+    "Log small changes. Keep a change diary you can scan quickly",
+    "Reward “boring” wins publicly. Make it safe to find simple causes",
+    "Say “Boring first.” Then check cables, configs, credentials, and recent small changes",
+    "Break big effects into smaller parts by segment: time, place, channel, device, subgroup"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

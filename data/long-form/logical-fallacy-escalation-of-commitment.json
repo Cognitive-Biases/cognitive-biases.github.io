@@ -1,0 +1,116 @@
+{
+  "slug": "logical-fallacy-escalation-of-commitment",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-escalation-of-commitment",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/logical-fallacy-escalation-of-commitment/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:07:26.077Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Trapdoor Under Our Plans: Escalation of Commitment",
+  "lede": "You’ve seen it. Maybe you’ve lived it. The project that everyone knows is wobbling, but we keep adding more bodies and more budget. The relationship that stopped being kind, but we keep planning big trips to “reset.” The quarter where a product misses again, so we ship a flashy add-on instead of pausing. It feels brave to push through. It feels disloyal to stop. Then one day we wake up with a tired team, a big bill, and a story we don’t like telling.",
+  "sections": [
+    {
+      "heading": "What is Escalation of Commitment and why it matters",
+      "paragraphs": [
+        "Escalation of commitment is what happens when we keep investing in a losing course of action despite clear signals it’s not working. Escalation of commitment is the tendency to throw additional resources—time, money, attention, reputation—at a decision that’s failing because we already invested a lot. Psychologists often connect it to self-justification: the more we’ve sunk in, the more we feel compelled to make it “worth it” (Staw, 1976; Brockner, 1992). It’s not just about money. It’s about identity, status, and stories we want to be true.",
+        "Why it matters: It’s expensive. Every extra quarter spent propping up the wrong thing is a quarter not building the right one. Opportunity cost compounds quietly; It breaks teams. People get stuck in late-night churn and brittle defensiveness. Transparency fails because bad news is dangerous; It warps strategy. Metrics become decoration. Feedback loops turn into alibis. You chase optics over outcomes; It’s avoidable. Not perfectly, but you can catch the smell early enough to choose a different path with less pain. At its core, escalation is a mismatch between two things: the world’s ongoing feedback, and our internal need for consistency and closure. When that gap opens, we tend to patch it by pushing harder instead of updating our story. We double down because that’s what “committed” people do, right? But grit is different from escalation. Grit is stubborn about the goal and flexible about the path. Escalation is stubborn about the path and vague about the goal."
+      ]
+    },
+    {
+      "heading": "The startup that should have pivoted in Q2, not Q8",
+      "paragraphs": [
+        "Stories help because they show the shape of escalation from the inside. See if any of these feel familiar. A small B2B SaaS team nailed a clever data feature. Six design partners loved it. A mid-market VP promised “if you add X, we’ll rollout company-wide.” So the team spent four months building X. That VP moved jobs. The replacement asked for “just two more reports.” The team, already deep, built them. And a Salesforce integration. Two years later, they had four pilots, plenty of glowing emails, and MRR that never broke five figures.",
+        "They kept going because they were sure they were inches from “turning the corner.” They also didn’t want to tell their board that the original bet had stalled. They were escalated. A clean pivot in month six would have hurt. A wind-down and reboot in month 24 nearly killed them."
+      ]
+    },
+    {
+      "heading": "The relationship with endless “reset” vacations",
+      "paragraphs": [
+        "Two people who used to be kind are now efficient. They book big trips, go to therapy, buy a new couch. Between the pleasant islands, the fights repeat: the same accusations, the same closing doors. They keep investing because “we’ve been through so much.”",
+        "The sunk costs are years, friends, shared stuff, and the image of themselves as loyal. One day, they stop booking trips and start talking clearly. It’s messy, but honest. They split with less regret than they expected. The trip money would have made a great moving fund."
+      ]
+    },
+    {
+      "heading": "The department that couldn’t quit the vendor",
+      "paragraphs": [
+        "A product manager inherited a flagship feature built by the founders. Customers didn’t use it. Sales kept promising it because it photographed well in decks. Engineers begged to sunset it to reduce complexity. Every quarter, the PM planned a “rescue” iteration: new onboarding, better copy, a “smart” default. Usage improved for two weeks, then slid back. Turns out the underlying job-to-be-done wasn’t there. The PM finally ran a controlled holdout test: the feature turned off for 10% of new users. Activation went up. Escalation had been hiding under reverence.",
+        "A large company standardized on a high-end analytics tool. The procurement team negotiated a big discount that looked great on paper—if adoption hit 80%. Adoption stuck at 30%. Rather than unwind the deal, the sponsor launched “adoption initiatives.” Trainings, champions, swag, contests. Two years later, they had spent more on change management than the original tool, and most analysts quietly used Python and SQL anyway. No one wanted to be the person who “wasted” the original deal. In reality, the waste was all the additional spend that followed."
+      ]
+    },
+    {
+      "heading": "The “Concorde fallacy” in public policy",
+      "paragraphs": [
+        "Someone buys a hot stock after a friend’s tip. It drops 15%. They buy more to “average down.” It drops again. They buy more, feeling smart. Now most of their portfolio is one name. They ignore new information—management turnover, new competitors—because “this is just market manipulation.” Months later, after selling in exhaustion, they read the 10-K they should have read first. Escalation looked like conviction. A simple precommitment to a stop-loss or position-size limit would have saved them.",
+        "The British and French governments continued funding the Concorde supersonic jet long after costs blew up and demand looked soft. Why? Prestige, politics, and the fear of admitting a mistake. Economists call it the Concorde fallacy: decisions driven by historical costs that you can’t recover (Arkes & Blumer, 1985). It’s not unique to governments, but the stakes make it famous."
+      ]
+    },
+    {
+      "heading": "The PhD that turns into a prison",
+      "paragraphs": [
+        "A student spends three years on a dissertation topic. The data won’t cooperate. The advisor is hands-off. The student could switch topics and finish in two more years, or keep battling for one more “try” that turns into three. Identity escalates: “I’m not a quitter.” A better frame would have been “I’m a scientist. I change hypotheses when the data say so.” These stories differ in scale, but the feelings rhyme: shame, stubbornness, hope, and the quiet dread that the next step might prove the last steps were wrong. That dread is the tightest knot escalation ties.",
+        "You don’t fix escalation with slogans. You fix it with structure, habits, and language that make it normal to change course. It helps to build systems before you need them. It’s also okay to reset midstream. Let’s break it down: early warning signs, practical tools, and team rituals."
+      ]
+    },
+    {
+      "heading": "Early warning signs",
+      "paragraphs": [
+        "You talk more about how much you’ve already invested than about the current expected value; Status updates are all activity (“we shipped X, we talked to Y”) and light on leading indicators tied to outcomes; Bad news invokes a rescue plan, not a strategic option set; Decisions rely on internal rationale (“we promised”) more than external reality (“they paid”);",
+        "Critical metrics get redefined or replaced when they’re missed; Dissenters are cast as disloyal, not helpful; You feel relief when the deadline moves, not focus. If two or three of these describe your current project, treat it as smoke. Don’t argue about whether it’s a “fire.” Just go check the kitchen."
+      ]
+    },
+    {
+      "heading": "Practical tools: Escalation of Commitment",
+      "paragraphs": [
+        "Write “kill criteria” before you start. Decide in advance what conditions will trigger a pivot, pause, or stop. Make them observable. Example: “If 30% of invited beta users don’t complete onboarding in two weeks, we pause and run three interviews per churned user.” Precommitments beat debates. Set tripwires. Design automatic checks that force a decision. Example: “If the total cost increases by 25% with no scope change, this escalates to the steering committee.” Or “If retention is below X for two consecutive cohorts, the feature flags off for new users.”",
+        "Use base rates. When your gut says “we’re close,” ask, “How long do similar projects take? What’s their failure rate?” People usually underestimate timelines and overestimate success (Kahneman & Tversky, 1979). Ground yourself. Create a red team. Assign two people to argue the strongest case for stopping. They present to leadership with the same time and respect as the “go” team. Reward them for clarity, not outcomes. Reframe choices as opportunity costs. Don’t ask “Should we continue?” Ask “Is this still the best use of our next unit of resources?”",
+        "Timebox and tranche. Break big bets into small, explicit rounds with exit ramps. After each round, you must choose: continue, pivot, or stop. Treat “continue by default” as a failure of governance. Separate decision rights. The person who made the original bet shouldn’t own the stop decision. Rotate ownership or assign someone with less identity wrapped up in the current path. Use holdouts and shadow tests. Turn things off for a sample. Run dark launches. Try the alternative in parallel. Reality often softens the fear. Data reduces narrative momentum.",
+        "Normalize stopping. Celebrate good exits. Write post-mortems that praise people who saved resources by shutting down well. Shift status from “never quit” to “aim well.” Surface emotions on purpose. Ask the team, “What would be hard to admit if this isn’t working?” Say it out loud. It loses some power. Keep a decision journal. For significant bets, log your assumptions, the expected value, the kill criteria, and a date to revisit. When you review, compare what you believed with what happened. This strengthens your calibration.",
+        "Personal finance version: Set stop-losses and position-size limits before you enter a trade. Use checklists. Limit the percentage of your net worth in any single bet, no matter how “sure.” Relationship version: Set behavioral metrics that matter (e.g., number of repairs after conflict, moments of affection, follow-through on agreements). If they don’t improve after therapy and timebox, decide together if you’re building the same life. Love needs observable kindness. Job/project version: Ask your manager for a “go/no-go” decision date. If there’s no date, set one. Offer to prepare two plans: wind-down and escalation, with costs and benefits. Bring numbers, not apologies."
+      ]
+    },
+    {
+      "heading": "Team rituals that inoculate",
+      "paragraphs": [
+        "Premortems. Before you start, ask: “It’s six months from now and we failed. What happened?” Write it down. Plan mitigations. People share worries when it’s fiction. Weekly metrics review with thresholds. Pick three leading indicators tied to outcomes. Put them on a single page. Use thresholds you agreed to in advance. Don’t add new metrics to “save” the old ones. Stop/Start/Continue retros. Each quarter, list activities to stop, new ones to start, and ones to continue. Limit each list to five. Force choices.",
+        "“If we weren’t already doing this, would we start today?” Ask this in every roadmap review. If the answer is no, justify why you’re still doing it. Silence counts as a “stop” vote. Exit interviews for projects. When you stop something, interview the leads as if they were leaving the company. Ask what they wish they could have said earlier. Feed that into your next premortem."
+      ]
+    },
+    {
+      "heading": "The checklists: Escalation of Commitment",
+      "paragraphs": [
+        "We promised concrete. Here’s a one-page checklist you can copy into a doc and actually use. Escalation of Commitment Checklist Did we define clear kill criteria before starting? If not, can we set them now with a date to revisit?; Are we discussing expected value of future investment, or just past investment?; Do we have two realistic alternatives on the table? If not, pause to create them; Has someone independent reviewed the case for stopping?; Are our core metrics leading indicators tied to user or business outcomes, not vanity metrics?;",
+        "Have we run a holdout or A/B that would falsify our favorite story?; Are we reframing the decision as “best use of next unit of resources”?; Are decision rights separated from original champions?; Do we have a timebox/tranche plan with an explicit exit ramp?; Have we named the emotional stakes in the room and made it safe to admit them? Print it. Put it near the whiteboard. Give someone permission to call “Checklist time.”"
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Escalation of commitment sits in a family of mental habits. Distinguishing them helps you pick the right fix. Sunk cost fallacy. This is the tendency to let past, unrecoverable costs influence current decisions. It’s one engine of escalation: “We’ve already spent so much.” The antidote is to ignore sunk costs and focus on expected future value (Arkes & Blumer, 1985). Loss aversion. Losses usually feel more painful than equivalent gains feel good (Kahneman & Tversky, 1979). To avoid realizing a loss, we hold, add, and hope. You treat a smaller certain loss today as worse than a likely larger loss tomorrow.",
+        "Commitment and consistency. We like our self-image as reliable and follow-through types. Public commitments become identity. We escalate to stay consistent. The fix is to re-anchor identity around learning: “I change my mind when the facts change.” Confirmation bias. We seek information that supports our current path and ignore disconfirming data. Escalation feeds on custom dashboards that only show wins. Red teams and holdouts fight this. Status quo bias. It’s easier to keep going than to initiate a stop. In organizations, stopping requires more paperwork than starting. If stopping requires a memo and five signatures, you’ve baked escalation into your process.",
+        "Planning fallacy. We underestimate time and cost, overestimate benefits. When reality hits, we commit more to cover the gap instead of updating the plan (Kahneman & Tversky, 1979). Timeboxing and base rates help. Overconfidence. We believe we can turn it around because we’re “not like the others.” Calibration rituals help: decision journals, base rates, post-mortems. Survivorship bias. We remember the stories where doubling down worked. The graveyard is quiet. If you only read founder memoirs, you’ll miss the graveyard. They overlap in the wild. You don’t need to label everything precisely. The core move is the same: zoom out, reprice the next step, and give yourself an exit option."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Escalation of Commitment",
+      "paragraphs": [
+        "Escalation of commitment preys on our best parts. We want to be loyal. We want our names to mean something. We want to finish what we start. Those are strengths—until they latch onto the wrong path and drag us down a long hallway of almosts. The fix isn’t to become cynical or jumpy. The fix is to make stopping and changing course normal parts of how you work and live.",
+        "If you’re reading this mid-escalation, take one step that costs almost nothing: set a date, this week, for a short decision review with someone who isn’t entangled. Bring a one-pager: the original goal, what you’ve tried, what the numbers say now, three options for next steps, and your kill criteria. Then sit with the discomfort and pick the best use of your next unit of life."
+      ]
+    }
+  ],
+  "checklist": [
+    "Define kill criteria now. Make them observable and tie them to outcomes",
+    "Set a decision date. Put it on the calendar with the right stakeholders",
+    "List two credible alternatives. Price them in time, money, and team energy",
+    "Assign a red team. Give them equal time and status",
+    "Pick three leading indicators. Review weekly against thresholds",
+    "Run a falsification test. Holdout, A/B, or turn it off for a slice",
+    "Reframe the question. “Is this the best use of our next unit of resources?”",
+    "Separate decision rights. Don’t make the original champion own the stop call",
+    "Timebox the next tranche. Plan an exit ramp with steps and owners",
+    "Debrief the emotions. Ask the room what’s hard to admit and write it down"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"established, but related constructs should be separated\": Sunk-cost effects and escalation of commitment overlap but are not interchangeable. Sunk-cost research asks whether irrecoverable prior investments influence current choices. Escalation of commitment describes persistence or additional resource allocation to a failing course of action and can also be driven by personal responsibility, self-justification, project structure, and other factors. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

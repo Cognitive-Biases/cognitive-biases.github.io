@@ -1,0 +1,173 @@
+{
+  "slug": "cognitive-bias-pro",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-pro",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-pro/content.tsx",
+  "originalPublishedAt": "2025-09-01T13:06:39.317Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Shiny Trap: How Pro‑Innovation Bias Makes New Tech Look Perfect",
+  "lede": "We were in a demo room painted white, except for a small rectangle of digital confetti blasting from a projector. The founder swiped fingers across the air like a magician. A robot arm traced his motions and stacked tiny boxes faster than any intern ever could. Investors smiled. Someone whispered, “This changes everything.”",
+  "sections": [
+    {
+      "heading": "What is Pro‑Innovation Bias and why it matters",
+      "paragraphs": [
+        "I remember the little things instead: the robot arm’s missed grip that sent a box tumbling, the safety gate not closing on time, the operator’s sweaty palms, the way everyone stared past the glitch to keep the dream alive. We left convinced it was ready. It wasn’t. Three months later, the line stalled, workers got frustrated, and we shelved the project. Not because the tech was bad—but because we convinced ourselves it had no flaws. Pro‑innovation bias is our habit of overestimating the benefits of new technology and neglecting its limits, costs, side effects, and the messy reality of adoption. It’s the brain’s urge to click “Install Update” on life without reading the release notes.",
+        "Pro‑innovation bias isn’t just liking new tech. It’s the automatic upgrade in your head that takes “interesting” and turns it into “inevitable,” then hides the maintenance costs under the rug. Everett Rogers wrote about how innovations spread, but he also warned how we idealize them—assuming universal adoption is desirable and that the innovation fits everywhere without adaptation (Rogers, 2003). That is the bias: treating “new” as if it means “better—in all ways, for all people, right now.”",
+        "Why it matters: It distorts decisions. You plan for best case and budget like problems won’t appear. They do; It erodes trust. When you promise a miracle and deliver a mixed bag, people tune you out next time; It hurts the right users. Real constraints—accessibility, costs, learning time, social effects—get ignored in favor of a perfect pitch; It creates waste. Teams chase pilots that never scale, burn time on features that don’t help, and rewrite the same deck every quarter.",
+        "This isn’t anti‑innovation. It’s pro‑reality. The goal is to build things that work in the world, not just in the deck. When you catch pro‑innovation bias early, you save money, patient safety, reputation, and your own weekends."
+      ]
+    },
+    {
+      "heading": "1) The chatbot that ate the help desk",
+      "paragraphs": [
+        "A retail company rolled out a chatbot to “deflect 60% of tickets in Q1.” The demo looked great. In production, it misunderstood order numbers, looped on returns, and pushed angry customers to phone lines already at capacity. NPS dropped. Agents spent more time cleaning up than solving. After the dust settled, the team found that 20% of tickets had clean, repetitive patterns ideal for automation—but they started by automating everything. Pro‑innovation bias made them assume broad fit without careful segmentation.",
+        "What changed when they got real: they narrowed the bot to two workflows—order status and store hours—added a fast “talk to human” path, and measured containment honestly. Within six weeks, they hit 22% deflection with higher satisfaction. Same tech, smarter scope."
+      ]
+    },
+    {
+      "heading": "2) The tablet in every classroom",
+      "paragraphs": [
+        "A district rolled out tablets to “personalize learning.” Teachers got devices but not lesson redesign support. Wi‑Fi collapsed on test days. Kids used translation apps during vocabulary quizzes; handwriting practice vanished. The school celebrated the “1:1 deployment” but not reading scores, which stayed flat.",
+        "The shiny story hid the duller truth: tech is a tool, pedagogy is the engine. Pro‑innovation bias treated hardware as a strategy. What worked later: small pilots with one grade level, teacher-led lesson plans, low‑tech backups, and better hotspots. They tracked comprehension outcomes first, gadget metrics second."
+      ]
+    },
+    {
+      "heading": "3) The smart city that forgot the city",
+      "paragraphs": [
+        "A city installed “smart” parking sensors to reduce congestion. The vendor said the app would direct drivers to open spots. The map looked gorgeous. But drivers without smartphones—or those unwilling to use one while driving—did not benefit. And new “available spot” signals increased cruising as drivers chased green dots that vanished by the time they arrived.",
+        "Congestion got worse around popular blocks. The bias: imagined adoption and static systems in a dynamic world. What turned it around: price changes by block and time, clearer signage, and a short‑walk incentive program. The sensors became inputs to policy, not the solution."
+      ]
+    },
+    {
+      "heading": "5) The telemedicine cliff",
+      "paragraphs": [
+        "A startup broke a simple monolith into 40 microservices because “Netflix does it.” Deployments multiplied. Logging splintered. New engineers learned topology instead of product. Incident counts rose. The pitch deck praise (“we’re cloud‑native!”) drowned out the maintenance reality (40 places to debug). Pro‑innovation bias translated “scales for Netflix” into “good for us.” Recovery: shrink to 12 services aligned with clear domain boundaries, add a platform team, and write a ruthless “You Aren’t Gonna Need It” guide. Productivity bounced back.",
+        "Clinics rushed into video visits during a crisis. Access improved for some but declined for patients without private rooms, data plans, or comfort using apps. Follow‑up adherence slipped for older adults. The early headlines celebrated. The lagging indicators—no‑shows, readmissions—told a more complex story. Pro‑innovation bias equated “remote” with “equitable.” The fix involved phone consultations, community kiosks, and scheduling with patient choice, not default video."
+      ]
+    },
+    {
+      "heading": "7) The crypto catapult",
+      "paragraphs": [
+        "A SaaS company added “AI” features across the product. They demoed a “smart summary” that missed key compliance notes. The wow factor kept overshadowing the one question that matters to customers: “What will I do differently, faster, or better?” Upsell conversions didn’t move. The bias: equating novelty with value. When they instead focused on one use case—auto‑drafting client recaps that matched brand tone and included citations—time‑to‑invoice dropped 18%, churn fell, and the AI pitch wrote itself.",
+        "A treasury team bought into a blockchain settlement layer to save fees and speed up cross‑border payments. The tech worked, but the regulatory overhead, accounting complexity, and counterparties’ reluctance wiped out savings. Pro‑innovation bias ignored “ecosystem readiness”: even perfect software loses to the slowest human in the chain."
+      ]
+    },
+    {
+      "heading": "How to recognize and avoid it",
+      "paragraphs": [
+        "A company installed “productivity analytics” software. Initially, dashboard spikes sparked applause. Then the team learned to game the metrics, remote trust eroded, and quit rates rose. The data looked clean, but it wasn’t measuring meaningful work. Pro‑innovation bias mistook measurable for meaningful. In each case, the tech didn’t fail. Our story about the tech failed. We made the solution too big, the humans too small, and the context invisible.",
+        "Pro‑innovation bias thrives on speed, hype, and a room full of nodding heads. You don’t need to slow to a crawl; you need to steer with your eyes open. Tape that list on the wall. Read it out loud before the demo applause fades."
+      ]
+    },
+    {
+      "heading": "Design your adoption path, not just your launch",
+      "paragraphs": [
+        "Start narrow on purpose. Pick one job‑to‑be‑done, one persona, one context. Write the user’s day before and after, step by step. If you can’t write it, you can’t ship it; Set success and stop criteria together. Decide in advance what numbers merit expansion and what numbers trigger pause or rollback. Publish both;",
+        "Pilot in rough conditions, not a lab. If your video tool can’t handle the coffee shop, your users will discover it on day one; Add human backstops. Fail safe, not silent. A “talk to a human” button beats a 2% bump in automation any day; Budget for change management like a feature. Training, templates, pairings, office hours. Teaching is part of shipping."
+      ]
+    },
+    {
+      "heading": "Use a pre‑mortem, not a post‑mortem",
+      "paragraphs": [
+        "List every place the innovation can rub the world the wrong way: login, data migration, roles, compliance, integration, social dynamics, power, and status. Estimate friction severity (low/med/high) and your mitigation plan. Revisit after week 1, 4, 12. Friction ignored becomes attrition. Gather the team and say, “It’s three months later.",
+        "This failed. Tell me why.” Fill a board with causes: slow onboarding, key partner resistance, overpromised ROI, department sabotage, hidden costs, tech debt. Assign owners to pre‑empt each story. This technique reduces planning fallacy and aligns on risk without doom vibes (Kahneman, 2011)."
+      ]
+    },
+    {
+      "heading": "Look for “ecosystem bottlenecks”",
+      "paragraphs": [
+        "Every innovation competes with a boring baseline—spreadsheets, calls, pen and paper, the old system everyone knows. Quantify the baseline throughput, error rate, and cost. Your innovation must beat it by a margin that survives noise. The question isn’t “Is the demo better?” It’s “Is the work better, consistently, for a month?” Demo truth: ideal inputs, ideal network, rested operator, curated sample; Field truth: weird inputs, spotty network, distracted operator, edge cases.",
+        "Record both. Publish “Known Demo Conditions” in your docs. Treat the delta like a bug. Innovations live in systems: suppliers, regulators, users, approvers, neighbors. If your solution depends on the slowest part of the system speeding up, assume delay. Offer value even if that part stays slow. Think adapters, exports, dual‑mode workflows."
+      ]
+    },
+    {
+      "heading": "Beware of meta‑incentives",
+      "paragraphs": [
+        "Create a “red team” role at rotating intervals. Their job: challenge assumptions, run negative tests, interview skeptics, and grade risk. Protect them from political blowback. A half‑day of sponsored dissent can save a quarter. Agree on one primary outcome metric tied to user value. For a voice AI that “saves time,” measure average handle time net of escalations.",
+        "For a writing assistant, measure drafts‑per‑week and revision counts. Sparkle metrics—clicks on a new button, demo applause—can mislead. If promotions, bonuses, or reputation hinge on “innovation,” you’ll over‑ship and under‑learn. Balance your scorecard with reliability, maintainability, and user satisfaction. Celebrate ruthless descopes as victories."
+      ]
+    },
+    {
+      "heading": "Recognizing the signs in yourself and your team",
+      "paragraphs": [
+        "You speak in inevitables: “This will transform,” “Everyone will use it.” You skip maintenance: no line items for training, migration, or downtime; You hide failure stories: pilots vanish, dashboards show vanity metrics, critics get “managed.” You keep widening scope: “While we’re at it, let’s also automate…”;",
+        "You sell features nobody asked for to people who already solve the problem fine. Pull the cord when you hear those words in your own mouth. Ask, “What would convince me not to proceed?” If the answer is “nothing,” you’re not testing an innovation—you’re protecting a belief."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Hype cycle: The public narrative arc from inflated expectations to disillusionment. Pro‑innovation bias is personal; hype cycle is cultural; Planning fallacy: Underestimating time and cost. Pro‑innovation bias feeds it by assuming smooth adoption (Kahneman, 2011); Optimism bias: Overestimating good outcomes generally. Pro‑innovation bias is optimism tethered to new tech; Survivorship bias: Copying winners, ignoring the graveyard. “We’ll be like Slack” misses a thousand similar tools that didn’t break through;",
+        "Novelty bias: Picking something because it’s new. Pro‑innovation bias is broader: new equals better and necessary; Technological solutionism: Framing social problems as technical ones (Morozov, 2013). Pro‑innovation bias often powers solutionism’s engine; Sunk cost fallacy: Sticking with a project because you’ve invested. Pro‑innovation bias helps you start; sunk cost keeps you from stopping; Status quo bias: Preferring existing things. It’s pro‑innovation bias’s sibling on the other side. Healthy teams guard against both."
+      ]
+    },
+    {
+      "heading": "2) Build a non‑heroic pilot",
+      "paragraphs": [
+        "Not “Managers will get insights.” Instead: “On Monday at 9:15 a.m., Dana opens her weekly report. Today she uses [your tool] to auto‑populate yesterday’s sales, then she reconciles two mismatched SKUs by clicking ‘Trace discrepancy,’ which shows the supplier’s note. She hits ‘Submit’ and saves 12 minutes.”",
+        "If you can’t write that, you can’t validate anything. Pilot with your most skeptical friendly users. Don’t hand‑hold beyond realistic support. Keep the ugly edges. Measure time saved, error rate, bounce rate, and “Would you miss this?” scores. Ask for screenshots of workarounds. Those are gold."
+      ]
+    },
+    {
+      "heading": "5) Surface and price the hidden costs",
+      "paragraphs": [
+        "Expand if AHT drops 15% with no worse satisfaction; Pause if critical incidents > 2 per week; Stop if training time > 4 hours per user with < 30% weekly active. Make it visible. Bias loves ambiguity. The first week offers novelty. The second week is where habits live. Run week‑two checks: Are users still clicking the new thing? Are they mixing old and new flows in productive ways? Do they ask fewer questions? If the second week is worse than the first, you have polished theater, not a tool.",
+        "Add up all the small rocks: identity verification, data labeling, prompt curation, content governance, versioning, customer success, shadow IT, legal reviews. If these costs eat the value, shrink the ambition or change the scope. Better a narrow win than a broad mirage."
+      ]
+    },
+    {
+      "heading": "Healthcare: Pro-Innovation Bias",
+      "paragraphs": [
+        "Destroy something old when you add something new: remove a field, kill a report, unship a feature. If everything increases, nothing improves. Subtraction is a discipline. Once core value lands, focus on speed, error messaging, keyboard shortcuts, offline modes, and memory of user preferences. That’s where tech becomes a tool people actually love. Most teams skip this because V2 is not a press release. It’s craft.",
+        "Promises: AI diagnosis, remote monitoring, automated notes. Reality friction: false positives, trust, liability, integration with EHRs, clinician workflow. A poor‑fit alert wastes more time than it saves. Start with co‑design and narrow patient cohorts. Measure clinician task time, not just model AUROC."
+      ]
+    },
+    {
+      "heading": "Government: Pro-Innovation Bias",
+      "paragraphs": [
+        "Promises: real‑time risk, crypto settlements, robo‑advice. Reality friction: regulation, custody, explainability, client suitability. Design for audit trails and human overrides. Simulate shocks before you ship. Promises: “lights‑out” automation, predictive maintenance. Reality friction: changeovers, edge variability, sensor drift, safety. Plan for hybrid cells, spare parts logistics, and retraining. Track downtime and causes with brutal honesty.",
+        "Promises: personalized learning, AI tutors, engagement. Reality friction: teacher workload, equity, device fatigue, test alignment. Start with one unit, collect comprehension and engagement, and give teachers unplugged alternatives. Promises: digital transformation, smart cities, transparency. Reality friction: procurement rules, legacy systems, digital divides, privacy. Build services that work via web, phone, and in person. Design with people who will never read your FAQ."
+      ]
+    },
+    {
+      "heading": "Stories from the trenches",
+      "paragraphs": [
+        "A founder friend built an AI for meeting notes. Early beta users raved. When they widened the funnel, a chunk of users hated it. Not because the summaries were wrong, but because they surfaced sensitive information too bluntly—like “Alex opposed” when Alex was a junior engineer in a hierarchical org. The problem wasn’t accuracy; it was social context. They added “tone lanes” (neutral, collaborative, direct), let teams set a default, and adoption doubled. Pro‑innovation bias had made them think “truth” beats “fit.” In human systems, fit wins.",
+        "Another team shipped a hardware controller for home energy storage. The algorithm optimized for peak shaving, not dinner time. It cut bills but made people cook in dim light. Reviews were brutal. The fix was a simple slider: “Prefer Savings vs. Prefer Comfort,” with time windows. After that, referrals flooded in. The tech was fine; ignoring people’s lives wasn’t. We’ve fallen for our own shiny stuff, too. We once believed a new analytics layer would “make decisions data‑driven.” It made them dashboard‑driven. People hunted for confirmation and stopped talking to customers. We pulled it back, added friction (annotation required before sharing), and primed every chart with the question it’s meant to answer. Less flash, better calls."
+      ]
+    },
+    {
+      "heading": "The emotional side of the shiny trap",
+      "paragraphs": [
+        "New tech is fun. Demos give a rush. Early adopters are persuasive; they gift you their belief. Projects become identity. If it fails, it feels like you fail. That’s the hook. Pro‑innovation bias isn’t just a thinking error; it’s a belonging error. We want to be the kind of people who see the future.",
+        "Keep the joy. Keep the curiosity. Just pair it with a practice that protects you when the high fades. Reality is not your enemy. It’s your partner in making things real. Tape this to your laptop. Read it when you feel the demo glow."
+      ]
+    },
+    {
+      "heading": "Wrap‑up: Pro-Innovation Bias",
+      "paragraphs": [
+        "We love new things. We’re builders. We’re curious. We’ve fallen for the shiny trap and paid the tuition. Pro‑innovation bias doesn’t make you reckless—it makes you human. It’s that tug in your chest when you see a great idea and want it to be true. The fix isn’t cynicism; it’s craft. Start smaller. Test in the wild. Tell the truth about what it costs. Let reality change your mind.",
+        "That’s how the gadgets become tools, pilots become practices, and demos become daily work. It’s how you build trust—with customers, teammates, and yourself. Rogers, E. (2003). Diffusion of Innovations; Kahneman, D. (2011). Thinking, Fast and Slow; Morozov, E. (2013). To Save Everything, Click Here. References (sparingly used):"
+      ]
+    }
+  ],
+  "checklist": [
+    "What will actually change for a specific user on a specific day?",
+    "What are three non‑obvious failure modes in their environment?",
+    "What assumptions are we making about adoption, training, and incentives?",
+    "What does “good enough” mean in month 1, month 3, month 12?",
+    "Where does this create new work, and for whom?",
+    "How will we know it’s not working fast, and how will we roll back?",
+    "What is our “boring baseline” to beat, in cost and outcomes?",
+    "Who loses if this succeeds, and what will they do about it?",
+    "What could we remove or reduce to make the innovation smaller and safer?",
+    "What real‑world constraints (privacy, regulation, bandwidth, culture) did we test, not just discuss?",
+    "Write one real user day “before/after” in plain language",
+    "Define success and stop metrics before you start"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

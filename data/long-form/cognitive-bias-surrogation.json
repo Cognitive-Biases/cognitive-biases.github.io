@@ -1,0 +1,115 @@
+{
+  "slug": "cognitive-bias-surrogation",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-surrogation",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-surrogation/content.tsx",
+  "originalPublishedAt": "2025-09-01T15:16:02.186Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When Numbers Eat the Mission: Surrogation and How to Stop It",
+  "lede": "You can feel it when it happens. The room is supposed to be about patients, or students, or customers, or the product. Then the dashboard goes up, and suddenly the conversation narrows to one thing: the number. “We need the churn line under 5%.” “We’ve got to hit 10,000 steps.” “Our exam pass rate must be 95%.” The metric swallows the mission. People start doing smart-looking things that somehow feel small and wrong. That’s surrogation.",
+  "sections": [
+    {
+      "heading": "What is Surrogation — When the Metric Becomes More Important Than the Goal and Why It Matters",
+      "paragraphs": [
+        "Surrogation is when we let a proxy—a score, KPI, or target—stand in for the real goal, and then we start managing the proxy as if it were the goal. Metrics are not evil. They’re tools. We make them because real goals are fuzzy. “Take care of patients” is noble but vague. “90% patient satisfaction” is crisp and tractable. So we adopt the metric and move on. That’s fine—until we forget the metric is not the goal.",
+        "Surrogation happens when the shorthand becomes the story. We stop asking, “Does this help the real goal?” and start asking, “Does this move the number?” The difference sounds small. In practice, it turns people and systems toward gaming, tunnel vision, and hollow wins. It matters for a few concrete reasons: It degrades outcomes. Teams optimize what’s easy to measure, not what’s valuable; It punishes integrity. People who refuse to game the system look worse than those who do; It spreads workload in weird ways. We burn time polishing artifacts of the metric instead of serving the mission; It breaks trust. Stakeholders feel the gap between the story and their lived experience.",
+        "This isn’t just opinion. Organizational research has warned us for decades: reward A while hoping for B, and you’ll get A at the expense of B (Kerr, 1975). When a measure becomes a target, it ceases to be a good measure (Goodhart, 1975; Campbell, 1976). Managers can lose sight of the richer strategy when a salient metric is present (Choi, Hecht, & Tayler, 2012). None of that means we should abandon metrics. It means we should design and use them like power tools: clearly, cautiously, and with guards on."
+      ]
+    },
+    {
+      "heading": "Healthcare: Door-to-Doctor Time",
+      "paragraphs": [
+        "Stories are better than definitions because they catch the feeling of it. Here are a handful across domains. A hospital sets a target: every patient should see a doctor within 30 minutes. Good goal. Patient experience and outcomes often improve when delays shrink. At first, it works. Triage tightens up. Hallway consults fade. Then the number slips. New policies emerge.",
+        "Nurses are told to have the doctor “eyeball” patients in the waiting room and click the EHR field, even if the actual consult happens later. The metric stays green. Families still wait. Did the system fail? No. It did exactly what it was told: maximize the recorded time-to-doctor. The measure became the mission, and patient care quietly moved to second place."
+      ]
+    },
+    {
+      "heading": "Education: Teaching to the Test",
+      "paragraphs": [
+        "A district ties funding and teacher evaluations to standardized test scores. Scores go up. Celebration. Inside classrooms, time shifts from debate, projects, and reading for joy to practice packets, keyword tricks, and narrow test formats. Kids learn less breadth. The weakest students get the most drill. They pass more often—but many graduate unready for anything beyond tests.",
+        "The teachers didn’t suddenly forget how to teach. They focused on the incentive and ignored the mission because that’s how the system told them to survive (Campbell, 1976). The metric got what it asked for and lost what it couldn’t see."
+      ]
+    },
+    {
+      "heading": "Software: DAU Everywhere, and Sales: The Quota That Shrinks the Future",
+      "paragraphs": [
+        "A consumer app chases DAU. Product managers push streaks, notifications, and tiny rewards. DAU climbs. Investors smile. Meanwhile, users grow numb. Support tickets about spammy pings rise. A rival launches a calmer, more respectful experience. The company’s churn creeps up. The team scrambles with new tricks to prop up DAU. They optimized a proxy for product-market love. DAU wasn’t bad—it was partial. When it took over, it pulled the team away from the actual job: help a specific person solve a specific problem and feel good doing it.",
+        "A B2B sales team must hit quarterly revenue targets. Reps discount heavily at quarter-end and push customers to sign prematurely. Revenue looks great in Q2. In Q3, upsells falter. Customers regret being rushed and churn early. The pipeline thins because long-term relationship work was paused at the end of Q2 to “close what’s close.” Did the team underperform? Not against the metric. Against the mission—building healthy, lasting customer relationships—they starved themselves."
+      ]
+    },
+    {
+      "heading": "Manufacturing: Defects Down, Recalls Up; Academia: Publication Count",
+      "paragraphs": [
+        "A factory ties bonuses to defect rate per line item. Defect reports drop. Leadership cheers. A quality engineer notices the “rework room” is bursting. Operators are quietly rerouting flawed units to a rework path that doesn’t count as a defect. Scrappage costs rise. Later, a recall: a reworked part fails in the field. The metric narrowed the definition of “quality” to “what the dashboard sees.” The mission—safe, reliable product—was a different thing.",
+        "You need 10 publications for tenure. Your lab slices your work thinner, churns salami-sliced papers, and aims for count over contribution. The university looks productive. You look prolific. Five years later, no one can reproduce your flashy results. Your students learned questionable research practices. You trained them to chase metrics instead of truth. No villain here. Just a system rewarding publication count “A” while hoping for scientific progress “B” (Kerr, 1975)."
+      ]
+    },
+    {
+      "heading": "Personal Productivity and Startups: The Step Counter and the North Star",
+      "paragraphs": [
+        "You buy a fitness tracker. It’s fun. Ten thousand steps is your daily lighthouse. You jog in place at 11:45 pm because you’re 400 steps short. You take phone calls pacing your kitchen. You forget to do strength training and flexibility, though your back hurts. The metric got you moving—great! Then it took over. Your body needed a mix. The goal was health. The metric was steps. The company picks a North Star metric: weekly active teams. It’s tidy and motivational.",
+        "The growth team invests in “team activation hacks”: aggressive invites, pre-filled teams, trial teams seeded with bots that look like teammates. On paper, weekly active teams soar. Then you notice your “active teams” are ghost towns. Users don’t return. Enterprise buyers don’t convert. You tell yourself it’s “a lag.” It’s surrogation. The North Star stopped being a star and turned into a laser pointer. It showed you where to stare, not what matters."
+      ]
+    },
+    {
+      "heading": "Public Policy: Crime Statistics and the Streetlight—Then Recognize the Early Feel",
+      "paragraphs": [
+        "A city measures “reported incidents.” Police are encouraged to keep them down. Certain crimes get under-classified. Reports are discouraged. On paper, crime falls. Residents feel less safe. Trust erodes. Real harm increases, unmeasured. We keep walking under the bright circle where the data is clean. The dark street might be where the truth lives. Surrogation isn’t a moral failing. It’s a human move: we like clear edges. But we can design for it. Here’s a practical approach we’ve used with teams. Before a checklist, trust the itch:",
+        "People say “We can’t do that; it’ll hurt the metric” without explaining how it hurts the mission; Meetings pivot to red/green dashboard debates, not customer, patient, or user stories; Folks who raise “but is this better for the user?” sound naive or difficult; Wins feel hollow. You moved the number, but something smells off. That suspicion is worth naming out loud. “I think we’re surrogating—has the metric replaced the mission here?” Normalize that sentence."
+      ]
+    },
+    {
+      "heading": "Design Metrics with Escape Hatches",
+      "paragraphs": [
+        "Metrics are necessary. Make them less brittle. Use a portfolio of measures, not a shrine to one. Blend outcome (did the world improve?), behavior (what we did), and quality (what trade-offs we accepted); Include measures of mission health that are hard to game. In healthcare, match time-based targets with readmission rates or safety markers.",
+        "In product, pair DAU with retention and satisfaction for new users and core users separately; Write down what you will not trade. “We will not sacrifice clinician judgment to hit throughput.” “We will not notify users more than once a day.” Make your metric review cadenced and reversible. Quarterly skin-shedding prevents calcification."
+      ]
+    },
+    {
+      "heading": "Keep the Mission Visible and Build Guardrails Against Gaming",
+      "paragraphs": [
+        "Surrogation thrives when the mission is vague or out of sight. Start meetings with a human story. One email, one patient, one student outcome. It anchors the metric conversation to reality; Put the text of the mission where you can point to it. “Today we serve X by doing Y.”; Ask a ritual question before deciding: “If we had no dashboard, would we still choose this?”",
+        "People don’t game because they’re bad. They game because we force them into corners. Reduce the corners. Tie incentives to families of metrics, not single numbers. Balanced pressure makes gaming less rewarding; Reward integrity explicitly. Celebrate when someone shows the metric is wrong or incomplete; Separate learning spaces from ranking spaces. Pilot metrics in “no consequence” sandboxes before attaching pay or status."
+      ]
+    },
+    {
+      "heading": "Audit Your Metrics, Coach Metric Fluency, and Kill Stale Ones",
+      "paragraphs": [
+        "Version your metrics. When did “active user” change? What’s v3 compared to v2? Write it; Test for adversarial behavior. If an enemy tried to maximize this number while hurting the mission, what would they do? Did you just describe your plan?; Sample and shadow. Pick random cases and trace the end-to-end reality, alongside the numbers. Does the story match the chart? Make metric literacy routine, not precious. Teach new hires how metrics are made, where they break, and how to push back; Build a “red team” rotation: every quarter, a few people argue how the metric could mislead us; Invite front-line folks to critique metrics. They see the workarounds first.",
+        "Some metrics do their job and then become wrong. Treat them like tools with a life cycle. When a metric has been the top priority for more than two quarters, schedule a retirement/rotation check; Kill metrics that have stopped correlating with your mission outcomes; Declare “mission days” where the dashboard is off. Call customers, visit classrooms, walk the floor."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Surrogation sits in a family of traps and laws. It’s useful to keep the borders crisp. Goodhart’s Law: “When a measure becomes a target, it ceases to be a good measure.” This captures what happens when adversaries—or just clever humans—optimize the measure. Surrogation is the psychological version: we stop thinking about the goal altogether (Goodhart, 1975); Campbell’s Law: The more a quantitative measure is used for decisions, the more it becomes subject to corruption and distorts the process. This highlights unintended consequences in social settings like education (Campbell, 1976); The McNamara Fallacy: Overreliance on quantification leads people to ignore what can’t be measured. Surrogation often rides this fallacy: “If it’s not on the dashboard, it’s not real.”; Proxy Myopia: Focusing narrowly on a proxy variable while ignoring the system around it. Surrogation is a form of proxy myopia; the proxy becomes the point; Goal Displacement: A broader term where the means become the ends. Surrogation is goal displacement via metrics specifically; Hitting the Target, Missing the Point: The practical signature of surrogation. You’re green on KPIs and red in life; Vanity Metrics vs. Actionable Metrics: Vanity metrics look impressive but don’t guide decisions. Surrogation can elevate vanity metrics—page views, downloads, “users”—over the hard ones like retention or NPS from paying customers; Moral Hazard: When people take risks because someone else bears the cost. Surrogation can create moral hazard if teams boost numbers while externalizing harm; Streetlight Effect: Searching where the light is. Metrics put light in convenient spots. Surrogation keeps you under the lamp.",
+        "If you want a compact, sharp critique of metric misuse in general, read The Tyranny of Metrics (Muller, 2018). If you want the lab version showing how managers forget strategy when metrics are salient, look up “Lost in Translation?” (Choi, Hecht, & Tayler, 2012). Both are short and bracing."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Keep the Mission Bigger Than the Number",
+      "paragraphs": [
+        "Every metric starts as a promise. “We’ll use this as a flashlight.” If you’re not careful, the flashlight becomes your sun. You end up building a world that looks beautiful in the beam and dead in the corners. The fix is not heroic. It’s a habit: remind yourself of the mission, diversify your measures, design guardrails, and keep real stories in the room. It’s a willingness to say, “This number is lying to us,” and the humility to change it. It’s leaders who reward candor over cosmetics and teams that practice metric literacy like they practice code review.",
+        "Surrogation isn’t rare. It’s everywhere we’ve ever worked. It’s in schools trying to help kids and in startups trying to help users. It’s in your step counter and your sprint board. But once you see it, you can name it, and once you can name it, you can manage it. If your metric has started eating your mission, you’re not stuck. You’re one honest conversation and a fresh checklist away from better work. References: Kerr (1975); Goodhart (1975); Campbell (1976); Choi, Hecht, & Tayler (2012); Muller (2018)."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write the mission in one sentence. Does the metric directly serve it?",
+    "List three obvious ways to game the metric. Do any look like your current plan?",
+    "Identify one stakeholder who could be hurt if you over-optimized this metric. How would you notice?",
+    "Add a balancing measure that would catch collateral damage",
+    "Define a minimum standard for quality you will not trade away",
+    "Decide who can veto metric-driven decisions on mission grounds",
+    "Set a review date and a kill-switch condition",
+    "Run a shadow audit: pick five cases and check if the metric tells the truth about them",
+    "Put one real story on the agenda of every metrics meeting",
+    "Commit to a “metric sabbath” once a quarter—operate for a day without looking, then notice what changed",
+    "State the mission in one sentence we all agree on",
+    "Write the metric and its exact definition (what counts, what doesn’t)"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"supported in strategic performance-measure settings\": Surrogation is a domain-specific management-accounting construct: a measure that was designed to represent a strategic objective can start to be treated as though it were the objective itself. It is closely related to metric fixation and proxy problems, but those broader labels should not be treated as exact synonyms without checking the setting and mechanism. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

@@ -1,0 +1,144 @@
+{
+  "slug": "information-bias-common-source-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/information-bias-common-source-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/information-bias-common-source-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T10:35:14.406Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When Everyone’s Singing the Same Wrong Song: A Field Guide to Common Source Bias",
+  "lede": "You’re in a late-night sprint. The team Slacks are humming, caffeine is a fourth colleague, and a broken dependency is blocking the release. You Google the error, and every answer—Stack Overflow threads, blog posts, copy-pasted gists—points to the same single fix. It sounds definitive, like a chorus in tune. You follow it. It works. For a day.",
+  "sections": [
+    {
+      "heading": "What is Common Source Bias—and why it matters now",
+      "paragraphs": [
+        "Two days later the entire pipeline collapses because the “fix” patched a symptom, not the underlying cause. The original advice came from one helpful developer in 2018. Everyone repeated it. Nobody noticed the library changed in 2021. That’s common source bias at work: when many outlets repeat the same claim rooted in a single origin, giving the illusion of consensus and credibility. We write about this because we’re building the Cognitive Biases app—to make bias visible, learnable, and beatable. We’re a creative dev studio, not a lecture hall. Let’s hold the flashlight together.",
+        "Common source bias is the error of treating multiple repeating voices as independent evidence, when they all trace back to the same original source. Repetition feels like proof (Hasher et al., 1977); One flawed source can cascade through teams, timelines, and headlines (Kuran & Sunstein, 1999); In fast-moving environments—startups, newsrooms, incident responses—speed magnifies copy-paste thinking. It matters because: Moderation note: the bias is not “repeating stuff is bad.” It’s “repetition without independence distorts judgment.” You can cite the same reliable source across contexts. The danger begins when repetition imitates verification."
+      ]
+    },
+    {
+      "heading": "2) The health claim loop",
+      "paragraphs": [
+        "One Stack Overflow answer from 2018 taught devs to disable a security check to “solve” a build failure. Years later, hundreds of blogs rephrase the same fix. Teams treat it as best practice. An audit flags it as a critical vulnerability. The consensus looked big; the origin was small.",
+        "A wellness newsletter claims “drinking warm lemon water each morning boosts metabolism by 30%.” The newsletter cites a blog, which cites an Instagram video, which cites “a Harvard study.” There is no Harvard study. Every path leads to the same video. The echo created confidence."
+      ]
+    },
+    {
+      "heading": "4) Newswire syndication",
+      "paragraphs": [
+        "Investors repeat “70% of startups fail in the first year.” They cite a popular business book. The book cites a conference talk. The talk cites a blog post. The footnote vanishes into nothing. A more nuanced stat (failure rates vary by sector and definition) never breaks through.",
+        "A press release claims a new AI model beats humans on emotional recognition. AP and Reuters syndicate a short piece. Hundreds of outlets carry the same paragraph. The claim trains public perception before peer review catches up. It’s not malicious—just structure. Wire copy is fast, and repetition feels like confirmation."
+      ]
+    },
+    {
+      "heading": "6) The doc trail in a codebase",
+      "paragraphs": [
+        "The PM asserts “80% of our users prefer dark mode” and shares links. Design and engineering accept the direction. Later, a researcher discovers the stat traces to one poorly sampled Twitter poll. The team optimized for a mirage. A README claims a license is MIT.",
+        "Three modules’ README files say the same. But all copied a template with the wrong badge. Legal catches it after launch. These aren’t villains. They’re normal. They expose a structural problem: modern information systems stack shortcuts on top of convenience, then reward speed over source hygiene."
+      ]
+    },
+    {
+      "heading": "Why the mind falls for it",
+      "paragraphs": [
+        "Repetition breeds truthiness. The “illusory truth effect” shows we rate repeated statements as more true, even when warned (Hasher et al., 1977; Fazio et al., 2015); Availability cascades. A belief gains traction because it’s easy to recall and socially reinforced, not because it’s correct (Kuran & Sunstein, 1999); Herding and information cascades. In uncertain conditions, people imitate earlier choices—even if those choices were arbitrary (Banerjee, 1992;",
+        "Bikhchandani, Hirshleifer, & Welch, 1992); Source amnesia. Over time, we remember the claim but forget where we learned it (Schacter, 1999); Authority and amplification. A claim repeated by a known brand or persona gains surplus credibility (Merton’s “Matthew Effect,” 1968). Put simply: the brain uses “I’ve heard this a lot” as a proxy for “many independent sources agree.” That shortcut usually helps. In digital ecosystems, it can backfire."
+      ]
+    },
+    {
+      "heading": "Quick sniff tests",
+      "paragraphs": [
+        "Identical phrasing across multiple articles and posts; A suspicious chain of citations: A cites B, B cites C, C cites A; “As research shows…” with no primary link; Screenshots of screenshots; charts without axes; claims with image macros; All sources published within hours of each other, no one earlier; A single press release is the soil for a whole forest of headlines; In your team: repeated rationale in meetings with no original data, e.g., “we do it because everyone does.”.",
+        "Ask, “What’s the primary source?” If nobody can paste it in 30 seconds, assume it’s missing; Time-order the claims. The earliest credible artifact wins your attention; Look for outliers. If there are none, you might be living in a filter bubble (Bakshy et al., 2015). Print it, or paste it into your team wiki. Better yet, bake it into your workflow."
+      ]
+    },
+    {
+      "heading": "The anatomy of a repeat: how echoes build",
+      "paragraphs": [
+        "A person posts “New patch fixes X across all devices.”; A biotech company tweets a promising preprint. 1) A seed appears. Headlines shorten, context shrinks. Screenshots replace citations. 2) Platforms compress nuance. Aggregators recycle; newsletters summarize; translators paraphrase the paraphrase. 3) Repetition outruns verification. “I’ve seen this everywhere” becomes “it’s true.”. 4) Social proof cements belief. Teams code it into defaults; orgs use it in onboarding; media treat it as the background fact.",
+        "5) Neutrality turns into policy. The cure isn’t to distrust everything. It’s to restore independence and friction where it matters. Policy: Any claim that informs a decision above a defined risk threshold needs two independent sources; Independence test: Different methods, different authors, no shared funding or press office; Exception path: If urgency prevents it, log the risk and set a short review deadline."
+      ]
+    },
+    {
+      "heading": "2) Source maps in the open",
+      "paragraphs": [
+        "Create a simple source map whenever a claim becomes a dependency. Visual or textual graph showing nodes (claims, datasets) and edges (who cites whom); Mark “primary,” “secondary,” and “tertiary” with colors or tags; Include publication dates and verification notes. Example (plain text): \\`\\`\\` Claim: “Dark mode boosts battery life by 30% on OLED phones” TechReview Blog (2020-01): cites GadgetWorld (2019-12);",
+        "GadgetWorld (2019-12): cites BigPhoneCo press release (2019-11); BigPhoneCo press (2019-11): internal tests on one model; 30% at 100% black static screen; Independent Lab (2020-02): 7–12% typical use; 20% streaming video; methods public. Nodes: Primary: BigPhoneCo and Independent Lab; Decision: Use independent lab numbers; annotate conditions; Last Verified: 2025-08-28.Verdict: \\`\\`\\`"
+      ]
+    },
+    {
+      "heading": "5) Dissent as a service",
+      "paragraphs": [
+        "A 45-minute calendar block before major decisions; Roles:; Hunter: finds primary sources; Skeptic: tries to falsify; Scribe: documents and timestamps; Deliverable: one page with sources, confidence, and next check date. Add inline comments or metadata: \\`source: primary|secondary|hearsay\\`; Example in YAML:. type: primary; type: secondary.",
+        "\\`\\`\\` feature_flag: name: enable_dark_mode_default rationale: \"Battery life gains in OLED devices\" sources: title: \"Independent Lab Study\" link: \"https://example.com/lab-study\" verified: \"2025-08-28\" title: \"BigPhoneCo Press Release\" link: \"https://example.com/press\" verified: \"2025-08-27\" next_review: \"2026-02-01\" \\`\\`\\` Rotate a “red team” role at planning meetings; Give them permission and a script: “What would make this claim false? What evidence would we need?”."
+      ]
+    },
+    {
+      "heading": "Tiny experiments you can run this week",
+      "paragraphs": [
+        "Use the Wayback Machine or an internal archive bot on Slack to snapshot external links at first mention; Store PDFs with checksums; title them with date and source. If your app makes claims (“99% accurate”), link the methodology; Upgrade claims quietly when you learn more. Users respect the humility. Pick one recurring claim in your team and source-map it in 30 minutes;",
+        "Add a “last verified” note to one README you touch; In your standup, ask “What’s the primary source?” once. Just once; Run a 15-minute reverse-search: add “-site:topdomain.com” and “filetype:pdf” to find unlinked reports; Try a small A/B test when a claim is testable. Replace debate with data."
+      ]
+    },
+    {
+      "heading": "Related or confusable concepts (and how to tell them apart)",
+      "paragraphs": [
+        "Illusory truth effect vs. common source bias; Illusory truth: repeated statements feel more true (Hasher et al., 1977; Fazio et al., 2015); Common source bias: treating many repeats as if they were independent confirmations; Overlap: repetition fuels both; difference: independence is the crux here. Confirmation bias vs. common source bias; Confirmation bias: we prefer information that confirms beliefs (Nickerson, 1998); Common source bias: error about the number and independence of sources; They combine: once a claim fits your beliefs, repeated echoes seal it in.",
+        "Authority bias vs. common source bias; Authority bias: we overvalue statements from high-status experts (Milgram, 1963; in a different domain of obedience, but the lesson sticks); Common source bias: we miscount repeats as separate witnesses; A famous voice repeating itself across outlets can look like a crowd. Groupthink vs. common source bias; Groupthink: a team suppresses dissent to maintain harmony (Janis, 1972); Common source bias: the team mistakes echo for consensus; Together they’re a trap: few sources, no dissent. Information cascade vs. common source bias; Cascade: people ignore private info to follow the crowd (Bikhchandani et al., 1992); Common source bias: misjudging how many voices truly exist; Cascades are the highway; common source bias is the broken odometer.",
+        "False consensus effect vs. common source bias; False consensus: you overestimate how many people share your opinion (Ross et al., 1977); Common source bias: you overestimate how many independent sources support a claim; Both inflate “how many,” but in different currencies—people vs. sources."
+      ]
+    },
+    {
+      "heading": "Practice drills: Common Source Bias",
+      "paragraphs": [
+        "Give the problem a shared label. “Are we sure this isn’t a common-source echo?” turns a vague discomfort into a solvable issue. Templates for decisions with a “source” block; Links auto-archived by bots; A dashboard that flags claims without primaries. Praise someone who corrects a beloved but wrong claim; Track “decision updates” and make them visible, not shameful.",
+        "Time to primary source for a key claim; Number of decisions with two-source verification; Number of claims that get updated per quarter. Pick a past decision. Reconstruct its sources. Where did you rely on echoes?; Run an incident-like postmortem for a claim that turned out wrong."
+      ]
+    },
+    {
+      "heading": "Tactics for individuals: the quick kit",
+      "paragraphs": [
+        "Anchor on the earliest credible artifact; Ask for methods, not vibes: “What did they measure? How?” Read the Methods and Limitations section first when faced with a study; Check sample sizes and labels. “N=37” can’t underwrite a universal truth; Use “-site:” to escape dominant domains in search results;",
+        "Reverse image search charts and infographics; When you repeat a stat, include a link. If you can’t find one, don’t repeat it; Write “I think” or “I’ve seen claims that…” when certainty is unwarranted; Keep a personal scratchpad of frequently used sources with verification dates."
+      ]
+    },
+    {
+      "heading": "A developer’s detour: debugging the echo in code",
+      "paragraphs": [
+        "We isolate the failing unit test; We reproduce in the smallest environment; We bisect commits to find the first bad change. Consider how we treat errors: Reproduce: Find the exact context where the claim allegedly holds; Minimize: What subset of conditions must be true?;",
+        "Bisect: Step back through citations until you hit the origin; Patch: Update your docs, not just your assumptions; Regression test: Set a reminder to re-check in 6 months. Do the same with claims: This mindset sings in product, security, and research. It keeps you honest and nimble."
+      ]
+    },
+    {
+      "heading": "A short word on research",
+      "paragraphs": [
+        "Illusory truth effect: First studied by Hasher, Goldstein, and Toppino (1977). Repetition increases perceived truth; Replications in modern contexts: Fazio et al. (2015) showed repetition boosts belief for both true and false statements; Information cascades and herding: Banerjee (1992); Bikhchandani, Hirshleifer, and Welch (1992). People rationally follow previous choices under uncertainty; Availability cascades: Kuran & Sunstein (1999).",
+        "Public discourse can amplify weakly supported claims via social and reputational dynamics; Echo chambers in social feeds: Bakshy, Messing, & Adamic (2015) documented how algorithmic curation shapes exposure to diverse sources; Source amnesia: Schacter (1999) explored how we forget where we learned information, a gateway to misattributing credibility. You don’t need to memorize these. Just remember: repetition isn’t independence."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Find the first note, not the loudest chorus",
+      "paragraphs": [
+        "We live in a world tuned for echoes. That’s not a moral failure; it’s a design feature of networks and minds. Common source bias happens when we mistake a well-amplified solo for a choir. The fix is simple, not easy: find the first note. Map the sources.",
+        "Ask for independence. Test when you can. Tag your certainty. Upgrade your beliefs in public. Print the checklist. Try one experiment this week. And when the room starts nodding in unison, just ask: “What’s our primary?” Then watch the right kind of silence open the door for better answers."
+      ]
+    }
+  ],
+  "checklist": [
+    "✅ Primary or bust: Find the earliest credible source (paper, dataset, contract, commit, timestamped email)",
+    "✅ Two truly independent sources: Not two outlets quoting the same press release; two parties who arrived via different methods",
+    "✅ Quote diversity: If every article uses the same sentence, treat them as one source",
+    "✅ Time-map it: Put publication dates on a timeline. Freshness matters; cascades explode fast",
+    "✅ Reverse it: Search the claim minus keywords (“-site:example.com”) to escape the echo chamber",
+    "✅ Trace the money or incentives: Who benefits if this claim spreads?",
+    "✅ Inspect the method, not the headline: Sample size, measurements, limitations",
+    "✅ Mark uncertainty: Write “working belief” until verified. In code, comment it",
+    "✅ Save receipts: Archive primary links (Wayback Machine; internal docs). Future you will thank you",
+    "✅ Practice dissent: Assign a “red team” to argue the opposite for 15 minutes",
+    "✅ Updateable truth: Note “last verified on YYYY-MM-DD” alongside a claim",
+    "✅ Run a small test: When cheap, test the claim with your own data or a sandbox"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

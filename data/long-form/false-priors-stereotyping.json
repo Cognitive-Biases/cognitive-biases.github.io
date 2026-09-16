@@ -1,0 +1,138 @@
+{
+  "slug": "false-priors-stereotyping",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/false-priors-stereotyping",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/false-priors-stereotyping/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:54:04.260Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Shortcut That Trips Us: Stereotyping and the Cost of Judging People by Their Group",
+  "lede": "We once shipped a prototype with a quiet bug. It didn’t crash the app; it just gave the wrong answer fast. Users loved the speed—until they noticed the answers were off, and trust evaporated. Stereotyping works like that bug. Your brain returns a result quickly because it recognizes a pattern from a group, not an individual. It feels efficient, and sometimes it’s right. But when the “fast answer” gets a person wrong, trust bleeds out of teams, friendships, and hiring pools.",
+  "sections": [
+    {
+      "heading": "What Is Stereotyping and Why It Matters",
+      "paragraphs": [
+        "Stereotyping is when you judge a person based on traits you associate with their group rather than on their individual qualities. A stereotype is a mental shortcut. Your brain notices a category—age, job, accent, hoodie, hijab—and pulls up a ready-made set of assumptions. It’s a feature for fast navigation in a complex world. The trouble starts when the shortcut decides for you: when “software engineer” means “male,” or “tattoos” means “unreliable,” or “accent” means “less competent.” Psychologists describe stereotyping as part of our “fast system” of thinking: quick, automatic, associative (Kahneman, 2011). It often pairs with the representativeness heuristic—we judge a person by how much they resemble a category we already know, not by base rates or their specifics (Tversky & Kahneman, 1974). It also links to implicit bias: learned associations that influence judgment even when we don’t endorse them (Greenwald & Banaji, 1995).",
+        "Why it matters: It misallocates opportunity. The best candidate doesn’t always look like your mental picture of “best.”; It erodes trust. People sense when they’re not seen as themselves; It reduces learning. When you predict instead of inquire, you stop discovering; It scales. One misjudgment, copied across decisions, becomes a systemic pattern. Evidence shows these patterns shift outcomes in the real world: callbacks for equivalent résumés change with names that sound “White” vs. “Black” (Bertrand & Mullainathan, 2004); mothers get penalized in hiring, while fathers sometimes get bumps (Correll, Benard, & Paik, 2007); even scientists rate identical applications differently by gender (Moss-Racusin et al., 2012). The data isn’t a sermon. It’s a mirror."
+      ]
+    },
+    {
+      "heading": "The Coffee Shop CEO",
+      "paragraphs": [
+        "Stories work better than charts here. The point isn’t to accuse; it’s to notice the texture of everyday stereotyping so we can catch it in the wild. Maria walks into a venture firm’s lobby in jeans and a hoodie. She’s early. The receptionist hands her a guest badge and asks which company she’s here to meet. Maria smiles, “I’m the 2 p.m.” The partner who invited her comes out, scans the lobby, walks right past her, and introduces himself to the twenty-something guy with a MacBook. Maria clears her throat. The room freezes.",
+        "No one said, “Women can’t be founders.” But the mental image of “startup CEO” pre-sorted who looked important. Two minutes of embarrassment later, everyone recovers. But part of Maria’s bandwidth is now doing extra work: proving she’s the CEO, then proving she’s competent, then proving she’s not “touchy.” This isn’t a villain story. It’s a hardware story: the brain autocompletes “founder,” and a very specific avatar pops up. If you don’t notice the autocomplete, it makes small social moves—the partner’s eyes scan past—before your prefrontal cortex wakes up."
+      ]
+    },
+    {
+      "heading": "The Phone Screen",
+      "paragraphs": [
+        "Jamal, a nurse with ten years of experience, keeps getting assigned heavy-lift patients. He’s taller than most of the staff. “You don’t mind, right? You’re strong.” Jamal does mind. His knees ache. He wants to rotate through pediatric shifts to diversify his practice. In the break room, team leads say, “We’re just playing to strengths.” A strength is not an identity. “Big guy equals heavy-lift duty” patterns over time into a ceiling. Jamal’s competence becomes invisible outside of the stereotype. He’s reliable cargo, so he gets cargo.",
+        "Two résumés land in a hiring manager’s inbox. Same GPA, same project, same internships. One has a name that suggests a woman, the other a man. The manager isn’t sexist—ask her; she’ll tell you. The male-named candidate reads as “more confident” because he used assertive verbs in his bullet points. The woman sounds “like a team player.” The manager decides to phone-screen one first. Confirmation bias does the rest.",
+        "On the call, she expects confidence and hears it; expects hedging and hears it. The interviews aren’t rigged; the path to them is. The manager never sees the symmetry because she never hears herself say, “He’s got leadership,” and “She’s nice” about two equivalent profiles. She just feels it."
+      ]
+    },
+    {
+      "heading": "The Code Review That Isn’t",
+      "paragraphs": [
+        "A ninth grader, Arman, arrives mid-year. He speaks English with an accent. The teacher, overwhelmed, leans on a stereotype: new student + accent = struggling. She over-explains instructions to Arman and under-calls on him during discussions because she wants to save him from embarrassment. Six weeks later, Arman’s participation grade is low. The teacher feels confirmed: “He’s quiet.” He’s quiet because he was never invited to speak. The pattern feels like kindness. It isn’t.",
+        "Priya submits a pull request. Two nitpicks and one style comment later, a senior dev drops, “Not sure this is the best approach. Might be over-engineered.” Priya feels her stomach knot. She asks a colleague to submit the same PR under their account after minor renaming. It passes in ten minutes. She doesn’t bring it up. She doesn’t want drama. She starts pre-optimizing for what she guesses will pass. The team loses experiments they never see."
+      ]
+    },
+    {
+      "heading": "The “Cultural Fit”",
+      "paragraphs": [
+        "It’s 1 a.m. You’re tired. A driver arrives with loud music. He wears a hoodie. Your nervous system whispers stories. You decide to cancel and request another ride. You tell yourself you’re being cautious. If pressed, you’ll offer statistics. But if you watched recordings of your last hundred late-night ride decisions, a pattern would pop up about who you cancel. Nothing bad actually happened. But with enough “nothings,” a net with holes takes shape.",
+        "A hiring panel debriefs. One candidate, Guan, crushed the case study but didn’t laugh at the team’s inside jokes. Someone says, “Amazing skills, but not sure about cultural fit.” No one can define “fit.” The manager imagines meetings with this person and feels a vague discomfort. They move on. It’s not wrong to want cohesion. It’s dangerous to let “fit” do unchecked work. Unnamed criteria are a petri dish for stereotypes. They grow best in the dark."
+      ]
+    },
+    {
+      "heading": "Know Your “Hot Categories”",
+      "paragraphs": [
+        "You can’t delete the brain’s autocomplete. You can build guardrails so it doesn’t drive the car. Here’s a way to practice. You don’t stereotype every group equally. Notice which categories prime your assumptions: youth, age, accent, attire, alma mater, role titles, neighborhoods, disability, gender, race, parental status. Write yours down. Own them. “I’m likely to overestimate confidence from men and underestimate technical depth in non-native speakers” is a better operating rule than “I’m fair.”",
+        "Keep a tiny log for a week. When you make a snap judgment, jot: Person’s visible category; Your first automatic assumption; What you later learned; Whether they matched. Patterns will emerge. This is your personal bias file. You don’t show it off. You use it to build friction where you need it."
+      ]
+    },
+    {
+      "heading": "Individualize Early: Stereotyping",
+      "paragraphs": [
+        "Speed is the friend of stereotypes. Add a five-second label check: Ask, “What group label did my brain just slap on this person?” Ask, “What evidence did I just ignore because the label felt satisfying?” That second question is gold. It forces your attention from category to data. If you lead teams, engineer pauses. In candidate debriefs, forbid first adjectives like “sharp,” “polished,” “leader,” “awkward.” They’re labels. Ask, “What behaviors did you observe?” Behaviors anchor you to individuals. Move from category to case.",
+        "Three tactics: Swap Names: Before you decide on anything, swap the person’s name in your head with one from a different group. Do you feel different? If yes, ask why; Ask a Specific: “Tell me about the last time you solved X.” Specific episodes override generic categories; Summarize Back: “So here’s what I heard you did…” Saying the person’s story aloud counters what your brain wants to paste on top. Individualization is the antidote to stereotyping in the lab and in life (Fiske & Neuberg, 1990). It’s not noble; it’s a skill."
+      ]
+    },
+    {
+      "heading": "Structure the Decision",
+      "paragraphs": [
+        "Unstructured decisions leave room for your favorite stereotypes to stretch. Structure shrinks them. Define criteria before you meet people. Write them down. Share them; Score each criterion separately. Don’t blend. “8/10 on analysis” is different from “good vibes.” Weight criteria ahead of time. Don’t move the goalposts after you like someone;",
+        "Do blind passes when possible. Remove names, photos, colleges from early screens. Hide avatars when reviewing creative work. Studies show small structures produce big shifts: blinding auditions increased women’s chances in orchestras (Goldin & Rouse, 2000). Résumé studies consistently reveal name effects; blinding removes them (Bertrand & Mullainathan, 2004)."
+      ]
+    },
+    {
+      "heading": "Seek Disconfirming Evidence",
+      "paragraphs": [
+        "Language carries stereotypes like a bloodstream. Watch for: Personality labels (“aggressive,” “bossy,” “nurturing,” “genius”); Vague fit words (“polished,” “rough around the edges,” “grit”); Cultural shortcuts (“hacker,” “rockstar,” “professional”). Translate labels into observations. “Aggressive” becomes “interrupted teammates three times in 20 minutes.” “Polished” becomes “organized ideas into a clear structure with examples.” People can respond to observations. They can’t edit your stereotype.",
+        "We tend to notice what confirms our pattern and ignore what breaks it. Deliberately ask, “What would I need to see to be wrong?” Then look for it. Once a day, pick one person who fits a stereotype in your head and ask them a question that could only be answered from their experience, not your assumption. It’s not about being “nice.” It’s how science works. Hypothesis, test, update."
+      ]
+    },
+    {
+      "heading": "Create Accountable Moments",
+      "paragraphs": [
+        "What you see daily becomes your default. If your media diet only shows one flavor of “leader,” your brain primes that flavor. Curate your inputs: Follow experts from groups you don’t often see in expert roles; Read case studies authored by people outside your usual circle; Invite guest speakers whose credibility shakes your expectations. It feels small. It isn’t. Exposure changes implicit associations over time (Dasgupta & Asgari, 2004). You’re retraining autocomplete.",
+        "Set up nudges you can’t ignore. Meeting template with a “bias check” question; Hiring debrief form that forces behavioral evidence, not adjectives; Performance reviews with calibration sessions and anonymized summaries first; A buddy who can say, “Name the behavior,” without it being a fight. When we build our Cognitive Biases app, we obsess over these levers—prompts and friction at the moment you decide, not a memo you read last quarter. The right nudge at the right time beats a full-day training you’ll forget.",
+        "Bias reduction works like habit change. The “bias is a bad person” frame makes people defensive and careful; careful is not the same as skillful. Interventions that teach awareness plus ongoing practice move the needle (Devine et al., 2012). Pick two habits from this section. Practice for a month. Measure. Adjust."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Stereotyping sits in a messy family. Knowing the siblings helps you aim fixes. Prejudice: Negative feelings toward a group. You can stereotype without animosity. Prejudice adds heat; Discrimination: Actions that treat people differently based on group. Stereotyping can lead to it, but discrimination is the behavior, not the thought; Implicit Bias: Automatic associations that influence judgment even when you reject them consciously (Greenwald & Banaji, 1995). Stereotypes are the content; implicit bias is the process; Representativeness Heuristic: Judging probability by resemblance to a category, not by actual base rates (Tversky & Kahneman, 1974). Stereotyping often piggybacks on it; Confirmation Bias: Seeking evidence that fits what you already believe.",
+        "It makes stereotypes sticky; Attribution Error: Overemphasizing personality, underemphasizing context. “She’s late” becomes “She’s flaky,” not “She had a transit delay.” Profiling: Institutional use of group characteristics to make decisions about individuals. Stereotyping at scale with authority attached; Microaggressions: Small, often unintentional slights that send group-based messages (“You speak English so well”). They’re how stereotypes leak into daily talk; Tokenism: Using one or a few group members as symbols rather than as individuals. It loads people with representational labor they didn’t consent to. You don’t need to memorize the glossary. Notice the pattern: all roads point to swapping the person in front of you for the idea of them."
+      ]
+    },
+    {
+      "heading": "Performance Reviews: Stereotyping",
+      "paragraphs": [
+        "Require structured interviews. Same questions, same order. Score live; Use work samples relevant to the role. Grade with rubrics; Blind the first pass of résumés when feasible. Strip names, addresses, birth years, photos, and colleges if they aren’t job-critical; Watch for patterned feedback. Compare adjectives used across candidates. If women get “collaborative” and men get “visionary” for the same behavior, adjust; For “potential,” demand evidence. What did this person do that shows stretch capacity? Not “I can imagine him in the role.”.",
+        "Anchor to observable outputs and documented behaviors, not likability; Separate style from impact. “Direct” is not “rude.” “Quiet” is not “weak.”; Calibrate across managers. Share anonymized snippets first; reveal names after initial ratings; Track project assignments; ensure high-visibility work is equitably distributed."
+      ]
+    },
+    {
+      "heading": "Daily Social Life",
+      "paragraphs": [
+        "Cold-call with a roster to avoid assumptions about who “wants” to speak; Rotate leadership roles in group work; don’t let stereotypes assign tasks (women take notes; men present); Give “wise feedback”: high standards plus assurance of belief in the student’s ability to meet them (Cohen, Steele, & Ross, 1999); Avoid over-helping based on perceived group; ask what support is wanted. Require articulated suspicion tied to behavior, not category; Use checklists for stops and searches to force individual assessment; Monitor data for disparities; investigate the process, not just outcomes.",
+        "When you feel a snap reaction, name it quietly. “I’m stereotyping.”; Ask one more question before concluding. “What’s your take?” is a good all-purpose opener; Notice the stories you tell later. If they star “types,” get curious about what you skipped."
+      ]
+    },
+    {
+      "heading": "A Few Research Anchors (Light, Useful, Not a Lecture)",
+      "paragraphs": [
+        "Fast versus slow thinking shapes snap judgments (Kahneman, 2011); Stereotype effects show up in hiring: résumés with White-sounding names get more callbacks (Bertrand & Mullainathan, 2004); mothers face penalties, fathers sometimes bonuses (Correll, Benard, & Paik, 2007); scientists rate identical applications differently by gender (Moss-Racusin et al., 2012); Individualization reduces stereotyping;",
+        "people attend to personal information when motivated and able (Fiske & Neuberg, 1990); Exposure to counter-stereotypic exemplars can weaken bias (Dasgupta & Asgari, 2004); Habit-based interventions help people reduce implicit bias over time (Devine et al., 2012). We cite studies when they give you leverage, not to stack footnotes. The pattern is clear: structure and practice beat willpower."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: We Owe Each Other More Than Our Autocomplete",
+      "paragraphs": [
+        "Stereotyping is a story we tell to move quickly through a busy day. It saves time until it costs trust. It makes us feel right until the receipts arrive. And it makes life smaller—yours, because you miss people who would have expanded your world; theirs, because doors close before they knock. The fix isn’t to be perfect. It’s to be awake, especially when the room nudges you to sleep. Small structures, visible criteria, questions before conclusions, evidence before adjectives, and a feed that shows more of the real world than your corner of it. It’s not glamorous. It’s a practice. You build it the way you build strength: reps, rest, repeat.",
+        "We’re shipping our Cognitive Biases app with that spirit: put the right prompt at the right moment, let you log your patterns without shame, and help your team turn “we try to be fair” into a set of moves that actually are. If you’re tired of the quiet bug in your decisions, come build better defaults with us."
+      ]
+    }
+  ],
+  "checklist": [
+    "Before: Write criteria; decide weights; hide nonessential identifiers",
+    "During: Ask for specific episodes; summarize back; track behaviors, not vibes",
+    "After: Check for adjectives; swap-name test; look for what would disconfirm your first take",
+    "Ongoing: Keep a bias log; curate your feed; add one accountability nudge to your process",
+    "Define criteria before you meet people; weight them in advance",
+    "Blind early passes when feasible; strip names and nonessential identifiers",
+    "Ask for specific episodes; summarize back to ensure you heard the person, not your stereotype",
+    "Replace adjectives with observations; audit language in debriefs and reviews",
+    "Use structured scoring with separate dimensions; avoid “overall vibe.”",
+    "Run a swap-name test on borderline calls; check how your gut shifts",
+    "Seek disconfirming evidence; ask, “What would prove me wrong?”",
+    "Keep a short bias log for a week; look for repeating triggers"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

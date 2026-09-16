@@ -1,0 +1,131 @@
+{
+  "slug": "extension-neglect-duration-neglect",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/extension-neglect-duration-neglect",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/extension-neglect-duration-neglect/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:48:23.098Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Last Five Minutes: Why Endings Hijack Our Memory (Duration Neglect)",
+  "lede": "We were polishing a workshop for a client—great energy, active chat, people tried the exercises, one guy drew a tiny cat with a helmet. Then we ran five minutes over. Q&A got rushed. The final slide froze on Zoom. The chat cooled. The post-event survey? “Felt disorganized.” The whole two hours collapsed under a sloppy ending.",
+  "sections": [
+    {
+      "heading": "What is Duration Neglect — when the ending matters more than the experience and why it matters",
+      "paragraphs": [
+        "That sting has a name. Duration Neglect: our tendency to judge an experience mostly by its peak and its ending, while ignoring how long it was. Duration Neglect means our memory of an experience downplays how long it was. Instead, we store two spikes: the most intense moment (good or bad) and the ending. The rest of the timeline fades like a fogged window. This idea often shows up as the peak–end rule (Kahneman et al., 1993).",
+        "Why it matters: We make future choices based on remembered utility, not experienced utility. If the ending is misleading, so is the next decision; We design services and products around average satisfaction and throughput, but customers remember the peak and the finish. Metrics can look green while memories turn red; We overvalue “strong finishers” and undervalue consistent contributors. Hiring, promotions, and performance reviews drift toward recency-weighted mythmaking; We cut thriving habits (exercise, therapy, learning) because the last session felt meh, even if the overall trajectory was good.",
+        "You can see Duration Neglect as a fast-and-frugal compass for a messy world. Endings truly matter in real life—stories conclude, projects ship, relationships pivot. Our brains lean on finishing moments as summary headlines. The trick is to respect that shortcut without letting it steer us into the ditch."
+      ]
+    },
+    {
+      "heading": "The gym session that “didn’t count”",
+      "paragraphs": [
+        "Researchers asked patients to rate the pain of colonoscopies in real-time, then later asked how bad the procedure felt overall. Patients barely considered duration. They judged based on the worst pain and how the procedure ended. When doctors left the scope in place briefly without moving—uncomfortable but much less painful—patients remembered the entire procedure as better, even though it was technically longer (Redelmeier & Kahneman, 1996). That last smooth minute softened the memory.",
+        "You do a solid 45-minute workout. You cool down, stretch, sip water. Then you check your phone and see a rude email. You leave the gym tight and irritated. Later you tell your friend, “Workout was meh.” Your heart and muscles disagree. Your memory got tagged by the ending."
+      ]
+    },
+    {
+      "heading": "The vacation arc",
+      "paragraphs": [
+        "Dev team runs a clean two-week sprint. Stories close. Bugs are light. The demo goes well—until Zoom lags and the clickable prototype fails to load. Leadership sees a spinning wheel and hears, “Uh… give us a sec.” That hiccup becomes the meeting’s story. A quarter later, someone says, “Those demos are always rough.” Always? No. But the last moments wrote the headline.",
+        "You spend eight good days on the coast. Warm water, late breakfasts, shared books. On the last day, you miss the train. You drag suitcases in the rain. Your final photo is a damp selfie in a taxi. You call the trip “a disaster.” A month later, someone asks for recommendations. You shrug: “We probably wouldn’t go again.”"
+      ]
+    },
+    {
+      "heading": "The interview glow",
+      "paragraphs": [
+        "Two support agents solve a complex billing issue in 40 pleasant minutes. They crack jokes, explain options, and fix the ledger. Then they close the call with, “You’ll get an email in 3–5 business days.” No confirmation number, no recap. The customer hangs up uneasy. The survey: “Not confident issue resolved.” The fix was fast and caring. The ending wobbled. Memory logged “uncertain.”",
+        "Candidate A is consistent, clear, and competent across five interviews. In the final round, they improvise a crisp summary and connect the job to a personal mission. Candidate B bumbles the early rounds, then charms the last interviewer with a strong story. If your debrief starts with, “They left a great impression,” you may be leaning on Duration Neglect. Solid early data gets washed by a strong close."
+      ]
+    },
+    {
+      "heading": "Hiring trial periods",
+      "paragraphs": [
+        "A show runs five seasons of smart writing and characters you love, then fumbles the finale. Overnight, social media reframes the series. “Don’t bother. The ending ruins it.” A single episode becomes the verdict—no matter how many hours of joy preceded it. A manager tries a contractor for a 6-week trial.",
+        "The first 4 weeks are excellent: deadlines hit, proactive updates, clean docs. Weeks 5–6 bring a crunch; replies slow, one bug escapes to production. The final retro feels defensive. The manager declines to continue. Not wrong, but also not neutral: a recency-heavy decision about someone’s average capability."
+      ]
+    },
+    {
+      "heading": "A rough closing conversation",
+      "paragraphs": [
+        "Free trial ends with a confusing cancellation flow. The user’s lasting impression isn’t the core value; it’s the sense of being trapped. “That app? Scammy.” Later, a competitor with fewer features but a clear off-ramp wins the user’s loyalty. Same market, different endings.",
+        "You build a friendship at work over months: coffee runs, shared wins, mutual cover. Then a tense deadline sparks a sharp exchange. You both go quiet. The friendship cools. If either of you had sent a thoughtful message that week—“Rough day. I value working with you.”—the ending of that moment would have rewritten the chapter."
+      ]
+    },
+    {
+      "heading": "Step 1: Separate experience from memory",
+      "paragraphs": [
+        "Duration Neglect isn’t a villain. It’s a shortcut. Our job: design better endings and protect decisions from being hijacked by last moments. Below is a practical playbook. Add two fields to your project retros: “How did it feel in the moment?” and “How do we remember it now?” You’ll notice drift. The fix isn’t to pick one; it’s to notice the gap and discuss why; In personal logs, jot a 1–2 sentence note at midpoints, not just after endings. When you later evaluate, your mid-run notes counterbalance the final mood.",
+        "For hiring debriefs, score each stage independently before discussion. Use a rubric and average across rounds. Don’t “adjust” after the final interview glow; For customer success, track the duration and quality of key phases—onboarding, core usage, and offboarding—then display them side by side. If your CSAT drops only at the end, you’ve found a leverage point; For fitness or habits, review weekly summaries, not just your last session. A shaky Day 7 doesn’t erase Days 1–6. Weight the week, not the finale."
+      ]
+    },
+    {
+      "heading": "Step 3: Engineer endings you can stand behind",
+      "paragraphs": [
+        "Medical, service, or support experiences: finish with a clear “last mile”—recap, next steps, and a positive but honest note. “Here’s what we did. Here’s what you’ll see next. If X happens, do Y. Thanks for your patience.” Meetings: reserve the final five minutes for decisions and rhythm. “What did we decide? Who owns what? When’s the next checkpoint?”",
+        "Clean edges build clean memories; Products: design offboarding with dignity. Confirm cancellation clearly, show data export options, and leave a “welcome back” door. The ending is part of your brand; Education: end each lesson with a quick retrieval practice. One question, one win. Students remember the success peak and leave with competence warmth (Roediger & Karpicke, 2006)."
+      ]
+    },
+    {
+      "heading": "Step 5: Build rituals that resist recency",
+      "paragraphs": [
+        "Before big events, assign a “landing supervisor.” Their job: end on time, summarize, and leave space for grace. If anything goes sideways, they bring the wheels down gently; In presentations, keep a backup final slide image (static PNG), a one-sentence close, and a short URL or QR. If the demo dies, your ending doesn’t; During negotiations, plan the closing script ahead of time. In the adrenaline of “we’re almost there,” people say too much or too little. A steady close protects value.",
+        "After vacations, do a photo review that spans the trip, not just the last day. Make a “Top 5 moments” album. Ritual beats bias; After sprints, run midpoint check-ins with notes. In the final retro, read the midpoint notes first; After a conflict, end with a small repair: “Thanks for hashing that out.” A one-sentence bridge prevents a bad moment from being the chapter end."
+      ]
+    },
+    {
+      "heading": "Step 7: Use “two selves” reviews",
+      "paragraphs": [
+        "When you notice yourself or your team overweighting the ending, call it out. “I think we’re in Duration Neglect territory. Let’s look at the whole arc.” Naming the bias cuts its power. Kahneman talks about the experiencing self and the remembering self. Both deserve a say. Try this:",
+        "During an experience, ask, “Am I okay now?” That protects the experiencing self; After, ask, “What story do I want to carry?” That respects the remembering self; When the two disagree, design the next run to serve both: improve the moment and craft a better exit."
+      ]
+    },
+    {
+      "heading": "Step 9: Train your endings",
+      "paragraphs": [
+        "Before a pilot, define success metrics and the decision rule. “If churn < X% and NPS > Y, continue.” Then stick to it even if the last meeting feels flat; Before a performance cycle, set rubrics that weight the entire period. Don’t let the last project rewrite the quarter.",
+        "Practice closing language. “To wrap, here’s what we did, what you’ll get, and how to reach us.” Record yourself. Sharper endings become muscle memory; Rehearse “grace under glitch.” Simulate a failed demo and practice the safe close. The brain is calmer when it’s seen the movie before."
+      ]
+    },
+    {
+      "heading": "Recency bias: Duration Neglect",
+      "paragraphs": [
+        "Designing better endings isn’t manipulation. It’s caring about how humans remember. The goal is truthful, kind finishes that reflect the substance. No sugar-coating falsehoods. No burying problems. Repair, summarize, and close honestly. This is the core partner to Duration Neglect. We recall experiences based on the most intense moment and the ending, with duration mostly ignored (Kahneman et al., 1993). Duration Neglect focuses on the “ignore the length” part; peak–end explains how we summarize.",
+        "Recency bias overweights the most recent information in judgments and memory. Duration Neglect is about how we evaluate experiences over time; recency bias is broader—any domain where recent info outranks earlier info. They often dance together."
+      ]
+    },
+    {
+      "heading": "Fading affect bias",
+      "paragraphs": [
+        "Sunk cost is when you persist because you invested a lot already. Duration Neglect is about memory summary mistakes. You can have both: stick with a failing project because you’ve invested months (sunk cost) and because the last meeting went well (recency/peak–end cocktail). Judging decisions by outcomes rather than their quality at the time. A project that ended in success may be judged wise even if it relied on luck. Duration Neglect can amplify outcome bias by letting the ending overshadow process quality. Negative emotions fade faster than positive in memory, generally. Duration Neglect is content-agnostic; it’s about structure. But the two can mingle: a mildly bad ending may loom large early on and then fade.",
+        "We return to a baseline of happiness after changes. Duration Neglect is about how we summarize episodes. Hedonic adaptation tunes the slope; Duration Neglect picks the title and last line. Kahneman’s experiencing vs remembering selves. The experiencing self lives minute to minute; the remembering self writes the story that drives future choices (Kahneman, 2011). Duration Neglect describes a quirk in the remembering self’s writing style."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Endings write the story we carry",
+      "paragraphs": [
+        "When we look back on a day, we don’t see a film. We see a highlight reel with a closing shot. Duration Neglect is the editor. It cuts the middle, grabs the strongest moment, and stamps the last frame as the truth. That can hurt. A tender trip gets branded by a lost bag. A year of steady collaboration gets bent by a heated retro. A solid product becomes “ugh” because the cancel button hides behind a maze.",
+        "And yet, this quirk can help us. We can end better—clean, honest, and kind. We can shape memories that honor the whole arc, not just the last bump. We can make decisions with time-weighted eyes, not just feelings from five minutes ago. If you remember one thing (irony noted), make it this: plan the last five minutes. In conversations, projects, services, workouts, and days. Land the plane. Recap the path. Close the loop with dignity.",
+        "Kahneman, D., Fredrickson, B., Schreiber, C., & Redelmeier, D. (1993). Peak–end rule, cold pressor experiment; Redelmeier, D., & Kahneman, D. (1996). Patient pain and remembered experience in colonoscopy; Roediger, H., & Karpicke, J. (2006). Test-enhanced learning; endings that feature retrieval lift memory; Kahneman, D. (2011). Thinking, Fast and Slow; the two selves and remembered utility. References (for the curious, not to drown you):"
+      ]
+    }
+  ],
+  "checklist": [
+    "Did we capture mid-experience notes, not just postmortems?",
+    "Are we evaluating with time-weighted data, not only the finale?",
+    "Do we have a planned closing script and a backup if tech fails?",
+    "Did we recap decisions, owners, and next steps in the last five minutes?",
+    "Did we create a dignified off-ramp (for users, clients, teammates)?",
+    "Are we naming Duration Neglect when it shows up?",
+    "Plan the last five minutes of every meeting: decisions, owners, dates",
+    "Add midpoint notes to projects, classes, and trips; read them before final reviews",
+    "Score stages independently (hiring, vendors, sprints) and average with preset weights",
+    "Script and rehearse your closing lines; prepare a backup slide or summary",
+    "Design dignified off-ramps for customers—cancellation clarity, export options, thank-you",
+    "Use “two selves” prompts: Am I okay now? What story do I want to carry?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

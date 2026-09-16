@@ -1,0 +1,159 @@
+{
+  "slug": "framing-effect-domain-neglect-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-domain-neglect-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/framing-effect-domain-neglect-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:02:57.813Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Blindfold Between Departments: Beating Domain Neglect Bias",
+  "lede": "A team at a health startup built the perfect medication reminder app. The notifications were crisp. The colors were soothing. The calendar synced flawlessly. Six months later, the app had almost no active users. Postmortem interviews found the obvious, but only in hindsight: their users didn’t forget pills; they feared side effects, resented the stigma of taking meds at work, and needed quiet support from family. The team built for a scheduling problem. Users lived a social and emotional reality. The relevant knowledge sat next door—in psychology, sociology, and habit design—and no one reached for it.",
+  "sections": [
+    {
+      "heading": "What is Domain Neglect Bias and why it matters",
+      "paragraphs": [
+        "That blindfold has a name: Domain Neglect Bias. It’s when you ignore useful knowledge from other fields that could change your decisions or outcomes. Domain Neglect Bias shows up when we stay inside the comfort fence of our own expertise. We treat a problem like a pure software thing, or a pure legal thing, or a pure marketing thing—when the problem is really a hybrid. We favor the tools we know. We filter out the tools we don’t know how to use.",
+        "Why it happens: We love speed. Using the mental models we already trust feels fast and safe (Kahneman, 2011); Our teams are built in silos. Job ladders, OKRs, and calendar invites reinforce separation; Language walls. Every field has jargon; translation is work; Social tax. Asking “obvious” questions across domains feels risky. So we don’t; Incentives. We get rewarded for local wins, not for cross-field learning that prevents distant losses. Why it matters: You ship the right thing to the wrong problem. Great execution, wrong diagnosis; You re-learn expensive lessons others already solved; You create invisible risks. Compliance, safety, and ethics rarely sit in one domain; You waste insight. Adjacent fields are libraries you never opened.",
+        "The kicker: most meaningful problems today span domains—climate and finance, AI and law, health and behavior, security and culture. If you want leverage, cross-pollination isn’t “nice to have.” It’s the main event. Forecasters who pull from diverse domains beat experts who stay narrow (Tetlock & Gardner, 2015)."
+      ]
+    },
+    {
+      "heading": "1) The A/B test that cost a quarter",
+      "paragraphs": [
+        "Stories make the bias visible. Let’s walk through a handful. A marketplace team saw a 4% drop in conversion after a redesign. They ran A/B tests for two months. Nothing moved. Designers kept tweaking layout and copy. Engineers optimized API calls. Growth wrote new subject lines. A junior analyst asked to segment by day. The drop happened on Mondays and only for French users.",
+        "Why? Because the tax field required a new code for a recent EU ruling, and French merchants had different inputs. Legal told finance. Growth never heard. The root issue was regulation, not UX. Domain Neglect Bias, reinforced by dashboards. Lesson: Diagnostics first. Your “product” problem may be a policy change. Put legal and finance on the incident channel during new-country launches."
+      ]
+    },
+    {
+      "heading": "2) The cybersecurity breach that started in HR",
+      "paragraphs": [
+        "A midsize company spent millions on endpoint protection and threat intel. None of it stopped the breach that mattered. An attacker phished a recruiter with a fake resume from a real university. The PDF waited until the recruiter uploaded it into a legacy applicant tracking system with an unpatched plugin. The attacker pivoted into payroll. IT saw “malware.” HR saw “work.”",
+        "No one modeled the attack surface that comes with hiring workflows. Behavioral security and human factors were a different domain. Fixing it only required a small change: recruiters preview attachments in a sandboxed viewer and batch-upload after a malware scan. The change was cultural more than technical. Lesson: Threat models need people, not only ports. Bring HR, procurement, and facilities into tabletop exercises."
+      ]
+    },
+    {
+      "heading": "3) The city bike lane that nobody used",
+      "paragraphs": [
+        "A city painted a gorgeous protected bike lane downtown. The ribbon-cutting was photogenic. Six months later, usage lagged. Traffic models said the lane reduced car speeds slightly and improved safety. The cycling community said the lane started nowhere and ended nowhere. No connection to schools, grocery stores, or bridge ramps. Urban planning met public health, but ignored network effects and human-routed paths.",
+        "The fix was obvious to anyone who rides: continuous networks matter more than downtown prestige projects. Planners revised the plan to connect neighborhoods with a “ladder” route. Usage jumped. Lesson: Map origin-destination flows and speak to actual trips. Pair transport engineers with cyclists and delivery workers before you paint."
+      ]
+    },
+    {
+      "heading": "5) The climate report that missed the farmer",
+      "paragraphs": [
+        "ICU monitors beeped constantly. The clinical systems team treated alarms as a safety feature. Nurses treated alarms as noise. Over-alerting caused alarm fatigue. People tuned out. Patient outcomes suffered. Human factors research showed that fewer, smarter alarms save lives. The hospital upgraded to tiered alerts, vibration pagers, and protocols for alarm escalation instead of blare-everything-now. They also co-designed with nurses. Results improved. Lesson: Safety is ergonomic, not just electronic. Invite nurses to co-design alarm thresholds. Borrow from aviation’s crew resource management (Klein, 1998).",
+        "A national agency released a climate adaptation plan with strong models and detailed maps. Farmers shrugged. Their decisions had more to do with water rights, credit cycles, and seed prices than the map’s 20-year forecast. Agricultural economists and local co-ops could have translated emissions scenarios into crop insurance language. The report needed finance and sociology, not just climate science. Lesson: Build translation layers. If you want behavior to change, the form matters as much as the forecast."
+      ]
+    },
+    {
+      "heading": "7) The product that passed legal but failed ethics",
+      "paragraphs": [
+        "A team trained an image classifier on clean, centered photos. It performed well in tests. In deployment, performance crashed. Field images were messy—partial occlusions, motion blur, odd angles. The team had treated data as a static artifact rather than something produced by people and devices in environments. They needed input from photographers, line operators, and field techs to understand how images are actually taken and stored. Lesson: All data is made by someone, somewhere, somehow. Study the data-generation process like an ethnographer.",
+        "A company built facial analysis for customer sentiment. Legal checked the boxes. No biometric storage, user consent, data retention policies. The product still got hammered. Customers felt watched. Staff felt creepy using it. The team never consulted ethicists or frontline staff. The reaction was a human reality, not a legal clause. Lesson: Legal compliance is a floor, not a finish line. Ethical review and user dignity are different domains. Run them."
+      ]
+    },
+    {
+      "heading": "9) The warehouse robots that slowed shipments",
+      "paragraphs": [
+        "A district adopted a new classroom app with slick grading features. Teachers tried it and quit after two weeks. It didn’t integrate with their gradebook. It added logins. It required new assignment templates. The app treated teachers like software users, not time-strapped craftspeople with routines and constraints. Lesson: Walk the day. Sit with teachers. Watch the bells, the grading stacks, the “after 8 pm” window. Service design beats feature lists.",
+        "Management rolled out autonomous carts to move pallets. The carts were efficient alone but confused in crowded aisles. Workers lost time avoiding robots. A queuing theory model could have predicted congestion at chokepoints. A labor relations lens could have identified trust problems. The robots weren’t the issue; the system was. Lesson: Simulate flows and talk to workers. Systems thinking beats gadget thinking."
+      ]
+    },
+    {
+      "heading": "Map the boundary of your problem",
+      "paragraphs": [
+        "A nonprofit sent a beautiful annual letter with outcomes and graphs. Donations dipped. Behavioral science suggests that a single vivid story with a clear ask beats a fact sheet for small-dollar donors (Small & Loewenstein, 2003). The team knew storytelling mattered, but they wrote for their board, not their base. Lesson: Match message to audience. Borrow from behavioral economics when the goal is action. You can’t read every field. You can build habits that catch Domain Neglect Bias before it costs you six figures and a reputation.",
+        "Write the problem as it lives in the world, not in your tool. “Reduce missed oncology appointments for patients traveling over 20 miles,” not “Increase notification click-through.” The first phrasing invites transport, social work, scheduling, and equity. The second locks you into UX and metrics. Now list nearby domains that touch the boundary: law, finance, behavior, culture, operations, safety, supply, data provenance, labor, environment. If you feel silly writing “insects,” and your product touches agriculture, you’re finally doing it right."
+      ]
+    },
+    {
+      "heading": "Create a translation layer",
+      "paragraphs": [
+        "Before you commit, ask, “It’s a year from now and our project failed. What happened?” Invite one person from each relevant domain to write reasons. You’ll get surprises. A procurement manager will flag a lead-time risk. A community organizer will flag legitimacy. A privacy engineer will flag consent flows that don’t exist in your market. Pre-mortems surface cheap fixes (Klein, 1998).",
+        "Every field has its own nouns, verbs, and taboos. Appoint a translator. It can be a person or a shared document. Make a simple glossary. Write how you’ll make decisions, who owns what, and what “done” means for each domain. For example: “Data retention means X in legal, Y in product, Z in analytics. Here’s the overlap we need.”"
+      ]
+    },
+    {
+      "heading": "Build small external advisory loops",
+      "paragraphs": [
+        "Do 30-minute micro-tours. The security lead walks the team through a recent incident. The clinician shows how nurses really chart at 3 a.m. The finance analyst explains how cash actually clears. The purpose is not to become an expert. It’s to ask better questions and spot where you’re blind. Build artifacts that everyone can point at: journey maps, service blueprints, physical mockups, flow diagrams. A nurse, a lawyer, and an engineer can look at the same patient flow and discuss friction. Without a shared object, they debate abstractions.",
+        "Create a lightweight advisory bench. Two to five people from adjacent fields you can text a one-pager. They don’t need to be famous. They need to be honest and unafraid to say, “You’re missing X.” Pay them if you can. Respect time."
+      ]
+    },
+    {
+      "heading": "Do evidence scavenger hunts",
+      "paragraphs": [
+        "For any decision that matters, pull one concept from at least two outside fields. Launching a new checkout flow? Pair a pricing concept (reference points) with an operations concept (bottleneck management). Writing a trust policy? Borrow from law (notice and consent) and sociology (legitimacy and norms). Assign someone to find three relevant studies or cases from other fields. Summarize in one paragraph each. No jargon. For example, if you’re designing habit loops, summarize one behavioral study, one marketing case, one clinical trial. You’re not building a PhD. You’re grabbing clues.",
+        "Put cross-field wins into performance reviews. Celebrate the engineer who spotted a regulatory change that saved rework. Celebrate the policy analyst who flagged a failure mode in onboarding. Reward it, and it will happen. Invite a rotating “red team” to poke holes. Give them a script and airtime. Divergent viewpoints improve creativity and accuracy (Nemeth, 2003). Your red team can be two colleagues and a user. Make it safe to be the person who says, “Are we sure this isn’t a procurement problem?”"
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Domain Neglect Bias overlaps with other traps. They feel similar, but they’re different in useful ways. Silo mentality: Organizational structure that blocks information flow. Domain neglect can happen even on small teams with no formal silos. It’s a mindset plus a habit. Not-Invented-Here syndrome: Preferring internal solutions over external ones. Domain neglect may value external ideas within the same field while ignoring nearby fields entirely. Functional fixedness: Seeing objects only in their usual function. Domain neglect extends that to fields: seeing statistics as “for analysts” instead of a general thinking tool.",
+        "Confirmation bias: Seeking evidence that supports your view. Domain neglect often reduces the sources you consult, which makes confirmation bias worse. Overconfidence / Dunning–Kruger: Overestimating your competence. Domain neglect adds a twist: you underestimate the relevance of other people’s competence. Availability bias: Using what’s top of mind. Domain neglect makes certain fields never enter your mind; they aren’t “available” in your mental menu. Expertise blind spot: Experts forget what novices don’t know. Domain neglect sometimes flips it: experts forget that their expertise is only one slice of a puzzle. Knowing the difference helps you diagnose. If the problem is structure, fix the org. If it’s mindset, fix habits. If it’s incentives, fix rewards."
+      ]
+    },
+    {
+      "heading": "How to recognize you’re drifting into it",
+      "paragraphs": [
+        "You won’t see Domain Neglect Bias in the mirror. Watch for these tells: Your team debates layout for hours and nobody asks, “What changed in policy, seasonality, or incentives?” You measure more, but your metric refuses to budge. You keep tweaking the same knob; You use more jargon than plain language in updates. People stop asking questions;",
+        "The only “users” you talk to look like past users. New segments are invisible; Every fix is a sprint ticket. None change the context outside your app or org; You hear “that’s not our job” more than “who can we ask?” Postmortems repeat the same themes: “assumptions,” “communication,” “unknown unknowns.” If you see two or more in a week, pause. Call someone outside your lane."
+      ]
+    },
+    {
+      "heading": "Micro-practices that help",
+      "paragraphs": [
+        "We like small habits you can do today. None require a reorg. A 15-minute weekly cross-domain standup. One person from each adjacent area shares one emerging risk and one observation. Keep notes. “Ask a librarian” culture. Designate one person per quarter as the “research scout.” They hunt for adjacent field insights on a current problem. They summarize, no slides, 10 minutes. Policy buddy system. Pair each product team with a policy counterpart. They attend your pre-mortems and you attend theirs.",
+        "On-call ride-alongs. Once a quarter, shadow a frontline person for a shift. Watch where your policies and tools meet reality. Decision logs with “other domains considered.” Each major decision includes three lines: what domains we consulted, what we learned, what we didn’t do and why. Translation time-box. In any cross-field meeting, spend the first five minutes aligning on terms. Define one synonym each. It feels slow. It saves hours.",
+        "Preflight questionnaire for launches. Before rollouts, answer: what could go wrong for legal, ops, support, and comms? Who owns each failure mode?. “One outside voice” rule. No major plan ships without one written note from an outsider. Could be an advisor, a user, or a neighboring team."
+      ]
+    },
+    {
+      "heading": "The short field guide interview",
+      "paragraphs": [
+        "Let’s make this even more concrete. You need to get up to speed on a neighboring field in 45 minutes. Use this script. What do beginners always misunderstand about your field?; What constraints bite people who ignore your field?; What are the two or three concepts I should carry into my decision?; Where do bad decisions show up in outcomes a month later? A year later?; If this were your call, what would you do first?.",
+        "Take notes in plain language. Translate at least one concept into your domain. If they mention “base rates,” decide how your dashboard will show them. If they mention “queueing,” plan a small test during peak hours."
+      ]
+    },
+    {
+      "heading": "The cheap real-world test",
+      "paragraphs": [
+        "You’re fixing missed appointments. Build a simple journey map from “book” to “arrive.” Include steps outside your app: getting time off, arranging childcare, transit time, parking, signage. Invite a scheduler, a nurse, a social worker, and a patient. Ask where the journey breaks on a bad day. Most fixes won’t be code. You might add SMS bus alerts. You might add a script for schedulers to ask about childcare needs. You might adjust clinic hours.",
+        "You want to increase recycling at an office. Don’t write a deck. Put labeled bins in three spots for two weeks. Measure contamination daily. Vary labels and distance. Borrow from behavioral science: put the desired action in the path of least resistance. You’re a designer? Great. You’re also doing a tiny field experiment."
+      ]
+    },
+    {
+      "heading": "What we’ve seen change when teams fix it",
+      "paragraphs": [
+        "Your fraud team wants to tighten filters. Ask who gets hurt if you succeed. You’ll find legitimate users who share IPs in dorms or family plans. Consult a sociologist or community manager to avoid punishing the wrong people. Adjust thresholds and add an appeals path. Your blocked-fraud metric drops. Your net revenue rises. Faster decisions with fewer reversals.",
+        "You spend an extra hour upfront to save weeks of rework; Better trust with users and partners. People feel seen when you consider their real-world constraints; Fewer “unknown unknowns.” The pool of surprise shrinks. The surprises that remain are smaller; Stronger forecasting. Teams pulling from diverse sources predict better (Tetlock & Gardner, 2015); Calmer culture. When it’s normal to ask other fields for help, defensiveness falls."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Domain Neglect Bias",
+      "paragraphs": [
+        "Domain Neglect Bias is quiet. It isn’t a crash or a scandal. It’s the slow leak that flattens your momentum. It makes smart people build the wrong things well. The fix isn’t learning every field. It’s learning to reach. To host a nurse, to text a lawyer, to ride with a delivery driver, to read a page of sociology and ask a better question tomorrow. We’re building a Cognitive Biases app because these patterns deserve a place on your home screen. You don’t need another lecture. You need nudges, checklists, and tiny practices that help you notice when you’re drifting into one-domain thinking. We want your next decision to borrow one good idea from a neighbor, and to feel how that changes the shape of your work.",
+        "If you remember one thing: write the problem in the user’s world. The rest follows. Kahneman, D. (2011). Thinking, Fast and Slow; Klein, G. (1998). Sources of Power: How People Make Decisions; Nemeth, C. (2003). Dissent enhances creativity; Tetlock, P., & Gardner, D. (2015). Superforecasting; Small, D., & Loewenstein, G. (2003). Helping a victim or helping the victim. References (light touch):"
+      ]
+    }
+  ],
+  "checklist": [
+    "Did we describe the problem in the user’s world, not our tool?",
+    "Which adjacent domains touch this problem? Name at least three",
+    "Who from each domain saw our plan and gave feedback?",
+    "What would make this fail for legal, for finance, for ops, for end users?",
+    "What evidence from outside our field supports or challenges our approach?",
+    "What would a frontline worker say on a bad day?",
+    "What part of our data is made by humans, and how?",
+    "What is the cheapest test in the real setting, not the lab?",
+    "Who gets hurt if we succeed? Who wins if we fail?",
+    "Which incentives and habits push us back into our silo?",
+    "Have we defined the problem in the user’s world, not our tool?",
+    "Which three adjacent domains could materially change the outcome?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

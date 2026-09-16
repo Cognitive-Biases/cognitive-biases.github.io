@@ -1,0 +1,141 @@
+{
+  "slug": "framing-effect-decoy-effect",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/framing-effect-decoy-effect",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/framing-effect-decoy-effect/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:59:36.671Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Decoy in the Middle: How a Third Option Nudges You Toward the Second",
+  "lede": "You’re at the movies after a rough week. The popcorn board stares back: Small for $5, Large for $9. You eye the Large, then feel practical and pick the Small. But the cashier flips a sign you hadn’t noticed: Medium for $8. Suddenly, the Large looks like a steal. You leave with a tub you didn’t plan to buy and the strange sense that you made a smart call.",
+  "sections": [
+    {
+      "heading": "What Is the Decoy Effect — and Why It Matters",
+      "paragraphs": [
+        "That shift is the Decoy Effect: when an additional, worse option makes one of the original choices look clearly better, nudging you to choose it. The Decoy Effect (also called the “asymmetric dominance effect”) happens when a third option is added that is clearly worse on one dimension and equal or worse on others, compared to a target option. The decoy makes the target look obviously better, pulling choices toward it. It matters because it quietly shapes real decisions: what we buy, subscribe to, donate, or accept at work. It influences product lineups, pricing, and even how we interpret “fairness.” And it’s not just about spending more. It can make us choose faster, with more confidence—confidence that’s not always earned.",
+        "A few anchors from research help frame it: The effect showed up in classic experiments on consumer choice (Huber, Payne, & Puto, 1982); Decoys shift demand toward the “target” option and increase the chooser’s certainty, even when total value doesn’t improve (Simonson & Tversky, 1992); Field and lab studies show reliable but context-dependent impact—design details matter (Ariely, 2008; Yang & Lynn, 2014). Why you should care: If you design choices (pricing pages, menus, proposal packages), you can help people decide—and avoid pushing them into regret; If you make choices, you can spot the decoy and re-center on what you actually need.",
+        "The Decoy Effect is not inherently evil. A clear decoy can reduce hesitation and make comparisons easier. But unexamined, it can drag you into overbuying or picking misfit products that looked good only next to a contrived “bad” option."
+      ]
+    },
+    {
+      "heading": "1) The Popcorn Counter and the Magazine Bundle",
+      "paragraphs": [
+        "Stories beat definitions. Let’s walk through places where decoys show up, from popcorn to politics, and see how they work. Before decoy: Small $5, Large $9. You’re split. $9 feels a lot for popcorn; After decoy: Medium $8. Medium is only $1 cheaper than the Large. What changed? Not your appetite. The Medium made the Large look like a bargain by asymmetric dominance: the Large dominates the Medium on size for a tiny extra price. The Small quietly becomes irrelevant.",
+        "Dan Ariely popularized a famous case: an old Economist offer listed: Web-only: $59; Print-only: $125; Print + Web: $125. The print-only is a decoy. It’s worse than the bundle on every dimension but the same price. Its sole job: make “Print + Web” look like an obvious upgrade (Ariely, 2008). When the decoy was removed in lab tests, more people chose the cheaper web-only option."
+      ]
+    },
+    {
+      "heading": "2) SaaS Pricing Pages",
+      "paragraphs": [
+        "You’ve seen it: Basic, Pro, Enterprise. Pro has the green “Most popular” tag. Then an odd fourth plan appears: “Starter Plus” with fewer features than Pro, priced oddly close to it. Without decoy: You might choose Basic or Pro after comparing real needs;",
+        "With decoy: Starter Plus sits next to Pro, slightly cheaper but missing key features. Pro looks like the “grown-up” choice with better unit value. Your cursor drifts to Pro. Designers love this because it’s measurable: add decoy, watch Pro conversions rise. The danger: when the decoy inflates spend without real fit. Churn follows."
+      ]
+    },
+    {
+      "heading": "3) Donation Nudges, Laptops and Dating Apps",
+      "paragraphs": [
+        "Donation tiers tell the same story: $20, $50, then a $95 tier with fewer perks than the $100 tier, which suddenly makes the $100 option look generous. Laptops work the same way: Model A is cheaper with less storage, Model B costs more with more storage. Enter Model C (decoy): C is worse than B on storage at nearly the same price. B dominates C. Your brain settles on B as the “smart” choice—even if A fits your actual work. Some folks leave with B and never use the extra storage. The decoy validated a more expensive decision, not necessarily a better one. Alex: funny, outdoorsy, lives nearby; Jordan: funny, outdoorsy, lives 45 minutes away; Taylor (decoy): funny-ish, outdoorsy-ish, lives nearby, but profile feels weaker.",
+        "Odd example, but real. Imagine: Taylor exists, but in your mind, Taylor amplifies Alex. Alex dominates Taylor: same proximity, but stronger personality. You feel “smart” choosing Alex over Jordan. The decoy sharpened your preference—not always bad. If Taylor’s profile is genuine, fine. If the platform curates decoys to steer you, that’s murkier."
+      ]
+    },
+    {
+      "heading": "4) Job Offers and Hospital Treatment Plans",
+      "paragraphs": [
+        "Two offers: StartUpCo: lower salary, high equity potential, great learning; BigFirm: higher salary, stable growth, clear ladder. Recruiter adds a third: MidCo (decoy): salary similar to BigFirm but thin growth and meh culture. MidCo makes BigFirm look superior for salary-focused candidates. Or if MidCo offers equity with worse terms than StartUpCo, it makes StartUpCo look better for risk-takers. Either way, MidCo reframes the trade-offs to favor one target. Treatment A: fewer side effects, moderate efficacy; Treatment B: higher efficacy, more side effects.",
+        "Patients pick between: A decoy version of B with the same side effects but slightly worse efficacy can push choice toward B. This makes comparison easier, but we tread carefully: medical decisions need clarity, not manipulation. Transparent decoy rationale (e.g., “We include Option B-Standard so you can compare dosage levels fairly”) helps preserve autonomy."
+      ]
+    },
+    {
+      "heading": "5) Political Polling and Travel Upgrades",
+      "paragraphs": [
+        "In preference polls: Candidate X; Candidate Y; An added fringe candidate Z (decoy-like) who overlaps with Y’s platform but lacks viability can split attention and, indirectly, make X feel like the pragmatic compromise. This blurs into the “spoiler effect,” but the mechanism is similar: comparative framing, not pure policy preference, steers choices.",
+        "Airline seats: Economy: $180; Premium: $280; Decoy: “Economy Plus”: $260, minimal benefits. Premium now “dominates” Economy Plus on comfort for $20 more. People step up. Some are delighted. Others later realize they didn’t care about the extras. The decoy reframed value, not need."
+      ]
+    },
+    {
+      "heading": "Steps 1–2: Spot the Asymmetry, Then Remove the Decoy",
+      "paragraphs": [
+        "You can’t dodge what you can’t see. Train your eye to spot asymmetric dominance. Then build small habits to re-center on your criteria, not the menu’s trap. Look for an option that: Is clearly worse than another option on at least one key attribute; Is the same or worse on the remaining attributes; Sits suspiciously close in price to a higher tier.",
+        "If it’s worse in every meaningful way and not meaningfully cheaper, you’ve found the decoy. Imagine the board without the third option. Which one would you pick? If your answer changes when the decoy returns, pause. Your preferences may be drifting toward the designer’s target."
+      ]
+    },
+    {
+      "heading": "Steps 3–5: Must-Haves, Unit Value and a Slower Click",
+      "paragraphs": [
+        "Write three must-haves and a max budget. Keep it visible while you decide. If the “better value” option doesn’t meet your must-haves or blows the budget, it’s not better value for you. Don’t compare feature lists. Compare outcomes you will use: Cost per actual use per month; Time saved per week; Warranty years per dollar if reliability is key; Storage per dollar only if storage genuinely matters to your workflow.",
+        "Pick one primary unit and stick to it. If a page labels something “Most popular,” give yourself a cooling moment. Popular for who? Your context might differ. Re-read your must-haves. One extra minute can save months of regret."
+      ]
+    },
+    {
+      "heading": "Steps 6–8: Separate, Flip and Phone-a-Friend",
+      "paragraphs": [
+        "Copy the relevant details into a plain text note: price, key features you care about. Remove the decoy entirely from the note. Decide there. This breaks the visual nudge. Flip the labels on the target and decoy in your mind.",
+        "If “Starter Plus” and “Pro” swapped names but kept attributes, would you still choose the same one? If not, the label and decoy are steering you. Describe the two real options and your must-haves to someone not shopping with you. Don’t mention the decoy. Ask which fits. External brains aren’t caught in the decoy’s frame."
+      ]
+    },
+    {
+      "heading": "If You Design Choices: Use Decoys with Care",
+      "paragraphs": [
+        "We build products too. Decoys can help people decide, but there’s a line between clarity and trickery. A few practical rules: Make the decoy educational, not deceptive. Use it to illustrate why a tier exists, not to hide trade-offs; Tie tiers to real segments. “Pro” should map to professional needs, not just a higher price; Avoid “phantom decoys” that can’t be purchased. They erode trust fast; A/B test beyond conversion.",
+        "Measure regret proxies: refund rates, downgrades, first-week churn, NPS by tier; Explain trade-offs in human terms. “Pro includes audit logs. If you don’t manage compliance, Basic is perfect.” That builds loyalty; Cap price adjacency. If the decoy sits within 5–10% of the target, ensure it still fits a real use case; otherwise, you’re herding. Design for long-term fit. If you nudge people into the wrong tier, support and churn costs will claw back your short-term gain."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Behavioral biases often overlap. Here’s where the Decoy Effect fits and where it doesn’t. Asymmetric Dominance (same thing): The decoy is dominated by the target on relevant attributes; Compromise Effect: People pick the middle option to avoid extremes. Companies sometimes add a high-priced “phantom” to make the target look like the reasonable middle. Not the same as a decoy, but cousins; Anchoring: An initial number shifts your sense of scale. A $999 “compare at” price anchors you, making $699 feel cheap. Decoys play with relative comparison, not initial anchors; Framing: The same facts can be presented as gain or loss. Decoys rely on relative comparison, but framing can amplify them (“Only $20 more for the upgrade!”);",
+        "Choice Overload: Too many options overwhelm. Decoys are surgical: they add one option to direct you. Overload is chaos; decoys are choreography; Reference Dependence: We judge options relative to others. Decoys hack references by setting an easy-to-beat opponent; Phantom Decoys: Options you can’t actually buy that make another look better. Common in sales pitches and sometimes unethical; Price-Quality Heuristic: “Higher price means better quality.” Decoys can activate this, but the heuristic can operate without any decoy present. Knowing which mechanism is at play helps you pick the right defense: reduce noise for overload, strip labels for anchoring, remove dominated options for decoys."
+      ]
+    },
+    {
+      "heading": "When Decoys Help, and a Spot-and-Strip Exercise",
+      "paragraphs": [
+        "We don’t think decoys are always bad. They can: Reduce analysis paralysis. A clear, dominated option clarifies trade-offs and speeds decisions; Educate about hidden value. A stripped-down tier next to a complete tier can reveal how features bundle into outcomes; Guide to fit when stakes are low. Movie popcorn is a cheap lesson. Your mortgage is not. The ethical line: would a reasonable person, given their goals and budget, thank you later for the nudge? If yes, proceed. If not, redesign.",
+        "Try this the next time you shop: 1) Pick something with tiers: VPNs, project management tools, headphones. 2) Write your must-haves and a max budget. 3) Screenshot the options. 4) In a photo editor, blur or crop out one option at a time. Notice how your choice shifts. 5) Decide in a plain-text note with only the contenders that meet your must-haves. Do this three times on small purchases. Your brain will start flagging decoys on sight."
+      ]
+    },
+    {
+      "heading": "A Tiny Case Study and the Research, Briefly",
+      "paragraphs": [
+        "A charity gala offers a Supporter ticket at $100 with drink tickets included. Add decoy: Supporter-lite (no drink tickets) at $85. Supporter becomes “best value.” But post-event surveys show some regret among Supporters who don’t drink. Redesign: “Supporter (choose drink or swag; same price).” Decoy removed, flexibility added. Donations net out higher due to goodwill. Lesson: alignment trumps friction. Huber, Payne, & Puto (1982): Introduced the “attraction effect,” showing that dominated options shift preferences toward the dominating alternative; Simonson & Tversky (1992): Showed context dependence of consumer choice; decoys increase choice share for targeted options; Ariely (2008): Popularized decoys with real-world pricing examples in Predictably Irrational; Yang & Lynn (2014): Meta-analysis indicating decoy effects are reliable but moderated by involvement and attribute knowledge.",
+        "We cite sparingly because the pattern matters more than a stack of PDFs. But it’s nice to know the trap has a map. Before: Write 3 must-haves + max budget; During: Hunt for a worse option priced near a target. Remove it mentally; Compare: Use one unit that reflects your life; Decide: In a plain note, without labels and decoys; After: Recheck in 30 days. Adjust your rules based on regret. Tape that to your laptop. It’s boring and it works."
+      ]
+    },
+    {
+      "heading": "Frequently Asked Questions",
+      "paragraphs": [
+        "Q1: How do I tell the difference between a decoy and a legitimate middle tier? A: Check for asymmetric dominance. If the “middle” is worse than another option across important attributes and not meaningfully cheaper, it’s likely a decoy. Legitimate tiers trade different attributes for different use cases.",
+        "Q2: Do decoys still work when buyers are experts? A: Less so, but not zero. Experts compare on defined criteria and ignore noise, which dampens decoy power. Under time pressure or when features are unfamiliar, even experts can be nudged.",
+        "Q3: Is the Decoy Effect unethical to use in pricing? A: It depends on intent and outcome. Using a decoy to clarify value and guide people to the tier that fits is fine. Using it to inflate spend without benefit breaks trust and backfires. Measure regret, not just conversion.",
+        "Q4: Can the Decoy Effect backfire? A: Yes. If people feel tricked or overloaded, they bounce or churn. Decoys that create buyer’s remorse raise refunds and negative reviews. Also, regulators frown on phantom options and deceptive comparisons.",
+        "Q5: How do I defend my budget against decoys in B2B buying? A: Lock requirements and evaluation metrics before vendor calls. Score vendors against a spreadsheet with weighted criteria. If a vendor adds a “special tier,” ask how it maps to your use case. If it doesn’t, exclude it from scoring.",
+        "Q6: Does the Decoy Effect apply outside pricing—like in habits or life choices? A: It can. We compare paths relative to nearby alternatives. A weak “Plan C” can make a risky “Plan B” look sensible. Define your outcomes first so relative comparisons don’t sweep you.",
+        "Q7: What’s a quick test I can do in a store? A: Cover one option with your hand. If your preference flips when the covered option returns, you might be reacting to a decoy. Ask yourself what changed in your needs. If nothing, stick to your original pick.",
+        "Q8: Can labels like “Most popular” create a decoy effect alone? A: Labels aren’t decoys by themselves, but they amplify them. A decoy next to a “Most popular” target strengthens the nudge. Treat labels as marketing, not facts.",
+        "Q9: Should I ever use a decoy in a personal negotiation? A: Possibly, but lightly. Offer a package that highlights the value of your preferred deal without misleading. For example, a version that saves the counterparty less money but includes an unnecessary deliverable can make your main offer look efficient. Keep it honest.",
+        "Q10: Are decoys a sign that I’m being manipulated? A: Not always. Sometimes they’re educational scaffolds. The test is whether your final choice matches your goals. If you’d thank the seller a month later, the nudge served you. If you feel duped, it didn’t."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Make the Choice Yours",
+      "paragraphs": [
+        "We all like to believe we’re immune. Then a Medium appears, and the Large feels right. The Decoy Effect doesn’t make us foolish; it makes us human. We see in contrast. We want to feel smart. Marketers—and well-meaning designers—ride that wave. Here’s the real flex: decide on your terms. Know your must-haves. Strip out the extra box that shouldn’t be there. Pay for what you’ll actually use. Say no to what’s only “better” because it stands next to something worse.",
+        "Keep the checklist near, and when that third option appears, give it a nod and move on. The second doesn’t have to win just because the decoy showed up. Only you get to decide who does."
+      ]
+    }
+  ],
+  "checklist": [
+    "Define 3 must-haves and a firm budget before browsing",
+    "Scan for an option that’s worse on key attributes but near the target’s price",
+    "Run the “remove the decoy” test: would your choice change?",
+    "Compare on one unit that matches your life (cost/use, time saved, warranty)",
+    "Ignore “Most popular” or “Best value” tags until the end",
+    "Copy details to a plain note and decide there",
+    "Sleep on it if the spend is meaningful",
+    "If a salesperson pushes a decoy, ask them to justify it with your criteria",
+    "Revisit in 30 days: would you buy it again? Adjust your rules based on regret"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"well documented, context-dependent\": The decoy effect is a well-documented family of context effects in which adding an inferior or otherwise strategically positioned alternative can change choice shares among the original options. The classic attraction effect uses an asymmetrically dominated decoy that is worse than the target but not necessarily worse than the competitor. The effect is not guaranteed: its size depends on the geometry of the options, prior preferences, task design and other moderators, and preregistered replications have found both successful and weak or null results. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

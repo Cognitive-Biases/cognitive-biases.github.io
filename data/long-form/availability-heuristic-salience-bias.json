@@ -1,0 +1,151 @@
+{
+  "slug": "availability-heuristic-salience-bias",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/availability-heuristic-salience-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/availability-heuristic-salience-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T11:32:12.307Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Loud, Bright, and Wrong: Salience Bias—When the Striking Overshadows the Relevant",
+  "lede": "A late-night bug page pings. The graph looks terrifying—sharp spikes, a blood-red error count, Slack on fire. Your whole team swarms to patch a minor anomaly because it screamed the loudest. Later, you notice: the real issue quietly sat in the “boring” retention report—customers were slipping away week by week.",
+  "sections": [
+    {
+      "heading": "What is Salience Bias—and Why It Matters",
+      "paragraphs": [
+        "That’s salience bias in action. It’s the human tendency to fixate on whatever stands out—vivid, emotional, recent—at the expense of what actually matters. Salience bias is the brain’s habit of overweighting what is striking, vivid, or easy to notice, while underweighting what is objective, stable, or abstract. “Look at me!” cues hijack attention. They pose as importance. Often, they are just louder. Researchers call this the “vividness effect” and “stimulus salience”: stimuli that stand out capture attention and dominate judgment, even when they are irrelevant to the task (Taylor & Thompson, 1982; Nisbett & Ross, 1980). It intersects with availability—things easier to recall feel more likely (Tversky & Kahneman, 1973). Put simply: the monster under the bed gets 10x the mindshare of the leak in the ceiling.",
+        "Why does it matter? Because attention is the gateway to action. If your attention is hijacked by the striking, your allocations—time, money, focus—go to what’s loud, not what’s consequential. In product, that means chasing trophy features instead of reliability. In health, that means fearing plane crashes while neglecting blood pressure. In teams, that means reacting to whoever writes the spiciest Slack message, not the person holding the key data.",
+        "Our perceptual system is built to detect contrast, motion, and novelty. What pops wins attention; We use attention as a rough proxy for importance. “If it grabbed me, it must matter.”; Stories and images stick more than numbers. Brains digest vivid specifics better than dry base rates (Kahneman, 2011). Salience bias persists because: That combination is useful for survival, but expensive for modern decisions. The striking is not the relevant. The relevant is often quiet, slow, and a little boring."
+      ]
+    },
+    {
+      "heading": "2) The Charismatic Candidate",
+      "paragraphs": [
+        "Let’s ground this with stories. No slides. Just real patterns we’ve seen or lived. A product team fixates on a spiky “minutes down” outage banner. Execs want blood. Engineers pull a heroic all-nighter. The heat is visible, so it wins. But the silent retention line drifts down a fraction each week. No single moment screams. Six months later, churn eats growth. The outage? Forgotten. The retention slide? Unignorable. The striking: flashing red, urgent messages, dramatic timeline. The relevant: boring cohort plot. No blaze, just a slope.",
+        "In hiring, charisma saturates the room. One candidate tells gripping stories, mirrors your language, dazzles. Another offers dry, concrete examples and past metrics. Leadership leaves the interview glowing from the show. Three months later, the charismatic hire underdelivers. Turns out, sizzle served as a proxy for steak. The striking: humor, storytelling, swagger. The relevant: work samples, past results, referees who’ve seen the grind."
+      ]
+    },
+    {
+      "heading": "4) The Board Meeting Trap",
+      "paragraphs": [
+        "You read about a plane crash. It’s everywhere: big photos, names, dramatic footage. You cancel your flight and drive instead. Statistically, road travel is more dangerous by orders of magnitude. Salience in media coverage distorts risk perception (Lichtenstein et al., 1978). The striking: rare catastrophe, powerful visuals, front-page position. The relevant: base-rate probability, the denominator of miles traveled.",
+        "A board deck leads with a glossy “North Star” metric in huge font. “Time in app” is up. Everyone cheers. Slide 19—thin text, muted—contains the relevant: revenue per active user is down 12%. Decisions follow slide one. Slide 19 rules the quarter… invisibly. The striking: big number, color gradients, celebratory framing. The relevant: unit economics over time, retention curves, cash burn."
+      ]
+    },
+    {
+      "heading": "6) Incidents and the “Hero” Narrative",
+      "paragraphs": [
+        "You buy healthy-sounding supplements after seeing dramatic before/after photos. You skip flossing and put off sleep. Supplements feel concrete and special; flossing feels small and dull. But flossing and sleep carry outsized long-term impact; the supplement likely moves little (Nisbett & Ross, 1980). The striking: transformation stories, bold labels, influencer excitement. The relevant: consistent small habits, bloodwork, BP, step count, sleep.",
+        "After an outage, everyone praises the engineer who “saved the day.” The real lever was the unglamorous person who quietly built chaos tests and alert hygiene months ago. Firefighting is vivid. Fireproofing is invisible. The striking: adrenaline, war-room tales. The relevant: process, runbooks, load tests, boring checklists."
+      ]
+    },
+    {
+      "heading": "8) Security: The Zero-Day Mirage",
+      "paragraphs": [
+        "You watch a founder on stage demo an emotionally sticky AI feature. You buy the stock before earnings. Meanwhile, another company reports dull, steady margin expansion and free cash flow consistency—no flash, just compounding. Ten quarters later, the steady one wins. The demo’s sheen wore off. The striking: demos, narratives, “revolutionary” language, big TAM slides. The relevant: cash flows, retention, margins, customer concentration, governance.",
+        "Security teams sprint on publicized zero-days. They delay patching old, noisy misconfigurations because it’s not exciting and no one is tweeting about it. Breach comes… through the misconfig. The denominator matters. The striking: new CVEs, catchy code names, press. The relevant: patch baselines, permissions hygiene, old vulnerabilities unpatched."
+      ]
+    },
+    {
+      "heading": "10) Education: The Viral Teacher",
+      "paragraphs": [
+        "You remember the one hurtful line your partner said at 10:49 pm. You forget the months of care. The striking moment hogs your emotional RAM. You respond to the spike, not the pattern. Repair starts when you weigh the whole series, not just the peak. The striking: sharp, memorable moment. The relevant: base rate of kindness; consistent effort.",
+        "A teacher goes viral for theatrical demonstrations. Students love it. Scores don’t move much. Another teacher runs calm routines, spaced retrieval, formative checks. No virality. Big learning gains over the year. Stagecraft is not learning science. The striking: fireworks in the front of the room. The relevant: retrieval practice, feedback loops, deliberate practice."
+      ]
+    },
+    {
+      "heading": "13) UX Metrics: The Double-Edge",
+      "paragraphs": [
+        "Coaches choose height and highlight reels over on-base percentage, defensive runs saved, or predicted wins added. The tall kid looks like a star. The data says otherwise. The camera seduces more than the spreadsheet clarifies. Wildfire photos are searing. Sea-level charts feel abstract. Policy sways to the images. Effective action depends on probabilities and long-term tradeoffs: grid reliability, insulation, boring transmission. Breathtaking images can galvanize, but they can also hijack priorities.",
+        "A “confetti” success animation increases shares on day one. The funnel looks great; leadership shouts victory. A week later, support tickets balloon; the in-flowed users churn. The animation didn’t fix value; it decorated it. The confetti demanded attention; the experience needed depth."
+      ]
+    },
+    {
+      "heading": "Step 2: Define the Decision Question",
+      "paragraphs": [
+        "We’re not trying to kill all shiny things. We’re aiming to separate “shiny and relevant” from “shiny and misleading.” That means building habits that force the relevant to speak louder. When you feel pulled, pause and label it. “This headline is captivating.” “This chart spiked yesterday.” “This candidate’s story is sticky.” The moment you name the pull, you regain a sliver of choice.",
+        "Try: Write two columns on paper: “Salient” vs. “Relevant.” Fill the “Salient” first. Then force yourself to fill the “Relevant.” Before data-hunting, write the question you’re actually answering. “Which candidate is most likely to excel in the exact work for the next 12 months?”"
+      ]
+    },
+    {
+      "heading": "Step 4: Reframe Time and Scale",
+      "paragraphs": [
+        "For any claim, ask “What’s the base rate?” If a partner promises 30% lift, what’s the median lift across similar firms? If an outage scares you, what has historically mattered—frequency or duration? Bring a reference class (Kahneman, 2011). Look for denominators. “5 incidents” out of how many requests?",
+        "Salience thrives in the short term and at small scales. Ask: if we zoom out by 10x time, does this still matter? If we scale by 10x users, is this still the bottleneck? Many spikes become noise when you widen the window."
+      ]
+    },
+    {
+      "heading": "Step 7: Make the Invisible Visible",
+      "paragraphs": [
+        "Salience wins when it’s the only thing on stage. Put options side-by-side. If this costs three sprints, what else could those sprints buy? Opportunity cost is the enemy of spectacle. Run a short pre-mortem. “It’s six months later and we regret prioritizing X. Why?” Gather reasons. Then do the reverse. “It’s six months later and we’re glad.” Compare. Bias shrinks when you hear your future voice.",
+        "Cohorts before headlines; Time-weighted retention next to growth; Denominators on every rate; Long-window performance plots; Budget and burn next to “North Star.”. Design dashboards and rituals that elevate the boring relevant: Use small typography for sizzle metrics, big for sustainers. It sounds petty; it works."
+      ]
+    },
+    {
+      "heading": "Step 10: Slow the Hot Path",
+      "paragraphs": [
+        "“No decision after a single anecdote.”; “Always show base rate.”; “Always propose two alternatives.”; “No action on a red alert without context panel.”. Put rules in place: Rules beat vibe. Checklists beat memory. Did this story happen more than once?; What’s the n?; Would I believe the opposite story if I heard it well told?. Stories help us think. But they should serve evidence. Ask:",
+        "If a story stands alone, treat it as a hint, not a verdict. For high-stakes decisions, institute a 24-hour cooling rule unless lives are at risk; For purchases, let the tab sit overnight; For PR panic, draft a reply, sleep, revisit data. Salience often comes wrapped in adrenaline. Build a short pause: Delay—not forever, just enough—pops the salience bubble."
+      ]
+    },
+    {
+      "heading": "Vividness Effect: Salience Bias",
+      "paragraphs": [
+        "Understanding the neighbors helps you spot when you’re mixing them up. Availability is about ease of recall: if examples come to mind quickly, you assume they’re common or likely (Tversky & Kahneman, 1973). Salience often drives availability—vivid things are easy to recall—but you can have availability without salience (e.g., you recall your daily commute routes, which are not striking). Key difference: Salience is about what grabs attention now; availability is about what comes to mind later.",
+        "Vivid information influences judgments more than pallid, even when irrelevant (Nisbett & Ross, 1980). This is a core mechanism inside salience bias. A dramatic photo can carry more weight than a sterile statistic. Key difference: Vividness is a content property; salience is the attention capture and overweighting."
+      ]
+    },
+    {
+      "heading": "Halo Effect: Salience Bias",
+      "paragraphs": [
+        "We overweight the latest information. It’s often salient because it’s fresh. But not all salient info is recent. Old dramatic events can stay salient for years. Key difference: Time proximity vs. attention capture. Related, not identical. Negative events carry more psychological weight than positive (Rozin & Royzman, 2001). Negativity is often salient. But salience bias can attach to positivity too—hype cycles, moonshot promises, confetti metrics.",
+        "Key difference: Valence vs. attention. Salience is agnostic to positive or negative; negativity often supercharges it. A single striking trait (e.g., charm) spills into unrelated judgments (e.g., competence). The halo can stem from salience—one star shines, you miss the sky—but it operates as a contamination across traits. Key difference: Halo is misattribution across dimensions; salience is overweighting of attention-grabbing features."
+      ]
+    },
+    {
+      "heading": "In Meetings: Salience Bias",
+      "paragraphs": [
+        "We see the visible winners and miss the invisible losses. The visible survivors are inherently salient. The dead did not blog. Key difference: Sampling on the visible outcome; salience is the weight we give to what pops in that sample. We overestimate how much others notice us. Our own actions feel salient to us, but others barely register them. Key difference: Salience inside your head vs. actual public attention. Let’s translate principles into actual routines. This is how we run things on our team.",
+        "Base rate context in one sentence; The top two options and opportunity costs; The long-window metric that matters. We open with a decision question and a one-slide “boring bones” summary: Then we allow one “salience slide” that everyone expects and can enjoy. After that, back to bones. It keeps the dopamine without letting it steer. We also end with a commit: what we’re doing, what we’re not doing, and what could change our minds."
+      ]
+    },
+    {
+      "heading": "In Hiring: Salience Bias",
+      "paragraphs": [
+        "6-month retention cohort; Gross margin and burn multiple; Top three support ticket categories. We inverted the default. The landing page shows: The sizzle lives in a secondary tab labeled “campaigns and spikes.” You have to click for fireworks. That one navigation choice shifted our decisions. We require a work sample relevant to the job.",
+        "We score it blind first (no name, no resume). Only then do we interview. Charisma still matters—we like humans—but it no longer dominates the decision. We also ask: “Tell us about a time you solved a boring problem that mattered.” We listen for love of boring excellence."
+      ]
+    },
+    {
+      "heading": "In Personal Life",
+      "paragraphs": [
+        "The event spike; The quiet precursors we could have seen in longer-range metrics. We run blameless postmortems with a double timeline: We end with two wins: one exciting fix, one boring guardrail. Promotions consider guardrails. Every quarter we pick one “mountain” and three “ridges.” Mountains are consequential, not flashy. Ridges are enabling stones. We write a short “Why not X?”",
+        "note to inoculate against shiny distractions. When a new shiny arrives, we paste it into the “Why not X?” parking lot and revisit at the next review. “What was loud?” “What was real?” We do a two-line weekly review: It sounds silly. It’s not. It resets our attention to people, sleep, and tiny compounding changes."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Listen Past the Sirens",
+      "paragraphs": [
+        "Salience bias feels like a siren song. It’s not evil; it’s just loud. The job is not to scold yourself for being human. The job is to give the quiet, the cumulative, and the consequential a fair shot. When we ignore salience bias, we light up the short-term dashboard, score social points, and still drift into worse outcomes. When we learn to notice it, we recover attention. We fund the boring that moves mountains. We honor the people doing unphotogenic work that keeps the world functioning.",
+        "We’re building a Cognitive Biases app to make that easier—tiny nudges, checklists, and visual defaults that pull attention back to what matters. Until then, steal our checklists, hack your dashboards, and please go look at your denominators. You’ll make fewer dramatic mistakes. You’ll feel calmer. You’ll ship things that last. From our team to yours: make room for the quiet numbers and the steady hands. The striking will always introduce itself. The relevant needs an invitation."
+      ]
+    }
+  ],
+  "checklist": [
+    "What here is salient? Write it down so it stops driving from the back seat",
+    "What is the actual decision question?",
+    "What are the base rates and denominators?",
+    "What are the top two alternatives for the same resources?",
+    "If I zoom out 10x in time, does this still matter?",
+    "What would I think if I had not seen this graphic/story/headline?",
+    "What boring metric outweighs this shiny one?",
+    "What would make me change my mind?",
+    "What’s the smallest reversible step I can take instead of a full commitment?",
+    "Who benefits if I react to the striking thing?",
+    "Write the decision question before looking at data",
+    "List what’s salient vs. what’s relevant; treat “salient” as a suspect"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

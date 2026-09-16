@@ -1,0 +1,60 @@
+{
+  "slug": "memory-bias-von-restorff-effect",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/memory-bias-von-restorff-effect",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/memory-bias-von-restorff-effect/content.tsx",
+  "originalPublishedAt": "2025-09-01T13:00:00.000Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Von Restorff Effect — The standout item that steals the show",
+  "lede": "During a usability test we watched participants exit our pricing page. They forgot most copy but could quote the single magenta call-to-action word for word. The colour was the only distinctive element on the screen. It hijacked memory and everything else faded. Classic von Restorff effect.",
+  "sections": [
+    {
+      "heading": "What the bias does",
+      "paragraphs": [
+        "Named after psychiatrist Hedwig von Restorff, the effect says that an item that looks or feels different from its peers will be remembered more easily. Distinctiveness is powerful—when you design it on purpose. When you ignore it, your message can warp in unintended ways. This article breaks down how the effect works, where it helps, where it backfires, and the rituals that keep standout moments aligned with what you really want people to remember. The von Restorff effect is a memory shortcut. When one item in a set is visually, semantically, or emotionally distinct, the brain tags it as important and stores it preferentially.",
+        "Why it matters: Highlights can anchor key takeaways when used intentionally; Accidental distinctiveness can warp perception—users remember the wrong thing; In education, over-the-top examples make supporting material disappear; In risk communication, the standout datapoint can cause panic if context is missing. Once you spot the effect, you can decide when distinctiveness earns its keep and when it needs a guardrail."
+      ]
+    },
+    {
+      "heading": "Operations and incident reviews",
+      "paragraphs": [
+        "Buttons, alerts, and onboarding steps all fight for attention. The standout element becomes the remembered path. Make sure the highlight supports the behaviour you need—otherwise you train users on the wrong workflow. Teachers use stories, props, or live demos to cement a concept.",
+        "Without follow-up integration, students recall only the story. Tie every memorable moment explicitly to the concept it represents. A dramatic root cause can overshadow quiet systemic issues. If the postmortem dwells on the one surprising failure, teams saddle it with blame and ignore the mundane signals that actually need fixes."
+      ]
+    },
+    {
+      "heading": "Why memory locks onto distinct items",
+      "paragraphs": [
+        "Campaigns rely on hooks, mascots, or slogans. The von Restorff effect turns the hook into the brand memory. Align the hook with the product truth so recall converts into trust, not confusion. Novelty detection. Our brains flag anomalies because they might signal risk or opportunity; Emotional tagging. Distinct items often carry emotional charge—humour, surprise, fear—which deepens encoding;",
+        "Attention bottlenecks. We cannot attend to every item. The standout grabs spotlight so the rest remain in peripheral vision; Rehearsal loops. We replay the unusual moment in our heads, rehearsing it into long-term memory. Once you understand these mechanisms you can design for them: give the spotlight to the message you truly want stored."
+      ]
+    },
+    {
+      "heading": "Von Restorff vs. salience bias",
+      "paragraphs": [
+        "Use this sequence whenever you plan a talk, a page, or a learning module. Identify the single idea that deserves the strongest recall; Choose one channel of distinctiveness (colour, format, metaphor, interaction) to amplify that idea; Balance supporting content: add explicit links back to the highlight so the rest of the information stays attached; Prototype and run a memory check 24 hours later to see what sticks; Iterate—dial the highlight up or down until recall and comprehension both score high.",
+        "Salience bias is about attention in the moment: we focus on the flashy thing. The von Restorff effect is about memory after the fact. Something can be salient yet still forgotten if it is not distinctive enough to encode."
+      ]
+    },
+    {
+      "heading": "Make it a habit, not a gimmick",
+      "paragraphs": [
+        "Serial position favours the first and last items in a sequence. Von Restorff operates anywhere. A distinctive middle item can beat both ends if the contrast is strong. Availability explains how easily recalled items feel more common. Von Restorff explains why a particular item becomes easy to recall in the first place. Together they can skew judgement if your highlight is not representative. Review analytics to see where users actually click or recall.",
+        "Adjust highlights accordingly; Rotate highlight audits across the team so fresh eyes catch unintended standouts; Pair design sprints with content sprints so the narrative matches the visual emphasis; Celebrate when subtle changes increase comprehension. Not every highlight needs fireworks. Distinctiveness is leverage. When you wield it with intent, people remember what matters—and not because it screamed, but because it was designed to stick."
+      ]
+    }
+  ],
+  "checklist": [
+    "State the one idea you want remembered before you design the highlight",
+    "Audit your layout for accidental distinctiveness that might hijack attention",
+    "Pair every standout element with summary text or context that reinforces the message",
+    "Limit high-contrast treatments to one per screen or slide",
+    "Run quick recall tests with neutral observers before shipping",
+    "Document what you highlighted and why so future iterations do not unintentionally remove it"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

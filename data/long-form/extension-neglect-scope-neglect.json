@@ -1,0 +1,158 @@
+{
+  "slug": "extension-neglect-scope-neglect",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/extension-neglect-scope-neglect",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/extension-neglect-scope-neglect/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:49:30.310Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "When Numbers Go Numb: Scope Neglect and the Strange Case of 2,000 vs. 20,000",
+  "lede": "We were in a tiny nonprofit’s office, drinking over-steeped tea, staring at a whiteboard. The grant asked: how much would donors give to save birds from oil ponds? The researcher in the room smiled and said, “Depends on the photo we use.” He was right. The amounts didn’t move much whether we said 2,000 or 20,000 birds. It hurt to watch the math fizzle out like that.",
+  "sections": [
+    {
+      "heading": "What is Scope Neglect – when 2,000 and 20,000 victims feel the same and why it matters",
+      "paragraphs": [
+        "Scope neglect is when our feelings and decisions barely change as the size of a problem grows. Double the impact and you don’t get double the urgency. Sometimes you get no extra urgency at all. Scope neglect is a mismatch between size and response. If a problem affects 20,000 people, it’s ten times the size of the same problem affecting 2,000 people. Your brain knows that. Your gut does not. You end up caring, paying, or prioritizing about the same amount in both cases.",
+        "In the lab and in the world, people often donate, vote, or choose about the same when told the number of victims is 2,000, 20,000, or even 200,000. The story dominates the scale. The first feeling locks in the price. The scope gets neglected. Why it matters: You waste resources on small wins while large crises starve; You underbuild safety, security, and capacity until something breaks; You make product bets that can’t scale because you never felt the scale; You give, vote, and plan based on vibes. The bill arrives later.",
+        "It matters in humanitarian aid, climate policy, hospital staffing, security engineering, marketing budgets, and your Saturday morning. Wherever numbers grow, scope neglect sneaks in. Under the hood, we’re humans with coarse sensors. Our affect response saturates fast. One compelling image pulls more weight than a thousand quiet statistics (Hsee & Rottenstreich, 2004). Proportions feel right. Absolutes blur (Fetherstonhaugh et al., 1997). We are built to care, just not by the numbers."
+      ]
+    },
+    {
+      "heading": "The birds in the oil ponds",
+      "paragraphs": [
+        "Let’s get concrete. Here are stories where scope neglect bent decisions. Researchers once asked people how much they’d pay to save birds from oil pits. Some heard 2,000 birds, others 20,000, others 200,000. The average willingness to pay barely changed.",
+        "People paid for the picture in their mind, not the count (Desvousges et al., 1993). You can complain about lab experiments. But if you’ve run a fundraiser, you’ve seen the same curve. A single injured bird with a name funds a charity more reliably than a statistic that scales."
+      ]
+    },
+    {
+      "heading": "Data breach triage at a startup",
+      "paragraphs": [
+        "A small SaaS company got a report: a vulnerability exposed user email addresses. No passwords, no payment info. Early tests suggested 400 affected users. The engineering lead slated a quick patch. A day later, logs showed 40,000 exposed emails. The plan didn’t change much. Same two engineers. Same “fit it in this sprint.”",
+        "Why? The initial plan anchored the effort. The risk felt the same because the type of harm hadn’t changed. But the scope had exploded, which changes legal exposure, communication strategy, and threat surface. They patched. They didn’t meaningfully invest in incident response until a regulator called."
+      ]
+    },
+    {
+      "heading": "Local council and the crosswalks",
+      "paragraphs": [
+        "A city council had a budget line for “pedestrian safety.” One crosswalk near a school had two accidents that year. Another corridor spanning five blocks had twenty-six near misses and six injuries spread out over time. Parents at the school packed the hearing. The corridor had no faces, only counts.",
+        "The council voted unanimously for the school crosswalk. The corridor got a study. The study came back a year later with the same numbers but colder. The corridor finally got attention after a fatality. Same corridor. Same math. The feeling had lagged."
+      ]
+    },
+    {
+      "heading": "Marketing budget split",
+      "paragraphs": [
+        "An ER director increases staffing when the waiting room overflows. Feels fair. The problem: the queue length doesn’t scale linearly with demand; it bends into chaos. Ten extra patients across twelve hours is annoying. Ten extra per hour is critical. The director made small adjustments as the numbers rose. The curve did not forgive the gradualism. Hallways filled. Staff burned out. A honest model would have justified a larger, earlier staffing bump and better surge scheduling.",
+        "A consumer app team split their monthly budget across channels. They put $30k into a beloved but saturated podcast sponsorship that delivered “reliable” installs at # When Numbers Go Numb: Scope Neglect and the Strange Case of 2,000 vs. 20,000"
+      ]
+    },
+    {
+      "heading": "Philanthropy and cost per outcome",
+      "paragraphs": [
+        "A couple saved for a road trip. They priced a scenic detour: two days and $400 extra for a national park. They also priced a local experience: a $40 scenic train ride. The train felt special. The park felt… abstract. They chose the train, then scrolled Instagram from their motel while driving past the park. Ten times the cost for one-tenth the experience. The numbers hadn’t landed in their bones.",
+        "A donor loves two charities: Charity A says $50 trains one teacher who reaches 30 students. Charity B says $50 funds malaria nets that prevent one death per 300 nets on average. The donor feels closer to the teacher. The numbers for nets are messy and big. So they give to A. If asked to pick at scale—$50,000—the donor still splits the same way, despite massive differences in expected impact in some contexts. The scale never gets a seat at the table."
+      ]
+    },
+    {
+      "heading": "Climate communication: Scope Neglect",
+      "paragraphs": [
+        "A team spends two weeks hardening a microservice that serves 1% of traffic because a VP uses that feature. Another service, which handles billing for every customer, has two single points of failure. Everyone knows it’s ugly. But no one feels the size of the blast radius until a major outage refunds a quarter’s revenue. Scope neglect coupled with politics and access can sink a quarter faster than a single nasty bug.",
+        "Messages like “save the planet” feel good but vague. “Save this coastline” moves people. Both can trigger action, but the scale of climate risks rarely maps to proportional behaviors. People recycle religiously—helpful but small—and ignore home insulation or vehicle choices that dwarf the recycling impact. It’s not hypocrisy. It’s scope neglect meeting action bias. We do what feels close, not what scales."
+      ]
+    },
+    {
+      "heading": "How to recognize/avoid it",
+      "paragraphs": [
+        "A PM knows a legacy feature has 2% monthly active usage. Another has 0.2%. Both are noisy to remove, with vocal users. The team argues as if both are equally untouchable. In reality, the tenfold difference matters. They delay both sunsets, shipping nothing. Six months later, they’re still maintaining two features with 11.5x combined upkeep cost. The numbers were clear. The social discomfort leveled the field.",
+        "You can’t brute-force yourself into caring in proportion to scale. Feelings saturate. But you can design your decisions so scale shows up on paper and moves the levers anyway. Think of it like eyeglasses for your judgment."
+      ]
+    },
+    {
+      "heading": "Use order-of-magnitude checks",
+      "paragraphs": [
+        "Turn every claim into “per X” and “per $.” If someone says, “We can help 5,000 families,” ask, “At what cost per family? What benefit per family?”; Translate benefits into the same unit when you compare options: dollars, hours saved, lives affected, defects prevented, carbon reduced. Pick a main unit. Keep it boring. Write it big.",
+        "Before you debate, ask, “Is this a 1x, 10x, or 100x thing?” If it’s a 10x or 100x, consider special handling: escalation, separate meeting, or automatic trigger; Treat 10x differences as a flag. They’re rare and important. If a 10x sits next to a 1.2x, don’t give them equal airtime."
+      ]
+    },
+    {
+      "heading": "Calibrate with quick Fermi estimates",
+      "paragraphs": [
+        "Do rough math in the room. Use back-of-the-envelope calculations. Be wrong fast, then refine; Example: “If our new onboarding saves each user 2 minutes, and we have 1 million signups, that’s 2 million minutes—about 33,000 hours. If our support line costs $30/hour and this cuts 10% of calls, that’s # When Numbers Go Numb: Scope Neglect and the Strange Case of 2,000 vs. 20,000. Anchoring: The first number we see can freeze our estimate. If you first hear 2,000, later hearing 20,000 may not move you much (Tversky & Kahneman, 1974).",
+        "Affect heuristic: Feelings steer judgments of risk and value. If something feels good or bad, we rate it accordingly, regardless of its magnitude (Slovic et al., 2004). Unit bias: The tendency to treat one “unit” as the right amount—one plate, one module, one campaign—regardless of its size. It flattens scope. You’ll see these mingled in real decisions. When in doubt, return to units, denominators, and orders of magnitude."
+      ]
+    },
+    {
+      "heading": "Weekly “tenfold” drill",
+      "paragraphs": [
+        "You asked for a checklist. Here’s one you can print and stick near your monitor. Use it before you commit money, time, or reputation. If you check seven or more boxes, you’re beating most rooms. Knowing about scope neglect helps, but practice changes behavior. Put these drills on your calendar.",
+        "Pick any metric you care about—users, revenue, patients, miles biked. Ask: what would I do if it doubled? What if it grew 10x? Write three changes you’d make. Share with your team. You’ll find fragile parts before they break."
+      ]
+    },
+    {
+      "heading": "Bring kids in",
+      "paragraphs": [
+        "Require two slides in every pitch: The story: one person, one case, one use; The scale: per-unit numbers and a graph across 1x, 10x, 100x with the same axes. This ritual curbs both cold math and hot anecdotes. Create a shared doc with thresholds for common actions: scale ads, hire, sunset, rebuild, incident-severity triggers. When a decision is hot, you’ll lean on it. Once a month, pick a spend. Reverse engineer cost per outcome. If you don’t know the outcome, that’s the whole outcome of the hour.",
+        "Ask a child: would you rather save 2 birds or 20? Then ask what they’d trade to do it. Kids can grasp scope if you use concrete chunks. If you can’t explain it to a nine-year-old, your team probably can’t feel it either."
+      ]
+    },
+    {
+      "heading": "Building guardrails into tools and culture",
+      "paragraphs": [
+        "Scope neglect is a design problem as much as a human problem. You can build systems that put scope on the dashboard instead of buried in a footnote. Dashboards: highlight per-unit stats. Bold the denominator. Add “10x alert” flags for metrics that cross an order of magnitude. Docs: add a “Scale impact” section to product specs and incident reports. Provide a template: current scale, 10x scale, what breaks, what cost. Hiring: screen for candidates who do Fermi estimates out loud. Give them a problem that invites scope thinking.",
+        "Postmortems: include “Where did scope mislead us?” as a standard reflection item. Budgeting: allocate in ranges tied to unit economics. Example: “Spend is 5–10% of LTV” rather than a fixed number. Scale follows reality. Training: short workshops on unit thinking, visual scaling, and error bars. People like the practice once they see it save time."
+      ]
+    },
+    {
+      "heading": "Is scope neglect always bad?",
+      "paragraphs": [
+        "Our emotional response saturates quickly. One vivid case triggers strong feelings; adding more cases barely adds more feeling. Cognition can correct, but only if you slow down and make the scale explicit (Hsee & Rottenstreich, 2004). Also, we use proportions to judge, not absolutes, so large totals blur unless you convert them to meaningful chunks.",
+        "No. Emotion saturation is efficient. If you lived with proportional feelings to all suffering, you’d freeze. The goal isn’t to feel ten times more for ten times more harm. The goal is to allocate resources in rough proportion to impact. Keep your heart for stories. Use your head for scale."
+      ]
+    },
+    {
+      "heading": "How can fundraisers respect scope while keeping campaigns human?",
+      "paragraphs": [
+        "Start with a story to honor the human. Then say, “Let’s make sure we do the most good we can.” Flip to per-unit numbers. Show the same axes for comparisons. Invite a quick estimate. You’re not killing the narrative. You’re anchoring it to a fair system. Ask two questions: “What’s the denominator?” and “Is this a 1x, 10x, or 100x difference?” If people can’t answer, you’re probably making vibe-driven choices. Pause for a five-minute estimate and a single slide with a scale graph.",
+        "Pair one identifiable story with clear cost-effectiveness. Example: “This is Lina. A $4 net protects children like her. Every $4,000 prevents about 13 deaths in communities like hers.” Offer tiers tied to real units. Don’t hide the math. People appreciate clarity when you don’t shame them with it."
+      ]
+    },
+    {
+      "heading": "How can I train myself to feel scope better?",
+      "paragraphs": [
+        "In specs, include “Scale impact at 10x” and “Per-user cost.” In reviews, require side-by-side charts with shared axes. Add pre-commit thresholds for sunset and scale-up decisions. Run quarterly stress tests: double key metrics in staging and note what fails. Yes. Headlines and images focus on single stories. That wins attention but flattens scale. Counter by seeking denominator-aware reporting, reading absolute numbers next to rates, and comparing across the same time windows. If an article won’t show denominators, be cautious.",
+        "Use tangible analogies: stadiums for people, city blocks for carbon, hours for time. Keep a “numbers notebook” with conversions you like. Keep asking, “What if this were ten times bigger?” Practice once a week. Your gut won’t fully catch up, but it’ll stop ignoring orders of magnitude."
+      ]
+    },
+    {
+      "heading": "Is there a way to use scope to motivate, not numb?",
+      "paragraphs": [
+        "Scope neglect is not feeling the change in scale even when you know it. Denominator neglect is missing the denominator altogether and thus misreading a stat. You can fix denominator neglect by adding “out of how many.” You fix scope neglect by turning numbers into units and decisions that scale with them.",
+        "Yes. Chunk big goals into nested, meaningful milestones. “We’ll fund one clinic per month,” not “We’ll fix healthcare.” Show cumulative progress bars that tick in human-sized units. Celebrate per-unit wins and periodically step back to show the larger curve."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Scope Neglect",
+      "paragraphs": [
+        "Scope neglect isn’t a moral failing. It’s a sensor limit. We feel the first spark. The bonfire beyond that looks like more of the same light. If you run a team, a household, a city, or your own Tuesday afternoon, that gap can cost you. You’ll overbuild where a story feels close and underinvest where a number stays faceless. You have tools. Name the unit. Check the denominator. Mark 10x when you see it. Draw the same axes. Set thresholds before the room heats up. Tie your heart to one person and your plan to the math. None of this kills empathy. It rescues it from flattening when the stakes rise.",
+        "Numbers can numb. They can also steer. Let’s give them the wheel when scale decides the road. References (select): Desvousges, W. H., Mathews, K. E., & Train, K. (1993). “Measuring Nonuse Values: An Experimental Evaluation of Accuracy.”; Fetherstonhaugh, D., Slovic, P., Johnson, S. M., & Friedrich, J. (1997). “Insensitivity to the value of human life: A study of psychophysical numbing.”; Hsee, C. K., & Rottenstreich, Y. (2004). “Music, Pandas, and Muggers: On the Affective Psychology of Value.”; Kahneman, D. (2011). Thinking, Fast and Slow; Slovic, P. (2007). “If I look at the mass I will never act.”; Small, D. A., Loewenstein, G., & Slovic, P. (2007). “Sympathy and callousness: The impact of deliberative thought on donations to identifiable and statistical victims.”; Tversky, A., & Kahneman, D. (1974). “Judgment under Uncertainty: Heuristics and Biases.”."
+      ]
+    }
+  ],
+  "checklist": [
+    "Name the unit for comparison",
+    "Write the per-unit cost and benefit",
+    "Confirm the denominator for every stat",
+    "Label the scale difference: 1x/10x/100x",
+    "Sketch a quick Fermi estimate",
+    "Visualize with the same axes",
+    "Set or check pre-commitment thresholds",
+    "Ask what breaks at 10x",
+    "Assign a scale red team for the decision",
+    "Decide how feeling and math will each influence the call",
+    "Note one action you’d take if the numbers doubled overnight",
+    "Define the unit of comparison"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "cognitive-bias-money-illusion",
+  "reviewedAt": "2026-09-16",
+  "reviewStatus": "unreviewed-legacy",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-money-illusion",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-money-illusion/content.tsx",
+  "originalPublishedAt": "2025-09-01T12:51:43.162Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "Money Illusion: When Bigger Numbers Trick Your Wallet",
+  "lede": "Last spring, a friend texted me from a sidewalk cafe: “I got a 5% raise! Drinks on me.” The photo showed a cappuccino with a tuft of foam like a tiara. I typed “Congrats!” then hesitated. Inflation had jumped 7% that quarter. On paper, his paycheck was bigger. In reality, it bought fewer cappuccinos than before. He was celebrating a larger number that felt like more money—but wasn’t.",
+  "sections": [
+    {
+      "heading": "What Is Money Illusion and Why It Matters",
+      "paragraphs": [
+        "Money illusion is when we judge wealth and prices in nominal terms (the sticker numbers) and forget the real terms (what those numbers can buy after inflation, fees, and context). It’s a mental shortcut that makes “10,000” feel richer than “9,800,” even if the second buys more. Money illusion happens when your brain mistakes face value for true value. You see numbers, not purchasing power. It shows up in raises that don’t beat inflation, house prices that “skyrocket” while real affordability barely moves, and “high” interest rates that still lose to inflation.",
+        "Economists have prodded this phenomenon for a century. Irving Fisher wrote about the difference between nominal and real interest rates in the 1920s. Decades later, Shafir, Diamond, and Tversky (1997) ran experiments showing people prefer a 2% raise with 4% inflation over a 2% pay cut with 0% inflation, even though both leave you 2% worse off in real terms. The numbers look kinder, so they feel better. Why it matters: It quietly erodes your standard of living. A “raise” that lags inflation shrinks your life while you’re smiling at your payslip; It distorts decisions. You keep cash sitting at “5% APY” while inflation barrels at 7%—and call yourself prudent; It feeds price bubbles. If people chase big nominal gains, they can ignore the real cost of debt, taxes, and inflation until the bill arrives."
+      ]
+    },
+    {
+      "heading": "The Condo That Doubled and Stood Still",
+      "paragraphs": [
+        "A furniture store advertises “0% APR for 12 months.” The salesperson smiles. The couch shows # Money Illusion: When Bigger Numbers Trick Your Wallet Twelve years ago, Mina bought a condo for $200,000. She sells for $400,000 and high-fives her agent. But property taxes doubled, HOA fees ballooned, and appliances needed replacing.",
+        "Meanwhile, general prices climbed 35–40%. After costs, her real gain is far smaller than the clean, triumphant double. If she’d put 20% down, leveraged equity amplifies her return—but the headline price still overstates the story you tell at dinner. The bigger number wins the toast."
+      ]
+    },
+    {
+      "heading": "The 401(k) That Grows and Stalls",
+      "paragraphs": [
+        "You switch to a supermarket with low prices printed in big fonts on shelf tags. You feel thrifty. At checkout, the bill seems high. Later, you notice that the rice is sold in 3.5 lb bags instead of 5 lb, and the cereal boxes slimmed down by an ounce. You paid less per item, more per ounce. “Shrinkflation” plays a duet with money illusion: smaller packages keep nominal prices close to familiar anchors while real value slides.",
+        "Your retirement balance jumps 12% in a year. You exhale. Then you deflate the numbers by inflation, subtract your contributions, and net out taxes you’ll owe later. Suddenly, “up 12%” becomes “barely beat inflation” or worse. You were counting balloons; you needed to count groceries."
+      ]
+    },
+    {
+      "heading": "A Tale of Two Raises",
+      "paragraphs": [
+        "A 4% nominal yield on a tax-exempt bond looks respectable. Inflation at 5% means the real yield is negative. If your tax bracket is low, a taxable bond at 5.5% could offer a better real after-tax return. But “tax-free 4%” reads as virtuous. Money illusion teams up with framing. Imagine two offers: Offer A: 2% raise during 0% inflation; Offer B: 5% raise during 6% inflation.",
+        "We watch people beam at Offer B. It sounds bigger. It’s smaller in real terms. The funny part is how the stories we tell ourselves line up: “My company values me” versus “They tightened the purse strings.” The story follows the number, not the reality."
+      ]
+    },
+    {
+      "heading": "Taxes That Sneak Through Brackets",
+      "paragraphs": [
+        "You land in Tokyo, change # Money Illusion: When Bigger Numbers Trick Your Wallet You snag a 30-year mortgage at 3% when inflation is 5%. On paper, it’s “3% debt.” In real terms, inflation nibbles your payment every year. That’s good for you, bad for your lender. Now reverse it: you take a 6.5% mortgage when inflation falls to 2%. Your payment is heavy in real terms. People love lower nominal rates, but the real deal depends on inflation’s shadow.",
+        "If tax brackets aren’t perfectly indexed to inflation, nominal raises shove you into higher bands. Politicians cut taxes in nominal terms; inflation claws some back. Economists call this “bracket creep.” You get a letter with a new withholding table and feel neutral because the digit on the check still climbs. Meanwhile, your take-home power inches down a staircase. Yes, that's money illusion’s cousin. You know $9.99 is basically # Money Illusion: When Bigger Numbers Trick Your Wallet",
+        "Modigliani and Cohn (1979) argued that investors sometimes capitalize earnings using nominal interest rates, undervaluing equities when inflation is high. Whether you buy that paper’s full claim, the core caution stands: mixing nominal cash flows with real discount rates (or vice versa) scrambles valuation. Money illusion isn’t just for shoppers—portfolio managers can slip too."
+      ]
+    },
+    {
+      "heading": "Why Our Brains Fall for It",
+      "paragraphs": [
+        "Numbers don’t grow in the wild. Our brains evolved to notice fruit on trees, not CPI prints. So we lean on shortcuts. We prefer simple cues. Bigger number = more. It’s quick and often good enough, like choosing the larger pile of shells; Losses feel worse than gains. A nominal cut in salary stabs, even if stable prices mean your life doesn’t shrink. So companies deliver nominal raises that lag inflation and avoid open revolt; We anchor on familiar prices. “Coffee costs around $3.”",
+        "That anchor sticks, so a $4.50 price feels like a ripoff even if wages rose and beans doubled. Or we anchor on our salary’s headline figure and ignore what groceries did; We avoid tedious conversions. Deflating numbers takes time, tools, and discipline. In daily life, we go by vibe. Vibe loves nominal. Knowing this isn’t a cure, but it helps us build guardrails. You don’t need an economics degree. You need habits that put real terms in your line of sight."
+      ]
+    },
+    {
+      "heading": "A Short Ritual for Big Decisions",
+      "paragraphs": [
+        "When you face a pay offer, a loan, an investment, or a major purchase: 1) Ask, what’s the inflation rate? Use the latest CPI or a local index for your city if you can. Even a rough number helps. 2) Convert to real terms. For growth: Real = Nominal – Inflation (approximate). For interest rates, use the Fisher equation if precision matters: (1 + nominal) / (1 + inflation) – 1. 3) Adjust for taxes and fees. What do you keep after taxes? What drips out as maintenance, HOA, management fees, bid-ask spreads, or platform charges? 4) Compare apples to apples. Match units and time frames. Price per ounce, cost per mile, yield after inflation, rent per square foot, salary per hour actually worked.",
+        "5) Stress-test the denominator. If the price is per month, per user, per seat, per gigabyte, or per mile, map it to your real usage. Pay for your life, not their pricing scheme. 6) Translate into days of life. How many hours do you work to earn this, after tax? Sometimes that gut-check beats spreadsheets. 7) Sleep on it. Money illusion thrives on hurry."
+      ]
+    },
+    {
+      "heading": "Everyday Tactics That Work",
+      "paragraphs": [
+        "Set your default screens in real terms. In your brokerage app, chart inflation-adjusted returns where possible. In a spreadsheet, deflate long-term expenses by a realistic inflation assumption. If your tools don’t offer real terms, make a one-click calculator you can reuse. Negotiate in real pay. If inflation runs 5%, a “5% raise” is a freeze. Counter with “I’d like a 3% real raise, so 8% nominal given inflation.” The phrasing shifts the frame. People hate it at first. Then they respect it.",
+        "Quote mortgage cost in real dollars. “At 4% nominal with 3% inflation, the real cost is ~1% before taxes.” Or reverse, “At 6.5% with 2% inflation, the real cost is ~4.4%.” The better the context, the calmer your decision. Use unit prices. Groceries, fuel, cloud storage, labor—per ounce, per gallon, per GB, per hour. Unit price slices through packaging tricks and marketing gloss. Photograph shelf tags that help, or add a quick calculator to your phone’s home screen.",
+        "For investments, state targets in real terms. “I’m aiming for 4% real return over 10 years.” This holds you steady when nominal returns look exciting and inflation eats the snack you just bought. Plan raises with purchasing power. Each year, update your budget using expected inflation. If you’re a manager, advocate for cost-of-living plus merit as two lines, not one. Call things what they are. Auto-check taxes. When you hear “tax cut,” look for the bracket indexing policy. When you get a “cost-of-living adjustment,” check if it’s flat or progressive, and what happens to benefits thresholds.",
+        "Treat “0% APR” like a puzzle, not a gift. Ask: what’s the real cost of cash over time, what’s the back-interest risk, and could I earn a real return elsewhere safely? If the math is thin, choose the path that preserves flexibility. We built these into our team’s habits—and yes, our Cognitive Biases app nudges this kind of thinking when you need it most."
+      ]
+    },
+    {
+      "heading": "Recognizing Money Illusion in the Wild: A Personal Field Guide",
+      "paragraphs": [
+        "Let’s walk through a week and score the traps. Monday: HR emails a salary update. It says: “Great news! 4% increase.” Your browser tab whispers: “Inflation 4.6%.” You type, “Thanks—can we discuss a COLA to match inflation plus merit for real growth? I’m aiming for 2% real.” You feel awkward for two minutes. Then you feel solid. Tuesday: Your phone plan advertises “Unlimited for $49.” The small print adds regulatory fees, taxes, and a device installment. All-in is $61. Compare the all-in number per GB you actually use. Downgrade a tier. Savings: invisible until you tally the real.",
+        "Wednesday: Grocery run. The “family pack” detergent is # Money Illusion: When Bigger Numbers Trick Your Wallet Thursday: Your bank offers 4.75% on a CD. Inflation expectations are 2.5% over the next year. That’s roughly a 2.2% real return before taxes. Your tax bracket is 24%. After tax, real is around 1.7%. Does that beat a Treasury? Check. Decide with eyes open. Friday: A used car dealer posts “No interest for 18 months.” The price is # Money Illusion: When Bigger Numbers Trick Your Wallet",
+        "Saturday: You skim your investment dashboard. Switch the chart to “real return” view if your platform has it. If not, toss your returns into a quick spreadsheet with CPI deflators. You squint at last year’s green line. It turns gray. Real is calmer, and that calm helps you avoid dumb moves. Sunday: Coffee with your dad. He says, “When I started, a house cost $80,000.” You smile. You say, “Yeah, but wages, rates, land, zoning, inflation. Apples to apples, how many years of median salary was that?” You look up a chart. You talk about neighborhoods, not era envy. Nobody storms out. Progress."
+      ]
+    },
+    {
+      "heading": "Related or Confusable Ideas",
+      "paragraphs": [
+        "Money illusion sits next to a few neighbors. You’ll hear these in the same breath. Anchoring. You fixate on a familiar price or number (“Gas should be $3”) and judge everything relative to it. Anchors can lock money illusion in place—if your anchor is nominal, your comparisons will be too. Framing. The same outcome feels different depending on presentation. “5% raise in 6% inflation” versus “1% real pay cut” changes how you feel and act. Framing doesn’t create the illusion; it steers it.",
+        "Denomination effect. People spend large-denomination bills more reluctantly than small ones and treat currencies with many zeros as “play money” (Raghubir & Srivastava, 2009). It overlaps with money illusion: bigger numbers distort feelings of wealth. Left-digit bias. We cling to the first digit. $2.99 feels closer to $2 than $3. In salaries, $99,000 feels much bigger than $98,500. This bias twists our nominal perceptions before we even reach “real versus nominal.” Fairness preferences. People judge nominal pay cuts as unfair, even if real pay stays flat, pushing employers to use raises that trail inflation instead of cuts during downturns (Shafir et al., 1997). Fairness isn’t an illusion, but it can drive policies that ride money illusion.",
+        "Inflation neglect. Sometimes we forget inflation altogether. Money illusion is broader—it covers any time we mistake sticker numbers for value, including ignoring package size, taxes, and fees. Inflation neglect is a specific, common case. Projection bias. We assume current conditions (like today’s inflation) will persist. That can distort real-versus-nominal decisions, like locking long loans or investments at the wrong time. Hyperbolic discounting. We overvalue near-term gains. A nominal bonus now can trump a larger real benefit later. It’s not the same as money illusion, but when combined, they make small immediate numbers feel huge and big future numbers feel small."
+      ]
+    },
+    {
+      "heading": "Building Your Anti-Illusion Toolkit",
+      "paragraphs": [
+        "Tools and rhythms beat willpower. Here’s how to make real thinking effortless. Create a one-minute real calculator. In your notes app or spreadsheet, set fields for nominal rate, inflation, tax rate, fees. Spit out real after-tax return. Do the same for salary: gross, inflation, tax changes, benefits, commute time. You run it on autopilot before you say yes. Bookmark an inflation source you trust. National CPI is a start; city-level data is better if you live in a hotspot. Don’t obsess monthly. Glance quarterly. Your guardrails update themselves.",
+        "Deflate big goals annually. Retirement, college, a house down payment—express them in today’s dollars. Adjust once a year for inflation. It stops goalposts from sprinting across the field. Measure by hour, not month. Convert subs, loans, and groceries into “hours of after-tax work.” Nothing clarifies “Do I want this?” like “This is 3.5 hours of my Tuesday.” Practice price normalization when traveling. On day one, buy a common basket—water, bread, coffee. Set a mental baseline in local currency. The fog clears faster than you expect.",
+        "For businesses: pay attention to real wages. If you can’t afford real raises, be honest. Tie incentives to real goals, not just nominal revenue. If your prices rise with input costs, share how and why. Clarity preserves trust better than glossy numbers. For investors: keep a real benchmark. If your policy statement says “CPI + 4%,” your decisions become simple. Stick with it through headlines. Your future self will send snacks. Teach your kids. Give them a “shrinkflation scavenger hunt.” Weigh cereal. Compare ounce prices. Pay a small bonus when they catch a trick. Nothing rewires your own brain like teaching someone else. We’re tucking these into our Cognitive Biases app as small, timely nudges—like popping a “What’s the real?” bubble when you screenshot a loan ad."
+      ]
+    },
+    {
+      "heading": "Wrap-Up: Bigger Numbers, Smaller Lives—Unless You Fight Back",
+      "paragraphs": [
+        "We’ve all felt the warm glow of a bigger number. A new salary. A green chart. A receipt that looks similar to last month’s, even though the cereal box shrank. Money illusion strokes that glow. It makes us grateful for raises that aren’t raises and proud of “returns” that just tread water. That glow is expensive. The fix isn’t to become a cynic or a human calculator. It’s to build small habits that let real value cut through noise. Ask “What’s the real?” Deflate. Compare units. Count hours of your life. Make the math visible enough that your feelings can catch up to reality. When your attention moves from numbers to purchasing power, your choices follow. Your life stops shrinking in the shadows.",
+        "Then you’ll look again. You’ll smile. And you’ll buy the couch you can actually afford, take the raise that moves your life, and leave the glowing number to someone else’s story. Fisher, I. (1928); Shafir, E., Diamond, P., & Tversky, A. (1997); Modigliani, F., & Cohn, R. (1979); Raghubir, P., & Srivastava, J. (2009). References (lightly):"
+      ]
+    }
+  ],
+  "checklist": [
+    "Look up current inflation before big financial decisions",
+    "Convert raises, returns, and interest rates to real terms",
+    "Compare unit prices and standardized metrics (per ounce, per square foot, per mile)",
+    "Include taxes, fees, and maintenance in every headline number",
+    "Use time-to-earn as a gut-check: hours of work after tax",
+    "Deflate long-term plans: retirement, college, rent escalations",
+    "Negotiate salary using real pay language",
+    "Beware “free” financing; check deferred interest and real opportunity cost",
+    "Track your net worth in real terms at least quarterly",
+    "Slow down: sleep on choices with large nominal numbers",
+    "Check inflation before any major money decision",
+    "Convert nominal to real: subtract inflation or use the Fisher equation"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. This concept does not yet have a current evidence review, so treat the article as the restored 2025 original: useful explanation and practice, but not a reviewed scientific claim. When an evidence review is published for this concept, it will take precedence over this text."
+}
