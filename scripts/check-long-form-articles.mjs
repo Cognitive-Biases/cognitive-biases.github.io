@@ -3,6 +3,8 @@ import { resolve, join } from "node:path";
 
 const SITE = "https://cognitive-biases.github.io";
 const MIN_WORDS = 650;
+const MIN_PARAGRAPH_WORDS = 35;
+const MIN_SECTION_WORDS = 90;
 const biases = JSON.parse(await readFile("data/biases.json", "utf8")).filter((bias) => bias.published);
 const articlesDoc = JSON.parse(await readFile("data/long-form-articles.json", "utf8"));
 const everydayDoc = JSON.parse(await readFile("data/everyday-guides.json", "utf8"));
@@ -46,7 +48,13 @@ for (const entry of articlesDoc.entries || []) {
     if (!section.heading || wordsIn(section.heading) < 3) throw new Error(`${entry.slug}: section ${index + 1} needs a useful heading.`);
     if (!Array.isArray(section.paragraphs) || section.paragraphs.length < 2) throw new Error(`${entry.slug}: section ${index + 1} needs at least two paragraphs.`);
     for (const [paragraphIndex, paragraph] of section.paragraphs.entries()) {
-      if (wordsIn(paragraph) < 45) throw new Error(`${entry.slug}: section ${index + 1}, paragraph ${paragraphIndex + 1} is too thin.`);
+      if (wordsIn(paragraph) < MIN_PARAGRAPH_WORDS) {
+        throw new Error(`${entry.slug}: section ${index + 1}, paragraph ${paragraphIndex + 1} is below the ${MIN_PARAGRAPH_WORDS}-word paragraph floor.`);
+      }
+    }
+    const sectionWordCount = wordsIn(section.paragraphs.join(" "));
+    if (sectionWordCount < MIN_SECTION_WORDS) {
+      throw new Error(`${entry.slug}: section ${index + 1} has ${sectionWordCount} words, below the ${MIN_SECTION_WORDS}-word section floor.`);
     }
   }
   if (!Array.isArray(entry.checklist) || entry.checklist.length < 5) throw new Error(`${entry.slug}: decision checklist is too thin.`);
@@ -83,4 +91,4 @@ for (const entry of articlesDoc.entries || []) {
 }
 
 if (!seen.size) throw new Error("No long-form article entries were found.");
-console.log(`Long-form article check passed: ${seen.size} canonical pages, each >= ${MIN_WORDS} words, evidence-gated and rendered before the evidence review.`);
+console.log(`Long-form article check passed: ${seen.size} canonical pages, each >= ${MIN_WORDS} words with section-level depth, evidence gating and rendered Article schema.`);
