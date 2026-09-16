@@ -1,0 +1,146 @@
+{
+  "slug": "cognitive-bias-value-selection-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/cognitive-bias-value-selection-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/cognitive-bias-value-selection-bias/content.tsx",
+  "originalPublishedAt": "2025-09-01T13:16:20.819Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Number Trap: Value Selection Bias and the Comfort of the Wrong Metric",
+  "lede": "We were in a sprint review, staring at a dashboard that burbled green. Click-through rate up 18%. Sessions up 23%. Someone high-fived. Someone else asked about revenue. Silence. Then a familiar move: “Let’s not get bogged down. The trend is up.” The team clung to the only good numbers they had and used them as a shield. Two weeks later, revenue in that channel was down 12%. We’d optimized our way into a hole.",
+  "sections": [
+    {
+      "heading": "What is Value Selection Bias — and why it matters",
+      "paragraphs": [
+        "Value selection bias is when you latch onto a number because it’s available, familiar, or flattering—even if it doesn’t actually apply to the decision you’re making. In the research literature, the label describes a narrower pattern: people working on probability problems grabbing a salient number as their answer. This article uses it in the broader, everyday sense. Value selection bias is not about cherry-picking data to deceive others (though that happens). It’s subtler. You pick a measurable value that looks relevant and treat it like the right yardstick, even when the context shifts, the measurement doesn’t map to your goal, or the number hides more than it reveals. You pick steps instead of fitness. Followers instead of influence. Speed-to-close instead of lifetime value. GPA instead of capability. You don’t mean to. It’s quick. It’s shared. It’s on the dashboard. And in a pinch, any number beats no number—until it doesn’t.",
+        "Why it matters: You reward the wrong behavior. Teams optimize what’s measured. If the measure is misaligned, you incentivize gaming or busywork. Goodhart’s Law: when a measure becomes a target, it ceases to be a good measure (Goodhart, 1975; Strathern, 1997); You build confidence on shaky ground. Numbers can feel objective. The wrong number makes the wrong decision look “data-driven.”; You miss the story. A metric is a shadow on the wall. You need the object that cast it; You waste cycles. You run experiments that move a proxy and stall your real goal; You lose trust. Stakeholders smell vanity metrics. Customers feel misaligned incentives. Value selection bias thrives when pressure is high, data literacy is uneven, and dashboards overflow. It matters because momentum compounds—toward good or harm."
+      ]
+    },
+    {
+      "heading": "1) “Growth” that starved revenue",
+      "paragraphs": [
+        "Stories stick better than theory. Here are places we’ve seen value selection bias show up and burn time, money, or morale. A B2C app saw daily active users sliding. The team overhauled onboarding. They tracked the obvious: downloads, signups, time to first action. Results looked great—signups up 30%, DAU up 15%. Revenue per user down 18%. Why? The onboarding changes front-loaded low-intent users who churned after a day.",
+        "The team selected “signups” because it moved fast and was easy to watch. But the real target was net revenue. They optimized a proxy without checking whether it linked to the target in the new funnel. The relationship had broken. What would have helped: a KPI charter stating that onboarding initiatives pass only if 7-day revenue per acquired user stays flat or improves, with a guardrail on long-term retention."
+      ]
+    },
+    {
+      "heading": "2) The “Perfect” GPA Hire and 3) the Gym Step Count",
+      "paragraphs": [
+        "A startup filtered candidates by GPA to speed hiring. The founder believed GPA showed “grit, smarts, effort.” A few months in, they struggled with messy problem-solving under ambiguity. The GPA filter brought in academic performers, not necessarily people who could perform in a scrappy environment. GPA correlated with performance in a structured context. The job was unstructured. Wrong yardstick, wrong hires. What would have helped: defining job-relevant signals (portfolio depth, prior ambiguous achievements, small work samples) and treating GPA as a weak, context-limited signal.",
+        "Devon walked 12,000 steps daily, proud of the number. Resting back pain worsened; stamina didn’t improve. Steps are a volume metric. Devon needed strength work and mobility. The step count was available and gamified. It wasn’t the right measure for the goal: reduce pain and increase capacity. When Devon switched to tracking “pain-free range of motion,” “twice-weekly strength sessions,” and a 1-mile time trial, progress finally emerged."
+      ]
+    },
+    {
+      "heading": "4) Teaching to the Test and 5) the A/B Test That “Won” and Then Lost",
+      "paragraphs": [
+        "A district tied teacher bonuses to standardized test scores. In months, test prep ballooned. Writing workshops disappeared. Scores ticked up; critical thinking plummeted. The scores measured a narrow slice of learning. Targeting them distorted the classroom, a classic case of Campbell’s Law (Campbell, 1979). The metric became the map. The terrain suffered. A team ran an A/B test on a pricing page. Variant B boosted trial sign-ups by 22%.",
+        "They shipped. Six weeks later, churn and refund rates were higher, CAC higher, lifetime value lower. The test’s success metric was trials started. The business needed net revenue after 90 days. The short window and chosen metric didn’t capture long-term fit. The number was clean and quick. It wasn’t relevant to the real outcome. Fix: pre-register evaluation windows; run holdouts; use composite metrics that account for trial-to-paid conversion and 90-day retention."
+      ]
+    },
+    {
+      "heading": "6) Patient Readmissions and 7) Code Velocity Without Quality",
+      "paragraphs": [
+        "A hospital focused on reducing 30-day readmissions. Readmissions dropped. Mortality rose. Some patients who would have been readmitted died outside the window, or were kept longer in ER observation to avoid classification. The measure shaped behavior; the behavior missed the point. Quality of care is messy. The metric offered a false lighthouse. Better: multiple measures—patient-reported outcomes, condition-specific mortality risk-adjusted, and readmissions—plus audits of coding practices.",
+        "An engineering leader tracked tickets closed per week. Output exploded. So did bug reports and rework. The team selected a count over a rate that included quality. They celebrated speed while eroding value. The right lens would include escaped defects, cycle time to customer value, and time-to-restore, not just throughput."
+      ]
+    },
+    {
+      "heading": "8) Followers vs. Influence; 9) Sales “Speed”; 10) the Budget App Glow",
+      "paragraphs": [
+        "A nonprofit bragged about 100k new followers. Donations didn’t budge. Volunteers didn’t rise. They had inflated reach, thin engagement. The metric they loved didn’t map to their mission outcomes. Switching to “email signups from organic social,” “volunteer commitments,” and “recurring donation starts” grounded strategy. A sales org gamified time-to-close. Reps pushed quick discounts to hit speed goals, pulling future pipeline forward at lower margins. The metric rewarded bad trades. A better target is blended: speed weighted by margin and 6-month net retention.",
+        "Tony tracked daily spending meticulously. The graph improved. Credit card debt didn’t. He celebrated the tracked category and ignored interest and irregular expenses. When he switched to tracking “debt principal down per month” and “3-month average savings rate,” progress became honest and sustainable."
+      ]
+    },
+    {
+      "heading": "11) Hiring for Years, 12) Safety Theater, and a Way to Think About Proxies",
+      "paragraphs": [
+        "A government RFP mandated “5+ years with Tool X.” Teams obliged. They got veterans of a tool, not of the problem. Years-of-experience is a convenient proxy when evaluating at scale. It’s only valid when the tool’s use is stable and directly predictive. Often, it’s a lazy gate that filters out capable talent. An airline subcontractor celebrated “days since last incident.” Workers underreported near-misses. The number stayed pretty. Risk increased. Near-miss reporting drives learning; hiding them kills it. The metric nudged in the wrong direction.",
+        "Every metric is a proxy. A proxy is useful only if: It maps to the outcome you care about (construct validity); That mapping holds in your current context (external validity); You understand the time window and the lag between action and effect; You track side effects and guardrails so success on the proxy doesn’t quietly erode the goal. Value selection bias creeps in when you skip one of these checks because the number is easy, fast, or flattering."
+      ]
+    },
+    {
+      "heading": "A simple checklist to run in real life",
+      "paragraphs": [
+        "Use this before you adopt or celebrate a number. We keep a printed copy taped to the edge of our monitors. 1) What is the real outcome? Write it in plain language. If it’s “make customers successful and profitable,” say that. 2) What does this number actually measure? Units, scope, window. Count vs rate. Median vs mean. Denominator, not just numerator. 3) Why should this number predict the real outcome? Write the causal story. If you can’t, it’s a weak proxy. 4) Is the relationship still true here? New audience? New channel? New incentive? Check external validity.",
+        "5) What’s the right time window? Does the effect lag? If yes, your quick win might be a long-term loss. 6) What could go wrong if we target this? List at least two failure modes. Add guardrail metrics. 7) What context is excluded? Who or what is missing from the data? Unmeasured segments, quiet harms, delayed costs. 8) What number would change my mind? Define decision thresholds and “stop” conditions before you look. 9) Is it precise enough to matter? Confidence interval, variance, sample size. If the noise dwarfs the signal, don’t anchor on it.",
+        "10) How could this be gamed? Assume someone will. Design the metric so gaming backfires or is obvious. 11) Can we pair it? Use a two-metric rule—one for progress, one for health. 12) Do we have a “no number” plan? If the right metric is unavailable, say so. Use qualitative data and a time-boxed plan to build the right measure."
+      ]
+    },
+    {
+      "heading": "Day-to-day tactics that work",
+      "paragraphs": [
+        "Write KPI charters. For each key metric, document: definition, units, why it matters, when it breaks, guardrails, expected lag, and who owns it. Put this on the dashboard next to the number, not in a dusty wiki. Keep proxies on probation. Treat new metrics like interns. They prove themselves across contexts before they get authority. Use pre-mortems for metrics. Before you chase a number, ask: “It’s six months later and we hit it, but the business got worse. How?” Write the list. Add guardrails to prevent it.",
+        "Pair numbers with qualitative signals. If churn drops after you tighten cancellations, read support tickets and social threads. If your NPS rises, read the verbatim. Numbers tell you where; words tell you why. Scale slowly. Roll out changes to 10% first. Monitor the right outcomes. Hold out a control group. If a proxy stops predicting, you see it early. Disaggregate. Averages hide pain. Break metrics by segment, region, cohort. Simpson’s paradox is real. Let the story unfold in slices.",
+        "Anchor to rates and denominators. Counts mislead. “Bugs fixed: 100” is meaningless without “bugs introduced,” “users affected,” and “severity.” Reward integrity, not just green charts. Praise the person who says, “This number is up, but it doesn’t mean what we thought.” Build metric hygiene into rituals. In retros, ask: “Did any metric we used turn out to be the wrong yardstick? What did it cost?” Separate metrics by purpose. Leading indicators, outcome metrics, input metrics, health metrics. Don’t let a leading indicator become an outcome because it’s convenient.",
+        "Educate with small, vivid examples. Show the team how optimizing email open rates can crush deliverability, or how chasing pageviews can tank session quality. One vivid story beats a lecture. The number is… easy to move and flattering. It’s probably a vanity metric. Go deeper. The number is lagging. Don’t use it as a steering wheel. Pair it with a meaningful leading indicator you trust. The number is rare or noisy. You need more data or a longer window. Hold off on conclusions.",
+        "The number is a model output (e.g., “propensity score”) with low transparency. Double-check data drift. Validate often. The number is someone else’s KPI. Don’t inherit metrics without inheriting context. Borrow the logic, not the label."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "It’s easy to mix value selection bias with adjacent failure modes. Here’s how they differ and overlap. Goodhart’s Law. When a measure becomes a target, it gets gamed and stops being useful (Goodhart, 1975). Value selection bias often picks a measure that was never a good target to begin with. Goodhart describes what happens after you target it; value selection bias explains why you picked it. Campbell’s Law. The more a quantitative indicator is used for decision-making, the more it invites corruption pressures, distorting the process it monitors (Campbell, 1979). Same dance, different venue; Campbell focused on social indicators like education.",
+        "Metric fixation. The cultural obsession with measurement over judgment (Muller, 2018). Value selection bias is one kind of fixation: we fixate on the wrong number. Selection bias (sampling). Your dataset excludes key cases, skewing results. Value selection bias is about picking a metric; sampling bias is about who or what got measured. They can stack—choosing an invalid metric on a skewed sample is a double whammy. Survivorship bias. You only see winners. You draw conclusions that ignore failures. You might pick “features used by top users” without realizing many churned before they ever became “top.”",
+        "Base rate neglect. You ignore the broader prevalence. You celebrate a rare event lift without checking the base. “Fraud detection accuracy is 99%” is meaningless if fraud is 0.1% and false positives swamp the system (Kahneman, 2011). Simpson’s paradox. Trends reverse when you aggregate. You think Variant A wins overall; within segments, B wins. Aggregation disguises the truth. P-hacking. You torture data until it confesses. Lots of peeking and slicing. Value selection bias might push you to accept the first “significant” result that flatters your metric.",
+        "Overfitting. A model captures noise as if it’s signal. In practice, the model performs great in training and poorly in the wild. The same energy shows up when you craft a custom metric that perfectly fits last quarter and collapses next. McNamara fallacy. You measure what’s easy and ignore what matters. If something can’t be easily measured, you reason it doesn’t exist. Value selection bias feeds this fallacy."
+      ]
+    },
+    {
+      "heading": "Adopt metric portfolios",
+      "paragraphs": [
+        "No single number can carry your strategy. Use a balanced set: Objective metric. The thing you ultimately care about: revenue, patient health, safety incidents, student learning; Leading indicator. A believable early signal tied to the objective through a real causal link; Health guardrails. Quality, safety, and trust metrics that must not degrade; Input/activity metrics. Tasks you control, tracked for learning, not bragging.",
+        "For a subscription app: Objective: 6-month net revenue per acquired user; Leading indicator: second-week habit score (e.g., 3+ sessions of task completion); Health: NPS or CSAT, negative feedback ratio, refund rate; Inputs: experiment cadence, bug fix time, content drops."
+      ]
+    },
+    {
+      "heading": "Write Decision Stories and Use “Metric Intent Cards” in Dashboards",
+      "paragraphs": [
+        "Before chasing a metric, write a one-page pitch: what decision will this number unlock, in what timeframe, with what stakes? If you can’t point to a decision, it’s a vanity update. Cut it. Attach a short note to each top-line number: This measures…; It matters because…; It breaks when…; We’re watching with…",
+        "Example next to “Signup rate”: Measures: percent of visitors who create an account, 7-day window, excluding bots; Matters because: more signups should feed trials, but only if 7-day activation stays flat; Breaks when: channel mix shifts, incentives distort signups; Watching with: 7-day activation rate, 30-day ARPU."
+      ]
+    },
+    {
+      "heading": "Denominator Discipline, Sanity Checks, and Preserving Dissent",
+      "paragraphs": [
+        "If your slide has a count, ask for the rate. If it has a rate, ask for the denominator and the base rate. If you can’t get the denominator, your number may be decorative. Ask, “Does this scale make sense?” If your estimated market is larger than the human population, start over.",
+        "If your “time saved” exceeds waking hours, your math is wrong. It sounds obvious until you’re tired. Make it safe to say, “This metric isn’t it.” Rotate a “metric skeptic” role in meetings. Their job is to ask the hard questions without being a jerk. Celebrate the catches."
+      ]
+    },
+    {
+      "heading": "Test Measurement Invariance, Show Raw Traces, and Don’t Overreact to Green or Red",
+      "paragraphs": [
+        "If your metric changes definition across contexts, don’t compare directly. “Active user” in one product may require 3 actions; in another, 1. Either standardize or don’t trend them together. In research terms, you’re checking whether your measure means the same thing across groups or time. Graphs compress life.",
+        "Every so often, look at raw event streams, session replays, or actual support transcripts. Numbers get humbled by reality. Color sneaks past judgment. Frame trends with uncertainty bands. Add context: last quarter, peer benchmark, seasonality. A red delta on a tiny denominator shouldn’t drive a pivot."
+      ]
+    },
+    {
+      "heading": "A few compact case studies you can borrow",
+      "paragraphs": [
+        "A marketplace team linked search click-through to revenue. They redesigned cards to be bolder. CTR rose 25%. Sellers complained about low-quality inquiries. Revenue per click fell. The team switched to “revenue-weighted CTR” as the primary display metric and added “post-contact conversion” as a guardrail. The design changed again, with smaller boosts that actually paid. A hospital created a “comfort function” for palliative care, measured via short daily patient surveys. Staff stopped gaming pain scales to look better on “readmissions” and instead optimized for reported comfort. The numbers aligned with the mission. Readmissions didn’t move much; family satisfaction and nurse retention improved.",
+        "An engineering org moved from “tickets closed” to “customer-visible issues resolved within 7 days,” with “escaped defects” as a guardrail. Throughput decreased; morale and NPS climbed. The org kept a small “yak shaving” bucket to allow for necessary but invisible work. A bootstrapped SaaS company stopped celebrating “demo requests” and started tracking “sales-qualified demos scheduled within 48 hours.” They learned that speed mattered more than count. The marketing team adjusted campaigns to align with sales team availability. Demos dropped 10%. Revenue rose 18%."
+      ]
+    },
+    {
+      "heading": "Wrap-up: Put the number down, pick the truth up",
+      "paragraphs": [
+        "We’ve felt the warm glow of green charts. Numbers promise safety. They promise order. But the wrong number, worshiped hard, turns into a trap. Value selection bias sneaks in when the clock ticks loud, when pressure rises, when someone asks for “just one KPI.” It whispers, “Pick this. It’s right there.” You can choose better. Choose to name the real outcome. Choose to demand the denominator. Choose to tell the causal story and to admit when it broke. Choose guardrails. Choose to make room for things that don’t fit neatly into a cell. Numbers should serve the mission, not substitute for it.",
+        "If you’re holding a number tight right now, loosen your grip. Ask the annoying, simple questions. You might find what you really needed wasn’t a figure—it was a clearer view of the thing you care about. And then, sure, find the right number and make it sing."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write the real outcome in plain language",
+    "Define the metric: units, scope, window, denominator",
+    "State the causal link to the outcome",
+    "Validate external context and time lags",
+    "List failure modes; add guardrails",
+    "Predefine decision thresholds and stop rules",
+    "Use rates not counts; segment where it matters",
+    "Pair with qualitative signals and read real examples",
+    "Sanity-check orders of magnitude and variance",
+    "Revisit after changes; retire metrics that mislead"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"supported in Bayesian reasoning tasks; limited independent replication\": Value Selection Bias is a narrow reasoning pattern reported in Bayesian diagnostic problems: when participants did not derive the correct solution, incorrect answers were strongly drawn toward numerical values already present in the problem. The evidence supports this behavior across multiple problem variations in the authors' research program, but it should not be generalized to any situation where a person uses an old price, stale KPI, or convenient number. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

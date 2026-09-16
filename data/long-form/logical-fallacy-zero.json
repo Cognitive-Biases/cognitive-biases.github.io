@@ -1,0 +1,141 @@
+{
+  "slug": "logical-fallacy-zero",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/logical-fallacy-zero",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/logical-fallacy-zero/content.tsx",
+  "originalPublishedAt": "2025-09-01T14:59:39.517Z",
+  "originalUpdatedAt": "2025-09-12T10:49:44.000Z",
+  "recoveredAt": "2026-09-16",
+  "headline": "The Pie Is Not Fixed: Escaping Zero-Sum Bias When Someone Else’s Win Feels Like Your Loss",
+  "lede": "You’re waiting on feedback for a project you cared about. Your teammate gets a shoutout in the all-hands instead. That sting in your chest? It whispers, “Their gain is your loss.” You slam the laptop and tell yourself you’ll work twice as hard next time. But later, when the heat fades, you might wonder: did you just make up an enemy?",
+  "sections": [
+    {
+      "heading": "What is Zero-Sum Bias — when you think someone’s gain is your loss — and why it matters",
+      "paragraphs": [
+        "Zero-sum bias is the mental habit of seeing gains as coming only at others’ expense or yours: if they win, you must lose. Zero-sum bias says the pie is fixed. You assume resources are limited and tightly coupled: attention, money, love, time, energy, status. It feels clean. We like clean. It’s faster to think “wins and losses are balanced” than to map complex systems where growth, spillovers, and time lags create new value. The psychology makes sense. We evolved under scarcity. If a neighbor hauled off a chunk of your stored grain, your winter got harder. But most modern settings don’t behave like grain bins. Collaboration amplifies output. Information spreads. Skills compound. Markets grow. Even status is more fluid than it seems: new niches and new games appear every month.",
+        "Zero-sum bias matters because it bends your decisions: It points your attention toward guarding turf instead of growing value; It poisons relationships with suspicion and envy; It kills curiosity. You skip learning because you’re too busy counting; It pushes you toward short-term scrambles that hurt long-term outcomes; It makes negotiation worse; you leave joint gains on the table (Thompson & Hastie, 1990). Research shows this bias is common and sticky. People often misjudge gains as necessarily balanced by losses, even when the task allows both parties to improve (Meegan, 2010). Cross-cultural work finds that stronger zero-sum beliefs correlate with less trust and more pessimism about society (Różycka-Tran et al., 2015). In short: when your brain defaults to “fixed pie,” you cooperate less, leave value behind, and sleep worse.",
+        "You don’t need to torch your competitive fire. Keep it. Just make it directional. Compete against problems, not your allies. Spot the arenas that truly are zero-sum (there are a few) and stop confusing those with everything else."
+      ]
+    },
+    {
+      "heading": "The promotion that shrunk the pie",
+      "paragraphs": [
+        "Stories beat diagrams. Here are lived-in scenes, the type we see across teams, families, and scrappy projects. Sasha and Jordan both want the manager role. Sasha assumes it’s winner-take-all. She hoards docs and withholds an intro that could help Jordan ship. Jordan struggles, Sasha looks “strong,” and the decision comes down to politics. Sasha wins the title. Six months later, the team is underperforming. Knowledge silos slow onboarding. Jordan leaves. Sasha is now doing two jobs and still can’t ship. Leadership blames “hiring market headwinds.”",
+        "This is textbook zero-sum. The goal narrowed to the slot, not the team’s growth. Another path was available: copilot projects, map responsibilities, document aggressively, and pitch leadership on expanding management capacity. Many orgs will create a title or split scope for two strong candidates if the business case is clear. Even if only one slot existed, collaborating would have boosted the team’s actual output and made both candidates more promotable."
+      ]
+    },
+    {
+      "heading": "The startup feature race",
+      "paragraphs": [
+        "A small product company sees a bigger competitor ship “their idea.” Slack fills with dread. “They ate our lunch.” The team drops promised improvements to chase parity. Weeks vanish. Customers get an unstable clone of a feature they didn’t ask for. Churn ticks up. What happened? The team treated attention and utility as fixed.",
+        "They ignored their unique strength—speed with opinionated design—and forgot that customer love compounds in non-obvious ways. A better response: call top users, ask what the competitor’s feature missed, and ship a small, differentiated improvement. Pair it with content explaining your approach. Create an integration that makes the competitor your funnel. Make the pie your shape."
+      ]
+    },
+    {
+      "heading": "The siblings and the bedtime story",
+      "paragraphs": [
+        "Two kids battle over who gets the bedtime story. Each sees the story as finite and indivisible: if my sister gets it, I lose. The parent tries nightly negotiations that end in tears. But the “pie” isn’t one story; it’s quality time and secure attention.",
+        "A tweak—joint stories with each kid asking questions, plus individual “question minutes” afterward—grows the pie. The story becomes a shared ritual. No one “loses,” and the parent spends less total energy than before because the fights stop. Zero-sum thinking created the fight. Designing the ritual broke the game."
+      ]
+    },
+    {
+      "heading": "Creators and the “attention economy”",
+      "paragraphs": [
+        "YouTube channels, indie games, newsletters—creators often talk like the audience pool is a fixed lake. If someone else’s video goes viral, your chance shrinks. It feels true. Then collaborations happen. Crossovers bring new viewers to both channels. Playlists keep people watching longer.",
+        "Shared tools reduce production cost for everyone. The attention lake turns out to be a rain-fed reservoir; good content calls more water in. Loyal fans don’t divide attention perfectly either—they stack it across more time and contexts. Positive spillovers exist. The gain isn’t cleanly someone else’s loss."
+      ]
+    },
+    {
+      "heading": "The salary negotiation stalemate",
+      "paragraphs": [
+        "Two parties sit down: “I want as much as possible” vs. “I want to pay as little as possible.” That looks zero-sum. But compensation is a bundle: base, variable, equity, title, learning budget, remote days, schedule, sabbatical, conference travel, mentorship access, project choice. The fixed pie melts into a tapas menu.",
+        "When you treat it this way, joint gains appear. You trade a slightly lower base for higher learning budget and well-defined scope, which boosts your growth and the company’s retention odds. Or you index equity refreshers to milestones that you help define. You turn one lever into ten."
+      ]
+    },
+    {
+      "heading": "The neighborhood garden",
+      "paragraphs": [
+        "An empty lot becomes a community garden. Some neighbors fear it will increase traffic and reduce their privacy, so they fight it. They imagine value as fixed: more strangers, fewer peace units. Instead, the garden leads to weekend markets, safer streets, and rising property values. People consume fewer delivery miles because they buy local produce.",
+        "Kids care for plots after school. The pie got bigger for the group and for many individuals—health, connection, and even home equity—though a few people did lose some privacy at certain hours. Balanced designs (fences, hours, noise rules) can address that. Calling it zero-sum prevented that conversation."
+      ]
+    },
+    {
+      "heading": "Sports minutes and immigrant jobs",
+      "paragraphs": [
+        "A coach must allocate limited minutes. Players fret: more for them, less for me. But team success increases everyone’s chances at scholarships and pro looks. Minutes contribute to wins, which contribute to exposure. The better frame is: how do we allocate minutes to maximize team success and individual development over time? A strict “who gets what now” frame misses training rotations, roles, and late-game situations that build more total value.",
+        "A common narrative treats jobs as chairs in a fixed circle. Every new person is one fewer chair for “us.” Yet the data usually show immigrants expand demand, start businesses, fill complementary skill gaps, and increase total employment and wages in many sectors over time (not always, not evenly). Time horizon matters. Skill mix matters. Local policy matters. The pie is complex. A flat zero-sum story hides growth and distribution mechanisms we ought to debate more precisely."
+      ]
+    },
+    {
+      "heading": "Grading curves and freelance “competition”",
+      "paragraphs": [
+        "Students told their grades will be curved begin hoarding study guides and hiding tips. A mastery-based grading approach can increase average performance by rewarding absolute progress. Students tutor each other because someone else’s improvement doesn’t punish their own grade. The curve frames learning as zero-sum; mastery rewards growth. Teachers can choose the game. Two photographers in the same city think they compete for the same clients. They avoid each other, badmouth pricing, and exhaust themselves with discounts.",
+        "They finally meet at a coffee shop. One loves weddings but hates corporate headshots; the other is the opposite. They decide to refer mismatch inquiries to each other and share a studio lease. Bookings increase for both. They also co-author a mini pricing guide for the city, raising professional norms. They didn’t share a pie; they built a bakery."
+      ]
+    },
+    {
+      "heading": "Steps 1–2: Catch the feelings, then the fixed-pie language",
+      "paragraphs": [
+        "You can’t swat a bias with a slogan. You change your defaults by noticing patterns, stress-testing your assumptions, and redesigning your environment. Here’s a concrete way to do it. Zero-sum bias travels with specific sensations: A sharp jab of envy when someone gets praise, money, or attention;",
+        "Urgency and tunnel vision: “I need to act before it’s all gone.” A narrative of “us vs. them” that pops up fast and feels righteous. That does not mean your feelings are wrong. They’re signals. Write them down before you rationalize. “I’m scared there’s not enough.” Real data beats adrenaline."
+      ]
+    },
+    {
+      "heading": "Steps 3–4: Draw the pie, then separate time horizons",
+      "paragraphs": [
+        "Your mouth gives it away: “There’s only room for one.”; “They took our slice.”; “We have to protect our share.”; “If they win, we lose.”; “Attention is finite.” Highlight those phrases when they show up in docs, meetings, and your inner talk. Language is leverage. Rephrasing often opens new options. Replace “slice” with “surface area.” Replace “room” with “rooms.” Map the resources as you currently see them. Money, time, talent, status, users, trust. Put numbers where you can. Then ask:",
+        "Can any piece grow with collaboration or time?; Is value created or only transferred here?; What are positive spillovers we’re ignoring?; What complementary resources are idle? If a resource can compound, the game is unlikely to be strictly zero-sum. For example, attention can grow through community flywheels. Trust can grow if you share standards. Skills compound with shared practice. Knowledge grows with distribution."
+      ]
+    },
+    {
+      "heading": "Steps 5–6: Convert relative goals, then run the reality checks",
+      "paragraphs": [
+        "Today’s allocation might be zero-sum (one award, one slot, one grant). Tomorrow’s isn’t. Ask: Can we split scope, stagger awards, or rotate duties?; Can we build a pipeline instead of a single pick?; If I help them now, does my probability of a better slot later increase? This is where most zero-sum illusions dissolve. A single decision inside a timeline that stretches—rotations, alternates, expansions—rarely stays strictly zero-sum.",
+        "Relative metrics (“beat them,” “be top 3”) breed zero-sum thinking. Absolute metrics (“ship X quality,” “help Y users deeply,” “reduce Z hours of pain”) create positive-sum moves. If your team’s scoreboard is all ranks and percentiles, expect turf wars. If your scoreboard tracks harm reduced and value created, expect cooperation."
+      ]
+    },
+    {
+      "heading": "Steps 7–8: Look for joint gains and design for abundance",
+      "paragraphs": [
+        "Data check: Do we have evidence the resource is actually fixed? What changed last time we collaborated?; Structural check: Is the system designed to be zero-sum (e.g., fixed-budget prizes, curves)? Could we redesign it?; Externality check: Are there hidden spillovers that benefit or harm others beyond the two “sides”? These questions turn fog into structure. You might still decide it’s a fixed game. Good—you’re now making a cleaner call.",
+        "In negotiation research, people assume a “fixed pie,” ignore interests, and miss joint gains (Thompson & Hastie, 1990). To avoid that: Trade across issues. If salary is hard, trade for scope, flexibility, growth, or recognition; Add issues. Introduce a pilot phase, shared metrics, postmortems, or marketing credits; Change sequence. Try “we’ll do A now, B in quarter two if metrics hit.” Often the “pie” wasn’t fixed; it was under-specified."
+      ]
+    },
+    {
+      "heading": "Steps 9–10: Compete cleanly and normalize co-celebration",
+      "paragraphs": [
+        "Replace “winner-take-all” recognition with specific, rotating awards (craft, mentorship, learning); Incentivize documentation and cross-training; reward shared knowledge explicitly; Build opt-in communities of practice across teams and companies; Use shared standards and APIs to turn “competitors” into complements. You change culture by changing the scoring system. Some arenas are actually zero-sum: finite grants, a team’s starting slot, a single-house bid. In those cases: Compete on preparation, not sabotage. Sabotage corrodes future games; Pre-commit to sportsmanship rules with yourself and your team; Choose your arenas. Don’t fight for prizes misaligned with your skills or values; Build alternatives. If you lose, the work still moves. Losses hurt less when you have paths.",
+        "Treat other people’s wins as signals and opportunities: “How did they do it?” “What can we learn?” Send two-minute congrats. Ask one good question. There’s a practical benefit: people who feel seen tend to share playbooks. Also, your nervous system relaxes when you practice abundance on purpose. Tape this near your monitor. You’ll use it more than you think."
+      ]
+    },
+    {
+      "heading": "Related or confusable ideas",
+      "paragraphs": [
+        "Zero-sum bias often gets mixed up with a few cousins. Here’s how to tell them apart and why it matters. Scarcity mindset: A generalized belief that resources are limited and you must hoard them. Zero-sum bias is more specific: it assumes one person’s gain directly causes another’s loss. Scarcity mindset can exist even without an opponent; zero-sum needs an opposing “side.” Loss aversion: We feel losses more strongly than equivalent gains (Kahneman & Tversky, 1979). When you’re loss-averse, you might perceive neutral changes as losses. That can fuel zero-sum thinking, but they’re not the same. You can be loss-averse without assuming your partner’s win caused your loss.",
+        "Social comparison: Judging your worth relative to others. It feeds zero-sum stories because relative rank is, by definition, competitive. But absolute performance can improve for everyone at once; social comparison doesn’t require zero-sum beliefs, it just makes them feel salient. Fixed-pie bias in negotiation: A specific manifestation where parties assume interests directly oppose each other and miss integrative solutions (Thompson & Hastie, 1990). This is zero-sum bias applied to bargaining. Status games: Many status competitions are zero-sum in the short run (only one gold medal). Over longer horizons, new status ladders emerge, and niche prestige can grow without displacing others. Calling all status pursuits zero-sum leads to brittle hierarchies and missed innovation.",
+        "Tragedy of the commons: Overuse of a shared resource leading to depletion. That’s negative-sum, not zero-sum. Everyone loses over time. Zero-sum bias can still push people to grab early, which accelerates the tragedy. Zero-sum games (actual): Some games are mathematically zero-sum (e.g., some betting setups, certain tournaments). Knowing this helps because you stop wasting time looking for joint gains where none exist. The skill is telling these apart from live systems that grow."
+      ]
+    },
+    {
+      "heading": "Wrap-up: the pie you draw is the game you play",
+      "paragraphs": [
+        "A member of our team once kept a private “lucky list”: every time someone else got a break, they wrote it down with a tiny bitter note. It was a quiet hobby. It stole joy. They eventually traded the list for a “learning bank.” Same events, new questions: what did they try, who helped, where was the inflection? The mood shifted. They still felt envy sometimes, but it came with motion. They learned. They reached out. They built their own inflections. The pie didn’t just feel bigger—it was.",
+        "Zero-sum bias will never vanish. It’s part of how we keep score when we’re afraid. But you can train a new habit. Notice the story. Redraw the pie. Change the game. Compete hard where it counts, and grow value everywhere else."
+      ]
+    }
+  ],
+  "checklist": [
+    "Did I feel a stab of “not enough”? Pause. Name it",
+    "Did I use fixed-pie words? Translate them",
+    "Can I map the resources and highlight which ones can grow?",
+    "What’s the one-week view? What’s the one-year view?",
+    "What absolute metric matters here beyond rankings?",
+    "What joint gains could be unlocked by adding or trading issues?",
+    "Can we redesign the game (recognition, incentives, budget, scope)?",
+    "If it is zero-sum, what is my clean, best case to compete? What’s Plan B?",
+    "Who can I co-celebrate today, and what can I learn from them?"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"original experimental evidence plus a broad later literature on zero-sum beliefs; scope and mechanisms vary by domain\": Meegan introduced zero-sum bias in three university-grading experiments where grades were based on an absolute standard and high grades were not rationed. Participants were nevertheless more likely to predict a low next grade after seeing that many high grades had already been awarded. This is direct evidence for zero-sum judgment in that paradigm, not proof that every competitive interpretation has the same cause. Later reviews describe a much broader literature on zero-sum beliefs across interpersonal, intergroup, organizational and international settings. That wider literature often studies beliefs or mindsets rather than the exact 2010 task, so the concepts should be connected without pretending they are identical. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}

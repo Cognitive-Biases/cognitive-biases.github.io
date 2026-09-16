@@ -1,0 +1,79 @@
+{
+  "slug": "belief-perseverance-conservatism-bias",
+  "reviewedAt": "2026-09-16",
+  "legacySourceUrl": "https://metalhatscats.com/cognitive-biases/belief-perseverance-conservatism-bias",
+  "recoveryType": "editorially-updated-original",
+  "recoveredFrom": "metalhatscats/mhc@df6bc6d3^",
+  "sourcePath": "app/cognitive-biases/belief-perseverance-conservatism-bias/page.tsx",
+  "originalPublishedAt": null,
+  "originalUpdatedAt": null,
+  "recoveredAt": "2026-09-16",
+  "headline": "Conservatism Bias: the original long-form guide",
+  "lede": "We were sure the cat wouldn’t jump. We’d watched her a hundred times. Same shelf, same pause, same cautious tail flick. She never went for the high bookcase. Then one day, coffee in hand and brain on autopilot, we turned our backs—and she launched. Perfect arc. Absolute chaos. Ceramic planters down, pages torn, the universe updated. Except, not really. We caught ourselves saying, “She never jumps.” Even as we wiped soil from the carpet.",
+  "sections": [
+    {
+      "heading": "The quick, human version",
+      "paragraphs": [
+        "We do this all the time. You, us, entire teams. New evidence arrives. Old belief stays seated. Conservatism bias is the tendency to underweight new evidence and stick with prior beliefs even when the new evidence is strong. Your brain builds a story; New facts show up at the door; You open the door only a crack. We call it “conservatism” because we conserve our original view. In stats terms, it’s under-updating relative to Bayes’ rule. In life, it looks like “I hear you, but…” stretched across months or years.",
+        "Classic experiments show people drag their feet when revising beliefs. In simple tasks where the math is clear, folks still move too little toward new evidence (Phillips & Edwards, 1966; Edwards, 1968). We prefer the comfort of what we already think, even if the data says, “Hey, scoot over.”"
+      ]
+    },
+    {
+      "heading": "Why it matters for real work",
+      "paragraphs": [
+        "Effort tax – Updating is work. Explaining your old self to your new self takes energy; Identity guard – Beliefs tie to identity. Revising feels like a mini-breakup; Social glue – Group alignment rewards consistency. Shift too fast, you risk status or trust; Noise defense – The world throws garbage data at you. Being cautious isn’t dumb—it’s protective. The bias comes when caution becomes calcification. In product – Teams keep shipping features their users don’t love because the roadmap says so;",
+        "In engineering – Incident postmortems identify causes, but the same assumptions survive to break again; In finance – Prices move, fundamentals shift, but portfolios linger in yesterday’s weather (Barberis, Shleifer, & Vishny, 1998); In health – New research emerges. The diet remains sacred; In relationships – People outgrow old patterns. We keep arguing with the version of them from last year. When you resist updating, you pay compound interest on wrong decisions."
+      ]
+    },
+    {
+      "heading": "Examples You’ve Probably Lived Through",
+      "paragraphs": [
+        "The product roadmap that wouldn’t die. You planned Q2 around a “killer” feature… Conservatism bias muffled it; The incident that repeats itself. An outage happens… It’s still there, in spirit, everywhere; The investor holding too long. You bought a stock on the story of “inevitable turnaround”… Underreaction—classic conservatism in markets (Barberis, Shleifer, & Vishny, 1998); The health habit that never updates. You discovered a diet that once made you feel great… You deferred it; The hiring “type”. Your company hires “rockstars”… Meetings remain full of the same voices; The friendship frozen in time.",
+        "Your friend used to cancel last minute… Conservatism bias keeps old labels sticky; The coach and the player. A player used to be bad on defense… The season follows the old story, not the new data; The startup that misses a pivot cue. You built a B2C tool… Your revenue begs for “team workflows.” The code that “can’t possibly be the cause”. You’ve been sure the bug is in the new service… The fix was in a configuration you “knew” was harmless; The family rulebook. Growing up, you learned to “finish your plate.”… The belief keeps the door on the chain."
+      ]
+    },
+    {
+      "heading": "A Bayes-lite way to think",
+      "paragraphs": [
+        "You start with a belief: “Feature X will increase retention by 5%.” That’s your prior. Evidence arrives: A/B test shows 0.2% lift with high variance. That’s your likelihood. A good update moves your belief a meaningful amount toward the evidence quality. Conservatism means you nudge a millimeter when you should move a mile.",
+        "Humans often update too little, even when the data is clear (Edwards, 1968). We’re not robots. But we can borrow robot logic when it helps. Changing your mind publicly is a feature, not a bug."
+      ]
+    },
+    {
+      "heading": "Noise vs. signal: the tricky middle",
+      "paragraphs": [
+        "If an update threatens your identity or social standing, expect drag. Name the fear to defuse the drag: “If I change my mind, my team will think I was wrong.”; “If I drop this feature, months of work look wasted.”; “If I switch my diet, I admit I’ve been preaching wrong advice.”. Saying the quiet part out loud breaks its spell.",
+        "A single datapoint shouldn’t flip your world. That fear fuels conservatism. The solution isn’t to ignore evidence; it’s to predefine what kind of evidence counts. Before running experiments, write your update thresholds; If X happens, we do Y. No drama. Just an if-statement for beliefs."
+      ]
+    },
+    {
+      "heading": "A Practical Checklist to Counter Conservatism Bias",
+      "paragraphs": [
+        "You say “Let’s wait for more data” without defining what “more” means; You move goalposts mid-stream to keep the original plan alive; You ask for confirmatory metrics, not disconfirming ones; You minimize inconvenient evidence by calling it “an edge case.” The bigger the sunk cost, the smaller your update;",
+        "You use “always” a lot about dynamic systems; Postmortems end with “add a guardrail” instead of “revisit our assumptions.” Stakeholder approval matters more than user behavior; Your roadmap changes less than your environment. We use these. They work when we actually stick to them."
+      ]
+    },
+    {
+      "heading": "A Simple Field Guide: Bayes Without Tears",
+      "paragraphs": [
+        "Confirmation bias – Seeking confirming evidence; conservatism can occur even with fair evidence; Status quo bias – Preference for no change; conservatism is under-updating beliefs; Anchoring – First numbers overly influence estimates; conservatism is failing to move off the anchor; Sunk cost fallacy – Past investments distort choices; conservatism keeps beliefs rigid; Belief perseverance – Beliefs survive debunking; conservatism is milder—under-updating; Backfire effect – Occasionally corrections strengthen wrong beliefs; conservatism is too little movement; Optimism bias & motivated reasoning – Update asymmetrically by valence; conservatism is low sensitivity overall.",
+        "Write your prior in words with a percent; Score new evidence on strength and reliability; Pick an update amount using simple rules (e.g., strong+high → move 20–40 pts). Bonus: When multiple pieces of evidence arrive, update sequentially and keep notes. Beliefs should look like version history, not a monolith. In standups, anyone can call “under-updating,” and we pause; Experiment templates include “What would change our mind?” upfront; We track “zombie tasks” and try to kill at least one on Fridays; We maintain a “belief backlog” next to the dev backlog; In code reviews, we flag assumption-laden comments and ask for sanity tests."
+      ]
+    }
+  ],
+  "checklist": [
+    "Write your prior before looking at data",
+    "Pre-commit update thresholds",
+    "Set kill criteria alongside success",
+    "Run a disconfirming query",
+    "Keep an update log",
+    "Measure “double-down excuses”",
+    "Define priors in ranges, not certainties",
+    "Grade evidence quality",
+    "Cap ‘waiting for more data’",
+    "Counterweight identity",
+    "Red Team Fridays",
+    "Belief Review Board"
+  ],
+  "boundaryNote": "This guide restores the original MetalHatsCats long-form article (first published 2025) with minimal edits. The current evidence review rates this concept as \"established in belief-updating tasks\": Here, conservatism means under-updating: new evidence changes a probability judgment less than a Bayesian benchmark would predict. It should not be confused with the separate memory phenomenon in this corpus that pulls remembered extreme values toward the middle. Where the original article speaks more strongly or predates later evidence work, the review and its sources below take precedence."
+}
