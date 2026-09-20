@@ -4,6 +4,14 @@ Cognitive Biases is a public knowledge library about cognitive biases, evidence 
 
 The project started as an educational mobile app. The website and the maintained knowledge base are now the main product.
 
+## Now part of Vedokrok
+
+Cognitive Biases started as an educational mobile app and became a practical reference for recognizing thinking errors. Awareness is the first step; the project's strongest ideas and content are now part of [Vedokrok](https://vedokrok.com) — a broader practical knowledge system that pairs awareness of thinking errors with concrete tools for better decisions, learning and action.
+
+**Before:** a focused project around one area of practical knowledge. **Now:** Vedokrok connects thousands of practical ideas, techniques, frameworks and tools across many areas of life and work — with collections, evidence, structured knowledge and future AI access.
+
+This website and repository remain online as a historical project and a useful standalone reference. Active development continues at Vedokrok. See [VEDOKROK.md](VEDOKROK.md) for the project history and future migration notes.
+
 For repository work from ChatGPT or another coding agent, start with [AGENTS.md](AGENTS.md).
 
 - Website: https://cognitive-biases.github.io/

@@ -85,3 +85,7 @@ Track instead:
 - references or integrations by other projects;
 - search visits to reviewed topic pages;
 - corrections made when better evidence appears.
+
+## Closing note: the arc continues at Vedokrok
+
+The project ran its full arc: an experiment in making thinking errors easier to recognize, hard lessons about evidence review, public data and honest uncertainty, and the consolidation of the strongest material into a maintained reference. That arc now continues at [Vedokrok](https://vedokrok.com) — a broader practical knowledge system that pairs awareness of thinking errors with concrete tools for better decisions, learning and action. This document stays as the record of what this project set out to do, and the site remains online as a historical project and useful standalone reference.
