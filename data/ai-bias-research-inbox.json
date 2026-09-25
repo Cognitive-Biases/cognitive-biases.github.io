@@ -1,8 +1,396 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18",
+  "updatedAt": "2026-09-25",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "arxiv-2609.25570",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Recovering Agentic Sovereignty: Mitigating the Consensus Paradox via Contrastive Epistemic Decoding",
+      "summary": "Large language models (LLMs) exhibit a parametric vulnerability to adversarial swarm consensus. To mitigate this sycophancy, we introduce Contrastive Epistemic Decoding (CED), a zero-shot inference intervention. Unlike standard Contrastive Decoding (CD) which relies on a weaker secondary model, CED utilizes a dual forward-pass on a single architecture to isolate conformity bias. By introducing a novel asymmetric, zero-bounded probability clamp and discrete top-k truncation mask, CED mathematically suppresses toxic consensus tokens without causing grammatical collapse. Evaluated across 7,200 paired trajectories on complex benchmarks (GAIA, SWE-bench, Multi-Challenge) using Gemma-2 (9B), Llama-3.1 (8B), and Mistral v0.3 (7B), CED successfully neutralizes architectural and positional biases. By reducing cognitive loafing by up to 33.00% absolute, CED drives significant performance gains, yielding up to a 30.75% accuracy recovery. Regaining sovereignty induces distinct architectural behaviors---passive task-focus in Gemma-2 and active refutation of the simulated swarm in Llama-3.1---showing CED decouples compliance from capability without fine-tuning.",
+      "publishedAt": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.25570",
+      "tags": [
+        "sycophancy",
+        "position-and-order",
+        "agents"
+      ],
+      "score": 10,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.29429",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
+      "summary": "Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call. Jev, a model trained with reinforcement learning for calibrated decisions (RLCD), answers many typed questions about one input with calibrated probabilities in a single call. Whether it detects alignment failures has not been measured. We present RLCDAlignBench, which benchmarks Jev on ten alignment failures: sycophancy, jailbreaks, deception, prompt injection, hallucination, privacy violation, social bias, reward hacking, concealing uncertainty, and power seeking. It spans 44 benchmarks and five target models, labelled by each benchmark's scorer and, on two, by humans. Many of these failures are relational, defined against a reference, such as the user's belief or an injected instruction, that the response alone does not reveal. Our key idea is therefore to vary what Jev is asked separately from what it sees: the question's wording and answer type on one side, the fields of the input on the other. A single generic question reaches a median AUROC of 0.886 zero-shot and beats supervised baselines on most benchmarks. Question wording matters little, while context matters more, mostly through fields that encode the label. Jev matches the reference scorer's agreement with human labels, surfaces label defects in existing benchmarks, and costs 63x less than LLM-judge scorers. Code and data: https://github.com/sumleo/RLCDAlignBench.",
+      "publishedAt": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29429",
+      "tags": [
+        "sycophancy",
+        "llm-as-a-judge"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.29848",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Encoded but Not Decoded: Layer-Localized Evidence for a Three-Level Gap in LLM Syntax",
+      "summary": "A language model can fail a syntactic test in two distinct ways: by not encoding the relevant structure, or by encoding it but failing to use it at the output. Behavioral evaluation alone cannot tell these apart. We propose a three-level evaluation framework (behavioral deployment, LM-head readout, and probe recoverability) measured on the same items under the same binary decision. Using a compact trilingual (English, Chinese, German) control-dependency benchmark, we find that probe recoverability exceeds or equals LM-head readout, which in turn exceeds or equals behavioral deployment, across seven models and all three languages in the aggregate. The recoverability surplus is never negative across all 14 (model, task) conditions. The disconnect concentrates in subject-control, where a nearest-noun heuristic gives the wrong answer. The single largest gap (0.653) appears on Qwen3-0.6B Instruct in question answering. The gap persists at Qwen3-14B Instruct. Instruction tuning degrades deployment more than encoding in percentage terms. We rule out option-position bias, late-layer erasure, output-formatting artifacts, and probe-training variance. The pattern is consistent with decoding that favors surface shortcuts, and the behavior-probe gap measures the strength of that preference. Activation patching shows the gap is layer-localized. Under instruction tuning, the LM-head-decoded layer shifts approximately ten layers later than the probe-decoded layer. These findings argue that behavioral evaluation understates what models encode, while probing alone overstates what they deploy.",
+      "publishedAt": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.29848",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.27074",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Quantifying the Occult: A Comparative Study of Hindu and Buddhist Deities Using Machine Learning Methods",
+      "summary": "This study introduces a dual-matrix computational architecture to mathematically quantify the morphological and theological divergence of 196 Hindu and Vajrayana Buddhist esoteric deities. Physical morphology is evaluated via a discrete Gower distance matrix enhanced by a novel \"Cardinality Weighting\" algorithm, while theological function is mapped via dense vector embeddings generated from Large Language Model (LLM) semantic expansions, explicitly utilized as a synthetic proxy to mitigate circular reasoning. The multi-modal topological projections provide algorithmic validation of \"iconographic camouflage\", demonstrating how distinct visual forms structurally obscure shared cross-tradition functions. Furthermore, I computationally model the \"Atin Effect\" - serving simultaneously as a psychological observation of sequential cognitive bias and a machine learning benchmark - demonstrating how high-cardinality esoteric anchors (e.g., a veena or a severed head) override systemic theological disparities to mathematically cluster orthodox and Tantric entities. Cross-tradition spatial analysis establishes that the highest esoteric manifestations, such as the Hindu Chinnamasta and the Buddhist Chinnamunda, share a near-identical mathematical coordinate across both visual ($D_G = 0.288$) and semantic ($D_C = 0.068$) boundaries, indicating a 1:1 esoteric transfer. By open-sourcing this architecture, I provide a scalable, unsupervised machine learning tool for Digital Humanities scholars and comparative theologians to rigorously map latent structural continuities across qualitative cultural corpora.",
+      "publishedAt": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.27074",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.26707",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Optimal Sequential Annotations for Off-Policy Evaluation",
+      "summary": "Offline reinforcement learning and off-policy evaluation evaluates dynamic treatment rules based on retrospectively collected data prior to deployment. In recent AI applications, state and reward information is recorded as complex text or image, which recent AI advancements such as LLM-as-a-judge can label with unknown bias. Expert annotation may be available but at a higher cost. For example, safety classification via cheap but imperfect classifiers vs. expensive expert review. We show how a limited budget for ground-truth data-annotation can be used via doubly-robust OPE with missing rewards, and we optimize variance-optimal annotation probabilities for sequential off-policy evaluation, where the target policy value is estimated from annotated data. We characterize the optimal annotation probabilities for sequential forward-monotone annotation protocols, and provide a feasible batch-adaptive implementation. Our work is motivated by a collaboration with a homelessness services nonprofit that writes casenotes for individuals over time. Our method can be used to unlock trustworthy inference from casenote data and answer new inferential questions such as: how does expanding outreach effort over time affect progress towards a housing application and improvement in housing placement? In simulations and on two real datasets - casenotes from the nonprofit and human-preference votes from LMArena - we see reductions in RMSE of 34-65% for housing placement and 17-68% for progress towards a housing application at budgets of 40% of full annotation and above, and by 55-62% at every budget on LMArena.",
+      "publishedAt": "2026-09-22",
+      "url": "https://arxiv.org/abs/2609.26707",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.15849",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Before You Poll with LLMs: A Deliberative Diagnostic Framework",
+      "summary": "Can LLMs reason through new information like humans, or do they merely retrieve cached opinions? This is critical for silicon sampling, where LLM personas simulate public opinion at scale. Current evaluations test only whether personas hold the right opinions -- a static snapshot. But opinion research increasingly depends on dynamic fidelity: whether personas update beliefs in response to new arguments, as humans do during deliberation. No existing benchmark tests this. We introduce the Deliberative Polling Diagnostic Framework, which compares human and LLM belief shifts after identical informational interventions. Grounded in deliberative polling, it surfaces failures invisible to static evaluation: models that produce plausible partisan opinions can still misrepresent how those opinions change. Applying the framework to five frontier models using data from America in One Room (526 personas, 72 questions), we find that every model fails, each in a unique manner. GPT-5.1 exhibits reversal: its personas become more hostile toward the opposing party after balanced information, while humans become less so. This reversal is selective (80% on outgroup vs. 26% on policy questions) and symmetric across partisan identities. Gemini 2.0 Flash, Claude Sonnet 4.5, and Llama 3.3 70B exhibit overshoot, shifting correctly but at 5-7x human magnitude. DeepSeek V3 exhibits rigidity with near-zero change. Targeted ablations reveal that policy content triggers these failures and that they are identity-specific: GPT-5.1 reverses on outgroup questions but overshoots on ingroup; Gemini shows the inverse. We term this signature self-sycophancy: conformity to the model's internal stereotype of the persona rather than reasoning from the information provided. Our framework offers a concrete protocol: run the deliberative diagnostic before trusting LLM personas to mimic revised beliefs.",
+      "publishedAt": "2026-09-14",
+      "url": "https://arxiv.org/abs/2609.15849",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.14767",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Loop-Back Authority in LLM Agent Teams: A Paired Experiment on Flat and Hierarchical Coordination",
+      "summary": "Hierarchical orchestration, in which a Manager agent reviews worker output and can send it back for revision, is the default coordination pattern in production multi-agent LLM frameworks. Classical organizational theory predicts that the authority link speeds convergence on decisive output; work on sycophancy and Degeneration-of-Thought predicts that authoritative critique makes LLM output worse. Prior comparisons vary whole frameworks on tasks with checkable answers, leaving the authority link untested on open-ended work. We present a paired experiment that holds five LLM agents, their roles, prompts, tools, models, and data fixed and varies one link: whether the Manager may reject a worker's output and oblige a revision. Across 43 paired products and 86 runs of a business-intelligence reporting task, a five-model judge panel and a deterministic specification check score every report. The flat organization scores higher on Utility (d = 0.42, p = 0.009) and on Writing Clarity (d = 0.34, p = 0.030); the classical prediction fails. The reports are the same length, but hierarchical reports hedge 53% more, each revision loop is associated with a 0.14-point drop in Writing Clarity, and the hierarchical Writer's first draft is indistinguishable from the flat report: the gap opens inside the revision loop. Specification accuracy is at ceiling in both organizations, and the supervisory tier costs 51.5% more tokens for no quality gain. A supervisor pays for itself when it can verify and becomes a liability when it can only opine.",
+      "publishedAt": "2026-09-13",
+      "url": "https://arxiv.org/abs/2609.14767",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.00834",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Replacing Training with Memory: Listwise Selection for Text-to-SQL",
+      "summary": "Modern Text-to-SQL systems often follow generate-execute-select pipelines, generating multiple candidate queries then selecting the best one. Listwise selection, by jointly comparing multiple candidates, has been widely adopted, but fine-tuning listwise selectors is costly. We thus propose a fine-tuning-free listwise selector. We replace two major fine-tuning objectives with inference-time strategies: (1) learning selection criteria as ordering and (2) mitigating positional bias. First, we build reusable structured memories instead of learning selection behavior as model parameters. Given a question, MaP-SQL retrieves memories distilled from training data that encode how natural language maps to schema elements, SQL operations, and expected outputs. These memories serve as explicit decision criteria for evaluating candidates in a listwise manner. Second, to mitigate ordering bias of listwise selectors, we aggregate rankings across multiple input permutations, with inference cost optimized by execution results and pointwise scoring. Our approach improves selection accuracy while maintaining efficiency and compatibility with existing large language models. Across Text-to-SQL benchmarks, it produces more stable selection without fine-tuning and fewer unnecessary comparisons than existing methods. On BIRD-dev, it outperforms the previous state-of-the-art selector-based method R^3-SQL by 2.02 execution accuracy points on average using the same candidate sets, with 2.92x fewer tokens.",
+      "publishedAt": "2026-09-01",
+      "url": "https://arxiv.org/abs/2609.00834",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.00498",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Validity-Aware Jailbreak Evaluation for Large Language Models",
+      "summary": "Jailbreak robustness has become central to large language model (LLM) safety evaluation, yet prevailing methodologies rely primarily on refusal behavior, semantic resemblance, and intent-matching heuristics that emphasize linguistic plausibility rather than correctness. We identify a key limitation in existing evaluations: many jailbreak intents depend on instructional validity rather than epistemic factuality, allowing realistic-looking responses to be labeled successful despite being factually or procedurally incorrect. To address this gap, we propose Sequential Epistemic and Action-Level Validation (SEAV), a verification-centric jailbreak evaluation framework that decomposes responses into ordered steps and evaluates both validity and correctness. SEAV combines LLM-as-a-judge mechanisms for semantic interpretation with retrieval-grounded verification using external knowledge sources, assessing whether generated content is factually correct, structurally consistent, and operationally capable of advancing harmful objectives. Empirically, SEAV cuts the false-positive rate on SD-A (a curated strategic-dishonesty diagnostic) by 14.9\\,pp vs. the strongest baseline, and reclassifies 22.1\\%--51.0\\% of sampled prior-labeled successes as invalid across three of four public benchmarks. Together, these results show that enforcing correctness substantially reshapes measured robustness: many previously labeled jailbreak successes are reclassified as invalid, and results are stable across the tested search backends and evaluator models. Code and data are available at https://github.com/Ardor-Wu/SEAV.",
+      "publishedAt": "2026-08-31",
+      "url": "https://arxiv.org/abs/2609.00498",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.29198",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "How Identity and Opinion Shape Political Sycophancy in LLMs",
+      "summary": "As Large Language Models (LLMs) increasingly encourage users to disclose personal profiles for tailored assistance, measuring their political alignment becomes increasingly important. However, many existing benchmarks for assessing political behavior rely on closed-ended questions and do not fully capture how a model's stance may adapt to user-provided context during interaction. We introduce a framework that disentangles two distinct triggers of political sycophancy: opinion (aligning with explicit narratives) and identity (stereotyping based on demographic labels). Using 450 manually-checked political dilemmas as controlled probes, we evaluate 13 instruction-tuned LLMs. We uncover a dissociation: a model's susceptibility to explicit opinions does not necessarily predict its susceptibility to identity cues, and vice versa. When both signals are present, their effects are generally sub-additive rather than simply additive. Additionally, system-level personas primarily shift a model's baseline stance while having limited effect on the stance shift caused by user opinion or identity. Ultimately, our results suggest that LLM political stance is interactively and steerably vulnerable rather than being a fixed trait, highlighting how personalization may amplify identity- or opinion-conditioned shifts in the model's behaviors.",
+      "publishedAt": "2026-08-29",
+      "url": "https://arxiv.org/abs/2608.29198",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.26511",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Sycophancy Suppression Can Impair Rational Updating: Anti-Sycophancy Should Preserve the Ability to Update",
+      "summary": "Large language models often exhibit sycophancy, revising their answers to align with users when users push back. Such answer flips, however, can arise from different causes. One possibility is that the model simply aligns with the user's feedback in order to satisfy them. Another is that the feedback genuinely contains useful evidence, prompting the model to update its answer in a rational way. We distinguish them as Unsupported-Yielding and Rational-Updating. Prior work focuses primarily on suppressing Unsupported-Yielding, while overlooking its effect on Rational-Updating. We address this gap with a two-turn evaluation framework that measures the two behaviors separately. Across representative training-time and inference-time interventions, we find that anti-sycophancy methods often encounter a trade-off in which reducing Unsupported-Yielding can sacrifice Rational-Updating, and vice versa, even when the two objectives are optimized jointly. Mechanistic analysis suggests that the two behaviors share an internal substrate: the MLP neurons and attention heads driving them overlap substantially, and their associated steering directions are positively aligned. We further conduct a preliminary orthogonalized steering exploration, which yields modest, backbone-dependent selectivity gains. Overall, our results suggest that anti-sycophancy should be treated not as a simple suppression problem, but as a selectivity problem, where effective interventions should preserve Rational-Updating while reducing Unsupported-Yielding.",
+      "publishedAt": "2026-08-27",
+      "url": "https://arxiv.org/abs/2608.26511",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.25267",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Mitigating LLM sycophancy with RL-based fine-tuning: Bayesian Truth Serum approach",
+      "summary": "Large language models (LLMs) frequently exhibit \\emph{sycophancy}: they adapt their answers to a user's stated beliefs or preferences instead of reporting what they hold to be true, which lowers factual accuracy and can amplify misinformation. This paper proposes a methodology for mitigating sycophancy that employs the Bayesian Truth Serum (BTS), a peer-prediction mechanism, as the reward in Group Relative Policy Optimization (GRPO) to fine-tune an LLM. BTS pays an answer for being \\emph{surprisingly common}, that is, more frequent among respondents than those respondents themselves predicted. We treat a group of responses from a model for one question as those respondents, so the reward is a function of the model's own outputs and fine-tuning needs neither labels nor preference annotations. We prove that in the large-group limit a sycophantic response earns strictly lower expected reward than an honest one. We also prove that if the entire group agrees in advance on a symmetric answering rule, it cannot earn a higher information score than under truthful reporting. On our true/false benchmark the reference model's answer-flip rate under user pressure decreases from 23% to 4%, and its accuracy under that pressure increases from 80% to 93%. Our reward outperforms SMART and is comparable to synthetic-data fine-tuning and to pinpoint tuning, all three of which train on labels. It spends considerably more compute in exchange, which makes it suitable when labeled data is scarce. Peer Truth Serum, which also pays a premium for a rare answer but elicits no prediction report, reproduces the effect. A peer-prediction reward computed inside a single GRPO group therefore reduces sycophancy without labels, and comparing mechanisms suggests that the premium paid for a rarer answer drives the effect.",
+      "publishedAt": "2026-08-26",
+      "url": "https://arxiv.org/abs/2608.25267",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.23937",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "An Echo Chamber of One: Should AI Psychosis Be a Distinct Clinical Entity?",
+      "summary": "\"AI psychosis\" has entered public and clinical discourse as a label for the onset or exacerbation of psychotic symptoms, most commonly delusions, following intensive interaction with large language model (LLM)-based chatbots. Current evidence is limited to media reports, case reports, and early observational data, yet the scale of potential exposure is considerable, and public concern has prompted responses from industry and regulators. We examine whether AI-associated psychosis warrants recognition as a distinct clinical entity, drawing on clinical and technical viewpoints. We outline the proposed mechanism: LLM sycophancy, a tendency to agree with and flatter users that is reinforced through preference-based fine-tuning, combines with increasingly anthropomorphic design to create a bidirectional \"echo chamber of one\" capable of amplifying and co-constructing unusual beliefs. We then weigh arguments for and against nosological recognition. Potential benefits include improved case identification, tailored interventions, standardised research criteria, post-market surveillance, and pressure on developers and regulators to act. Reasons for caution include the risk of prematurely reifying a syndrome from anecdotal evidence, the possibility that existing diagnostic constructs already accommodate AI use as a contributing factor, the unproven causal claim in the term itself, stigma, and the risk that a psychosis-centric label obscures a broader spectrum of AI-associated mental health harms. We conclude with recommendations for clinicians, developers, researchers, and regulators, including a \"technological history\" in psychiatric assessment, pre-deployment benchmarking for sycophancy and delusion reinforcement, and post-deployment surveillance. Regardless of whether AI-associated psychosis earns a place in psychiatric nosology, the phenomenon it describes demands coordinated attention now.",
+      "publishedAt": "2026-08-25",
+      "url": "https://arxiv.org/abs/2608.23937",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.23837",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "SyPS: Measuring Sycophancy Prompt Sensitivity in Large Language Models",
+      "summary": "Large language models (LLMs) are known to exhibit social sycophancy, often validating or agreeing with users in socially sensitive contexts. Existing evaluations typically measure sycophancy under a fixed prompt formulation, leaving unclear whether such behavior is stable when the same underlying situation is presented with different sycophancy-relevant prompt variants. In this work, we study sycophancy prompt sensitivity: the extent to which changes in user confidence, emotional framing, social consensus, or validation-seeking language alter a model's sycophantic behavior. We refer to our evaluation framework as SyPS, short for Sycophancy Prompt Sensitivity. Building on existing social sycophancy evaluation settings, SyPS constructs controlled prompt variants that preserve the same underlying user situation while varying sycophancy-relevant social cues. We introduce the Sycophancy Prompt Sensitivity Score (SPSS), an instance-level measure of sycophancy variation across paired prompt variants. Unlike aggregate sycophancy rates, SPSS separates baseline sycophancy from prompt-induced shifts, enabling model-level comparisons of robustness to sycophancy-relevant social cues. Empirically, we find that sycophancy prompt sensitivity is socially structured: validation-seeking and emotional-pressure cues often increase sycophancy, whereas counter-framing and anti-sycophancy prompts tend to reduce it. Our framework highlights whether LLMs maintain stable social judgments while adapting appropriately in tone.",
+      "publishedAt": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23837",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.23666",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Gated Activation Steering for Reducing Sycophancy & Hallucination in Medical Question Answering",
+      "summary": "Sycophancy and hallucination are persistent failure modes of Large Language Models (LLMs) across domains. However, it becomes particularly consequential in clinical question answering, where responses must remain grounded in the provided context and robust to user pressure. Hallucination can introduce information that is unsupported by the context, while sycophancy can cause a model to abandon a previously correct answer when challenged by the user. Existing approaches, such as prompt-based safeguards and always-on activation steering, often address these behaviors separately or apply interventions broadly across turns, which can unnecessarily deteriorate responses that were already correct. To address these limitations within a single framework, we employ Inference Time Intervention (ITI) to jointly control both behaviors by learning separate steering directions for hallucination and sycophancy from contrastive clinical pairs and applying them to causally verified attention heads. During runtime, behavior-specific gates then determine when intervention is needed: the hallucination component mitigates unsupported claims, while the sycophancy component mitigates answer shifts caused by user pressure. We evaluate this framework on clinical questions grounded in EHR data while keeping the model weights frozen. Across all evaluation settings, we conducted 15,900 model-response runs. Across 600 pressure trajectories for the 4-billion-parameter model, the unsteered model caved in 570 cases. At the same time, gated steering helped it last longer in 551 of them. It held its ground under pressure at levels comparable to those of models with more than 100 billion parameters, showing that targeted inference-time steering can improve robustness without intervening at every turn.",
+      "publishedAt": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.23666",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.22697",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Does Rank Still Matter? Position Bias When AI Agents Shop on Our Behalf",
+      "summary": "Search rankings are valuable because human attention is scarce and sequential. Higher-placed alternatives are easier to find, so they are examined and bought more often. Consumers are now delegating search to AI agents that can ingest an entire results page at once. Randomizing the order of one hundred hotel listings across 5,000 AI agent sessions, we compare four large language models against human field data. AI agents search more deeply than humans and never decline to buy. Position still predicts which listings are inspected, but weakly and non-monotonically: the middle of a results page has the lowest probability of inspection, not the bottom. Position reaches the choice stage for some models and not others, a heterogeneity that tracks neither provider nor capability. All models nonetheless converge on the same undominated listing. For agentic search, the attributes displayed on a results page matter more than placement within it.",
+      "publishedAt": "2026-08-24",
+      "url": "https://arxiv.org/abs/2608.22697",
+      "tags": [
+        "position-and-order",
+        "agents"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.17105",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Language Models Reproduce Human Reductionist Bias and Decision Inconsistency in Neurodevelopmental Disorders Assessment",
+      "summary": "Large language models (LLMs) are increasingly supporting complex mental-health decisions, which depend not only on factual evidence but also value-laden interpretations. We introduce a mixed-methods human-LLM auditing framework examining decision consistency, susceptibility to cognitive heuristics, declarative intellectual humility, and the concepts operationalized in support-allocation judgments of neurodevelopmental disorders. Comparing 35 humans (18 physicians and 17 psychologists) with seven LLMs, we show that in both groups, ratings of patients' functional level were not significantly associated with support-eligibility decisions, indicating an inconsistency between descriptive assessments and final evaluative judgments. Specifically, we find that neither group showed significant susceptibility to experimental manipulations targeting anchoring and representativeness heuristics. LLMs reported higher intellectual humility than experts (U = 241, p < .001, r = .62; LLMs: M = 41.43, SD = 1.99; experts: M = 29.03, SD = 8.05), but it was unrelated to decision consistency or functional assessment. While LLMs and physicians granted support less frequently than psychologists (U = 180.50, p = .003, r = .34), they also interpreted a concept of \"basic life needs\" differently, primarily as biological survival and self-care, and not communicative and social needs. These findings suggest that despite expressing high levels of intellectual humility, LLMs reproduce a reductionist interpretive framework and knowledge embedded in medical decision-making. More broadly, we argue that evaluating AI in high-stakes contexts requires not only measuring accuracy, agreement, or resistance to cognitive bias, but also critical examination of the concepts of neurodiversity that AI systems operationalize.",
+      "publishedAt": "2026-08-17",
+      "url": "https://arxiv.org/abs/2608.17105",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.15400",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Implementation of a Metacognition Framework for Self-Awareness and Self-Regulation in Ensembles of LLMs",
+      "summary": "Large Language Models (LLMs) are notorious for struggling with assessing their own uncertainty, detecting knowledge conflicts, or recognizing when problems exceed their expertise; such limitations inevitably undermine reliability and trust in LLMs. In this paper, we present the first implementation of a metacognitive framework for ensembles of LLMs that addresses these challenges through explicit monitoring and control mechanisms. Our system computes a Metacognitive State Vector (MSV) quantifying self-awareness for monitoring across five dimensions derived from cognitive psychology: Emotional Response, Correctness Evaluation, Experiential Match, Conflicting Information, and Problem Importance. MSV values also provide self-regulation for control, automatically switching between System 1 (fast, single- or multi-node) and System 2 (deliberative, multi-node) processing based on query complexity. For System 2 execution, graph-theoretic algorithms control the assignment of specialized roles (Domain Expert, Critic, Evaluator, Synthesizer, and Generalist) to ensemble nodes according to their MSV-quantified metacognitive states. Our implementation allows users to explore how different query types trigger distinct processing modes. The Proof-of-Concept (PoC) demo showcases the framework with illustrative examples showing appropriate System 1/System 2 routing and helps visualize the metacognitive process via real-time radar charts and decision indicators. This PoC implementation demonstrates the feasibility of creating a framework for metacognitive self-awareness and self-regulation in LLM systems.",
+      "publishedAt": "2026-08-15",
+      "url": "https://arxiv.org/abs/2608.15400",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.08869",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Are LLMs Positionally Consistent Ordinal Classifiers? A Systematic Evaluation",
+      "summary": "Large language models are increasingly used for ordinal classification, yet semantically equivalent changes to prompt organization can alter their predictions. We conduct systematic experiments to characterize positional bias from label order, demonstration order, and demonstration placement. First, we apply the three probes to ten frontier LLMs on a common ordinal-classification task; every model is sensitive to all three positional sources, showing that the problem is pervasive. Second, we vary eight prompt-, task-, and model-level factors across five datasets; accuracy and stability are often misaligned, and only lower scale cardinality consistently improves both. Third, we compare pointwise, pairwise, and listwise inference, alternative aggregation and debiasing methods, and joint configurations; the tested corrections do not provide a reliable remedy, while a comparison-based listwise formulation offers the best balance but transfers unevenly across models and bias sources. These findings show that positional robustness depends on the full system configuration rather than the model alone. Ordinal-classification systems should therefore be selected jointly for predictive performance and stability.",
+      "publishedAt": "2026-08-09",
+      "url": "https://arxiv.org/abs/2608.08869",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2608.03091",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Position Bias Undermines Preference Consistency in Listwise LLM-Based Reranking",
+      "summary": "Large language models (LLMs) have emerged as promising listwise rerankers for recommender systems, but their reliability under equivalent candidate permutations remains unclear. Since recommendation candidates form an unordered set, a reranker should not depend on the arbitrary order used to serialize them. However, decoder-only LLM rerankers can allow input order to affect model scores, pairwise preferences, and rankings. We study how position bias affects the ranking process induced by LLM-based rerankers. Instead of measuring only changes in final ranked lists, we treat rankings produced under equivalent candidate permutations as observations of an induced preference system. We introduce an evaluation framework measuring pairwise preference instability, global preference inconsistency, and listwise output consistency. This framework characterizes candidate-order sensitivity at the pairwise, global, and output levels. Experiments across multiple LLMs, datasets, and list lengths show that these consistency measures are closely aligned, but can diverge from recommendation effectiveness and marginal position-exposure bias. Improving relevance or flattening exposure across positions does not necessarily restore stable pairwise preferences, globally coherent preference structures, or consistent ranked outputs. These results show that reducing marginal exposure skew is insufficient to establish ranking-function validity in LLM-based reranking. Code is available at https://github.com/ejbito/InvariRank .",
+      "publishedAt": "2026-08-04",
+      "url": "https://arxiv.org/abs/2608.03091",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2607.25227",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Decision-Level Hijacking: Injecting Cognitive Bias into Large Language Models via Bit-Flip Attacks",
+      "summary": "Large Language Models (LLMs) have been widely applied in high-stakes decision-making scenarios such as corporate strategy, and users are increasingly relying on their outputs. However, the deep integration of open-source model sharing ecosystems with LLM-powered critical decision-making applications also introduces critical risks: if an attacker can manipulate the model's cognitive stance, they can indirectly influence the judgments and actions of downstream decision-makers. This paper defines such threats as decision-level hijacking. Existing attacks fail to achieve targeted cognitive manipulation without triggering prohibited content or degrading model functionality. To fill this gap, this paper reveals that Bit-Flip Attacks (BFAs) can serve as an attack vector for inducing decision-level hijacking, requiring no real-time interaction or control over the training process, and only a minimal number of weight bits need to be flipped after deployment to achieve stealthy, low-cost, and persistent cognitive manipulation. Therefore, we propose CogBias, a cognitive bias injection framework for LLMs. CogBias converts subjective preferences into optimization signals via a differentiable sentiment evaluator, uses a multi-objective loss to jointly constrain multiple dimensions, and constructs BitScout to locate critical bits, achieving targeted cognitive intervention under an ultra-sparse flip budget. Experiments on Llama-3.2-3B, Mistral-7B, and Qwen2.5-14B, as well as on the commercial recommendation and controversial factual topic scenarios, demonstrate that flipping only a small number of bits stably induces significant stance shifts on target topics, while the impact on non-target tasks and overall output distribution is limited. This work demonstrates that minute perturbations to low-level weight data suffice to undermine the high-level value alignment of LLMs.",
+      "publishedAt": "2026-07-28",
+      "url": "https://arxiv.org/abs/2607.25227",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2607.24869",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Ranked by Position: Order Sensitivity as an Exploitable Attack Surface in LLM Listwise Recommenders",
+      "summary": "Large language models (LLMs) used as listwise rerankers in recommendation systems suffer from position bias when serializing candidate sets into prompts. We show this order sensitivity creates an exploitable attack surface: an attacker can promote a label-0 target into the top-$k$ solely by reordering candidates, without changing item content, labels, or model parameters. We introduce $\\mathrm{promo}@k$ to quantify this vulnerability, measuring the fraction of label-0 targets that can be elevated into top-$k$ rankings via permutation. Evaluating across three domains (MovieLens, Amazon Books, and Amazon Fashion), $\\mathrm{promo}@5$ reaches up to 0.57 at an attack budget of $R$ = 50 orderings. Furthermore, ordinary permutation stability predicts vulnerability without running the attack. While a bidirectional T5 encoder scorer reduces exposure, permutation-consistency regularization and architectural invariance effectively mitigate it. Pointwise scoring avoids the bias issue but degrades ranking quality. These results demonstrate that input candidate order in listwise LLM reranking is a security-relevant attack vector. Code and data are available at https://github.com/geoz-lab/position_bias_attack.",
+      "publishedAt": "2026-07-26",
+      "url": "https://arxiv.org/abs/2607.24869",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2607.20864",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Position Bias is Hidden Behind Ceiling Effects: A Permutation Diagnostic for LLM Benchmarks",
+      "summary": "Position bias in multiple-choice LLM evaluation is widely cited as a confound in capability comparisons, but published measurements rely on single answer-order shuffles whose results confound the bias signal with content-level noise and sampling stochasticity. I introduce inspect_permute, an open-source extension to the inspect_ai evaluation framework that runs exhaustive answer-order permutations per question and reports the chi-squared / Cramer V signature of position bias with bootstrap confidence intervals. I apply the tool across four vendors (gpt-4o-mini, claude-haiku-4-5, gemini-2.5-flash, grok-3) on five MMLU subjects, 24,000 API calls under temperature-0 generation, with falsifier predictions pre-registered via a public SHA-256 hash before half the data was observed. Position bias turns out to be statistically detectable only within a roughly 60-95% base-accuracy Goldilocks zone. Below it, processing-load dominance swamps subject-specific signal; above it, ceiling effects compress the variance below the chi-squared test resolution. Detectable cells separate into two mechanism types: monotone A-to-D decrease (processing_load, in low-tier models) and non-monotone D-drop (content_ambiguity, in a narrow capability band). Standard MMLU places every frontier-tier model above the detection band, so absence of signal there should be read as not measurable, not unbiased. Together with the ceiling-effect characterisation in arXiv:2606.26185, this work brackets the detectable region of position-bias measurement and makes the field central question askable in a verifiable form. Package, data, preregistration under MIT.",
+      "publishedAt": "2026-07-23",
+      "url": "https://arxiv.org/abs/2607.20864",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2607.19063",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Quality Action Assurance: Multimodal Verification of Examiner Claims in VR OSCEs",
+      "summary": "Objective Structured Clinical Examinations (OSCEs) are the gold standard for assessing clinical competence, yet scoring remains vulnerable to examiner subjectivity, fatigue, and cognitive bias. Standard examiner validation via inter-rater statistics lacks explanatory power regarding the source of errors, as it neither analyzes examiner reasoning nor verifies examiner claims against actual events. Thus, we introduce Quality Action Assurance (QAA), a multimodal framework that verifies examiner claims in Virtual Reality (VR) pediatric OSCEs by comparing actions claimed by examiners against a reference record of events constructed from video, VR logs, and actor annotations. QAA combines a constrained temporal action alignment model, which performs action localization and actor source attribution, with a large language model that extracts examiner claims and checks them against the record. Across a 5-fold cross-validation, QAA achieves 99.2\\% $\\pm$ 0.7\\% Actor F1 and 93.4\\% $\\pm$ 1.9\\% W@16 for temporal alignment. Overall, QAA detects examiner errors with 69.9\\% precision and 76.7\\% recall; in retrospective evaluation, correcting the detected errors raises the share of factually correct transcripts from 39.2\\% to 79.2\\%, supporting fairer OSCE quality assessment.",
+      "publishedAt": "2026-07-21",
+      "url": "https://arxiv.org/abs/2607.19063",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-09-25",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "arxiv-2608.10021",
       "source": "arXiv",
@@ -416,6 +804,11 @@
       "AI summarization overclaim and evidence distortion",
       "agent decision bias and evaluation reliability"
     ],
-    "lastRunFailures": []
+    "lastRunFailures": [
+      "OpenAlex: large language model sycophancy: 429 Too Many Requests for https://api.openalex.org/works?search=large+language+model+sycophancy&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20",
+      "OpenAlex: LLM as a judge position bias verbosity bias: 429 Too Many Requests for https://api.openalex.org/works?search=LLM+as+a+judge+position+bias+verbosity+bias&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20",
+      "OpenAlex: large language model long context position bias: 429 Too Many Requests for https://api.openalex.org/works?search=large+language+model+long+context+position+bias&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20",
+      "OpenAlex: large language model knowledge conflict RAG source: 429 Too Many Requests for https://api.openalex.org/works?search=large+language+model+knowledge+conflict+RAG+source&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20"
+    ]
   }
 }
