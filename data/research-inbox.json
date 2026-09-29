@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15",
+  "updatedAt": "2026-09-29",
   "items": [
+    {
+      "id": "openalex-w7214314339",
+      "discoveredAt": "2026-09-29",
+      "title": "Aligning artificial intelligence and human judgment in IELTS speaking assessment to develop a hybrid pedagogical framework for test preparation",
+      "url": "https://doi.org/10.1007/s44217-026-02185-3",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-26",
+      "journal": "Discover Education",
+      "doi": "10.1007/s44217-026-02185-3",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7214402289",
+      "discoveredAt": "2026-09-29",
+      "title": "AI-Augmented Executive Dashboards: Integrating Generative Artificial Intelligence and Data Visualization for Project Decision-Making in Saudi Arabia",
+      "url": "https://doi.org/10.64388/irev10i3-1723455",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-09-25",
+      "journal": "Iconic Research and Engineering Journals",
+      "doi": "10.64388/irev10i3-1723455",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
     {
       "id": "pubmed-42213113",
       "discoveredAt": "2026-09-15",
