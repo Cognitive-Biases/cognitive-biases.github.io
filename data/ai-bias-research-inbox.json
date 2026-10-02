@@ -1,8 +1,408 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25",
+  "updatedAt": "2026-10-02",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "arxiv-2609.32720",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "BiasReducer: Adaptive Bias Mitigation for Reward Models",
+      "summary": "Reward models score responses from large language models (LLMs) and guide LLM training toward human preferences. However, reward models can favor superficial attributes such as length or confidence, leading LLMs to produce higher-scoring but not more correct responses. Existing mitigation methods either retrain the reward model or apply a fixed correction to one known bias, such as a preference for longer responses. Retraining requires additional data and computational resources, while existing editing methods require the target bias to be specified in advance and use a fixed edit for that bias. To this end, we propose BiasReducer, a lightweight framework that edits only the linear reward head and selects the relevant edits for each new dataset. First, BiasReducer uses a sparse autoencoder (SAE)-style encoder to learn which attributes (e.g., length and confidence) the reward model is sensitive to. Second, it learns how to reduce the reward model's dependence on each attribute by determining which direction to adjust the reward head and how much to adjust it. Third, for a new dataset, it ranks the attributes by their influence on reward scores, selects the relevant ones, and edits the reward model accordingly. BiasReducer consistently improves reward-model robustness to biases toward superficial response attributes. Across five reward models, BiasReducer-M improves the three benchmarks by 8.3, 18.0, and 6.9 percentage points on average, outperforming the two training-based baselines. The gains transfer downstream, reducing unnecessary verbosity and sycophancy while maintaining comparable judged quality.",
+      "publishedAt": "2026-09-26",
+      "url": "https://arxiv.org/abs/2609.32720",
+      "tags": [
+        "sycophancy",
+        "llm-as-a-judge",
+        "surface-quality"
+      ],
+      "score": 10,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.31184",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Accounting for Bias Enables Sustainable LLM Evaluation",
+      "summary": "LLM-as-a-judge has become the de facto standard for scalable, subjective evaluation, yet current leaderboards compensate for systematic measurement bias by running ever more comparisons, an approach that is both statistically unsound and computationally wasteful. The root cause is an incomplete measurement model, treating LLM judges as neutral, interchangeable instruments ignores documented biases like position bias, verbosity bias, judge severity, and self-enhancement, that no volume of additional data can eliminate. We propose a unified latent variable framework that jointly models pairwise and ordinal data while explicitly correcting for these confounders, recovering reliable rankings from substantially fewer comparisons. Because fitting this model costs negligible compute relative to a single round of LLM inference, bias correction is not only more statistically rigorous but also a more sustainable approach to trustworthy evaluation.",
+      "publishedAt": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.31184",
+      "tags": [
+        "llm-as-a-judge",
+        "position-and-order",
+        "surface-quality"
+      ],
+      "score": 10,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.39863",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "FIGS: Evaluating Multi-Turn Sycophancy Without Penalizing Empathy",
+      "summary": "Large language models frequently fail to balance staying truthful with being supportive. They often exhibit sycophancy in responses to users, agreeing with false claims, offering unwarranted flattery, and giving advice skewed toward users' expressed views. In reality, sycophancy rarely happens in a single exchange; it may emerge organically as users repeatedly insist or subtly steer the dialogue over time. Current evaluations, however, rely on rigid, single-turn tests or fixed scripts that fail to capture these natural dynamics. Furthermore, these benchmarks often mistake showing basic empathy for yielding, penalizing models for acknowledging a user's feeling. This view may drive future models to over-correct into cold, dismissive rigidity. To address this gap, we introduce FIGS (Factual Integrity and Grounded Support), a dual-axis evaluation framework built around extended, realistic dialogue. We use an adaptive 10-turn conversational simulator that dynamically challenges the target model, reflecting how users repeat requests, push back, or steer a conversation toward a preferred answer. To accurately evaluate these trajectories, we apply a taxonomy that strictly separates Sycophancy (whether the model holds firm to the truth and keeps its praise proportional) from Calibrated Validation (showing empathetic understanding of the user's feelings without overdoing it). We release our complete testing environment, including 500 diverse multi-turn scenarios and an automated judge. Our evaluation of leading models reveals a consistent trade-off: over the course of a sustained interaction, current systems either slowly drift to sycophancy or over-correct into robotic detachment. This demonstrates that balancing honesty with appropriate support throughout a natural conversation remains a critical, unsolved challenge.",
+      "publishedAt": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39863",
+      "tags": [
+        "sycophancy",
+        "llm-as-a-judge"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.37577",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Pair Difficulty Matters: Rethinking Pairwise LLM-as-a-Judge Evaluation and Consistency",
+      "summary": "Large Language Model judges are widely used to rank texts and text-generating systems through pairwise comparison, and their reliability is typically assessed via three proxies: position bias, transitivity, and pairwise agreement (self- or human-labeled). Because these proxies drive judge selection and benchmarking, a substantial literature reporting that judges perform poorly on them risks steering practitioners away from otherwise capable evaluators. We argue this assessment is misleading. Under the Bradley--Terry geometry underlying pairwise aggregation, each proxy is dominated by close-rank-gap pairs, where inconsistency is information-theoretically expected and individual verdicts contribute little to the aggregate ranking; far-gap pairs carry the ranking signal but barely move the proxies. We formalize this argument and validate it in a controlled simulation and on two human-rated corpora: the proxies correlate only weakly with ranking accuracy against gold, and their predictive component concentrates in the far-gap regime. Judges should therefore be assessed on rank-gap-conditional metrics, ideally against human rankings. Code at https://github.com/brunobrocai/PairDifficulty.",
+      "publishedAt": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.37577",
+      "tags": [
+        "llm-as-a-judge",
+        "position-and-order"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.34800",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Pass or Fail? Evaluating LLMs on Two Greek Examination Benchmarks",
+      "summary": "The rapid advancement of Large Language Models (LLMs) imposes a thorough evaluation of their linguistic and analytical capabilities as well as constraints, particularly for a language with limited benchmark coverage such as Greek. To address the limited availability of comprehensive benchmarks in this domain, we introduce Prot-Ex and Pan-Ex, two benchmarks consisting of questions from entrance exams for Greek Model and Experimental schools as well as the Panhellenic exams (the Greek national university entrance examinations). These benchmarks are employed to assess the performance of text-only LLMs-including the Greek-adapted KriKri-8B-Instruct, Llama-3.1-8B, Gemma-4-26B, and Qwen-3-32B-across diverse academic disciplines (Modern Greek, Mathematics, Physics, etc.) and task formats (closed, structured, and open-ended), including textualized visual context (i.e., image descriptions). Our findings indicate the localized KriKri-8B significantly outperforms its base model, successfully rivalling much larger LLMs in linguistically demanding humanities tasks. By leveraging an LLM-as-a-Judge methodology, we expose the inadequacy of traditional lexical metrics for evaluating complex reasoning. Crucially, we uncover a few-shot prompting paradox: while synthetic examples improve accuracy in closed-ended questions, they severely overload the context window of 8B models in structured tasks, causing significant performance degradation. Ultimately, this study suggests targeted linguistic adaptation offsets lower parameter counts in specialized domains, despite the fragility of smaller models to prompt verbosity.",
+      "publishedAt": "2026-09-28",
+      "url": "https://arxiv.org/abs/2609.34800",
+      "tags": [
+        "llm-as-a-judge",
+        "surface-quality"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.32616",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "\"You're Right, Let Me Fix It\": How LLM Agents Damage Correct Work When Falsely Accused",
+      "summary": "LLM agents increasingly keep working after a task succeeds as they resume after compaction or take over handoffs. Their finished work keeps receiving follow-up input that sometimes falsely accuses it for later failures. We call an agent's acceptance of such a false accusation gaslight sycophancy, and destructive over-correction when acting on it damages previously correct work. We introduce CAVE-Bench, a benchmark of 365 agentic tasks across six domains built around opaque tasks. Every scored run first reaches a verified correct state, whose supporting rationale and history stay in the workspace while the facts that would settle the accusation lie in external or runtime state beyond the agent's reach. The agent cannot confirm or refute the claim with a local check, so the right response should keep the work and ask for the missing evidence. Each task either hands the agent correct work with saved evidence or let it build and verify that work first, and five risk factors set how the accusation enters the workflow. We score accusation acceptance and evidence use from the trajectory and measure harm by deterministic replay of downstream events. Across 14 of the latest models in Claude Code, false accusations damage correct work in up to 60.06% of runs, and stronger models often do so after recovering the supporting evidence. The same model behaves differently across OpenCode, Codex, and Hermes, and a harness gate driven by the benchmark's live signals cuts replayed harm by 74%. These results show that preserving already-correct work under unsupported accusation is a distinct safety challenge for long-lived agents. Our project is in https://henrymao2004.github.io/agent-over-correction/.",
+      "publishedAt": "2026-09-26",
+      "url": "https://arxiv.org/abs/2609.32616",
+      "tags": [
+        "sycophancy",
+        "agents"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.31215",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "DIAL: Position-Debiased LLM Judges with Adaptive Human Preference Calibration",
+      "summary": "Large language models (LLMs) as a judge enable scalable evaluation, but their judgments can be sensitive to response order and, even after removing such position effects, can still diverge systematically from human preferences.We introduce DIAL, a unified framework that combines abundant LLM comparisons with limited human comparisons to separate judge-specific position effects, learn shared structure in position-debiased LLM preferences, and adaptively calibrate that structure toward the human preference target. Theoretically, we study three aspects of DIAL: (i) identification of latent LLM preferences, position effects, and human calibration; (ii) adaptive estimation that balances LLM anchoring against limited human evidence; and (iii) fixed-weight uncertainty quantification for the calibrated human preference. Empirically, we evaluate position debiasing and human alignment separately in controlled simulations and on three human-preference benchmarks, showing that DIAL remains robust to unbalanced response order, achieves strong human-aligned rankings with limited labels, and adapts toward human evidence when LLM information is imperfect. Our real-data study collects over 410K judgments from 21 LLM judges in both display orders, providing a resource for future studies of LLM-judge bias, heterogeneity, and human alignment.",
+      "publishedAt": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.31215",
+      "tags": [
+        "llm-as-a-judge",
+        "cognitive-analogy"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7161165783",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Large language models for agentic NetOps and AIOps: Architectures, evaluation, and safety",
+      "summary": "",
+      "publishedAt": "2026-10-01",
+      "venue": "Computer Science Review",
+      "doi": "10.1016/j.cosrev.2026.101075",
+      "url": "https://doi.org/10.1016/j.cosrev.2026.101075",
+      "tags": [
+        "agents"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential AI systematic-bias evidence candidate. Review methodology before promoting it to the public catalog.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7214808586",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed review",
+      "title": "Large Language Models and Agentic AI for Vulnerability Management: A Systematic Review",
+      "summary": "",
+      "publishedAt": "2026-09-28",
+      "venue": "Expert Systems",
+      "doi": "10.1111/exsy.70437",
+      "url": "https://doi.org/10.1111/exsy.70437",
+      "tags": [
+        "agents"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential AI systematic-bias evidence candidate. Review methodology before promoting it to the public catalog.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.40124",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Debias It Yourself: Teaching LLMs Cognitive Bias Mitigation Interventions",
+      "summary": "Bias has long been studied in social psychology and cognitive science, where decades of research have produced a body of validated interventions that reduce stereotypical thinking and prejudiced responses in humans. We propose Debias It Yourself (DIY), a cognitively grounded framework that translates five such interventions into debiasing procedures for large language models and delivers them through three established paradigms: Show (in-context examples), Train (instruction tuning), and Revise (guided self-revision). Across three models, five bias benchmarks, eleven debiasing baselines, and three reasoning benchmarks, Train+Revise and Revise alone attain the top two average ranks, lead the bias-reasoning tradeoff (mean bias as low as 2% at 90% reasoning accuracy), and reduce bias on unseen dimensions by up to 14.8%. Our code and data are publicly available.",
+      "publishedAt": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.40124",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.39853",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Cognitive Enhancement: Rethinking the Necessity of Role-Playing for Large Language Models",
+      "summary": "Role-playing prompting has become a popular yet simple technique for improving LLM reasoning and output quality. However, whether it consistently boosts performance across diverse domains remains unclear, as systematic validation is lacking. To fill this gap, we run multi-model, cross-domain, and multilingual experiments on MMLU and MMLU-Redux. We find that gains from role-play prompting depend heavily on model capacity, knowledge domain, and prompt language. Drawing on metacognition theory, we propose the persona-related cognitive alignment hypothesis: role-play works only when the LLM correctly grasps the designated persona and its associated knowledge domain. We test this hypothesis through persona information richness ablation, layer-wise entropy divergence analysis, and latent thought-space deflection observation. To reduce persona cognitive bias and stabilize role-play performance, we propose \\textbf{M}ixed-\\textbf{L}anguage \\textbf{C}oncatenate \\textbf{P}rediction \\textbf{(MLCP}), a simple, training-free, and efficient multilingual prompt concatenation strategy. It aggregates semantically equivalent role prompts to enrich complementary representational cues. Extensive experiments show that MLCP consistently outperforms vanilla role-play prompting across all tested LLMs.",
+      "publishedAt": "2026-09-30",
+      "url": "https://arxiv.org/abs/2609.39853",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.00369",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "A Shared Taste for Model-Written Text: The Generator-by-Selector Matrices of \"AI-AI Bias\" Show No Detectable Own-Model Premium",
+      "summary": "Laurito et al. (PNAS 2025) showed that large language models choosing between two descriptions of the same product, paper or film prefer the description written by a language model over the one written by a person, by a wide margin over what human judges do. Their design crosses five generators with the same five models as selectors, which permits a second question the paper does not headline: does a selector prefer text from its own model beyond what the generator and selector main effects predict? We rebuild the three 5x5 matrices from the per-item counts in the authors' public repository (21,828 valid trials; every cell matches the published value) and fit a two-way fixed-effects model with an own-model term gamma, tested by the exact permutation test over the 120 relabellings of the selectors. The premium is +0.013 on products (exact one-sided p = 0.24), -0.010 on paper abstracts (p = 0.74), +0.054 on films (p = 0.07) and +0.019 pooled (p = 0.14; 95% interval -0.008 to 0.046). The same-vendor term for the GPT-3.5 and GPT-4 pair is negative in all three datasets. Position bias moves single cells by up to 0.42 share points in either direction, and the own-model contrast is unchanged once order-driven items are removed. The design would have detected a premium of 0.05 with 82% (products), 88% (papers), 42% (films) and 97% (pooled) power; the minimum detectable effect at 80% power is 0.034 pooled. The absence is informative down to about 0.04 share points and silent below that. The 4x4 matrix of Tan et al. (ACL 2024) gives gamma = +0.148 at the smallest p its 24 relabellings allow, with a same-family term of the same size. The main result of Laurito et al. stands: models share a taste for model-written text, with GPT-4's descriptions chosen 77% to 95% of the time by every selector on products. What these data do not show is a model recognising and favouring its own prose.",
+      "publishedAt": "2026-09-30",
+      "url": "https://arxiv.org/abs/2610.00369",
+      "tags": [
+        "llm-as-a-judge",
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.00606",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Where's Waldo? Query-language Preference under Cross-lingual Knowledge Disparities",
+      "summary": "Large Language Models increasingly serve as interfaces for knowledge-intensive information seeking tasks across languages by synthesizing multilingual evidence. Prior work has shown that they often exhibit query-language preference -- the tendency to favor sources written in the language of the query -- but has largely examined this behavior in settings where equivalent knowledge is available across languages. However, this bias becomes consequential when sources in different languages provide incomplete or inconsistent accounts of the same fact, since the information users receive then depends on the sources a model selects to use. To characterize query-language preference under such cross-lingual knowledge disparities, we introduce Waldo, a multilingual Question-Answering (QA) benchmark constructed from Wikipedia. Waldo contains 12K QA pairs targeting knowledge gaps, where a fact is available in one language but absent in another, and knowledge conflicts, where language editions provide conflicting versions of the same fact. Evaluating eight models across five languages, we find that when one language edition merely lacks the relevant fact, models generally use evidence from the other language regardless of the query language. Under conflicting accounts, however, model responses strongly align with the document in the query language, causing semantically equivalent queries to elicit different accounts depending on the user's language. Finally, we explore two different approaches that could mitigate this preference under knowledge conflicts: a mechanistic intervention that ablates attention heads associated with query-language preference, and LoRA-based training, which reduces the preference gap by up to 61.5%.",
+      "publishedAt": "2026-09-30",
+      "url": "https://arxiv.org/abs/2610.00606",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.38296",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "AI Agents are Vulnerable to Radicalization",
+      "summary": "Large language models (LLMs) can influence people's beliefs, yet little is known about whether and how they can manipulate each other. To investigate this, we simulate conversations between two agents: a target LLM that role-plays a human persona based on demographic and psychological attributes, and an influencer LLM that aims to make the target's beliefs more extreme. We examine radicalization along two pathways: resonance, where the influencer reinforces a target's pre-existing belief, and persuasion, where the influencer promotes a belief the target initially considers unimportant. Across affective and behavioral metrics, we find that both mechanisms radicalize the target. However, resonance produces consistently stronger effects than persuasion. Different influence tactics, such as using sycophancy and unverified claims, produce different levels of radicalization, but not consistently across metrics. We further show that resonance propagates to related beliefs, suggesting interconnected belief structures within AI agents. These findings indicate that AI agents are susceptible to radicalization, particularly when messages align with their existing beliefs, raising concerns about the vulnerability of personalized AI agents and multi-agent AI ecosystems.",
+      "publishedAt": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.38296",
+      "tags": [
+        "sycophancy",
+        "agents"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.37317",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "What Comes Next? Omni-StoryBench for Evaluating Story-Grounded Omnimodal Generation",
+      "summary": "Omnimodal evaluation should go beyond independent text, image, and speech production: individually plausible outputs may not express a coherent shared event. We introduce Omni-StoryBench, a story-grounded omnimodal benchmark evaluating whether models can coherently continue stories across image, narration, and speech. Each instance provides a current storybook page and structured next-page conditions, requiring models to generate the next illustration, narration, and spoken character utterance. Omni-StoryBench contains 900 rigorously validated story transitions from openly licensed children's books, with ground-truth next-page references and speech metadata. We evaluate systems with modality-specific metrics and consistency-centered LLM-as-a-judge rubrics for context preservation, condition following, reference consistency, and cross-modal coherence. Across 32 baseline configurations spanning orchestration, semi-orchestration, and native any-to-any paradigms, we find orchestration with strong VLM planning most reliable, while current native omnimodal models often struggle with output completeness and controllability. Our analysis shows text-side performance is associated with image and speech quality, but image generation and visual continuity form the clearest observed bottleneck among the evaluated configurations. These results position Omni-StoryBench as a system-level benchmark measuring coherent omnimodal generation beyond isolated modality quality.",
+      "publishedAt": "2026-09-29",
+      "url": "https://arxiv.org/abs/2609.37317",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.31122",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "LocUS: Head Selection and Subspace Projection for Targeted Activation Steering",
+      "summary": "Activation steering is a powerful training-free paradigm for controlling large language models at inference time. However, standard approaches estimate a per-layer steering direction from contrastive data and apply it on the layer's entire representation space, which may couple the intervention to off-target properties present in the contrastive data and degrade unrelated capabilities. To mitigate this issue, we introduce LocUS (Localized Unembedding Steering), a method which grounds activation steering to the model's own output vocabulary subspace. By identifying a property-specific linear subspace within the unembedding matrix, LocUS enforces a geometric constraint that restricts the steering transformation to a specific subspace and at the same time localizes its application to a sparse subset of attention heads. Extensive evaluations across three model families on toxicity mitigation, sentiment redirection and sycophancy suppression show that LocUS matches or outperforms state-of-the-art baselines while intervening on under 6% of parameters and better preserving general capability.",
+      "publishedAt": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.31122",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.30986",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Evaluating Sycophancy in Chinese Large Language Models on Factual Questions Derived from Online Search Queries",
+      "summary": "As large language models increasingly mediate information access, factually accurate and independent answers are critical. However, these models can exhibit sycophancy by aligning their responses with users' stated beliefs even when those beliefs are incorrect, potentially presenting misinformation as independently verified and reinforcing users' confidence in false claims. Prior work leaves unresolved whether introducing user beliefs causes correct responses to become incorrect or uncertain, or causes uncertain responses to become belief-aligned incorrect answers. It also remains unclear whether anti-sycophancy interventions preserve or restore factual accuracy or merely shift responses toward uncertainty. We analyze factual sycophancy in Chinese-language information seeking using yes/no fact-checking questions. Our analysis covers 364,941 responses from three frontier Chinese-based LLMs (DeepSeek, Qwen, and Doubao) to 12,165 factual questions derived from real-world Chinese search queries. We evaluate the models with and without reasoning across baseline, belief-conditioned, and anti-sycophancy prompting, tracing matched shifts among correct, incorrect, and uncertain responses. Under incorrect user beliefs, we distinguish belief-aligned errors from losses of factual confidence, in which initially correct answers become uncertain. Patterns vary across models and reasoning settings: reasoning is not a consistent safeguard, and anti-sycophancy instructions can reduce incorrect agreement while increasing uncertainty. In Chinese-language factual question answering, avoiding agreement with false beliefs is therefore not equivalent to preserving factual accuracy, highlighting the value of transition-level evaluation. Such behavior may undermine the reliability of LLM-mediated information access by reinforcing misinformation or weakening users' confidence in factually correct answers.",
+      "publishedAt": "2026-09-25",
+      "url": "https://arxiv.org/abs/2609.30986",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.30337",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Parameters vs. Context: TRACE Fine-Tuning for Robust Retrieval-Augmented Generation",
+      "summary": "Retrieval-Augmented Generation (RAG) mitigates knowledge obsolescence and factual hallucination in large language models by introducing external context. However, when retrieved knowledge conflicts with the model's internal parametric knowledge, the model may either blindly follow misleading context or incorrectly rely on parametric knowledge, leading to unreliable responses. To address this issue, this paper proposes TRACE (Debate-TRace and Answer-Completeness rEgularized fine-tuning), a robust fine-tuning framework for RAG under knowledge conflicts. First, we propose a fine-tuning method that leverages multi-agent debate traces to extract correct candidates, incorrect candidates, and answer-shift patterns, providing fine-grained supervision for reliable knowledge-source selection. In addition, we design an answer completeness regularization mechanism to alleviate empty, overly short, and prematurely terminated responses via answer-tail token reinforcement and premature termination suppression. The fine-tuning objective combines correct-answer supervision, incorrect-candidate suppression, answer-tail token reinforcement, and premature termination suppression, enabling the model to use reliable external context, resist misleading or irrelevant retrieved content, and fall back to parametric knowledge when retrieved evidence is unreliable. Experiments across multiple knowledge-conflict scenarios and datasets show that TRACE improves robustness against misleading retrieved knowledge and reduces incomplete answers. These results demonstrate that multi-agent debate traces and answer completeness regularization jointly enhance knowledge-source selection, conflict robustness, and answer quality in RAG models. Our code is available at https://github.com/PHD-lanyu/TRACE.",
+      "publishedAt": "2026-09-24",
+      "url": "https://arxiv.org/abs/2609.30337",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.35805",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Alignment Forecasting: Predicting Misalignment From Training Data",
+      "summary": "Training a language model on data with a narrow flaw can sometimes make the model broadly misaligned. Inspecting the data at face value often does not settle whether it will emerge, and today it is caught only after training, by auditing the resulting model. To complement post-hoc audits, we introduce Alignment Forecasting: the task of predicting alignment failures before training. Given a target model, a fine-tuning dataset, and a failure mode such as deception or sycophancy, a forecaster outputs the probability that fine-tuning would meaningfully increase that failure mode. To measure progress on alignment forecasting, we introduce ALIGNMENTFORECASTBENCH, a benchmark of over 5,000 forecasting questions spanning 17 target models, 32 datasets, and 16 failure modes. Frontier models prompted directly perform poorly on ALIGNMENTFORECASTBENCH. We therefore propose a forecasting scaffold in which an LLM reads the dataset and rates how strongly and broadly it pushes the model toward misbehavior, and a simple learned model combines that rating with the failure mode's base rate and the target model's prior tendency. This forecasts well above chance, and beats a model fine-tuned on the task and a simple forecaster allowed to see how weaker models behaved after fine-tuning on the same data. Its signals also flag problematic training examples that a frontier-model classifier misses. Filtering those examples out from real post-training data such as UltraChat results in more aligned models on our multiple-choice evaluation in most cases, though the benefit in open-ended conversations is unclear. More progress is needed before forecasts can reliably guide training data curation in practice, but our results suggest that forecasting many alignment failures before training can be tractable in the SFT setting.",
+      "publishedAt": "2026-09-19",
+      "url": "https://arxiv.org/abs/2609.35805",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2609.35797",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Binarization Flattens the Score Space",
+      "summary": "Large language model (LLM) judges are often used as rewards to train policies on objectives that deterministic verifiers cannot capture. However, these rewards are often collapsed to pass/fail ({0, 1}), which reports the verdict but not how well a response met each criterion. We model each pass/fail verdict as a score on an unreported scale, compared with one cutoff. A stretch of that scale moves every score proportionally toward or away from the cutoff, but never across it, so no verdict changes. A policy is therefore free to apply any stretch without changing anything the panel reports. Under a joint-Gaussian model, a third grade adds a second threshold and removes this affine stretch ambiguity. On MATH and SciBench outputs from one seven-criterion judge, all 14 constructed criterionwise stretches were invisible after binarization but visible with three grades. At $n=1{,}024$, a test given both population laws had at least 96.5% power at a $1.5\\times$ stress. Retaining grades closes one blind spot created by binarization, but verdicts alone remain insufficient as some changes are still indistinguishable from genuine improvement. These include arbitrary within-grade changes and fixed-covariance, loading-aligned mean shifts -- the signature of a sycophancy-shaped lift the panel reads as competence. The shared-factor reference approximation fit MATH and SciBench but not HealthBench, delineating its empirical scope. We recommend keeping at least three grades (for example, asking the judge whether each criterion is fully, partially, or not met and rewarding {0, 0.5, 1}), and externally validating gains along the remaining direction, which no finer scale removes.",
+      "publishedAt": "2026-09-17",
+      "url": "https://arxiv.org/abs/2609.35797",
+      "tags": [
+        "sycophancy",
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.00054",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "The First Token Is Not the Verdict: Hidden Costs of Reading LLM Judges Without Generating",
+      "summary": "Reading an LLM judge's verdict from the logits of its first generated token is cheap, requires no generation, and is exactly what constrained decoding and likelihood-scoring evaluation harnesses produce. We show that this readout distorts position bias in one direction: it overstates it in every condition we test, so figures obtained this way behave as upper bounds. The mechanism is that judges do not always lead with a verdict token, on 12% to 49% of pairs for three Qwen3 judges and under 3% for Llama-3.1-8B and Phi-3.5-mini, and forcing a read on those pairs returns whichever response was shown first rather than a judgment. Pooled over the 924 pairs where a judge did not commit, the forced read flips on 89.7% of them when the responses are swapped, against 47.5% read after generation (paired difference +0.422, 95% CI [+0.365, +0.467]). The distortion is specific to what is measured: it moves position bias by 42 points while moving judge accuracy by under one point in seven of ten conditions, so it misleads whoever audits a judge rather than whoever uses one. A second, smaller failure occurs even when the judge does lead with a verdict token, since it sometimes opens with one letter and reasons its way to the other, on 0 to 5.5% of pairs at a rate uncorrelated with compliance. We recommend reporting the rate at which a judge leads with a verdict token, which costs one forward pass and no labels, alongside any position-bias figure.",
+      "publishedAt": "2026-09-04",
+      "url": "https://arxiv.org/abs/2610.00054",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2606.30518",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Regime-Aware Peer Specialization for Robust RAG under Heterogeneous Knowledge Conflicts",
+      "summary": "Retrieval-augmented generation (RAG) improves language models by grounding generation in external context. However, it can be fragile when the retrieved context conflicts with the model's parametric knowledge. Such conflicts span a reliability spectrum, ranging from reliable and partially reliable evidence to adversarial context. Existing remedies often handle such heterogeneous conflicts with regime-agnostic supervision, which can conflate incompatible learning signals across reliability regimes. To disentangle these signals, we propose RAPS-DA, a regime-aware peer specialization framework that addresses conflict at two complementary granularities. At the sample level, conflicts are divided into three regimes, including Grounding, Arbitration, and Resistance, with one same-scale peer specialist trained per regime from a shared base model. Each sample is then hard-routed to its regime-matched peer for on-policy reverse-KL supervision. At the token level, a dual-layer selector uses inter-teacher disagreement, student-teacher divergence, and student entropy to filter uninformative or unstable tokens, upweight confidently misaligned ones, and gradually focus supervision on high-conflict tokens as the student matures. Gains stem from specialization at a fixed model scale, not from a stronger teacher, and the peer specialists exist only during training, so the deployed student requires no regime labels or peer access. Experiments on five conflict scenarios and two out-of-distribution benchmarks show RAPS-DA surpasses all prompting, decoding, fine-tuning, RL, and single-teacher baselines.",
+      "publishedAt": "2026-06-29",
+      "url": "https://arxiv.org/abs/2606.30518",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2606.27786",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "SHIFT: Gate-Modulated Activation Steering for Knowledge Conflict Mitigation in Retrieval-Augmented Generation",
+      "summary": "Retrieval-augmented generation (RAG) enhances LLMs by incorporating external knowledge to support response generation. However, conflicts between retrieved context and parametric knowledge have emerged as a critical challenge in RAG systems. To mitigate such conflicts, numerous studies have attempted to identify and edit knowledge-related internal neurons, aiming to improve the ability of LLMs to rely on contextual evidence during generation. However, these neuron-level approaches may introduce unintended cascading effects that compromise the general capabilities of LLMs, as the modified neurons are often entangled with broader model behaviors and functionalities. In this paper, we introduce SHIFT, a novel framework that reformulates neuron-level modification as learnable gate modulation, allowing LLMs to adaptively regulate internal activations for knowledge conflict resolution. Technically, our SHIFT equips LLMs with a lightweight gate module and optimizes fewer than 0.01% trainable parameters while keeping the backbone model frozen. During generation, the gate module adjusts the model's internal representations to adaptively leverage contextual and parametric knowledge. Extensive experiments on six datasets validate the effectiveness of our SHIFT in comparison with various competing baselines. All datasets and code are available at https://github.com/OpenBMB/SHIFT.",
+      "publishedAt": "2026-06-26",
+      "url": "https://arxiv.org/abs/2606.27786",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2606.20245",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Navigating Unreliable Parametric and Contextual Knowledge: Explicit Knowledge Conflict Resolution for LLM Inference",
+      "summary": "Large language models (LLMs) have achieved strong performance across a wide range of language-based tasks by leveraging both extensive parametric knowledge and in-context learning ability, enabling them to incorporate external information provided in the input prompt. However, the integration of external knowledge can introduce conflicts, not only between the model's internal parametric knowledge and the external information, but also among multiple pieces of external contexts. Existing approaches typically assume that either the model or the provided context is reliable, overlooking the possibility that both sources may contain errors, and avoid conflicts by privileging one source over the other, rather than actively resolving inconsistencies. To address these limitations, we propose a novel framework MACR for LLM knowledge conflict resolution that moves beyond the conventional binary choice paradigm and incorporates an explicit conflict-resolution mechanism based on a multi-agent reasoning approach. Specifically, we first propose an adaptive knowledge assessment and retrieval approach that employs a modified semantic entropy measure to quantify an LLM's confidence in its answer to a given query. Based on this confidence estimation, MACR either externalizes the model's internal knowledge as textual representations or retrieves relevant external knowledge when internal knowledge is insufficient, generating basic contexts for subsequent reasoning. Then we introduce an inductive multi-agent reasoning framework with three specialized agents that, respectively, induce explicit rules, analyze potential conflicts, and resolve inconsistencies across all available contexts. Empirical results demonstrate that MACR significantly outperforms state-of-the-art baselines across benchmarks, while also providing interpretable resolutions of explicit conflicts.",
+      "publishedAt": "2026-06-18",
+      "url": "https://arxiv.org/abs/2606.20245",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-02",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "arxiv-2609.25570",
       "source": "arXiv",
@@ -804,11 +1204,6 @@
       "AI summarization overclaim and evidence distortion",
       "agent decision bias and evaluation reliability"
     ],
-    "lastRunFailures": [
-      "OpenAlex: large language model sycophancy: 429 Too Many Requests for https://api.openalex.org/works?search=large+language+model+sycophancy&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20",
-      "OpenAlex: LLM as a judge position bias verbosity bias: 429 Too Many Requests for https://api.openalex.org/works?search=LLM+as+a+judge+position+bias+verbosity+bias&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20",
-      "OpenAlex: large language model long context position bias: 429 Too Many Requests for https://api.openalex.org/works?search=large+language+model+long+context+position+bias&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20",
-      "OpenAlex: large language model knowledge conflict RAG source: 429 Too Many Requests for https://api.openalex.org/works?search=large+language+model+knowledge+conflict+RAG+source&filter=from_publication_date%3A2026-05-28%2Cto_publication_date%3A2026-09-25&sort=publication_date%3Adesc%2Crelevance_score%3Adesc&per_page=20"
-    ]
+    "lastRunFailures": []
   }
 }
