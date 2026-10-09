@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { join, relative } from 'node:path';
+import { applyReadingFooter } from './reading-footer.mjs';
 
 const out = 'dist';
 const css = await readFile('public/reading.css', 'utf8');
@@ -53,7 +54,7 @@ function simplifyReadingPage(html) {
   });
   // The site announcement stays available after the reading experience.
   const announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner>[\s\S]*?<\/aside>/)?.[0];
-  if (announcement && html.includes('</main>')) {
+  if (announcement && html.includes('</main>') && !html.includes('data-footer-design')) {
     html = html.replace(announcement, '').replace('</main>', `</main>${announcement}`);
   }
   return html;
@@ -82,6 +83,8 @@ for (const file of await htmlFiles(out)) {
     next = next.replace(/<body\b/, '<body data-reading-page');
     next = simplifyReadingPage(next);
   }
+  next = applyReadingFooter(next, isReadingPage);
+  next = next.replace(/<footer\b(?![^>]*\bid=)/, '<footer id="site-footer"');
   if (next !== source) await writeFile(file, next);
   pages += 1;
 }

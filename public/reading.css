@@ -181,6 +181,48 @@ body[data-reading-page] .section > h3 { font-size: 1.5rem; line-height: 1.3; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 36px; }
 .fine-print, .vedokrok-footer { font-size: .9375rem; line-height: 1.65; }
 
+/* One compact footer, shared by the editorial and localized generators. */
+.reading-footer {
+  display: block; padding: 3rem max(5vw, 24px); border-top: 1px solid #e2e2df;
+  background: #f7f7f4; color: var(--ink); font: 1.125rem/1.55 var(--font-ui);
+}
+.reading-footer__inner { max-width: var(--content); margin-inline: auto; }
+.reading-footer__top { display: grid; grid-template-columns: minmax(200px, 1fr) minmax(0, 2fr); gap: 3rem; }
+.reading-footer .brand, .reading-footer .brand strong { color: var(--ink); font: 600 1.25rem/1.3 var(--font-ui); letter-spacing: -.02em; }
+.reading-footer .brand img { width: 40px; height: 40px; border: 0; background: transparent; }
+.reading-footer p { margin: .9rem 0 0; max-width: none; }
+.reading-footer__brand > p { max-width: 30ch; font-size: 1.0625rem; color: #5c5c58; }
+.reading-footer .vedokrok-footer { color: #5c5c58; font-size: 1rem; }
+.reading-footer .vedokrok-footer a { color: var(--ink); }
+.reading-footer nav { display: block; font-weight: 400; }
+.reading-footer .footer-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; font-weight: 400; }
+.reading-footer .footer-group h2 { margin: 0 0 .75rem; font: 600 1rem/1.5 var(--font-ui); color: #5c5c58; }
+.reading-footer ul { list-style: none; padding: 0; margin: 0; }
+.reading-footer .footer-links a { display: inline-flex; align-items: center; min-height: 36px; color: var(--ink); text-decoration: none; }
+.reading-footer a:hover { text-decoration: underline; }
+.reading-footer a { color: var(--ink); text-underline-offset: .2em; overflow-wrap: break-word; }
+.reading-footer__meta { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e2df; }
+.reading-footer .footer-languages { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1.2rem; margin-bottom: .5rem; font-size: 1rem; }
+.footer-languages > span { color: #5c5c58; }
+.footer-languages > span[aria-current] { color: var(--ink); font-weight: 600; }
+.reading-footer .footer-languages a, .reading-footer .footer-legal a { display: inline-flex; align-items: center; min-height: 40px; }
+.reading-footer .footer-notice, .reading-footer .trust-line { font: 1rem/1.6 var(--font-ui); color: #5c5c58; }
+.reading-footer__bottom { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 2rem; margin-top: .75rem; }
+.reading-footer .footer-legal { display: flex; flex-wrap: wrap; gap: .2rem 1.2rem; font-size: 1rem; }
+.reading-footer .trust-line { margin: 0; }
+.footer-resources { margin-top: .75rem; font-size: 1rem; }
+.footer-resources > summary { display: list-item; width: fit-content; min-height: 40px; padding-block: .5rem; cursor: pointer; }
+.footer-resources__body { padding-top: .75rem; }
+.footer-resources__body > ul { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-bottom: 1rem; }
+.reading-footer .vedokrok-banner { padding: 0; background: transparent; border: 0; }
+.reading-footer .vedokrok-banner__inner { max-width: none; }
+.reading-footer .vedokrok-banner p { margin: 0; }
+.reading-footer .vedokrok-banner__kicker { display: none; }
+.reading-footer .vedokrok-banner__line { font-size: 1rem; font-weight: 400; }
+.reading-footer .vedokrok-banner__name { font: 600 1.125rem/1.5 var(--font-ui); }
+.reading-footer .vedokrok-banner__name a { border: 0; }
+.reading-footer .vedokrok-banner__cta a { padding: 0; background: transparent; color: var(--ink); box-shadow: none; }
+
 /* Let spacing and type, rather than boxes, separate the content. */
 .bias-link .bias-thumb { border: 0; border-radius: 6px; }
 .editorial-story, .editorial-story:hover { border: 0; box-shadow: none; transform: none; }
@@ -284,6 +326,12 @@ body[data-reading-page] .vedokrok-banner__cta a:hover { transform: none; }
   body[data-reading-page] .section { padding: 2rem 24px; }
   body[data-reading-page] .page-hero, body[data-reading-page] main > nav { padding-inline: 24px; }
   .reading-more { margin-inline: 24px; }
+  .reading-footer { padding: 2rem 24px; }
+  .reading-footer__top { grid-template-columns: 1fr; gap: 2rem; }
+  .reading-footer .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+  .reading-footer .footer-links a { min-height: 44px; }
+  .reading-footer .footer-group:nth-child(3) { grid-column: 1 / -1; }
+  .reading-footer .footer-group:nth-child(3) ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1.5rem; }
   .article h1, .legal h1, .everyday-article h1, .experiment-article h1 {
     font-size: clamp(2rem, 7.5vw, 2.5rem); line-height: 1.18; text-wrap: initial;
   }
