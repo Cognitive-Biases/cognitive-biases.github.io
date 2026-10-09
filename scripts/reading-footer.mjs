@@ -25,10 +25,8 @@ export function applyReadingFooter(html, isReadingPage) {
   const language = html.match(/<html\b[^>]*lang="([^"]+)"/)?.[1]?.toLowerCase() || 'en';
   const copy = labels[language] || labels.en;
   let announcement = '';
-  if (isReadingPage) {
-    announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner[^>]*>[\s\S]*?<\/aside>/)?.[0] || '';
-    if (announcement) html = html.replace(announcement, '');
-  }
+  announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner[^>]*>[\s\S]*?<\/aside>/)?.[0] || '';
+  if (announcement) html = html.replace(announcement, '');
 
   return html.replace(/<footer\b([^>]*)>([\s\S]*?)<\/footer>/, (_footer, attributes, content) => {
     const brand = content.match(/<a\b[^>]*class="brand\b[^"]*"[^>]*>[\s\S]*?<\/a>/)?.[0];

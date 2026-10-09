@@ -3,6 +3,7 @@ import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { applyReadingFooter } from './reading-footer.mjs';
 import { normalizeVedokrokAnnouncement } from './vedokrok-announcement.mjs';
+import { applyReaderJourney } from './reader-journey.mjs';
 
 const out = 'dist';
 const css = await readFile('public/reading.css', 'utf8');
@@ -13,6 +14,10 @@ const announcementScript = await readFile('public/vedokrok-announcement.js', 'ut
 const announcementVersion = createHash('sha256').update(announcementScript).digest('hex').slice(0, 12);
 await writeFile(join(out, 'vedokrok-announcement.js'), announcementScript);
 const announcementLoader = `<script src="/vedokrok-announcement.js?v=${announcementVersion}" data-vedokrok-script></script>`;
+const searchScript = await readFile('public/reader-search.js', 'utf8');
+const searchVersion = createHash('sha256').update(searchScript).digest('hex').slice(0, 12);
+await writeFile(join(out, 'reader-search.js'), searchScript);
+const searchLoader = `<script src="/reader-search.js?v=${searchVersion}" defer data-reader-search-script></script>`;
 
 // Keep the article and its evidence visible; offer the repeated practice,
 // research and agent links in one native, keyboard-accessible disclosure.
@@ -88,11 +93,14 @@ for (const file of await htmlFiles(out)) {
     next = next.replace(/<body\b/, '<body data-reading-page');
     next = simplifyReadingPage(next);
   }
+  next = applyReaderJourney(next, isReadingPage, route);
   next = applyReadingFooter(next, isReadingPage);
   next = next.replace(/<footer\b(?![^>]*\bid=)/, '<footer id="site-footer"');
   next = normalizeVedokrokAnnouncement(next);
   next = next.replace(/<script\b[^>]*data-vedokrok-script[^>]*>[\s\S]*?<\/script>/g, '');
   if (next.includes('data-vedokrok-banner')) next = next.replace('</head>', `${announcementLoader}</head>`);
+  next = next.replace(/<script\b[^>]*data-reader-search-script[^>]*>[\s\S]*?<\/script>/g, '');
+  if (next.includes('data-reader-catalogue')) next = next.replace('</body>', `${searchLoader}</body>`);
   if (next !== source) await writeFile(file, next);
   pages += 1;
 }
