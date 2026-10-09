@@ -1,3 +1,4 @@
+import { renderVedokrokAnnouncement } from './vedokrok-announcement.mjs';
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join, relative } from "node:path";
 
@@ -127,7 +128,7 @@ function active(route, prefix) {
   return route === prefix || route.startsWith(prefix) ? ' aria-current="page"' : "";
 }
 
-const vedokrokBanner = `<aside class="vedokrok-banner" data-vedokrok-banner><div class="vedokrok-banner__inner"><p class="vedokrok-banner__kicker">Now part of</p><p class="vedokrok-banner__name"><a href="https://vedokrok.com">Vedokrok</a></p><p class="vedokrok-banner__line">This project helps people recognize errors in thinking. Vedokrok goes further: it pairs that awareness with concrete tools for better decisions, learning and action — across many areas of life and work.</p><p class="vedokrok-banner__cta"><a href="https://vedokrok.com">Explore Vedokrok →</a></p></div></aside>`;
+const vedokrokBanner = renderVedokrokAnnouncement();
 const vedokrokFooterLine = `<p class="vedokrok-footer">Now part of <a href="https://vedokrok.com">Vedokrok</a> — a broader practical knowledge system.</p>`;
 
 function header(route) {
@@ -399,25 +400,10 @@ body[data-page-kind="home"] .editorial-story img{display:block;width:100%;height
 @media(prefers-reduced-motion:reduce){.editorial-story,.button,.nav-cta{transition:none}}
 
 /* Vedokrok announcement */
-.vedokrok-banner{position:relative;z-index:70;display:block;background:var(--yellow,#ffd900);color:var(--ink,#10103f);border-bottom:2px solid var(--ink,#10103f);padding:1.05rem max(4vw,1rem)}
-.vedokrok-banner__inner{max-width:var(--content,1240px);margin-inline:auto;display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.4rem}
-.vedokrok-banner p{margin:0}
-.vedokrok-banner__kicker{font:800 .72rem/1 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--blue,#1515a8)}
-.vedokrok-banner__name{font:900 clamp(1.35rem,2.6vw,2rem)/1 var(--font-display,'Inter Tight','Arial Black',sans-serif);letter-spacing:-.03em}
-.vedokrok-banner__name a{color:inherit;text-decoration:none;border-bottom:4px solid var(--pink,#ff2a9b)}
-.vedokrok-banner__name a:hover{color:var(--blue,#1515a8);text-decoration:none}
-.vedokrok-banner__line{flex:1 1 26rem;max-width:62rem;font-weight:600;font-size:.96rem;line-height:1.45}
-.vedokrok-banner__cta{font:800 .85rem/1 'DM Sans',sans-serif;text-transform:uppercase;letter-spacing:.08em}
-.vedokrok-banner__cta a{display:inline-flex;align-items:center;min-height:44px;padding:.5rem .85rem;background:var(--ink,#10103f);color:var(--yellow,#ffd900);text-decoration:none;box-shadow:4px 4px 0 var(--blue,#1515a8)}
-.vedokrok-banner__cta a:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--blue,#1515a8);text-decoration:none}
 .vedokrok-footer{grid-column:1/-1;margin:0;font-size:.86rem;color:#c9caff}
 .vedokrok-footer a{color:var(--yellow,#ffd900)}
 body[data-page-kind="home"] .site-header--home{position:sticky;inset-block-start:0;z-index:100;background:var(--blue-deep,#09094a);border-bottom:2px solid #ffffff35}
 @media(max-width:760px){
-  .vedokrok-banner{padding:.9rem 1rem}
-  .vedokrok-banner__inner{display:grid;gap:.35rem}
-  .vedokrok-banner__line{font-size:.92rem}
-  .vedokrok-banner__cta a{width:100%;justify-content:center}
   body[data-page-kind="home"] .site-header--home{position:relative;background:var(--blue-deep,#09094a)}
 }
 `;

@@ -25,7 +25,6 @@ button, input, select, textarea { font-family: var(--font-ui); }
 .site-nav__drawer a { min-height: 44px; }
 .locale-bar { flex-wrap: wrap; gap: .3rem .85rem; font-size: .9375rem; line-height: 1.5; }
 .locale-bar a { display: inline-flex; align-items: center; min-height: 32px; }
-.vedokrok-banner__line { font-size: 1rem; line-height: 1.55; }
 
 /* Calm hierarchy around the existing collage artwork. */
 .section { padding-block: clamp(3rem, 5vw, 5rem); }
@@ -214,14 +213,6 @@ body[data-reading-page] .section > h3 { font-size: 1.5rem; line-height: 1.3; }
 .footer-resources > summary { display: list-item; width: fit-content; min-height: 40px; padding-block: .5rem; cursor: pointer; }
 .footer-resources__body { padding-top: .75rem; }
 .footer-resources__body > ul { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-bottom: 1rem; }
-.reading-footer .vedokrok-banner { padding: 0; background: transparent; border: 0; }
-.reading-footer .vedokrok-banner__inner { max-width: none; }
-.reading-footer .vedokrok-banner p { margin: 0; }
-.reading-footer .vedokrok-banner__kicker { display: none; }
-.reading-footer .vedokrok-banner__line { font-size: 1rem; font-weight: 400; }
-.reading-footer .vedokrok-banner__name { font: 600 1.125rem/1.5 var(--font-ui); }
-.reading-footer .vedokrok-banner__name a { border: 0; }
-.reading-footer .vedokrok-banner__cta a { padding: 0; background: transparent; color: var(--ink); box-shadow: none; }
 
 /* Let spacing and type, rather than boxes, separate the content. */
 .bias-link .bias-thumb { border: 0; border-radius: 6px; }
@@ -310,13 +301,6 @@ body[data-reading-page] .pt-hero .pt-shell, body[data-reading-page] .it-hero .it
 body[data-reading-page] .pt-hero h1, body[data-reading-page] .it-hero h1 { font: 600 clamp(2.125rem,3.8vw,3rem)/1.18 var(--font-ui); }
 body[data-reading-page] .pt-lede, body[data-reading-page] .it-lede { font: var(--text-reading)/1.65 var(--font-reading); }
 body[data-reading-page] .pt-card, body[data-reading-page] .it-card { border: 0; box-shadow: none; background: transparent; padding-inline: 0; }
-body[data-reading-page] .vedokrok-banner { background: #f7f7f5; border: 0; color: #5c5c58; }
-body[data-reading-page] .vedokrok-banner__inner { max-width: var(--reading); }
-body[data-reading-page] .vedokrok-banner__name { font: 600 1.125rem/1.5 var(--font-ui); }
-body[data-reading-page] .vedokrok-banner__name a { border: 0; }
-body[data-reading-page] .vedokrok-banner__line { font-weight: 400; }
-body[data-reading-page] .vedokrok-banner__cta a { background: transparent; color: var(--ink); box-shadow: none; padding: 0; }
-body[data-reading-page] .vedokrok-banner__cta a:hover { transform: none; }
 
 @media (max-width: 760px) {
   :root { --text-reading: 1.25rem; --text-body: 1.125rem; }
@@ -366,4 +350,61 @@ body[data-reading-page] .vedokrok-banner__cta a:hover { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+/* A quiet, optional project announcement; the real brand artwork stays small. */
+.vedokrok-banner {
+  position: relative; z-index: auto; display: block; padding: 12px 24px;
+  background: #faf9f3; color: #242424; border: 0; border-bottom: 1px solid #e9e7dc;
+  font-family: var(--font-ui, 'DM Sans', sans-serif);
+}
+.vedokrok-banner .vedokrok-banner__inner {
+  display: grid; grid-template-columns: 56px minmax(0, 1fr) auto 44px;
+  align-items: center; gap: 16px; max-width: 1160px; margin-inline: auto;
+}
+.vedokrok-banner .vedokrok-banner__mascot { display: block; width: 56px; height: 56px; object-fit: contain; }
+.vedokrok-banner .vedokrok-banner__copy { min-width: 0; }
+.vedokrok-banner .vedokrok-banner__identity {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+  margin: 0; font: 400 15px/1.4 var(--font-ui); color: #55554e;
+}
+.vedokrok-banner__identity a { display: inline-flex; align-items: center; min-height: 32px; border: 0; }
+.vedokrok-banner__identity img { display: block; width: 132px; height: auto; }
+.vedokrok-banner .vedokrok-banner__line { margin: 3px 0 0; max-width: none; font: 400 16px/1.5 var(--font-ui); color: #55554e; }
+.vedokrok-banner .vedokrok-banner__visit {
+  display: inline-flex; align-items: center; justify-content: flex-start; gap: 6px;
+  min-height: 44px; width: fit-content; padding: 0; color: #242424;
+  font: 500 16px/1.4 var(--font-ui); text-decoration: none; border: 0;
+  background: transparent; box-shadow: none; white-space: nowrap;
+}
+.vedokrok-banner__visit:hover { text-decoration: underline; text-underline-offset: .2em; }
+.vedokrok-banner .vedokrok-banner__dismiss {
+  display: inline-grid; place-items: center; align-self: start; width: 44px; height: 44px;
+  padding: 0; border: 0; border-radius: 50%; background: transparent; box-shadow: none;
+  color: #55554e; font: 400 27px/1 Arial, sans-serif; cursor: pointer;
+}
+.vedokrok-banner__dismiss:hover { background: #eeece3; color: #242424; }
+.vedokrok-banner :is(a, button):focus-visible, .vedokrok-restore:focus-visible { outline: 2px solid #2456b5; outline-offset: 3px; }
+.reading-footer .vedokrok-banner { padding: 12px 0; background: transparent; border: 0; }
+.reading-footer .vedokrok-banner__inner { max-width: none; }
+.reading-footer .vedokrok-restore {
+  display: block; width: fit-content; min-height: 44px; margin-top: 4px; padding: 0;
+  border: 0; color: #55554e; background: transparent; box-shadow: none;
+  font: 400 14px/1.5 var(--font-ui); text-align: start; text-decoration: underline;
+  text-underline-offset: .2em; cursor: pointer;
+}
+.vedokrok-status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+html[data-vedokrok-announcement="hidden"] [data-vedokrok-banner],
+.vedokrok-banner[hidden], .vedokrok-banner [hidden], .vedokrok-restore[hidden] { display: none !important; }
+@media (max-width: 760px) {
+  .vedokrok-banner { padding: 10px 16px; }
+  .vedokrok-banner .vedokrok-banner__inner { grid-template-columns: 40px minmax(0, 1fr) 44px; gap: 0 8px; }
+  .vedokrok-banner .vedokrok-banner__mascot { width: 40px; height: 40px; align-self: start; margin-top: 6px; }
+  .vedokrok-banner .vedokrok-banner__identity { font-size: 14px; gap: 2px 8px; }
+  .vedokrok-banner__identity img { width: 116px; }
+  .vedokrok-banner .vedokrok-banner__line { font-size: 15px; line-height: 1.45; }
+  .vedokrok-banner .vedokrok-banner__visit { grid-column: 2; font-size: 15px; }
+  .vedokrok-banner .vedokrok-banner__dismiss { grid-column: 3; grid-row: 1; }
+}
+@media (max-width: 420px) {
+  .vedokrok-banner .vedokrok-banner__line { display: none; }
 }

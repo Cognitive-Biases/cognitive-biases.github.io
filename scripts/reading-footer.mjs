@@ -26,7 +26,7 @@ export function applyReadingFooter(html, isReadingPage) {
   const copy = labels[language] || labels.en;
   let announcement = '';
   if (isReadingPage) {
-    announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner>[\s\S]*?<\/aside>/)?.[0] || '';
+    announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner[^>]*>[\s\S]*?<\/aside>/)?.[0] || '';
     if (announcement) html = html.replace(announcement, '');
   }
 

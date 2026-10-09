@@ -2,12 +2,17 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { applyReadingFooter } from './reading-footer.mjs';
+import { normalizeVedokrokAnnouncement } from './vedokrok-announcement.mjs';
 
 const out = 'dist';
 const css = await readFile('public/reading.css', 'utf8');
 const version = createHash('sha256').update(css).digest('hex').slice(0, 12);
 await writeFile(join(out, 'reading.css'), css);
 const stylesheet = `<link rel="stylesheet" href="/reading.css?v=${version}" data-reading-design>`;
+const announcementScript = await readFile('public/vedokrok-announcement.js', 'utf8');
+const announcementVersion = createHash('sha256').update(announcementScript).digest('hex').slice(0, 12);
+await writeFile(join(out, 'vedokrok-announcement.js'), announcementScript);
+const announcementLoader = `<script src="/vedokrok-announcement.js?v=${announcementVersion}" data-vedokrok-script></script>`;
 
 // Keep the article and its evidence visible; offer the repeated practice,
 // research and agent links in one native, keyboard-accessible disclosure.
@@ -53,7 +58,7 @@ function simplifyReadingPage(html) {
     return `${open}${article}<details class="reading-more"><summary>${label}</summary><div class="reading-more__body">${legacy}${tail}</div></details>${close}`;
   });
   // The site announcement stays available after the reading experience.
-  const announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner>[\s\S]*?<\/aside>/)?.[0];
+  const announcement = html.match(/<aside class="vedokrok-banner" data-vedokrok-banner[^>]*>[\s\S]*?<\/aside>/)?.[0];
   if (announcement && html.includes('</main>') && !html.includes('data-footer-design')) {
     html = html.replace(announcement, '').replace('</main>', `</main>${announcement}`);
   }
@@ -85,6 +90,9 @@ for (const file of await htmlFiles(out)) {
   }
   next = applyReadingFooter(next, isReadingPage);
   next = next.replace(/<footer\b(?![^>]*\bid=)/, '<footer id="site-footer"');
+  next = normalizeVedokrokAnnouncement(next);
+  next = next.replace(/<script\b[^>]*data-vedokrok-script[^>]*>[\s\S]*?<\/script>/g, '');
+  if (next.includes('data-vedokrok-banner')) next = next.replace('</head>', `${announcementLoader}</head>`);
   if (next !== source) await writeFile(file, next);
   pages += 1;
 }

@@ -1,0 +1,17 @@
+{
+  "purpose": "Compact Vedokrok announcement",
+  "source_url": "https://vedokrok.com/",
+  "processing": "Unmodified copies of existing Vedokrok brand assets. No new image generation.",
+  "assets": [
+    {
+      "file": "mascot.webp",
+      "source": "Vedokrok website repository: design/website/assets/web/brand-mascot-192.webp",
+      "sha256": "7143d80862d759f52aa3196a4d2eb87c76653ba1a6c1587879e781e991cff13c"
+    },
+    {
+      "file": "wordmark.webp",
+      "source": "Vedokrok website repository: design/website/assets/web/brand-wordmark-320.webp",
+      "sha256": "c22d4ff5ae6ebccddfc79b8d735bf859a287f9752fa7834dbafc14f2080dd4ec"
+    }
+  ]
+}
