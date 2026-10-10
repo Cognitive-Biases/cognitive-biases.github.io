@@ -1,5 +1,6 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { renderDescription, descriptionSnippet } from "./bias-description.mjs";
 
 const SITE = "https://cognitive-biases.github.io";
 const PLAY = "https://play.google.com/store/apps/details?id=cognitivebiases.thinking.psychology";
@@ -15,7 +16,7 @@ const now = new Date().toISOString().slice(0, 10);
 const escape = (value = "") => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
 const clean = (value = "") => escape(value).replace(/\n/g, "<br>");
 const titleFromSlug = (slug) => slug.replace(/^cognitive-bias-/, "").replace(/\b\w/g, (letter) => letter.toUpperCase()).replaceAll("-", " ");
-const shortDescription = (bias) => bias.description.split("\n")[0].replace(/^[^–—]+[–—]\s*/, "").slice(0, 180);
+const shortDescription = (bias) => descriptionSnippet(bias.description);
 const absolute = (path) => `${SITE}${path}`;
 
 function jsonLd(value) { return `<script type="application/ld+json">${JSON.stringify(value)}</script>`; }
@@ -27,12 +28,6 @@ function header() { return `<header class="site-header"><a class="brand" href="/
 function footer() { return `<footer class="site-footer"><div><a class="brand brand--footer" href="/"><img src="/assets/icon2.png" width="40" height="40" alt=""><span>Cognitive Biases</span></a><p>An educational reference for noticing the patterns that shape judgment.</p></div><div class="footer-links"><a href="/explore/">Explore biases</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/support/">Support</a></div><p class="fine-print">Educational information, not medical, legal, financial, or mental-health advice.</p><p class="fine-print">Made by <a href="https://metalhatscats.com/">MetalHatsCats</a></p></footer>`; }
 function biasLink(bias) { return `<a class="bias-link" href="/biases/${bias.slug}/"><span>${escape(bias.typeOfBias)}</span><strong>${escape(bias.title)}</strong><small>${escape(shortDescription(bias))}</small><b>Read entry <span aria-hidden="true">→</span></b></a>`; }
 function layoutSchema(path, name, description) { return { "@context": "https://schema.org", "@graph": [{ "@type": "WebSite", "@id": `${SITE}/#website`, url: `${SITE}/`, name: "Cognitive Biases", description }, { "@type": ["SoftwareApplication", "MobileApplication"], "@id": `${SITE}/#app`, name: "Cognitive Biases", applicationCategory: "EducationalApplication", operatingSystem: "Android, iOS", url: `${SITE}/`, downloadUrl: PLAY, installUrl: APP_STORE, description: "An educational mobile app for recognizing cognitive biases and reflecting on decisions." }, { "@type": "Organization", "@id": `${SITE}/#organization`, name: "Cognitive Biases", url: SITE }, { "@type": "WebPage", "@id": `${SITE}${path}#webpage`, url: `${SITE}${path}`, name, description, isPartOf: { "@id": `${SITE}/#website` } }] }; }
-function parseDescription(bias) {
-  const [definition = "", ...sections] = bias.description.split(/\n\n/);
-  const trap = sections.find((section) => section.includes("Where’s the trap?")) || "";
-  const counter = sections.find((section) => section.includes("How to avoid it?")) || "";
-  return { definition, trap, counter, rest: sections.filter((section) => section !== trap && section !== counter) };
-}
 async function emit(path, content) { const target = join(OUT, path.replace(/^\//, ""), "index.html"); await mkdir(dirname(target), { recursive: true }); await writeFile(target, content); }
 
 await rm(OUT, { recursive: true, force: true }); await mkdir(OUT, { recursive: true }); await cp("public", OUT, { recursive: true });
@@ -46,8 +41,8 @@ const exploreBody = `<section class="page-hero"><p class="eyebrow">The complete 
 await emit("/explore/", page({ title: "Explore cognitive biases", description: `Browse ${biases.length} cognitive biases with plain-language explanations and practical reflection prompts.`, path: "/explore/", body: exploreBody, schema: layoutSchema("/explore/", "Explore cognitive biases", "Browsable collection of cognitive-bias entries.") }));
 
 for (const bias of biases) {
-  const parsed = parseDescription(bias); const related = (bias.related || []).map((id) => byId.get(id)).filter(Boolean).slice(0, 3); const title = bias.title || titleFromSlug(bias.slug); const description = shortDescription(bias);
-  const body = `<article class="article"><p class="breadcrumbs"><a href="/explore/">Explore</a> / <a href="/explore/#${encodeURIComponent(bias.typeOfBias)}">${escape(bias.typeOfBias)}</a></p><p class="eyebrow">${escape(bias.typeOfBias)} · Entry ${bias.number || bias.id}</p><h1>${escape(title)}</h1><p class="definition">${clean(parsed.definition)}</p>${parsed.trap ? `<section><h2>Where it can show up</h2><p>${clean(parsed.trap.replace("🔍 Where’s the trap?", ""))}</p></section>` : ""}${parsed.counter ? `<section><h2>A practical countermeasure</h2><p>${clean(parsed.counter.replace("💡 How to avoid it?", ""))}</p></section>` : ""}${parsed.rest.map((part) => `<p>${clean(part)}</p>`).join("")}<section class="related"><h2>Keep exploring</h2><div class="bias-grid">${related.map(biasLink).join("") || `<p>No related entries are available for this entry yet. <a href="/explore/">Browse the collection</a>.</p>`}</div></section></article>`;
+  const related = (bias.related || []).map((id) => byId.get(id)).filter(Boolean).slice(0, 3); const title = bias.title || titleFromSlug(bias.slug); const description = shortDescription(bias);
+  const body = `<article class="article"><p class="breadcrumbs"><a href="/explore/">Explore</a> / <a href="/explore/#${encodeURIComponent(bias.typeOfBias)}">${escape(bias.typeOfBias)}</a></p><p class="eyebrow">${escape(bias.typeOfBias)} · Entry ${bias.number || bias.id}</p><h1>${escape(title)}</h1>${renderDescription(bias.description)}<section class="related"><h2>Keep exploring</h2><div class="bias-grid">${related.map(biasLink).join("") || `<p>No related entries are available for this entry yet. <a href="/explore/">Browse the collection</a>.</p>`}</div></section></article>`;
   const schema = { "@context": "https://schema.org", "@graph": [{ "@type": "DefinedTerm", "@id": `${SITE}/biases/${bias.slug}/#term`, name: title, description, inDefinedTermSet: { "@id": `${SITE}/explore/#bias-library` }, url: `${SITE}/biases/${bias.slug}/` }, { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Explore biases", item: `${SITE}/explore/` }, { "@type": "ListItem", position: 2, name: title, item: `${SITE}/biases/${bias.slug}/` }] }] };
   await emit(`/biases/${bias.slug}/`, page({ title: `${title} | Cognitive Biases`, description, path: `/biases/${bias.slug}/`, body, schema }));
 }

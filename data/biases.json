@@ -19,8 +19,8 @@
     "id": 2,
     "number": 2,
     "typeOfBias": "Belief Perseverance",
-    "title": "Conservatism Bias – when new evidence doesn't change old beliefs",
-    "description": "You receive new information, but it barely changes your opinion? That’s Conservatism Bias – the tendency to insufficiently revise one's beliefs even when presented with new evidence.\n\n🔍 Where’s the trap?\n- Finance – you hold onto a stock despite news that the company is struggling.\n- Science – new research disproves old theories, but you find it hard to accept the change.\n- Personal life – someone has changed, but you still judge them by their past actions.\n\n💡 How to avoid it?\n- Double-check facts – new isn’t always better, but ignoring updates is risky.\n- Question old beliefs – the world evolves, maybe your views should too.\n- Stay flexible – adapting to new data makes you smarter and better at decision-making.",
+    "title": "Conservatism Bias – when a probability estimate changes too little",
+    "description": "Conservatism bias is under-updating a belief: new evidence changes a probability estimate less than a Bayesian benchmark would predict. It concerns the weight given to evidence, not a political position. Caution about a weak report is not automatically a bias.\n\nWhere can it show up?\n- Illustrative example: a team records a low chance of a delivery delay. Several independent warning signs arrive, but its estimate barely moves because the original schedule still feels like the normal outcome.\n- The question is whether those warning signs are genuinely informative. Repeated copies of one rumour are not independent evidence.\n\nA better check\n- Write down the original estimate before discussing the new information.\n- Record what changed, how reliable it is, and which direction it should move the estimate.\n- Compare the revised estimate with the original. Explain why the movement is small or large.\n\nDifferent models can explain under-updating. This procedure makes the update inspectable; it does not prove that a particular person is biased. The separate memory effect called conservatism concerns remembered extreme values moving toward the middle.",
     "slug": "belief-perseverance-conservatism-bias",
     "related": [
       55,
@@ -28,7 +28,7 @@
       20
     ],
     "status": "generated",
-    "updatedAt": "2025-08-29T12:09:47.664Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z",
     "published": true
   },
   {
@@ -1450,24 +1450,24 @@
     "id": 100,
     "number": 100,
     "typeOfBias": "Cognitive Bias",
-    "title": "Hindsight Bias – when the past looks obvious in retrospect",
-    "description": "Do past events seem obvious in hindsight? That’s Hindsight Bias – the tendency to see past events as more predictable than they actually were.\n\n🔍 Where’s the trap?\n- Financial markets – after a crash, people say ‘it was obvious,’ even though no one accurately predicted it before.\n- Sports & betting – after a game, the winner seems ‘predictable,’ but before the match, it was uncertain.\n- Personal life – after a breakup, you think ‘the signs were clear,’ even though you missed them before.\n\n💡 How to avoid it?\n- Remember that predictions work forward, not backward – just because something seems obvious now doesn’t mean it was before.\n- Track your actual predictions – write down your thoughts beforehand to avoid the illusion of ‘I always knew it.’\n- Be honest with yourself – if it was so predictable, you would have acted differently.",
+    "title": "Hindsight Bias – when knowing the outcome changes what seemed predictable",
+    "description": "Hindsight bias is the tendency to see an event as more predictable after learning its outcome. Knowing what happened can change how we reconstruct the uncertainty that existed beforehand. A convincing explanation after an event is not, by itself, evidence that someone could have predicted it.\n\nWhere can it show up?\n- Illustrative example: after a missed project deadline, one warning seems decisive. Before the deadline, the team had recorded several possible outcomes and was unsure which warning would matter.\n- The useful comparison is between that earlier record and the later claim that the delay was obvious.\n\nA better check\n- Save forecasts, assumptions, possible outcomes and confidence estimates before the result is known.\n- During the review, read that record before explaining what happened.\n- Ask which information was available then and which became available only later.\n\nSome events really were predictable, and some warnings really were ignored. Hindsight bias does not settle either question. Compare the earlier evidence with the later reconstruction rather than treating a confident memory as a forecast. Awareness alone is unlikely to be enough.",
     "slug": "cognitive-bias-hindsight-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:47:07.512Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z",
     "published": true
   },
   {
     "id": 101,
     "number": 101,
     "typeOfBias": "Cognitive Bias",
-    "title": "Impact Bias – when you overestimate how long or intense your emotions will be",
-    "description": "Do you think winning the lottery will make you happy forever? Or that a failure will leave you devastated for months? That’s Impact Bias – the tendency to overestimate the intensity and duration of future emotions.\n\n🔍 Where’s the trap?\n- Financial success – you believe a higher salary or a luxury purchase will bring lasting happiness, but the excitement fades quickly.\n- Failures & disappointments – you expect a failed exam or breakup to ruin you, but after a few weeks, emotions subside.\n- Life changes – moving to a new city or starting a new job feels life-changing, but within months, it becomes normal.\n\n💡 How to avoid it?\n- Remember that emotions don’t last forever – happiness and sadness fade faster than you expect.\n- Don’t overestimate the impact of events – you adapt better than you think.\n- Make decisions wisely – don’t assume your emotions will stay the same forever.",
+    "title": "Impact Bias – when forecasts overstate future emotional reactions",
+    "description": "Impact bias is a forecasting error in which people overestimate the intensity or duration of a future emotional reaction. An imagined event can occupy the whole forecast while the rest of everyday life receives too little attention. Errors vary by event, emotion and time horizon; this is not a rule that distress will be brief or unimportant.\n\nWhere can it show up?\n- Illustrative example: someone imagines that one promotion will determine how every day feels. Their forecast says little about the routine, relationships and other events that will also fill those days.\n- Predicting how strong a feeling will be and predicting how long it will last are different questions.\n\nA better check\n- Describe an ordinary week around the event, including what is likely to stay the same.\n- Estimate intensity and duration separately instead of using a single judgement such as life-changing.\n- When possible, compare the forecast with recorded experience or with people who have already experienced a similar event.\n\nThe reviewed research considers focalism, adaptation and the memories used to build forecasts. These are possible contributors, not a promise that people will adapt quickly to every difficult event.",
     "slug": "cognitive-bias-impact-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T12:48:29.108Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z",
     "published": true
   },
   {
@@ -1582,12 +1582,12 @@
     "id": 111,
     "number": 111,
     "typeOfBias": "Cognitive Bias",
-    "title": "Outcome Bias – when you judge a decision by its result, not its quality",
-    "description": "Do you think a decision was good just because it led to a positive outcome? That’s Outcome Bias – the tendency to judge the quality of a decision based on its final result rather than the logic behind it.\n\n🔍 Where’s the trap?\n- Finance – an investor takes a reckless bet, wins, and believes it was a ‘smart’ decision, ignoring the risk.\n- Medicine – a doctor misdiagnoses a patient, but they recover anyway, making the treatment seem successful.\n- Business & career – someone picks a strategy by luck, it works, and they now believe they always make the right calls.\n\n💡 How to avoid it?\n- Evaluate the process, not just the result – good decisions can lead to bad outcomes, and vice versa.\n- Understand what really caused success or failure – was it skill, or just luck?\n- Be honest with yourself – if a bad decision led to a good outcome, that doesn’t make it a good decision.",
+    "title": "Outcome Bias – when results change the evaluation of a decision",
+    "description": "Outcome bias occurs when knowing the result changes an evaluation of a decision even though the information available when it was made is the same. A lucky result can make a weak process look better; an unlucky result can make a reasonable process look worse. Results still matter for learning.\n\nWhere can it show up?\n- Illustrative example: two teams approve a supplier using the same evidence and checks. One delivery succeeds and the other fails. The outcome alone does not show that the first approval process was better.\n- Review what each team could reasonably know at the time before using the later result to explain its judgement.\n\nA better check\n- First assess the options, risks and information available when the choice was made.\n- Then use the result to update assumptions about the supplier and future decisions.\n- Keep those two assessments separate in the review record.\n\nThe reviewed experiments held decision information constant while varying the outcome. In real cases, information and circumstances may also differ. Outcome bias does not mean ignoring results or assuming that every success was luck.",
     "slug": "cognitive-bias-outcome-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T15:12:39.036Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z",
     "published": true
   },
   {
@@ -1666,12 +1666,12 @@
     "id": 118,
     "number": 118,
     "typeOfBias": "Cognitive Bias",
-    "title": "Projection Bias – when you assume your future self will want what you want now",
-    "description": "Do you think your future self will have the same preferences, habits, and values as you do now? That’s Projection Bias – the tendency to overestimate how much your future self will align with your current desires.\n\n🔍 Where’s the trap?\n- Purchases – people buy yearly gym memberships, assuming they’ll stay motivated just as they feel today.\n- Career choices – a ‘dream job’ may seem perfect now, but interests and passions evolve over time.\n- Relationships – assuming the excitement of a new relationship will last forever, without considering natural changes.\n\n💡 How to avoid it?\n- Remember, you change over time – your views, tastes, and desires evolve.\n- Set flexible goals – plan with the expectation that priorities may shift.\n- Reflect on past changes – think about how your preferences have shifted over the last 5–10 years and apply that insight.",
+    "title": "Projection Bias – when current preferences shape forecasts of future preferences",
+    "description": "Projection bias is overprojecting current tastes or temporary states onto future preferences. We may understand that our preferences will change but underestimate the size of that change. The clearest support here comes from intertemporal choice and consumer settings, rather than every kind of prediction about a future self.\n\nWhere can it show up?\n- Illustrative example: while hungry, someone chooses food for a later time and expects that later appetite to resemble the current one.\n- Another question is whether today's conditions are relevant to the time when a purchase will actually be used.\n\nA better check\n- Record the current state and the future situation separately.\n- If practical, reconsider the choice in a meaningfully different state before making a difficult-to-reverse commitment.\n- Use past changes in preferences as a reference rather than relying only on how the choice feels now.\n\nNot every preference change is a forecasting error, and current preferences can contain useful information. The issue is whether a temporary state is receiving too much weight in the forecast. This check does not guarantee accurate predictions.",
     "slug": "cognitive-bias-projection-bias",
     "related": [],
     "status": "generated",
-    "updatedAt": "2025-09-01T13:08:10.385Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z",
     "published": true
   },
   {
@@ -2805,8 +2805,8 @@
     "id": 211,
     "number": 211,
     "typeOfBias": "Probability Bias",
-    "title": "Subadditivity Effect – the whole seems less likely than the sum of its parts",
-    "description": "If told there’s a 10% chance of flooding in your city, you’d accept it. But if broken down into ‘flooding from rain,’ ‘flooding from dam failure,’ and ‘flooding from melting snow,’ each at 5%, the total feels higher! That’s Subadditivity Effect – people perceive the probability of a whole event as lower than the sum of its mutually exclusive components.\n\n🔍 Where’s the trap?\n- Risk & fear perception – overall risk feels lower than when it’s broken into details.\n- Statistics & forecasts – complex events seem less likely than their individual components.\n- Insurance & safety – people tend to underestimate the probability of combined threats.\n\n💡 How to use it?\n- Break down complex events – if you want to convince someone of a risk, show its components.\n- Assess probabilities critically – a complex event isn’t less likely than the sum of its parts.\n- Be cautious with forecasts – don’t let yourself be misled into thinking the whole event is unlikely.",
+    "title": "Subadditivity Effect – when unpacking changes probability estimates",
+    "description": "The subadditivity effect occurs when separate estimates for parts of an event add up to more than the estimate for the same event described as one category. Unpacking changes the judgement, not the underlying probability. The effect has boundary conditions and can change or reverse with the description of the parts.\n\nWhere can it show up?\n- Illustrative example: estimate the chance that an order arrives late. Then estimate separately the chance of a delay first caused by production, transport, or another cause. Compare the sum with the first estimate.\n- The categories must cover the same event and must not overlap. Otherwise the difference may simply be double-counting or a changed question.\n\nA better check\n- Define the event and time window before estimating its probability.\n- Compare a single estimate with a mutually exclusive, collectively exhaustive breakdown: every relevant case belongs to exactly one part.\n- If the totals differ, inspect wording, overlap and missing cases before acting on either number.\n\nThe reviewed account links unpacking to the possibilities that come to mind. A detailed list is not automatically more accurate. Use the comparison to inspect consistency, not to persuade someone by inflating a risk estimate.",
     "slug": "probability-bias-subadditivity-effect",
     "related": [
       41,
@@ -2814,7 +2814,7 @@
       69
     ],
     "status": "generated",
-    "updatedAt": "2025-09-02T05:53:56.079Z",
+    "updatedAt": "2026-10-10T00:00:00.000Z",
     "published": true
   },
   {

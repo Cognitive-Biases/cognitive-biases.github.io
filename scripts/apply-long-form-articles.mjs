@@ -71,10 +71,12 @@ for (const entry of articlesDoc.entries || []) {
 
   const wordCount = wordsIn([entry.lede, ...entry.sections.flatMap((section) => section.paragraphs), ...entry.checklist, entry.boundaryNote].join(" "));
   const readingMinutes = Math.max(3, Math.ceil(wordCount / 220));
-  const migrationNote = review
-    ? "Restored from the earlier MetalHatsCats long-form layer and rewritten for the current evidence-first model. The evidence review and reviewed sources below remain the source of truth for scientific claims."
+  const migrationNote = entry.contentReview
+    ? "Editorially revised against the existing evidence review. Worked examples are illustrative, not reports of measured outcomes."
+    : review
+    ? "Restored legacy article. This concept has a separate evidence review; that review does not verify every statement or anecdote in the older article. Narrative examples are not verified case studies."
     : "Restored from the earlier MetalHatsCats long-form layer. This concept does not yet have a current evidence review, so treat this article as the restored 2025 original rather than a reviewed scientific claim.";
-  const articleSection = `<section class="long-form-article" id="long-form"><div class="long-form-article__head"><div><p class="kicker">Long-form guide</p><h2>${escapeHtml(entry.headline)}</h2></div><p class="long-form-article__meta">${wordCount.toLocaleString("en-US")} words · about ${readingMinutes} min</p></div><p class="long-form-article__lede">${escapeHtml(entry.lede)}</p><nav class="long-form-article__toc" aria-label="On this guide"><strong>On this guide</strong><ol>${toc}</ol></nav>${articleSections}<section class="long-form-article__check"><h3>Decision checklist</h3><ul>${checklist}</ul></section><aside class="long-form-article__boundary"><strong>Evidence boundary</strong><p>${escapeHtml(entry.boundaryNote)}</p></aside>${relatedGuidesSection}<p class="long-form-article__migration">${migrationNote}</p></section>`;
+  const articleSection = `<section class="long-form-article" id="long-form"><div class="long-form-article__head"><div><p class="kicker">Long-form guide</p><h2>${escapeHtml(entry.headline)}</h2></div><p class="long-form-article__meta">${wordCount.toLocaleString("en-US")} words · about ${readingMinutes} min</p></div><aside class="long-form-article__provenance"><p>${migrationNote}</p>${review ? `<p><a href="#evidence">Read the evidence and limitations for this concept</a></p>` : `<p><a href="/methodology/">How this library handles unreviewed content</a></p>`}</aside><p class="long-form-article__lede">${escapeHtml(entry.lede)}</p><nav class="long-form-article__toc" aria-label="On this guide"><strong>On this guide</strong><ol>${toc}</ol></nav>${articleSections}<section class="long-form-article__check"><h3>Decision checklist</h3><ul>${checklist}</ul></section><aside class="long-form-article__boundary"><strong>Evidence boundary</strong><p>${escapeHtml(entry.boundaryNote)}</p></aside>${relatedGuidesSection}</section>`;
 
   const insertionAnchor = review
     ? '<section class="evidence-review"'
