@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-10",
+  "entries": [
+    {
+      "id": 2,
+      "slug": "belief-perseverance-conservatism-bias",
+      "previousTitle": "Conservatism Bias – when new evidence doesn't change old beliefs",
+      "title": "Conservatism Bias – when a probability estimate changes too little",
+      "description": "Conservatism bias is under-updating a belief: new evidence changes a probability estimate less than a Bayesian benchmark would predict. It concerns the weight given to evidence, not a political position. Caution about a weak report is not automatically a bias.\n\nWhere can it show up?\n- Illustrative example: a team records a low chance of a delivery delay. Several independent warning signs arrive, but its estimate barely moves because the original schedule still feels like the normal outcome.\n- The question is whether those warning signs are genuinely informative. Repeated copies of one rumour are not independent evidence.\n\nA better check\n- Write down the original estimate before discussing the new information.\n- Record what changed, how reliable it is, and which direction it should move the estimate.\n- Compare the revised estimate with the original. Explain why the movement is small or large.\n\nDifferent models can explain under-updating. This procedure makes the update inspectable; it does not prove that a particular person is biased. The separate memory effect called conservatism concerns remembered extreme values moving toward the middle.",
+      "reason": "Align the opening with the existing evidence review; replace categorical claims and generic advice with a labelled illustrative example, an inspectable decision check, and visible limits. Existing source review and evidence class are unchanged."
+    },
+    {
+      "id": 100,
+      "slug": "cognitive-bias-hindsight-bias",
+      "previousTitle": "Hindsight Bias – when the past looks obvious in retrospect",
+      "title": "Hindsight Bias – when knowing the outcome changes what seemed predictable",
+      "description": "Hindsight bias is the tendency to see an event as more predictable after learning its outcome. Knowing what happened can change how we reconstruct the uncertainty that existed beforehand. A convincing explanation after an event is not, by itself, evidence that someone could have predicted it.\n\nWhere can it show up?\n- Illustrative example: after a missed project deadline, one warning seems decisive. Before the deadline, the team had recorded several possible outcomes and was unsure which warning would matter.\n- The useful comparison is between that earlier record and the later claim that the delay was obvious.\n\nA better check\n- Save forecasts, assumptions, possible outcomes and confidence estimates before the result is known.\n- During the review, read that record before explaining what happened.\n- Ask which information was available then and which became available only later.\n\nSome events really were predictable, and some warnings really were ignored. Hindsight bias does not settle either question. Compare the earlier evidence with the later reconstruction rather than treating a confident memory as a forecast. Awareness alone is unlikely to be enough.",
+      "reason": "Align the opening with the existing evidence review; replace categorical claims and generic advice with a labelled illustrative example, an inspectable decision check, and visible limits. Existing source review and evidence class are unchanged."
+    },
+    {
+      "id": 101,
+      "slug": "cognitive-bias-impact-bias",
+      "previousTitle": "Impact Bias – when you overestimate how long or intense your emotions will be",
+      "title": "Impact Bias – when forecasts overstate future emotional reactions",
+      "description": "Impact bias is a forecasting error in which people overestimate the intensity or duration of a future emotional reaction. An imagined event can occupy the whole forecast while the rest of everyday life receives too little attention. Errors vary by event, emotion and time horizon; this is not a rule that distress will be brief or unimportant.\n\nWhere can it show up?\n- Illustrative example: someone imagines that one promotion will determine how every day feels. Their forecast says little about the routine, relationships and other events that will also fill those days.\n- Predicting how strong a feeling will be and predicting how long it will last are different questions.\n\nA better check\n- Describe an ordinary week around the event, including what is likely to stay the same.\n- Estimate intensity and duration separately instead of using a single judgement such as life-changing.\n- When possible, compare the forecast with recorded experience or with people who have already experienced a similar event.\n\nThe reviewed research considers focalism, adaptation and the memories used to build forecasts. These are possible contributors, not a promise that people will adapt quickly to every difficult event.",
+      "reason": "Align the opening with the existing evidence review; replace categorical claims and generic advice with a labelled illustrative example, an inspectable decision check, and visible limits. Existing source review and evidence class are unchanged."
+    },
+    {
+      "id": 111,
+      "slug": "cognitive-bias-outcome-bias",
+      "previousTitle": "Outcome Bias – when you judge a decision by its result, not its quality",
+      "title": "Outcome Bias – when results change the evaluation of a decision",
+      "description": "Outcome bias occurs when knowing the result changes an evaluation of a decision even though the information available when it was made is the same. A lucky result can make a weak process look better; an unlucky result can make a reasonable process look worse. Results still matter for learning.\n\nWhere can it show up?\n- Illustrative example: two teams approve a supplier using the same evidence and checks. One delivery succeeds and the other fails. The outcome alone does not show that the first approval process was better.\n- Review what each team could reasonably know at the time before using the later result to explain its judgement.\n\nA better check\n- First assess the options, risks and information available when the choice was made.\n- Then use the result to update assumptions about the supplier and future decisions.\n- Keep those two assessments separate in the review record.\n\nThe reviewed experiments held decision information constant while varying the outcome. In real cases, information and circumstances may also differ. Outcome bias does not mean ignoring results or assuming that every success was luck.",
+      "reason": "Align the opening with the existing evidence review; replace categorical claims and generic advice with a labelled illustrative example, an inspectable decision check, and visible limits. Existing source review and evidence class are unchanged."
+    },
+    {
+      "id": 118,
+      "slug": "cognitive-bias-projection-bias",
+      "previousTitle": "Projection Bias – when you assume your future self will want what you want now",
+      "title": "Projection Bias – when current preferences shape forecasts of future preferences",
+      "description": "Projection bias is overprojecting current tastes or temporary states onto future preferences. We may understand that our preferences will change but underestimate the size of that change. The clearest support here comes from intertemporal choice and consumer settings, rather than every kind of prediction about a future self.\n\nWhere can it show up?\n- Illustrative example: while hungry, someone chooses food for a later time and expects that later appetite to resemble the current one.\n- Another question is whether today's conditions are relevant to the time when a purchase will actually be used.\n\nA better check\n- Record the current state and the future situation separately.\n- If practical, reconsider the choice in a meaningfully different state before making a difficult-to-reverse commitment.\n- Use past changes in preferences as a reference rather than relying only on how the choice feels now.\n\nNot every preference change is a forecasting error, and current preferences can contain useful information. The issue is whether a temporary state is receiving too much weight in the forecast. This check does not guarantee accurate predictions.",
+      "reason": "Align the opening with the existing evidence review; replace categorical claims and generic advice with a labelled illustrative example, an inspectable decision check, and visible limits. Existing source review and evidence class are unchanged."
+    },
+    {
+      "id": 211,
+      "slug": "probability-bias-subadditivity-effect",
+      "previousTitle": "Subadditivity Effect – the whole seems less likely than the sum of its parts",
+      "title": "Subadditivity Effect – when unpacking changes probability estimates",
+      "description": "The subadditivity effect occurs when separate estimates for parts of an event add up to more than the estimate for the same event described as one category. Unpacking changes the judgement, not the underlying probability. The effect has boundary conditions and can change or reverse with the description of the parts.\n\nWhere can it show up?\n- Illustrative example: estimate the chance that an order arrives late. Then estimate separately the chance of a delay first caused by production, transport, or another cause. Compare the sum with the first estimate.\n- The categories must cover the same event and must not overlap. Otherwise the difference may simply be double-counting or a changed question.\n\nA better check\n- Define the event and time window before estimating its probability.\n- Compare a single estimate with a mutually exclusive, collectively exhaustive breakdown: every relevant case belongs to exactly one part.\n- If the totals differ, inspect wording, overlap and missing cases before acting on either number.\n\nThe reviewed account links unpacking to the possibilities that come to mind. A detailed list is not automatically more accurate. Use the comparison to inspect consistency, not to persuade someone by inflating a risk estimate.",
+      "reason": "Align the opening with the existing evidence review; replace categorical claims and generic advice with a labelled illustrative example, an inspectable decision check, and visible limits. Existing source review and evidence class are unchanged."
+    }
+  ]
+}

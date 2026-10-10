@@ -97,7 +97,14 @@ for (const entry of articlesDoc.entries || []) {
   if (!html.includes("Evidence boundary") || !html.includes(escapeHtml(entry.boundaryNote))) {
     throw new Error(`${entry.slug}: rendered evidence boundary is missing.`);
   }
-  if (review && !html.includes("current evidence-first model")) throw new Error(`${entry.slug}: migration provenance note is missing.`);
+  const provenanceIndex = html.indexOf('class="long-form-article__provenance"');
+  const ledeIndex = html.indexOf('class="long-form-article__lede"');
+  if (provenanceIndex < articleIndex || provenanceIndex > ledeIndex) throw new Error(`${entry.slug}: provenance must be visible before the long-form narrative.`);
+  if (entry.contentReview) {
+    if (!review || entry.contentReview.reviewedAt !== entry.reviewedAt || !entry.contentReview.scope) throw new Error(`${entry.slug}: editorial content review requires a matching dated scope and existing evidence review.`);
+    if (!html.includes("Editorially revised against the existing evidence review")) throw new Error(`${entry.slug}: revised article provenance is missing.`);
+  } else if (review && !html.includes("does not verify every statement or anecdote")) throw new Error(`${entry.slug}: legacy article must not inherit blanket evidence-review status.`);
+  if (review && !html.includes('href="#evidence">Read the evidence and limitations')) throw new Error(`${entry.slug}: direct evidence navigation is missing.`);
   if (!review && !html.includes("does not yet have a current evidence review")) throw new Error(`${entry.slug}: unreviewed migration provenance note is missing.`);
   for (const source of review?.sources || []) {
     if (!html.includes(source.url)) throw new Error(`${entry.slug}: current evidence source is missing from rendered page: ${source.url}`);
