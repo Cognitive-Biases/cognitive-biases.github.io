@@ -88,3 +88,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for corrections, source suggestions, ta
 The current Cognitive Biases website content is licensed under [CC BY-NC-SA 4.0](LICENSE). Attribution and the same licence are required for sharing or adaptations, and commercial use is not permitted without prior written permission from MetalHatsCats. Cognitive Biases names and logos are not licensed for reuse.
 
 The licence does not permit copying third-party source prose into this project. Research sources support the facts and claims; new editorial text must be written in our own words.
+
+## Crawl discovery verification
+
+`npm run check:crawl-reachability` runs on the final Pages artifact after late page generation. Every sitemap URL must have its own HTML canonical, permit indexing, and be reachable from the homepage through ordinary followable HTML links. The report is saved to `.artifacts/crawl-reachability.json`. Reachability and depth are implementation evidence, not proof of Google crawling or indexing. Generated per-bias Agent Skills omit sitemap `lastmod` until a reliable content-update date exists; deployment dates must not impersonate content freshness.

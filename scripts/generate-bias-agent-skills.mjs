@@ -218,9 +218,10 @@ if (addedRag.length) {
 
 const sitemapPath = join(OUT, "sitemap.xml");
 let sitemap = await readFile(sitemapPath, "utf8");
-const today = new Date().toISOString().slice(0, 10);
+// These generated pages have no independently reviewed content-update date.
+// Rebuilding unchanged content must not advertise a new modification date.
 const sitemapUrls = [biasIndexCanonical, ...biasSkillRecords.map((skill) => skill.canonicalUrl)];
-const newEntries = sitemapUrls.filter((url) => !sitemap.includes(`<loc>${url}</loc>`)).map((url) => `<url><loc>${url}</loc><lastmod>${today}</lastmod></url>`).join("");
+const newEntries = sitemapUrls.filter((url) => !sitemap.includes(`<loc>${url}</loc>`)).map((url) => `<url><loc>${url}</loc></url>`).join("");
 if (newEntries) {
   if (!sitemap.includes("</urlset>")) throw new Error("sitemap.xml is missing </urlset>.");
   sitemap = sitemap.replace("</urlset>", `${newEntries}</urlset>`);
