@@ -90,6 +90,8 @@ jobs:
         run: node scripts/check-search-localization-policy.mjs
       - name: Gate final localization product contract
         run: node scripts/check-localization-closure.mjs
+      - name: Gate complete canonical crawl graph and honest sitemap freshness
+        run: npm run check:crawl-reachability
       - name: Gate final public surface
         run: node scripts/check-final-public-surface.mjs
       - uses: actions/upload-pages-artifact@v3
