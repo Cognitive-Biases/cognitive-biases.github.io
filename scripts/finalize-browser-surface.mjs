@@ -58,6 +58,9 @@ if (!styles.includes(targetSizeMarker)) {
 }
 if (stylesChanged) await writeFile(stylesPath, styles, 'utf8');
 
+// Include late-generated pages (such as 404) and keep the reading layer last.
+await import('./apply-reading-design.mjs');
+
 let revision = '';
 try {
   revision = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
