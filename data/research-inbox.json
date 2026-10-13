@@ -1,7 +1,49 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06",
+  "updatedAt": "2026-10-13",
   "items": [
+    {
+      "id": "arxiv-2610.10049",
+      "discoveredAt": "2026-10-13",
+      "title": "The Long Road to the Same Answer: Cognitive Bias Under Escalating Reasoning Budgets in Large Language Models",
+      "url": "https://arxiv.org/abs/2610.10049",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "publishedAt": "2026-10-07",
+      "relatedConcepts": [
+        "ai-assisted-decisions",
+        "cognitive-bias-anchoring-effect",
+        "cognitive-bias-sunk-cost-effect"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 16,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7221461089",
+      "discoveredAt": "2026-10-13",
+      "title": "Limits of Interventions in AI-Assisted Decision Making",
+      "url": "https://doi.org/10.1609/aies.v9i4.43309",
+      "source": "OpenAlex",
+      "sourceType": "conference-paper",
+      "publishedAt": "2026-10-11",
+      "journal": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
+      "doi": "10.1609/aies.v9i4.43309",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential boundary or null evidence that may narrow an existing claim. Negative results are useful when they test a concept directly rather than merely failing to mention an effect.",
+      "score": 8,
+      "rankingReasons": [
+        "boundary, null, or preregistered evidence",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
     {
       "id": "openalex-w7214587181",
       "discoveredAt": "2026-10-06",
