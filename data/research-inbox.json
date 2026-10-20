@@ -1,7 +1,46 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-13",
+  "updatedAt": "2026-10-20",
   "items": [
+    {
+      "id": "pubmed-42866750",
+      "discoveredAt": "2026-10-20",
+      "title": "When dengue is not the answer: diagnostic anchoring bias in febrile illnesses in conflict-affected settings.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42866750/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct",
+      "journal": "Annals of medicine and surgery (2012)",
+      "doi": "10.1097/ms9.0000000000005614",
+      "relatedConcepts": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 8,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42880709",
+      "discoveredAt": "2026-10-20",
+      "title": "Navigating Cognitive Biases and Surgical Decision-Making: Unraveling the Causes of Persistent Spinal Pain Syndrome After Spine Surgery.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42880709/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct 15",
+      "journal": "World neurosurgery",
+      "doi": "10.1016/j.wneu.2026.125415",
+      "relatedConcepts": [],
+      "whyItMatters": "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
     {
       "id": "arxiv-2610.10049",
       "discoveredAt": "2026-10-13",
