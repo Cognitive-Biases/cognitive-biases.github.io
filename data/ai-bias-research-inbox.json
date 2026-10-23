@@ -1,8 +1,255 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-10-23",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "arxiv-2610.30412",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "SIM-UT: A User Simulation based Evaluation Framework for Medical Triage Chatbots",
+      "summary": "LLM-based chat agents are increasingly used for complex, multi-turn, multilingual medical triage in low- and middle-income countries (LMICs), yet evaluation methods focus on single-turn, English-only benchmarks that primarily test the chatbots' knowledge. In practice, users are often confused, overwhelmed, or emotionally vulnerable, giving unclear, misspelled single-word answers or long messages in regional dialects, and the context of a conversation can shift rapidly. We propose SIM-UT (Simulation of User Behaviour for Triage), a multi-turn, simulation-based evaluation method that identifies ecologically valid, contextually relevant failure modes of LLM-based triage chat agents. Using SIM-UT, we evaluated three real-world WhatsApp-based health chatbots: a respiratory screening programme in India, a hearing health support programme in South Africa, and a diabetes and lifestyle coaching agent in Kenya. We compared a medically fine-tuned open model (MedGemma) against general-purpose frontier models (ChatGPT and Claude) across 5,000+ multilingual simulated conversation turns grounded in the personas, constraints, and communication patterns of the real user populations, over 2-4 iterative rounds. A key failure mode emerged in both model families: de-escalation risk. The agents initially identified medical emergencies correctly, but when the user minimised the symptoms without introducing new clinical information, they de-escalated, exhibiting clinically dangerous sycophancy, for example agreeing that vaginal bleeding in pregnancy was \"not a problem\" or that decreased fetal movements at 32 weeks \"can be normal\". We recommend user simulation-based behavioural evaluation, grounded in real user context and covering adversarial and edge cases, as standard practice for triage chatbots in production, so that safeguards can be added before deployment or in subsequent iterations.",
+      "publishedAt": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.30412",
+      "tags": [
+        "sycophancy",
+        "long-context"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.30349",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Consistency Is Not Validity: Self-Rewarded Moral Argumentation Makes Language Models Decisive but Pliable",
+      "summary": "LLMs are increasingly consulted for moral judgment. We aim to improve performance on such tasks by rewarding good arguments, on the premise that arguing well increases the likelihood of judging well. We train a reinforcement learning policy initialized from a state-of-the-art language model in a self-judged tournament with masked thinking: the generated arguments are judged pairwise on argument quality by the policy itself. As an empirical basis, we extract authentic dilemmas from classic novels, using a logic solver to verify that each constitutes a conflict. We show that our judge rates argument quality like human annotators, and the policy then adopts the language register that it rewards. Testing on the external benchmarks MoralChoice, ELEPHANT, and MORABLES, we find that the policy becomes more decisive and invariant to the order in which options are presented, but sycophancy and reframing remain a challenge to validity. Two ablation studies with synthetic dilemmas and unmasked thinking match the reordering gains, but show a weaker register shift and higher sycophancy. We conclude that consistency is not validity: consistency under reordering can be optimized without improving the moral judgment it is meant to signal.",
+      "publishedAt": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.30349",
+      "tags": [
+        "sycophancy",
+        "llm-as-a-judge"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.28092",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "BAIT: Can LLMs Find What Biases a Reader? A Benchmark for Cognitive Bias Triggers in News",
+      "summary": "Persuasive writing exploits cognitive biases, recruiting a reader's mental shortcuts to shape belief, often without the reader noticing. We call the linguistic features exploiting such mental shortcuts cognitive bias triggers. As large language models (LLMs) increasingly mediate how people encounter news, summarizing it, ranking it, and answering questions over it, a natural question is whether they can recognize the features of a text that bias a human reader. We introduce BAIT (Bias Annotation In Text), a resource for detecting cognitive bias triggers in news. BAIT pairs a schema of nine triggers, each specified in an annotator codebook, with 50 English news articles annotated by trained annotators at the article and span levels and adjudicated into a gold standard. On this data we define two tasks, detecting which triggers a text contains and locating the spans that carry them. We then benchmark six frontier LLMs zero-shot and with three or ten in-context examples. The models approach human agreement on which triggers an article contains, but rarely recover its full set of triggers, and they reach less than half of human agreement in locating the passages that carry them. Moreover, they over-predict triggers that come with easy surface cues, and most of the passages they mark for these triggers are not triggers, yet carry the trigger's surface cue far more often than random text. These findings suggest that the evaluated LLMs respond to surface cues rather than to the mechanisms that make a passage manipulative. We release the schema, the codebook, standoff annotations, and the evaluation pipeline.",
+      "publishedAt": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.28092",
+      "tags": [
+        "cognitive-analogy",
+        "summarization-integrity"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7223198809",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Code, prompts and data for: Do multimodal language models defer to a clinician's wrong ECG read? A controlled study of sycophancy in 12-lead ECG interpretation",
+      "summary": "",
+      "publishedAt": "2026-10-22",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "doi": "10.5281/zenodo.23570134",
+      "url": "https://doi.org/10.5281/zenodo.23570134",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7223021465",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Quantification of Hallucination and Sycophancy in the Asthma Voice Agent (AVA): A Simulated Evaluation With Comparison to Free-Tier Frontier Large Language Models",
+      "summary": "",
+      "publishedAt": "2026-10-20",
+      "venue": "Open Science Framework",
+      "doi": "10.17605/osf.io/nmfzc",
+      "url": "https://doi.org/10.17605/osf.io/nmfzc",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.31579",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Who Is Sycophantic to Whom? Confident LLMs, Human Deference, and the Collapse of Trust Calibration",
+      "summary": "Research on sycophancy asks whether large language models (LLMs) bend towards what their users want to hear. We ask the reverse question: when an LLM is confident, consistent, and wrong, do users bend towards it? In a within-subjects experiment, 32 participants learned up to five science topics by chatting with five assistants built on the same model (GPT-5-mini). Unknown to participants, each assistant's briefing had 0, 25, 50, 75, or 100% of its facts replaced by plausible falsehoods, and every assistant spoke with full confidence. A surprise quiz after each topic offered the correct fact, the planted falsehood, and two distractors, with a confidence rating for every answer. Across 104 quizzes and 1,040 answers, scores fell from 7.4 to 2.9 out of 10, and the planted option was chosen on 60% of falsified items against 11% of correctly taught ones (odds ratio 12.5). Transcript coding showed that whenever the assistant stated a falsehood, it was adopted about 65% of the time at every falsification level. Absorbed falsehoods were held with high confidence (8.4/10), the modeled confidence advantage of right over wrong answers vanished, and the discrimination of confidence for correctness fell from an AUROC of 0.70 to chance, while post-task trust ratings barely moved. Participants tended to return to the chat more when the assistant was worse, but returning went with more absorption, not less, and 30% of all turns pasted quiz questions back to the source being checked. The assistant itself was almost never sycophantic and never conceded under pushback. We introduce a baseline-corrected Human Deference Index to quantify this human-side sycophancy and argue that trustworthiness is a property of the human-AI pair, that sycophancy evaluations should measure both directions, and that learning interfaces must make reliability legible claim by claim.",
+      "publishedAt": "2026-10-22",
+      "url": "https://arxiv.org/abs/2610.31579",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.29225",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics",
+      "summary": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics. Grounded in globally applicable AI safety policies, each rubric provides explicit criteria along two dimensions: safety, which targets concrete harms with specific exemptions to suppress false positives, and usefulness, which independently evaluates instruction fulfillment. To ensure a robust and realistic evaluation, we construct a bilingual (English-Chinese) benchmark grounded in a comprehensive 84-label safety taxonomy, consisting of two subsets: DiagBase, which covers single- and multi-turn prompts with direct harmful queries and template-based jailbreaks, and DiagAttack, which embeds harmful intents into complex instruction-following tasks to form challenging instruction attacks. Extensive experiments demonstrate that DiagSafe significantly enhances the reliability of LLM-as-a-judge evaluation, achieving 95.34% agreement with human annotations -- substantially higher than the 69%-87% achieved by the baselines -- and high inter-judge consistency (Cohen's $κ$ = 0.864). Furthermore, applying our framework reveals that leading LLMs differ markedly in their unsafe rates, and each model also exhibits unique vulnerabilities along different dimensions. In addition, we observe that models are particularly susceptible in Chinese and multi-turn contexts. Ultimately, DiagSafe provides a reliable and explainable tool for auditing and optimizing LLM alignment.",
+      "publishedAt": "2026-10-21",
+      "url": "https://arxiv.org/abs/2610.29225",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.27868",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Hallucinations of Large Language Models in Cross-Language Code Translation: Phenomena and Mitigation",
+      "summary": "Code translation converts source code from one programming language to another while preserving its functionality. Although Large Language Models (LLMs) have improved code translation, their outputs still contain hallucinations: generated code that conflicts with the source program, violates target-language facts, or introduces contextually inconsistent dependencies. These failures are especially harmful in translation because small semantic deviations can silently change program behavior. Existing hallucination studies mainly focus on natural-language generation or code generation, leaving the forms, distribution, and mitigation of hallucinations in cross-language code translation insufficiently characterized. This paper presents a systematic empirical study of LLM hallucinations in code translation. Across three benchmark datasets, six language pairs, and seven LLMs, we construct a taxonomy with three major categories: Semantic Consistency Conflicts, Factual Knowledge Conflicts, and Project Context Deviations. We manually annotate 13,919 hallucination cases and analyze how hallucination types vary across models, datasets, and language directions. Guided by the taxonomy, we further propose HaluCodeTran, a mitigation framework that combines BM25-based retrieval of relevant translation examples with taxonomy-aware reflective refinement. The study provides an execution-tested characterization of code-translation hallucinations and a practical baseline for building more reliable LLM-based code migration tools.",
+      "publishedAt": "2026-10-20",
+      "url": "https://arxiv.org/abs/2610.27868",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.25728",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "No Matter Who You Are: Addressivity and Sycophancy in Large Language Models",
+      "summary": "Sycophancy, where an LLM becomes overly agreeable, deferential, or flattering toward the user, has been identified as a major failure mode. While post-training has been implicated as a cause, how it internally gives rise to sycophantic behavior remains insufficiently understood. Post-training transforms the model's output from text completion into utterances directed toward an addressee, thereby giving the output \\textit{addressivity}. We hypothesize that the accompanying pressure to follow the addressee's instructions and align with their preferences links this addressivity to sycophancy. To test this, we use Sparse Autoencoders to extract addressivity directions from pre-trained and post-trained models and examine their relationship with sycophancy. Steering models with addressivity directions can amplify or suppress sycophancy, and this effect is observed only in post-trained models. Furthermore, comparing the internal mechanisms of both model types confirms that the association between addressivity and sycophancy is strengthened through post-training. Finally, through a controlled post-training experiment, we find that models are sycophantic not toward a specific addressee but toward any recognized addressee, suggesting that the presence of an addressee, rather than the addressee's identity, is what elicits sycophancy.",
+      "publishedAt": "2026-10-19",
+      "url": "https://arxiv.org/abs/2610.25728",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.25522",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "When Empathy Misses the Goal: A Benchmark for Goal Displacement in LLM Advice",
+      "summary": "Conversational large language models can respond with warmth and reassurance while failing to advance the user's stated goal. We conceptualize this failure as $\\textbf{goal displacement}$, the substitution of persona-maintenance content for goal-relevant substance. To measure it, we introduce $\\textbf{GDB}$ (Goal Displacement Benchmark), comprising 230 scenarios across nine domains and $4{,}134$ human-scored responses from 18 models. A $2 \\times 2$ taxonomy crosses hard constraints with emotional distress, distinguishing failures to confront infeasible goals or combine empathy with practical guidance from reverse displacement, where unsolicited problem-solving replaces requested emotional support. A deletion-test rubric assesses whether substantive help remains after purely supportive sentences are removed. Independent raters achieve weighted $κ= 0.82$ against author scores for displacement severity. Trap displacement ranges from $0.0\\%$ to $37.7\\%$ and is strongly negatively correlated with Chatbot Arena Elo ($ρ= -0.706$, $n = 15$). Reverse displacement reaches $41.9\\%$, including substantial rates in models with negligible trap displacement. A factorial probe supports a distinction from social sycophancy. Human-scored responses in the high-complexity, low-pressure condition exhibit $35.0\\%$ sycophancy but $7.5\\%$ displacement, with little association between the constructs. Matched OLMo-2 checkpoints show that mixed empathy-with-constraints displacement remains at $52.3\\%$ after supervised fine-tuning and falls to $13.8\\%$ after direct preference optimization. GDB provides a reproducible diagnostic of whether responses advance the operationalized user goal, supporting model comparison, post-training evaluation, and regression testing. We release the dataset, annotations, and rubric under CC-BY-4.0 and the evaluation code under MIT.",
+      "publishedAt": "2026-10-18",
+      "url": "https://arxiv.org/abs/2610.25522",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.24265",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Desirability Confirmation: Relational Sycophancy in AI Intimate Roleplay",
+      "summary": "Research on LLM sycophancy has largely focused on propositional agreement, in which models echo users' beliefs, preferences, or judgments. Adult intimate roleplay presents a different case because what the user seeks may be preservation of a preferred relational position within a generated scene. Using a controlled prompt-based audit of 2,016 outputs from two open-weight LLMs, we identify four recurrent relational moves: legitimating desire, presenting the user as wanted, preserving non-rejection while communicating limits, and keeping intimacy available within fantasy or roleplay frames. Bringing the sycophancy literature into dialogue with sexual script theory, we conceptualize this configuration as desirability confirmation, an output-level pattern that captures how user-pleasing can operate through relational positioning. The findings extend sycophancy research and intimate-AI evaluation beyond binary compliance or refusal by showing how outputs can differ in the ways they communicate boundaries, preserve relational acceptance, and mark intimacy as fictional.",
+      "publishedAt": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.24265",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.23525",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Trapped in Your Story: Evaluating Narrative-Induced Sycophancy in Large Language Models",
+      "summary": "Large language models (LLMs) are known to exhibit sycophancy by adjusting their responses toward users' expressed views. However, real users often justify their opinions through reasons, personal experiences, causal explanations, and broader narratives, raising the question of whether such narratives can further steer model judgments. We construct a controlled benchmark of 500 debatable questions across ten domains, where the user stance is held fixed while its justification is systematically varied without introducing new task-relevant evidence. Each question is instantiated under 11 matched conditions: one neutral baseline and five mirrored narrative levels for each of two opposing positions, yielding 5,500 evaluation instances. We evaluate seven LLMs and observe substantial differences in narrative-induced agreement. The effect is not monotonic with narrative elaboration: personal experience can reduce agreement, whereas causal framing and worldview-based synthesis increase it. Controlled GPT-5.1 ablations further show that causal framing produces the strongest positive effect, while claim-preserving bullet presentation also increases agreement over paragraph form. These findings suggest that sycophancy is shaped not only by user stance, but also by how supporting explanations are structured and presented.",
+      "publishedAt": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.23525",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.24320",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "The Judge Can Debias Itself: Awareness and Self-Debiasing for Reliable LLM-as-a-Judge",
+      "summary": "LLM-as-a-Judge systems are increasingly employed for automated evaluation, yet remain susceptible to systematic biases that undermine their reliability. We demonstrate that the judge can effectively debias itself without additional training. We propose two lightweight strategies: bias-aware prompting, which explicitly alerts the judge to potential target biases prior to evaluation, and self-debiasing, in which the judge critiques the initial judgment for bias influence. To broaden the evaluation scope, we introduce three novel benchmarks--authority bias (fabricated citations), confidence bias (assertive phrasing), and formatting bias (structured presentation)--and evaluate across seven bias types in total. Across three frontier models, self-debiasing improves performance in 20 out of 21 model-bias combinations with gains up to 15 percentage points, while bias-aware prompting also yields consistent improvements. The recent fine-tuned external critic, however, does not generalize as reliably to the newly-introduced bias types (degradation observed in 5 out of 9 cases). Our findings demonstrate that prompting a judge to reason about bias, either preemptively or retrospectively, is a robust and generalizable approach for enhancing evaluation integrity.",
+      "publishedAt": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.24320",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.22807",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "On the Position Bias of Large Language Models: A Comprehensive Study",
+      "summary": "Recent studies have shown that position bias remains a critical vulnerability in large language models (LLMs), undermining both the integrity of multiple-choice evaluations and the reliability of retrieval-augmented generation. However, existing understanding of this phenomenon is largely derived from studies with limited model coverage and English-centric benchmarks, leaving the behavior of frontier models and diverse languages underexplored. In this work, we conduct a comprehensive investigation of position bias across model scales ranging from billion-level to trillion-level parameters, covering both multiple-choice and multi-document tasks in five languages. Our experiments reveal that while position bias remains noticeable in small-scale models and Non-English languages, increasing model scale and employing standard Chain-of-Thought prompting significantly mitigate this issue. Moreover, we demonstrate that emerging \\emph{thinking models} with extended reasoning capabilities are nearly immune to position bias, suggesting a costly but general approach toward resolving this vulnerability.",
+      "publishedAt": "2026-10-16",
+      "url": "https://arxiv.org/abs/2610.22807",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2607.25227",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Flipping Minds by Flipping Bits: Decision-Level Cognitive Hijacking of Large Language Models",
+      "summary": "Large Language Models (LLMs) have been widely applied in high-stakes decision-making scenarios such as corporate strategy, and users are increasingly relying on their outputs. However, the deep integration of open-source model sharing ecosystems with LLM-powered critical decision-making applications also introduces critical risks: if an attacker can manipulate the model's cognitive stance, they can indirectly influence the judgments and actions of downstream decision-makers. This paper defines such threats as decision-level hijacking. Existing attacks fail to achieve targeted cognitive manipulation without triggering prohibited content or degrading model functionality. To fill this gap, this paper reveals that Bit-Flip Attacks (BFAs) can serve as an attack vector for inducing decision-level hijacking, requiring no real-time interaction or control over the training process, and only a minimal number of weight bits need to be flipped after deployment to achieve stealthy, low-cost, and persistent cognitive manipulation. Therefore, we propose CogBias, a cognitive bias injection framework for LLMs. CogBias converts subjective preferences into optimization signals via a differentiable sentiment evaluator, uses a multi-objective loss to jointly constrain multiple dimensions, and constructs BitScout to locate critical bits, achieving targeted cognitive intervention under an ultra-sparse flip budget. Experiments on Llama-3.2-3B, Mistral-7B, and Qwen2.5-14B, as well as on the commercial recommendation and controversial factual topic scenarios, demonstrate that flipping only a small number of bits stably induces significant stance shifts on target topics, while the impact on non-target tasks and overall output distribution is limited. This work demonstrates that minute perturbations to low-level weight data suffice to undermine the high-level value alignment of LLMs.",
+      "publishedAt": "2026-07-28",
+      "url": "https://arxiv.org/abs/2607.25227",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-10-23",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "arxiv-2610.18108",
       "source": "arXiv",
