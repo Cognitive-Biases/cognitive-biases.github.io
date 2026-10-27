@@ -1,7 +1,129 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-20",
+  "updatedAt": "2026-10-27",
   "items": [
+    {
+      "id": "openalex-w7223318322",
+      "discoveredAt": "2026-10-27",
+      "title": "Confirmation Bias in Police Witness Interviews: On the Influence of Prior Information on CBCA Ratings and Credibility Judgments among Criminal Investigators and Law Students",
+      "url": "https://doi.org/10.1007/s11896-026-09873-8",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-10-23",
+      "journal": "Journal of Police and Criminal Psychology",
+      "doi": "10.1007/s11896-026-09873-8",
+      "relatedConcepts": [
+        "cognitive-bias-confirmation-bias"
+      ],
+      "whyItMatters": "Potentially relevant to practical decision contexts and evidence-reviewed bias entries.",
+      "score": 8,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "journal or review source type"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7223253050",
+      "discoveredAt": "2026-10-27",
+      "title": "The Weight of the Past: Sunk Costs, Escalation of Commitment, and the Limits of the Evidence",
+      "url": "https://doi.org/10.5281/zenodo.23556408",
+      "source": "OpenAlex",
+      "sourceType": "preprint",
+      "publishedAt": "2026-10-22",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "doi": "10.5281/zenodo.23556408",
+      "relatedConcepts": [
+        "cognitive-bias-sunk-cost-effect"
+      ],
+      "whyItMatters": "Potential boundary or null evidence that may narrow an existing claim. Negative results are useful when they test a concept directly rather than merely failing to mention an effect.",
+      "score": 7,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "boundary, null, or preregistered evidence"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "arxiv-2610.28092",
+      "discoveredAt": "2026-10-27",
+      "title": "BAIT: Can LLMs Find What Biases a Reader? A Benchmark for Cognitive Bias Triggers in News",
+      "url": "https://arxiv.org/abs/2610.28092",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "publishedAt": "2026-10-20",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 7,
+      "rankingReasons": [
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7223157525",
+      "discoveredAt": "2026-10-27",
+      "title": "BAIT: Can LLMs Find What Biases a Reader? A Benchmark for Cognitive Bias Triggers in News",
+      "url": "https://doi.org/10.48550/arxiv.2610.28092",
+      "source": "OpenAlex",
+      "sourceType": "preprint",
+      "publishedAt": "2026-10-20",
+      "journal": "arXiv (Cornell University)",
+      "doi": "10.48550/arxiv.2610.28092",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 7,
+      "rankingReasons": [
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7223445327",
+      "discoveredAt": "2026-10-27",
+      "title": "Impact of Artificial Intelligence on Employee Productivity and Managerial Decision-Making",
+      "url": "https://doi.org/10.48175/ijarsct-40132",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-10-24",
+      "journal": "International Journal of Advanced Research in Science Communication and Technology",
+      "doi": "10.48175/ijarsct-40132",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7223475907",
+      "discoveredAt": "2026-10-27",
+      "title": "Agentic AI and Organizational Decision-Making: A Conceptual Framework for Human–AI Collaboration in Digital Transformation",
+      "url": "https://doi.org/10.38124/ijisrt/26oct568",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-10-24",
+      "journal": "International Journal of Innovative Science and Research Technology (IJISRT)",
+      "doi": "10.38124/ijisrt/26oct568",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
     {
       "id": "pubmed-42866750",
       "discoveredAt": "2026-10-20",
