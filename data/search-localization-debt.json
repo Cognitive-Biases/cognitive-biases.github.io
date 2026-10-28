@@ -3,25 +3,25 @@
   "entries": [
     {
       "id": "search-console-generative-ai-owner-data",
-      "state": "blocked-owner-data",
-      "reason": "The repository has read-only Search Console automation for indexing/search-appearance evidence, but the new dedicated Generative AI report and Search generative AI inclusion control are owner-facing surfaces and are not evidenced by the current checked-in/exported artifacts.",
+      "state": "bounded-manual-verification",
+      "reason": "The owner-facing Generative AI report and inclusion control were reviewed on 2026-10-28; the observations and export remain private. This is a point-in-time manual review, not automated ongoing coverage or proof of search outcomes.",
       "scope": "Google Search generative-AI measurement and inclusion setting",
       "affectedLocales": ["en", "de", "ru", "fr", "pt-BR", "es", "it"],
       "affectedSurface": "search-console-owner-data",
-      "nextAction": "In Search Console for https://cognitive-biases.github.io/, open Performance > Generative AI (Search) and Settings > Search generative AI. Export or record the current inclusion state plus page/country/device impression data where available, then attach a dated owner-data receipt without converting absence of impressions into a technical site failure.",
-      "reviewCondition": "When owner UI/export access is available or when Google documents an API/export surface that can be automated.",
-      "reviewBy": "2026-10-14"
+      "nextAction": "Revisit the owner-facing report and inclusion control when due; retain dated evidence privately and distinguish reported impressions from clicks, citations and search outcomes. Investigate any supported automated reporting surface without exposing owner data in Git.",
+      "reviewCondition": "At the next bounded review, or sooner if the owner-facing control or reporting surface changes.",
+      "reviewBy": "2026-11-04"
     },
     {
       "id": "browser-accessibility-tree-locales",
       "state": "bounded-manual-verification",
-      "reason": "Current repository gates validate generated HTML, semantics and live HTTP surfaces, but this execution environment does not expose a browser accessibility-tree/screenshot inspection interface for all locale states.",
+      "reason": "A local representative browser audit was completed on 2026-10-28 across seven locales at 320px and desktop, with a non-pinned runtime. The audit reported 865 high findings classified as advisory by the existing gate; a separate visual check confirmed a cramped German mobile header. The full locale and viewport matrix remains unverified.",
       "scope": "Rendered visual, DOM and accessibility-tree verification for locale UX and browser-agent usability",
       "affectedLocales": ["en", "de", "ru", "fr", "pt-BR", "es", "it"],
       "affectedSurface": "browser-agent-accessibility",
-      "nextAction": "Run a browser review or Playwright/Chromium audit on every locale home plus representative bias/search/filter states at desktop and about 390px width. Capture screenshot, DOM and accessibility-tree evidence; verify language switcher, links/buttons, accessible names, focus order, long-string wrapping, overlays and keyboard use.",
-      "reviewCondition": "Before promoting any locale to a stronger/full human-interface quality status or after a navigation/component redesign.",
-      "reviewBy": "2026-10-14"
+      "nextAction": "Review and address the German mobile header and assess the advisory findings. Run the broader browser matrix with the workflow's pinned runtime, including about 390px, and inspect relevant screenshots, accessible names, focus and keyboard behavior before claiming broader coverage.",
+      "reviewCondition": "At the next bounded review, before promoting locale interface quality, or after a navigation/component redesign.",
+      "reviewBy": "2026-11-04"
     }
   ]
 }
