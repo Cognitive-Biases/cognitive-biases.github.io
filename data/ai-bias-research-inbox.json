@@ -1,8 +1,157 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-10-30",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "arxiv-2610.33920",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "DRILS: Dependency-based Requirement Change Impact Analysis Using LLMs",
+      "summary": "Change is inevitable in software systems, where requirements must continuously adapt to evolving stakeholder needs, regulations, and project scopes. Managing such changes is a fundamental software engineering challenge, as manually identifying the impact of a change request, given high requirements volume, Natural Language (NL) complexity, and intricate interdependencies, is error-prone and time-consuming. Large Language Models (LLMs) offer promising solutions for requirements change impact analysis (CIA), yet their effectiveness when enhanced with advanced techniques remains underexplored. We present DRILS, an LLM-based agentic framework for requirements Change Impact Analysis, employing a multi-agent architecture to generate candidate impact sets, with an LLM-as-a-judge promoting diversity during selection. DRILS features two key components: RE-RAG, a carefully engineered RAG technique providing focused domain context, and a requirement dependency graph (RDG) as an additional knowledge source. Evaluation across three manually curated datasets demonstrates superior performance over state-of-the-art baselines, achieving an average recall of 87.1%, precision of 76.3%, and F1 score of 81% at a lower cost. Precision gains are particularly significant, 41.1%, 83.4%, and 149.8% over the closest baseline per dataset, as higher precision directly reduces false positives and manual validation effort. We also contribute three annotated CIA datasets to support future research.",
+      "publishedAt": "2026-10-24",
+      "url": "https://arxiv.org/abs/2610.33920",
+      "tags": [
+        "llm-as-a-judge",
+        "rag-source-conflict",
+        "agents"
+      ],
+      "score": 10,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.37962",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Statistical Detection of Positional Bias in LLM-Based Recommender Systems: Methodologies and Empirical Evidence",
+      "summary": "Large Language Models (LLMs) are increasingly used as recommendation generators in conversational recommender systems (RS) via retrieval-augmented generation (RAG). This flexible design introduces new sources of structural bias. This paper studies positional bias in top-1 and single-turn LLM-based RS: systematic dependence of the recommended item on the order in which candidates are presented in the prompt. We propose two complementary detection methodologies: (i) POB-ICM, based on contingency matrix analysis and Chi-square independence testing, and (ii) POB-UNBP, a sample-efficient approach derived from a uniformity null model under permutation-based evaluation, enabling stochastic decoding with formal statistical guarantees. Using a controlled RAG testbed for product recommendation, built on a real product catalog, a fixed prompt template and 2000 template-generated user queries with 20 permutations each (40,000 instances), both methodologies reject the null hypothesis of positional independence and uniformity in all evaluated state-of-the-art models. We introduce three complementary metrics -- permutation sensitivity, positional bias, and strong positional bias -- to quantify this effect, the latter targeting cases where the position displaces the recommendation towards clearly less relevant items rather than only choosing among comparably relevant ones. A robustness analysis across candidate-set size and decoding temperature shows that the bias is structural and model-dependent, not an artifact of deterministic decoding or candidate-set size. These results establish positional bias as a measurable, reproducible property of prompt-mediated recommendation pipelines in the evaluated setting and motivate routine auditing and governance controls (e.g., order randomization, standardized prompting) for deployed LLM-based RS. Source code is publicly released.",
+      "publishedAt": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.37962",
+      "tags": [
+        "position-and-order",
+        "rag-source-conflict"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.32055",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "How Much Do You Trust A Dog? Quantifying Hint-Following in Reasoning Language Models",
+      "summary": "Large language models (LLMs) often exhibit sycophancy, altering their answers to align with user suggestions even on objective factual and reasoning tasks. Yet the quantitative form of this influence--- and whether it is calibrated to source reliability--- remains poorly understood. In this work, we investigate this behavior through hint-induced answer shifts on MMLU questions, evaluating prompts of the form ``[Source] thinks the answer is (X)''. We systematically vary the source to which the hint is attributed (a professor, a friend, or a dog) across three open-source model families, Qwen, Gemma, and SmolLM. We show that the change induced by the hint follows a predictable structure well-characterized by an exponential tilt: the hint induces an approximately constant mean shift in the hinted answer's log-odds, with question--target susceptibility largely shared across sources. To explore how this pattern can arise, we introduce a formal decomposition of the hint response and illustrate in controlled synthetic experiments how KL-regularized reward-based training reshapes both hinted and unhinted answer distributions. Finally, we evaluate whether this shift is calibrated to source reliability, finding that the log-odds shift persists even when the hint-giver is declared inaccurate or accompanied by explicit warnings not to trust the source, highlighting the vulnerability of LLMs to adversarial steering.",
+      "publishedAt": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.32055",
+      "tags": [
+        "sycophancy",
+        "rag-source-conflict"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.38917",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "TrussTutor-Bench: Benchmarking large language models on solution accuracy, sycophancy, and error detection in statics",
+      "summary": "Large language models (LLMs) have rapidly become a default source of help for students in science and engineering courses. In foundational engineering mechanics courses such as statics, students routinely use these tools to check answers, work through partial solutions, and ask for explanations. Effective tutoring in this setting requires more than a correct final answer. A model must also confirm correct work when a student doubts it, and identify errors in flawed work. Existing benchmarks evaluate LLMs primarily on final-answer accuracy, so it is unclear whether models that can solve mechanics problems also have the other technical capabilities that tutoring depends on. Here we introduce TrussTutor-Bench, a benchmark of 200 verified two-dimensional truss problems paired with automatically generated student solutions, and use it to evaluate thirteen LLMs on solution accuracy, sycophancy, and error detection. Baseline accuracy ranged from 64.5% to 97.0%. Every model detected nearly all injected errors in synthetic flawed student work (90.4% to 100%), so error detection did not distinguish models under these clean conditions. Sycophancy did. When a student insisted that correct work was wrong, models rejected correct solutions to problems they had themselves solved in 1.6% to 50.0% of cases. These results show that performance varies widely across models: the leading models solve, check, and defend student work nearly perfectly, while others are far less reliable, particularly when a student doubts correct work. TrussTutor-Bench provides a verified, extensible standard for determining which models are technically reliable enough to put in front of students. Follow-up work must now focus on teaching rather than technical capability, drawing on learning science to determine whether LLM help leads students to understand the material or simply to reach the right answer.",
+      "publishedAt": "2026-10-28",
+      "url": "https://arxiv.org/abs/2610.38917",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.36915",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG",
+      "summary": "When the sources retrieved for a query disagree, the right response depends on why they disagree: a question with several valid answers, a contested topic, stale information and a false source each call for different behaviour. Cattan et al. (2025) showed that telling a generator the conflict type improves its responses by about 24 points, but that predicting the type is hard even for frontier LLMs. We study whether typed decision models, which return probabilities over fixed options in a single forward pass instead of generating text, can do this classification fast and cheaply. Using the CONFLICTS benchmark and the original paper's prompt verbatim, we evaluate all 11 decision models served by one commercial inference gateway, from 7 providers, against Gemini models on identical inputs. Asked directly, the decision models reach 50.0--67.0% accuracy; 10 of the 11 match or exceed Gemini 2.5 Flash, the paper's model (61.3%), at 4--39x lower billed cost (2 were free) and 2.6--6.0x lower latency. The current Gemini 3.8 Flash (70.0%) is significantly more accurate than 8 of them, but sending each decision model's least confident quarter of queries to it gives a cascade statistically tied with it for 8 of the 11, at 25--37% of its cost. End to end, answers generated with the types of 10 of the 11 follow the expected behaviour as often as with the LLM's types. Decomposing the taxonomy into yes/no questions lowers accuracy for every model, and a repair fitted on one model does not transfer. Pre-specified diagnostics show that dates play no measurable role and that sensitivity to source order varies widely between models. Decision models detect a planted false source less reliably than the LLM as hard labels, but their probabilities still separate planted from clean sources. We release code, prompts and all model outputs at https://github.com/Parv17k/decision-models-conflict-typing.",
+      "publishedAt": "2026-10-27",
+      "url": "https://arxiv.org/abs/2610.36915",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.36346",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Your Wish Is My Commit: Over-Compliant Refactoring in AI Coding Agents",
+      "summary": "Large language models are known to be sycophantic, over-complying with users even when doing so is unproductive. When these models act as coding agents, this can be costly: an agent that keeps editing after no edit improves the code writes churn, technical debt, and review burden into the codebase. Yet the consequences of sycophancy in software engineering remain largely understudied. To understand them, we run a controlled study of iterative refactoring, an open-ended task with no stopping criterion, where any edit an agent makes once the code is already clean reflects compliance rather than improvement. Across algorithmic (n=50) and object-oriented (n=10) suites, we repeatedly ask two widely used agents, Codex and Claude Code, to refactor further across five models. Over 3,000 turns, we define six behavioral signals of over-compliance. We hypothesized that a capable agent would stop once it recognized an optimized codebase; none did. Every model kept editing, rewriting up to 31x the original codebase before first stopping and resuming edits even after declaring the task complete. Over-compliance is a costly, multi-turn behavior that compounds with every turn, and our six signals give developers and tool builders a way to detect and curb it.",
+      "publishedAt": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.36346",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.35698",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "From Self-Confidence to Statistical Accuracy: Scaling Human-in-the-Loop Evaluation with Direct and LLM-Assisted Auditing",
+      "summary": "For large language models (LLMs) and multimodal large language models (MLLMs), model-reported self-confidence is often miscalibrated, yet it may still be useful for efficient evaluation. At the same time, LLM-as-a-judge offers a scalable alternative to direct human auditing, but its practical benefit depends on calibration quality and inference cost. This paper develops a unified statistical framework for both evaluation routes under alternative sampling strategies. For direct auditing, confidence-stratified sampling is used to recover population accuracy from partially verified outputs without requiring calibrated confidence. Finite-sample uncertainty is characterized, and the analysis shows how highly uneven confidence strata affect audit efficiency and label allocation. For judge-assisted evaluation, the judge is modeled through sensitivity and false-positive rate, yielding an error-corrected estimator with calibration uncertainty. The two routes are then compared through human-label and total-cost efficiency boundaries. Experiments on MMLU-Pro and MMMU-Pro show that miscalibrated self-confidence can still support statistically valid stratified auditing. Under highly imbalanced confidence distributions, proportional allocation substantially reduces estimation error relative to equal-per-stratum allocation. For judge-assisted evaluation, only a small subset of target--verifier pairs satisfies the idealized human-label efficiency condition, and automated inference costs can further limit potential savings. These findings clarify the statistical and economic conditions under which confidence-guided auditing and automated verification are useful.",
+      "publishedAt": "2026-10-26",
+      "url": "https://arxiv.org/abs/2610.35698",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.37701",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering",
+      "summary": "Large language models with retrieval-augmented generation systematically underutilize evidence in the middle of multi-document contexts, a phenomenon known as Lost in the Middle. Existing mitigation strategies, such as document reordering and attention steering, can reduce boundary bias but remain brittle in noisy settings, where inaccurate relevance estimation and spurious documents still obscure useful evidence in central positions. We propose DuQUAD, a multi-document QA framework that mitigates positional bias through dual-view reasoning and quality-aware evidence pruning. DuQUAD combines a Local Agent guided by a Structural Fusion Score with a Global Agent that reasons over the full document set, providing both targeted evidence recovery and broad contextual understanding. The framework further filters candidate evidence using explicit quality scoring and refines it at the sentence level to reduce noise. DuQUAD consistently outperforms strong Lost-in-the-Middle mitigation baselines, including hybrid retrieval and reranking, multi-agent reasoning, and context optimization methods, improving accuracy by 3.0% on average over the strongest competing baseline and gold evidence recall by 9.4%, while substantially reducing computational cost compared to existing multi-agent frameworks.",
+      "publishedAt": "2026-10-25",
+      "url": "https://arxiv.org/abs/2610.37701",
+      "tags": [
+        "position-and-order",
+        "long-context"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2610.33128",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Navigating Epistemic Parity in LLM Agents: A Benchmark for Cross-Source Conflict Resolution Between Memory and Procedural Skills",
+      "summary": "Production LLM agents increasingly run episodic memory pipelines and procedural skill modules (e.g., SKILL.md files) in tandem. Both are injected into the same context region with no defined precedence, so they can issue contradictory instructions that no instruction hierarchy resolves, a condition we term epistemic parity. We introduce a benchmark for measuring how LLM agents adjudicate such cross-source conflicts. We (i) develop a four-way taxonomy of memory-skill contradictions (factual, format, procedural, permission); (ii) instantiate 52 scenarios under a tripartite test-case anatomy (memory injection, skill injection, ambiguous user task), scored almost entirely by deterministic checkers over tool-call payloads and output structure; and (iii) run each scenario under three context conditions to isolate positional bias, measure the efficacy of an explicit precedence directive, and classify disclosure behavior, quantifying silent adjudication: resolving a conflict without telling the user. Across 1,383 runs on three open-weight models, neither source wins uniformly: resolution depends jointly on conflict type, model, and injection order. Moving the skill block nearer the task raises its win rate in all six factual and procedural cells (sign test, p = 0.031) but reverses for format conflicts, indicating that adjudication tracks token placement rather than source semantics. An explicit \"skill takes absolute precedence\" directive raises skill compliance on the two stronger models yet leaves 3-10% residual non-compliance, and moves the smallest model's factual and procedural resolution in the wrong direction. Most consequentially, in 98.8% of runs where the agent acted through a tool call it emitted no accompanying text at all, and 89% of all runs disclosed nothing about the contradiction: silent adjudication is the default. Code, scenarios, and raw outputs are public.",
+      "publishedAt": "2026-10-23",
+      "url": "https://arxiv.org/abs/2610.33128",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-10-30",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "arxiv-2610.30412",
       "source": "arXiv",
