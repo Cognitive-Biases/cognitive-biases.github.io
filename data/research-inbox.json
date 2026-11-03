@@ -1,7 +1,112 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-11-03",
   "items": [
+    {
+      "id": "openalex-w7204606853",
+      "discoveredAt": "2026-11-03",
+      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+      "url": "https://doi.org/10.1145/3799682.3840879",
+      "source": "OpenAlex",
+      "sourceType": "conference-paper",
+      "publishedAt": "2026-11-03",
+      "journal": "ACM International Conference on Information and Knowledge Management (CIKM)",
+      "doi": "10.1145/3799682.3840879",
+      "relatedConcepts": [
+        "ai-assisted-decisions",
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 11,
+      "rankingReasons": [
+        "direct canonical concept match",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7204156395",
+      "discoveredAt": "2026-11-03",
+      "title": "Anchoring Bias: A Persistent Fairness Backdoor Attack against MLLMs under Continual Learning",
+      "url": "https://doi.org/10.1145/3799682.3841079",
+      "source": "OpenAlex",
+      "sourceType": "conference-paper",
+      "publishedAt": "2026-11-03",
+      "journal": "ACM International Conference on Information and Knowledge Management (CIKM)",
+      "doi": "10.1145/3799682.3841079",
+      "relatedConcepts": [
+        "cognitive-bias-anchoring-effect"
+      ],
+      "whyItMatters": "Potential research update that passed the scout relevance threshold and needs editorial review.",
+      "score": 7,
+      "rankingReasons": [
+        "direct canonical concept match"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42949357",
+      "discoveredAt": "2026-11-03",
+      "title": "A Framework for Identifying and Understanding Cognitive Biases in Artificial Intelligence-Assisted Radiology.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42949357/",
+      "source": "PubMed",
+      "sourceType": "journal article",
+      "publishedAt": "2026 Oct 28",
+      "journal": "AJR. American journal of roentgenology",
+      "doi": "10.2214/ajr.26.35826",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 7,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "openalex-w7225084657",
+      "discoveredAt": "2026-11-03",
+      "title": "Trust in artificial intelligence and AI-assisted social and civic decision-making among Arab youth: evidence from Egypt, Kuwait, and the UAE",
+      "url": "https://doi.org/10.3389/fsoc.2026.1902517",
+      "source": "OpenAlex",
+      "sourceType": "journal article",
+      "publishedAt": "2026-11-02",
+      "journal": "Frontiers in Sociology",
+      "doi": "10.3389/fsoc.2026.1902517",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
+    {
+      "id": "pubmed-42941500",
+      "discoveredAt": "2026-11-03",
+      "title": "Clinical Reasoning, Pathophysiology, and Artificial Intelligence in Critical Care: A Conceptual Framework for Integrating Decision-Making.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42941500/",
+      "source": "PubMed",
+      "sourceType": "review",
+      "publishedAt": "2026 Oct 15",
+      "journal": "Journal of clinical medicine",
+      "doi": "10.3390/jcm15207987",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential update for the AI-assisted decisions research track; needs source review before changing any canonical claim.",
+      "score": 6,
+      "rankingReasons": [
+        "journal or review source type",
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
     {
       "id": "openalex-w7223318322",
       "discoveredAt": "2026-10-27",
