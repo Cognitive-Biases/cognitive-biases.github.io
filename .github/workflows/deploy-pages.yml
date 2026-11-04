@@ -43,29 +43,6 @@ jobs:
       - name: Test staged live origin and redirect policy
         run: node --test scripts/lib/live-origin-policy.test.mjs
       - run: npm run check
-      - name: Diagnose existing source and relay HTTP routes on PRs
-        if: github.event_name == 'pull_request'
-        run: |
-          for url in \
-            https://cognitive-biases.github.io/assets/editorial/biases/cognitive-bias-anchoring-effect.webp \
-            https://cognitive-biases-move.vedokrok.com/assets/editorial/biases/cognitive-bias-anchoring-effect.webp \
-            https://cognitive-biases-move.vedokrok.com/assets/editorial/biases/cognitive-bias-sunk-cost-effect.webp \
-            https://cognitive-biases-move.vedokrok.com/assets/editorial/biases/confirmation-bias-congruence-bias.webp \
-            https://cognitive-biases-move.vedokrok.com/reading.css \
-            https://cognitive-biases-move.vedokrok.com/internal-discovery.js \
-            https://cognitive-biases-move.vedokrok.com/favicon.png \
-            https://cognitive-biases-move.vedokrok.com/data/image-discovery.json \
-            https://raw.githubusercontent.com/Cognitive-Biases/cognitive-biases.github.io/main/public/assets/editorial/biases/cognitive-bias-anchoring-effect.webp \
-            https://cognitive-biases-move.vedokrok.com/biases/heuristic-bias-availability-bias/ \
-            https://cognitive-biases-move.vedokrok.com/biases/cognitive-rigidity-functional-fixedness/ \
-            https://cognitive-biases-move.vedokrok.com/biases/cognitive-bias-outcome-bias/ \
-            https://cognitive-biases-move.vedokrok.com/biases/prospect-theory-status-quo-bias/; do
-            printf 'Route: %s\\n' "$url"
-            curl --silent --show-error --max-time 20 --output /dev/null \
-              --write-out 'direct_status=%{http_code} direct_location=%{redirect_url} content_type=%{content_type}\\n' "$url" || true
-            curl --silent --show-error --max-time 20 --location --max-redirs 5 --output /dev/null \
-              --write-out 'final_status=%{http_code} final_url=%{url_effective} redirects=%{num_redirects} content_type=%{content_type}\\n' "$url" || true
-          done
       - name: Smoke-check current public relay on PRs
         if: github.event_name == 'pull_request'
         run: |
