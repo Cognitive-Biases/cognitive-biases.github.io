@@ -57,3 +57,19 @@ export function livePageIssues(requestedUrl, finalUrl, htmlCanonical) {
   }
   return issues;
 }
+
+/**
+ * Parse a canonical HTTP Link target even when rel is quoted (the common case).
+ * Distinct Link entries are comma-delimited; relation tokens are whitespace-delimited.
+ */
+export function httpLinkCanonical(linkHeader, baseUrl) {
+  if (!linkHeader) return null;
+  for (const entry of String(linkHeader).split(/,(?=\s*<)/)) {
+    const target = entry.match(/^\s*<([^>]+)>/);
+    if (!target) continue;
+    const rel = entry.match(/(?:^|;)\s*rel\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s;,]+))/i);
+    if (!rel || !(rel[1] ?? rel[2] ?? rel[3]).toLowerCase().split(/\s+/).includes("canonical")) continue;
+    try { return new URL(target[1], baseUrl).href; } catch { return null; }
+  }
+  return null;
+}

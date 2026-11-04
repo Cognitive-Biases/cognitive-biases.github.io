@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   LEGACY_ORIGIN, RELAY_ORIGIN, legacyRedirectIssues, livePageIssues,
-  liveUrl, sitemapOriginIssues,
+  liveUrl, sitemapOriginIssues, httpLinkCanonical,
 } from "./live-origin-policy.mjs";
 
 const page = `${RELAY_ORIGIN}/explore/`;
@@ -36,4 +36,13 @@ test("normal migrated pages require same path and self-canonical after routing",
   assert.match(livePageIssues(page, `${RELAY_ORIGIN}/wrong/`, `${RELAY_ORIGIN}/wrong/`).join(" "), /unexpected redirect/);
   assert.match(livePageIssues(page, page, `${LEGACY_ORIGIN}/explore/`).join(" "), /HTML canonical/);
   assert.match(livePageIssues(page, page, null).join(" "), /HTML canonical/);
+});
+
+test("HTTP Link rel=canonical is parsed with quoted, unquoted and multi-token relations", () => {
+  for (const rel of ['rel="canonical"', "rel='canonical'", "rel=canonical", 'rel="alternate canonical"']) {
+    assert.equal(httpLinkCanonical(`<${page}>; ${rel}`, page), page);
+  }
+  assert.equal(httpLinkCanonical(`<https://elsewhere.example/>; rel=alternate, <${page}>; rel="canonical"`, page), page);
+  assert.equal(httpLinkCanonical(`<${page}>; rel="alternate"`, page), null);
+  assert.equal(httpLinkCanonical(`</wrong/>; rel="canonical"`, page), `${RELAY_ORIGIN}/wrong/`);
 });

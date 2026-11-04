@@ -49,6 +49,12 @@ jobs:
           for url in \
             https://cognitive-biases.github.io/assets/editorial/biases/cognitive-bias-anchoring-effect.webp \
             https://cognitive-biases-move.vedokrok.com/assets/editorial/biases/cognitive-bias-anchoring-effect.webp \
+            https://cognitive-biases-move.vedokrok.com/assets/editorial/biases/cognitive-bias-sunk-cost-effect.webp \
+            https://cognitive-biases-move.vedokrok.com/assets/editorial/biases/confirmation-bias-congruence-bias.webp \
+            https://cognitive-biases-move.vedokrok.com/reading.css \
+            https://cognitive-biases-move.vedokrok.com/internal-discovery.js \
+            https://cognitive-biases-move.vedokrok.com/favicon.png \
+            https://cognitive-biases-move.vedokrok.com/data/image-discovery.json \
             https://raw.githubusercontent.com/Cognitive-Biases/cognitive-biases.github.io/main/public/assets/editorial/biases/cognitive-bias-anchoring-effect.webp \
             https://cognitive-biases-move.vedokrok.com/biases/heuristic-bias-availability-bias/ \
             https://cognitive-biases-move.vedokrok.com/biases/cognitive-rigidity-functional-fixedness/ \

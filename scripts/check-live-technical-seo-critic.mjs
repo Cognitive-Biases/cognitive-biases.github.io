@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { setTimeout as sleep } from "node:timers/promises";
-import { LEGACY_ORIGIN, legacyRedirectIssues, livePageIssues, sitemapOriginIssues } from "./lib/live-origin-policy.mjs";
+import { LEGACY_ORIGIN, legacyRedirectIssues, livePageIssues, sitemapOriginIssues, httpLinkCanonical } from "./lib/live-origin-policy.mjs";
 
 const identity = JSON.parse(await readFile("config/site-identity.json", "utf8"));
 const SITE = identity.siteUrl;
@@ -22,16 +22,6 @@ function htmlCanonical(html, baseUrl) {
     const a = attrs(match[0]);
     if (!String(a.rel || "").toLowerCase().split(/\s+/).includes("canonical") || !a.href) continue;
     try { return new URL(a.href, baseUrl).href; } catch { return null; }
-  }
-  return null;
-}
-
-function httpCanonical(linkHeader, baseUrl) {
-  if (!linkHeader) return null;
-  const matches = [...String(linkHeader).matchAll(/<([^>]+)>\s*;([^,]*)/g)];
-  for (const match of matches) {
-    if (!/\brel\s*=\s*(?:"[^"]*\bcanonical\b[^"]*"|'[^']*\bcanonical\b[^']*'|canonical)\b/i.test(match[2])) continue;
-    try { return new URL(match[1], baseUrl).href; } catch { return null; }
   }
   return null;
 }
@@ -100,7 +90,7 @@ for (const requestedUrl of sample) {
 
   const html = await response.text();
   const htmlCan = htmlCanonical(html, finalUrl);
-  const linkCan = httpCanonical(response.headers.get("link"), finalUrl);
+  const linkCan = httpLinkCanonical(response.headers.get("link"), finalUrl);
   hardIssues.push(...livePageIssues(requestedUrl, finalUrl, htmlCan));
   if (linkCan && htmlCan && linkCan !== htmlCan) hardIssues.push(`${requestedUrl}: HTTP Link canonical ${linkCan} conflicts with HTML canonical ${htmlCan}`);
   const restrictions = negativeHeaderDirectives(response.headers.get("x-robots-tag"));
