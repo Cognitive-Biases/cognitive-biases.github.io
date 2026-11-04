@@ -27,6 +27,15 @@ export function legacyRedirectIssues(status, location) {
   return issues;
 }
 
+// Reviewed, live 308 mappings in Vedokrok Worker PR #292.
+// These URLs may redirect, but should not be submitted as canonical sitemap entries.
+export const MOVED_BIAS_PATHS = new Set([
+  "/biases/heuristic-bias-availability-bias/",
+  "/biases/cognitive-rigidity-functional-fixedness/",
+  "/biases/cognitive-bias-outcome-bias/",
+  "/biases/prospect-theory-status-quo-bias/",
+]);
+
 export function sitemapOriginIssues(sitemapUrl, sitemapUrls) {
   const issues = [];
   if (sitemapUrl !== `${RELAY_ORIGIN}/sitemap.xml`) {
@@ -38,6 +47,9 @@ export function sitemapOriginIssues(sitemapUrl, sitemapUrls) {
       const url = new URL(value);
       if (url.origin !== RELAY_ORIGIN || url.username || url.password || url.search || url.hash) {
         issues.push(`live sitemap: non-canonical or unapproved URL ${value}`);
+      }
+      if (url.origin === RELAY_ORIGIN && MOVED_BIAS_PATHS.has(url.pathname)) {
+        issues.push(`live sitemap: redirecting page must not be listed as canonical URL ${value}`);
       }
     } catch { issues.push(`live sitemap: invalid URL ${value}`); }
   }

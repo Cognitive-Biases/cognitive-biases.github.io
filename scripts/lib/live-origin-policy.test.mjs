@@ -46,3 +46,16 @@ test("HTTP Link rel=canonical is parsed with quoted, unquoted and multi-token re
   assert.equal(httpLinkCanonical(`<${page}>; rel="alternate"`, page), null);
   assert.equal(httpLinkCanonical(`</wrong/>; rel="canonical"`, page), `${RELAY_ORIGIN}/wrong/`);
 });
+
+test("reviewed 308-migrated pages must not remain in the relay sitemap", () => {
+  for (const path of [
+    "/biases/heuristic-bias-availability-bias/",
+    "/biases/cognitive-rigidity-functional-fixedness/",
+    "/biases/cognitive-bias-outcome-bias/",
+    "/biases/prospect-theory-status-quo-bias/",
+  ]) {
+    const violations = sitemapOriginIssues(`${RELAY_ORIGIN}/sitemap.xml`, [`${RELAY_ORIGIN}${path}`]);
+    assert.match(violations.join(" "), /redirecting page must not be listed/);
+  }
+  assert.deepEqual(sitemapOriginIssues(`${RELAY_ORIGIN}/sitemap.xml`, [page]), []);
+});
