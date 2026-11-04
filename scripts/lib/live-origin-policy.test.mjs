@@ -12,7 +12,7 @@ test("legacy homepage must permanently redirect to the exact relay root", () => 
   assert.deepEqual(legacyRedirectIssues(308, `${RELAY_ORIGIN}/`), []);
   assert.match(legacyRedirectIssues(302, `${RELAY_ORIGIN}/`).join(" "), /301\/308/);
   assert.match(legacyRedirectIssues(301, "https://other.example/").join(" "), /expected exact relay/);
-  assert.match(legacyRedirectIsssues(200, null).join(" "), /expected exact relay/);
+  assert.match(legacyRedirectIssues(200, null).join(" "), /expected exact relay/);
 });
 
 test("only the reviewed source and relay origins are accepted", () => {
@@ -26,7 +26,7 @@ test("live sitemap must be on the relay with relay-only clean URLs", () => {
   assert.match(sitemapOriginIssues(`${LEGACY_ORIGIN}/sitemap.xml`, [page]).join(" "), /expected relay/);
   assert.match(sitemapOriginIssues(`${RELAY_ORIGIN}/sitemap.xml`, [`${LEGACY_ORIGIN}/explore/`]).join(" "), /non-canonical/);
   assert.match(sitemapOriginIssues(`${RELAY_ORIGIN}/sitemap.xml`, ["https://evil.example/"]).join(" "), /unapproved/);
-  assert.match(sitemapOriginIsssues(`${RELAY_ORIGIN}/sitemap.xml`, [page + "?token=1"]).join(" "), /non-canonical/);
+  assert.match(sitemapOriginIssues(`${RELAY_ORIGIN}/sitemap.xml`, [page + "?token=1"]).join(" "), /non-canonical/);
 });
 
 test("normal migrated pages require same path and self-canonical after routing", () => {
