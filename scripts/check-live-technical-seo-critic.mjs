@@ -1,9 +1,10 @@
 import { readFile } from "node:fs/promises";
 import { setTimeout as sleep } from "node:timers/promises";
+import { LEGACY_ORIGIN, legacyRedirectIssues, livePageIssues, sitemapOriginIssues } from "./lib/live-origin-policy.mjs";
 
 const identity = JSON.parse(await readFile("config/site-identity.json", "utf8"));
 const SITE = identity.siteUrl;
-const ORIGIN = new URL(SITE).origin;
+if (new URL(SITE).origin !== LEGACY_ORIGIN) throw new Error("Live SEO migration contract requires review after a change to the source site identity.");
 const hardIssues = [];
 const watches = [];
 
@@ -64,10 +65,15 @@ async function fetchWithRetry(url, options = {}, attempts = 4) {
   throw lastError || new Error(`Unable to fetch ${url}`);
 }
 
+const legacyHome = await fetchWithRetry(SITE, { redirect: "manual" });
+hardIssues.push(...legacyRedirectIssues(legacyHome.status, legacyHome.headers.get("location")));
+await legacyHome.body?.cancel?.();
+
 const sitemapResponse = await fetchWithRetry(`${SITE}sitemap.xml`);
 if (!sitemapResponse.ok) throw new Error(`Live Technical SEO Critic: sitemap HTTP ${sitemapResponse.status}`);
 const sitemap = await sitemapResponse.text();
 const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/gi)].map((match) => match[1].trim()).filter(Boolean);
+hardIssues.push(...sitemapOriginIssues(sitemapResponse.url, sitemapUrls));
 if (!sitemapUrls.length) throw new Error("Live Technical SEO Critic: sitemap has no URLs");
 
 const preferredPrefixes = ["/biases/", "/explore/", "/evidence/", "/research/", "/compare/", "/contexts/"];
@@ -91,11 +97,11 @@ for (const requestedUrl of sample) {
     await response.body?.cancel?.();
     continue;
   }
-  if (new URL(finalUrl).origin !== ORIGIN) hardIssues.push(`${requestedUrl}: redirected off canonical origin to ${finalUrl}`);
+
   const html = await response.text();
   const htmlCan = htmlCanonical(html, finalUrl);
   const linkCan = httpCanonical(response.headers.get("link"), finalUrl);
-  if (!htmlCan) hardIssues.push(`${requestedUrl}: live HTML canonical missing`);
+  hardIssues.push(...livePageIssues(requestedUrl, finalUrl, htmlCan));
   if (linkCan && htmlCan && linkCan !== htmlCan) hardIssues.push(`${requestedUrl}: HTTP Link canonical ${linkCan} conflicts with HTML canonical ${htmlCan}`);
   const restrictions = negativeHeaderDirectives(response.headers.get("x-robots-tag"));
   if (restrictions.length) hardIssues.push(`${requestedUrl}: live X-Robots-Tag restricts a sitemap URL: ${restrictions.join(", ")}`);
