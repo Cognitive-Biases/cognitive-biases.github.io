@@ -1,8 +1,128 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-11-06",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "openalex-w7204606853",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+      "summary": "",
+      "publishedAt": "2026-11-03",
+      "venue": "ACM International Conference on Information and Knowledge Management (CIKM)",
+      "doi": "10.1145/3799682.3840879",
+      "url": "https://doi.org/10.1145/3799682.3840879",
+      "tags": [
+        "llm-as-a-judge",
+        "cognitive-analogy"
+      ],
+      "score": 9,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.00491",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "VoirDire: Counterfactual Calibration for Reliable LLM-as-a-Judge Aggregation",
+      "summary": "LLM-as-a-judge systems often aggregate multiple judges to improve evaluation reliability. However, judge agreement can reflect shared biases toward verbosity, formatting, or fluency rather than the intended evaluation target. Addressing these shared biases is challenging because observational judge outputs alone cannot distinguish agreement driven by target quality from agreement driven by nuisance attributes. We introduce VoirDire, an intervention-calibrated aggregation method for LLM-judge panels. VoirDire applies controlled interventions that vary specified surface attributes while aiming to preserve the evaluation target; it then uses paired changes in judge scores to identify nuisance-sensitive directions. It attenuates these directions and selects aggregation weights that retain variation across items while penalizing sensitivity to the interventions, making the final consensus less dependent on superficial features. We show theoretically that observational judge outputs alone cannot identify which shared direction is target-relevant, while paired interventions provide the contrast needed to identify nuisance-sensitive variation. We evaluate VoirDire on 12 datasets spanning continuous scoring, binary classification, and pairwise preference. Compared with the existing LLM-judge aggregation baselines, VoirDire reduces MAE by up to 26.8% on continuous-score tasks and improves accuracy by up to 5.3 percentage points on binary and preference tasks. These findings suggest that counterfactual interventions provide an additional means of improving the reliability and controllability of LLM-based evaluation beyond merely relying on observed judge agreement.",
+      "publishedAt": "2026-10-31",
+      "url": "https://arxiv.org/abs/2611.00491",
+      "tags": [
+        "llm-as-a-judge",
+        "surface-quality"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7225313555",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Item-writing flaws and answer-position bias in large language model-generated medical multiple-choice questions: a benchmark study of 15 models with an open corpus and a rule-based detector",
+      "summary": "",
+      "publishedAt": "2026-11-05",
+      "venue": "Journal of Educational Evaluation for Health Professions",
+      "doi": "10.3352/jeehp.2026.23.36",
+      "url": "https://doi.org/10.3352/jeehp.2026.23.36",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7225246785",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Cross-paradigm audit of large language model judges for clinical text evaluation",
+      "summary": "",
+      "publishedAt": "2026-11-04",
+      "venue": "npj Digital Medicine",
+      "doi": "10.1038/s41746-026-03443-2",
+      "url": "https://doi.org/10.1038/s41746-026-03443-2",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.05720",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Cognitive Bias Signatures in Search-Equipped LLM Agents: A Stage-Resolved Analysis",
+      "summary": "Search can help LLM agents correct mistakes, but their starting conditions may shape which evidence they find and use. Drawing on cognitive-bias paradigms, we develop a controlled search harness to examine result order, records of prior work, and initial hypotheses while holding each question and document collection fixed. Matched controls distinguish order effects from differences in document composition and the effects of failed work from context length. Across 10 models and 1,000 synthetic search worlds, we track queries, retrieved documents, document openings, and final answers. Our comparisons suggest that final answers are more sensitive to initial evidence order during active search than when all evidence is supplied in full. Dead-end histories can reduce strategy switching relative to matched neutral histories, indicating an effect beyond context length. Under wrong hypotheses, stage measurements distinguish reduced retrieval or opening from errors that persist after counter-evidence is opened. Exploratory interventions show that opening counter-evidence more often can coincide with lower accuracy, while accuracy can improve with little change in opening.",
+      "publishedAt": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05720",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.05556",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "AGORA: Reliability-Aware Aggregation of LLM Judges via Item-Response Theory",
+      "summary": "LLM-as-a-judge is a common substitute for costly human evaluation, and aggregating several judges is the standard remedy for any single judge's bias. Judge pools mix judges of very different reliability, while the human-labeled sets that validate them hold a few hundred items or fewer. In this regime the per-item mean weights weak judges as heavily as strong ones, and confusion-table models such as Dawid-Skene must estimate a per-judge error table from too few items. We propose AGORA (Aggregation Of Reliability-weighted Assessments), an item-response-theory aggregator that places every item on one latent quality scale and describes each judge by a sensitivity parameter and ordered rating thresholds, so judge reliability is learned from all items jointly and without human labels. Across three benchmarks, AGORA matches or exceeds Dawid-Skene on large evaluation sets, and its advantage widens as the set shrinks toward a few hundred items. It remains accurate as pools grow more uneven, a label-free dispersion statistic indicates in advance when trust weighting helps, and its learned trust weights track per-judge human validity.",
+      "publishedAt": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05556",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.00447",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Quantiles, Not Points: Streaming Quantile Matching for Ordinal-Aware LLM-as-a-Judge Calibration",
+      "summary": "LLM-as-a-judge scores are often distributionally shifted from human ratings on any given evaluation task, and post-hoc calibration (mapping LLM to human scores in a small labeled anchor set) has become a popular method to correct for this shift. In this paper we derive the calibration from two positions: that LLMaJ scores are ordinal ratings drawn from a distribution rather than isolated points. We present streaming quantile matching (SQM), a version of a classical method not previously bench marked for LLMaJ calibration, which is built on the two positions by computing the optimal-transport map between the LLM and human score distributions. We develop an evaluation framework and within it we show that unlike point-wise calibrations, SQM respects the ordinality of the human anchor set and achieves the best distributional fidelity and the top overall rank across models and data. We also show that in general, post-hoc calibration narrows the raw error gap between smaller and larger judge models, which opens the possibility of more efficient LLM judges.",
+      "publishedAt": "2026-10-30",
+      "url": "https://arxiv.org/abs/2611.00447",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-06",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "arxiv-2610.33920",
       "source": "arXiv",
