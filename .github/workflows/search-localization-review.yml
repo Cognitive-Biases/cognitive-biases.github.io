@@ -1,0 +1,22 @@
+name: Search Localization Manual Review Debt
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 7 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  manual-review-debt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test debt contract
+        run: node --test scripts/check-search-localization-debt.test.mjs
+      - name: Enforce review deadlines separately from Pages
+        run: node scripts/review-search-localization-debt.mjs
