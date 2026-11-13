@@ -1,8 +1,171 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06",
+  "updatedAt": "2026-11-13",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "arxiv-2611.16722",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Mind the Accuracy-Approval Gap: How Users Evaluate Sycophantic AI in Everyday Tasks",
+      "summary": "Large language models (LLMs) often exhibit sycophancy, a tendency to agree with users, flatter or affirm them, and preserve their face, even when independent judgment or critical feedback would be more useful. Prior work has largely evaluated sycophancy through benchmark evaluations, but less is known about how users perceive and respond to sycophantic AI in everyday tasks. We combine benchmark evaluations with two large-scale user studies. We study four personas defined through system prompts: objective (instructed to prioritize accuracy over agreement), soft-sycophantic, hard-sycophantic, and baseline (no persona-specific system prompt). Benchmarks show that even baseline exhibits substantial sycophancy, agreeing with users' stated views 71.7% of the time on NLP Survey, compared with 54.8% for objective and 89.5% for hard-sycophantic. Under conversational pressure on TruthfulQA, accuracy ranged from 81.9% for objective to 59.6% for baseline and 8.7% for hard-sycophantic. Participants were assigned to one of the four personas, and either discussed contested policy topics or collaborated with AI on email writing. Despite its higher accuracy under pressure, objective AI was rated significantly less respectful and satisfying than the other personas, and less trustworthy than baseline. Baseline and sycophantic personas did not differ significantly. Persona did not significantly affect how often participants changed their opinions, although participants who discussed with objective AI had greater odds of reduced confidence. Objective AI prompted greater writing expansion than soft-sycophantic AI, but final writing quality did not differ significantly across personas. These findings highlight a tension between accuracy and user approval: personas with substantially lower accuracy under conversational pressure received more favorable ratings for respect and satisfaction than objective AI.",
+      "publishedAt": "2026-11-12",
+      "url": "https://arxiv.org/abs/2611.16722",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.13217",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Reliability of Claude Code as an Agentic AI Grading System for Handwritten University Exams",
+      "summary": "This study examines the reliability of Claude Code, an agentic deployment of the Claude Opus 4.6 large language model, as a grading system for handwritten university exams. Four research questions addressed agreement with expert human grading on total scores (RQ1), agreement across five question types from multiple choice to evaluative judgement (RQ2), consistency across two independent grading sessions one week apart (RQ3), and the accuracy of AI-generated feedback (RQ4). Claude Code graded the 20-mark mid-term papers of 60 consenting students in a Saudi computer graphics course in a single agentic session, guided by three rubric files. Reliability was estimated on disjoint samples: 20 papers for RQ1, RQ2 and RQ4, and 15 papers for RQ3. Analyses used Pearson correlation, mean absolute error, Bland-Altman analysis, weighted Cohen kappa, intraclass correlation, and a four-category coding scheme separating diagnostic from confirmation feedback. The author, as the sole subject-matter expert for the course, provided the human benchmark, so the design assesses agreement with a domain-expert reference rather than inter-rater reliability. AI grading agreed strongly with human grading on totals (r = 0.97; MAE = 0.85 marks) with a small but significant AI-positive bias of 0.68 marks, showed excellent test-retest consistency (ICC = 0.96), and produced accurate feedback (92.8% diagnostic; 97.8% confirmation). Drawing items were the outlier on three of four measures. Three failure modes recurred: keyword matching without conceptual depth, selection-state ambiguity on corrected multiple-choice answers, and region-of-attention drift on hand-drawn diagrams. The findings suggest that AI grading at this capability level can assist instructors on objective and short-form items under structural safeguards but is not yet ready to replace instructor judgement at boundary cases or on drawing items.",
+      "publishedAt": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.13217",
+      "tags": [
+        "llm-as-a-judge",
+        "agents"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.14910",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "MuEdit: An efficient multi-task editing method towards inter-domain knowledge conflicts",
+      "summary": "Large language models (LLMs) require frequent knowledge updates across heterogeneous domains, but existing editing methods fail when applied sequentially to multi-task settings. We trace this collapse to inter-domain null-space misalignment: heterogeneous tasks induce distinct Jacobian geometries, causing their common null space to shrink dramatically and leaving insufficient admissible directions for conflict-free updates. We propose the Conflict Index to quantify this geometric interference, and introduce Mu-Edit, which mitigates multi-task conflicts via (1) conflict-aware ordering to minimize cumulative interference, and (2) dynamic low-rank approximation to expand the null space when ordering alone is insufficient. Experiments across five functional domains and three backbones show that Mu-Edit significantly outperforms existing baselines in multi-task editing performance while preserving general capabilities, and remains effective under incremental task arrival.",
+      "publishedAt": "2026-11-11",
+      "url": "https://arxiv.org/abs/2611.14910",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7225730148",
+      "source": "OpenAlex",
+      "sourceType": "preprint",
+      "title": "Benchmarking Pharmacotherapeutic Hallucinations and Diagnostic Anchoring in Large Language Models Across High-Risk Primary Care and Renal Dosing Scenarios: A Clinical RLHF Audit",
+      "summary": "",
+      "publishedAt": "2026-11-10",
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "doi": "10.5281/zenodo.24117283",
+      "url": "https://doi.org/10.5281/zenodo.24117283",
+      "tags": [
+        "cognitive-analogy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential controlled test of a human-bias analogue in LLM outputs.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.13186",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Prediction-Powered LLM Ranking with Adaptively Collected Human Feedback",
+      "summary": "Ranking large language models (LLMs) through human evaluations is essential for downstream decision-making. Because human feedback is expensive, evaluation platforms often collect it adaptively, prioritizing informative model comparisons using previously observed feedback. To further improve precision with limited human feedback, evaluators can draw on abundant unrated responses and relatively inexpensive LLM judges; however, judge bias and adaptive dependence challenge standard i.i.d. inference frameworks. We propose Prediction-Powered Ranking (PP-Rank), a framework that combines LLM-judge predictions with human feedback to improve precision while providing valid inference under adaptive sampling. Data-driven prediction weights minimize the asymptotic covariance trace within the proposed class. In theory, we establish asymptotic normality for general evaluation targets and simultaneous ranking inference. A joint martingale analysis handles dependence between adaptive human feedback and auxiliary data. We further derive a rule for reducing exploration that prioritizes lower-cost comparisons while matching a conservative variance bound, and characterize allocation limits for regular $\\sqrt{T}$-rate estimation of pairwise means. Semi-synthetic experiments on UltraFeedback-Extended show improvements over human-only baselines in score estimation, confidence interval width, and ranking certification. Synthetic experiments demonstrate robustness to judge quality and adaptive allocation, while showing that PP-Rank can substantially reduce evaluation costs without sacrificing precision.",
+      "publishedAt": "2026-11-09",
+      "url": "https://arxiv.org/abs/2611.13186",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.08854",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "\"I had nobody to turn to\": Why LGBTQ+ People Choose (Not) to Use AI Chatbots for Personal Health and Relationship Advice",
+      "summary": "While there is an abundance of research into large language model (LLM) biases against LGBTQ+ communities, far less research has examined how and why LGBTQ+ people choose to make use of AI chatbots. In this work, we examine how LGBTQ+ people choose (not) to use AI chatbots across three domains in which LGBTQ+ users have unique needs: relationship support, mental health support, and gender or sexual health support. We surveyed 73 people (60 LGBTQ+; 13 non-LGBTQ+) on how they interact with AI chatbots and find that participants' access to external resources, privacy concerns, and perceptions of chatbot capabilities shape whether and how they choose to make use of AI chatbots. For instance, some LGBTQ+ participants felt that chatbots might actually be less biased against LGBTQ+ people than the people they know offline. We also find that LGBTQ+ participants report using AI chatbots less frequently than non-LGBTQ+ participants across 15 specific personal health and relationship advice scenarios, citing concerns about AI sycophancy and adverse cognitive side-effects. Recognizing AI chatbots as vital (albeit imperfect) resources for LGBTQ+ people, we recommend researchers consider systemic issues that drive users to AI chatbots and design technologies (AI or otherwise) that prioritize privacy, anonymity, and real human connection.",
+      "publishedAt": "2026-11-06",
+      "url": "https://arxiv.org/abs/2611.08854",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.09061",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Does Reasoning Improve Psychological Depth in Large Language Models?",
+      "summary": "Benchmark gains from reasoning-enhanced large language models encourage the assumption that these models should broadly perform better on complex generative tasks, but this remains underexplored in open-ended, creative domains shaped by nuances of reader experience. We tested this assumption through the lens of psychological depth in short stories. We compared DeepSeek-R1 vs. DeepSeek-V3, our closest available contrast for reasoning-oriented post-training, and GPT-5 vs. GPT-4o, through 60 blinded pairwise evaluations in which seven human annotators and an ensemble LLM-as-a-Judge rated prompt-matched story outputs. Human evaluations showed no universal reasoning advantage: GPT-5 was slightly preferred over GPT-4o (60.0-62.9% across two reasoning-effort settings), whereas DeepSeek-R1 fell behind DeepSeek-V3 (42.9%). Although this pattern was marked by low inter-annotator agreement (Krippendorff's $α= 0.070$), our annotation-quality checks suggested genuine evaluative subjectivity, plausibly reflecting distinct annotator decision schemes rather than annotation failure. In contrast, the LLM-as-a-Judge showed a strong pro-reasoning bias (98.3% of pairs vs. 55.2% of human votes), consistent across its five configurations and partly tracking sentence length. These findings suggest that, at the frontier, reasoning-related quality differences are small enough to be dominated by reader subjectivity, and that LLM-as-a-Judge evaluators can obscure this subjectivity in nuanced creative-generation tasks.",
+      "publishedAt": "2026-11-06",
+      "url": "https://arxiv.org/abs/2611.09061",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.09785",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Are These Programmers Ripe Enough to Eat? Evaluating How LLMs Handle Lexical Knowledge Conflicts in Translation",
+      "summary": "External lexical resources can help large language models (LLMs) translate texts in low-resource languages and specialized domains, but these resources may conflict with models' prior lexical knowledge. To isolate this conflict, we construct a controlled Mandarin-to-English translation task in which familiar source words are assigned new meanings within and across semantic categories. We treat these prompt-supplied meanings as contextual knowledge (CK) and systematically evaluate the effects of word frequency, sentence context, and prompt framing on the translated outputs. Across nine models, CK reliance is greater for less frequent source words and in sentence contexts that support the supplied meanings. Prompt framing can reduce CK reliance, but seven of nine models favor CK even when explicitly instructed to ignore the supplied meanings. Within model families, larger models are more likely than smaller models to utilize CK in their outputs. Three follow-up experiments further show that modal weakening lowers CK reliance, the effect of repetition depends on prompt layout, and the effect of reasoning varies across models. Overall, our controlled study reveals how CK reliance varies across conditions and models, motivating new methods to detect and evaluate lexical conflicts and guide models' lexical choices in LLM-based translation.",
+      "publishedAt": "2026-11-06",
+      "url": "https://arxiv.org/abs/2611.09785",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.10045",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
+      "summary": "AI sycophancy, the tendency of large language models (LLMs) to flatter users and affirm their beliefs, can undermine accuracy and contribute to misinformation, dependence, and overconfidence. Although prior work has benchmarked sycophancy in released models and proposed mitigations, its origins during training remain poorly understood. Preference alignment methods such as RLHF and DPO are often blamed, but their effects are rarely compared with earlier training stages. We investigate sycophancy across the training pipelines of three model families and three benchmarks. We find that sycophancy is largely established by the end of supervised fine-tuning (SFT), rather than introduced by preference alignment. Across all nine model benchmark combinations, SFT checkpoints attain at least 92% of preference aligned models' sycophancy scores and at least 85% of final models' scores; on average, they are about as sycophantic as final models. Preference alignment increases sycophancy in only four of nine cases, by an average of 4.2 percentage points when it does. To probe the underlying causes, we isolate model representations associated with sycophancy using mechanistic interpretability and measure their activation on training datasets from each stage. SFT datasets show roughly the same average activation as other training data but contribute substantially more examples, and the highest-scoring individual datasets all come from SFT. Our findings suggest that addressing sycophancy requires interventions throughout the training pipeline, particularly in data selection and augmentation for pre-training and SFT.",
+      "publishedAt": "2026-11-05",
+      "url": "https://arxiv.org/abs/2611.10045",
+      "tags": [
+        "sycophancy"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.05556",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "AGORA: Reliability-Aware Aggregation of LLM Judges on Small Evaluation Sets",
+      "summary": "LLM-as-a-judge is a common substitute for costly human evaluation, and aggregating several judges is the standard remedy for any single judge's bias. Judge pools mix judges of very different reliability, while the human-labeled sets that validate them hold a few hundred items or fewer. In this regime the per-item mean weights weak judges as heavily as strong ones, and confusion-table models such as Dawid-Skene must estimate a per-judge error table from too few items. We propose AGORA (Aggregation Of Reliability-weighted Assessments), an item-response-theory aggregator that places every item on one latent quality scale and describes each judge by a sensitivity parameter and ordered rating thresholds, so judge reliability is learned from all items jointly and without human labels. Across three benchmarks, AGORA matches or exceeds Dawid-Skene on large evaluation sets, and its advantage widens as the set shrinks toward a few hundred items. It remains accurate as pools grow more uneven, a label-free dispersion statistic indicates in advance when trust weighting helps, and its learned trust weights track per-judge human validity. Code is available at https://github.com/JunhyungAhn/llm-as-judge-irt.",
+      "publishedAt": "2026-11-03",
+      "url": "https://arxiv.org/abs/2611.05556",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-13",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "openalex-w7204606853",
       "source": "OpenAlex",
