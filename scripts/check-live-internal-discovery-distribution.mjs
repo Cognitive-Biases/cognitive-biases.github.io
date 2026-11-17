@@ -1,4 +1,4 @@
-const SITE = 'https://cognitive-biases.github.io';
+import { RELAY_ORIGIN as SITE } from "./lib/live-origin-policy.mjs";
 const MAX = 12;
 const fail = (message) => { throw new Error(`live_internal_discovery:${message}`); };
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

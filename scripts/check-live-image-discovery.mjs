@@ -1,4 +1,4 @@
-const SITE = "https://cognitive-biases.github.io";
+import { RELAY_ORIGIN as SITE } from "./lib/live-origin-policy.mjs";
 const SAMPLE_SLUGS = [
   "cognitive-bias-anchoring-effect",
   "confirmation-bias-congruence-bias",

@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 
-const SITE = "https://cognitive-biases.github.io";
+import { RELAY_ORIGIN as SITE, liveUrl } from "./lib/live-origin-policy.mjs";
 const fail = (message) => { throw new Error(`live_localization:${message}`); };
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const normalizeLocale = (value) => String(value || "").toLowerCase();
@@ -70,13 +70,13 @@ for (const home of homes) {
   const ai = aiByCode.get(home.code);
   if (!ai) fail(`${home.code}: missing source AI locale record`);
   if (!ai.llms) fail(`${home.code}: missing llms route in AI locale record`);
-  const llmsUrl = new URL(ai.llms);
-  const { text } = await fetchExact(ai.llms);
+  const llmsUrl = new URL(liveUrl(ai.llms));
+  const { text } = await fetchExact(llmsUrl.href);
   if (!text.trim()) fail(`${home.code}: live llms.txt is empty`);
-  if (!rootLlms.includes(ai.llms)) fail(`${home.code}: root llms.txt does not advertise ${ai.llms}`);
+  if (!rootLlms.includes(llmsUrl.href)) fail(`${home.code}: root llms.txt does not advertise ${llmsUrl.href}`);
   if (!root.includes(`href="${llmsUrl.pathname}"`)) fail(`${home.code}: canonical HTML does not advertise ${llmsUrl.pathname}`);
-  if (ai.data) await fetchJsonExact(ai.data, `${home.code}: data`);
-  if (ai.agentSkills) await fetchJsonExact(ai.agentSkills, `${home.code}: agentSkills`);
+  if (ai.data) await fetchJsonExact(liveUrl(ai.data), `${home.code}: data`);
+  if (ai.agentSkills) await fetchJsonExact(liveUrl(ai.agentSkills), `${home.code}: agentSkills`);
 }
 if (!rootLlms.includes("coverage/status declared") && !rootLlms.includes("coverage/status")) fail("root llms.txt lacks the partial-vs-full locale coverage warning");
 
