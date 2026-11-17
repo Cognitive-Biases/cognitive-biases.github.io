@@ -1,7 +1,25 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10",
+  "updatedAt": "2026-11-17",
   "items": [
+    {
+      "id": "arxiv-2611.05720",
+      "discoveredAt": "2026-11-17",
+      "title": "Cognitive Bias Signatures in Search-Equipped LLM Agents: A Stage-Resolved Analysis",
+      "url": "https://arxiv.org/abs/2611.05720",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "publishedAt": "2026-11-03",
+      "relatedConcepts": [
+        "ai-assisted-decisions"
+      ],
+      "whyItMatters": "Potential evidence about whether a decision-improvement technique works, for whom, and under what conditions.",
+      "score": 7,
+      "rankingReasons": [
+        "human-AI decision relevance"
+      ],
+      "status": "new"
+    },
     {
       "id": "openalex-w7225334079",
       "discoveredAt": "2026-11-10",
