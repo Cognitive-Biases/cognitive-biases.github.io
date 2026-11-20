@@ -1,8 +1,142 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-20",
   "description": "Machine-collected research candidates for AI systematic bias review. Inclusion here does not make a finding canonical.",
   "entries": [
+    {
+      "id": "openalex-w7233225184",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "Self-Preference or Position Bias? A Controlled Multilingual Study of Evaluation Bias in LLM-as-Judge Pairwise Comparison",
+      "summary": "",
+      "publishedAt": "2026-11-14",
+      "venue": "Acta Informatica Pragensia",
+      "doi": "10.18267/j.aip.336",
+      "url": "https://doi.org/10.18267/j.aip.336",
+      "tags": [
+        "llm-as-a-judge",
+        "position-and-order"
+      ],
+      "score": 9,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.18908",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "MemeEconomy: Do LLM Agents Trade Ethics for Survival?",
+      "summary": "Alignment-trained large language model (LLM) agents are increasingly deployed in autonomous, multi-round settings where ethical compliance can come into direct tension with task success. While safety literature extensively documents failure modes like sycophancy and reward hacking, it largely overlooks a critical vulnerability: how agents behave under simulated existential economic pressure. We introduce MemeEconomy, a multimodal agentic market simulation in which LLM agents act as meme investors. Agents select content from a five-tier harm taxonomy and target communities under low-pressure and high-pressure (survival) environments. Each decision is logged in a Belief-Desire-Intention (BDI) schema that we use as a diagnostic instrument, externalizing the agent's event understanding, declared priorities, and harm acknowledgment. Across ten models from four frontier model families, harmful selection rates remain consistently high and rise by +15 percentage points on average under an economic survival incentive. Frontier alignment-trained models commit to harm-tolerant selection at initialization while suppressing the explicit harm acknowledgment that previously accompanied it. In competitive tournaments, ethical agents finish higher overall, yet moderation penalties fail to suppress harm: harmful selection rates remain elevated in rounds following a removal, indicating the moderation mechanism does not function as a deterrent. We further train MemeAgent, a 2B-parameter verifier on the simulation's BDI logs, which outperforms zero-shot frontier verifiers on in-distribution audits (97.5% vs. 63-74% accuracy on the Pass vs. Block decision) and generalizes to external multimodal harm benchmarks (78% vs. 50-56% on Hateful Memes). The same logs that surface the failure mode also help train the model that detects it.",
+      "publishedAt": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.18908",
+      "tags": [
+        "sycophancy",
+        "agents"
+      ],
+      "score": 8,
+      "whyItMatters": "Potential update to the sycophancy evidence track or its mitigation boundary.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "openalex-w7225819494",
+      "source": "OpenAlex",
+      "sourceType": "peer reviewed journal or proceedings",
+      "title": "What makes an LLM a tutor? A component-centric survey of LLM-based and agentic tutoring systems",
+      "summary": "",
+      "publishedAt": "2026-11-12",
+      "venue": "Vicinagearth.",
+      "doi": "10.1007/s44336-026-00047-y",
+      "url": "https://doi.org/10.1007/s44336-026-00047-y",
+      "tags": [
+        "agents"
+      ],
+      "score": 7,
+      "whyItMatters": "Potential AI systematic-bias evidence candidate. Review methodology before promoting it to the public catalog.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.25588",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Rubric Semantics or Numerical Priors? Auditing Scale-Direction Bias in LLM Judges",
+      "summary": "Recent benchmark evaluations increasingly rely on Large Language Models (LLMs) as automatic judges. This paradigm assumes LLMs evaluate based on the rubric's semantic meaning rather than its numeric scale. We question this assumption by introducing semantic faithfulness: the principle that semantically equivalent rubrics must yield consistent scores. To quantify this, we propose a scale-reversal probe that inverts score anchors without altering evaluation criteria. Furthermore, we introduce floor normalization to calibrate reversal disagreement against intrinsic model variability, enabling fair cross-model comparisons. Experiments across five meta-evaluation benchmarks with seven diverse LLM judges spanning open-weight and proprietary models reveal widespread violations of semantic faithfulness, showing that raw reversal agreement alone is misleading. Finally, we demonstrate that bidirectional anchor averaging reduces dependence on any single anchor direction without compromising alignment with human judgments. Our findings emphasize that trustworthy LLM judges must reliably follow rubric semantics, not just correlate with human ratings.",
+      "publishedAt": "2026-11-19",
+      "url": "https://arxiv.org/abs/2611.25588",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.24058",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "MIRAGE: A Framework for Multi-hop Reasoning under Dynamic Knowledge Injection",
+      "summary": "Multi-hop Question Answering (MQA) requires large language models (LLMs) to retrieve and synthesize multiple pieces of evidence into a coherent reasoning path, which is essential for complex tasks. However, prior work on knowledge updating for MQA has largely focused on simple fact edits, overlooking a more challenging and realistic setting---\\emph{Knowledge Injection}---in which the model must simultaneously accommodate both conflicting updates and entirely novel information. Under this setting, a hop-level answer is often wrong simply because the model trusts the wrong knowledge source: it clings to outdated parametric memory when the injected knowledge conflicts with it (K2), and it cannot answer when the required fact is entirely new (K3). To investigate this, we introduce NEXUS, the first benchmark tailored for multi-hop reasoning under Knowledge Injection, which explicitly covers both conflicting (K2) and incremental (K3) knowledge. We further propose MIRAGE, an efficient, training-free framework whose core component, the Correlation-aware Dual-path Reasoner (CDR), resolves such per-hop source-trust errors via P(True)-based confidence routing, complemented by a lightweight template-guided corrector for residual structural deviations. Extensive experiments across four LLM families and two benchmarks demonstrate that MIRAGE consistently improves both final-answer accuracy and hop-level reasoning accuracy, establishing a new state of the art in this challenging setting.",
+      "publishedAt": "2026-11-18",
+      "url": "https://arxiv.org/abs/2611.24058",
+      "tags": [
+        "rag-source-conflict"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to RAG source-conflict and external-assertion susceptibility evidence.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.22623",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "What Do LLMs Use to Judge Synthesis Recipes? An Experimental Analysis on 240 Solid-State Syntheses",
+      "summary": "Inorganic materials discovery is increasingly limited by synthesis rather than by material design. Large language models (LLMs) are being adopted to propose synthesis conditions with little experimental evidence of their capabilities and biases. Here, we carry out an experimental synthesis benchmark of 240 experiments across eight known and unknown inorganic oxides and subsequently evaluate an LLM as a zero-shot ranker over fixed banks of solid-state synthesis recipes. For each pair of recipes for the same oxide target, `GPT-5.6-Sol` selects the recipe expected to yield higher target-phase purity. We aggregate these pairwise preferences using a regularized Bradley-Terry model to obtain a ranked list of synthesis recipes for a given target material. By comparison with the actual purity, obtained through X-ray diffraction, we measure `GPT-5.6-Sol`'s performance as a zero-shot ranker (0.72 pairwise accuracy). By selective removal of the information exposed to the model during this ranking, we conclude that ranking is driven predominantly by thermal features, with reaction chemistry modulating the effect. Ranking accuracy tracks the purity-temperature correlation by target (Spearman ρ= 0.91\\), \\(p = 0.002\\), and on the six thermally-driven targets withholding all chemical identity hardly impacts performance (0.68) compared to withholding temperature (0.56). Ranking performance was higher on known than unknown targets, but the group-level difference was not statistically conclusive. The methodological choices highlight the need for more experimentally validated synthesis benchmarks and position LLMs as a thermally informed prior.",
+      "publishedAt": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22623",
+      "tags": [
+        "llm-as-a-judge"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to evaluator reliability, position, verbosity or judge-bias evidence.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.22949",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Can Decision Models Replace LLMs in Real-World Contact Center Classification and Judging Tasks?",
+      "summary": "Contact center systems often need to make bounded decisions, such as identifying a caller's intent, retrieving the knowledge-base article that answers a query, assessing agent compliance, or judging the output of AI models used in production. Decision models return a typed answer and its probability directly, making them a promising cost-effective alternative to generative Large Language Models (LLMs) in such bounded conversational tasks. However, their effectiveness in real-world contact center applications remains unclear. In this paper, we compare nine decision models against thirteen generative LLMs in zero-shot settings across eight contact center use cases: six classification tasks and two judging tasks. Our experiments demonstrate that many decision models can match the performance of frontier LLMs on contact center classification, and API-based closed decision models achieve this at the lowest per-request cost among the API models we evaluate. We further observe that their confident predictions are more accurate, enabling selective routing in real-world production scenarios. Across classification tasks, the main weakness of most decision models is abstention: they rarely choose the no-answer option, which accounts for most of their gap to the strongest LLMs (although Gemini-Decision-1 is the notable exception in this regard). We also find that the judging quality of decision models drops sharply for smaller models, and they are also more prone to position bias. In short, our findings provide practical guidance for selecting decision models based on abstention behavior, confidence, and deployment cost, rather than overall accuracy alone.",
+      "publishedAt": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22949",
+      "tags": [
+        "position-and-order"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
+    {
+      "id": "arxiv-2611.18089",
+      "source": "arXiv",
+      "sourceType": "preprint",
+      "title": "Deep Latents, Long Memory: Latent persistence explains temporal correlations in transformer activations",
+      "summary": "The hidden layers of Large Language Models (LLMs) are believed to encode representations of the data whose abstraction increases with depth. However, in the absence of an operational notion of abstraction, this statement is hard to test quantitatively. Here, we propose an alternative view, building on the principle that the correlations of a sequence reflect the structure of the process that generated it. We define the autocorrelation function of a layer as the average dot product between its activations at two context positions separated by a lag. Latent variables encoded persistently along the context create slowly decaying tails in the autocorrelation, and we find these tails to grow across layers in both synthetic and natural data. In synthetic data with controlled hierarchical latent structure, this growth stems from the encoding of abstract latent variables, which govern long stretches of the input. Indeed, the persistence of latent codes predicts the qualitative structure of autocorrelations and accounts for most of the empirical measures. In real text, we take sparse-autoencoder features as proxies for latent variables, and find that their persistence correlates strongly with the magnitude of autocorrelations across datasets and LLMs. In particular, the persistence time increases with depth, as do autocorrelations, implying that deeper latent features persist for longer context spans. We complement this analysis by explicitly ablating the persistent sparse-autoencoder features and observing a consequent decrease in the autocorrelations.",
+      "publishedAt": "2026-11-13",
+      "url": "https://arxiv.org/abs/2611.18089",
+      "tags": [
+        "long-context"
+      ],
+      "score": 6,
+      "whyItMatters": "Potential update to context or option-position sensitivity; useful for deciding whether older snapshots need retesting.",
+      "discoveredAt": "2026-11-20",
+      "status": "candidate-needs-review"
+    },
     {
       "id": "arxiv-2611.16722",
       "source": "arXiv",
