@@ -86,6 +86,8 @@ jobs:
         run: node scripts/check-feed-syndication.mjs
       - name: Gate final Technical SEO Critic surface
         run: node scripts/check-technical-seo-critic.mjs
+      - name: Regression-test Search/localization manual review debt
+        run: node --test scripts/check-search-localization-debt.test.mjs
       - name: Gate Search 2026 localization policy
         run: node scripts/check-search-localization-policy.mjs
       - name: Gate final localization product contract
